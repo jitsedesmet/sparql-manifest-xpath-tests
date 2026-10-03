@@ -7,7 +7,7 @@
  * and that filters on the assertion of the test case, so the expected result of every test is true.
  * Test cases that cannot be expressed in SPARQL are left out.
  *
- * Usage: npm run generate
+ * Usage: yarn run generate
  */
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';

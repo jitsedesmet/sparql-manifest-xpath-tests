@@ -22,14 +22,14 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24.x
-          cache: npm
+          cache: yarn
       - uses: actions/cache@v6
         with:
           path: .cache
           key: qt3-${{ hashFiles('src/generate.ts') }}
-      - run: npm ci
-      - run: npm run typecheck
-      - run: npm run generate
+      - run: yarn install --frozen-lockfile
+      - run: yarn run typecheck
+      - run: yarn run generate
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

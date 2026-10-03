@@ -2,6 +2,7 @@
   "name": "sparql-manifest-xpath-tests",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "description": "The W3C XQuery and XPath Test Suite (QT3) as SPARQL query evaluation tests",
   "license": "MIT",
   "type": "module",

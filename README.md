@@ -1,13 +1,35 @@
-# sparql-manifest-xpath-tests
+<h1 align="center">sparql-manifest-xpath-tests</h1>
 
-The tests of the [W3C XQuery and XPath Test Suite (QT3)](https://github.com/w3c/qt3tests)
-for the functions and operators that SPARQL defines in terms of XPath,
-as [SPARQL query evaluation tests](https://www.w3.org/TR/sparql12-query/#conformance),
+<p align="center">
+  <strong>The W3C XQuery and XPath Test Suite as SPARQL tests</strong>
+  <br />
+  <i>Test the XPath functions and operators of any SPARQL engine.</i>
+</p>
+
+<p align="center">
+  <a href="https://github.com/jitsedesmet/sparql-manifest-xpath-tests/actions/workflows/pages.yml"><img src="https://github.com/jitsedesmet/sparql-manifest-xpath-tests/actions/workflows/pages.yml/badge.svg?branch=main" alt="Build Status"></a>
+</p>
+
+**[Use the manifest at https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl](https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl).**
+
+SPARQL defines most of its functions and operators in terms of
+[XPath and XQuery Functions and Operators](https://www.w3.org/TR/xpath-functions-31/).
+This repository turns the tests of the [W3C XQuery and XPath Test Suite (QT3)](https://github.com/w3c/qt3tests)
+for those functions and operators into [SPARQL query evaluation tests](https://www.w3.org/TR/sparql12-query/#conformance),
 so that any SPARQL engine can run them with its existing test harness,
 such as [rdf-test-suite](https://github.com/rubensworks/rdf-test-suite.js).
+The manifest includes a sub-manifest per QT3 test set.
 
-The manifest is published at <https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl>,
-with a sub-manifest per QT3 test set.
+## Run the tests
+
+With rdf-test-suite, the tests can be run against an engine as follows:
+
+```bash
+$ rdf-test-suite path/to/engine.js https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl -c .rdf-test-suite-cache/
+```
+
+A locally generated version can be run by mapping the URL onto the `dist/` folder,
+with `-m 'https://jitsedesmet.github.io/sparql-manifest-xpath-tests/~path/to/dist/'`.
 
 ## How the tests are generated
 
@@ -29,24 +51,30 @@ and invalid values of the types derived from `xsd:integer`, which are an error i
 The XPath expressions are parsed with [fontoxpath](https://github.com/FontoXML/fontoxpath),
 and the SPARQL is generated with [Traqula](https://github.com/comunica/traqula).
 
-## Usage
+## Development Setup
+
+This project requires [Node.JS](http://nodejs.org/) 22.18 or higher and the [Yarn](https://yarnpkg.com/en/) package manager.
+It can be setup by cloning and installing it as follows:
 
 ```bash
-npm ci
-npm run generate
+$ git clone https://github.com/jitsedesmet/sparql-manifest-xpath-tests.git
+$ cd sparql-manifest-xpath-tests
+$ yarn install
 ```
 
-writes the tests into `dist/`. QT3 is fetched at a fixed commit and cached in `.cache/`.
-
-With rdf-test-suite, the published tests can be run as follows,
-optionally against a local `dist/` with `-m 'https://jitsedesmet.github.io/sparql-manifest-xpath-tests/~dist/'`:
+After that, the tests can be generated into `dist/` as follows:
 
 ```bash
-rdf-test-suite path/to/engine.js https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl
+$ yarn run generate
 ```
+
+QT3 is fetched at a fixed commit, and cached in `.cache/`.
+On every push to `main`, a GitHub Actions workflow generates the tests and publishes them on GitHub Pages.
 
 ## License
 
-The code of this repository is available under the MIT license.
+This code is copyrighted by Jitse De Smet, [the Comunica Association](https://comunica.dev/association/)
+and [Ghent University – imec](http://idlab.ugent.be/), and released under the [MIT license](http://opensource.org/licenses/MIT).
+
 The generated tests are derived from QT3, Copyright © World Wide Web Consortium,
-under the [W3C Software and Document License](https://www.w3.org/copyright/software-license/).
+and are released under the [W3C Software and Document License](https://www.w3.org/copyright/software-license/).
