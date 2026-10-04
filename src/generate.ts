@@ -10,6 +10,7 @@
  * - manifest.ttl: the tests that only need what SPARQL defines,
  * - extensions.ttl: the tests that need XPath functions or operators beyond what SPARQL defines, such as on xsd:date,
  * - errors.ttl: the tests that expect an error, which also pass on engines that fail for another reason.
+ * The left-out test cases are listed with the reason in left-out.tsv.
  *
  * Usage: yarn run generate
  */
@@ -51,18 +52,16 @@ const TEST_SETS = new RegExp(`^(${[
 ].join('|')})$`, 'u');
 
 /**
- * The test cases that an XPath 3.1 and XSD 1.1 implementation without optional features can run,
- * and that have their test in the test set itself.
+ * The dependencies of a test case, on the test set and on the test case itself,
+ * that an XPath 3.1 and XSD 1.1 implementation without optional features does not satisfy.
  */
-const TEST_CASES_QUERY = `
-/test-set/test-case[
-  (every $dependency in (../dependency, dependency) satisfies
-    (if ($dependency/@type = 'spec') then
-      (some $spec in tokenize($dependency/@value) satisfies
-        ($spec = 'XP31' or (matches($spec, '^XP\\d\\d\\+$') and xs:integer(substring($spec, 3, 2)) le 31)))
-    else if ($dependency/@type = 'xsd-version') then $dependency/@value = '1.1'
-    else false()) = not($dependency/@satisfied = 'false'))
-  and not(test/@file)]`;
+const UNSATISFIED_DEPENDENCIES_QUERY = `
+(../dependency, dependency)[
+  (if (@type = 'spec') then
+    (some $spec in tokenize(@value) satisfies
+      ($spec = 'XP31' or (matches($spec, '^XP\\d\\d\\+$') and xs:integer(substring($spec, 3, 2)) le 31)))
+  else if (@type = 'xsd-version') then @value = '1.1'
+  else false()) = (@satisfied = 'false')]`;
 
 /**
  * The manifests that the tests are divided over, by kind of test.
@@ -160,6 +159,33 @@ function testCaseUrl(testSetFile: string, testSetText: string, name: string): st
 }
 
 /**
+ * Serialize a value as a field of a TSV file, escaping the characters that would end the field or the line.
+ */
+function tsvField(value: string): string {
+  return value.replaceAll(/[\\\t\n\r]/gu, character =>
+    ({ '\\': '\\\\', '\t': '\\t', '\n': '\\n', '\r': '\\r' })[character]!);
+}
+
+/**
+ * Determine why a test case is left out before translating it, as it needs what SPARQL engines cannot be expected to
+ * support, or as its test is in a separate file.
+ * @returns The reason, or undefined if the test case is not left out for that.
+ */
+function unsupportedTestCaseReason(testCase: Element): string | undefined {
+  const file = evaluateXPathToString('test/@file', testCase);
+  if (file) {
+    return `Unsupported test in the separate file ${file}`;
+  }
+  const dependencies = evaluateXPathToNodes<Element>(UNSATISFIED_DEPENDENCIES_QUERY, testCase);
+  if (dependencies.length > 0) {
+    // A dependency that is not satisfied="false" requires the processor to have it, otherwise to not have it
+    return `Unsupported dependencies ${dependencies.map(dependency => `${
+      dependency.getAttribute('satisfied') === 'false' ? 'not ' : ''}${dependency.getAttribute('type')} ${
+      dependency.getAttribute('value')}`).join(', ')}`;
+  }
+}
+
+/**
  * Generate the ASK query of a test case, and determine the kind of the test.
  * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
  */
@@ -192,6 +218,7 @@ async function main(): Promise<void> {
   const counts: Record<Kind, number> = { sparql: 0, extensions: 0, errors: 0 };
   let testSetCount = 0;
   const skipReasons: Record<string, number> = {};
+  const leftOut: string[] = [];
 
   for (const testSet of evaluateXPathToNodes<Element>('/catalog/test-set', catalog)) {
     const testSetName = testSet.getAttribute('name')!;
@@ -202,16 +229,22 @@ async function main(): Promise<void> {
     const testSetText = await fetchQt3(testSetFile);
     const testSetXml = parseXmlDocument(testSetText);
     const entries: Record<Kind, { name: string; entry: string }[]> = { sparql: [], extensions: [], errors: [] };
-    for (const testCase of evaluateXPathToNodes<Element>(TEST_CASES_QUERY, testSetXml)) {
+    for (const testCase of evaluateXPathToNodes<Element>('/test-set/test-case', testSetXml)) {
       const name = testCase.getAttribute('name')!;
+      const url = testCaseUrl(testSetFile, testSetText, name);
       let query: string;
       let kind: Kind;
       try {
-        ({ query, kind } = testCaseQuery(testSetName, testCase, catalog, testCaseUrl(testSetFile, testSetText, name)));
+        const reason = unsupportedTestCaseReason(testCase);
+        if (reason) {
+          throw new UnsupportedError(reason);
+        }
+        ({ query, kind } = testCaseQuery(testSetName, testCase, catalog, url));
       } catch (error: unknown) {
         if (!(error instanceof UnsupportedError)) {
           throw error;
         }
+        leftOut.push([ testSetName, name, url, error.message ].map(tsvField).join('\t'));
         const reason = error.message.replace(/^(Unsupported \w+|Invalid XPath|Unknown variable|Invalid value).*/su, '$1');
         skipReasons[reason] = (skipReasons[reason] ?? 0) + 1;
         continue;
@@ -255,13 +288,15 @@ ${includes[kind].map(include => `    <${include}>`).join('\n')}
 `);
   }
   write('true.srj', '{ "head": {}, "boolean": true }\n');
+  write('left-out.tsv', `test-set\ttest-case\turl\treason\n${leftOut.map(row => `${row}\n`).join('')}`);
 
   process.stdout.write(`Generated ${testSetCount} test sets with\n`);
   for (const [ kind, { file } ] of Object.entries(KINDS) as [ Kind, typeof KINDS[Kind] ][]) {
     process.stdout.write(`  ${counts[kind]} tests in ${file}\n`);
   }
+  process.stdout.write(`Left out ${leftOut.length} tests, which left-out.tsv lists\n`);
   for (const [ reason, count ] of Object.entries(skipReasons).sort(([ , a ], [ , b ]) => b - a)) {
-    process.stdout.write(`  left out ${count}: ${reason}\n`);
+    process.stdout.write(`  ${count}: ${reason}\n`);
   }
 }
 

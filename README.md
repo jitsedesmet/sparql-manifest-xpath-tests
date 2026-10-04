@@ -58,6 +58,8 @@ and `all-of`, `any-of` and `not` become `&&`, `||` and `!`.
 
 Test cases that cannot be expressed in SPARQL are left out, such as XPath expressions without SPARQL equivalent,
 and invalid values of the types derived from `xsd:integer`, which are an error in XPath but an ill-typed literal in SPARQL.
+[`left-out.tsv`](https://sparql-manifest-xpath-tests.jitsedesmet.be/left-out.tsv) lists every left-out test case with the reason,
+including the ones that depend on more than XPath 3.1 and XSD 1.1 without optional features.
 The XPath expressions are parsed with [fontoxpath](https://github.com/FontoXML/fontoxpath),
 and the SPARQL is generated with [Traqula](https://github.com/comunica/traqula).
 

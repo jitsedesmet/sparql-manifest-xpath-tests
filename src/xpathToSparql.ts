@@ -178,7 +178,7 @@ function parse(xpath: string): IXQueryXNode {
       new slimdom.Document(),
     );
   } catch (error: unknown) {
-    throw new UnsupportedError(`Invalid XPath: ${(error as Error).message.split('\n')[0]}`);
+    throw new UnsupportedError(`Invalid XPath: ${(error as Error).message}`);
   }
   const queryBody = module.getElementsByTagNameNS('http://www.w3.org/2005/XQueryX', 'queryBody')[0];
   return toNode(queryBody.children[0]);
