@@ -1,0 +1,6 @@
+# QT3 test case fn-substring-3 of test set fn-substring, which tests the XPath expression
+#   fn:substring("12345", 1.5, 2.6)
+ASK {
+  BIND(SUBSTR( "12345" , "1.5"^^<http://www.w3.org/2001/XMLSchema#decimal> , "2.6"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "234" ))
+}

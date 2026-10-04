@@ -1,0 +1,216 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-subtract-dateTimes" ;
+  mf:entries (
+    <#op-subtract-dateTimes-yielding-DTD-1>
+    <#op-subtract-dateTimes-yielding-DTD-2>
+    <#op-subtract-dateTimes-yielding-DTD-3>
+    <#op-subtract-dateTimes-yielding-DTD-4>
+    <#op-subtract-dateTimes-yielding-DTD-5>
+    <#op-subtract-dateTimes-yielding-DTD-7>
+    <#op-subtract-dateTimes-yielding-DTD-8>
+    <#op-subtract-dateTimes-yielding-DTD-9>
+    <#op-subtract-dateTimes-yielding-DTD-10>
+    <#op-subtract-dateTimes-yielding-DTD-11>
+    <#op-subtract-dateTimes-yielding-DTD-12>
+    <#op-subtract-dateTimes-yielding-DTD-13>
+    <#op-subtract-dateTimes-yielding-DTD-14>
+    <#op-subtract-dateTimes-yielding-DTD-15>
+    <#op-subtract-dateTimes-yielding-DTD-16>
+    <#op-subtract-dateTimes-yielding-DTD-17>
+    <#op-subtract-dateTimes-yielding-DTD-18>
+    <#op-subtract-dateTimes-yielding-DTD-19>
+    <#op-subtract-dateTimes-yielding-DTD-20>
+    <#K-dateTimesSubtract-1>
+    <#K-dateTimesSubtract-2>
+    <#K-dateTimesSubtract-3>
+    <#K-dateTimesSubtract-4>
+    <#K-dateTimesSubtract-6>
+    <#cbcl-subtract-dateTimes-001>
+    <#cbcl-subtract-dateTimes-002>
+  ) .
+
+<#op-subtract-dateTimes-yielding-DTD-1> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-1" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-1             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator \nAs per example 1 (for this function)of the F&O specs.  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-2> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-2" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-2             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator \nfor which the value uses a timezone of \"+5:00\"         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-3> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-3" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-3             \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator, whose\nvalue includes a timezone of \"-6.00\".                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-4> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-4" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-4             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator that  \nreturn true and used together with fn:not.             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-5> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-5" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-5             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator that  \nis used as an argument to the fn:boolean function.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-7> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-7" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-7             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \nas an argument to the \"fn:string\" function).           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-8> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-8" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-8             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator that  \nreturns a negative value.                              \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-9> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-9" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-9             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \ntogether with an \"and\" expression.                      \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-10> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-10" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-10            \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \ntogether with an \"or\" expression.                      \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-11> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-11" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-11            \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \nas part of a \"div\" expression.                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-12> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-12" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-12            \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used \nwith a boolean expression and the \"fn:true\" function.   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-13> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-13" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-13            \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \ntogether with the numeric-equal-operator \"eq\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-14> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-14" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-14            \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \ntogether with the numeric-equal operator \"ne\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-15> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-15" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-15            \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \ntogether with the numeric-equal operator \"le\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-16> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-16" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-16             \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator used  \ntogether with the numeric-equal operator \"ge\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-17> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-17" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-17            \nWritten By: Carmelo Montanez                           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" function \nused as part of a boolean expression (and operator) and the \"fn:false\" function. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-18> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-18" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-18           \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator as \npart of a boolean expression (or operator) and the \"fn:false\" function. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-19> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-19" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-19            \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dates-yielding-DTD\" operator as \npart of a multiplication expression                     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dateTimes-yielding-DTD-20> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dateTimes-yielding-DTD-20" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dateTimes-yielding-DTD-20            \nDate: July 6, 2005                                     \nPurpose: Evaluates The \"subtract-dateTimes-yielding-DTD\" operator as \npart of a addition expression.                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <op-subtract-dateTimes-yielding-DTD-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-1> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-1" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-1                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple testing involving operator '-' between xs:date and xs:date that evaluates to zero. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <K-dateTimesSubtract-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-2> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-2" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-2                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:dateTime and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <K-dateTimesSubtract-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-3> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-3" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-3                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The 'div' operator is not available between xs:dateTime and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <K-dateTimesSubtract-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-4> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-4" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-4                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '*' operator is not available between xs:dateTime and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <K-dateTimesSubtract-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-6> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-6" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-6                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:dayTimeDuration and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <K-dateTimesSubtract-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-subtract-dateTimes-001> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-subtract-dateTimes-001" ;
+  rdfs:comment "test subtraction of large to dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <cbcl-subtract-dateTimes-001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-subtract-dateTimes-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-subtract-dateTimes-002" ;
+  rdfs:comment "test subtraction of large dateTimes" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml> ;
+  mf:action [ qt:query <cbcl-subtract-dateTimes-002.rq> ] ;
+  mf:result <../true.srj> .

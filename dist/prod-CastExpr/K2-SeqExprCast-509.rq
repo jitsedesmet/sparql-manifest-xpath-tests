@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-509 of test set prod-CastExpr, which tests the XPath expression
+#   xs:decimal("inF")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#decimal> ( "inF" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

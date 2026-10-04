@@ -1,0 +1,6 @@
+# QT3 test case CastAs687 of test set prod-CastExpr, which tests the XPath expression
+#   xs:integer(12345678901234567.3)
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#integer> ( "12345678901234567.3"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
+  FILTER(( ?result = "12345678901234567"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

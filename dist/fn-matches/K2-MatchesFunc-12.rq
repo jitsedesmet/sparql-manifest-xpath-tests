@@ -1,0 +1,6 @@
+# QT3 test case K2-MatchesFunc-12 of test set fn-matches, which tests the XPath expression
+#   matches("abcd", "(asd)[asd\1]")
+ASK {
+  BIND(REGEX( "abcd" , "(asd)[asd\\1]" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

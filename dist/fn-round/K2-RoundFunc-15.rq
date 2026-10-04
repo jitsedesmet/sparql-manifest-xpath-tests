@@ -1,0 +1,6 @@
+# QT3 test case K2-RoundFunc-15 of test set fn-round, which tests the XPath expression
+#   round(xs:double("0"))
+ASK {
+  BIND(ROUND( <http://www.w3.org/2001/XMLSchema#double> ( "0" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))
+}

@@ -1,0 +1,416 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-time-equal" ;
+  mf:entries (
+    <#op-time-equal2args-1>
+    <#op-time-equal2args-2>
+    <#op-time-equal2args-3>
+    <#op-time-equal2args-4>
+    <#op-time-equal2args-5>
+    <#op-time-equal2args-6>
+    <#op-time-equal2args-7>
+    <#op-time-equal2args-8>
+    <#op-time-equal2args-9>
+    <#op-time-equal2args-10>
+    <#op-time-equal2args-11>
+    <#op-time-equal2args-12>
+    <#op-time-equal2args-13>
+    <#op-time-equal2args-14>
+    <#op-time-equal2args-15>
+    <#op-time-equal2args-16>
+    <#op-time-equal2args-17>
+    <#op-time-equal2args-18>
+    <#op-time-equal2args-19>
+    <#op-time-equal2args-20>
+    <#K-TimeEQ-1>
+    <#K-TimeEQ-2>
+    <#K-TimeEQ-3>
+    <#K-TimeEQ-4>
+    <#K-TimeEQ-5>
+    <#K-TimeEQ-6>
+    <#K-TimeEQ-7>
+    <#K-TimeEQ-8>
+    <#K-TimeEQ-9>
+    <#K-TimeEQ-10>
+    <#K-TimeEQ-11>
+    <#K-TimeEQ-12>
+    <#K-TimeEQ-13>
+    <#K-TimeEQ-14>
+    <#K-TimeEQ-15>
+    <#K-TimeEQ-16>
+    <#K-TimeEQ-17>
+    <#K-TimeEQ-18>
+    <#K-TimeEQ-19>
+    <#K-TimeEQ-20>
+    <#K2-TimeEQ-1>
+    <#cbcl-time-equal-002>
+    <#cbcl-time-equal-003>
+    <#cbcl-time-equal-004>
+    <#cbcl-time-equal-005>
+    <#cbcl-time-equal-007>
+    <#cbcl-time-equal-008>
+    <#cbcl-time-equal-009>
+    <#cbcl-time-equal-010>
+    <#cbcl-time-equal-017>
+    <#cbcl-time-equal-018>
+  ) .
+
+<#op-time-equal2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-1                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-2                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-3                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-4                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-5                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-6                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-7                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-8                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-9                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-10                             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-11> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-11" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-11                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-12> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-12" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-12                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-13> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-13" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-13                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-14> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-14" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-14                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-15> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-15" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-15                            \nWritten By: Carmelo Montanez                           \nDate: June 3 2005                                      \nPurpose: Evaluates The \"op:time-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-16> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-16" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-16                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-17> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-17" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-17                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator  (ge)  \n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-18> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-18" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-q8                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-19> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-19" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-19                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-time-equal2args-20> a mf:QueryEvaluationTest ;
+  mf:name "op-time-equal2args-20" ;
+  rdfs:comment "*******************************************************\nTest: op-time-equal2args-20                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:time-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <op-time-equal2args-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-1" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-1                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'eq' for xs:time, returning positive. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-2> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-2" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-2                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'eq' for xs:time.             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-3> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-3" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-3                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ne' for xs:time.             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-4> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-4" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-4                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ne' for xs:time.             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-5> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-5" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-5                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset -00:00 is equal to Z, in xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-6> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-6" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-6                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset +00:00 is equal to Z, in xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-7> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-7" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-7                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset Z is equal to Z, in xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-8> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-8" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-8                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset -00:00 is equal to +00:00, in xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-9> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-9" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-9                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-10> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-10" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-10                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-11> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-11" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-11                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-12> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-12" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-12                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-13> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-13" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-13                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-14> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-14" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-14                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-15> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-15" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-15                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-16> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-16" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-16                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-17> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-17" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-17                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-18> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-18" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-18                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-19> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-19" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-19                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeEQ-20> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeEQ-20" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeEQ-20                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K-TimeEQ-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-TimeEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K2-TimeEQ-1" ;
+  rdfs:comment "*******************************************************\n Test: K2-TimeEQ-1                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Basic negative equalness test for xs:time.   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <K2-TimeEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-002" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-003> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-003" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-003.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-004> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-004" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-004.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-005> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-005" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-005.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-007> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-007" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-007.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-008> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-008" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-008.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-009> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-009" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-009.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-010> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-010" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-010.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-017> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-017" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-017.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-time-equal-018> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-time-equal-018" ;
+  rdfs:comment "test comparison of time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
+  mf:action [ qt:query <cbcl-time-equal-018.rq> ] ;
+  mf:result <../true.srj> .

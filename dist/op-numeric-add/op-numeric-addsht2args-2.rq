@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-addsht2args-2 of test set op-numeric-add, which tests the XPath expression
+#   xs:short("32767") + xs:short("-32768")
+ASK {
+  BIND(( "32767"^^<http://www.w3.org/2001/XMLSchema#short> + "-32768"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
+  FILTER(( ?result = - "1"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

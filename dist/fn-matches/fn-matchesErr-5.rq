@@ -1,0 +1,6 @@
+# QT3 test case fn-matchesErr-5 of test set fn-matches, which tests the XPath expression
+#   fn:matches("abcdefghijklmnopq", "(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)(l)((m)(n)(o)(p)(q)\13)$")
+ASK {
+  BIND(REGEX( "abcdefghijklmnopq" , "(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)(l)((m)(n)(o)(p)(q)\\13)$" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

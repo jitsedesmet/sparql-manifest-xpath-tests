@@ -1,0 +1,6 @@
+# QT3 test case K-TrueFunc-2 of test set fn-true, which tests the XPath expression
+#   true() eq true()
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> = "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

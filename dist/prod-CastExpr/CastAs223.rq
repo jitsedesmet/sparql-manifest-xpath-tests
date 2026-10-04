@@ -1,0 +1,6 @@
+# QT3 test case CastAs223 of test set prod-CastExpr, which tests the XPath expression
+#   xs:double("1e5") cast as xs:time
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#time> ( <http://www.w3.org/2001/XMLSchema#double> ( "1e5" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

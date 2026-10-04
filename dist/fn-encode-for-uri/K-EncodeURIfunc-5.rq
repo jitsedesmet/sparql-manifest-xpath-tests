@@ -1,0 +1,6 @@
+# QT3 test case K-EncodeURIfunc-5 of test set fn-encode-for-uri, which tests the XPath expression
+#   concat("http://www.example.com/", encode-for-uri("100% organic")) eq "http://www.example.com/100%25%20organic"
+ASK {
+  BIND(( CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "http://www.example.com/" ) , <http://www.w3.org/2001/XMLSchema#string> ( ENCODE_FOR_URI( "100% organic" ) ) ) = "http://www.example.com/100%25%20organic" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

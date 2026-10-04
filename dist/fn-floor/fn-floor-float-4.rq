@@ -1,0 +1,6 @@
+# QT3 test case fn-floor-float-4 of test set fn-floor, which tests the XPath expression
+#   floor(xs:float(0.0e0))
+ASK {
+  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#float> ( "0.0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) ) AS ?result)
+  FILTER(( ( ?result = "0.0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#float> ) ) ))
+}

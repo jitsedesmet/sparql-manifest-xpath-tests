@@ -1,0 +1,6 @@
+# QT3 test case K-NumericAdd-65 of test set op-numeric-add, which tests the XPath expression
+#   "foo" + 1
+ASK {
+  BIND(( "foo" + "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

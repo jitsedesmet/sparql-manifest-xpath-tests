@@ -1,0 +1,6 @@
+# QT3 test case fn-concat-14 of test set fn-concat, which tests the XPath expression
+#   fn:not(fn:concat("ab","cde"))
+ASK {
+  BIND(! CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "ab" ) , <http://www.w3.org/2001/XMLSchema#string> ( "cde" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

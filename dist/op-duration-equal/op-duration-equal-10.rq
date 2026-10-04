@@ -1,0 +1,6 @@
+# QT3 test case op-duration-equal-10 of test set op-duration-equal, which tests the XPath expression
+#   xs:duration("P365D") eq xs:duration("P365D")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#duration> ( "P365D" ) = <http://www.w3.org/2001/XMLSchema#duration> ( "P365D" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-TimezoneFromDateTimeFunc-5 of test set fn-timezone-from-dateTime, which tests the XPath expression
+#   timezone-from-dateTime(xs:dateTime("2004-10-12T23:43:12Z")) eq xs:dayTimeDuration("PT0S")
+ASK {
+  BIND(( TIMEZONE( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2004-10-12T23:43:12Z" ) ) = <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "PT0S" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

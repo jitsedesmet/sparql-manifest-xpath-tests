@@ -1,0 +1,6 @@
+# QT3 test case fn-encode-for-uri-4 of test set fn-encode-for-uri, which tests the XPath expression
+#   (fn:encode-for-uri("examples_example"))
+ASK {
+  BIND(ENCODE_FOR_URI( "examples_example" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "examples_example" ))
+}

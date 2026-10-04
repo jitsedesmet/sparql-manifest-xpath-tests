@@ -1,0 +1,6 @@
+# QT3 test case fn-replace3args-3 of test set fn-replace, which tests the XPath expression
+#   fn:replace("This is a characte","This is a characte","This is a characte")
+ASK {
+  BIND(REPLACE( "This is a characte" , "This is a characte" , "This is a characte" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "This is a characte" ))
+}

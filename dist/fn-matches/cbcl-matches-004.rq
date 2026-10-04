@@ -1,0 +1,6 @@
+# QT3 test case cbcl-matches-004 of test set fn-matches, which tests the XPath expression
+#   fn:matches('aaa', 'a{99999999999999999999999999}')
+ASK {
+  BIND(REGEX( "aaa" , "a{99999999999999999999999999}" ) AS ?result)
+  FILTER(( ( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ) || ! BOUND( ?result ) ))
+}

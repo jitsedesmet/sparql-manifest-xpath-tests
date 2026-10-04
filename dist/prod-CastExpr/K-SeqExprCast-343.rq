@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-343 of test set prod-CastExpr, which tests the XPath expression
+#   xs:string(xs:dateTime("2002-02-15T21:01:23.100")) eq "2002-02-15T21:01:23.1"
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2002-02-15T21:01:23.100" ) ) = "2002-02-15T21:01:23.1" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

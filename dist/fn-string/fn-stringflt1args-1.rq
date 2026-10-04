@@ -1,0 +1,6 @@
+# QT3 test case fn-stringflt1args-1 of test set fn-string, which tests the XPath expression
+#   fn:string(xs:float("-3.4028235E38"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#float> ( "-3.4028235E38" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-3.4028235E38" ))
+}

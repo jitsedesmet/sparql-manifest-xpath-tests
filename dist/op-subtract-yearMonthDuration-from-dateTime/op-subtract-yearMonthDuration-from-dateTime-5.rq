@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-yearMonthDuration-from-dateTime-5 of test set op-subtract-yearMonthDuration-from-dateTime, which tests the XPath expression
+#   fn:boolean(fn:string(xs:dateTime("1962-03-12T10:12:34Z") - xs:yearMonthDuration("P10Y01M")))
+ASK {
+  BIND(!( ! <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1962-03-12T10:12:34Z" ) - <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P10Y01M" ) ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-ABSFunc-4 of test set fn-abs, which tests the XPath expression
+#   abs(10.5) eq 10.5
+ASK {
+  BIND(( ABS( "10.5"^^<http://www.w3.org/2001/XMLSchema#decimal> ) = "10.5"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

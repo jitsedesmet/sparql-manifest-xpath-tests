@@ -1,0 +1,1144 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-duration-equal" ;
+  mf:entries (
+    <#op-duration-equal-1>
+    <#op-duration-equal-2>
+    <#op-duration-equal-3>
+    <#op-duration-equal-4>
+    <#op-duration-equal-5>
+    <#op-duration-equal-6>
+    <#op-duration-equal-7>
+    <#op-duration-equal-8>
+    <#op-duration-equal-9>
+    <#op-duration-equal-10>
+    <#op-duration-equal-11>
+    <#op-duration-equal-12>
+    <#op-duration-equal-13>
+    <#op-duration-equal-14>
+    <#op-duration-equal-15>
+    <#op-duration-equal-16>
+    <#op-duration-equal-17>
+    <#op-duration-equal-18>
+    <#op-duration-equal-19>
+    <#op-duration-equal-20>
+    <#op-duration-equal-21>
+    <#op-duration-equal-22>
+    <#op-duration-equal-23>
+    <#op-duration-equal-24>
+    <#op-duration-equal-25>
+    <#op-duration-equal-26>
+    <#op-duration-equal-27>
+    <#op-yearMonthDuration-equal2args-1>
+    <#op-yearMonthDuration-equal2args-2>
+    <#op-yearMonthDuration-equal2args-3>
+    <#op-yearMonthDuration-equal2args-4>
+    <#op-yearMonthDuration-equal2args-5>
+    <#op-yearMonthDuration-equal2args-6>
+    <#op-yearMonthDuration-equal2args-7>
+    <#op-yearMonthDuration-equal2args-8>
+    <#op-yearMonthDuration-equal2args-9>
+    <#op-yearMonthDuration-equal2args-10>
+    <#op-yearMonthDuration-equal2args-11>
+    <#op-yearMonthDuration-equal2args-12>
+    <#op-yearMonthDuration-equal2args-13>
+    <#op-yearMonthDuration-equal2args-14>
+    <#op-yearMonthDuration-equal2args-15>
+    <#op-yearMonthDuration-equal2args-16>
+    <#op-yearMonthDuration-equal2args-17>
+    <#op-yearMonthDuration-equal2args-18>
+    <#op-yearMonthDuration-equal2args-19>
+    <#op-yearMonthDuration-equal2args-20>
+    <#op-dayTimeDuration-equal2args-1>
+    <#op-dayTimeDuration-equal2args-2>
+    <#op-dayTimeDuration-equal2args-3>
+    <#op-dayTimeDuration-equal2args-4>
+    <#op-dayTimeDuration-equal2args-5>
+    <#op-dayTimeDuration-equal2args-6>
+    <#op-dayTimeDuration-equal2args-7>
+    <#op-dayTimeDuration-equal2args-8>
+    <#op-dayTimeDuration-equal2args-9>
+    <#op-dayTimeDuration-equal2args-10>
+    <#op-dayTimeDuration-equal2args-11>
+    <#op-dayTimeDuration-equal2args-12>
+    <#op-dayTimeDuration-equal2args-13>
+    <#op-dayTimeDuration-equal2args-14>
+    <#op-dayTimeDuration-equal2args-15>
+    <#op-dayTimeDuration-equal2args-16>
+    <#op-dayTimeDuration-equal2args-17>
+    <#op-dayTimeDuration-equal2args-18>
+    <#op-dayTimeDuration-equal2args-19>
+    <#op-dayTimeDuration-equal2args-20>
+    <#K-DurationEQ-1>
+    <#K-DurationEQ-2>
+    <#K-DurationEQ-3>
+    <#K-DurationEQ-4>
+    <#K-DurationEQ-5>
+    <#K-DurationEQ-6>
+    <#K-DurationEQ-7>
+    <#K-DurationEQ-8>
+    <#K-DurationEQ-9>
+    <#K-DurationEQ-10>
+    <#K-DurationEQ-11>
+    <#K-DurationEQ-12>
+    <#K-DurationEQ-13>
+    <#K-DurationEQ-14>
+    <#K-DurationEQ-15>
+    <#K-DurationEQ-16>
+    <#K-DurationEQ-17>
+    <#K-DurationEQ-18>
+    <#K-DurationEQ-19>
+    <#K-DurationEQ-20>
+    <#K-DurationEQ-21>
+    <#K-DurationEQ-22>
+    <#K-DurationEQ-23>
+    <#K-DurationEQ-24>
+    <#K-DurationEQ-25>
+    <#K-DurationEQ-26>
+    <#K-DurationEQ-27>
+    <#K-DurationEQ-28>
+    <#K-DurationEQ-29>
+    <#K-DurationEQ-30>
+    <#K-DurationEQ-31>
+    <#K-DurationEQ-32>
+    <#K-DurationEQ-33>
+    <#K-DurationEQ-34>
+    <#K-DurationEQ-35>
+    <#K-DurationEQ-36>
+    <#K-DurationEQ-37>
+    <#K-DurationEQ-38>
+    <#K-DurationEQ-39>
+    <#K-DurationEQ-40>
+    <#K-DurationEQ-41>
+    <#K-DurationEQ-42>
+    <#K-DurationEQ-43>
+    <#K-DurationEQ-44>
+    <#K-DurationEQ-45>
+    <#K-DurationEQ-46>
+    <#K-DurationEQ-47>
+    <#K-DurationEQ-48>
+    <#K-DurationEQ-49>
+    <#K-DurationEQ-50>
+    <#K-DurationEQ-51>
+    <#K-DurationEQ-52>
+    <#K-DurationEQ-53>
+    <#K-DurationEQ-54>
+    <#K-DurationEQ-55>
+    <#K-DurationEQ-56>
+    <#K-DurationEQ-57>
+    <#K-DurationEQ-58>
+    <#K-DurationEQ-59>
+    <#K-DurationEQ-60>
+    <#K-DayTimeDurationEQ-1>
+    <#K-DayTimeDurationEQ-2>
+    <#K-DayTimeDurationEQ-3>
+    <#K-DayTimeDurationEQ-4>
+    <#K-DayTimeDurationEQ-5>
+    <#K-DayTimeDurationEQ-6>
+    <#K-DayTimeDurationEQ-7>
+    <#K-DayTimeDurationEQ-8>
+    <#K-YearMonthDurationEQ-1>
+    <#K-YearMonthDurationEQ-2>
+    <#K-YearMonthDurationEQ-3>
+    <#K-YearMonthDurationEQ-4>
+    <#K-YearMonthDurationEQ-5>
+    <#K-YearMonthDurationEQ-6>
+    <#K-YearMonthDurationEQ-7>
+  ) .
+
+<#op-duration-equal-1> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-1" ;
+  rdfs:comment "Evaluation of duration-equal operator as per example 1 for this operator from Functions and Operators specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-2> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-2" ;
+  rdfs:comment "Evaluation of duration-equal operator as per example 2 for this operator from Functions and Operators specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-3> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-3" ;
+  rdfs:comment "Evaluation of duration-equal operator as per example 3 for this operator from Functions and Operators specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-4> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-4" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P1Y\" (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-5> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-5" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P1Y\" (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-6> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-6" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"PT24H\" (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-7> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-7" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"PT24H\" (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-8> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-8" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P12M\" (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-9> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-9" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P12M\" (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-10> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-10" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P365D\" (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-11> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-11" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P365D\" (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-12> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-12" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P36D\" and \"P39D\" (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-13> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-13" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P36D\" and \"P39D\" (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-14> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-14" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P36D\" and used as argument to fn:not (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-15> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-15" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P36D\" and used as argument to fn:not (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-16> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-16" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P36D\" and used as argument to xs:boolean (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-17> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-17" ;
+  rdfs:comment "Evaluation of duration-equal operator with both operands set to \"P36D\" and used as argument to xs:boolean (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-18> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-18" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"and\" operator and \"fn:true\" function (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-19> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-19" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"and\" operator and \"fn:true\" function (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-20> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-20" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"or\" operator and \"fn:true\" function (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-21> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-21" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"or\" operator and \"fn:true\" function (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-22> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-22" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"and\" operator and \"fn:false\" function (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-23> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-23" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"and\" operator and \"fn:false\" function (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-23.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-24> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-24" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"or\" operator and \"fn:false\" function (uses eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-25> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-25" ;
+  rdfs:comment "Evaluation of duration-equal operator as part of boolean expression \"or\" operator and \"fn:false\" function (uses ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-26> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-26" ;
+  rdfs:comment "Evaluation of duration-equal operator as per example 4 for this operator from the F and O specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-26.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-duration-equal-27> a mf:QueryEvaluationTest ;
+  mf:name "op-duration-equal-27" ;
+  rdfs:comment "Evaluation of duration-equal operator as per example 5 for this operator from the F and O specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-duration-equal-27.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-1" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-2" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(mid range) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-3" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(upper bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-4" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-5" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-6" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-7" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(mid range) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-8" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(upper bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-9" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-10" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-11> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-11" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-12> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-12" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:yearMonthDuration(mid range) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-13> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-13" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:yearMonthDuration(upper bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-14> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-14" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-15> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-15" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-16> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-16" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-17> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-17" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:yearMonthDuration(mid range) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-18> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-18" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:yearMonthDuration(upper bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-19> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-19" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-equal2args-20> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-equal2args-20" ;
+  rdfs:comment "Evaluates The \"op:yearMonthDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:yearMonthDuration(lower bound) $arg2 = xs:yearMonthDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-equal2args-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-1" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-2" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(mid range) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-3" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(upper bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-4" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-5" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-6" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-7" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(mid range) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-8" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(upper bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-9" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-10" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-11> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-11" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-12> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-12" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:dayTimeDuration(mid range) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-13> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-13" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:dayTimeDuration(upper bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-14> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-14" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-15> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-15" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (le) with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-16> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-16" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-17> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-17" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:dayTimeDuration(mid range) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-18> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-18" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:dayTimeDuration(upper bound) $arg2 = xs:dayTimeDuration(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-19> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-19" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-equal2args-20> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-equal2args-20" ;
+  rdfs:comment "Evaluates The \"op:dayTimeDuration-equal\" operator (ge) with the arguments set as follows: $arg1 = xs:dayTimeDuration(lower bound) $arg2 = xs:dayTimeDuration(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <op-dayTimeDuration-equal2args-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-1" ;
+  rdfs:comment "Simple test of 'eq' for xs:duration, returning positive." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-2> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-2" ;
+  rdfs:comment "Testing 'eq' involving xs:duration with two zeroed values." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-3" ;
+  rdfs:comment "Simple test of 'eq' for xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-4" ;
+  rdfs:comment "Simple test of 'ne' for xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-5> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-5" ;
+  rdfs:comment "Simple test of 'ne' for xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-6> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-6" ;
+  rdfs:comment "The xs:duration values P365D and P1Y are not equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-7> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-7" ;
+  rdfs:comment "The xs:duration values P12M and P1Y are equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-8> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-8" ;
+  rdfs:comment "The xs:duration values P1M and P31D are not equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-9> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-9" ;
+  rdfs:comment "The xs:duration values -PT0S and PT0S are equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-10> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-10" ;
+  rdfs:comment "The xs:duration values -P1Y3M4DT08H4M33S and P1Y3M4DT08H4M33S are not equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-11> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-11" ;
+  rdfs:comment "The 'lt' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-12> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-12" ;
+  rdfs:comment "The 'le' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-13> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-13" ;
+  rdfs:comment "The 'gt' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-14> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-14" ;
+  rdfs:comment "The 'ge' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-15> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-15" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:duration on the left hand. Both values are zero." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-16> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-16" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:duration on the right hand. Both values are zero." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-17> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-17" ;
+  rdfs:comment "Simple test of 'eq' for xs:yearMonthDuration with xs:duration on the right hand. Both values are zero." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-18> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-18" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:duration on the left hand. Both values are zero." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-19> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-19" ;
+  rdfs:comment "Simple test of 'eq' for xs:yearMonthDuration with xs:dayTimeDuration on the right hand. Both values are zero." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-20> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-20" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:dayTimeDuration on the left hand. Both values are zero." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-21> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-21" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:duration on the left hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-22> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-22" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:duration on the right hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-23> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-23" ;
+  rdfs:comment "Simple test of 'ne' for xs:dayTimeDuration with xs:duration on the left hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-23.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-24> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-24" ;
+  rdfs:comment "Simple test of 'ne' for xs:dayTimeDuration with xs:duration on the left hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-25> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-25" ;
+  rdfs:comment "Simple test of 'eq' for xs:yearMonthDuration with xs:dayTimeDuration on the left hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-26> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-26" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:yearMonthDuration on the right hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-26.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-27> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-27" ;
+  rdfs:comment "Simple test of 'eq' for xs:yearMonthDuration with xs:duration on the right hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-27.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-28> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-28" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration with xs:duration on the left hand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-28.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-29> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-29" ;
+  rdfs:comment "Test comparing xs:duration and xs:yearMonthDuration stressing value representations are normalized properly." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-29.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-30> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-30" ;
+  rdfs:comment "Test comparing xs:duration and xs:yearMonthDuration stressing value representations are normalized properly(with operand order switched)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-30.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-31> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-31" ;
+  rdfs:comment "Test comparing xs:dayTimeDuration and xs:yearMonthDuration stressing value representations are normalized properly." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-31.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-32> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-32" ;
+  rdfs:comment "Test comparing xs:dayTimeDuration and xs:yearMonthDuration stressing value representations are normalized properly(with operand order switched)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-32.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-33> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-33" ;
+  rdfs:comment "The 'ge' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-33.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-34> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-34" ;
+  rdfs:comment "The 'gt' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-34.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-35> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-35" ;
+  rdfs:comment "The 'lt' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-35.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-36> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-36" ;
+  rdfs:comment "The 'le' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-36.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-37> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-37" ;
+  rdfs:comment "The 'ge' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-37.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-38> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-38" ;
+  rdfs:comment "The 'gt' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-38.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-39> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-39" ;
+  rdfs:comment "The 'lt' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-39.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-40> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-40" ;
+  rdfs:comment "The 'le' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-40.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-41> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-41" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-41.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-42> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-42" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-42.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-43> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-43" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-43.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-44> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-44" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-44.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-45> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-45" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-45.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-46> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-46" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-46.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-47> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-47" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-47.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-48> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-48" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-48.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-49> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-49" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-49.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-50> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-50" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-50.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-51> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-51" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-51.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-52> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-52" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-52.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-53> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-53" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-53.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-54> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-54" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-54.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-55> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-55" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-55.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-56> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-56" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-56.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-57> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-57" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-57.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-58> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-58" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-58.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-59> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-59" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-59.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-60> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-60" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DurationEQ-60.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-1" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration, returning positive." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-2> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-2" ;
+  rdfs:comment "Testing 'eq' involving xs:dayTimeDuration with two zeroed values." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-3" ;
+  rdfs:comment "Simple test of 'eq' for xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-4" ;
+  rdfs:comment "Simple test of 'ne' for xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-5> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-5" ;
+  rdfs:comment "Simple test of 'ne' for xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-6> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-6" ;
+  rdfs:comment "The xs:dayTimeDuration values -PT0S and PT0S are equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-7> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-7" ;
+  rdfs:comment "The xs:dayTimeDuration values -P2DT5H and P2DT5H are not equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationEQ-8> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationEQ-8" ;
+  rdfs:comment "Test eq operator for xs:dayTimeDuration values with large milli second component." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-DayTimeDurationEQ-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationEQ-1" ;
+  rdfs:comment "Simple test of 'eq' for xs:yearMonthDuration, returning positive." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationEQ-2> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationEQ-2" ;
+  rdfs:comment "Testing 'eq' involving xs:yearMonthDuration with two zeroed values." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationEQ-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationEQ-3> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationEQ-3" ;
+  rdfs:comment "Simple test of 'eq' for xs:yearMonthDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationEQ-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationEQ-4> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationEQ-4" ;
+  rdfs:comment "Simple test of 'ne' for xs:yearMonthDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationEQ-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationEQ-5> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationEQ-5" ;
+  rdfs:comment "Simple test of 'ne' for xs:yearMonthDuration." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationEQ-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationEQ-6> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationEQ-6" ;
+  rdfs:comment "The xs:yearMonthDuration values -P0M and P0M are equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationEQ-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationEQ-7> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationEQ-7" ;
+  rdfs:comment "The xs:yearMonthDuration values -P3Y8M and +P3Y8M are not equal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationEQ-7.rq> ] ;
+  mf:result <../true.srj> .

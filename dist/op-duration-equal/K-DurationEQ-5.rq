@@ -1,0 +1,6 @@
+# QT3 test case K-DurationEQ-5 of test set op-duration-equal, which tests the XPath expression
+#   not(xs:duration("P1999Y10M3DT08H34M12.143S") ne xs:duration("P1999Y10M3DT08H34M12.143S"))
+ASK {
+  BIND(! ( <http://www.w3.org/2001/XMLSchema#duration> ( "P1999Y10M3DT08H34M12.143S" ) != <http://www.w3.org/2001/XMLSchema#duration> ( "P1999Y10M3DT08H34M12.143S" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

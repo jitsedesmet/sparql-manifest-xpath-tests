@@ -1,0 +1,6 @@
+# QT3 test case K-GenCompLT-11 of test set prod-GeneralComp.lt, which tests the XPath expression
+#   1 < 2
+ASK {
+  BIND(( "1"^^<http://www.w3.org/2001/XMLSchema#integer> < "2"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

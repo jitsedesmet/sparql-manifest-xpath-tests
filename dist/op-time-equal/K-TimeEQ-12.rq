@@ -1,0 +1,6 @@
+# QT3 test case K-TimeEQ-12 of test set op-time-equal, which tests the XPath expression
+#   xs:time("12:12:23") lt xs:date("1999-12-04")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "12:12:23" ) < <http://www.w3.org/2001/XMLSchema#date> ( "1999-12-04" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-DateGT-2 of test set op-date-greater-than, which tests the XPath expression
+#   not(xs:date("2004-07-12") gt xs:date("2004-07-12"))
+ASK {
+  BIND(! ( <http://www.w3.org/2001/XMLSchema#date> ( "2004-07-12" ) > <http://www.w3.org/2001/XMLSchema#date> ( "2004-07-12" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

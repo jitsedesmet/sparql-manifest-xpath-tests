@@ -1,0 +1,6 @@
+# QT3 test case K-DayTimeDurationSubtract-4 of test set op-subtract-dayTimeDurations, which tests the XPath expression
+#   xs:dayTimeDuration("P3D") - xs:yearMonthDuration("P3Y3M")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3D" ) - <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P3Y3M" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

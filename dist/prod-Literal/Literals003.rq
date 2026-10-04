@@ -1,0 +1,7 @@
+# QT3 test case Literals003 of test set prod-Literal, which tests the XPath expression
+#   "line1
+#   line2"
+ASK {
+  BIND("line1\nline2" AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "line1\nline2" ))
+}

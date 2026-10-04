@@ -1,0 +1,6 @@
+# QT3 test case op-dateTime-equal2args-2 of test set op-dateTime-equal, which tests the XPath expression
+#   xs:dateTime("1996-04-07T01:40:52Z") eq xs:dateTime("1970-01-01T00:00:00Z")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1996-04-07T01:40:52Z" ) = <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T00:00:00Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-lower-case-5 of test set fn-lower-case, which tests the XPath expression
+#   fn:lower-case("ABCD")
+ASK {
+  BIND(LCASE( "ABCD" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "abcd" ))
+}

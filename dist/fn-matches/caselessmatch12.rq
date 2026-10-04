@@ -1,0 +1,6 @@
+# QT3 test case caselessmatch12 of test set fn-matches, which tests the XPath expression
+#   matches('Q', '[^Q]', 'i')
+ASK {
+  BIND(REGEX( "Q" , "[^Q]" , "i" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

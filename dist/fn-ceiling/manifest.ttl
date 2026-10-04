@@ -1,0 +1,576 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-ceiling" ;
+  mf:entries (
+    <#fn-ceilingint1args-1>
+    <#fn-ceilingint1args-2>
+    <#fn-ceilingint1args-3>
+    <#fn-ceilingintg1args-1>
+    <#fn-ceilingintg1args-2>
+    <#fn-ceilingintg1args-3>
+    <#fn-ceilingdec1args-1>
+    <#fn-ceilingdec1args-2>
+    <#fn-ceilingdec1args-3>
+    <#fn-ceilingdbl1args-1>
+    <#fn-ceilingdbl1args-2>
+    <#fn-ceilingdbl1args-3>
+    <#fn-ceilingflt1args-1>
+    <#fn-ceilingflt1args-2>
+    <#fn-ceilingflt1args-3>
+    <#fn-ceilinglng1args-1>
+    <#fn-ceilinglng1args-2>
+    <#fn-ceilinglng1args-3>
+    <#fn-ceilingusht1args-1>
+    <#fn-ceilingusht1args-2>
+    <#fn-ceilingusht1args-3>
+    <#fn-ceilingnint1args-1>
+    <#fn-ceilingnint1args-2>
+    <#fn-ceilingnint1args-3>
+    <#fn-ceilingpint1args-1>
+    <#fn-ceilingpint1args-2>
+    <#fn-ceilingpint1args-3>
+    <#fn-ceilingulng1args-1>
+    <#fn-ceilingulng1args-2>
+    <#fn-ceilingulng1args-3>
+    <#fn-ceilingnpi1args-1>
+    <#fn-ceilingnpi1args-2>
+    <#fn-ceilingnpi1args-3>
+    <#fn-ceilingnni1args-1>
+    <#fn-ceilingnni1args-2>
+    <#fn-ceilingnni1args-3>
+    <#fn-ceilingsht1args-1>
+    <#fn-ceilingsht1args-2>
+    <#fn-ceilingsht1args-3>
+    <#K-CeilingFunc-4>
+    <#K-CeilingFunc-5>
+    <#K-CeilingFunc-6>
+    <#fn-ceiling-decimal-1>
+    <#fn-ceiling-decimal-2>
+    <#fn-ceiling-decimal-3>
+    <#fn-ceiling-decimal-4>
+    <#fn-ceiling-decimal-5>
+    <#fn-ceiling-decimal-6>
+    <#fn-ceiling-decimal-7>
+    <#fn-ceiling-double-1>
+    <#fn-ceiling-double-2>
+    <#fn-ceiling-double-3>
+    <#fn-ceiling-double-4>
+    <#fn-ceiling-double-5>
+    <#fn-ceiling-double-6>
+    <#fn-ceiling-double-7>
+    <#fn-ceiling-double-8>
+    <#fn-ceiling-double-9>
+    <#fn-ceiling-double-10>
+    <#fn-ceiling-double-11>
+    <#fn-ceiling-float-1>
+    <#fn-ceiling-float-2>
+    <#fn-ceiling-float-3>
+    <#fn-ceiling-float-4>
+    <#fn-ceiling-float-5>
+    <#fn-ceiling-float-6>
+    <#fn-ceiling-float-7>
+    <#fn-ceiling-float-8>
+    <#fn-ceiling-float-9>
+    <#fn-ceiling-float-10>
+    <#fn-ceiling-float-11>
+  ) .
+
+<#fn-ceilingint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingint1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingint1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:int(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingint1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingintg1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingintg1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingintg1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingdec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingdec1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingdec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingdec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingdec1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingdec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingdec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingdec1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingdec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingdbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingdbl1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingdbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingdbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingdbl1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:double(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingdbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingdbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingdbl1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingdbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingflt1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingflt1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:float(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingflt1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilinglng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilinglng1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilinglng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilinglng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilinglng1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilinglng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilinglng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilinglng1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilinglng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingusht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingusht1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingusht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingusht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingusht1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingusht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingusht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingusht1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingusht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnint1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnint1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnint1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingpint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingpint1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingpint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingpint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingpint1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingpint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingpint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingpint1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingpint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingulng1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingulng1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingulng1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnpi1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnpi1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnpi1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnni1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnni1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingnni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingnni1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingnni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingsht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingsht1args-1" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingsht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingsht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingsht1args-2" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingsht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceilingsht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceilingsht1args-3" ;
+  rdfs:comment "Evaluates The \"ceiling\" function with the arguments set as follows: $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceilingsht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-CeilingFunc-4> a mf:QueryEvaluationTest ;
+  mf:name "K-CeilingFunc-4" ;
+  rdfs:comment "A test whose essence is: `ceiling(10.5) eq 11`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <K-CeilingFunc-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-CeilingFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-CeilingFunc-5" ;
+  rdfs:comment "A test whose essence is: `ceiling(-10.5) eq -10`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <K-CeilingFunc-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-CeilingFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-CeilingFunc-6" ;
+  rdfs:comment "A test whose essence is: `ceiling(\"a string\")`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <K-CeilingFunc-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-decimal-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-decimal-1" ;
+  rdfs:comment "Basic test of ceiling(decimal)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-decimal-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-decimal-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-decimal-2" ;
+  rdfs:comment "Basic test of ceiling(decimal)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-decimal-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-decimal-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-decimal-3" ;
+  rdfs:comment "Basic test of ceiling(decimal)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-decimal-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-decimal-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-decimal-4" ;
+  rdfs:comment "Basic test of ceiling(decimal)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-decimal-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-decimal-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-decimal-5" ;
+  rdfs:comment "Basic test of ceiling(decimal)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-decimal-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-decimal-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-decimal-6" ;
+  rdfs:comment "Basic test of ceiling(decimal)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-decimal-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-decimal-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-decimal-7" ;
+  rdfs:comment "Basic test of ceiling(decimal)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-decimal-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-1" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-2" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-3" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-4" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-5" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-6" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-7" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-8" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-9" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-10" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-double-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-double-11" ;
+  rdfs:comment "Basic test of ceiling(double)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-double-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-1" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-2" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-3" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-4" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-5" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-6" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-7" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-8" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-9" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-10" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ceiling-float-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-ceiling-float-11" ;
+  rdfs:comment "Basic test of ceiling(float))" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
+  mf:action [ qt:query <fn-ceiling-float-11.rq> ] ;
+  mf:result <../true.srj> .

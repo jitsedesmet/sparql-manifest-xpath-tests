@@ -1,0 +1,6 @@
+# QT3 test case fn-notnint1args-1 of test set fn-not, which tests the XPath expression
+#   fn:not(xs:negativeInteger("-999999999999999999"))
+ASK {
+  BIND(! "-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

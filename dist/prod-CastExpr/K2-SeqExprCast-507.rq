@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-507 of test set prod-CastExpr, which tests the XPath expression
+#   xs:float("inF")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#float> ( "inF" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

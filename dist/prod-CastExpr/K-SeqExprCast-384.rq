@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-384 of test set prod-CastExpr, which tests the XPath expression
+#   xs:date("1999-12-01-15:00")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#date> ( "1999-12-01-15:00" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

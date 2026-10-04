@@ -1,0 +1,176 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-contains" ;
+  mf:entries (
+    <#fn-contains2args-1>
+    <#fn-contains2args-2>
+    <#fn-contains2args-3>
+    <#fn-contains2args-4>
+    <#fn-contains2args-5>
+    <#fn-contains-1>
+    <#fn-contains-2>
+    <#fn-contains-3>
+    <#fn-contains-8>
+    <#fn-contains-9>
+    <#fn-contains-10>
+    <#fn-contains-11>
+    <#fn-contains-12>
+    <#fn-contains-13>
+    <#fn-contains-14>
+    <#fn-contains-15>
+    <#fn-contains-16>
+    <#K-ContainsFunc-6>
+    <#K-ContainsFunc-7>
+    <#K-ContainsFunc-10>
+    <#K-ContainsFunc-11>
+  ) .
+
+<#fn-contains2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains2args-1" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains2args-2" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = xs:string(mid range) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains2args-3" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = xs:string(upper bound) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains2args-4" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains2args-5" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-1" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-2" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"A Character String\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-3" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"A Character String\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-8" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"AAAAABBBBBCCCCC\" $arg2 = \"BBBBB\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-9" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"AAAAABBBBB\" $arg2 = \" \"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-10" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \" \" $arg2 = \" AAAAABBBBB\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-11" ;
+  rdfs:comment "Evaluates The \"contains\" function using it as a argument of a fn:not - returns false" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-12" ;
+  rdfs:comment "Evaluates The \"contains\" function using it as a argument of a fn:not - returns true" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-13" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = xs:string(\"A\") $arg2 = \"A\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-14" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"A\" $arg2 = xs:string(\"A\")" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-15" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"A\" $arg2 = \"a\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-contains-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-contains-16" ;
+  rdfs:comment "Evaluates The \"contains\" function with the arguments set as follows: $arg1 = \"a\" $arg2 = \"A\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <fn-contains-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ContainsFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-ContainsFunc-6" ;
+  rdfs:comment "A test whose essence is: `contains(\"tattoo\", \"t\")`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <K-ContainsFunc-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ContainsFunc-7> a mf:QueryEvaluationTest ;
+  mf:name "K-ContainsFunc-7" ;
+  rdfs:comment "A test whose essence is: `not(contains(\"tattoo\", \"ttt\"))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <K-ContainsFunc-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ContainsFunc-10> a mf:QueryEvaluationTest ;
+  mf:name "K-ContainsFunc-10" ;
+  rdfs:comment "A test whose essence is: `contains(\"foo\", \"foo\")`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <K-ContainsFunc-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ContainsFunc-11> a mf:QueryEvaluationTest ;
+  mf:name "K-ContainsFunc-11" ;
+  rdfs:comment "A test whose essence is: `not(contains(\"\", \"a string\"))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/contains.xml> ;
+  mf:action [ qt:query <K-ContainsFunc-11.rq> ] ;
+  mf:result <../true.srj> .

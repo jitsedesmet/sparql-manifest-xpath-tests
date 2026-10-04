@@ -1,0 +1,6 @@
+# QT3 test case K-GenCompEq-47 of test set prod-GeneralComp.eq, which tests the XPath expression
+#   "1" = 1
+ASK {
+  BIND(( "1" = "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

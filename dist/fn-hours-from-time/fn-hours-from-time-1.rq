@@ -1,0 +1,6 @@
+# QT3 test case fn-hours-from-time-1 of test set fn-hours-from-time, which tests the XPath expression
+#   fn:hours-from-time(xs:time("11:23:00Z"))
+ASK {
+  BIND(HOURS( <http://www.w3.org/2001/XMLSchema#time> ( "11:23:00Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "11" ))
+}

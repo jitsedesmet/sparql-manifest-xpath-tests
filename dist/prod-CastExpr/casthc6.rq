@@ -1,0 +1,6 @@
+# QT3 test case casthc6 of test set prod-CastExpr, which tests the XPath expression
+#   (5 + 5) cast as xs:string
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( ( "5"^^<http://www.w3.org/2001/XMLSchema#integer> + "5"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "10" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-539 of test set prod-CastExpr, which tests the XPath expression
+#   boolean(xs:decimal("10.01"))
+ASK {
+  BIND(!( ! <http://www.w3.org/2001/XMLSchema#decimal> ( "10.01" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

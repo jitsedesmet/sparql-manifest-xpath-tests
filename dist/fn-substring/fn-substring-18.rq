@@ -1,0 +1,6 @@
+# QT3 test case fn-substring-18 of test set fn-substring, which tests the XPath expression
+#   fn:contains(fn:substring("ABCDEF",1),"DEF")
+ASK {
+  BIND(CONTAINS( SUBSTR( "ABCDEF" , "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) , "DEF" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

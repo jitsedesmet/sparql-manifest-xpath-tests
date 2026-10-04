@@ -1,0 +1,6 @@
+# QT3 test case fn-notulng1args-3 of test set fn-not, which tests the XPath expression
+#   fn:not(xs:unsignedLong("184467440737095516"))
+ASK {
+  BIND(! "184467440737095516"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

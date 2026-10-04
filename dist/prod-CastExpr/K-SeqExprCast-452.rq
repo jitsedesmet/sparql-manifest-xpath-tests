@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-452 of test set prod-CastExpr, which tests the XPath expression
+#   xs:float("3.4e5") cast as xs:duration
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#duration> ( <http://www.w3.org/2001/XMLSchema#float> ( "3.4e5" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

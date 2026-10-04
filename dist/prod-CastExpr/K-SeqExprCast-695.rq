@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-695 of test set prod-CastExpr, which tests the XPath expression
+#   boolean(xs:yearMonthDuration("P1Y12M"))
+ASK {
+  BIND(!( ! <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1Y12M" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

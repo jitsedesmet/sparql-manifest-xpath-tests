@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-unary-plusnpi1args-3 of test set op-numeric-unary-plus, which tests the XPath expression
+#   +(xs:nonPositiveInteger("0"))
+ASK {
+  BIND(+ "0"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> AS ?result)
+  FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

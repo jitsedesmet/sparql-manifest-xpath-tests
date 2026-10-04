@@ -1,0 +1,232 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-yearMonthDuration-less-than" ;
+  mf:entries (
+    <#op-yearMonthDuration-less-than2args-1>
+    <#op-yearMonthDuration-less-than2args-2>
+    <#op-yearMonthDuration-less-than2args-3>
+    <#op-yearMonthDuration-less-than2args-4>
+    <#op-yearMonthDuration-less-than2args-5>
+    <#op-yearMonthDuration-less-than2args-6>
+    <#op-yearMonthDuration-less-than2argsNew-7>
+    <#op-yearMonthDuration-less-than2args-8>
+    <#op-yearMonthDuration-less-than2args-9>
+    <#op-yearMonthDuration-less-than2args-10>
+    <#op-yearMonthDuration-less-than-3>
+    <#op-yearMonthDuration-less-than-4>
+    <#op-yearMonthDuration-less-than-5>
+    <#op-yearMonthDuration-less-than-6>
+    <#op-yearMonthDuration-less-thanNew-7>
+    <#op-yearMonthDuration-less-than-8>
+    <#op-yearMonthDuration-less-than-9>
+    <#op-yearMonthDuration-less-than-10>
+    <#op-yearMonthDuration-less-than-11>
+    <#op-yearMonthDuration-less-than-12>
+    <#op-yearMonthDuration-less-than-13>
+    <#op-yearMonthDuration-less-than-14>
+    <#K-YearMonthDurationLT-1>
+    <#K-YearMonthDurationLT-2>
+    <#K-YearMonthDurationLT-3>
+    <#K-YearMonthDurationLT-4>
+    <#K-YearMonthDurationLT-5>
+    <#K-YearMonthDurationLT-6>
+  ) .
+
+<#op-yearMonthDuration-less-than2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-1             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-2             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(mid range)               \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-3             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(upper bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-4             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-5             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-6             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2argsNew-7> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2argsNew-7" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-7             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(mid range)               \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2argsNew-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-8             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(upper bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-9             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than2args-10            \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-3> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-3" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-3                 \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function that  \nreturn true and used together with fn:not (lt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-4> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-4" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-4                 \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function that  \nreturn true and used together with fn:not (le operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-5> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-5" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-5                 \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function that  \nreturn false and used together with fn:not (lt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-6> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-6" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-6                 \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function that  \nreturn false and used together with fn:not(le operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-thanNew-7> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-thanNew-7" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-7                 \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used  \ntogether with \"and\" expression (lt operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-thanNew-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-8> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-8" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-8                 \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used  \ntogether with \"and\" expression (le operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-9> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-9" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-9                 \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used\ntogether with \"or\" expression (lt operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-10> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-10" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-10                \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used  \ntogether with \"or\" expression (le operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-11> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-11" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-11                \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used  \ntogether with \"fn:true\"/or expression (lt operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-12> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-12" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-12                \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used  \ntogether with \"fn:true\"/or expression (le operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-13> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-13" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-13                \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used  \ntogether with \"fn:false\"/or expression (lt operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-less-than-14> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-less-than-14" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-less-than-14                \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-less-than\" function used  \ntogether with \"fn:false\"/or expression (le operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-less-than-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationLT-1> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationLT-1" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationLT-1                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationLT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationLT-2> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationLT-2" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationLT-2                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:yearMonthDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationLT-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationLT-3> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationLT-3" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationLT-3                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:yearMonthDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationLT-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationLT-4> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationLT-4" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationLT-4                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationLT-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationLT-5> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationLT-5" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationLT-5                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationLT-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationLT-6> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationLT-6" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationLT-6                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:yearMonthDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationLT-6.rq> ] ;
+  mf:result <../true.srj> .

@@ -1,0 +1,104 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set prod-GeneralComp.eq" ;
+  mf:entries (
+    <#generalexpression21>
+    <#generalexpression22>
+    <#K-GenCompEq-24>
+    <#K-GenCompEq-29>
+    <#K-GenCompEq-36>
+    <#K-GenCompEq-47>
+    <#K-GenCompEq-48>
+    <#K-GenCompEq-49>
+    <#K-GenCompEq-50>
+    <#K-GenCompEq-52>
+    <#K-GenCompEq-53>
+    <#GenCompEq-25>
+  ) .
+
+<#generalexpression21> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression21" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = = operand2 = Atomic Value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <generalexpression21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#generalexpression22> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression22" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = = operand2 = Sequence of single atomic value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <generalexpression22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-24> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-24" ;
+  rdfs:comment "General comparison involving xs:untypedAtomic/xs:string." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-29> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-29" ;
+  rdfs:comment "General comparison involving xs:untypedAtomic/xs:string." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-29.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-36> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-36" ;
+  rdfs:comment "General comparison where the operands are various various sequence of xs:integers." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-36.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-47> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-47" ;
+  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-47.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-48> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-48" ;
+  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-48.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-49> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-49" ;
+  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-49.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-50> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-50" ;
+  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-50.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-52> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-52" ;
+  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-52.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompEq-53> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompEq-53" ;
+  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <K-GenCompEq-53.rq> ] ;
+  mf:result <../true.srj> .
+
+<#GenCompEq-25> a mf:QueryEvaluationTest ;
+  mf:name "GenCompEq-25" ;
+  rdfs:comment "Only one comparison allowed per expression, unless parenthesized" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  mf:action [ qt:query <GenCompEq-25.rq> ] ;
+  mf:result <../true.srj> .

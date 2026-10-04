@@ -1,0 +1,6 @@
+# QT3 test case K2-ReplaceFunc-5 of test set fn-replace, which tests the XPath expression
+#   replace("abcd", "(asd)[asd\1]", "")
+ASK {
+  BIND(REPLACE( "abcd" , "(asd)[asd\\1]" , "" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

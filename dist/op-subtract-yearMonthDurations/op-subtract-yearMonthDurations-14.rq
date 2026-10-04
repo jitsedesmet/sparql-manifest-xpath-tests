@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-yearMonthDurations-14 of test set op-subtract-yearMonthDurations, which tests the XPath expression
+#   (xs:yearMonthDuration("P21Y12M") - xs:yearMonthDuration("P08Y05M")) ne xs:yearMonthDuration("P08Y05M")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P21Y12M" ) - <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P08Y05M" ) ) != <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P08Y05M" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-523 of test set prod-CastExpr, which tests the XPath expression
+#   xs:double("naN")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#double> ( "naN" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

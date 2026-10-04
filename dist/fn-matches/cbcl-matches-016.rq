@@ -1,0 +1,6 @@
+# QT3 test case cbcl-matches-016 of test set fn-matches, which tests the XPath expression
+#   fn:matches('foo', '\P{M}')
+ASK {
+  BIND(REGEX( "foo" , "\\P{M}" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

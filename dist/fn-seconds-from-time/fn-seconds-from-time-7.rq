@@ -1,0 +1,6 @@
+# QT3 test case fn-seconds-from-time-7 of test set fn-seconds-from-time, which tests the XPath expression
+#   fn:seconds-from-time(xs:time("23:20:59Z"))
+ASK {
+  BIND(SECONDS( <http://www.w3.org/2001/XMLSchema#time> ( "23:20:59Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "59" ))
+}

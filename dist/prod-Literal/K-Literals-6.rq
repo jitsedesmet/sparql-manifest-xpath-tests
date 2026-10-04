@@ -1,0 +1,6 @@
+# QT3 test case K-Literals-6 of test set prod-Literal, which tests the XPath expression
+#   "fo""o" eq concat("fo", """", "o")
+ASK {
+  BIND(( "fo\"o" = CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "fo" ) , <http://www.w3.org/2001/XMLSchema#string> ( "\"" ) , <http://www.w3.org/2001/XMLSchema#string> ( "o" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

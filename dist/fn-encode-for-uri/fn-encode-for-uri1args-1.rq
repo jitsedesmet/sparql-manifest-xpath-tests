@@ -1,0 +1,6 @@
+# QT3 test case fn-encode-for-uri1args-1 of test set fn-encode-for-uri, which tests the XPath expression
+#   fn:encode-for-uri ("http://www.example.com/00/Weather/CA/Los%20Angeles#ocean")
+ASK {
+  BIND(ENCODE_FOR_URI( "http://www.example.com/00/Weather/CA/Los%20Angeles#ocean" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "http%3A%2F%2Fwww.example.com%2F00%2FWeather%2FCA%2FLos%2520Angeles%23ocean" ))
+}

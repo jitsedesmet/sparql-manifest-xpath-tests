@@ -1,0 +1,6 @@
+# QT3 test case K2-MatchesFunc-5 of test set fn-matches, which tests the XPath expression
+#   fn:matches("hello world", "\p{ IsBasicLatin}+", "x")
+ASK {
+  BIND(REGEX( "hello world" , "\\p{ IsBasicLatin}+" , "x" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-dateTimes-yielding-DTD-3 of test set op-subtract-dateTimes, which tests the XPath expression
+#   xs:dateTime("2000-02-03T02:09:07-06:00") - xs:dateTime("1998-02-03T02:09:07-06:00")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2000-02-03T02:09:07-06:00" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "1998-02-03T02:09:07-06:00" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "P730D" ))
+}

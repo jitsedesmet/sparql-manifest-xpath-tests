@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-474 of test set prod-CastExpr, which tests the XPath expression
+#   xs:date("1111-1 -11")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#date> ( "1111-1 -11" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-replace-59 of test set fn-replace, which tests the XPath expression
+#   replace('15/01/24', '(.{2})/(.{2})/(.{2})', '$3$2$1')
+ASK {
+  BIND(REPLACE( "15/01/24" , "(.{2})/(.{2})/(.{2})" , "$3$2$1" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "240115" ))
+}

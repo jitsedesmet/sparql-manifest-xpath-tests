@@ -1,0 +1,6 @@
+# QT3 test case K-ContainsFunc-7 of test set fn-contains, which tests the XPath expression
+#   not(contains("tattoo", "ttt"))
+ASK {
+  BIND(! CONTAINS( "tattoo" , "ttt" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

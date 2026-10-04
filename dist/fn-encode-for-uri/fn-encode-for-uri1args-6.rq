@@ -1,0 +1,6 @@
+# QT3 test case fn-encode-for-uri1args-6 of test set fn-encode-for-uri, which tests the XPath expression
+#   encode-for-uri(12)
+ASK {
+  BIND(ENCODE_FOR_URI( "12"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

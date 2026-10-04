@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-161 of test set prod-CastExpr, which tests the XPath expression
+#   xs:string(xs:duration("P31D")) eq "P31D"
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#duration> ( "P31D" ) ) = "P31D" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

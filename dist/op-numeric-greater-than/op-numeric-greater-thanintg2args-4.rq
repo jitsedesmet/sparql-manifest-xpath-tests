@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-greater-thanintg2args-4 of test set op-numeric-greater-than, which tests the XPath expression
+#   xs:integer("-999999999999999999") gt xs:integer("830993497117024304")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#integer> ( "-999999999999999999" ) > <http://www.w3.org/2001/XMLSchema#integer> ( "830993497117024304" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-dividepint2args-3 of test set op-numeric-divide, which tests the XPath expression
+#   xs:positiveInteger("999999999999999999") div xs:positiveInteger("1")
+ASK {
+  BIND(( "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> / "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> ) AS ?result)
+  FILTER(( ?result = "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

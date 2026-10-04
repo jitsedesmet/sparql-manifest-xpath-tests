@@ -1,0 +1,6 @@
+# QT3 test case K-NumericEqual-19 of test set op-numeric-equal, which tests the XPath expression
+#   xs:double("-INF") eq xs:double("-INF")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#double> ( "-INF" ) = <http://www.w3.org/2001/XMLSchema#double> ( "-INF" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

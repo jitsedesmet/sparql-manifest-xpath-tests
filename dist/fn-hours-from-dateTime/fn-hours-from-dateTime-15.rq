@@ -1,0 +1,6 @@
+# QT3 test case fn-hours-from-dateTime-15 of test set fn-hours-from-dateTime, which tests the XPath expression
+#   -fn:hours-from-dateTime(xs:dateTime("1970-01-01T10:00:00Z"))
+ASK {
+  BIND(- HOURS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T10:00:00Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-10" ))
+}

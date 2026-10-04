@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-unary-minusnint1args-3 of test set op-numeric-unary-minus, which tests the XPath expression
+#   -(xs:negativeInteger("-1"))
+ASK {
+  BIND(- "-1"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> AS ?result)
+  FILTER(( ?result = "1"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

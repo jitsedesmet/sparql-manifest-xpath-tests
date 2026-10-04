@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-dividesht2args-3 of test set op-numeric-divide, which tests the XPath expression
+#   xs:short("32767") div xs:short("-32768")
+ASK {
+  BIND(( "32767"^^<http://www.w3.org/2001/XMLSchema#short> / "-32768"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
+  FILTER(( ( ?result = - "0.999969482421875"^^<http://www.w3.org/2001/XMLSchema#decimal> ) || ( ?result = - "0.999969482421"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ))
+}

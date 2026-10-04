@@ -1,0 +1,6 @@
+# QT3 test case K-StringLT-5 of test set op-string-less-than, which tests the XPath expression
+#   'abc' le 'abc'
+ASK {
+  BIND(( "abc" <= "abc" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

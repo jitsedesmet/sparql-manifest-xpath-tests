@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-27 of test set prod-CastExpr, which tests the XPath expression
+#   xs:boolean(xs:decimal(0)) eq false()
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#boolean> ( <http://www.w3.org/2001/XMLSchema#decimal> ( "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) = "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

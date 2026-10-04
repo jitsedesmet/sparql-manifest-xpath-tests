@@ -1,0 +1,232 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-yearMonthDuration-greater-than" ;
+  mf:entries (
+    <#op-yearMonthDuration-greater-than2args-1>
+    <#op-yearMonthDuration-greater-than2args-2>
+    <#op-yearMonthDuration-greater-than2args-3>
+    <#op-yearMonthDuration-greater-than2args-4>
+    <#op-yearMonthDuration-greater-than2args-5>
+    <#op-yearMonthDuration-greater-than2args-6>
+    <#op-yearMonthDuration-greater-than2args-7>
+    <#op-yearMonthDuration-greater-than2args-8>
+    <#op-yearMonthDuration-greater-than2args-9>
+    <#op-yearMonthDuration-greater-than2args-10>
+    <#op-yearMonthDuration-greater-than-3>
+    <#op-yearMonthDuration-greater-than-4>
+    <#op-yearMonthDuration-greater-than-5>
+    <#op-yearMonthDuration-greater-than-6>
+    <#op-yearMonthDuration-greater-than-7>
+    <#op-yearMonthDuration-greater-than-8>
+    <#op-yearMonthDuration-greater-than-9>
+    <#op-yearMonthDuration-greater-than-10>
+    <#op-yearMonthDuration-greater-than-11>
+    <#op-yearMonthDuration-greater-than-12>
+    <#op-yearMonthDuration-greater-than-13>
+    <#op-yearMonthDuration-greater-than-14>
+    <#K-YearMonthDurationGT-1>
+    <#K-YearMonthDurationGT-2>
+    <#K-YearMonthDurationGT-3>
+    <#K-YearMonthDurationGT-4>
+    <#K-YearMonthDurationGT-5>
+    <#K-YearMonthDurationGT-6>
+  ) .
+
+<#op-yearMonthDuration-greater-than2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-1          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-2          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(mid range)               \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-3          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(upper bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-4          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-5          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-6          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-7          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(mid range)               \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-8          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(upper bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-9          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than2args-10         \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:yearMonthDuration-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-3> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-3" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-3              \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function that \nreturn true and used together with fn:not (gt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-4> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-4" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-4              \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function that \nreturn true and used together with fn:not (ge operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-5> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-5" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-5              \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function that \nreturn false and used together with fn:not (gt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-6> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-6" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-6              \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function that \nreturn false and used together with fn:not(ge operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-7> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-7" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-7              \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used \ntogether with \"and\" expression (gt operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-8> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-8" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-8              \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used  \ntogether with \"and\" expression (ge operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-9> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-9" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-9               \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used\ntogether with \"or\" expression (gt operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-10> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-10" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-10             \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used  \ntogether with \"or\" expression (ge operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-11> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-11" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-11             \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used  \ntogether with \"fn:true\"/or expression (gt operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-12> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-12" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-12             \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used  \ntogether with \"fn:true\"/or expression (ge operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-13> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-13" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-13             \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used  \ntogether with \"fn:false\"/or expression (gt operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-yearMonthDuration-greater-than-14> a mf:QueryEvaluationTest ;
+  mf:name "op-yearMonthDuration-greater-than-14" ;
+  rdfs:comment "*******************************************************\nTest: op-yearMonthDuration-greater-than-14             \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"yearMonthDuration-greater-than\" function used \ntogether with \"fn:false\"/or expression (ge operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <op-yearMonthDuration-greater-than-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationGT-1> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationGT-1" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationGT-1                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'gt' for xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationGT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationGT-2> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationGT-2" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationGT-2                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'gt' for xs:yearMonthDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationGT-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationGT-3> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationGT-3" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationGT-3                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'gt' for xs:yearMonthDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationGT-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationGT-4> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationGT-4" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationGT-4                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ge' for xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationGT-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationGT-5> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationGT-5" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationGT-5                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ge' for xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationGT-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationGT-6> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationGT-6" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationGT-6                         \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ge' for xs:yearMonthDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationGT-6.rq> ] ;
+  mf:result <../true.srj> .

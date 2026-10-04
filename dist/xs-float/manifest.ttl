@@ -1,0 +1,24 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set xs-float" ;
+  mf:entries (
+    <#xs-float-001>
+    <#xs-float-002>
+  ) .
+
+<#xs-float-001> a mf:QueryEvaluationTest ;
+  mf:name "xs-float-001" ;
+  rdfs:comment "Test -0 in xs:float" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/xs/float.xml> ;
+  mf:action [ qt:query <xs-float-001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#xs-float-002> a mf:QueryEvaluationTest ;
+  mf:name "xs-float-002" ;
+  rdfs:comment "Distinguish positive from negative zero" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/xs/float.xml> ;
+  mf:action [ qt:query <xs-float-002.rq> ] ;
+  mf:result <../true.srj> .

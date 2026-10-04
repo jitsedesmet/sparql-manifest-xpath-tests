@@ -1,0 +1,6 @@
+# QT3 test case K-Literals-47a of test set prod-Literal, which tests the XPath expression
+#   "t" eq "&#x74;"
+ASK {
+  BIND(( "t" = "&#x74;" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

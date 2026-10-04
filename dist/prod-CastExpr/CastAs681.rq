@@ -1,0 +1,6 @@
+# QT3 test case CastAs681 of test set prod-CastExpr, which tests the XPath expression
+#   xs:date('2017-07-19-00:30')
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#date> ( "2017-07-19-00:30" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "2017-07-19-00:30" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-stringlng1args-2 of test set fn-string, which tests the XPath expression
+#   fn:string(xs:long("-47175562203048468"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( "-47175562203048468"^^<http://www.w3.org/2001/XMLSchema#long> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-47175562203048468" ))
+}

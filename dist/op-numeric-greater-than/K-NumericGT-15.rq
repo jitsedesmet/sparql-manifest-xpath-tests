@@ -1,0 +1,6 @@
+# QT3 test case K-NumericGT-15 of test set op-numeric-greater-than, which tests the XPath expression
+#   not(xs:double("NaN") ge 1)
+ASK {
+  BIND(! ( <http://www.w3.org/2001/XMLSchema#double> ( "NaN" ) >= "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

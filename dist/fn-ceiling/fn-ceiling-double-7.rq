@@ -1,0 +1,6 @@
+# QT3 test case fn-ceiling-double-7 of test set fn-ceiling, which tests the XPath expression
+#   ceiling(-1234567891234567.2e0)
+ASK {
+  BIND(CEIL( - "1234567891234567.2e0"^^<http://www.w3.org/2001/XMLSchema#double> ) AS ?result)
+  FILTER(( ( ?result = - "1234567891234567.0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#double> ) ) ))
+}

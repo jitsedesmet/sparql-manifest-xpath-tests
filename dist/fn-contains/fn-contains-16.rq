@@ -1,0 +1,6 @@
+# QT3 test case fn-contains-16 of test set fn-contains, which tests the XPath expression
+#   fn:contains("a","A")
+ASK {
+  BIND(CONTAINS( "a" , "A" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

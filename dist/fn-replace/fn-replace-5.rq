@@ -1,0 +1,6 @@
+# QT3 test case fn-replace-5 of test set fn-replace, which tests the XPath expression
+#   replace("abracadabra", "a(.)", "a$1$1")
+ASK {
+  BIND(REPLACE( "abracadabra" , "a(.)" , "a$1$1" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "abbraccaddabbra" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-dateTimes-yielding-DTD-9 of test set op-subtract-dateTimes, which tests the XPath expression
+#   fn:string((xs:dateTime("1993-12-09T04:04:04Z") - xs:dateTime("1992-12-09T05:05:05Z"))) and fn:string((xs:dateTime("1993-12-09T01:01:01Z") - xs:dateTime("1992-12-09T06:06:06Z")))
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1993-12-09T04:04:04Z" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "1992-12-09T05:05:05Z" ) ) ) && <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1993-12-09T01:01:01Z" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "1992-12-09T06:06:06Z" ) ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

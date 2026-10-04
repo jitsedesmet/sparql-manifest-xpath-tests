@@ -1,0 +1,6 @@
+# QT3 test case fn-floornni1args-3 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:nonNegativeInteger("999999999999999999"))
+ASK {
+  BIND(FLOOR( "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "999999999999999999" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-replaceErr-1 of test set fn-replace, which tests the XPath expression
+#   fn:replace("abracadabra", "bra", "*", "p")
+ASK {
+  BIND(REPLACE( "abracadabra" , "bra" , "*" , "p" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-YearMonthDurationEQ-6 of test set op-duration-equal, which tests the XPath expression
+#   xs:yearMonthDuration("-P3Y8M") ne xs:yearMonthDuration("P3Y8M")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "-P3Y8M" ) != <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P3Y8M" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

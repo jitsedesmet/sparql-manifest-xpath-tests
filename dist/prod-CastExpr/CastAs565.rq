@@ -1,0 +1,6 @@
+# QT3 test case CastAs565 of test set prod-CastExpr, which tests the XPath expression
+#   xs:boolean("true") cast as xs:date
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#date> ( <http://www.w3.org/2001/XMLSchema#boolean> ( "true" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

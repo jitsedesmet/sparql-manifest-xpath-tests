@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-equaldbl2args-3 of test set op-numeric-equal, which tests the XPath expression
+#   xs:double("1.7976931348623157E308") eq xs:double("-1.7976931348623157E308")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#double> ( "1.7976931348623157E308" ) = <http://www.w3.org/2001/XMLSchema#double> ( "-1.7976931348623157E308" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-stringint1args-1 of test set fn-string, which tests the XPath expression
+#   fn:string(xs:int("-2147483648"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( "-2147483648"^^<http://www.w3.org/2001/XMLSchema#int> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-2147483648" ))
+}

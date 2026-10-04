@@ -1,0 +1,192 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-string-length" ;
+  mf:entries (
+    <#fn-string-length1args-1>
+    <#fn-string-length1args-2>
+    <#fn-string-length1args-3>
+    <#fn-string-length-1>
+    <#fn-string-length-3>
+    <#fn-string-length-4>
+    <#fn-string-length-5>
+    <#fn-string-length-6>
+    <#fn-string-length-7>
+    <#fn-string-length-8>
+    <#fn-string-length-9>
+    <#fn-string-length-10>
+    <#fn-string-length-11>
+    <#fn-string-length-12>
+    <#fn-string-length-13>
+    <#fn-string-length-14>
+    <#fn-string-length-15>
+    <#fn-string-length-16>
+    <#fn-string-length-17>
+    <#fn-string-length-20>
+    <#K-StringLengthFunc-2>
+    <#K-StringLengthFunc-5>
+    <#K-StringLengthFunc-8>
+  ) .
+
+<#fn-string-length1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length1args-1" ;
+  rdfs:comment "Evaluates The \"string-length\" function with the arguments set as follows: $arg = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length1args-2" ;
+  rdfs:comment "Evaluates The \"string-length\" function with the arguments set as follows: $arg = xs:string(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length1args-3" ;
+  rdfs:comment "Evaluates The \"string-length\" function with the arguments set as follows: $arg = xs:string(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-1" ;
+  rdfs:comment "Evaluation of string-length function as per example 1 (for this function) from the F&O specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-3" ;
+  rdfs:comment "Evaluation of string-length function that uses only numbers as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-4" ;
+  rdfs:comment "Evaluation of string-length function that uses both numbers and letters as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-5" ;
+  rdfs:comment "Evaluation of string-length function that uses only upper case letters as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-6" ;
+  rdfs:comment "Evaluation of string-length function that uses only lower case letters as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-7" ;
+  rdfs:comment "Evaluation of string-length function that uses both upper and lower case letters as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-8" ;
+  rdfs:comment "Evaluation of string-length function that uses the empty string as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-9" ;
+  rdfs:comment "Evaluation of string-length function that uses the \"string\" as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-10" ;
+  rdfs:comment "Evaluation of string-length function with argument set to \"*****\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-11" ;
+  rdfs:comment "Evaluation of string-length function as part of an addition operation" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-12" ;
+  rdfs:comment "Evaluation of string-length function as an argument to the \"fn:boolean\" function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-13" ;
+  rdfs:comment "Evaluation of string-length function as an argument to the \"fn:concat\" function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-14" ;
+  rdfs:comment "Evaluation of string-length function as an argument to the \"fn:not\" function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-15" ;
+  rdfs:comment "Evaluation of string-length function with argument set to \"%$#@!\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-16" ;
+  rdfs:comment "Evaluation of string-length function with argument set to \"string-length\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-17> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-17" ;
+  rdfs:comment "Evaluation of string-length function as part of a boolean expression" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-length-20> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-length-20" ;
+  rdfs:comment "Evaluation of string-length function with non-BMP characters." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <fn-string-length-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringLengthFunc-2> a mf:QueryEvaluationTest ;
+  mf:name "K-StringLengthFunc-2" ;
+  rdfs:comment "A test whose essence is: `string-length(\"ebv\") eq 3`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <K-StringLengthFunc-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringLengthFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-StringLengthFunc-5" ;
+  rdfs:comment "A test whose essence is: `string-length(\"\") eq 0`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <K-StringLengthFunc-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringLengthFunc-8> a mf:QueryEvaluationTest ;
+  mf:name "K-StringLengthFunc-8" ;
+  rdfs:comment "A test whose essence is: `string-length(\"Harp not on that string, madam; that is past.\") eq 45`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml> ;
+  mf:action [ qt:query <K-StringLengthFunc-8.rq> ] ;
+  mf:result <../true.srj> .

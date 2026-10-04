@@ -1,0 +1,6 @@
+# QT3 test case fn-concat-16 of test set fn-concat, which tests the XPath expression
+#   fn:concat("concat","concat")
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "concat" ) , <http://www.w3.org/2001/XMLSchema#string> ( "concat" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "concatconcat" ))
+}

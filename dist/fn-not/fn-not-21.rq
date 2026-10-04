@@ -1,0 +1,6 @@
+# QT3 test case fn-not-21 of test set fn-not, which tests the XPath expression
+#   fn:string-length(xs:string(fn:not("true")))
+ASK {
+  BIND(STRLEN( <http://www.w3.org/2001/XMLSchema#string> ( ! "true" ) ) AS ?result)
+  FILTER(( ?result = "5"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

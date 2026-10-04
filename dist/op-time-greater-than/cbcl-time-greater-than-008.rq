@@ -1,0 +1,6 @@
+# QT3 test case cbcl-time-greater-than-008 of test set op-time-greater-than, which tests the XPath expression
+#   xs:time("02:00:00") le xs:time("14:00:00-12:00")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "02:00:00" ) <= <http://www.w3.org/2001/XMLSchema#time> ( "14:00:00-12:00" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

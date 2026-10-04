@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-22 of test set prod-CastExpr, which tests the XPath expression
+#   xs:unsignedLong("18446744073709551615")
+ASK {
+  BIND("18446744073709551615"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> AS ?result)
+  FILTER(( ( ?result = "18446744073709551615"^^<http://www.w3.org/2001/XMLSchema#integer> ) || ! BOUND( ?result ) ))
+}

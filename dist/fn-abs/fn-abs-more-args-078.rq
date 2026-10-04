@@ -1,0 +1,6 @@
+# QT3 test case fn-abs-more-args-078 of test set fn-abs, which tests the XPath expression
+#   fn:abs(xs:string("hello"))
+ASK {
+  BIND(ABS( <http://www.w3.org/2001/XMLSchema#string> ( "hello" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

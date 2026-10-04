@@ -1,0 +1,6 @@
+# QT3 test case fn-month-from-date-1 of test set fn-month-from-date, which tests the XPath expression
+#   fn:month-from-date(xs:date("1999-05-31-05:00"))
+ASK {
+  BIND(MONTH( <http://www.w3.org/2001/XMLSchema#date> ( "1999-05-31-05:00" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "5" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-substring-before-8 of test set fn-substring-before, which tests the XPath expression
+#   fn:substring-before("AAAAABBBBBCCCCC","BBBBB")
+ASK {
+  BIND(STRBEFORE( "AAAAABBBBBCCCCC" , "BBBBB" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "AAAAA" ))
+}

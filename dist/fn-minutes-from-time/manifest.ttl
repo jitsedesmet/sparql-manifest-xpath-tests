@@ -1,0 +1,160 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-minutes-from-time" ;
+  mf:entries (
+    <#fn-minutes-from-time1args-1>
+    <#fn-minutes-from-time1args-2>
+    <#fn-minutes-from-time1args-3>
+    <#fn-minutes-from-time-1>
+    <#fn-minutes-from-time-2>
+    <#fn-minutes-from-time-3>
+    <#fn-minutes-from-time-6>
+    <#fn-minutes-from-time-7>
+    <#fn-minutes-from-time-8>
+    <#fn-minutes-from-time-9>
+    <#fn-minutes-from-time-10>
+    <#fn-minutes-from-time-11>
+    <#fn-minutes-from-time-14>
+    <#fn-minutes-from-time-15>
+    <#fn-minutes-from-time-16>
+    <#fn-minutes-from-time-17>
+    <#fn-minutes-from-time-18>
+    <#fn-minutes-from-time-19>
+    <#K-MinutesFromTimeFunc-5>
+  ) .
+
+<#fn-minutes-from-time1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time1args-1" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function with the arguments set as follows: $arg = xs:time(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time1args-2" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function with the arguments set as follows: $arg = xs:time(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time1args-3" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function with the arguments set as follows: $arg = xs:time(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-1" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function As per example 1 of the F&O specs (for this function)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-2" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function used as part of a numeric less than expression (lt operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-3" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a numeric greater than operation (gt operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-6" ;
+  rdfs:comment "Evaluates The \"hours-from-time\" function that returns 59." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-7" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function used as part of an abs function." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-8" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"+\" expression." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-9" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"-\" expression." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-10" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"*\" expression." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-11" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"div\" expression." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-14" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"numeric-unary-plus\" expression." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-15" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"numeric-unary-minus\" expression." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-16" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"numeric-equal\" expression (eq operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-17> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-17" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"numeric-equal\" expression (ne operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-18> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-18" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"numeric-equal\" expression (le operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-minutes-from-time-19> a mf:QueryEvaluationTest ;
+  mf:name "fn-minutes-from-time-19" ;
+  rdfs:comment "Evaluates The \"minutes-from-time\" function as part of a \"numeric-equal\" expression (ge operator)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <fn-minutes-from-time-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-MinutesFromTimeFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-MinutesFromTimeFunc-5" ;
+  rdfs:comment "A test whose essence is: `minutes-from-time(xs:time(\"23:11:12.43\")) eq 11`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml> ;
+  mf:action [ qt:query <K-MinutesFromTimeFunc-5.rq> ] ;
+  mf:result <../true.srj> .

@@ -1,0 +1,6 @@
+# QT3 test case K-GenCompNE-14 of test set prod-GeneralComp.ne, which tests the XPath expression
+#   "a string" != "a stringDIFF"
+ASK {
+  BIND(( "a string" != "a stringDIFF" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

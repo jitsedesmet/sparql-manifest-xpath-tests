@@ -1,0 +1,6 @@
+# QT3 test case K-StringGT-3 of test set op-string-greater-than, which tests the XPath expression
+#   'abc' ge 'a'
+ASK {
+  BIND(( "abc" >= "a" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,240 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-subtract-yearMonthDurations" ;
+  mf:entries (
+    <#op-subtract-yearMonthDurations2args-1>
+    <#op-subtract-yearMonthDurations2args-2>
+    <#op-subtract-yearMonthDurations2args-3>
+    <#op-subtract-yearMonthDurations2args-4>
+    <#op-subtract-yearMonthDurations2args-5>
+    <#op-subtract-yearMonthDurations-1>
+    <#op-subtract-yearMonthDurations-2>
+    <#op-subtract-yearMonthDurations-3>
+    <#op-subtract-yearMonthDurations-4>
+    <#op-subtract-yearMonthDurations-5>
+    <#op-subtract-yearMonthDurations-7>
+    <#op-subtract-yearMonthDurations-8>
+    <#op-subtract-yearMonthDurations-9>
+    <#op-subtract-yearMonthDurations-10>
+    <#op-subtract-yearMonthDurations-11>
+    <#op-subtract-yearMonthDurations-12>
+    <#op-subtract-yearMonthDurations-13>
+    <#op-subtract-yearMonthDurations-14>
+    <#op-subtract-yearMonthDurations-15>
+    <#op-subtract-yearMonthDurations-16>
+    <#K-YearMonthDurationSubtract-1>
+    <#K-YearMonthDurationSubtract-2>
+    <#K-YearMonthDurationSubtract-3>
+    <#K-YearMonthDurationSubtract-4>
+    <#K-YearMonthDurationSubtract-5>
+    <#K-YearMonthDurationSubtract-6>
+    <#K-YearMonthDurationSubtract-7>
+    <#K-YearMonthDurationSubtract-8>
+    <#K-YearMonthDurationSubtract-9>
+  ) .
+
+<#op-subtract-yearMonthDurations2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations2args-1             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations2args-2             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(mid range)               \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations2args-3             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(upper bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations2args-4             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations2args-5             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-1> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-1" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-1                 \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function \nAs per example 1 (for this function)of the F&O specs.  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-2> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-2" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-2                 \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function \nused as part of a boolean expression (and operator) and the \"fn:false\" function. \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-3> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-3" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-3                 \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function as \npart of a boolean expression (or operator) and the \"fn:boolean\" function. \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-4> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-4" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-4                 \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function that  \nreturn true and used together with fn:not.             \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-5> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-5" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-5                 \nWritten By: Carmelo Montanez                           \nDate: June 28 2005                                     \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function that  \nis used as an argument to the fn:boolean function.     \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-7> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-7" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-7                 \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used  \nas an argument to the \"fn:string\" function).           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-8> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-8" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-8                 \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function that  \nreturns a negative value.                              \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-9> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-9" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-9                 \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used \ntogether with and \"and\" expression.                    \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-10> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-10" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-10                \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used  \ntogether with an \"or\" expression.                      \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-11> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-11" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-11                \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used  \ntogether with a \"div\" expression.                      \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-12> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-12" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-12                \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" operators used \nwith a boolean expression and the \"fn:true\" function.   \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-13> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-13" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-13                \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used  \ntogether with the numeric-equal- operator \"eq\".        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-14> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-14" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-14                \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used  \ntogether with the numeric-equal operator \"ne\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-15> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-15" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-15                \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used  \ntogether with the numeric-equal operator \"le\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-yearMonthDurations-16> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-yearMonthDurations-16" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-yearMonthDurations-16                \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"subtract-yearMonthDurations\" function used  \ntogether with the numeric-equal operator \"ge\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <op-subtract-yearMonthDurations-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-1> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-1" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-1                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of substraction an xs:yearMonthDuration with P0M. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-2> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-2" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-2                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of substraction P0M with an xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-3> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-3" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-3                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of substraction two arbitrary xs:yearMonthDurations. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-4> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-4" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-4                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The addition operator is not available between xs:dayTimeDuration and xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-5> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-5" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-5                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The addition operator is not available between xs:yearMonthDuration and xs:dayTimeDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-6> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-6" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-6                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The addition operator is not available between xs:duration and xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-7> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-7" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-7                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The addition operator is not available between xs:yearMonthDuration and xs:duration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-8> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-8" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-8                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The addition operator is not available between xs:dayTimeDuration and xs:duration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationSubtract-9> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationSubtract-9" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationSubtract-9                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The addition operator is not available between xs:duration and xs:dayTimeDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationSubtract-9.rq> ] ;
+  mf:result <../true.srj> .

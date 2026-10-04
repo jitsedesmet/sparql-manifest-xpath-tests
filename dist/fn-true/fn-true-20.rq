@@ -1,0 +1,6 @@
+# QT3 test case fn-true-20 of test set fn-true, which tests the XPath expression
+#   fn:contains(xs:string(fn:true()),xs:string(fn:true()))
+ASK {
+  BIND(CONTAINS( <http://www.w3.org/2001/XMLSchema#string> ( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) , <http://www.w3.org/2001/XMLSchema#string> ( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

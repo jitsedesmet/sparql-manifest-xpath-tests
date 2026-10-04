@@ -1,0 +1,6 @@
+# QT3 test case op-boolean-equal-15 of test set op-boolean-equal, which tests the XPath expression
+#   fn:starts-with("Query","Que") eq xs:boolean("false")
+ASK {
+  BIND(( STRSTARTS( "Query" , "Que" ) = <http://www.w3.org/2001/XMLSchema#boolean> ( "false" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

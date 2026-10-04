@@ -1,0 +1,6 @@
+# QT3 test case fn-floor-float-8 of test set fn-floor, which tests the XPath expression
+#   floor(xs:float(xs:float('NaN')))
+ASK {
+  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#float> ( <http://www.w3.org/2001/XMLSchema#float> ( "NaN" ) ) ) AS ?result)
+  FILTER(( ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "NaN" ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#float> ) ) ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-SubstringFunc-14 of test set fn-substring, which tests the XPath expression
+#   substring("12345", -1 div 0E0, 1 div 0E0) eq ""
+ASK {
+  BIND(( SUBSTR( "12345" , ( - "1"^^<http://www.w3.org/2001/XMLSchema#integer> / "0E0"^^<http://www.w3.org/2001/XMLSchema#double> ) , ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> / "0E0"^^<http://www.w3.org/2001/XMLSchema#double> ) ) = "" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

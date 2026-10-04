@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-multiplydbl2args-4 of test set op-numeric-multiply, which tests the XPath expression
+#   xs:double("-1.7976931348623157E308") * xs:double("0")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#double> ( "-1.7976931348623157E308" ) * <http://www.w3.org/2001/XMLSchema#double> ( "0" ) ) AS ?result)
+  FILTER(( ?result = - "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

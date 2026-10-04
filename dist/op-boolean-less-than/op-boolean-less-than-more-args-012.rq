@@ -1,0 +1,6 @@
+# QT3 test case op-boolean-less-than-more-args-012 of test set op-boolean-less-than, which tests the XPath expression
+#   xs:boolean("true") ge xs:boolean("0")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#boolean> ( "true" ) >= <http://www.w3.org/2001/XMLSchema#boolean> ( "0" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

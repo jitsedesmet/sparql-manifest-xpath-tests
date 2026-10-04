@@ -1,0 +1,6 @@
+# QT3 test case cbcl-matches-035 of test set fn-matches, which tests the XPath expression
+#   fn:matches('foo', '\P{Ca}')
+ASK {
+  BIND(REGEX( "foo" , "\\P{Ca}" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case cbcl-numeric-subtract-002 of test set op-numeric-subtract, which tests the XPath expression
+#   -79228162514264337593543950335 - 1 lt 0
+ASK {
+  BIND(( ( - "79228162514264337593543950335"^^<http://www.w3.org/2001/XMLSchema#integer> - "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) < "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ) || ! BOUND( ?result ) ))
+}

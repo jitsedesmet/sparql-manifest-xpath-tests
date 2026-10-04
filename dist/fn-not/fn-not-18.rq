@@ -1,0 +1,6 @@
+# QT3 test case fn-not-18 of test set fn-not, which tests the XPath expression
+#   fn:string(fn:not("true"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( ! "true" ) AS ?result)
+  FILTER(( ?result = "false" ))
+}

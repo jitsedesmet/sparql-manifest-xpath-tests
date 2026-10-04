@@ -1,0 +1,6 @@
+# QT3 test case CastAs213 of test set prod-CastExpr, which tests the XPath expression
+#   xs:double("INF") cast as xs:decimal
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#decimal> ( <http://www.w3.org/2001/XMLSchema#double> ( "INF" ) ) AS ?result)
+  FILTER(( ! BOUND( ?result ) || ! BOUND( ?result ) ))
+}

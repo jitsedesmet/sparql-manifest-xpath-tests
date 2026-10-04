@@ -1,0 +1,64 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set prod-ParenthesizedExpr" ;
+  mf:entries (
+    <#Parenexpr-1>
+    <#Parenexpr-2>
+    <#Parenexpr-3>
+    <#Parenexpr-4>
+    <#Parenexpr-9>
+    <#Parenexpr-10>
+    <#Parenexpr-13>
+  ) .
+
+<#Parenexpr-1> a mf:QueryEvaluationTest ;
+  mf:name "Parenexpr-1" ;
+  rdfs:comment "Arithmetic operations" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml> ;
+  mf:action [ qt:query <Parenexpr-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Parenexpr-2> a mf:QueryEvaluationTest ;
+  mf:name "Parenexpr-2" ;
+  rdfs:comment "Arithmetic operations" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml> ;
+  mf:action [ qt:query <Parenexpr-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Parenexpr-3> a mf:QueryEvaluationTest ;
+  mf:name "Parenexpr-3" ;
+  rdfs:comment "Arithmetic operations" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml> ;
+  mf:action [ qt:query <Parenexpr-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Parenexpr-4> a mf:QueryEvaluationTest ;
+  mf:name "Parenexpr-4" ;
+  rdfs:comment "Arithmetic operations" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml> ;
+  mf:action [ qt:query <Parenexpr-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Parenexpr-9> a mf:QueryEvaluationTest ;
+  mf:name "Parenexpr-9" ;
+  rdfs:comment "Logical expressions" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml> ;
+  mf:action [ qt:query <Parenexpr-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Parenexpr-10> a mf:QueryEvaluationTest ;
+  mf:name "Parenexpr-10" ;
+  rdfs:comment "Logical expressions" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml> ;
+  mf:action [ qt:query <Parenexpr-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Parenexpr-13> a mf:QueryEvaluationTest ;
+  mf:name "Parenexpr-13" ;
+  rdfs:comment "Literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml> ;
+  mf:action [ qt:query <Parenexpr-13.rq> ] ;
+  mf:result <../true.srj> .

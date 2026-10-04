@@ -1,0 +1,6 @@
+# QT3 test case K-BooleanGT-1 of test set op-boolean-greater-than, which tests the XPath expression
+#   true() gt false()
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> > "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

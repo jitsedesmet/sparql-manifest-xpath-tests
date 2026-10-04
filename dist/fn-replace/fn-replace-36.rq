@@ -1,0 +1,6 @@
+# QT3 test case fn-replace-36 of test set fn-replace, which tests the XPath expression
+#   fn:replace("abracadabra", "([aA])(?:br)([aA])", "$1**$2")
+ASK {
+  BIND(REPLACE( "abracadabra" , "([aA])(?:br)([aA])" , "$1**$2" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "a**acada**a" ))
+}

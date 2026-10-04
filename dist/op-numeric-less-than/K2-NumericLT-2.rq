@@ -1,0 +1,6 @@
+# QT3 test case K2-NumericLT-2 of test set op-numeric-less-than, which tests the XPath expression
+#   xs:unsignedLong("18446744073709551615") lt xs:unsignedLong("100")
+ASK {
+  BIND(( "18446744073709551615"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> < "100"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

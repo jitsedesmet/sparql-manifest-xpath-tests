@@ -1,0 +1,6 @@
+# QT3 test case fn-ends-with-13 of test set fn-ends-with, which tests the XPath expression
+#   fn:ends-with(xs:string("A"),"A")
+ASK {
+  BIND(STRENDS( <http://www.w3.org/2001/XMLSchema#string> ( "A" ) , "A" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

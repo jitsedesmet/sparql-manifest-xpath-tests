@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-16 of test set prod-CastExpr, which tests the XPath expression
+#   xs:negativeInteger("-999999999999999999")
+ASK {
+  BIND("-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> AS ?result)
+  FILTER(( ?result = - "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

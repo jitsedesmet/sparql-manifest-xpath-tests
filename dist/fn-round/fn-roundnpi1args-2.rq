@@ -1,0 +1,6 @@
+# QT3 test case fn-roundnpi1args-2 of test set fn-round, which tests the XPath expression
+#   fn:round(xs:nonPositiveInteger("-475688437271870490"))
+ASK {
+  BIND(ROUND( "-475688437271870490"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) AS ?result)
+  FILTER(( ?result = - "475688437271870490"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

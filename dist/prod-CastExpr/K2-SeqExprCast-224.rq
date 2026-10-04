@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-224 of test set prod-CastExpr, which tests the XPath expression
+#   xs:double(" INF ")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#double> ( " INF " ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "INF" ))
+}

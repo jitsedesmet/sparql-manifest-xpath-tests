@@ -1,0 +1,6 @@
+# QT3 test case CastAs171 of test set prod-CastExpr, which tests the XPath expression
+#   xs:float("INF") cast as xs:float
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#float> ( <http://www.w3.org/2001/XMLSchema#float> ( "INF" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "INF" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-dayTimeDurations-16 of test set op-subtract-dayTimeDurations, which tests the XPath expression
+#   (xs:dayTimeDuration("P13DT09H09M") - xs:dayTimeDuration("P18DT02H02M")) ge xs:dayTimeDuration("P18DT02H02M")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P13DT09H09M" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P18DT02H02M" ) ) >= <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P18DT02H02M" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

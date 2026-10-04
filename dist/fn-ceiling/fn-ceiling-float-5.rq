@@ -1,0 +1,6 @@
+# QT3 test case fn-ceiling-float-5 of test set fn-ceiling, which tests the XPath expression
+#   ceiling(xs:float(-0.1e0))
+ASK {
+  BIND(CEIL( <http://www.w3.org/2001/XMLSchema#float> ( - "0.1e0"^^<http://www.w3.org/2001/XMLSchema#double> ) ) AS ?result)
+  FILTER(( ( ( ?result = "0.0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) && ( ?result = - "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#float> ) ) ))
+}

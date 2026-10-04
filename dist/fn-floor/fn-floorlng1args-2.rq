@@ -1,0 +1,6 @@
+# QT3 test case fn-floorlng1args-2 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:long("-47175562203048468"))
+ASK {
+  BIND(FLOOR( "-47175562203048468"^^<http://www.w3.org/2001/XMLSchema#long> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-47175562203048468" ))
+}

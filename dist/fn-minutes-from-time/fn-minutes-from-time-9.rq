@@ -1,0 +1,6 @@
+# QT3 test case fn-minutes-from-time-9 of test set fn-minutes-from-time, which tests the XPath expression
+#   fn:minutes-from-time(xs:time("10:10:00Z")) - fn:minutes-from-time(xs:time("09:02:00Z"))
+ASK {
+  BIND(( MINUTES( <http://www.w3.org/2001/XMLSchema#time> ( "10:10:00Z" ) ) - MINUTES( <http://www.w3.org/2001/XMLSchema#time> ( "09:02:00Z" ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "8" ))
+}

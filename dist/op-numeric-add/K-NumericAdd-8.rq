@@ -1,0 +1,6 @@
+# QT3 test case K-NumericAdd-8 of test set op-numeric-add, which tests the XPath expression
+#   xs:float(6) + xs:float(2) eq 8
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#float> ( "6"^^<http://www.w3.org/2001/XMLSchema#integer> ) + <http://www.w3.org/2001/XMLSchema#float> ( "2"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) = "8"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

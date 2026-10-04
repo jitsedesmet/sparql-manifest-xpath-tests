@@ -1,0 +1,6 @@
+# QT3 test case K2-RoundFunc-17 of test set fn-round, which tests the XPath expression
+#   round(xs:float("INF"))
+ASK {
+  BIND(ROUND( <http://www.w3.org/2001/XMLSchema#float> ( "INF" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "INF" ))
+}

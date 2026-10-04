@@ -1,0 +1,6 @@
+# QT3 test case fn-string-5 of test set fn-string, which tests the XPath expression
+#   string(xs:time("24:00:00"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#time> ( "24:00:00" ) ) AS ?result)
+  FILTER(( ?result = "00:00:00" ))
+}

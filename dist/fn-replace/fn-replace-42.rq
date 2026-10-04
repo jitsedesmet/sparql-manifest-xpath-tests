@@ -1,0 +1,6 @@
+# QT3 test case fn-replace-42 of test set fn-replace, which tests the XPath expression
+#   fn:replace("abracadabra", "((((( ((((( (((((a)(b))))) ))))) )))))", "($14.$15.$16.$17)", "x")
+ASK {
+  BIND(REPLACE( "abracadabra" , "((((( ((((( (((((a)(b))))) ))))) )))))" , "($14.$15.$16.$17)" , "x" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "(ab.a.b.ab7)racad(ab.a.b.ab7)ra" ))
+}

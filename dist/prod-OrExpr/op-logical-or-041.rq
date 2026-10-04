@@ -1,0 +1,6 @@
+# QT3 test case op-logical-or-041 of test set prod-OrExpr, which tests the XPath expression
+#   xs:float('INF') or xs:float(0)
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#float> ( "INF" ) || <http://www.w3.org/2001/XMLSchema#float> ( "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

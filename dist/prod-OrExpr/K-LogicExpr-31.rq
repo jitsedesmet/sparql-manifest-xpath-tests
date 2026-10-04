@@ -1,0 +1,6 @@
+# QT3 test case K-LogicExpr-31 of test set prod-OrExpr, which tests the XPath expression
+#   1 and 5
+ASK {
+  BIND(( "1"^^<http://www.w3.org/2001/XMLSchema#integer> && "5"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

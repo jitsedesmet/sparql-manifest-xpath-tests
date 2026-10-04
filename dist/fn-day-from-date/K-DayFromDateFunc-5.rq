@@ -1,0 +1,6 @@
+# QT3 test case K-DayFromDateFunc-5 of test set fn-day-from-date, which tests the XPath expression
+#   day-from-date(xs:date("2000-02-03")) eq 3
+ASK {
+  BIND(( DAY( <http://www.w3.org/2001/XMLSchema#date> ( "2000-02-03" ) ) = "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-floornint1args-3 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:negativeInteger("-1"))
+ASK {
+  BIND(FLOOR( "-1"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-1" ))
+}

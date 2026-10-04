@@ -1,0 +1,6 @@
+# QT3 test case fn-floorintg1args-2 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:integer("830993497117024304"))
+ASK {
+  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#integer> ( "830993497117024304" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "830993497117024304" ))
+}

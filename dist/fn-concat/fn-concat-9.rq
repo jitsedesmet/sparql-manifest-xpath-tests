@@ -1,0 +1,6 @@
+# QT3 test case fn-concat-9 of test set fn-concat, which tests the XPath expression
+#   fn:concat(fn:upper-case("Abc"),fn:upper-case("DH"))
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( UCASE( "Abc" ) ) , <http://www.w3.org/2001/XMLSchema#string> ( UCASE( "DH" ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "ABCDH" ))
+}

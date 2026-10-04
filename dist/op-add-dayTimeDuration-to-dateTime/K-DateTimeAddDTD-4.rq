@@ -1,0 +1,6 @@
+# QT3 test case K-DateTimeAddDTD-4 of test set op-add-dayTimeDuration-to-dateTime, which tests the XPath expression
+#   xs:dateTime("1999-10-12T08:12:12") + xs:time("08:12:12")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-10-12T08:12:12" ) + <http://www.w3.org/2001/XMLSchema#time> ( "08:12:12" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

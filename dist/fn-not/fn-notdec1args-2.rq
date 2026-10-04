@@ -1,0 +1,6 @@
+# QT3 test case fn-notdec1args-2 of test set fn-not, which tests the XPath expression
+#   fn:not(xs:decimal("617375191608514839"))
+ASK {
+  BIND(! <http://www.w3.org/2001/XMLSchema#decimal> ( "617375191608514839" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

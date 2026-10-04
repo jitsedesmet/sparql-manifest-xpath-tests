@@ -1,0 +1,6 @@
+# QT3 test case op-dateTime-greater-than-14 of test set op-dateTime-greater-than, which tests the XPath expression
+#   (xs:dateTime("1976-04-03T12:00:00Z") ge xs:dateTime("2002-07-02T12:00:30Z")) or (fn:false())
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1976-04-03T12:00:00Z" ) >= <http://www.w3.org/2001/XMLSchema#dateTime> ( "2002-07-02T12:00:30Z" ) ) || "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

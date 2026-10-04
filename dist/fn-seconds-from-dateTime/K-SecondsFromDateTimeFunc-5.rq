@@ -1,0 +1,6 @@
+# QT3 test case K-SecondsFromDateTimeFunc-5 of test set fn-seconds-from-dateTime, which tests the XPath expression
+#   seconds-from-dateTime(xs:dateTime("2001-02-03T08:23:12.43")) eq 12.43
+ASK {
+  BIND(( SECONDS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2001-02-03T08:23:12.43" ) ) = "12.43"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

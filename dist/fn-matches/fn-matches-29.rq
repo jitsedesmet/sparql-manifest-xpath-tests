@@ -1,0 +1,6 @@
+# QT3 test case fn-matches-29 of test set fn-matches, which tests the XPath expression
+#   fn:matches("#abc#1", "^(#)abc\11$")
+ASK {
+  BIND(REGEX( "#abc#1" , "^(#)abc\\11$" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

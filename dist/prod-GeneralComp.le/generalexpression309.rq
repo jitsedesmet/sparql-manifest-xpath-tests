@@ -1,0 +1,6 @@
+# QT3 test case generalexpression309 of test set prod-GeneralComp.le, which tests the XPath expression
+#   10000 <= (50000)
+ASK {
+  BIND(( "10000"^^<http://www.w3.org/2001/XMLSchema#integer> <= "50000"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-matches-40 of test set fn-matches, which tests the XPath expression
+#   fn:matches('aa', '(a\1)')
+ASK {
+  BIND(REGEX( "aa" , "(a\\1)" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

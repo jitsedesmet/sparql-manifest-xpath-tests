@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-unary-pluspint1args-3 of test set op-numeric-unary-plus, which tests the XPath expression
+#   +(xs:positiveInteger("999999999999999999"))
+ASK {
+  BIND(+ "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> AS ?result)
+  FILTER(( ?result = "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

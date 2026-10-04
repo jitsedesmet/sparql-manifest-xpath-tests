@@ -1,0 +1,6 @@
+# QT3 test case K-NumericLT-4 of test set op-numeric-less-than, which tests the XPath expression
+#   xs:decimal(-1) le xs:decimal(1)
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#decimal> ( - "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) <= <http://www.w3.org/2001/XMLSchema#decimal> ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

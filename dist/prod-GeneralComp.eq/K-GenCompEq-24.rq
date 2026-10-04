@@ -1,0 +1,6 @@
+# QT3 test case K-GenCompEq-24 of test set prod-GeneralComp.eq, which tests the XPath expression
+#   "a string" = "a string"
+ASK {
+  BIND(( "a string" = "a string" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

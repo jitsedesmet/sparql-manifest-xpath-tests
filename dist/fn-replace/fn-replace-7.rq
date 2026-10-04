@@ -1,0 +1,6 @@
+# QT3 test case fn-replace-7 of test set fn-replace, which tests the XPath expression
+#   replace("AAAA", "A+", "b")
+ASK {
+  BIND(REPLACE( "AAAA" , "A+" , "b" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "b" ))
+}

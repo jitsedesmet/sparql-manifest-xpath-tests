@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-23 of test set prod-CastExpr, which tests the XPath expression
+#   xs:unsignedInt("4294967295")
+ASK {
+  BIND("4294967295"^^<http://www.w3.org/2001/XMLSchema#unsignedInt> AS ?result)
+  FILTER(( ?result = "4294967295"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

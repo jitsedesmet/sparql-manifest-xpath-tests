@@ -1,0 +1,6 @@
+# QT3 test case CastAs170 of test set prod-CastExpr, which tests the XPath expression
+#   xs:float("-1.75e-3") cast as xs:float
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#float> ( <http://www.w3.org/2001/XMLSchema#float> ( "-1.75e-3" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-0.00175" ))
+}

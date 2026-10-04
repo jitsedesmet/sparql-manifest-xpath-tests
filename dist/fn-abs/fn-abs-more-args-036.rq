@@ -1,0 +1,6 @@
+# QT3 test case fn-abs-more-args-036 of test set fn-abs, which tests the XPath expression
+#   fn:abs(xs:integer("NaN"))
+ASK {
+  BIND(ABS( <http://www.w3.org/2001/XMLSchema#integer> ( "NaN" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

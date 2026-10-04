@@ -1,0 +1,6 @@
+# QT3 test case fn-seconds-from-dateTime-4 of test set fn-seconds-from-dateTime, which tests the XPath expression
+#   fn:seconds-from-dateTime(xs:dateTime("1999-12-31T21:20:20-05:00")) le fn:seconds-from-dateTime(xs:dateTime("1999-12-31T21:20:20-05:00"))
+ASK {
+  BIND(( SECONDS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-12-31T21:20:20-05:00" ) ) <= SECONDS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-12-31T21:20:20-05:00" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

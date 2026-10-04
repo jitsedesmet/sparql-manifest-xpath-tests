@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-subtractnni2args-3 of test set op-numeric-subtract, which tests the XPath expression
+#   xs:nonNegativeInteger("999999999999999999") - xs:nonNegativeInteger("0")
+ASK {
+  BIND(( "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> - "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
+  FILTER(( ?result = "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

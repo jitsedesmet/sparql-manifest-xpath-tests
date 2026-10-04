@@ -1,0 +1,6 @@
+# QT3 test case K-ReplaceFunc-7 of test set fn-replace, which tests the XPath expression
+#   replace("input", "(input)", "thisIsInvalid$")
+ASK {
+  BIND(REPLACE( "input" , "(input)" , "thisIsInvalid$" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

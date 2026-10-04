@@ -1,0 +1,6 @@
+# QT3 test case op-date-less-than-3 of test set op-date-less-than, which tests the XPath expression
+#   fn:not((xs:date("2005-12-25Z") lt xs:date("2005-12-26Z")))
+ASK {
+  BIND(! ( <http://www.w3.org/2001/XMLSchema#date> ( "2005-12-25Z" ) < <http://www.w3.org/2001/XMLSchema#date> ( "2005-12-26Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

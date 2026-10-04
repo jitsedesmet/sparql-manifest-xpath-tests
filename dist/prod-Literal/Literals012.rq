@@ -1,0 +1,6 @@
+# QT3 test case Literals012 of test set prod-Literal, which tests the XPath expression
+#   65535032.0023
+ASK {
+  BIND("65535032.0023"^^<http://www.w3.org/2001/XMLSchema#decimal> AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "65535032.0023" ))
+}

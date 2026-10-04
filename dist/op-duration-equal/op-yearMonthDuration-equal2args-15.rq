@@ -1,0 +1,6 @@
+# QT3 test case op-yearMonthDuration-equal2args-15 of test set op-duration-equal, which tests the XPath expression
+#   xs:yearMonthDuration("P0Y0M") le xs:yearMonthDuration("P2030Y12M")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P0Y0M" ) <= <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P2030Y12M" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-5 of test set prod-CastExpr, which tests the XPath expression
+#   xs:long("9223372036854775807")
+ASK {
+  BIND("9223372036854775807"^^<http://www.w3.org/2001/XMLSchema#long> AS ?result)
+  FILTER(( ?result = "9223372036854775807"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

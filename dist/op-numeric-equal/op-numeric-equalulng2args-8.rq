@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-equalulng2args-8 of test set op-numeric-equal, which tests the XPath expression
+#   xs:unsignedLong("184467440737095516") ne xs:unsignedLong("0")
+ASK {
+  BIND(( "184467440737095516"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> != "0"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

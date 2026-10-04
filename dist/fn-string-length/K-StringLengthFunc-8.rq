@@ -1,0 +1,6 @@
+# QT3 test case K-StringLengthFunc-8 of test set fn-string-length, which tests the XPath expression
+#   string-length("Harp not on that string, madam; that is past.") eq 45
+ASK {
+  BIND(( STRLEN( "Harp not on that string, madam; that is past." ) = "45"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

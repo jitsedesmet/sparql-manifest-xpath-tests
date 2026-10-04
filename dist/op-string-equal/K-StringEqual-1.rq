@@ -1,0 +1,6 @@
+# QT3 test case K-StringEqual-1 of test set op-string-equal, which tests the XPath expression
+#   'equals' eq 'equals'
+ASK {
+  BIND(( "equals" = "equals" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

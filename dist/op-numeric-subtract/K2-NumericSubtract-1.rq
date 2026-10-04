@@ -1,0 +1,6 @@
+# QT3 test case K2-NumericSubtract-1 of test set op-numeric-subtract, which tests the XPath expression
+#   0 - xs:double(0)
+ASK {
+  BIND(( "0"^^<http://www.w3.org/2001/XMLSchema#integer> - <http://www.w3.org/2001/XMLSchema#double> ( "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
+  FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

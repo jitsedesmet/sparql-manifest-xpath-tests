@@ -1,0 +1,6 @@
+# QT3 test case CastAs311 of test set prod-CastExpr, which tests the XPath expression
+#   xs:yearMonthDuration("-P21M") cast as xs:yearMonthDuration
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "-P21M" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-P1Y9M" ))
+}

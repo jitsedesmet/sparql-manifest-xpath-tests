@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-41 of test set prod-CastExpr, which tests the XPath expression
+#   " white space left alone" cast as xs:string eq xs:string(" white space left alone")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( " white space left alone" ) = <http://www.w3.org/2001/XMLSchema#string> ( " white space left alone" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-yearMonthDuration-less-than-14 of test set op-yearMonthDuration-less-than, which tests the XPath expression
+#   (xs:yearMonthDuration("P10Y05M") le xs:yearMonthDuration("P20Y10M")) or (fn:false())
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P10Y05M" ) <= <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P20Y10M" ) ) || "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

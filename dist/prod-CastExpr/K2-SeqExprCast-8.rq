@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-8 of test set prod-CastExpr, which tests the XPath expression
+#   xs:byte("-128")
+ASK {
+  BIND("-128"^^<http://www.w3.org/2001/XMLSchema#byte> AS ?result)
+  FILTER(( ?result = - "128"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

@@ -1,0 +1,616 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-numeric-subtract" ;
+  mf:entries (
+    <#op-numeric-subtractint2args-1>
+    <#op-numeric-subtractint2args-2>
+    <#op-numeric-subtractint2args-3>
+    <#op-numeric-subtractint2args-4>
+    <#op-numeric-subtractint2args-5>
+    <#op-numeric-subtractintg2args-1>
+    <#op-numeric-subtractintg2args-2>
+    <#op-numeric-subtractintg2args-3>
+    <#op-numeric-subtractintg2args-4>
+    <#op-numeric-subtractintg2args-5>
+    <#op-numeric-subtractdec2args-1>
+    <#op-numeric-subtractdec2args-2>
+    <#op-numeric-subtractdec2args-3>
+    <#op-numeric-subtractdec2args-4>
+    <#op-numeric-subtractdec2args-5>
+    <#op-numeric-subtractdbl2args-1>
+    <#op-numeric-subtractdbl2args-2>
+    <#op-numeric-subtractdbl2args-3>
+    <#op-numeric-subtractdbl2args-4>
+    <#op-numeric-subtractdbl2args-5>
+    <#op-numeric-subtractflt2args-1>
+    <#op-numeric-subtractflt2args-2>
+    <#op-numeric-subtractflt2args-3>
+    <#op-numeric-subtractflt2args-4>
+    <#op-numeric-subtractflt2args-5>
+    <#op-numeric-subtractlng2args-1>
+    <#op-numeric-subtractlng2args-2>
+    <#op-numeric-subtractlng2args-3>
+    <#op-numeric-subtractlng2args-4>
+    <#op-numeric-subtractlng2args-5>
+    <#op-numeric-subtractusht2args-1>
+    <#op-numeric-subtractusht2args-2>
+    <#op-numeric-subtractusht2args-3>
+    <#op-numeric-subtractusht2args-4>
+    <#op-numeric-subtractusht2args-5>
+    <#op-numeric-subtractnint2args-1>
+    <#op-numeric-subtractnint2args-2>
+    <#op-numeric-subtractpint2args-1>
+    <#op-numeric-subtractpint2args-2>
+    <#op-numeric-subtractpint2args-3>
+    <#op-numeric-subtractulng2args-1>
+    <#op-numeric-subtractulng2args-2>
+    <#op-numeric-subtractulng2args-3>
+    <#op-numeric-subtractulng2args-4>
+    <#op-numeric-subtractulng2args-5>
+    <#op-numeric-subtractnpi2args-1>
+    <#op-numeric-subtractnpi2args-2>
+    <#op-numeric-subtractnpi2args-3>
+    <#op-numeric-subtractnpi2args-4>
+    <#op-numeric-subtractnpi2args-5>
+    <#op-numeric-subtractnni2args-1>
+    <#op-numeric-subtractnni2args-2>
+    <#op-numeric-subtractnni2args-3>
+    <#op-numeric-subtractnni2args-4>
+    <#op-numeric-subtractnni2args-5>
+    <#op-numeric-subtractsht2args-1>
+    <#op-numeric-subtractsht2args-2>
+    <#op-numeric-subtractsht2args-3>
+    <#op-numeric-subtractsht2args-4>
+    <#op-numeric-subtractsht2args-5>
+    <#op-numeric-subtractmix2args-2>
+    <#op-numeric-subtractmix2args-3>
+    <#K-NumericSubtract-1>
+    <#K-NumericSubtract-2>
+    <#K-NumericSubtract-3>
+    <#K-NumericSubtract-4>
+    <#K-NumericSubtract-21>
+    <#K-NumericSubtract-22>
+    <#K-NumericSubtract-23>
+    <#K-NumericSubtract-24>
+    <#K-NumericSubtract-25>
+    <#K2-NumericSubtract-1>
+    <#K2-NumericSubtract-2>
+    <#cbcl-numeric-subtract-001>
+    <#cbcl-numeric-subtract-002>
+    <#op-numeric-subtract-big-01>
+  ) .
+
+<#op-numeric-subtractint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractint2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:int(mid range) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractint2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:int(upper bound) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractint2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractint2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractintg2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractintg2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractintg2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractintg2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractintg2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:integer(mid range) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractintg2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractintg2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractintg2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:integer(upper bound) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractintg2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractintg2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractintg2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractintg2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractintg2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractintg2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractintg2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdec2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdec2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdec2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdec2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdec2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:decimal(mid range) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdec2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdec2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdec2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:decimal(upper bound) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdec2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdec2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdec2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdec2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdec2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdec2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdec2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdbl2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdbl2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdbl2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdbl2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdbl2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:double(mid range) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdbl2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdbl2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdbl2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:double(upper bound) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdbl2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdbl2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdbl2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdbl2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractdbl2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractdbl2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractdbl2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractflt2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractflt2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractflt2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractflt2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractflt2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:float(mid range) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractflt2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractflt2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractflt2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:float(upper bound) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractflt2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractflt2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractflt2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractflt2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractflt2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractflt2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractflt2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractlng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractlng2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractlng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractlng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractlng2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:long(mid range) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractlng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractlng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractlng2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:long(upper bound) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractlng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractlng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractlng2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractlng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractlng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractlng2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractlng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractusht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractusht2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractusht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractusht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractusht2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(mid range) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractusht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractusht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractusht2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(upper bound) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractusht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractusht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractusht2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractusht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractusht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractusht2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractusht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnint2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractpint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractpint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(mid range) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractpint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractpint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractpint2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(upper bound) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractpint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractpint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractpint2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractpint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractulng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractulng2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractulng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractulng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractulng2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(mid range) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractulng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractulng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractulng2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(upper bound) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractulng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractulng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractulng2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractulng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractulng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractulng2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractulng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnpi2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnpi2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnpi2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnpi2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnpi2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(mid range) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnpi2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnpi2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnpi2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(upper bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnpi2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnpi2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnpi2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnpi2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnpi2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnpi2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnpi2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnni2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnni2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnni2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnni2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnni2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(mid range) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnni2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnni2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnni2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(upper bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnni2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnni2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnni2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnni2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractnni2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractnni2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractnni2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractsht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractsht2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractsht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractsht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractsht2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:short(mid range) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractsht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractsht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractsht2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:short(upper bound) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractsht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractsht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractsht2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractsht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractsht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractsht2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-subtract\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractsht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractmix2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractmix2args-2" ;
+  rdfs:comment "Simple subtraction test pass string for second operator" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractmix2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtractmix2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtractmix2args-3" ;
+  rdfs:comment "Simple subtraction test, second operator cast string to integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtractmix2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-1> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-1" ;
+  rdfs:comment "A test whose essence is: `xs:double(6) - xs:double(2) eq 4`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-2> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-2" ;
+  rdfs:comment "A test whose essence is: `xs:decimal(6) - xs:decimal(2) eq 4`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-3> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-3" ;
+  rdfs:comment "A test whose essence is: `xs:integer(6) - xs:integer(2) eq 4`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-4> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-4" ;
+  rdfs:comment "A test whose essence is: `xs:float(5) - xs:float(1) eq 4`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-21> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-21" ;
+  rdfs:comment "A test whose essence is: `string(xs:float(\"NaN\") - 3) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-22> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-22" ;
+  rdfs:comment "A test whose essence is: `string(xs:double(\"NaN\") - 3) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-23> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-23" ;
+  rdfs:comment "A test whose essence is: `string(3 - xs:float(\"NaN\")) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-23.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-24> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-24" ;
+  rdfs:comment "A test whose essence is: `string(3 - xs:double(\"NaN\")) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericSubtract-25> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericSubtract-25" ;
+  rdfs:comment "Invoke the '-' operator with invalid operands." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K-NumericSubtract-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericSubtract-1> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericSubtract-1" ;
+  rdfs:comment "Substract xs:double(0) from xs:integer(0)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K2-NumericSubtract-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericSubtract-2> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericSubtract-2" ;
+  rdfs:comment "Substract xs:double(0) from xs:integer(0)." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <K2-NumericSubtract-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-numeric-subtract-001> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-numeric-subtract-001" ;
+  rdfs:comment "test subtraction of large xs:decimal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <cbcl-numeric-subtract-001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-numeric-subtract-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-numeric-subtract-002" ;
+  rdfs:comment "test subtraction of large xs:integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <cbcl-numeric-subtract-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtract-big-01> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtract-big-01" ;
+  rdfs:comment "test subtraction of large xs:decimal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  mf:action [ qt:query <op-numeric-subtract-big-01.rq> ] ;
+  mf:result <../true.srj> .

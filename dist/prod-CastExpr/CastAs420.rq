@@ -1,0 +1,6 @@
+# QT3 test case CastAs420 of test set prod-CastExpr, which tests the XPath expression
+#   xs:date("1999-05-31Z") cast as xs:date
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#date> ( <http://www.w3.org/2001/XMLSchema#date> ( "1999-05-31Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1999-05-31Z" ))
+}

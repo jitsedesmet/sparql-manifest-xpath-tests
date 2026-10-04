@@ -1,0 +1,6 @@
+# QT3 test case K-StartsWithFunc-11 of test set fn-starts-with, which tests the XPath expression
+#   not(starts-with("", "a string"))
+ASK {
+  BIND(! STRSTARTS( "" , "a string" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,544 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set prod-Literal" ;
+  mf:entries (
+    <#Literals001>
+    <#Literals002>
+    <#Literals003>
+    <#Literals004>
+    <#Literals010>
+    <#Literals011>
+    <#Literals012>
+    <#Literals013>
+    <#Literals014>
+    <#Literals015>
+    <#Literals016>
+    <#Literals017>
+    <#Literals018>
+    <#Literals019>
+    <#Literals020>
+    <#Literals021>
+    <#Literals022>
+    <#Literals023>
+    <#Literals024>
+    <#Literals025>
+    <#Literals026>
+    <#Literals027>
+    <#Literals028>
+    <#Literals029>
+    <#Literals030>
+    <#Literals031>
+    <#Literals032>
+    <#Literals033>
+    <#Literals034>
+    <#Literals035>
+    <#Literals056a>
+    <#Literals057a>
+    <#Literals058a>
+    <#Literals059a>
+    <#Literals060a>
+    <#Literals061a>
+    <#Literals062>
+    <#Literals063>
+    <#Literals064>
+    <#Literals065>
+    <#K-Literals-1>
+    <#K-Literals-2>
+    <#K-Literals-4>
+    <#K-Literals-5>
+    <#K-Literals-6>
+    <#K-Literals-8>
+    <#K-Literals-9>
+    <#K-Literals-20>
+    <#K-Literals-21>
+    <#K-Literals-28>
+    <#K-Literals-31a>
+    <#K-Literals-37>
+    <#K-Literals-47a>
+    <#K2-Literals-4>
+    <#K2-Literals-5>
+    <#K2-Literals-6>
+    <#K2-Literals-7>
+    <#K2-Literals-8>
+    <#K2-Literals-9>
+    <#K2-Literals-10>
+    <#K2-Literals-11>
+    <#K2-Literals-12>
+    <#K2-Literals-13>
+    <#K2-Literals-14>
+    <#K2-Literals-15>
+    <#K2-Literals-30>
+    <#K2-Literals-32>
+  ) .
+
+<#Literals001> a mf:QueryEvaluationTest ;
+  mf:name "Literals001" ;
+  rdfs:comment "Simple use case for string literals" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals002> a mf:QueryEvaluationTest ;
+  mf:name "Literals002" ;
+  rdfs:comment "Simple use case for string literals" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals003> a mf:QueryEvaluationTest ;
+  mf:name "Literals003" ;
+  rdfs:comment "Test case where string literal contains a new line" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals003.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals004> a mf:QueryEvaluationTest ;
+  mf:name "Literals004" ;
+  rdfs:comment "Test case where string literal contains a new line" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals004.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals010> a mf:QueryEvaluationTest ;
+  mf:name "Literals010" ;
+  rdfs:comment "Test for valid integer literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals010.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals011> a mf:QueryEvaluationTest ;
+  mf:name "Literals011" ;
+  rdfs:comment "Test for valid integer literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals011.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals012> a mf:QueryEvaluationTest ;
+  mf:name "Literals012" ;
+  rdfs:comment "Test for valid decimal literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals012.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals013> a mf:QueryEvaluationTest ;
+  mf:name "Literals013" ;
+  rdfs:comment "Test for valid decimal literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals013.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals014> a mf:QueryEvaluationTest ;
+  mf:name "Literals014" ;
+  rdfs:comment "Test for valid decimal literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals014.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals015> a mf:QueryEvaluationTest ;
+  mf:name "Literals015" ;
+  rdfs:comment "Test for valid decimal literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals015.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals016> a mf:QueryEvaluationTest ;
+  mf:name "Literals016" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals016.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals017> a mf:QueryEvaluationTest ;
+  mf:name "Literals017" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals017.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals018> a mf:QueryEvaluationTest ;
+  mf:name "Literals018" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals018.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals019> a mf:QueryEvaluationTest ;
+  mf:name "Literals019" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals019.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals020> a mf:QueryEvaluationTest ;
+  mf:name "Literals020" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals020.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals021> a mf:QueryEvaluationTest ;
+  mf:name "Literals021" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals021.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals022> a mf:QueryEvaluationTest ;
+  mf:name "Literals022" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals022.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals023> a mf:QueryEvaluationTest ;
+  mf:name "Literals023" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals023.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals024> a mf:QueryEvaluationTest ;
+  mf:name "Literals024" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals024.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals025> a mf:QueryEvaluationTest ;
+  mf:name "Literals025" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals025.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals026> a mf:QueryEvaluationTest ;
+  mf:name "Literals026" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals026.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals027> a mf:QueryEvaluationTest ;
+  mf:name "Literals027" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals027.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals028> a mf:QueryEvaluationTest ;
+  mf:name "Literals028" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals028.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals029> a mf:QueryEvaluationTest ;
+  mf:name "Literals029" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals029.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals030> a mf:QueryEvaluationTest ;
+  mf:name "Literals030" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals030.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals031> a mf:QueryEvaluationTest ;
+  mf:name "Literals031" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals031.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals032> a mf:QueryEvaluationTest ;
+  mf:name "Literals032" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals032.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals033> a mf:QueryEvaluationTest ;
+  mf:name "Literals033" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals033.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals034> a mf:QueryEvaluationTest ;
+  mf:name "Literals034" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals034.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals035> a mf:QueryEvaluationTest ;
+  mf:name "Literals035" ;
+  rdfs:comment "Test for valid double literal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals035.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals056a> a mf:QueryEvaluationTest ;
+  mf:name "Literals056a" ;
+  rdfs:comment "Test for string literal containing the predefined entity reference '&amp;' (XPath-only)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals056a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals057a> a mf:QueryEvaluationTest ;
+  mf:name "Literals057a" ;
+  rdfs:comment "Test for string literal containing the predefined entity reference '&quot;' (XPath-only)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals057a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals058a> a mf:QueryEvaluationTest ;
+  mf:name "Literals058a" ;
+  rdfs:comment "Test for string literal containing the predefined entity reference '&apos;' (XPath-only)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals058a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals059a> a mf:QueryEvaluationTest ;
+  mf:name "Literals059a" ;
+  rdfs:comment "Test for string literal containing the predefined entity reference '&lt;' (XPath-only)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals059a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals060a> a mf:QueryEvaluationTest ;
+  mf:name "Literals060a" ;
+  rdfs:comment "Test for string literal containing the predefined entity reference '&gt;' (XPath-only)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals060a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals061a> a mf:QueryEvaluationTest ;
+  mf:name "Literals061a" ;
+  rdfs:comment "Test for string literal containing the character reference '&#8364;' which transaltes into the 'Euro' currency symbol (XPath-only)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals061a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals062> a mf:QueryEvaluationTest ;
+  mf:name "Literals062" ;
+  rdfs:comment "Test the escaping of the \" (quotation) character in XPath/XQuery." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals062.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals063> a mf:QueryEvaluationTest ;
+  mf:name "Literals063" ;
+  rdfs:comment "Test the escaping of the ' (quotation) character in XPath/XQuery." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals063.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals064> a mf:QueryEvaluationTest ;
+  mf:name "Literals064" ;
+  rdfs:comment "Test the escaping of the ' (apostrophe) and \" (quotation) characters in XPath/XQuery" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals064.rq> ] ;
+  mf:result <../true.srj> .
+
+<#Literals065> a mf:QueryEvaluationTest ;
+  mf:name "Literals065" ;
+  rdfs:comment "Test the escaping of the ' (apostrophe) and \" (quotation) characters in XPath/XQuery" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <Literals065.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-1> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-1" ;
+  rdfs:comment "A test whose essence is: `'fo''o' eq 'fo''o'`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-2> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-2" ;
+  rdfs:comment "A test whose essence is: `'foo' eq \"foo\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-4> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-4" ;
+  rdfs:comment "'\"\"\"\"' is a valid string literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-5> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-5" ;
+  rdfs:comment "'''''' is a valid string literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-6> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-6" ;
+  rdfs:comment "'\"fo\"\"\"\"' is a valid string literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-8> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-8" ;
+  rdfs:comment "'3.' is a valid number literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-9> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-9" ;
+  rdfs:comment "'.3' is a valid number literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-20> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-20" ;
+  rdfs:comment "A test whose essence is: `not(xs:double(\"NaN\"))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-21> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-21" ;
+  rdfs:comment "A test whose essence is: `not(xs:float(\"NaN\"))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-28> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-28" ;
+  rdfs:comment "'.3' is a valid literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-28.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-31a> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-31a" ;
+  rdfs:comment "An invalid character reference is not invalid in XPath." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-31a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-37> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-37" ;
+  rdfs:comment "Simple test of a decimal character reference." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-37.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-Literals-47a> a mf:QueryEvaluationTest ;
+  mf:name "K-Literals-47a" ;
+  rdfs:comment "Simple test of a hexa decimal character reference: not recognized in XPath" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K-Literals-47a.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-4> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-4" ;
+  rdfs:comment "Use a relatively large xs:integer literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-5> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-5" ;
+  rdfs:comment "Use a relatively small xs:integer literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-6> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-6" ;
+  rdfs:comment "Use a relatively large xs:decimal literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-7> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-7" ;
+  rdfs:comment "Use a relatively small xs:decimal literal, that might result in an underflow." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-8> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-8" ;
+  rdfs:comment "An xs:double literal with a large significand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-9> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-9" ;
+  rdfs:comment "An xs:double literal with a small significand." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-10> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-10" ;
+  rdfs:comment "Attempt to trigger underflow in an xs:double literal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-11> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-11" ;
+  rdfs:comment "Negative zero, as a double." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-12> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-12" ;
+  rdfs:comment "Zero, as a double." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-13> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-13" ;
+  rdfs:comment "Negative zero, as a decimal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-14> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-14" ;
+  rdfs:comment "Zero, as a decimal." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-15> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-15" ;
+  rdfs:comment "A literal looking like a negative zero integer." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-30> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-30" ;
+  rdfs:comment "Check EBNF 142." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-30.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-Literals-32> a mf:QueryEvaluationTest ;
+  mf:name "K2-Literals-32" ;
+  rdfs:comment "Numeric literals can end with a dot." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml> ;
+  mf:action [ qt:query <K2-Literals-32.rq> ] ;
+  mf:result <../true.srj> .

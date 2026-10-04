@@ -1,0 +1,6 @@
+# QT3 test case fn-floorulng1args-1 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:unsignedLong("0"))
+ASK {
+  BIND(FLOOR( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))
+}

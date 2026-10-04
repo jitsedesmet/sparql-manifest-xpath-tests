@@ -1,0 +1,6 @@
+# QT3 test case fn-roundnni1args-3 of test set fn-round, which tests the XPath expression
+#   fn:round(xs:nonNegativeInteger("999999999999999999"))
+ASK {
+  BIND(ROUND( "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
+  FILTER(( ?result = "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

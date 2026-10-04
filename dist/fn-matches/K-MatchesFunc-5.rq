@@ -1,0 +1,6 @@
+# QT3 test case K-MatchesFunc-5 of test set fn-matches, which tests the XPath expression
+#   matches("input", "pattern", " ")
+ASK {
+  BIND(REGEX( "input" , "pattern" , " " ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

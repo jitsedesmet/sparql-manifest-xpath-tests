@@ -1,0 +1,6 @@
+# QT3 test case cbcl-subtract-dates-002 of test set op-subtract-dates, which tests the XPath expression
+#   xs:date("-25252734927766554-12-31") - xs:date("25252734927766554-12-31+01:00")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#date> ( "-25252734927766554-12-31" ) - <http://www.w3.org/2001/XMLSchema#date> ( "25252734927766554-12-31+01:00" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

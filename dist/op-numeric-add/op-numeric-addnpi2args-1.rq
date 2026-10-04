@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-addnpi2args-1 of test set op-numeric-add, which tests the XPath expression
+#   xs:nonPositiveInteger("-475688437271870490") + xs:nonPositiveInteger("-524311562728129509")
+ASK {
+  BIND(( "-475688437271870490"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> + "-524311562728129509"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) AS ?result)
+  FILTER(( ?result = - "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

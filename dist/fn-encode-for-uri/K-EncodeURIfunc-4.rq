@@ -1,0 +1,6 @@
+# QT3 test case K-EncodeURIfunc-4 of test set fn-encode-for-uri, which tests the XPath expression
+#   concat("http://www.example.com/", encode-for-uri("~bébé")) eq "http://www.example.com/~b%C3%A9b%C3%A9"
+ASK {
+  BIND(( CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "http://www.example.com/" ) , <http://www.w3.org/2001/XMLSchema#string> ( ENCODE_FOR_URI( "~bébé" ) ) ) = "http://www.example.com/~b%C3%A9b%C3%A9" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

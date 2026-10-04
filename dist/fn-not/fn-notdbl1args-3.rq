@@ -1,0 +1,6 @@
+# QT3 test case fn-notdbl1args-3 of test set fn-not, which tests the XPath expression
+#   fn:not(xs:double("1.7976931348623157E308"))
+ASK {
+  BIND(! <http://www.w3.org/2001/XMLSchema#double> ( "1.7976931348623157E308" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

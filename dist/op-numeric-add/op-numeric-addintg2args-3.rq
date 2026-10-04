@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-addintg2args-3 of test set op-numeric-add, which tests the XPath expression
+#   xs:integer("-999999999999999999") + xs:integer("830993497117024304")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#integer> ( "-999999999999999999" ) + <http://www.w3.org/2001/XMLSchema#integer> ( "830993497117024304" ) ) AS ?result)
+  FILTER(( ?result = - "169006502882975695"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

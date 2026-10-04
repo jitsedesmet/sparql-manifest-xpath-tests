@@ -1,0 +1,168 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-ends-with" ;
+  mf:entries (
+    <#fn-ends-with2args-1>
+    <#fn-ends-with2args-2>
+    <#fn-ends-with2args-3>
+    <#fn-ends-with2args-4>
+    <#fn-ends-with2args-5>
+    <#fn-ends-with-1>
+    <#fn-ends-with-2>
+    <#fn-ends-with-3>
+    <#fn-ends-with-8>
+    <#fn-ends-with-9>
+    <#fn-ends-with-10>
+    <#fn-ends-with-11>
+    <#fn-ends-with-12>
+    <#fn-ends-with-13>
+    <#fn-ends-with-14>
+    <#fn-ends-with-15>
+    <#fn-ends-with-16>
+    <#K-EndsWithFunc-6>
+    <#K-EndsWithFunc-7>
+    <#K-EndsWithFunc-8>
+  ) .
+
+<#fn-ends-with2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with2args-1" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with2args-2" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = xs:string(mid range) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with2args-3" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = xs:string(upper bound) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with2args-4" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with2args-5" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-1" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-2" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"A Character String\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-3" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"A Character String\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-8" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"AAAAABBBBBCCCCC\" $arg2 = \"BBBBB\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-9" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"AAAAABBBBB\" $arg2 = \" \"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-10" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \" \" $arg2 = \" AAAAABBBBB\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-11" ;
+  rdfs:comment "Evaluates The \"ends-with\" function using it as a argument of a fn:not - returns false" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-12" ;
+  rdfs:comment "Evaluates The \"ends-with\" function using it as a argument of a fn:not - returns true" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-13" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = xs:string(\"A\") $arg2 = \"A\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-14" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"A\" $arg2 = xs:string(\"A\")" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-15" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"A\" $arg2 = \"a\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-ends-with-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-ends-with-16" ;
+  rdfs:comment "Evaluates The \"ends-with\" function with the arguments set as follows: $arg1 = \"a\" $arg2 = \"A\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <fn-ends-with-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-EndsWithFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-EndsWithFunc-6" ;
+  rdfs:comment "A test whose essence is: `ends-with(\"tattoo\", \"tattoo\")`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <K-EndsWithFunc-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-EndsWithFunc-7> a mf:QueryEvaluationTest ;
+  mf:name "K-EndsWithFunc-7" ;
+  rdfs:comment "A test whose essence is: `not(ends-with(\"tattoo\", \"atto\"))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <K-EndsWithFunc-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-EndsWithFunc-8> a mf:QueryEvaluationTest ;
+  mf:name "K-EndsWithFunc-8" ;
+  rdfs:comment "A test whose essence is: `not(ends-with(\"tattoo\", \"atto\"))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ends-with.xml> ;
+  mf:action [ qt:query <K-EndsWithFunc-8.rq> ] ;
+  mf:result <../true.srj> .

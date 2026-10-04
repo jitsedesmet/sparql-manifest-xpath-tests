@@ -1,0 +1,6 @@
+# QT3 test case cbcl-date-greater-equal-002 of test set op-date-greater-than, which tests the XPath expression
+#   xs:date("2008-01-30") lt xs:date("2008-01-31+09:00")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#date> ( "2008-01-30" ) < <http://www.w3.org/2001/XMLSchema#date> ( "2008-01-31+09:00" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

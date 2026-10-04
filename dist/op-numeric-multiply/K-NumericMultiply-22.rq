@@ -1,0 +1,6 @@
+# QT3 test case K-NumericMultiply-22 of test set op-numeric-multiply, which tests the XPath expression
+#   string(xs:double("NaN") * 3) eq "NaN"
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#double> ( "NaN" ) * "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) = "NaN" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

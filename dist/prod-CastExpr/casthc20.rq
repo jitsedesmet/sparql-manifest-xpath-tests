@@ -1,0 +1,6 @@
+# QT3 test case casthc20 of test set prod-CastExpr, which tests the XPath expression
+#   xs:decimal(12678967.543233) cast as xs:integer
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#integer> ( <http://www.w3.org/2001/XMLSchema#decimal> ( "12678967.543233"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) AS ?result)
+  FILTER(( ?result = "12678967"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

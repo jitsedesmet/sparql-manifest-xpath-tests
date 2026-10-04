@@ -1,0 +1,6 @@
+# QT3 test case K-NumericEqual-1 of test set op-numeric-equal, which tests the XPath expression
+#   xs:integer(1) eq xs:integer(1)
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#integer> ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) = <http://www.w3.org/2001/XMLSchema#integer> ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

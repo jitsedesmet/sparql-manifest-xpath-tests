@@ -1,0 +1,6 @@
+# QT3 test case K-NumericMultiply-28 of test set op-numeric-multiply, which tests the XPath expression
+#   "3" * "3"
+ASK {
+  BIND(( "3" * "3" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

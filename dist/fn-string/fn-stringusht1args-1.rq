@@ -1,0 +1,6 @@
+# QT3 test case fn-stringusht1args-1 of test set fn-string, which tests the XPath expression
+#   fn:string(xs:unsignedShort("0"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))
+}

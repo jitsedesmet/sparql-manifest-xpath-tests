@@ -1,0 +1,6 @@
+# QT3 test case fn-string-length-9 of test set fn-string-length, which tests the XPath expression
+#   fn:string-length(fn:string("AbcDH"))
+ASK {
+  BIND(STRLEN( <http://www.w3.org/2001/XMLSchema#string> ( "AbcDH" ) ) AS ?result)
+  FILTER(( ?result = "5"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

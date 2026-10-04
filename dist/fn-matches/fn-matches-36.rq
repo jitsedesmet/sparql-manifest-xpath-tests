@@ -1,0 +1,6 @@
+# QT3 test case fn-matches-36 of test set fn-matches, which tests the XPath expression
+#   fn:matches('abcdefghijj', '(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)\10')
+ASK {
+  BIND(REGEX( "abcdefghijj" , "(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)\\10" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

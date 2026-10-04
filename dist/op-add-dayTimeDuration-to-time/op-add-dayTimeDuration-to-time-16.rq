@@ -1,0 +1,6 @@
+# QT3 test case op-add-dayTimeDuration-to-time-16 of test set op-add-dayTimeDuration-to-time, which tests the XPath expression
+#   (xs:time("09:06:07Z") + xs:dayTimeDuration("P18DT02H02M")) ge xs:time("01:01:01Z")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#time> ( "09:06:07Z" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P18DT02H02M" ) ) >= <http://www.w3.org/2001/XMLSchema#time> ( "01:01:01Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

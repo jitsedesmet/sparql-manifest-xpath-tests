@@ -1,0 +1,6 @@
+# QT3 test case op-yearMonthDuration-greater-than-5 of test set op-yearMonthDuration-greater-than, which tests the XPath expression
+#   fn:not(xs:yearMonthDuration("P20Y09M") gt xs:yearMonthDuration("P20Y10M"))
+ASK {
+  BIND(! ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P20Y09M" ) > <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P20Y10M" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

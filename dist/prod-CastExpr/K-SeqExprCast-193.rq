@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-193 of test set prod-CastExpr, which tests the XPath expression
+#   xs:string(xs:dayTimeDuration("P3D")) eq "P3D"
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3D" ) ) = "P3D" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

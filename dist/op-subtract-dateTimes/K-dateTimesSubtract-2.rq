@@ -1,0 +1,6 @@
+# QT3 test case K-dateTimesSubtract-2 of test set op-subtract-dateTimes, which tests the XPath expression
+#   xs:dateTime("1999-10-12T08:01:23") + xs:dateTime("1999-10-12T08:01:23")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-10-12T08:01:23" ) + <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-10-12T08:01:23" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

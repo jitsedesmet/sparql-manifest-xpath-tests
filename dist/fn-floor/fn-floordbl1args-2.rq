@@ -1,0 +1,6 @@
+# QT3 test case fn-floordbl1args-2 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:double("0"))
+ASK {
+  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#double> ( "0" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))
+}

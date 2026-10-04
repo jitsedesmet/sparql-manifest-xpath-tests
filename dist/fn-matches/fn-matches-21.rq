@@ -1,0 +1,7 @@
+# QT3 test case fn-matches-21 of test set fn-matches, which tests the XPath expression
+#   fn:matches("abracadabra
+#   abracadabra", "\n")
+ASK {
+  BIND(REGEX( "abracadabra\nabracadabra" , "\\n" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

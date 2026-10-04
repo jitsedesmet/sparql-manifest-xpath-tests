@@ -1,0 +1,6 @@
+# QT3 test case op-logical-or-062 of test set prod-OrExpr, which tests the XPath expression
+#   xs:decimal(0) or xs:decimal(0)
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#decimal> ( "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) || <http://www.w3.org/2001/XMLSchema#decimal> ( "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

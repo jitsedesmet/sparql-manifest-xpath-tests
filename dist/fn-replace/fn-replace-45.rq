@@ -1,0 +1,6 @@
+# QT3 test case fn-replace-45 of test set fn-replace, which tests the XPath expression
+#   replace("Now, let's SEND OUT for QUICHE!!", "[A-Z][A-Z]+", "$0$0")
+ASK {
+  BIND(REPLACE( "Now, let's SEND OUT for QUICHE!!" , "[A-Z][A-Z]+" , "$0$0" ) AS ?result)
+  FILTER(( ?result = "Now, let's SENDSEND OUTOUT for QUICHEQUICHE!!" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case cbcl-subtract-dateTimes-001 of test set op-subtract-dateTimes, which tests the XPath expression
+#   xs:dateTime("-25252734927766554-12-31T12:00:00") - xs:dateTime("25252734927766554-12-31T12:00:00")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "-25252734927766554-12-31T12:00:00" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "25252734927766554-12-31T12:00:00" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

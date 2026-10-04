@@ -1,0 +1,40 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set prod-GeneralComp.le" ;
+  mf:entries (
+    <#generalexpression309>
+    <#generalexpression318>
+    <#generalexpression319>
+    <#K-GenCompLTEQ-4>
+  ) .
+
+<#generalexpression309> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression309" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Atomic Value operator = <= operand2 = Sequence of single atomic value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.le.xml> ;
+  mf:action [ qt:query <generalexpression309.rq> ] ;
+  mf:result <../true.srj> .
+
+<#generalexpression318> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression318" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = <= operand2 = Atomic Value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.le.xml> ;
+  mf:action [ qt:query <generalexpression318.rq> ] ;
+  mf:result <../true.srj> .
+
+<#generalexpression319> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression319" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = <= operand2 = Sequence of single atomic value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.le.xml> ;
+  mf:action [ qt:query <generalexpression319.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompLTEQ-4> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompLTEQ-4" ;
+  rdfs:comment "General comparison where the operands are various various sequence of xs:integers." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.le.xml> ;
+  mf:action [ qt:query <K-GenCompLTEQ-4.rq> ] ;
+  mf:result <../true.srj> .

@@ -1,0 +1,6 @@
+# QT3 test case fn-ceilingint1args-2 of test set fn-ceiling, which tests the XPath expression
+#   fn:ceiling(xs:int("-1873914410"))
+ASK {
+  BIND(CEIL( "-1873914410"^^<http://www.w3.org/2001/XMLSchema#int> ) AS ?result)
+  FILTER(( ?result = - "1873914410"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

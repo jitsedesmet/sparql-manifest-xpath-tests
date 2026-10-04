@@ -1,0 +1,6 @@
+# QT3 test case fn-year-from-date1args-3 of test set fn-year-from-date, which tests the XPath expression
+#   fn:year-from-date(xs:date("2030-12-31Z"))
+ASK {
+  BIND(YEAR( <http://www.w3.org/2001/XMLSchema#date> ( "2030-12-31Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "2030" ))
+}

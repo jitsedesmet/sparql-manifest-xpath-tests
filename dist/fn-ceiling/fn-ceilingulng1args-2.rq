@@ -1,0 +1,6 @@
+# QT3 test case fn-ceilingulng1args-2 of test set fn-ceiling, which tests the XPath expression
+#   fn:ceiling(xs:unsignedLong("130747108607674654"))
+ASK {
+  BIND(CEIL( "130747108607674654"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
+  FILTER(( ?result = "130747108607674654"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

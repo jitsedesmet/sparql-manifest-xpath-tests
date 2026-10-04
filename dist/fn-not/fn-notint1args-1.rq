@@ -1,0 +1,6 @@
+# QT3 test case fn-notint1args-1 of test set fn-not, which tests the XPath expression
+#   fn:not(xs:int("-2147483648"))
+ASK {
+  BIND(! "-2147483648"^^<http://www.w3.org/2001/XMLSchema#int> AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

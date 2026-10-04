@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-201 of test set prod-CastExpr, which tests the XPath expression
+#   xs:yearMonthDuration("-P3")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "-P3" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

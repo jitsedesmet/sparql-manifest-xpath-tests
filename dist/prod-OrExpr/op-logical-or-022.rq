@@ -1,0 +1,6 @@
+# QT3 test case op-logical-or-022 of test set prod-OrExpr, which tests the XPath expression
+#   xs:string("") or xs:string('abc')
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( "" ) || <http://www.w3.org/2001/XMLSchema#string> ( "abc" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

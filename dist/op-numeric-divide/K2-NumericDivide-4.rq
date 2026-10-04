@@ -1,0 +1,6 @@
+# QT3 test case K2-NumericDivide-4 of test set op-numeric-divide, which tests the XPath expression
+#   1 div -0.0
+ASK {
+  BIND(( "1"^^<http://www.w3.org/2001/XMLSchema#integer> / - "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

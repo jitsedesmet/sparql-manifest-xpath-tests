@@ -1,0 +1,6 @@
+# QT3 test case Literals065 of test set prod-Literal, which tests the XPath expression
+#   'He said, "I don''t like it."'
+ASK {
+  BIND("He said, \"I don't like it.\"" AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "He said, \"I don't like it.\"" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case Parenexpr-1 of test set prod-ParenthesizedExpr, which tests the XPath expression
+#   (1 + 2) * 3
+ASK {
+  BIND(( ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> + "2"^^<http://www.w3.org/2001/XMLSchema#integer> ) * "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ?result = "9"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

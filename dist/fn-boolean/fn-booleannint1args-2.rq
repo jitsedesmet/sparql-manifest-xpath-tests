@@ -1,0 +1,6 @@
+# QT3 test case fn-booleannint1args-2 of test set fn-boolean, which tests the XPath expression
+#   fn:boolean(xs:negativeInteger("-297014075999096793"))
+ASK {
+  BIND(!( ! "-297014075999096793"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

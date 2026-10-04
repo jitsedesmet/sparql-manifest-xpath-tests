@@ -1,0 +1,6 @@
+# QT3 test case fn-substring-after-19 of test set fn-substring-after, which tests the XPath expression
+#   fn:substring-after("****","***")
+ASK {
+  BIND(STRAFTER( "****" , "***" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "*" ))
+}

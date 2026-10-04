@@ -1,0 +1,6 @@
+# QT3 test case CastAs552 of test set prod-CastExpr, which tests the XPath expression
+#   xs:boolean("true") cast as xs:float
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#float> ( <http://www.w3.org/2001/XMLSchema#boolean> ( "true" ) ) AS ?result)
+  FILTER(( ?result = "1"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-concatnint2args-3 of test set fn-concat, which tests the XPath expression
+#   fn:concat(xs:negativeInteger("-1"),xs:negativeInteger("-999999999999999999"))
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "-1"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) , <http://www.w3.org/2001/XMLSchema#string> ( "-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-1-999999999999999999" ))
+}

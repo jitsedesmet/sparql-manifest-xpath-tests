@@ -1,0 +1,6 @@
+# QT3 test case xs-double-002 of test set xs-double, which tests the XPath expression
+#   1 div xs:double("-0") ne 1 div xs:double("0")
+ASK {
+  BIND(( ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> / <http://www.w3.org/2001/XMLSchema#double> ( "-0" ) ) != ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> / <http://www.w3.org/2001/XMLSchema#double> ( "0" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

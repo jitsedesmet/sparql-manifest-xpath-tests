@@ -1,0 +1,6 @@
+# QT3 test case K-GenCompEq-53 of test set prod-GeneralComp.eq, which tests the XPath expression
+#   false() = xs:string("false")
+ASK {
+  BIND(( "false"^^<http://www.w3.org/2001/XMLSchema#boolean> = <http://www.w3.org/2001/XMLSchema#string> ( "false" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

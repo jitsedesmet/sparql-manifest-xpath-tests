@@ -1,0 +1,6 @@
+# QT3 test case fn-booleannni1args-1 of test set fn-boolean, which tests the XPath expression
+#   fn:boolean(xs:nonNegativeInteger("0"))
+ASK {
+  BIND(!( ! "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

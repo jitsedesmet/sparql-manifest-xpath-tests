@@ -1,0 +1,6 @@
+# QT3 test case K-UpperCaseFunc-4 of test set fn-upper-case, which tests the XPath expression
+#   lower-case("ABc!D") eq "abc!d"
+ASK {
+  BIND(( LCASE( "ABc!D" ) = "abc!d" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

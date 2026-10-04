@@ -1,0 +1,6 @@
+# QT3 test case fn-matchesErr-4 of test set fn-matches, which tests the XPath expression
+#   fn:matches("#abc#1", "^((#)abc\1)$")
+ASK {
+  BIND(REGEX( "#abc#1" , "^((#)abc\\1)$" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

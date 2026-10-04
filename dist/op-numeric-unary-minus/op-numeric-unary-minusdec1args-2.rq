@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-unary-minusdec1args-2 of test set op-numeric-unary-minus, which tests the XPath expression
+#   -(xs:decimal("617375191608514839"))
+ASK {
+  BIND(- <http://www.w3.org/2001/XMLSchema#decimal> ( "617375191608514839" ) AS ?result)
+  FILTER(( ?result = - "617375191608514839"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

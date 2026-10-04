@@ -1,0 +1,6 @@
+# QT3 test case K2-MatchesFunc-7 of test set fn-matches, which tests the XPath expression
+#   fn:matches("hello world", "\p{ IsBasicLatin}+")
+ASK {
+  BIND(REGEX( "hello world" , "\\p{ IsBasicLatin}+" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

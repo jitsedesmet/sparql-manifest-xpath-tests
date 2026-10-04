@@ -1,0 +1,6 @@
+# QT3 test case K-DateTimeGT-4 of test set op-dateTime-greater-than, which tests the XPath expression
+#   xs:dateTime("2004-07-12T23:01:04.12") ge xs:dateTime("2004-07-12T23:01:04.12")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2004-07-12T23:01:04.12" ) >= <http://www.w3.org/2001/XMLSchema#dateTime> ( "2004-07-12T23:01:04.12" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

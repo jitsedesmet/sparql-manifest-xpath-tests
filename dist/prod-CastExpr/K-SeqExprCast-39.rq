@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-39 of test set prod-CastExpr, which tests the XPath expression
+#   ('1' cast as xs:boolean) cast as xs:string eq 'true'
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#boolean> ( "1" ) ) = "true" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

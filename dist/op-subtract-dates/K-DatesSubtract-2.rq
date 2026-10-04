@@ -1,0 +1,6 @@
+# QT3 test case K-DatesSubtract-2 of test set op-subtract-dates, which tests the XPath expression
+#   xs:date("1999-07-19") - xs:date("1999-07-19") eq xs:dayTimeDuration("PT0S")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#date> ( "1999-07-19" ) - <http://www.w3.org/2001/XMLSchema#date> ( "1999-07-19" ) ) = <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "PT0S" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

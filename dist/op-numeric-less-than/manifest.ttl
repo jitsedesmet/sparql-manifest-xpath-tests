@@ -1,0 +1,1224 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-numeric-less-than" ;
+  mf:entries (
+    <#op-numeric-less-thanint2args-1>
+    <#op-numeric-less-thanint2args-2>
+    <#op-numeric-less-thanint2args-3>
+    <#op-numeric-less-thanint2args-4>
+    <#op-numeric-less-thanint2args-5>
+    <#op-numeric-less-thanint2args-6>
+    <#op-numeric-less-thanint2args-7>
+    <#op-numeric-less-thanint2args-8>
+    <#op-numeric-less-thanint2args-9>
+    <#op-numeric-less-thanint2args-10>
+    <#op-numeric-less-thanintg2args-1>
+    <#op-numeric-less-thanintg2args-2>
+    <#op-numeric-less-thanintg2args-3>
+    <#op-numeric-less-thanintg2args-4>
+    <#op-numeric-less-thanintg2args-5>
+    <#op-numeric-less-thanintg2args-6>
+    <#op-numeric-less-thanintg2args-7>
+    <#op-numeric-less-thanintg2args-8>
+    <#op-numeric-less-thanintg2args-9>
+    <#op-numeric-less-thanintg2args-10>
+    <#op-numeric-less-thandec2args-1>
+    <#op-numeric-less-thandec2args-2>
+    <#op-numeric-less-thandec2args-3>
+    <#op-numeric-less-thandec2args-4>
+    <#op-numeric-less-thandec2args-5>
+    <#op-numeric-less-thandec2args-6>
+    <#op-numeric-less-thandec2args-7>
+    <#op-numeric-less-thandec2args-8>
+    <#op-numeric-less-thandec2args-9>
+    <#op-numeric-less-thandec2args-10>
+    <#op-numeric-less-thandbl2args-1>
+    <#op-numeric-less-thandbl2args-2>
+    <#op-numeric-less-thandbl2args-3>
+    <#op-numeric-less-thandbl2args-4>
+    <#op-numeric-less-thandbl2args-5>
+    <#op-numeric-less-thandbl2args-6>
+    <#op-numeric-less-thandbl2args-7>
+    <#op-numeric-less-thandbl2args-8>
+    <#op-numeric-less-thandbl2args-9>
+    <#op-numeric-less-thandbl2args-10>
+    <#op-numeric-less-thanflt2args-1>
+    <#op-numeric-less-thanflt2args-2>
+    <#op-numeric-less-thanflt2args-3>
+    <#op-numeric-less-thanflt2args-4>
+    <#op-numeric-less-thanflt2args-5>
+    <#op-numeric-less-thanflt2args-6>
+    <#op-numeric-less-thanflt2args-7>
+    <#op-numeric-less-thanflt2args-8>
+    <#op-numeric-less-thanflt2args-9>
+    <#op-numeric-less-thanflt2args-10>
+    <#op-numeric-less-thanlng2args-1>
+    <#op-numeric-less-thanlng2args-2>
+    <#op-numeric-less-thanlng2args-3>
+    <#op-numeric-less-thanlng2args-4>
+    <#op-numeric-less-thanlng2args-5>
+    <#op-numeric-less-thanlng2args-6>
+    <#op-numeric-less-thanlng2args-7>
+    <#op-numeric-less-thanlng2args-8>
+    <#op-numeric-less-thanlng2args-9>
+    <#op-numeric-less-thanlng2args-10>
+    <#op-numeric-less-thanusht2args-1>
+    <#op-numeric-less-thanusht2args-2>
+    <#op-numeric-less-thanusht2args-3>
+    <#op-numeric-less-thanusht2args-4>
+    <#op-numeric-less-thanusht2args-5>
+    <#op-numeric-less-thanusht2args-6>
+    <#op-numeric-less-thanusht2args-7>
+    <#op-numeric-less-thanusht2args-8>
+    <#op-numeric-less-thanusht2args-9>
+    <#op-numeric-less-thanusht2args-10>
+    <#op-numeric-less-thannint2args-1>
+    <#op-numeric-less-thannint2args-2>
+    <#op-numeric-less-thannint2args-3>
+    <#op-numeric-less-thannint2args-4>
+    <#op-numeric-less-thannint2args-5>
+    <#op-numeric-less-thannint2args-6>
+    <#op-numeric-less-thannint2args-7>
+    <#op-numeric-less-thannint2args-8>
+    <#op-numeric-less-thannint2args-9>
+    <#op-numeric-less-thannint2args-10>
+    <#op-numeric-less-thanpint2args-1>
+    <#op-numeric-less-thanpint2args-2>
+    <#op-numeric-less-thanpint2args-3>
+    <#op-numeric-less-thanpint2args-4>
+    <#op-numeric-less-thanpint2args-5>
+    <#op-numeric-less-thanpint2args-6>
+    <#op-numeric-less-thanpint2args-7>
+    <#op-numeric-less-thanpint2args-8>
+    <#op-numeric-less-thanpint2args-9>
+    <#op-numeric-less-thanpint2args-10>
+    <#op-numeric-less-thanulng2args-1>
+    <#op-numeric-less-thanulng2args-2>
+    <#op-numeric-less-thanulng2args-3>
+    <#op-numeric-less-thanulng2args-4>
+    <#op-numeric-less-thanulng2args-5>
+    <#op-numeric-less-thanulng2args-6>
+    <#op-numeric-less-thanulng2args-7>
+    <#op-numeric-less-thanulng2args-8>
+    <#op-numeric-less-thanulng2args-9>
+    <#op-numeric-less-thanulng2args-10>
+    <#op-numeric-less-thannpi2args-1>
+    <#op-numeric-less-thannpi2args-2>
+    <#op-numeric-less-thannpi2args-3>
+    <#op-numeric-less-thannpi2args-4>
+    <#op-numeric-less-thannpi2args-5>
+    <#op-numeric-less-thannpi2args-6>
+    <#op-numeric-less-thannpi2args-7>
+    <#op-numeric-less-thannpi2args-8>
+    <#op-numeric-less-thannpi2args-9>
+    <#op-numeric-less-thannpi2args-10>
+    <#op-numeric-less-thannni2args-1>
+    <#op-numeric-less-thannni2args-2>
+    <#op-numeric-less-thannni2args-3>
+    <#op-numeric-less-thannni2args-4>
+    <#op-numeric-less-thannni2args-5>
+    <#op-numeric-less-thannni2args-6>
+    <#op-numeric-less-thannni2args-7>
+    <#op-numeric-less-thannni2args-8>
+    <#op-numeric-less-thannni2args-9>
+    <#op-numeric-less-thannni2args-10>
+    <#op-numeric-less-thansht2args-1>
+    <#op-numeric-less-thansht2args-2>
+    <#op-numeric-less-thansht2args-3>
+    <#op-numeric-less-thansht2args-4>
+    <#op-numeric-less-thansht2args-5>
+    <#op-numeric-less-thansht2args-6>
+    <#op-numeric-less-thansht2args-7>
+    <#op-numeric-less-thansht2args-8>
+    <#op-numeric-less-thansht2args-9>
+    <#op-numeric-less-thansht2args-10>
+    <#K-NumericLT-1>
+    <#K-NumericLT-2>
+    <#K-NumericLT-3>
+    <#K-NumericLT-4>
+    <#K-NumericLT-5>
+    <#K-NumericLT-6>
+    <#K-NumericLT-7>
+    <#K-NumericLT-8>
+    <#K-NumericLT-9>
+    <#K-NumericLT-10>
+    <#K-NumericLT-11>
+    <#K-NumericLT-12>
+    <#K-NumericLT-13>
+    <#K-NumericLT-14>
+    <#K-NumericLT-15>
+    <#K-NumericLT-16>
+    <#K-NumericLT-17>
+    <#K-NumericLT-18>
+    <#K-NumericLT-19>
+    <#K-NumericLT-20>
+    <#K2-NumericLT-1>
+    <#K2-NumericLT-2>
+  ) .
+
+<#op-numeric-less-thanint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(lower bound)                            \n$arg2 = xs:int(lower bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(mid range)                              \n$arg2 = xs:int(lower bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(upper bound)                            \n$arg2 = xs:int(lower bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(lower bound)                            \n$arg2 = xs:int(mid range)                              \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(lower bound)                            \n$arg2 = xs:int(upper bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(lower bound)                            \n$arg2 = xs:int(lower bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(mid range)                              \n$arg2 = xs:int(lower bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(upper bound)                            \n$arg2 = xs:int(lower bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(lower bound)                            \n$arg2 = xs:int(mid range)                              \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanint2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanint2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanint2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:int(lower bound)                            \n$arg2 = xs:int(upper bound)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanint2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-1                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(lower bound)                        \n$arg2 = xs:integer(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-2                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(mid range)                          \n$arg2 = xs:integer(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-3                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(upper bound)                        \n$arg2 = xs:integer(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-4                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(lower bound)                        \n$arg2 = xs:integer(mid range)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-5                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(lower bound)                        \n$arg2 = xs:integer(upper bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-6                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(lower bound)                        \n$arg2 = xs:integer(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-7                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(mid range)                          \n$arg2 = xs:integer(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-8                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(upper bound)                        \n$arg2 = xs:integer(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-9                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(lower bound)                        \n$arg2 = xs:integer(mid range)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanintg2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanintg2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanintg2args-10                  \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:integer(lower bound)                        \n$arg2 = xs:integer(upper bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanintg2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(lower bound)                        \n$arg2 = xs:decimal(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(mid range)                          \n$arg2 = xs:decimal(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(upper bound)                        \n$arg2 = xs:decimal(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(lower bound)                        \n$arg2 = xs:decimal(mid range)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(lower bound)                        \n$arg2 = xs:decimal(upper bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(lower bound)                        \n$arg2 = xs:decimal(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(mid range)                          \n$arg2 = xs:decimal(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(upper bound)                        \n$arg2 = xs:decimal(lower bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(lower bound)                        \n$arg2 = xs:decimal(mid range)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandec2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandec2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandec2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:decimal(lower bound)                        \n$arg2 = xs:decimal(upper bound)                        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandec2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(lower bound)                         \n$arg2 = xs:double(lower bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(mid range)                           \n$arg2 = xs:double(lower bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(upper bound)                         \n$arg2 = xs:double(lower bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(lower bound)                         \n$arg2 = xs:double(mid range)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(lower bound)                         \n$arg2 = xs:double(upper bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(lower bound)                         \n$arg2 = xs:double(lower bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(mid range)                           \n$arg2 = xs:double(lower bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(upper bound)                         \n$arg2 = xs:double(lower bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(lower bound)                         \n$arg2 = xs:double(mid range)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thandbl2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thandbl2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thandbl2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:double(lower bound)                         \n$arg2 = xs:double(upper bound)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thandbl2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(lower bound)                          \n$arg2 = xs:float(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(mid range)                            \n$arg2 = xs:float(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(upper bound)                          \n$arg2 = xs:float(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(lower bound)                          \n$arg2 = xs:float(mid range)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(lower bound)                          \n$arg2 = xs:float(upper bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(lower bound)                          \n$arg2 = xs:float(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(mid range)                            \n$arg2 = xs:float(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(upper bound)                          \n$arg2 = xs:float(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(lower bound)                          \n$arg2 = xs:float(mid range)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanflt2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanflt2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanflt2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:float(lower bound)                          \n$arg2 = xs:float(upper bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanflt2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(lower bound)                           \n$arg2 = xs:long(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(mid range)                             \n$arg2 = xs:long(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(upper bound)                           \n$arg2 = xs:long(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(lower bound)                           \n$arg2 = xs:long(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(lower bound)                           \n$arg2 = xs:long(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(lower bound)                           \n$arg2 = xs:long(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(mid range)                             \n$arg2 = xs:long(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(upper bound)                           \n$arg2 = xs:long(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(lower bound)                           \n$arg2 = xs:long(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanlng2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanlng2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanlng2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:long(lower bound)                           \n$arg2 = xs:long(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanlng2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-1                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(lower bound)                  \n$arg2 = xs:unsignedShort(lower bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-2                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(mid range)                    \n$arg2 = xs:unsignedShort(lower bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-3                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(upper bound)                  \n$arg2 = xs:unsignedShort(lower bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-4                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(lower bound)                  \n$arg2 = xs:unsignedShort(mid range)                    \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-5                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(lower bound)                  \n$arg2 = xs:unsignedShort(upper bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-6                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(lower bound)                  \n$arg2 = xs:unsignedShort(lower bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-7                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(mid range)                    \n$arg2 = xs:unsignedShort(lower bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-8                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(upper bound)                  \n$arg2 = xs:unsignedShort(lower bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-9                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(lower bound)                  \n$arg2 = xs:unsignedShort(mid range)                    \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanusht2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanusht2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanusht2args-10                  \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedShort(lower bound)                  \n$arg2 = xs:unsignedShort(upper bound)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanusht2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-1                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(lower bound)                \n$arg2 = xs:negativeInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-2                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(mid range)                  \n$arg2 = xs:negativeInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-3                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(upper bound)                \n$arg2 = xs:negativeInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-4                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(lower bound)                \n$arg2 = xs:negativeInteger(mid range)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-5                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(lower bound)                \n$arg2 = xs:negativeInteger(upper bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-6                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(lower bound)                \n$arg2 = xs:negativeInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-7                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(mid range)                  \n$arg2 = xs:negativeInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-8                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(upper bound)                \n$arg2 = xs:negativeInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-9                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(lower bound)                \n$arg2 = xs:negativeInteger(mid range)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannint2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannint2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannint2args-10                  \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:negativeInteger(lower bound)                \n$arg2 = xs:negativeInteger(upper bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannint2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-1                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(lower bound)                \n$arg2 = xs:positiveInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-2                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(mid range)                  \n$arg2 = xs:positiveInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-3                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(upper bound)                \n$arg2 = xs:positiveInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-4                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(lower bound)                \n$arg2 = xs:positiveInteger(mid range)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-5                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(lower bound)                \n$arg2 = xs:positiveInteger(upper bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-6                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(lower bound)                \n$arg2 = xs:positiveInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-7                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(mid range)                  \n$arg2 = xs:positiveInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-8                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(upper bound)                \n$arg2 = xs:positiveInteger(lower bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-9                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(lower bound)                \n$arg2 = xs:positiveInteger(mid range)                  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanpint2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanpint2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanpint2args-10                  \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:positiveInteger(lower bound)                \n$arg2 = xs:positiveInteger(upper bound)                \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanpint2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-1                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(lower bound)                   \n$arg2 = xs:unsignedLong(lower bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-2                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(mid range)                     \n$arg2 = xs:unsignedLong(lower bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-3                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(upper bound)                   \n$arg2 = xs:unsignedLong(lower bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-4                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(lower bound)                   \n$arg2 = xs:unsignedLong(mid range)                     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-5                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(lower bound)                   \n$arg2 = xs:unsignedLong(upper bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-6                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(lower bound)                   \n$arg2 = xs:unsignedLong(lower bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-7                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(mid range)                     \n$arg2 = xs:unsignedLong(lower bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-8                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(upper bound)                   \n$arg2 = xs:unsignedLong(lower bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-9                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(lower bound)                   \n$arg2 = xs:unsignedLong(mid range)                     \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thanulng2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thanulng2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thanulng2args-10                  \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:unsignedLong(lower bound)                   \n$arg2 = xs:unsignedLong(upper bound)                   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thanulng2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(lower bound)             \n$arg2 = xs:nonPositiveInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(mid range)               \n$arg2 = xs:nonPositiveInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(upper bound)             \n$arg2 = xs:nonPositiveInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(lower bound)             \n$arg2 = xs:nonPositiveInteger(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(lower bound)             \n$arg2 = xs:nonPositiveInteger(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(lower bound)             \n$arg2 = xs:nonPositiveInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(mid range)               \n$arg2 = xs:nonPositiveInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(upper bound)             \n$arg2 = xs:nonPositiveInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(lower bound)             \n$arg2 = xs:nonPositiveInteger(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannpi2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannpi2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannpi2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonPositiveInteger(lower bound)             \n$arg2 = xs:nonPositiveInteger(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannpi2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(lower bound)             \n$arg2 = xs:nonNegativeInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(mid range)               \n$arg2 = xs:nonNegativeInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(upper bound)             \n$arg2 = xs:nonNegativeInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(lower bound)             \n$arg2 = xs:nonNegativeInteger(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(lower bound)             \n$arg2 = xs:nonNegativeInteger(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(lower bound)             \n$arg2 = xs:nonNegativeInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(mid range)               \n$arg2 = xs:nonNegativeInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(upper bound)             \n$arg2 = xs:nonNegativeInteger(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(lower bound)             \n$arg2 = xs:nonNegativeInteger(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thannni2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thannni2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thannni2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:nonNegativeInteger(lower bound)             \n$arg2 = xs:nonNegativeInteger(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thannni2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(lower bound)                          \n$arg2 = xs:short(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(mid range)                            \n$arg2 = xs:short(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(upper bound)                          \n$arg2 = xs:short(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(lower bound)                          \n$arg2 = xs:short(mid range)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(lower bound)                          \n$arg2 = xs:short(upper bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(lower bound)                          \n$arg2 = xs:short(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(mid range)                            \n$arg2 = xs:short(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(upper bound)                          \n$arg2 = xs:short(lower bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(lower bound)                          \n$arg2 = xs:short(mid range)                            \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-less-thansht2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-less-thansht2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-numeric-less-thansht2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:16 GMT-05:00 2004                \nPurpose: Evaluates The \"op:numeric-less-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:short(lower bound)                          \n$arg2 = xs:short(upper bound)                          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <op-numeric-less-thansht2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-1> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-1" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-1                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:integer(-1) lt xs:integer(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-2> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-2" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-2                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:integer(-1) le xs:integer(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-3> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-3" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-3                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:decimal(-1) lt xs:decimal(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-4> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-4" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-4                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:decimal(-1) le xs:decimal(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-5> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-5" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-5                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `0 lt xs:double(\"INF\")`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-6> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-6" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-6                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:double(\"-INF\") lt 0`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-7> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-7" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-7                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:double(-1) lt xs:double(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-8> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-8" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-8                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:double(-1) le xs:double(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-9> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-9" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-9                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `0 lt xs:float(\"INF\")`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-10> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-10" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-10                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:float(\"-INF\") lt 0`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-11> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-11" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-11                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:float(-1) lt xs:float(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-12> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-12" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-12                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `xs:float(-1) le xs:float(1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-13> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-13" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-13                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(xs:double(\"NaN\") lt 1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-14> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-14" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-14                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(xs:float(\"NaN\") lt 1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-15> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-15" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-15                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(xs:double(\"NaN\") le 1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-16> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-16" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-16                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(xs:float(\"NaN\") le 1)`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-17> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-17" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-17                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(1 lt xs:double(\"NaN\"))`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-18> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-18" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-18                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(1 lt xs:float(\"NaN\"))`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-19> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-19" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-19                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(1 le xs:double(\"NaN\"))`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericLT-20> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericLT-20" ;
+  rdfs:comment "*******************************************************\n Test: K-NumericLT-20                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: A test whose essence is: `not(1 le xs:float(\"NaN\"))`. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K-NumericLT-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericLT-1> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericLT-1" ;
+  rdfs:comment "*******************************************************\n Test: K2-NumericLT-1                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Compare two xs:unsignedLong values.          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K2-NumericLT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericLT-2> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericLT-2" ;
+  rdfs:comment "*******************************************************\n Test: K2-NumericLT-2                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Compare two xs:unsignedLong values.          \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml> ;
+  mf:action [ qt:query <K2-NumericLT-2.rq> ] ;
+  mf:result <../true.srj> .

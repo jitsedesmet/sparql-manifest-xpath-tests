@@ -1,0 +1,6 @@
+# QT3 test case op-dayTimeDuration-greater-than-5 of test set op-dayTimeDuration-greater-than, which tests the XPath expression
+#   fn:not(xs:dayTimeDuration("P08DT10H") gt xs:dayTimeDuration("P9DT09H"))
+ASK {
+  BIND(! ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P08DT10H" ) > <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P9DT09H" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

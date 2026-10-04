@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-addnint2args-3 of test set op-numeric-add, which tests the XPath expression
+#   xs:negativeInteger("-702985924000903206") + xs:negativeInteger("-297014075999096793")
+ASK {
+  BIND(( "-702985924000903206"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> + "-297014075999096793"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) AS ?result)
+  FILTER(( ?result = - "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

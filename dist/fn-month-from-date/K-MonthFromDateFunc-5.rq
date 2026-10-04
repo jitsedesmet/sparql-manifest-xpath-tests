@@ -1,0 +1,6 @@
+# QT3 test case K-MonthFromDateFunc-5 of test set fn-month-from-date, which tests the XPath expression
+#   month-from-date(xs:date("2000-02-03")) eq 2
+ASK {
+  BIND(( MONTH( <http://www.w3.org/2001/XMLSchema#date> ( "2000-02-03" ) ) = "2"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case casthc7 of test set prod-CastExpr, which tests the XPath expression
+#   "A String" cast as xs:string
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( "A String" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "A String" ))
+}

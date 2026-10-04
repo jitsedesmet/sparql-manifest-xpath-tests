@@ -1,0 +1,6 @@
+# QT3 test case fn-boolean-mixed-args-045 of test set fn-boolean, which tests the XPath expression
+#   fn:boolean(xs:int('-2147483648'))
+ASK {
+  BIND(!( ! "-2147483648"^^<http://www.w3.org/2001/XMLSchema#int> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

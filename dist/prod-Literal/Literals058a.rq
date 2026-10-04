@@ -1,0 +1,6 @@
+# QT3 test case Literals058a of test set prod-Literal, which tests the XPath expression
+#   "&apos;"
+ASK {
+  BIND("&apos;" AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "&apos;" ))
+}

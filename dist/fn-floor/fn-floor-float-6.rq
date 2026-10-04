@@ -1,0 +1,6 @@
+# QT3 test case fn-floor-float-6 of test set fn-floor, which tests the XPath expression
+#   floor(xs:float(-12345678.567890e0))
+ASK {
+  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#float> ( - "12345678.567890e0"^^<http://www.w3.org/2001/XMLSchema#double> ) ) AS ?result)
+  FILTER(( ( ?result = - "12345679e0"^^<http://www.w3.org/2001/XMLSchema#double> ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#float> ) ) ))
+}

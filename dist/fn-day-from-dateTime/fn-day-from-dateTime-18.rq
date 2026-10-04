@@ -1,0 +1,6 @@
+# QT3 test case fn-day-from-dateTime-18 of test set fn-day-from-dateTime, which tests the XPath expression
+#   fn:day-from-dateTime(xs:dateTime("1971-01-03T10:00:00Z")) ge fn:day-from-dateTime(xs:dateTime("1970-01-03T10:00:00Z"))
+ASK {
+  BIND(( DAY( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1971-01-03T10:00:00Z" ) ) >= DAY( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-03T10:00:00Z" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

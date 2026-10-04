@@ -1,0 +1,6 @@
+# QT3 test case op-add-yearMonthDuration-to-dateTime-14 of test set op-add-yearMonthDuration-to-dateTime, which tests the XPath expression
+#   (xs:dateTime("1979-12-12T09:09:09Z") + xs:yearMonthDuration("P08Y08M")) ne xs:dateTime("1979-12-12T09:09:09Z")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1979-12-12T09:09:09Z" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P08Y08M" ) ) != <http://www.w3.org/2001/XMLSchema#dateTime> ( "1979-12-12T09:09:09Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

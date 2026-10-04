@@ -1,0 +1,6 @@
+# QT3 test case fn-year-from-dateTimeNew-15 of test set fn-year-from-dateTime, which tests the XPath expression
+#   -fn:year-from-dateTime(xs:dateTime("1970-01-01T10:00:00Z"))
+ASK {
+  BIND(- YEAR( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T10:00:00Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-1970" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-addulng2args-5 of test set op-numeric-add, which tests the XPath expression
+#   xs:unsignedLong("0") + xs:unsignedLong("184467440737095516")
+ASK {
+  BIND(( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> + "184467440737095516"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
+  FILTER(( ?result = "184467440737095516"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

@@ -1,0 +1,48 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set prod-GeneralComp.gt" ;
+  mf:entries (
+    <#generalexpression408>
+    <#generalexpression417>
+    <#generalexpression418>
+    <#K-GenCompGT-10>
+    <#K-GenCompGT-11>
+  ) .
+
+<#generalexpression408> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression408" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Atomic Value operator = > operand2 = Sequence of single atomic value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.gt.xml> ;
+  mf:action [ qt:query <generalexpression408.rq> ] ;
+  mf:result <../true.srj> .
+
+<#generalexpression417> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression417" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = > operand2 = Atomic Value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.gt.xml> ;
+  mf:action [ qt:query <generalexpression417.rq> ] ;
+  mf:result <../true.srj> .
+
+<#generalexpression418> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression418" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = > operand2 = Sequence of single atomic value" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.gt.xml> ;
+  mf:action [ qt:query <generalexpression418.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompGT-10> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompGT-10" ;
+  rdfs:comment "General comparison where the operands are various various sequence of xs:integers." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.gt.xml> ;
+  mf:action [ qt:query <K-GenCompGT-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompGT-11> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompGT-11" ;
+  rdfs:comment "General comparison where the operands are various various sequence of xs:integers." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.gt.xml> ;
+  mf:action [ qt:query <K-GenCompGT-11.rq> ] ;
+  mf:result <../true.srj> .

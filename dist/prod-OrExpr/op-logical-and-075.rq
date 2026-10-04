@@ -1,0 +1,6 @@
+# QT3 test case op-logical-and-075 of test set prod-OrExpr, which tests the XPath expression
+#   xs:integer(99999999999999999) and xs:integer(-99999999999999999)
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#integer> ( "99999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ) && <http://www.w3.org/2001/XMLSchema#integer> ( - "99999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

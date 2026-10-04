@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-unary-plussht1args-3 of test set op-numeric-unary-plus, which tests the XPath expression
+#   +(xs:short("32767"))
+ASK {
+  BIND(+ "32767"^^<http://www.w3.org/2001/XMLSchema#short> AS ?result)
+  FILTER(( ?result = "32767"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

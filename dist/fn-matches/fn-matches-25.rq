@@ -1,0 +1,6 @@
+# QT3 test case fn-matches-25 of test set fn-matches, which tests the XPath expression
+#   fn:matches("abracadabra", "**%%")
+ASK {
+  BIND(REGEX( "abracadabra" , "**%%" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

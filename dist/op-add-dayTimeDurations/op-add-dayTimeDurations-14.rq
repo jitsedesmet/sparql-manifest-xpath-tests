@@ -1,0 +1,6 @@
+# QT3 test case op-add-dayTimeDurations-14 of test set op-add-dayTimeDurations, which tests the XPath expression
+#   (xs:dayTimeDuration("P21DT08H12M") + xs:dayTimeDuration("P08DT08H05M")) ne xs:dayTimeDuration("P08DT08H05M")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P21DT08H12M" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P08DT08H05M" ) ) != <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P08DT08H05M" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-StartsWithFunc-7 of test set fn-starts-with, which tests the XPath expression
+#   starts-with("tattoo", "tat")
+ASK {
+  BIND(STRSTARTS( "tattoo" , "tat" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

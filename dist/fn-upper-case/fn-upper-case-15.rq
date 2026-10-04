@@ -1,0 +1,6 @@
+# QT3 test case fn-upper-case-15 of test set fn-upper-case, which tests the XPath expression
+#   fn:upper-case("%$#@!")
+ASK {
+  BIND(UCASE( "%$#@!" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "%$#@!" ))
+}

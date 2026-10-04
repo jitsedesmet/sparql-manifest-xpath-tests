@@ -1,0 +1,6 @@
+# QT3 test case op-logical-or-054 of test set prod-OrExpr, which tests the XPath expression
+#   xs:double('NaN') or xs:double('NaN')
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#double> ( "NaN" ) || <http://www.w3.org/2001/XMLSchema#double> ( "NaN" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

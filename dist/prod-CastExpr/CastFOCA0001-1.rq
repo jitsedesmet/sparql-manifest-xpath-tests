@@ -1,0 +1,6 @@
+# QT3 test case CastFOCA0001-1 of test set prod-CastExpr, which tests the XPath expression
+#   xs:decimal(99e100)
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#decimal> ( "99e100"^^<http://www.w3.org/2001/XMLSchema#double> ) AS ?result)
+  FILTER(( ( ( ?result < "100e100"^^<http://www.w3.org/2001/XMLSchema#double> ) && ( ?result > "98e100"^^<http://www.w3.org/2001/XMLSchema#double> ) ) || ! BOUND( ?result ) ))
+}

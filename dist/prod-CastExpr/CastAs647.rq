@@ -1,0 +1,6 @@
+# QT3 test case CastAs647 of test set prod-CastExpr, which tests the XPath expression
+#   xs:string(2.123456789123456789) cast as xs:decimal
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#decimal> ( <http://www.w3.org/2001/XMLSchema#string> ( "2.123456789123456789"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) AS ?result)
+  FILTER(( ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "2.123456789123456789" ) || ! BOUND( ?result ) ))
+}

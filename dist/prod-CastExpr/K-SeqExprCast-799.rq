@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-799 of test set prod-CastExpr, which tests the XPath expression
+#   boolean(xs:dateTime("2002-10-10T12:00:00-05:00"))
+ASK {
+  BIND(!( ! <http://www.w3.org/2001/XMLSchema#dateTime> ( "2002-10-10T12:00:00-05:00" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

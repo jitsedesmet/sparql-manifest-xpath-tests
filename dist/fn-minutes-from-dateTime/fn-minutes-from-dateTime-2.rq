@@ -1,0 +1,6 @@
+# QT3 test case fn-minutes-from-dateTime-2 of test set fn-minutes-from-dateTime, which tests the XPath expression
+#   fn:minutes-from-dateTime(xs:dateTime("1999-05-31T13:30:00+05:30"))
+ASK {
+  BIND(MINUTES( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-05-31T13:30:00+05:30" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "30" ))
+}

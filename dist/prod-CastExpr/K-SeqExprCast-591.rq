@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-591 of test set prod-CastExpr, which tests the XPath expression
+#   boolean(xs:integer("6789"))
+ASK {
+  BIND(!( ! <http://www.w3.org/2001/XMLSchema#integer> ( "6789" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,224 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-subtract-times" ;
+  mf:entries (
+    <#op-subtract-times2args-1>
+    <#op-subtract-times2args-2>
+    <#op-subtract-times2args-3>
+    <#op-subtract-times2args-4>
+    <#op-subtract-times2args-5>
+    <#op-subtract-times-1>
+    <#op-subtract-times-2>
+    <#op-subtract-times-3>
+    <#op-subtract-times-4>
+    <#op-subtract-times-5>
+    <#op-subtract-times-7>
+    <#op-subtract-times-8>
+    <#op-subtract-times-9>
+    <#op-subtract-times-10>
+    <#op-subtract-times-11>
+    <#op-subtract-times-12>
+    <#op-subtract-times-13>
+    <#op-subtract-times-14>
+    <#op-subtract-times-15>
+    <#op-subtract-times-16>
+    <#K-TimeSubtract-1>
+    <#K-TimeSubtract-2>
+    <#K-TimeSubtract-3>
+    <#K-TimeSubtract-4>
+    <#K-TimeSubtract-5>
+    <#K-TimeSubtract-6>
+    <#K-TimeSubtract-7>
+  ) .
+
+<#op-subtract-times2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times2args-1                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-times\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times2args-2                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-times\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times2args-3                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-times\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times2args-4                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-times\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times2args-5                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-times\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-1> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-1" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-1                              \nWritten By: Carmelo Montanez                           \nDate: June 26, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function       \nAs per example 1 (for this function)of the F&O specs   \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-2> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-2" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-2                              \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function       \nAs per example 2 (for this function) of the F&O  specs \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-3> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-3" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-3                              \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function as    \nper example 3 (for this function) from the F&O specs.  \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-4> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-4" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-4                              \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function that  \nreturn true and used together with fn:not.             \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-5> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-5" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-5                              \nWritten By: Carmelo Montanez                           \nDate: June 27 2005                                     \nPurpose: Evaluates The \"subtract-times\" function that  \nis used as an argument to the fn:boolean function.     \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-7> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-7" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-7                              \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \nas an argument to the \"fn:string\" function).           \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-8> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-8" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-8                              \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function that  \nreturns a negative value.                              \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-9> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-9" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-9                              \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \ntogether with and \"and\" expression.                    \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-10> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-10" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-10                             \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \ntogether with an \"or\" expression.                      \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-11> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-11" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-11                             \nWritten By: Carmelo Montanez                           \nDate: June 27, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \ntogether with a \"div\" expression.                      \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-12> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-12" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-12                             \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-times\" operators used \nwith a boolean expression and the \"fn:true\" function.   \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-13> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-13" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-13                             \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \ntogether with the numeric-equal- operator \"eq\".        \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-14> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-14" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-14                             \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \ntogether with the numeric-equal operator \"ne\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-15> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-15" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-15                             \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \ntogether with the numeric-equal operator \"le\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-times-16> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-times-16" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-times-16                             \nWritten By: Carmelo Montanez                           \nDate: June 28, 2005                                    \nPurpose: Evaluates The \"subtract-times\" function used  \ntogether with the numeric-equal operator \"ge\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <op-subtract-times-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-1> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-1" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-1                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple testing involving operator '-' between xs:time and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-2> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-2" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-2                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple testing involving operator '-' between xs:time and xs:time, that evaluates to zero. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-3> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-3" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-3                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:yearMonthDuration and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-4> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-4" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-4                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:yearMonthDuration and xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-5> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-5" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-5                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:time and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-6> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-6" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-6                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:time and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-7> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-7" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-7                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:time and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-7.rq> ] ;
+  mf:result <../true.srj> .

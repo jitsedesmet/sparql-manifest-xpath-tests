@@ -1,0 +1,6 @@
+# QT3 test case K-MinutesFromTimeFunc-5 of test set fn-minutes-from-time, which tests the XPath expression
+#   minutes-from-time(xs:time("23:11:12.43")) eq 11
+ASK {
+  BIND(( MINUTES( <http://www.w3.org/2001/XMLSchema#time> ( "23:11:12.43" ) ) = "11"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

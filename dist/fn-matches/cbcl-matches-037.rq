@@ -1,0 +1,6 @@
+# QT3 test case cbcl-matches-037 of test set fn-matches, which tests the XPath expression
+#   fn:matches('&#x10000;', '&#x10000;')
+ASK {
+  BIND(REGEX( "&#x10000;" , "&#x10000;" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

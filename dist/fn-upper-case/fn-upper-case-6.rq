@@ -1,0 +1,6 @@
+# QT3 test case fn-upper-case-6 of test set fn-upper-case, which tests the XPath expression
+#   fn:upper-case("abcde")
+ASK {
+  BIND(UCASE( "abcde" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "ABCDE" ))
+}

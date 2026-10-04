@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-241 of test set prod-CastExpr, which tests the XPath expression
+#   xs:decimal("NaN")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#decimal> ( "NaN" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

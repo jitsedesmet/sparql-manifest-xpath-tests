@@ -1,0 +1,6 @@
+# QT3 test case fn-matches-51 of test set fn-matches, which tests the XPath expression
+#   fn:matches("ab()cd()ef()gh", "^(ab)([()]*)(cd)([)(]*)ef\4gh$")
+ASK {
+  BIND(REGEX( "ab()cd()ef()gh" , "^(ab)([()]*)(cd)([)(]*)ef\\4gh$" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

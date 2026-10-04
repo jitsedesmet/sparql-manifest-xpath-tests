@@ -1,0 +1,6 @@
+# QT3 test case op-add-yearMonthDuration-to-dateTime-12 of test set op-add-yearMonthDuration-to-dateTime, which tests the XPath expression
+#   fn:string((xs:dateTime("1980-03-02T02:02:02Z") + xs:yearMonthDuration("P05Y05M"))) and (fn:true())
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1980-03-02T02:02:02Z" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P05Y05M" ) ) ) && "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

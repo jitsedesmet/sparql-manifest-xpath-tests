@@ -1,0 +1,6 @@
+# QT3 test case fn-substring-after-20 of test set fn-substring-after, which tests the XPath expression
+#   fn:substring-after("12345","1234")
+ASK {
+  BIND(STRAFTER( "12345" , "1234" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "5" ))
+}

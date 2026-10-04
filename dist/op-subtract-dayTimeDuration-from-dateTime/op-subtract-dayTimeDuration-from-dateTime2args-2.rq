@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-dayTimeDuration-from-dateTime2args-2 of test set op-subtract-dayTimeDuration-from-dateTime, which tests the XPath expression
+#   xs:dateTime("1996-04-07T01:40:52Z") - xs:dayTimeDuration("P0DT0H0M0S")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1996-04-07T01:40:52Z" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P0DT0H0M0S" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1996-04-07T01:40:52Z" ))
+}

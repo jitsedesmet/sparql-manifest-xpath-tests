@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-multiplydec2args-2 of test set op-numeric-multiply, which tests the XPath expression
+#   xs:decimal("617375191608514839") * xs:decimal("0")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#decimal> ( "617375191608514839" ) * <http://www.w3.org/2001/XMLSchema#decimal> ( "0" ) ) AS ?result)
+  FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

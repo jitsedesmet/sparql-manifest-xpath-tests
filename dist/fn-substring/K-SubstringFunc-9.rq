@@ -1,0 +1,6 @@
+# QT3 test case K-SubstringFunc-9 of test set fn-substring, which tests the XPath expression
+#   substring("metadata", 4, 3) eq "ada"
+ASK {
+  BIND(( SUBSTR( "metadata" , "4"^^<http://www.w3.org/2001/XMLSchema#integer> , "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) = "ada" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

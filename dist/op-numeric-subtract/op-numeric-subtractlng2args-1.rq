@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-subtractlng2args-1 of test set op-numeric-subtract, which tests the XPath expression
+#   xs:long("-92233720368547758") - xs:long("-92233720368547758")
+ASK {
+  BIND(( "-92233720368547758"^^<http://www.w3.org/2001/XMLSchema#long> - "-92233720368547758"^^<http://www.w3.org/2001/XMLSchema#long> ) AS ?result)
+  FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

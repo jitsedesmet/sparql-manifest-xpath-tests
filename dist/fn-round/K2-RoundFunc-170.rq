@@ -1,0 +1,6 @@
+# QT3 test case K2-RoundFunc-170 of test set fn-round, which tests the XPath expression
+#   fn:round(xs:double("-0.101"))
+ASK {
+  BIND(ROUND( <http://www.w3.org/2001/XMLSchema#double> ( "-0.101" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-0" ))
+}

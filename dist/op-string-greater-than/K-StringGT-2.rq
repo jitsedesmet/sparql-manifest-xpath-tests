@@ -1,0 +1,6 @@
+# QT3 test case K-StringGT-2 of test set op-string-greater-than, which tests the XPath expression
+#   not('abc' gt 'abc')
+ASK {
+  BIND(! ( "abc" > "abc" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

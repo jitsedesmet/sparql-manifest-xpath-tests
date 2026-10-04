@@ -1,0 +1,6 @@
+# QT3 test case CastAs186 of test set prod-CastExpr, which tests the XPath expression
+#   xs:float("5.4321E-100") cast as xs:date
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#date> ( <http://www.w3.org/2001/XMLSchema#float> ( "5.4321E-100" ) ) AS ?result)
+  FILTER(( ! BOUND( ?result ) || ! BOUND( ?result ) ))
+}

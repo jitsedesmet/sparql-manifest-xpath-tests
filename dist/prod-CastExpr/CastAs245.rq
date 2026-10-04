@@ -1,0 +1,6 @@
+# QT3 test case CastAs245 of test set prod-CastExpr, which tests the XPath expression
+#   xs:decimal("-1.1234") cast as xs:time
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#time> ( <http://www.w3.org/2001/XMLSchema#decimal> ( "-1.1234" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-yearMonthDuration-greater-than-8 of test set op-yearMonthDuration-greater-than, which tests the XPath expression
+#   (xs:yearMonthDuration("P10Y09M") ge xs:yearMonthDuration("P10Y01M")) and (xs:yearMonthDuration("P02Y04M") ge xs:yearMonthDuration("P09Y07M"))
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P10Y09M" ) >= <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P10Y01M" ) ) && ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P02Y04M" ) >= <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P09Y07M" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

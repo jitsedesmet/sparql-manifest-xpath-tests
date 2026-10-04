@@ -1,0 +1,6 @@
+# QT3 test case fn-roundusht1args-2 of test set fn-round, which tests the XPath expression
+#   fn:round(xs:unsignedShort("44633"))
+ASK {
+  BIND(ROUND( "44633"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) AS ?result)
+  FILTER(( ?result = "44633"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

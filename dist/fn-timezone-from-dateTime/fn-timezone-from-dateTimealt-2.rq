@@ -1,0 +1,6 @@
+# QT3 test case fn-timezone-from-dateTimealt-2 of test set fn-timezone-from-dateTime, which tests the XPath expression
+#   fn:timezone-from-dateTime(xs:dateTime("2000-06-12T13:20:00Z"))
+ASK {
+  BIND(TIMEZONE( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2000-06-12T13:20:00Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "PT0S" ))
+}

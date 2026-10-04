@@ -1,0 +1,6 @@
+# QT3 test case fn-absflt1args-3 of test set fn-abs, which tests the XPath expression
+#   fn:abs(xs:float("3.4028235E38"))
+ASK {
+  BIND(ABS( <http://www.w3.org/2001/XMLSchema#float> ( "3.4028235E38" ) ) AS ?result)
+  FILTER(( ( ?result = <http://www.w3.org/2001/XMLSchema#float> ( "3.4028235E38"^^<http://www.w3.org/2001/XMLSchema#double> ) ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#float> ) ) ))
+}

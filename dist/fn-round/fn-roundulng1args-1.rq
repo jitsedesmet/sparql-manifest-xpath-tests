@@ -1,0 +1,6 @@
+# QT3 test case fn-roundulng1args-1 of test set fn-round, which tests the XPath expression
+#   fn:round(xs:unsignedLong("0"))
+ASK {
+  BIND(ROUND( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
+  FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

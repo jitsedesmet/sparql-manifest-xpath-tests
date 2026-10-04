@@ -1,0 +1,6 @@
+# QT3 test case fn-concat-4 of test set fn-concat, which tests the XPath expression
+#   fn:concat('Ingratitude, ', 'thou ', 'marble-hearted', ' fiend!')
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "Ingratitude, " ) , <http://www.w3.org/2001/XMLSchema#string> ( "thou " ) , <http://www.w3.org/2001/XMLSchema#string> ( "marble-hearted" ) , <http://www.w3.org/2001/XMLSchema#string> ( " fiend!" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "Ingratitude, thou marble-hearted fiend!" ))
+}

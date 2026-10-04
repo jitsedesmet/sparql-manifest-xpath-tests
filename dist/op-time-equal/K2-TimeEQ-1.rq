@@ -1,0 +1,6 @@
+# QT3 test case K2-TimeEQ-1 of test set op-time-equal, which tests the XPath expression
+#   xs:time("01:01:01-03:00") ne xs:time("01:01:01+03:00")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "01:01:01-03:00" ) != <http://www.w3.org/2001/XMLSchema#time> ( "01:01:01+03:00" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

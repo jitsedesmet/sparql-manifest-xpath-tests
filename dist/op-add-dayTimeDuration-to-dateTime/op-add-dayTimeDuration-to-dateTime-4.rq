@@ -1,0 +1,6 @@
+# QT3 test case op-add-dayTimeDuration-to-dateTime-4 of test set op-add-dayTimeDuration-to-dateTime, which tests the XPath expression
+#   fn:not(fn:string(xs:dateTime("1998-09-12T13:23:23Z") + xs:dayTimeDuration("P02DT07H01M")))
+ASK {
+  BIND(! <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1998-09-12T13:23:23Z" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P02DT07H01M" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

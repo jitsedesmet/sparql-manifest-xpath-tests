@@ -1,0 +1,6 @@
+# QT3 test case fn-contains2args-5 of test set fn-contains, which tests the XPath expression
+#   fn:contains(xs:string("This is a characte"),xs:string("This is a characte"))
+ASK {
+  BIND(CONTAINS( <http://www.w3.org/2001/XMLSchema#string> ( "This is a characte" ) , <http://www.w3.org/2001/XMLSchema#string> ( "This is a characte" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

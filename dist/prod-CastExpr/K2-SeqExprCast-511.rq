@@ -1,0 +1,6 @@
+# QT3 test case K2-SeqExprCast-511 of test set prod-CastExpr, which tests the XPath expression
+#   xs:double("inf")
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#double> ( "inf" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

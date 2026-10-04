@@ -1,0 +1,6 @@
+# QT3 test case fn-boolean-mixed-args-007 of test set fn-boolean, which tests the XPath expression
+#   fn:boolean(xs:string('abc'))
+ASK {
+  BIND(!( ! <http://www.w3.org/2001/XMLSchema#string> ( "abc" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-replace-57 of test set fn-replace, which tests the XPath expression
+#   replace('987654321A', '^(9)(8)(7)(6)(5)(4)(3)(2)(1)((A*?)|(.+))$', '$9$11$12')
+ASK {
+  BIND(REPLACE( "987654321A" , "^(9)(8)(7)(6)(5)(4)(3)(2)(1)((A*?)|(.+))$" , "$9$11$12" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1A" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-NumericDivide-6 of test set op-numeric-divide, which tests the XPath expression
+#   xs:double(5) div xs:double(2) ne 2.6
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#double> ( "5"^^<http://www.w3.org/2001/XMLSchema#integer> ) / <http://www.w3.org/2001/XMLSchema#double> ( "2"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) != "2.6"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K2-RoundFunc-43 of test set fn-round, which tests the XPath expression
+#   fn:round(xs:float("0.00"))
+ASK {
+  BIND(ROUND( <http://www.w3.org/2001/XMLSchema#float> ( "0.00" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))
+}

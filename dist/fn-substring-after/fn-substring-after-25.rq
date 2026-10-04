@@ -1,0 +1,6 @@
+# QT3 test case fn-substring-after-25 of test set fn-substring-after, which tests the XPath expression
+#   substring-after("𐀁𐀂𐀃", "𐀂")
+ASK {
+  BIND(STRAFTER( "𐀁𐀂𐀃" , "𐀂" ) AS ?result)
+  FILTER(( ?result = "𐀃" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case value-comp-eq-string-8 of test set prod-ValueComp, which tests the XPath expression
+#   not("abc" eq concat("a", "bc"))
+ASK {
+  BIND(! ( "abc" = CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "a" ) , <http://www.w3.org/2001/XMLSchema#string> ( "bc" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

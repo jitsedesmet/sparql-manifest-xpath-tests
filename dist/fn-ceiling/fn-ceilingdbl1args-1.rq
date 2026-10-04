@@ -1,0 +1,6 @@
+# QT3 test case fn-ceilingdbl1args-1 of test set fn-ceiling, which tests the XPath expression
+#   fn:ceiling(xs:double("-1.7976931348623157E308"))
+ASK {
+  BIND(CEIL( <http://www.w3.org/2001/XMLSchema#double> ( "-1.7976931348623157E308" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-1.7976931348623157E308" ))
+}

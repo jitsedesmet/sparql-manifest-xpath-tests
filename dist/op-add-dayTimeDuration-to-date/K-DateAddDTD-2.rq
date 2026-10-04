@@ -1,0 +1,6 @@
+# QT3 test case K-DateAddDTD-2 of test set op-add-dayTimeDuration-to-date, which tests the XPath expression
+#   xs:dayTimeDuration("P23DT09H32M59S") + xs:date("1999-08-12") eq xs:date("1999-09-04")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P23DT09H32M59S" ) + <http://www.w3.org/2001/XMLSchema#date> ( "1999-08-12" ) ) = <http://www.w3.org/2001/XMLSchema#date> ( "1999-09-04" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

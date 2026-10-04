@@ -1,0 +1,6 @@
+# QT3 test case fn-upper-case-13 of test set fn-upper-case, which tests the XPath expression
+#   fn:concat(fn:upper-case("abcde"), fn:upper-case("fghi"))
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( UCASE( "abcde" ) ) , <http://www.w3.org/2001/XMLSchema#string> ( UCASE( "fghi" ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "ABCDEFGHI" ))
+}

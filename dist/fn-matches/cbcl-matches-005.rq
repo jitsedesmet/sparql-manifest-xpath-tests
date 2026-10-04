@@ -1,0 +1,6 @@
+# QT3 test case cbcl-matches-005 of test set fn-matches, which tests the XPath expression
+#   fn:matches('a', '[a--]')
+ASK {
+  BIND(REGEX( "a" , "[a--]" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

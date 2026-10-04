@@ -1,0 +1,6 @@
+# QT3 test case CastAs211 of test set prod-CastExpr, which tests the XPath expression
+#   xs:double("5.4321E-1001") cast as xs:decimal
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#decimal> ( <http://www.w3.org/2001/XMLSchema#double> ( "5.4321E-1001" ) ) AS ?result)
+  FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

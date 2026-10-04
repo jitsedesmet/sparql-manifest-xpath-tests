@@ -1,0 +1,6 @@
+# QT3 test case op-logical-or-001 of test set prod-OrExpr, which tests the XPath expression
+#   false() or false()
+ASK {
+  BIND(( "false"^^<http://www.w3.org/2001/XMLSchema#boolean> || "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

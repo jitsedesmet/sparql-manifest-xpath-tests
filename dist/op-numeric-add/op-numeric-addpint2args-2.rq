@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-addpint2args-2 of test set op-numeric-add, which tests the XPath expression
+#   xs:positiveInteger("52704602390610033") + xs:positiveInteger("1")
+ASK {
+  BIND(( "52704602390610033"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> + "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> ) AS ?result)
+  FILTER(( ?result = "52704602390610034"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

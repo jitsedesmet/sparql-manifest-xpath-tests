@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-times-1 of test set op-subtract-times, which tests the XPath expression
+#   xs:time("11:12:00Z") - xs:time("04:00:00Z")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "11:12:00Z" ) - <http://www.w3.org/2001/XMLSchema#time> ( "04:00:00Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "PT7H12M" ))
+}

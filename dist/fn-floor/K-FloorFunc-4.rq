@@ -1,0 +1,6 @@
+# QT3 test case K-FloorFunc-4 of test set fn-floor, which tests the XPath expression
+#   floor(10.5) eq 10
+ASK {
+  BIND(( FLOOR( "10.5"^^<http://www.w3.org/2001/XMLSchema#decimal> ) = "10"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-month-from-dateTime-7 of test set fn-month-from-dateTime, which tests the XPath expression
+#   fn:month-from-dateTime(xs:dateTime("0001-12-31T23:20:00Z"))
+ASK {
+  BIND(MONTH( <http://www.w3.org/2001/XMLSchema#dateTime> ( "0001-12-31T23:20:00Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "12" ))
+}

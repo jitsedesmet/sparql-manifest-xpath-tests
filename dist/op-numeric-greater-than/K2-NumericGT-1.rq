@@ -1,0 +1,6 @@
+# QT3 test case K2-NumericGT-1 of test set op-numeric-greater-than, which tests the XPath expression
+#   xs:unsignedLong("100") gt xs:unsignedLong("18446744073709551615")
+ASK {
+  BIND(( "100"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> > "18446744073709551615"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-equalnpi2args-10 of test set op-numeric-equal, which tests the XPath expression
+#   xs:nonPositiveInteger("-999999999999999999") ne xs:nonPositiveInteger("0")
+ASK {
+  BIND(( "-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> != "0"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

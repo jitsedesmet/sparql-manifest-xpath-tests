@@ -1,0 +1,6 @@
+# QT3 test case op-boolean-greater-than-2 of test set op-boolean-greater-than, which tests the XPath expression
+#   fn:not(xs:boolean("true")) le xs:boolean("true")
+ASK {
+  BIND(( ! <http://www.w3.org/2001/XMLSchema#boolean> ( "true" ) <= <http://www.w3.org/2001/XMLSchema#boolean> ( "true" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

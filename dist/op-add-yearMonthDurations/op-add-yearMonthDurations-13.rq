@@ -1,0 +1,6 @@
+# QT3 test case op-add-yearMonthDurations-13 of test set op-add-yearMonthDurations, which tests the XPath expression
+#   (xs:yearMonthDuration("P23Y11M") + xs:yearMonthDuration("P23Y11M")) eq xs:yearMonthDuration("P23Y11M")
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P23Y11M" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P23Y11M" ) ) = <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P23Y11M" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

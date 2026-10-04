@@ -1,0 +1,6 @@
+# QT3 test case fn-minutes-from-time-3 of test set fn-minutes-from-time, which tests the XPath expression
+#   fn:minutes-from-time(xs:time("01:23:00Z")) gt fn:minutes-from-time(xs:time("01:23:00Z"))
+ASK {
+  BIND(( MINUTES( <http://www.w3.org/2001/XMLSchema#time> ( "01:23:00Z" ) ) > MINUTES( <http://www.w3.org/2001/XMLSchema#time> ( "01:23:00Z" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

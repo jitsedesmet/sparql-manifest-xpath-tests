@@ -1,0 +1,6 @@
+# QT3 test case op-logical-or-020 of test set prod-OrExpr, which tests the XPath expression
+#   "a" or '0'
+ASK {
+  BIND(( "a" || "0" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

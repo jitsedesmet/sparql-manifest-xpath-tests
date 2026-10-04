@@ -1,0 +1,6 @@
+# QT3 test case fn-string-length-17 of test set fn-string-length, which tests the XPath expression
+#   fn:string-length("abc") and fn:string-length("abc")
+ASK {
+  BIND(( STRLEN( "abc" ) && STRLEN( "abc" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

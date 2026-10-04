@@ -1,0 +1,6 @@
+# QT3 test case K-DayTimeDurationLT-5 of test set op-dayTimeDuration-less-than, which tests the XPath expression
+#   xs:dayTimeDuration("P3DT08H34M12.143S") le xs:dayTimeDuration("P3DT08H34M12.143S")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3DT08H34M12.143S" ) <= <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3DT08H34M12.143S" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

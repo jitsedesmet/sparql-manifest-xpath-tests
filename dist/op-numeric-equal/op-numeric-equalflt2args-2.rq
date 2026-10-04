@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-equalflt2args-2 of test set op-numeric-equal, which tests the XPath expression
+#   xs:float("0") eq xs:float("-3.4028235E38")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#float> ( "0" ) = <http://www.w3.org/2001/XMLSchema#float> ( "-3.4028235E38" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

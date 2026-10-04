@@ -1,0 +1,6 @@
+# QT3 test case fn-stringnint1args-3 of test set fn-string, which tests the XPath expression
+#   fn:string(xs:negativeInteger("-1"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( "-1"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-1" ))
+}

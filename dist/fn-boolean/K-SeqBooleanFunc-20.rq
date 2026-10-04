@@ -1,0 +1,6 @@
+# QT3 test case K-SeqBooleanFunc-20 of test set fn-boolean, which tests the XPath expression
+#   boolean(1.1e1)
+ASK {
+  BIND(!( ! "1.1e1"^^<http://www.w3.org/2001/XMLSchema#double> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,672 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-concat" ;
+  mf:entries (
+    <#fn-concatint2args-1>
+    <#fn-concatint2args-2>
+    <#fn-concatint2args-3>
+    <#fn-concatint2args-4>
+    <#fn-concatint2args-5>
+    <#fn-concatintg2args-1>
+    <#fn-concatintg2args-2>
+    <#fn-concatintg2args-3>
+    <#fn-concatintg2args-4>
+    <#fn-concatintg2args-5>
+    <#fn-concatdec2args-1>
+    <#fn-concatdec2args-2>
+    <#fn-concatdec2args-3>
+    <#fn-concatdec2args-4>
+    <#fn-concatdec2args-5>
+    <#fn-concatdbl2args-1>
+    <#fn-concatdbl2args-2>
+    <#fn-concatdbl2args-3>
+    <#fn-concatdbl2args-4>
+    <#fn-concatdbl2args-5>
+    <#fn-concatflt2args-1>
+    <#fn-concatflt2args-2>
+    <#fn-concatflt2args-3>
+    <#fn-concatflt2args-4>
+    <#fn-concatflt2args-5>
+    <#fn-concatlng2args-1>
+    <#fn-concatlng2args-2>
+    <#fn-concatlng2args-3>
+    <#fn-concatlng2args-4>
+    <#fn-concatlng2args-5>
+    <#fn-concatusht2args-1>
+    <#fn-concatusht2args-2>
+    <#fn-concatusht2args-3>
+    <#fn-concatusht2args-4>
+    <#fn-concatusht2args-5>
+    <#fn-concatnint2args-1>
+    <#fn-concatnint2args-2>
+    <#fn-concatnint2args-3>
+    <#fn-concatnint2args-4>
+    <#fn-concatnint2args-5>
+    <#fn-concatpint2args-1>
+    <#fn-concatpint2args-2>
+    <#fn-concatpint2args-3>
+    <#fn-concatpint2args-4>
+    <#fn-concatpint2args-5>
+    <#fn-concatulng2args-1>
+    <#fn-concatulng2args-2>
+    <#fn-concatulng2args-3>
+    <#fn-concatulng2args-4>
+    <#fn-concatulng2args-5>
+    <#fn-concatnpi2args-1>
+    <#fn-concatnpi2args-2>
+    <#fn-concatnpi2args-3>
+    <#fn-concatnpi2args-4>
+    <#fn-concatnpi2args-5>
+    <#fn-concatnni2args-1>
+    <#fn-concatnni2args-2>
+    <#fn-concatnni2args-3>
+    <#fn-concatnni2args-4>
+    <#fn-concatnni2args-5>
+    <#fn-concatsht2args-1>
+    <#fn-concatsht2args-2>
+    <#fn-concatsht2args-3>
+    <#fn-concatsht2args-4>
+    <#fn-concatsht2args-5>
+    <#fn-concat-1>
+    <#fn-concat-4>
+    <#fn-concat-5>
+    <#fn-concat-6>
+    <#fn-concat-7>
+    <#fn-concat-9>
+    <#fn-concat-10>
+    <#fn-concat-11>
+    <#fn-concat-12>
+    <#fn-concat-13>
+    <#fn-concat-14>
+    <#fn-concat-15>
+    <#fn-concat-16>
+    <#fn-concat-17>
+    <#K-ConcatFunc-3>
+    <#K-ConcatFunc-8>
+    <#K-ConcatFunc-9>
+    <#cbcl-concat-001>
+  ) .
+
+<#fn-concatint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatint2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatint2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:int(mid range) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatint2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:int(upper bound) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatint2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatint2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatintg2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatintg2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatintg2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatintg2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatintg2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:integer(mid range) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatintg2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatintg2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatintg2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:integer(upper bound) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatintg2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatintg2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatintg2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatintg2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatintg2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatintg2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatintg2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdec2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdec2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdec2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdec2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdec2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:decimal(mid range) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdec2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdec2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdec2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:decimal(upper bound) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdec2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdec2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdec2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdec2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdec2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdec2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdec2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdbl2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdbl2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdbl2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdbl2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdbl2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:double(mid range) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdbl2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdbl2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdbl2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:double(upper bound) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdbl2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdbl2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdbl2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdbl2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatdbl2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatdbl2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatdbl2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatflt2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatflt2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatflt2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatflt2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatflt2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:float(mid range) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatflt2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatflt2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatflt2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:float(upper bound) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatflt2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatflt2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatflt2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatflt2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatflt2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatflt2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatflt2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatlng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatlng2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatlng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatlng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatlng2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:long(mid range) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatlng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatlng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatlng2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:long(upper bound) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatlng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatlng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatlng2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatlng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatlng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatlng2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatlng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatusht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatusht2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatusht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatusht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatusht2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedShort(mid range) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatusht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatusht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatusht2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedShort(upper bound) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatusht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatusht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatusht2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatusht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatusht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatusht2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatusht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnint2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnint2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:negativeInteger(mid range) $arg2 = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnint2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:negativeInteger(upper bound) $arg2 = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnint2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnint2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatpint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatpint2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatpint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatpint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatpint2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:positiveInteger(mid range) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatpint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatpint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatpint2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:positiveInteger(upper bound) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatpint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatpint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatpint2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatpint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatpint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatpint2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatpint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatulng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatulng2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatulng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatulng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatulng2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedLong(mid range) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatulng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatulng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatulng2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedLong(upper bound) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatulng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatulng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatulng2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatulng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatulng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatulng2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatulng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnpi2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnpi2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnpi2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnpi2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnpi2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonPositiveInteger(mid range) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnpi2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnpi2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnpi2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonPositiveInteger(upper bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnpi2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnpi2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnpi2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnpi2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnpi2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnpi2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnpi2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnni2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnni2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnni2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnni2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnni2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonNegativeInteger(mid range) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnni2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnni2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnni2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonNegativeInteger(upper bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnni2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnni2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnni2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnni2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatnni2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatnni2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatnni2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatsht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatsht2args-1" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatsht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatsht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatsht2args-2" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:short(mid range) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatsht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatsht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatsht2args-3" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:short(upper bound) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatsht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatsht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatsht2args-4" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatsht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concatsht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concatsht2args-5" ;
+  rdfs:comment "Evaluates The \"concat\" function with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concatsht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-1" ;
+  rdfs:comment "Evaluation of concat function as per example 1 (for this function) from the F&O specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-4" ;
+  rdfs:comment "Evaluation of concat function as per example 4 (for this function) from the F&O specs." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-5" ;
+  rdfs:comment "Evaluation of concat function that uses only upper case letters as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-6" ;
+  rdfs:comment "Evaluation of concat function that uses only lower case letters as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-7" ;
+  rdfs:comment "Evaluation of concat function that uses both upper and lower case letters as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-9" ;
+  rdfs:comment "Evaluation of concat function that uses the \"upper-case\" function as part of argument" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-10" ;
+  rdfs:comment "Evaluation of concat function with argument set to \"*****\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-11" ;
+  rdfs:comment "Evaluation of concat function with argument that uses another concat function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-12" ;
+  rdfs:comment "Evaluation of concat function as an argument to the \"fn:boolean\" function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-13" ;
+  rdfs:comment "Evaluation of concat function as an argument to the \"fn:string\" function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-14" ;
+  rdfs:comment "Evaluation of concat function as an argument to the \"fn:not\" function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-15" ;
+  rdfs:comment "Evaluation of concat function with argument set to \"%$\",#@!\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-16" ;
+  rdfs:comment "Evaluation of concat function with argument set to \"concat\",\"concat\"" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-concat-17> a mf:QueryEvaluationTest ;
+  mf:name "fn-concat-17" ;
+  rdfs:comment "Evaluation of concat function as part of a boolean expression" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <fn-concat-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ConcatFunc-3> a mf:QueryEvaluationTest ;
+  mf:name "K-ConcatFunc-3" ;
+  rdfs:comment "A test whose essence is: `concat(\"ab\", \"c\") eq \"abc\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <K-ConcatFunc-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ConcatFunc-8> a mf:QueryEvaluationTest ;
+  mf:name "K-ConcatFunc-8" ;
+  rdfs:comment "A test whose essence is: `concat(1, 2, 3) eq \"123\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <K-ConcatFunc-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ConcatFunc-9> a mf:QueryEvaluationTest ;
+  mf:name "K-ConcatFunc-9" ;
+  rdfs:comment "A test whose essence is: `concat(1, \"2\", 3) eq \"123\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <K-ConcatFunc-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-concat-001> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-concat-001" ;
+  rdfs:comment "test fn:boolean(fn:concat()) where concat returns empty string" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml> ;
+  mf:action [ qt:query <cbcl-concat-001.rq> ] ;
+  mf:result <../true.srj> .

@@ -1,0 +1,6 @@
+# QT3 test case fn-abs-more-args-002 of test set fn-abs, which tests the XPath expression
+#   fn:abs(xs:double("-INF"))
+ASK {
+  BIND(ABS( <http://www.w3.org/2001/XMLSchema#double> ( "-INF" ) ) AS ?result)
+  FILTER(( ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "INF" ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#double> ) ) ))
+}

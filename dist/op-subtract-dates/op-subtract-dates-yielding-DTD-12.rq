@@ -1,0 +1,6 @@
+# QT3 test case op-subtract-dates-yielding-DTD-12 of test set op-subtract-dates, which tests the XPath expression
+#   fn:string((xs:date("1980-03-02Z") - xs:date("2001-09-11Z"))) and (fn:true())
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#date> ( "1980-03-02Z" ) - <http://www.w3.org/2001/XMLSchema#date> ( "2001-09-11Z" ) ) ) && "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

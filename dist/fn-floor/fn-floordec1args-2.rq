@@ -1,0 +1,6 @@
+# QT3 test case fn-floordec1args-2 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:decimal("617375191608514839"))
+ASK {
+  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#decimal> ( "617375191608514839" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "617375191608514839" ))
+}

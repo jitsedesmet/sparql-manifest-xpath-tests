@@ -1,0 +1,6 @@
+# QT3 test case K-GenCompNE-15 of test set prod-GeneralComp.ne, which tests the XPath expression
+#   not("a string" != "a string")
+ASK {
+  BIND(! ( "a string" != "a string" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

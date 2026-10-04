@@ -1,0 +1,6 @@
+# QT3 test case K-SubstringBeforeFunc-7 of test set fn-substring-before, which tests the XPath expression
+#   substring-before("tattoo", "tatto") eq ""
+ASK {
+  BIND(( STRBEFORE( "tattoo" , "tatto" ) = "" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case K-GenCompEq-50 of test set prod-GeneralComp.eq, which tests the XPath expression
+#   5 = false()
+ASK {
+  BIND(( "5"^^<http://www.w3.org/2001/XMLSchema#integer> = "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

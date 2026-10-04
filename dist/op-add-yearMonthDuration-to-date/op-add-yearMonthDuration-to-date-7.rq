@@ -1,0 +1,6 @@
+# QT3 test case op-add-yearMonthDuration-to-date-7 of test set op-add-yearMonthDuration-to-date, which tests the XPath expression
+#   fn:string(xs:date("1989-07-05Z") + xs:yearMonthDuration("P08Y04M"))
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#date> ( "1989-07-05Z" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P08Y04M" ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1997-11-05Z" ))
+}

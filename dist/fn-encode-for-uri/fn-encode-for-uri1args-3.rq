@@ -1,0 +1,6 @@
+# QT3 test case fn-encode-for-uri1args-3 of test set fn-encode-for-uri, which tests the XPath expression
+#   encode-for-uri("100% organic")
+ASK {
+  BIND(ENCODE_FOR_URI( "100% organic" ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "100%25%20organic" ))
+}

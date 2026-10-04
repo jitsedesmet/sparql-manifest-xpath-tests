@@ -1,0 +1,824 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-boolean" ;
+  mf:entries (
+    <#fn-booleanint1args-1>
+    <#fn-booleanint1args-2>
+    <#fn-booleanint1args-3>
+    <#fn-booleanintg1args-1>
+    <#fn-booleanintg1args-2>
+    <#fn-booleanintg1args-3>
+    <#fn-booleandec1args-1>
+    <#fn-booleandec1args-2>
+    <#fn-booleandec1args-3>
+    <#fn-booleandbl1args-1>
+    <#fn-booleandbl1args-2>
+    <#fn-booleandbl1args-3>
+    <#fn-booleanflt1args-1>
+    <#fn-booleanflt1args-2>
+    <#fn-booleanflt1args-3>
+    <#fn-booleanlng1args-1>
+    <#fn-booleanlng1args-2>
+    <#fn-booleanlng1args-3>
+    <#fn-booleanusht1args-1>
+    <#fn-booleanusht1args-2>
+    <#fn-booleanusht1args-3>
+    <#fn-booleannint1args-1>
+    <#fn-booleannint1args-2>
+    <#fn-booleannint1args-3>
+    <#fn-booleanpint1args-1>
+    <#fn-booleanpint1args-2>
+    <#fn-booleanpint1args-3>
+    <#fn-booleanulng1args-1>
+    <#fn-booleanulng1args-2>
+    <#fn-booleanulng1args-3>
+    <#fn-booleannpi1args-1>
+    <#fn-booleannpi1args-2>
+    <#fn-booleannpi1args-3>
+    <#fn-booleannni1args-1>
+    <#fn-booleannni1args-2>
+    <#fn-booleannni1args-3>
+    <#fn-booleansht1args-1>
+    <#fn-booleansht1args-2>
+    <#fn-booleansht1args-3>
+    <#fn-boolean-mixed-args-002>
+    <#fn-boolean-mixed-args-003>
+    <#fn-boolean-mixed-args-004>
+    <#fn-boolean-mixed-args-005>
+    <#fn-boolean-mixed-args-006>
+    <#fn-boolean-mixed-args-007>
+    <#fn-boolean-mixed-args-008>
+    <#fn-boolean-mixed-args-009>
+    <#fn-boolean-mixed-args-010>
+    <#fn-boolean-mixed-args-011>
+    <#fn-boolean-mixed-args-012>
+    <#fn-boolean-mixed-args-013>
+    <#fn-boolean-mixed-args-014>
+    <#fn-boolean-mixed-args-015>
+    <#fn-boolean-mixed-args-016>
+    <#fn-boolean-mixed-args-017>
+    <#fn-boolean-mixed-args-018>
+    <#fn-boolean-mixed-args-019>
+    <#fn-boolean-mixed-args-020>
+    <#fn-boolean-mixed-args-021>
+    <#fn-boolean-mixed-args-022>
+    <#fn-boolean-mixed-args-023>
+    <#fn-boolean-mixed-args-024>
+    <#fn-boolean-mixed-args-025>
+    <#fn-boolean-mixed-args-026>
+    <#fn-boolean-mixed-args-027>
+    <#fn-boolean-mixed-args-028>
+    <#fn-boolean-mixed-args-029>
+    <#fn-boolean-mixed-args-030>
+    <#fn-boolean-mixed-args-031>
+    <#fn-boolean-mixed-args-032>
+    <#fn-boolean-mixed-args-033>
+    <#fn-boolean-mixed-args-034>
+    <#fn-boolean-mixed-args-035>
+    <#fn-boolean-mixed-args-036>
+    <#fn-boolean-mixed-args-037>
+    <#fn-boolean-mixed-args-038>
+    <#fn-boolean-mixed-args-039>
+    <#fn-boolean-mixed-args-040>
+    <#fn-boolean-mixed-args-041>
+    <#fn-boolean-mixed-args-042>
+    <#fn-boolean-mixed-args-043>
+    <#fn-boolean-mixed-args-044>
+    <#fn-boolean-mixed-args-045>
+    <#fn-boolean-mixed-args-046>
+    <#fn-boolean-mixed-args-047>
+    <#fn-boolean-mixed-args-048>
+    <#fn-boolean-050>
+    <#K-SeqBooleanFunc-9>
+    <#K-SeqBooleanFunc-12>
+    <#K-SeqBooleanFunc-13>
+    <#K-SeqBooleanFunc-14>
+    <#K-SeqBooleanFunc-15>
+    <#K-SeqBooleanFunc-17>
+    <#K-SeqBooleanFunc-18>
+    <#K-SeqBooleanFunc-19>
+    <#K-SeqBooleanFunc-20>
+    <#K-SeqBooleanFunc-21>
+    <#K-SeqBooleanFunc-22>
+    <#K-SeqBooleanFunc-23>
+    <#K-SeqBooleanFunc-29>
+    <#K-SeqBooleanFunc-30>
+    <#K-SeqBooleanFunc-31>
+  ) .
+
+<#fn-booleanint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanint1args-1" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanint1args-2" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:int(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanint1args-3" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:int(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanintg1args-1" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanintg1args-2" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:integer(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanintg1args-3" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleandec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleandec1args-1" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleandec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleandec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleandec1args-2" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleandec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleandec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleandec1args-3" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleandec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleandbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleandbl1args-1" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleandbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleandbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleandbl1args-2" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:double(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleandbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleandbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleandbl1args-3" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:double(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleandbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanflt1args-1" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanflt1args-2" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:float(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanflt1args-3" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:float(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanlng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanlng1args-1" ;
+  rdfs:comment "Evaluates The \"boolean\" function with the arguments set as follows: $arg =\n         xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanlng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanlng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanlng1args-2" ;
+  rdfs:comment "Test: booleanlng1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanlng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanlng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanlng1args-3" ;
+  rdfs:comment "Test: booleanlng1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanlng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanusht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanusht1args-1" ;
+  rdfs:comment "Test: booleanusht1args-1 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanusht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanusht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanusht1args-2" ;
+  rdfs:comment "Test: booleanusht1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanusht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanusht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanusht1args-3" ;
+  rdfs:comment "Test: booleanusht1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanusht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannint1args-1" ;
+  rdfs:comment "Test: booleannint1args-1 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannint1args-2" ;
+  rdfs:comment "Test: booleannint1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannint1args-3" ;
+  rdfs:comment "Test: booleannint1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanpint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanpint1args-1" ;
+  rdfs:comment "Test: booleanpint1args-1 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanpint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanpint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanpint1args-2" ;
+  rdfs:comment "Test: booleanpint1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanpint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanpint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanpint1args-3" ;
+  rdfs:comment "Test: booleanpint1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanpint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanulng1args-1" ;
+  rdfs:comment "Test: booleanulng1args-1 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanulng1args-2" ;
+  rdfs:comment "Test: booleanulng1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleanulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleanulng1args-3" ;
+  rdfs:comment "Test: booleanulng1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleanulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannpi1args-1" ;
+  rdfs:comment "Test: booleannpi1args-1 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannpi1args-2" ;
+  rdfs:comment "Test: booleannpi1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannpi1args-3" ;
+  rdfs:comment "Test: booleannpi1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannni1args-1" ;
+  rdfs:comment "Test: booleannni1args-1 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannni1args-2" ;
+  rdfs:comment "Test: booleannni1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleannni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleannni1args-3" ;
+  rdfs:comment "Test: booleannni1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleannni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleansht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleansht1args-1" ;
+  rdfs:comment "Test: booleansht1args-1 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleansht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleansht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleansht1args-2" ;
+  rdfs:comment "Test: booleansht1args-2 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleansht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-booleansht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-booleansht1args-3" ;
+  rdfs:comment "Test: booleansht1args-3 Written By: Carmelo Montanez Date: Fri Dec 10 10:15:47\n         GMT-05:00 2004 Purpose: Evaluates The \"boolean\" function with the arguments set as follows:\n         $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-booleansht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-002> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-002" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-002.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: string" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-003> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-003" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-003.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: boolean function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-003.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-004> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-004" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-004.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: boolean function" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-004.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-005> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-005" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-005.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: string" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-005.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-006> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-006" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-006.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: string" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-006.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-007> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-007" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-007.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: string" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-007.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-008> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-008" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-008.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-008.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-009> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-009" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-009.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-009.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-010> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-010" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-010.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-010.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-011> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-011" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-011.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-011.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-012> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-012" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-012.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-012.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-013> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-013" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-013.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-013.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-014> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-014" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-014.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-014.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-015> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-015" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-015.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-015.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-016> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-016" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-016.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-016.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-017> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-017" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-017.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-017.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-018> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-018" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-018.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-018.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-019> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-019" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-019.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-019.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-020> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-020" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-020.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-020.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-021> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-021" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-021.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-021.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-022> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-022" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-022.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-022.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-023> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-023" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-023.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-023.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-024> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-024" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-024.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: decimal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-024.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-025> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-025" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-025.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: decimal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-025.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-026> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-026" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-026.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: decimal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-026.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-027> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-027" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-027.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: decimal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-027.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-028> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-028" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-028.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: decimal" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-028.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-029> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-029" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-029.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-029.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-030> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-030" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-030.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-030.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-031> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-031" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-031.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-031.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-032> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-032" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-032.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: nonPositiveInteger" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-032.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-033> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-033" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-033.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: nonPositiveInteger" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-033.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-034> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-034" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-034.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: nonPositiveInteger" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-034.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-035> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-035" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-035.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: negativeInteger" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-035.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-036> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-036" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-036.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: negativeInteger" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-036.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-037> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-037" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-037.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: positiveInteger" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-037.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-038> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-038" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-038.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: positiveInteger" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-038.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-039> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-039" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-039.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: long" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-039.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-040> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-040" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-040.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: long" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-040.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-041> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-041" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-041.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: long" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-041.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-042> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-042" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-042.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: long" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-042.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-043> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-043" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-043.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: long" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-043.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-044> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-044" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-044.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: int" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-044.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-045> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-045" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-045.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: int" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-045.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-046> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-046" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-046.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: int" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-046.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-047> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-047" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-047.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: int" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-047.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-mixed-args-048> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-mixed-args-048" ;
+  rdfs:comment "Test: fn-boolean-mixed-args-048.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: int" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-mixed-args-048.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-boolean-050> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-050" ;
+  rdfs:comment "Test: fn-boolean-050.xq Written By: Carmelo Montanez Date: February 6, 2006\n         Purpose: Raise error condition FORG0006 for fn:boolean." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-050.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-9> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-9" ;
+  rdfs:comment "Test: K-SeqBooleanFunc-9 Purpose: fn:boolean() invoked on an non-empty xs:string\n         should return true." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-12> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-12" ;
+  rdfs:comment "Test: K-SeqBooleanFunc-12 Purpose: A test whose essence is: `boolean(1)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-13> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-13" ;
+  rdfs:comment "Test: K-SeqBooleanFunc-13 Purpose: A test whose essence is: `not(boolean(\"\"))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-14> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-14" ;
+  rdfs:comment "Test: K-SeqBooleanFunc-14 Purpose: A test whose essence is:\n         `not(boolean(false()))`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-15> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-15" ;
+  rdfs:comment "Test: K-SeqBooleanFunc-15 Purpose: A test whose essence is: `boolean(true())`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-17> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-17" ;
+  rdfs:comment "Test: K-SeqBooleanFunc-17 Purpose: A test whose essence is: `not(0)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-18> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-18" ;
+  rdfs:comment "zzzA test whose essence is: `boolean(1)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-19> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-19" ;
+  rdfs:comment "zzzA test whose essence is: `boolean(1.1)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-20> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-20" ;
+  rdfs:comment "sA test whose essence is: `boolean(1.1e1)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-21> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-21" ;
+  rdfs:comment "sA test whose essence is: `not(0.0e0)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-22> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-22" ;
+  rdfs:comment "sA test whose essence is: `not(0.0)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-23> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-23" ;
+  rdfs:comment "sA test whose essence is: `boolean(-1)`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-23.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-29> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-29" ;
+  rdfs:comment "A test whose essence is: `boolean('nada')`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-29.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-30> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-30" ;
+  rdfs:comment "A test whose essence is: `boolean('\"\"')`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-30.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SeqBooleanFunc-31> a mf:QueryEvaluationTest ;
+  mf:name "K-SeqBooleanFunc-31" ;
+  rdfs:comment "A test whose essence is: `not('')`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <K-SeqBooleanFunc-31.rq> ] ;
+  mf:result <../true.srj> .

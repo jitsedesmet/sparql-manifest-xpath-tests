@@ -1,0 +1,6 @@
+# QT3 test case fn-ceilinglng1args-3 of test set fn-ceiling, which tests the XPath expression
+#   fn:ceiling(xs:long("92233720368547758"))
+ASK {
+  BIND(CEIL( "92233720368547758"^^<http://www.w3.org/2001/XMLSchema#long> ) AS ?result)
+  FILTER(( ?result = "92233720368547758"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

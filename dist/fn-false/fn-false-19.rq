@@ -1,0 +1,6 @@
+# QT3 test case fn-false-19 of test set fn-false, which tests the XPath expression
+#   fn:concat(xs:string(fn:false()),xs:string(fn:false()))
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#string> ( "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ) , <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#string> ( "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "falsefalse" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case cbcl-matches-040 of test set fn-matches, which tests the XPath expression
+#   fn:matches('abc', '\S+')
+ASK {
+  BIND(REGEX( "abc" , "\\S+" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

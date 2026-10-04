@@ -1,0 +1,6 @@
+# QT3 test case K-FloorFunc-6 of test set fn-floor, which tests the XPath expression
+#   floor("a string")
+ASK {
+  BIND(FLOOR( "a string" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-concatint2args-4 of test set fn-concat, which tests the XPath expression
+#   fn:concat(xs:int("-2147483648"),xs:int("-1873914410"))
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "-2147483648"^^<http://www.w3.org/2001/XMLSchema#int> ) , <http://www.w3.org/2001/XMLSchema#string> ( "-1873914410"^^<http://www.w3.org/2001/XMLSchema#int> ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-2147483648-1873914410" ))
+}

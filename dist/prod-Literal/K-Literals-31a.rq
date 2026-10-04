@@ -1,0 +1,6 @@
+# QT3 test case K-Literals-31a of test set prod-Literal, which tests the XPath expression
+#   "a string &;"
+ASK {
+  BIND("a string &;" AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "a string &;" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-greater-thannni2args-2 of test set op-numeric-greater-than, which tests the XPath expression
+#   xs:nonNegativeInteger("303884545991464527") gt xs:nonNegativeInteger("0")
+ASK {
+  BIND(( "303884545991464527"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> > "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

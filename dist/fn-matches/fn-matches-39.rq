@@ -1,0 +1,6 @@
+# QT3 test case fn-matches-39 of test set fn-matches, which tests the XPath expression
+#   fn:matches('abcdefghii', '(a)(b)(c)(d)(e)(f)(g)(h)(i\9)')
+ASK {
+  BIND(REGEX( "abcdefghii" , "(a)(b)(c)(d)(e)(f)(g)(h)(i\\9)" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

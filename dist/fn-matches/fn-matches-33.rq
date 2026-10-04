@@ -1,0 +1,6 @@
+# QT3 test case fn-matches-33 of test set fn-matches, which tests the XPath expression
+#   fn:matches("x[y-z]", "x[y-z]", "q")
+ASK {
+  BIND(REGEX( "x[y-z]" , "x[y-z]" , "q" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

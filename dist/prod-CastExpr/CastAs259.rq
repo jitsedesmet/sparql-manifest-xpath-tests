@@ -1,0 +1,6 @@
+# QT3 test case CastAs259 of test set prod-CastExpr, which tests the XPath expression
+#   xs:integer("-100") cast as xs:double
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#double> ( <http://www.w3.org/2001/XMLSchema#integer> ( "-100" ) ) AS ?result)
+  FILTER(( ?result = - "100"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

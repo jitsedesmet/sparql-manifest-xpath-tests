@@ -1,0 +1,48 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-string-greater-than" ;
+  mf:entries (
+    <#K-StringGT-1>
+    <#K-StringGT-2>
+    <#K-StringGT-3>
+    <#K-StringGT-4>
+    <#K-StringGT-5>
+  ) .
+
+<#K-StringGT-1> a mf:QueryEvaluationTest ;
+  mf:name "K-StringGT-1" ;
+  rdfs:comment "A test whose essence is: `'abc' gt 'a'`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-greater-than.xml> ;
+  mf:action [ qt:query <K-StringGT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringGT-2> a mf:QueryEvaluationTest ;
+  mf:name "K-StringGT-2" ;
+  rdfs:comment "A test whose essence is: `not('abc' gt 'abc')`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-greater-than.xml> ;
+  mf:action [ qt:query <K-StringGT-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringGT-3> a mf:QueryEvaluationTest ;
+  mf:name "K-StringGT-3" ;
+  rdfs:comment "A test whose essence is: `'abc' ge 'a'`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-greater-than.xml> ;
+  mf:action [ qt:query <K-StringGT-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringGT-4> a mf:QueryEvaluationTest ;
+  mf:name "K-StringGT-4" ;
+  rdfs:comment "A test whose essence is: `not('a' ge 'abc')`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-greater-than.xml> ;
+  mf:action [ qt:query <K-StringGT-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringGT-5> a mf:QueryEvaluationTest ;
+  mf:name "K-StringGT-5" ;
+  rdfs:comment "A test whose essence is: `'abc' ge 'abc'`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-greater-than.xml> ;
+  mf:action [ qt:query <K-StringGT-5.rq> ] ;
+  mf:result <../true.srj> .

@@ -1,0 +1,6 @@
+# QT3 test case fn-concat-17 of test set fn-concat, which tests the XPath expression
+#   fn:concat("abc","abc") and fn:concat("abc","abc")
+ASK {
+  BIND(( CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "abc" ) , <http://www.w3.org/2001/XMLSchema#string> ( "abc" ) ) && CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "abc" ) , <http://www.w3.org/2001/XMLSchema#string> ( "abc" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

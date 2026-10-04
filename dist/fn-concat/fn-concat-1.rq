@@ -1,0 +1,6 @@
+# QT3 test case fn-concat-1 of test set fn-concat, which tests the XPath expression
+#   fn:concat('un', 'grateful')
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "un" ) , <http://www.w3.org/2001/XMLSchema#string> ( "grateful" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "ungrateful" ))
+}

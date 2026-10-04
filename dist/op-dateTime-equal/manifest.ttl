@@ -1,0 +1,512 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-dateTime-equal" ;
+  mf:entries (
+    <#op-dateTime-equal2args-1>
+    <#op-dateTime-equal2args-2>
+    <#op-dateTime-equal2args-3>
+    <#op-dateTime-equal2args-4>
+    <#op-dateTime-equal2args-5>
+    <#op-dateTime-equal2args-6>
+    <#op-dateTime-equal2args-7>
+    <#op-dateTime-equal2args-8>
+    <#op-dateTime-equal2args-9>
+    <#op-dateTime-equal2args-10>
+    <#op-dateTime-equal2args-11>
+    <#op-dateTime-equal2args-12>
+    <#op-dateTime-equal2args-13>
+    <#op-dateTime-equal2args-14>
+    <#op-dateTime-equal2args-15>
+    <#op-dateTime-equal2args-16>
+    <#op-dateTime-equal2args-17>
+    <#op-dateTime-equal2args-18>
+    <#op-dateTime-equal2args-19>
+    <#op-dateTime-equal2args-20>
+    <#K-DateTimeEQ-1>
+    <#K-DateTimeEQ-2>
+    <#K-DateTimeEQ-3>
+    <#K-DateTimeEQ-4>
+    <#K-DateTimeEQ-5>
+    <#K-DateTimeEQ-6>
+    <#K-DateTimeEQ-7>
+    <#K-DateTimeEQ-8>
+    <#K-DateTimeEQ-9>
+    <#K-DateTimeEQ-10>
+    <#K-DateTimeEQ-11>
+    <#K-DateTimeEQ-12>
+    <#K-DateTimeEQ-13>
+    <#K-DateTimeEQ-14>
+    <#K-DateTimeEQ-15>
+    <#K-DateTimeEQ-16>
+    <#K-DateTimeEQ-17>
+    <#K-DateTimeEQ-18>
+    <#K-DateTimeEQ-19>
+    <#K-DateTimeEQ-20>
+    <#K-DateTimeEQ-21>
+    <#K-DateTimeEQ-22>
+    <#K-DateTimeEQ-23>
+    <#K-DateTimeEQ-24>
+    <#K-DateTimeEQ-25>
+    <#K-DateTimeEQ-26>
+    <#K-DateTimeEQ-27>
+    <#K-DateTimeEQ-28>
+    <#K-DateTimeEQ-29>
+    <#K-DateTimeEQ-30>
+    <#K-DateTimeEQ-31>
+    <#K-DateTimeEQ-32>
+    <#K2-DateTimeEQ-1>
+    <#cbcl-dateTime-equal-002>
+    <#cbcl-dateTime-equal-003>
+    <#cbcl-dateTime-equal-004>
+    <#cbcl-dateTime-equal-005>
+    <#cbcl-dateTime-equal-007>
+    <#cbcl-dateTime-equal-008>
+    <#cbcl-dateTime-equal-009>
+    <#cbcl-dateTime-equal-010>
+    <#cbcl-dateTime-equal-017>
+    <#cbcl-dateTime-equal-018>
+  ) .
+
+<#op-dateTime-equal2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-1                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-2                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(mid range)                         \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-3                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(upper bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-4                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(mid range)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-5                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(upper bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-6                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-7                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(mid range)                         \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-8                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(upper bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-9                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(mid range)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-10                         \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-equal\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(upper bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-11> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-11" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-11                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (le) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-12> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-12" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-12                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (le)\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(mid range)                         \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-13> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-13" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-13                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (le) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(upper bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-14> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-14" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-14                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (le) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(mid range)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-15> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-15" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-15                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (le)\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(upper bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-16> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-16" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-16                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (ge) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-17> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-17" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-17                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (ge) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(mid range)                         \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-18> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-18" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-18                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (ge) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(upper bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-19> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-19" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-19                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (ge) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(mid range)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-equal2args-20> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-equal2args-20" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-equal2args-20                        \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:dateTime-equal\" operator (ge) \n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(upper bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <op-dateTime-equal2args-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-1" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-1                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'eq' for xs:dateTime, returning positive. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-2> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-2" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-2                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'eq' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-3" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-3                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ne' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-4" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-4                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ne' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-5> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-5" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-5                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset -00:00 is equal to Z, in xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-6> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-6" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-6                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset +00:00 is equal to Z, in xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-7> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-7" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-7                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset Z is equal to Z, in xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-8> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-8" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-8                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset -00:00 is equal to +00:00, in xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-9> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-9" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-9                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-10> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-10" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-10                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-11> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-11" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-11                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-12> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-12" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-12                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-13> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-13" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-13                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-14> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-14" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-14                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-15> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-15" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-15                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-16> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-16" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-16                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-17> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-17" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-17                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-18> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-18" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-18                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-19> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-19" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-19                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-20> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-20" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-20                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-21> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-21" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-21                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-22> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-22" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-22                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-23> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-23" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-23                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-23.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-24> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-24" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-24                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-25> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-25" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-25                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-26> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-26" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-26                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-26.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-27> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-27" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-27                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-27.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-28> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-28" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-28                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-28.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-29> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-29" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-29                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-29.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-30> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-30" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-30                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-30.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-31> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-31" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-31                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-31.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeEQ-32> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeEQ-32" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeEQ-32                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K-DateTimeEQ-32.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-DateTimeEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K2-DateTimeEQ-1" ;
+  rdfs:comment "*******************************************************\n Test: K2-DateTimeEQ-1                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Basic negative equalness test for xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <K2-DateTimeEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-002" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-003> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-003" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-003.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-004> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-004" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-004.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-005> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-005" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-005.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-007> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-007" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-007.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-008> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-008" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-008.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-009> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-009" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-009.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-010> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-010" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-010.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-017> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-017" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-017.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-equal-018> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-equal-018" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml> ;
+  mf:action [ qt:query <cbcl-dateTime-equal-018.rq> ] ;
+  mf:result <../true.srj> .

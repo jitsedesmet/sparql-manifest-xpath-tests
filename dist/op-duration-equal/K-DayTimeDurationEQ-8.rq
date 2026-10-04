@@ -1,0 +1,6 @@
+# QT3 test case K-DayTimeDurationEQ-8 of test set op-duration-equal, which tests the XPath expression
+#   xs:dayTimeDuration("P6DT16H34M59.613999S") eq xs:dayTimeDuration("P6DT16H34M59.613999S")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P6DT16H34M59.613999S" ) = <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P6DT16H34M59.613999S" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

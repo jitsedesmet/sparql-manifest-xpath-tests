@@ -1,0 +1,6 @@
+# QT3 test case K2-ReplaceFunc-2 of test set fn-replace, which tests the XPath expression
+#   replace("a a a ", "(a )", "replacment: \1")
+ASK {
+  BIND(REPLACE( "a a a " , "(a )" , "replacment: \\1" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

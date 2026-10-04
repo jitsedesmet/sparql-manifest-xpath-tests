@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-subtractdec2args-4 of test set op-numeric-subtract, which tests the XPath expression
+#   xs:decimal("-382624808391485160") - xs:decimal("617375191608514839")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#decimal> ( "-382624808391485160" ) - <http://www.w3.org/2001/XMLSchema#decimal> ( "617375191608514839" ) ) AS ?result)
+  FILTER(( ?result = - "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

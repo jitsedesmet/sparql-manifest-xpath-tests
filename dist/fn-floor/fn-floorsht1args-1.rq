@@ -1,0 +1,6 @@
+# QT3 test case fn-floorsht1args-1 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:short("-32768"))
+ASK {
+  BIND(FLOOR( "-32768"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-32768" ))
+}

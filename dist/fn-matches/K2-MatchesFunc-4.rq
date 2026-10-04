@@ -1,0 +1,6 @@
+# QT3 test case K2-MatchesFunc-4 of test set fn-matches, which tests the XPath expression
+#   fn:matches("hello world", "he ll o[ ]worl d", "x")
+ASK {
+  BIND(REGEX( "hello world" , "he ll o[ ]worl d" , "x" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

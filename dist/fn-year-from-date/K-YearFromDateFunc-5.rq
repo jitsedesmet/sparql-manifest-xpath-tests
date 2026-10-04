@@ -1,0 +1,6 @@
+# QT3 test case K-YearFromDateFunc-5 of test set fn-year-from-date, which tests the XPath expression
+#   year-from-date(xs:date("2000-02-03")) eq 2000
+ASK {
+  BIND(( YEAR( <http://www.w3.org/2001/XMLSchema#date> ( "2000-02-03" ) ) = "2000"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

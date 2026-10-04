@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-unary-pluslng1args-1 of test set op-numeric-unary-plus, which tests the XPath expression
+#   +(xs:long("-92233720368547758"))
+ASK {
+  BIND(+ "-92233720368547758"^^<http://www.w3.org/2001/XMLSchema#long> AS ?result)
+  FILTER(( ?result = - "92233720368547758"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

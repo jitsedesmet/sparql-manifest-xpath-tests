@@ -69,7 +69,11 @@ $ yarn run generate
 ```
 
 QT3 is fetched at a fixed commit, and cached in `.cache/`.
-On every push to `main`, a GitHub Actions workflow generates the tests and publishes them on GitHub Pages.
+
+The generated tests in `dist/` are tracked, so that every change to the published tests shows up in the git diff.
+After changing the generator, run `yarn run generate` and commit the changes in `dist/`.
+A GitHub Actions workflow checks on every push and pull request that `dist/` is up to date with the generator,
+and publishes `dist/` on GitHub Pages on every push to `main`.
 
 ## License
 

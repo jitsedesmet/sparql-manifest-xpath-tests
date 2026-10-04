@@ -1,0 +1,6 @@
+# QT3 test case K-LogicExpr-30 of test set prod-OrExpr, which tests the XPath expression
+#   10.3 and "non-zero length string"
+ASK {
+  BIND(( "10.3"^^<http://www.w3.org/2001/XMLSchema#decimal> && "non-zero length string" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

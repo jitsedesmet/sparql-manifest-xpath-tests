@@ -1,0 +1,6 @@
+# QT3 test case CastAs118 of test set prod-CastExpr, which tests the XPath expression
+#   xs:string("-PT100M") cast as xs:dayTimeDuration
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( <http://www.w3.org/2001/XMLSchema#string> ( "-PT100M" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-PT1H40M" ))
+}

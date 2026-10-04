@@ -1,0 +1,6 @@
+# QT3 test case casthc8 of test set prod-CastExpr, which tests the XPath expression
+#   xs:float(2.1E3) cast as xs:float
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#float> ( <http://www.w3.org/2001/XMLSchema#float> ( "2.1E3"^^<http://www.w3.org/2001/XMLSchema#double> ) ) AS ?result)
+  FILTER(( ?result = "2100"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

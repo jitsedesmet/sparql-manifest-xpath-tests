@@ -1,0 +1,6 @@
+# QT3 test case op-dayTimeDuration-less-than-10 of test set op-dayTimeDuration-less-than, which tests the XPath expression
+#   (xs:dayTimeDuration("P10DT01H") le xs:dayTimeDuration("P09DT06H")) or (xs:dayTimeDuration("P15DT01H") le xs:dayTimeDuration("P02DT04H"))
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P10DT01H" ) <= <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P09DT06H" ) ) || ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P15DT01H" ) <= <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P02DT04H" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

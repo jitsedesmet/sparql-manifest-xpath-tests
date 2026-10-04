@@ -1,0 +1,6 @@
+# QT3 test case K-NumericUnaryPlus-1 of test set op-numeric-unary-plus, which tests the XPath expression
+#   +"a string"
+ASK {
+  BIND(+ "a string" AS ?result)
+  FILTER(! BOUND( ?result ))
+}

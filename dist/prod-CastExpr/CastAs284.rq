@@ -1,0 +1,6 @@
+# QT3 test case CastAs284 of test set prod-CastExpr, which tests the XPath expression
+#   xs:duration("PT10H") cast as xs:duration
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#duration> ( <http://www.w3.org/2001/XMLSchema#duration> ( "PT10H" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "PT10H" ))
+}

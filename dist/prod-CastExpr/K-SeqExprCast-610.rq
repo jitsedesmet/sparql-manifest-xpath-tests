@@ -1,0 +1,6 @@
+# QT3 test case K-SeqExprCast-610 of test set prod-CastExpr, which tests the XPath expression
+#   xs:integer("6789") cast as xs:dateTime
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#dateTime> ( <http://www.w3.org/2001/XMLSchema#integer> ( "6789" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

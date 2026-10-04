@@ -1,0 +1,6 @@
+# QT3 test case K-NumericUnaryPlus-9 of test set op-numeric-unary-plus, which tests the XPath expression
+#   +++++++++++3 eq 3
+ASK {
+  BIND(( +( +( +( +( +( +( +( +( +( +( + "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) ) ) ) ) ) ) ) ) = "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

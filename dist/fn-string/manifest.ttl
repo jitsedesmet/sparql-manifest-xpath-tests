@@ -1,0 +1,344 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-string" ;
+  mf:entries (
+    <#fn-stringint1args-1>
+    <#fn-stringint1args-2>
+    <#fn-stringint1args-3>
+    <#fn-stringintg1args-1>
+    <#fn-stringintg1args-2>
+    <#fn-stringintg1args-3>
+    <#fn-stringdec1args-1>
+    <#fn-stringdec1args-2>
+    <#fn-stringdec1args-3>
+    <#fn-stringdbl1args-1>
+    <#fn-stringdbl1args-2>
+    <#fn-stringdbl1args-3>
+    <#fn-stringflt1args-1>
+    <#fn-stringflt1args-2>
+    <#fn-stringflt1args-3>
+    <#fn-stringlng1args-1>
+    <#fn-stringlng1args-2>
+    <#fn-stringlng1args-3>
+    <#fn-stringusht1args-1>
+    <#fn-stringusht1args-2>
+    <#fn-stringusht1args-3>
+    <#fn-stringnint1args-1>
+    <#fn-stringnint1args-2>
+    <#fn-stringnint1args-3>
+    <#fn-stringpint1args-1>
+    <#fn-stringpint1args-2>
+    <#fn-stringpint1args-3>
+    <#fn-stringulng1args-1>
+    <#fn-stringulng1args-2>
+    <#fn-stringulng1args-3>
+    <#fn-stringnpi1args-1>
+    <#fn-stringnpi1args-2>
+    <#fn-stringnpi1args-3>
+    <#fn-stringnni1args-1>
+    <#fn-stringnni1args-2>
+    <#fn-stringnni1args-3>
+    <#fn-stringsht1args-1>
+    <#fn-stringsht1args-2>
+    <#fn-stringsht1args-3>
+    <#fn-string-5>
+    <#fn-string-7>
+    <#K-StringFunc-3>
+  ) .
+
+<#fn-stringint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringint1args-1" ;
+  rdfs:comment "stringint1args-1 The \"string\" function with the arguments set as follows: $arg = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringint1args-2" ;
+  rdfs:comment "stringint1args-2 The \"string\" function with the arguments set as follows: $arg = xs:int(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringint1args-3" ;
+  rdfs:comment "stringint1args-3 The \"string\" function with the arguments set as follows: $arg = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringintg1args-1" ;
+  rdfs:comment "stringintg1args-1 The \"string\" function with the arguments set as follows: $arg = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringintg1args-2" ;
+  rdfs:comment "stringintg1args-2 The \"string\" function with the arguments set as follows: $arg = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringintg1args-3" ;
+  rdfs:comment "stringintg1args-3 The \"string\" function with the arguments set as follows: $arg = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringdec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringdec1args-1" ;
+  rdfs:comment "stringdec1args-1 The \"string\" function with the arguments set as follows: $arg = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringdec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringdec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringdec1args-2" ;
+  rdfs:comment "stringdec1args-2 The \"string\" function with the arguments set as follows: $arg = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringdec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringdec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringdec1args-3" ;
+  rdfs:comment "stringdec1args-3 The \"string\" function with the arguments set as follows: $arg = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringdec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringdbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringdbl1args-1" ;
+  rdfs:comment "stringdbl1args-1 The \"string\" function with the arguments set as follows: $arg = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringdbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringdbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringdbl1args-2" ;
+  rdfs:comment "stringdbl1args-2 The \"string\" function with the arguments set as follows: $arg = xs:double(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringdbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringdbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringdbl1args-3" ;
+  rdfs:comment "stringdbl1args-3 The \"string\" function with the arguments set as follows: $arg = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringdbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringflt1args-1" ;
+  rdfs:comment "stringflt1args-1 The \"string\" function with the arguments set as follows: $arg = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringflt1args-2" ;
+  rdfs:comment "stringflt1args-2 The \"string\" function with the arguments set as follows: $arg = xs:float(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringflt1args-3" ;
+  rdfs:comment "stringflt1args-3 The \"string\" function with the arguments set as follows: $arg = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringlng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringlng1args-1" ;
+  rdfs:comment "stringlng1args-1 The \"string\" function with the arguments set as follows: $arg = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringlng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringlng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringlng1args-2" ;
+  rdfs:comment "stringlng1args-2 The \"string\" function with the arguments set as follows: $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringlng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringlng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringlng1args-3" ;
+  rdfs:comment "stringlng1args-3 The \"string\" function with the arguments set as follows: $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringlng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringusht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringusht1args-1" ;
+  rdfs:comment "stringusht1args-1 The \"string\" function with the arguments set as follows: $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringusht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringusht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringusht1args-2" ;
+  rdfs:comment "stringusht1args-2 The \"string\" function with the arguments set as follows: $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringusht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringusht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringusht1args-3" ;
+  rdfs:comment "stringusht1args-3 The \"string\" function with the arguments set as follows: $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringusht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnint1args-1" ;
+  rdfs:comment "stringnint1args-1 The \"string\" function with the arguments set as follows: $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnint1args-2" ;
+  rdfs:comment "stringnint1args-2 The \"string\" function with the arguments set as follows: $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnint1args-3" ;
+  rdfs:comment "stringnint1args-3 The \"string\" function with the arguments set as follows: $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringpint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringpint1args-1" ;
+  rdfs:comment "stringpint1args-1 The \"string\" function with the arguments set as follows: $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringpint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringpint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringpint1args-2" ;
+  rdfs:comment "stringpint1args-2 The \"string\" function with the arguments set as follows: $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringpint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringpint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringpint1args-3" ;
+  rdfs:comment "stringpint1args-3 The \"string\" function with the arguments set as follows: $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringpint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringulng1args-1" ;
+  rdfs:comment "stringulng1args-1 The \"string\" function with the arguments set as follows: $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringulng1args-2" ;
+  rdfs:comment "stringulng1args-2 The \"string\" function with the arguments set as follows: $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringulng1args-3" ;
+  rdfs:comment "stringulng1args-3 The \"string\" function with the arguments set as follows: $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnpi1args-1" ;
+  rdfs:comment "stringnpi1args-1 The \"string\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnpi1args-2" ;
+  rdfs:comment "stringnpi1args-2 The \"string\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnpi1args-3" ;
+  rdfs:comment "stringnpi1args-3 The \"string\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnni1args-1" ;
+  rdfs:comment "stringnni1args-1 The \"string\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnni1args-2" ;
+  rdfs:comment "stringnni1args-2 The \"string\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringnni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringnni1args-3" ;
+  rdfs:comment "stringnni1args-3 The \"string\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringnni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringsht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringsht1args-1" ;
+  rdfs:comment "stringsht1args-1 The \"string\" function with the arguments set as follows: $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringsht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringsht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringsht1args-2" ;
+  rdfs:comment "stringsht1args-2 The \"string\" function with the arguments set as follows: $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringsht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-stringsht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-stringsht1args-3" ;
+  rdfs:comment "stringsht1args-3 The \"string\" function with the arguments set as follows: $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-stringsht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-5" ;
+  rdfs:comment "string() applied to a time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-string-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-7" ;
+  rdfs:comment "string() applied to a duration" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-string-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StringFunc-3> a mf:QueryEvaluationTest ;
+  mf:name "K-StringFunc-3" ;
+  rdfs:comment "K-StringFunc-3 `string(1) eq \"1\"`." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <K-StringFunc-3.rq> ] ;
+  mf:result <../true.srj> .

@@ -1,0 +1,6 @@
+# QT3 test case op-dateTime-less-than-5 of test set op-dateTime-less-than, which tests the XPath expression
+#   fn:not(xs:dateTime("2002-05-02T12:00:00Z") lt xs:dateTime("2002-04-02T12:00:00Z"))
+ASK {
+  BIND(! ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2002-05-02T12:00:00Z" ) < <http://www.w3.org/2001/XMLSchema#dateTime> ( "2002-04-02T12:00:00Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

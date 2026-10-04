@@ -1,0 +1,6 @@
+# QT3 test case fn-concatlng2args-5 of test set fn-concat, which tests the XPath expression
+#   fn:concat(xs:long("-92233720368547758"),xs:long("92233720368547758"))
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "-92233720368547758"^^<http://www.w3.org/2001/XMLSchema#long> ) , <http://www.w3.org/2001/XMLSchema#string> ( "92233720368547758"^^<http://www.w3.org/2001/XMLSchema#long> ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-9223372036854775892233720368547758" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-addlng2args-3 of test set op-numeric-add, which tests the XPath expression
+#   xs:long("-45058158165499290") + xs:long("-47175562203048468")
+ASK {
+  BIND(( "-45058158165499290"^^<http://www.w3.org/2001/XMLSchema#long> + "-47175562203048468"^^<http://www.w3.org/2001/XMLSchema#long> ) AS ?result)
+  FILTER(( ?result = - "92233720368547758"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

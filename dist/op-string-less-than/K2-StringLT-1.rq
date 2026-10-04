@@ -1,0 +1,6 @@
+# QT3 test case K2-StringLT-1 of test set op-string-less-than, which tests the XPath expression
+#   "" lt "𑅰"
+ASK {
+  BIND(( "" < "𑅰" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

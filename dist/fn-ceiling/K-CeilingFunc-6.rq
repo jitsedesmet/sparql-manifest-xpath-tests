@@ -1,0 +1,6 @@
+# QT3 test case K-CeilingFunc-6 of test set fn-ceiling, which tests the XPath expression
+#   ceiling("a string")
+ASK {
+  BIND(CEIL( "a string" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

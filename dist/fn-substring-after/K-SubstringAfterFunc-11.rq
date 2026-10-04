@@ -1,0 +1,6 @@
+# QT3 test case K-SubstringAfterFunc-11 of test set fn-substring-after, which tests the XPath expression
+#   substring-after("a string", "not in other") eq ""
+ASK {
+  BIND(( STRAFTER( "a string" , "not in other" ) = "" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

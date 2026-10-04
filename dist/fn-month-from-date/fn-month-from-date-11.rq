@@ -1,0 +1,6 @@
+# QT3 test case fn-month-from-date-11 of test set fn-month-from-date, which tests the XPath expression
+#   fn:month-from-date(xs:date("1970-01-01Z")) div fn:month-from-date(xs:date("1970-01-01Z"))
+ASK {
+  BIND(( MONTH( <http://www.w3.org/2001/XMLSchema#date> ( "1970-01-01Z" ) ) / MONTH( <http://www.w3.org/2001/XMLSchema#date> ( "1970-01-01Z" ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1" ))
+}

@@ -1,0 +1,6 @@
+# QT3 test case fn-substring-after-11 of test set fn-substring-after, which tests the XPath expression
+#   fn:not(fn:substring-after("A","A"))
+ASK {
+  BIND(! STRAFTER( "A" , "A" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

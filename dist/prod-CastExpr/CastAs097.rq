@@ -1,0 +1,6 @@
+# QT3 test case CastAs097 of test set prod-CastExpr, which tests the XPath expression
+#   xs:string("-10000000") cast as xs:double
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#double> ( <http://www.w3.org/2001/XMLSchema#string> ( "-10000000" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-1.0E7" ))
+}

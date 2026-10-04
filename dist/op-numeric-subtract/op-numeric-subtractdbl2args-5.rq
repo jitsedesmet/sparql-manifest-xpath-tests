@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-subtractdbl2args-5 of test set op-numeric-subtract, which tests the XPath expression
+#   xs:double("0") - xs:double("1.7976931348623157E308")
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#double> ( "0" ) - <http://www.w3.org/2001/XMLSchema#double> ( "1.7976931348623157E308" ) ) AS ?result)
+  FILTER(( ?result = - "1.7976931348623157E308"^^<http://www.w3.org/2001/XMLSchema#double> ))
+}

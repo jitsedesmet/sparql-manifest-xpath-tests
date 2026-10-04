@@ -1,0 +1,6 @@
+# QT3 test case op-numeric-greater-thanusht2args-5 of test set op-numeric-greater-than, which tests the XPath expression
+#   xs:unsignedShort("0") gt xs:unsignedShort("65535")
+ASK {
+  BIND(( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> > "65535"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

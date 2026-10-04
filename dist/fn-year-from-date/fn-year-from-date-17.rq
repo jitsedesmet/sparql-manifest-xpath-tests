@@ -1,0 +1,6 @@
+# QT3 test case fn-year-from-date-17 of test set fn-year-from-date, which tests the XPath expression
+#   fn:year-from-date(xs:date("1970-01-01Z")) ne fn:year-from-date(xs:date("1970-01-01Z"))
+ASK {
+  BIND(( YEAR( <http://www.w3.org/2001/XMLSchema#date> ( "1970-01-01Z" ) ) != YEAR( <http://www.w3.org/2001/XMLSchema#date> ( "1970-01-01Z" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}
