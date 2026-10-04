@@ -1,0 +1,38 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "The tests of QT3 that expect an error, which also pass on engines that fail for another reason" ;
+  rdfs:comment "Generated from https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/catalog.xml" ;
+  mf:include (
+    <fn-abs/errors.ttl>
+    <fn-boolean/errors.ttl>
+    <fn-ceiling/errors.ttl>
+    <fn-encode-for-uri/errors.ttl>
+    <fn-floor/errors.ttl>
+    <fn-matches/errors.ttl>
+    <fn-replace/errors.ttl>
+    <op-add-dayTimeDuration-to-dateTime/errors.ttl>
+    <op-add-dayTimeDuration-to-time/errors.ttl>
+    <op-add-yearMonthDuration-to-date/errors.ttl>
+    <op-add-yearMonthDuration-to-dateTime/errors.ttl>
+    <op-dateTime-equal/errors.ttl>
+    <op-duration-equal/errors.ttl>
+    <op-numeric-add/errors.ttl>
+    <op-numeric-divide/errors.ttl>
+    <op-numeric-multiply/errors.ttl>
+    <op-numeric-subtract/errors.ttl>
+    <op-numeric-unary-minus/errors.ttl>
+    <op-numeric-unary-plus/errors.ttl>
+    <op-subtract-dates/errors.ttl>
+    <op-subtract-dateTimes/errors.ttl>
+    <op-subtract-dayTimeDuration-from-time/errors.ttl>
+    <op-subtract-dayTimeDurations/errors.ttl>
+    <op-subtract-times/errors.ttl>
+    <op-subtract-yearMonthDurations/errors.ttl>
+    <op-time-equal/errors.ttl>
+    <prod-CastExpr/errors.ttl>
+    <prod-GeneralComp.eq/errors.ttl>
+    <prod-GeneralComp.ne/errors.ttl>
+  ) .

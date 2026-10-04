@@ -1,6 +1,7 @@
 # QT3 test case op-add-yearMonthDuration-to-dateTime-9 of test set op-add-yearMonthDuration-to-dateTime, which tests the XPath expression
 #   fn:string((xs:dateTime("1993-12-09T10:10:10Z") + xs:yearMonthDuration("P03Y03M"))) and fn:string((xs:dateTime("1993-12-09T10:10:10Z") + xs:yearMonthDuration("P03Y03M")))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L130
+# The test needs the constructor function xsd:yearMonthDuration, + on xsd:yearMonthDuration, + on xsd:dateTime, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1993-12-09T10:10:10Z" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P03Y03M" ) ) ) && <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1993-12-09T10:10:10Z" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P03Y03M" ) ) ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

@@ -1,6 +1,7 @@
 # QT3 test case op-subtract-times2args-3 of test set op-subtract-times, which tests the XPath expression
 #   xs:time("23:59:59Z") - xs:time("00:00:00Z")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml#L42
+# The test needs the constructor function xsd:time, - on xsd:time, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "23:59:59Z" ) - <http://www.w3.org/2001/XMLSchema#time> ( "00:00:00Z" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "PT23H59M59S" ))

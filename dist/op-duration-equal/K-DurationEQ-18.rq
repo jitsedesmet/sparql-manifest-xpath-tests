@@ -1,6 +1,7 @@
 # QT3 test case K-DurationEQ-18 of test set op-duration-equal, which tests the XPath expression
 #   xs:duration("PT0S") eq xs:yearMonthDuration("P0M")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L789
+# The test needs the constructor function xsd:duration, the constructor function xsd:yearMonthDuration, = on xsd:duration, = on xsd:yearMonthDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#duration> ( "PT0S" ) = <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P0M" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

@@ -1,6 +1,7 @@
 # QT3 test case op-add-dayTimeDuration-to-dateTime-8 of test set op-add-dayTimeDuration-to-dateTime, which tests the XPath expression
 #   (xs:dateTime("0001-01-01T11:11:11Z") + xs:dayTimeDuration("-P11DT02H02M"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-dateTime.xml#L209
+# The test needs the constructor function xsd:dayTimeDuration, + on xsd:dayTimeDuration, + on xsd:dateTime, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "0001-01-01T11:11:11Z" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "-P11DT02H02M" ) ) AS ?result)
   FILTER(( ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-0001-12-21T09:09:11Z" ) || ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0000-12-21T09:09:11Z" ) ))

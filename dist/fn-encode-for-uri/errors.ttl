@@ -1,0 +1,16 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-encode-for-uri" ;
+  mf:entries (
+    <#fn-encode-for-uri1args-6>
+  ) .
+
+<#fn-encode-for-uri1args-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri1args-6" ;
+  rdfs:comment "Test encode-for-uri with invalid argument type" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml> ;
+  mf:action [ qt:query <fn-encode-for-uri1args-6.rq> ] ;
+  mf:result <../true.srj> .

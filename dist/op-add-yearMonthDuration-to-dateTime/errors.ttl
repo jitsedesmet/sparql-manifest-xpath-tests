@@ -1,0 +1,40 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-add-yearMonthDuration-to-dateTime" ;
+  mf:entries (
+    <#K-YearMonthDurationAddDT-3>
+    <#K-YearMonthDurationAddDT-4>
+    <#K-YearMonthDurationAddDT-5>
+    <#K-YearMonthDurationAddDT-6>
+  ) .
+
+<#K-YearMonthDurationAddDT-3> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAddDT-3" ;
+  rdfs:comment "The '+' operator is not available between xs:date and xs:time." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationAddDT-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAddDT-4> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAddDT-4" ;
+  rdfs:comment "The '+' operator is not available between xs:time and xs:date." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationAddDT-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAddDT-5> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAddDT-5" ;
+  rdfs:comment "The '+' operator is not available between xs:date and xs:time." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationAddDT-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAddDT-6> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAddDT-6" ;
+  rdfs:comment "The '+' operator is not available between xs:time and xs:date." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-YearMonthDurationAddDT-6.rq> ] ;
+  mf:result <../true.srj> .

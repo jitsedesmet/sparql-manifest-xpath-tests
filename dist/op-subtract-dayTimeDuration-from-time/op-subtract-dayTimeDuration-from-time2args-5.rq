@@ -1,6 +1,7 @@
 # QT3 test case op-subtract-dayTimeDuration-from-time2args-5 of test set op-subtract-dayTimeDuration-from-time, which tests the XPath expression
 #   xs:time("00:00:00Z") - xs:dayTimeDuration("P31DT23H59M59S")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L79
+# The test needs the constructor function xsd:time, the constructor function xsd:dayTimeDuration, - on xsd:time, - on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "00:00:00Z" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P31DT23H59M59S" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "00:00:01Z" ))

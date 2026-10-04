@@ -1,6 +1,7 @@
 # QT3 test case op-subtract-dayTimeDurations-11 of test set op-subtract-dayTimeDurations, which tests the XPath expression
 #   (xs:dayTimeDuration("P42DT10H10M") - xs:dayTimeDuration("P10DT10H10M")) div (xs:dayTimeDuration("P20DT10H10M") - xs:dayTimeDuration("P18DT10H10M"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDurations.xml#L257
+# The test needs the constructor function xsd:dayTimeDuration, - on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P42DT10H10M" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P10DT10H10M" ) ) / ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P20DT10H10M" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P18DT10H10M" ) ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "16" ))

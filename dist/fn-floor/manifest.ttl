@@ -46,7 +46,6 @@
     <#fn-floorsht1args-3>
     <#K-FloorFunc-4>
     <#K-FloorFunc-5>
-    <#K-FloorFunc-6>
     <#fn-floor-decimal-1>
     <#fn-floor-decimal-2>
     <#fn-floor-decimal-3>
@@ -363,13 +362,6 @@
   rdfs:comment "A test whose essence is: `floor(-10.5) eq -11`." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml> ;
   mf:action [ qt:query <K-FloorFunc-5.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-FloorFunc-6> a mf:QueryEvaluationTest ;
-  mf:name "K-FloorFunc-6" ;
-  rdfs:comment "A test whose essence is: `floor(\"a string\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml> ;
-  mf:action [ qt:query <K-FloorFunc-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-floor-decimal-1> a mf:QueryEvaluationTest ;

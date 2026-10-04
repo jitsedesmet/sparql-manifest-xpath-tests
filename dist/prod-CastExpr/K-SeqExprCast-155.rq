@@ -1,6 +1,7 @@
 # QT3 test case K-SeqExprCast-155 of test set prod-CastExpr, which tests the XPath expression
 #   xs:string(xs:duration("-P0010DT0010H0010M0010S")) eq "-P10DT10H10M10S"
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8633
+# The test needs the constructor function xsd:duration, xsd:string on xsd:duration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#duration> ( "-P0010DT0010H0010M0010S" ) ) = "-P10DT10H10M10S" ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

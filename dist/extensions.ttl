@@ -1,0 +1,47 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "The tests of QT3 that need XPath functions or operators beyond what SPARQL defines" ;
+  rdfs:comment "Generated from https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/catalog.xml" ;
+  mf:include (
+    <fn-day-from-date/extensions.ttl>
+    <fn-hours-from-time/extensions.ttl>
+    <fn-minutes-from-time/extensions.ttl>
+    <fn-month-from-date/extensions.ttl>
+    <fn-seconds-from-time/extensions.ttl>
+    <fn-string/extensions.ttl>
+    <fn-substring/extensions.ttl>
+    <fn-timezone-from-dateTime/extensions.ttl>
+    <fn-year-from-date/extensions.ttl>
+    <op-add-dayTimeDurations/extensions.ttl>
+    <op-add-dayTimeDuration-to-date/extensions.ttl>
+    <op-add-dayTimeDuration-to-dateTime/extensions.ttl>
+    <op-add-dayTimeDuration-to-time/extensions.ttl>
+    <op-add-yearMonthDurations/extensions.ttl>
+    <op-add-yearMonthDuration-to-date/extensions.ttl>
+    <op-add-yearMonthDuration-to-dateTime/extensions.ttl>
+    <op-date-equal/extensions.ttl>
+    <op-date-greater-than/extensions.ttl>
+    <op-date-less-than/extensions.ttl>
+    <op-dayTimeDuration-greater-than/extensions.ttl>
+    <op-dayTimeDuration-less-than/extensions.ttl>
+    <op-duration-equal/extensions.ttl>
+    <op-subtract-dates/extensions.ttl>
+    <op-subtract-dateTimes/extensions.ttl>
+    <op-subtract-dayTimeDuration-from-date/extensions.ttl>
+    <op-subtract-dayTimeDuration-from-dateTime/extensions.ttl>
+    <op-subtract-dayTimeDuration-from-time/extensions.ttl>
+    <op-subtract-dayTimeDurations/extensions.ttl>
+    <op-subtract-times/extensions.ttl>
+    <op-subtract-yearMonthDuration-from-date/extensions.ttl>
+    <op-subtract-yearMonthDuration-from-dateTime/extensions.ttl>
+    <op-subtract-yearMonthDurations/extensions.ttl>
+    <op-time-equal/extensions.ttl>
+    <op-time-greater-than/extensions.ttl>
+    <op-time-less-than/extensions.ttl>
+    <op-yearMonthDuration-greater-than/extensions.ttl>
+    <op-yearMonthDuration-less-than/extensions.ttl>
+    <prod-CastExpr/extensions.ttl>
+  ) .

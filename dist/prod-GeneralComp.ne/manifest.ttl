@@ -11,11 +11,6 @@
     <#K-GenCompNE-14>
     <#K-GenCompNE-15>
     <#K-GenCompNE-27>
-    <#K-GenCompNE-33>
-    <#K-GenCompNE-34>
-    <#K-GenCompNE-36>
-    <#K-GenCompNE-37>
-    <#K-GenCompNE-38>
   ) .
 
 <#generalexpression111> a mf:QueryEvaluationTest ;
@@ -58,39 +53,4 @@
   rdfs:comment "General comparison where the operands are various various sequence of xs:integers." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml> ;
   mf:action [ qt:query <K-GenCompNE-27.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-GenCompNE-33> a mf:QueryEvaluationTest ;
-  mf:name "K-GenCompNE-33" ;
-  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml> ;
-  mf:action [ qt:query <K-GenCompNE-33.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-GenCompNE-34> a mf:QueryEvaluationTest ;
-  mf:name "K-GenCompNE-34" ;
-  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml> ;
-  mf:action [ qt:query <K-GenCompNE-34.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-GenCompNE-36> a mf:QueryEvaluationTest ;
-  mf:name "K-GenCompNE-36" ;
-  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml> ;
-  mf:action [ qt:query <K-GenCompNE-36.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-GenCompNE-37> a mf:QueryEvaluationTest ;
-  mf:name "K-GenCompNE-37" ;
-  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml> ;
-  mf:action [ qt:query <K-GenCompNE-37.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-GenCompNE-38> a mf:QueryEvaluationTest ;
-  mf:name "K-GenCompNE-38" ;
-  rdfs:comment "General comparison which fails due to invalid operator combination or casting." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml> ;
-  mf:action [ qt:query <K-GenCompNE-38.rq> ] ;
   mf:result <../true.srj> .

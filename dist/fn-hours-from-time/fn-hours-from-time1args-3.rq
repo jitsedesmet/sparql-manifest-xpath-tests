@@ -1,6 +1,7 @@
 # QT3 test case fn-hours-from-time1args-3 of test set fn-hours-from-time, which tests the XPath expression
 #   fn:hours-from-time(xs:time("23:59:59Z"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/hours-from-time.xml#L25
+# The test needs the constructor function xsd:time, HOURS on xsd:time, which SPARQL does not define
 ASK {
   BIND(HOURS( <http://www.w3.org/2001/XMLSchema#time> ( "23:59:59Z" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "23" ))

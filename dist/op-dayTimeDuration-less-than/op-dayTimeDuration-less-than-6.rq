@@ -1,6 +1,7 @@
 # QT3 test case op-dayTimeDuration-less-than-6 of test set op-dayTimeDuration-less-than, which tests the XPath expression
 #   fn:not(xs:dayTimeDuration("P10DT09H") le xs:dayTimeDuration("P09DT09H"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L235
+# The test needs the constructor function xsd:dayTimeDuration, <= on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(! ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P10DT09H" ) <= <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P09DT09H" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

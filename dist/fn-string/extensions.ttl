@@ -1,0 +1,24 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-string" ;
+  mf:entries (
+    <#fn-string-5>
+    <#fn-string-7>
+  ) .
+
+<#fn-string-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-5" ;
+  rdfs:comment "string() applied to a time" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-string-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-string-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-string-7" ;
+  rdfs:comment "string() applied to a duration" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml> ;
+  mf:action [ qt:query <fn-string-7.rq> ] ;
+  mf:result <../true.srj> .

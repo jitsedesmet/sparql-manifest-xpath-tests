@@ -22,10 +22,12 @@ jobs:
         with:
           node-version: 24.x
           cache: yarn
+      - id: qt3
+        run: echo "commit=$(sed -n "s/^const QT3_COMMIT = '\([0-9a-f]*\)';$/\1/p" src/generate.ts)" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v6
         with:
           path: .cache
-          key: qt3-${{ hashFiles('src/generate.ts') }}
+          key: qt3-${{ steps.qt3.outputs.commit }}
       - run: yarn install --frozen-lockfile
       - run: yarn run typecheck
       - run: yarn run generate

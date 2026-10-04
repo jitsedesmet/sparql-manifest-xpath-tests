@@ -42,7 +42,6 @@
     <#op-numeric-multiplynni2args-3>
     <#op-numeric-multiplynni2args-4>
     <#op-numeric-multiplynni2args-5>
-    <#op-numeric-multiplymix2args-2>
     <#op-numeric-multiplymix2args-3>
     <#K-NumericMultiply-1>
     <#K-NumericMultiply-2>
@@ -52,8 +51,6 @@
     <#K-NumericMultiply-22>
     <#K-NumericMultiply-23>
     <#K-NumericMultiply-24>
-    <#K-NumericMultiply-28>
-    <#K-NumericMultiply-29>
   ) .
 
 <#op-numeric-multiplydec2args-1> a mf:QueryEvaluationTest ;
@@ -315,13 +312,6 @@
   mf:action [ qt:query <op-numeric-multiplynni2args-5.rq> ] ;
   mf:result <../true.srj> .
 
-<#op-numeric-multiplymix2args-2> a mf:QueryEvaluationTest ;
-  mf:name "op-numeric-multiplymix2args-2" ;
-  rdfs:comment "Simple multiplication test pass string for second operator" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml> ;
-  mf:action [ qt:query <op-numeric-multiplymix2args-2.rq> ] ;
-  mf:result <../true.srj> .
-
 <#op-numeric-multiplymix2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-multiplymix2args-3" ;
   rdfs:comment "Simple multiplication test, second operator cast string to integer" ;
@@ -383,18 +373,4 @@
   rdfs:comment "A test whose essence is: `string(3 * xs:double(\"NaN\")) eq \"NaN\"`." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml> ;
   mf:action [ qt:query <K-NumericMultiply-24.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-NumericMultiply-28> a mf:QueryEvaluationTest ;
-  mf:name "K-NumericMultiply-28" ;
-  rdfs:comment "Invoke the '*' operator with invalid operands." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml> ;
-  mf:action [ qt:query <K-NumericMultiply-28.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-NumericMultiply-29> a mf:QueryEvaluationTest ;
-  mf:name "K-NumericMultiply-29" ;
-  rdfs:comment "Invoke the '*' operator with invalid operands." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml> ;
-  mf:action [ qt:query <K-NumericMultiply-29.rq> ] ;
   mf:result <../true.srj> .

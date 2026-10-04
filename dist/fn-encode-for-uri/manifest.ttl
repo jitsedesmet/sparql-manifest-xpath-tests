@@ -9,7 +9,6 @@
     <#fn-encode-for-uri1args-2>
     <#fn-encode-for-uri1args-3>
     <#fn-encode-for-uri1args-4>
-    <#fn-encode-for-uri1args-6>
     <#fn-encode-for-uri-1>
     <#fn-encode-for-uri-2>
     <#fn-encode-for-uri-3>
@@ -56,13 +55,6 @@
   rdfs:comment "Test encode-for-uri with zero-length string argument" ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml> ;
   mf:action [ qt:query <fn-encode-for-uri1args-4.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-encode-for-uri1args-6> a mf:QueryEvaluationTest ;
-  mf:name "fn-encode-for-uri1args-6" ;
-  rdfs:comment "Test encode-for-uri with invalid argument type" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml> ;
-  mf:action [ qt:query <fn-encode-for-uri1args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-encode-for-uri-1> a mf:QueryEvaluationTest ;

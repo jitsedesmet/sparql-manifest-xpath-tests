@@ -1,6 +1,7 @@
 # QT3 test case op-yearMonthDuration-equal2args-18 of test set op-duration-equal, which tests the XPath expression
 #   xs:yearMonthDuration("P2030Y12M") ge xs:yearMonthDuration("P0Y0M")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L405
+# The test needs the constructor function xsd:yearMonthDuration, >= on xsd:yearMonthDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P2030Y12M" ) >= <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P0Y0M" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

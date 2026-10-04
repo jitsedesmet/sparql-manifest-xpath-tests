@@ -1,6 +1,7 @@
 # QT3 test case K-YearMonthDurationGT-1 of test set op-yearMonthDuration-greater-than, which tests the XPath expression
 #   xs:yearMonthDuration("P1999Y10M") gt xs:yearMonthDuration("P1999Y9M")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-greater-than.xml#L379
+# The test needs the constructor function xsd:yearMonthDuration, > on xsd:yearMonthDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1999Y10M" ) > <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1999Y9M" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

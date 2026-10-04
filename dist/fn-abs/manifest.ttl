@@ -68,26 +68,8 @@
     <#fn-abs-more-args-022>
     <#fn-abs-more-args-023>
     <#fn-abs-more-args-024>
-    <#fn-abs-more-args-025>
-    <#fn-abs-more-args-026>
-    <#fn-abs-more-args-027>
-    <#fn-abs-more-args-028>
-    <#fn-abs-more-args-033>
-    <#fn-abs-more-args-034>
-    <#fn-abs-more-args-035>
-    <#fn-abs-more-args-036>
-    <#fn-abs-more-args-077>
-    <#fn-abs-more-args-078>
-    <#fn-abs-more-args-079>
-    <#fn-abs-more-args-080>
-    <#fn-abs-more-args-081>
-    <#fn-abs-more-args-082>
-    <#fn-abs-more-args-083>
-    <#fn-abs-more-args-084>
-    <#fn-abs-more-args-085>
     <#K-ABSFunc-4>
     <#K-ABSFunc-5>
-    <#K-ABSFunc-6>
     <#K2-ABSFunc-1>
     <#K2-ABSFunc-47>
     <#K2-ABSFunc-48>
@@ -536,125 +518,6 @@
   mf:action [ qt:query <fn-abs-more-args-024.rq> ] ;
   mf:result <../true.srj> .
 
-<#fn-abs-more-args-025> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-025" ;
-  rdfs:comment "Test: fn-abs-more-args-025.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-025.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-026> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-026" ;
-  rdfs:comment "Test: fn-abs-more-args-026.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-026.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-027> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-027" ;
-  rdfs:comment "Test: fn-abs-more-args-027.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-027.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-028> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-028" ;
-  rdfs:comment "Test: fn-abs-more-args-028.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-028.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-033> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-033" ;
-  rdfs:comment "Test: fn-abs-more-args-033.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-033.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-034> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-034" ;
-  rdfs:comment "Test: fn-abs-more-args-034.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-034.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-035> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-035" ;
-  rdfs:comment "Test: fn-abs-more-args-035.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-035.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-036> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-036" ;
-  rdfs:comment "Test: fn-abs-more-args-036.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives FORG0001" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-036.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-077> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-077" ;
-  rdfs:comment "Test: fn-abs-more-args-077.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-077.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-078> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-078" ;
-  rdfs:comment "Test: fn-abs-more-args-078.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-078.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-079> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-079" ;
-  rdfs:comment "Test: fn-abs-more-args-079.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-079.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-080> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-080" ;
-  rdfs:comment "Test: fn-abs-more-args-080.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-080.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-081> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-081" ;
-  rdfs:comment "Test: fn-abs-more-args-081.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-081.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-082> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-082" ;
-  rdfs:comment "Test: fn-abs-more-args-082.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-082.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-083> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-083" ;
-  rdfs:comment "Test: fn-abs-more-args-083.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-083.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-084> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-084" ;
-  rdfs:comment "Test: fn-abs-more-args-084.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-084.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-abs-more-args-085> a mf:QueryEvaluationTest ;
-  mf:name "fn-abs-more-args-085" ;
-  rdfs:comment "Test: fn-abs-more-args-085.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: Negative Test gives XPTY0004" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <fn-abs-more-args-085.rq> ] ;
-  mf:result <../true.srj> .
-
 <#K-ABSFunc-4> a mf:QueryEvaluationTest ;
   mf:name "K-ABSFunc-4" ;
   rdfs:comment "Test: K-ABSFunc-4 `abs(10.5) eq 10.5`." ;
@@ -667,13 +530,6 @@
   rdfs:comment "Test: K-ABSFunc-5 `abs(-10.5) eq 10.5`." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
   mf:action [ qt:query <K-ABSFunc-5.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-ABSFunc-6> a mf:QueryEvaluationTest ;
-  mf:name "K-ABSFunc-6" ;
-  rdfs:comment "Test: K-ABSFunc-6 `abs(\"a string\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml> ;
-  mf:action [ qt:query <K-ABSFunc-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-ABSFunc-1> a mf:QueryEvaluationTest ;

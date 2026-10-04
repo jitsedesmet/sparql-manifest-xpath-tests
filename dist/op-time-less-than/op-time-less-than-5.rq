@@ -1,6 +1,7 @@
 # QT3 test case op-time-less-than-5 of test set op-time-less-than, which tests the XPath expression
 #   fn:not(xs:time("13:00:00Z") lt xs:time("10:00:00Z"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-less-than.xml#L250
+# The test needs the constructor function xsd:time, < on xsd:time, which SPARQL does not define
 ASK {
   BIND(! ( <http://www.w3.org/2001/XMLSchema#time> ( "13:00:00Z" ) < <http://www.w3.org/2001/XMLSchema#time> ( "10:00:00Z" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

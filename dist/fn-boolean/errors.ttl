@@ -1,0 +1,16 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-boolean" ;
+  mf:entries (
+    <#fn-boolean-050>
+  ) .
+
+<#fn-boolean-050> a mf:QueryEvaluationTest ;
+  mf:name "fn-boolean-050" ;
+  rdfs:comment "Test: fn-boolean-050.xq Written By: Carmelo Montanez Date: February 6, 2006\n         Purpose: Raise error condition FORG0006 for fn:boolean." ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
+  mf:action [ qt:query <fn-boolean-050.rq> ] ;
+  mf:result <../true.srj> .

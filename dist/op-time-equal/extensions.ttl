@@ -33,18 +33,6 @@
     <#K-TimeEQ-6>
     <#K-TimeEQ-7>
     <#K-TimeEQ-8>
-    <#K-TimeEQ-9>
-    <#K-TimeEQ-10>
-    <#K-TimeEQ-11>
-    <#K-TimeEQ-12>
-    <#K-TimeEQ-13>
-    <#K-TimeEQ-14>
-    <#K-TimeEQ-15>
-    <#K-TimeEQ-16>
-    <#K-TimeEQ-17>
-    <#K-TimeEQ-18>
-    <#K-TimeEQ-19>
-    <#K-TimeEQ-20>
     <#K2-TimeEQ-1>
     <#cbcl-time-equal-002>
     <#cbcl-time-equal-003>
@@ -252,90 +240,6 @@
   rdfs:comment "*******************************************************\n Test: K-TimeEQ-8                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset -00:00 is equal to +00:00, in xs:time. \n*******************************************************" ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
   mf:action [ qt:query <K-TimeEQ-8.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-9> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-9" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-9                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-9.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-10> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-10" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-10                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-10.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-11> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-11" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-11                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-11.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-12> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-12" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-12                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-12.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-13> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-13" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-13                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-13.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-14> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-14" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-14                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-14.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-15> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-15" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-15                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'eq' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-15.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-16> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-16" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-16                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ne' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-16.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-17> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-17" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-17                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'le' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-17.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-18> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-18" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-18                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'lt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-18.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-19> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-19" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-19                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'ge' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-19.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-TimeEQ-20> a mf:QueryEvaluationTest ;
-  mf:name "K-TimeEQ-20" ;
-  rdfs:comment "*******************************************************\n Test: K-TimeEQ-20                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The operator 'gt' is not available between xs:dateTime and xs:date . \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-equal.xml> ;
-  mf:action [ qt:query <K-TimeEQ-20.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-TimeEQ-1> a mf:QueryEvaluationTest ;

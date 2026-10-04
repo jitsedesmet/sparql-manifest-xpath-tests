@@ -91,7 +91,6 @@
     <#fn-boolean-mixed-args-046>
     <#fn-boolean-mixed-args-047>
     <#fn-boolean-mixed-args-048>
-    <#fn-boolean-050>
     <#K-SeqBooleanFunc-9>
     <#K-SeqBooleanFunc-12>
     <#K-SeqBooleanFunc-13>
@@ -709,13 +708,6 @@
   rdfs:comment "Test: fn-boolean-mixed-args-048.xq Written By: Pulkita Tyagi Date: Mon May 23\n         04:50:42 2005 Purpose: arg: int" ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
   mf:action [ qt:query <fn-boolean-mixed-args-048.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-boolean-050> a mf:QueryEvaluationTest ;
-  mf:name "fn-boolean-050" ;
-  rdfs:comment "Test: fn-boolean-050.xq Written By: Carmelo Montanez Date: February 6, 2006\n         Purpose: Raise error condition FORG0006 for fn:boolean." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/boolean.xml> ;
-  mf:action [ qt:query <fn-boolean-050.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqBooleanFunc-9> a mf:QueryEvaluationTest ;

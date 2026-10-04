@@ -1,0 +1,48 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-subtract-times" ;
+  mf:entries (
+    <#K-TimeSubtract-3>
+    <#K-TimeSubtract-4>
+    <#K-TimeSubtract-5>
+    <#K-TimeSubtract-6>
+    <#K-TimeSubtract-7>
+  ) .
+
+<#K-TimeSubtract-3> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-3" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-3                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:yearMonthDuration and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-4> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-4" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-4                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:yearMonthDuration and xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-5> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-5" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-5                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:time and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-6> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-6" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-6                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:time and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtract-7> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtract-7" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtract-7                                \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:time and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml> ;
+  mf:action [ qt:query <K-TimeSubtract-7.rq> ] ;
+  mf:result <../true.srj> .

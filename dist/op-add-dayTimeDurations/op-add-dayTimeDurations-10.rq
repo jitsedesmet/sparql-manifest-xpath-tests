@@ -1,6 +1,7 @@
 # QT3 test case op-add-dayTimeDurations-10 of test set op-add-dayTimeDurations, which tests the XPath expression
 #   fn:string((xs:dayTimeDuration("P05DT09H02M") + xs:dayTimeDuration("P03DT01H04M"))) or fn:string((xs:dayTimeDuration("P05DT05H03M") + xs:dayTimeDuration("P01DT01H03M")))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L244
+# The test needs the constructor function xsd:dayTimeDuration, + on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P05DT09H02M" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P03DT01H04M" ) ) ) || <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P05DT05H03M" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P01DT01H03M" ) ) ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

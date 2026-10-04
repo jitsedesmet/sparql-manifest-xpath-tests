@@ -1,0 +1,40 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-subtract-dayTimeDuration-from-time" ;
+  mf:entries (
+    <#K-TimeSubtractDTD-2>
+    <#K-TimeSubtractDTD-3>
+    <#K-TimeSubtractDTD-4>
+    <#K-TimeSubtractDTD-5>
+  ) .
+
+<#K-TimeSubtractDTD-2> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtractDTD-2" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtractDTD-2                             \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:yearMonthDuration and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml> ;
+  mf:action [ qt:query <K-TimeSubtractDTD-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtractDTD-3> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtractDTD-3" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtractDTD-3                             \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:time and xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml> ;
+  mf:action [ qt:query <K-TimeSubtractDTD-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtractDTD-4> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtractDTD-4" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtractDTD-4                             \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:yearMonthDuration and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml> ;
+  mf:action [ qt:query <K-TimeSubtractDTD-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtractDTD-5> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtractDTD-5" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtractDTD-5                             \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:time and xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml> ;
+  mf:action [ qt:query <K-TimeSubtractDTD-5.rq> ] ;
+  mf:result <../true.srj> .

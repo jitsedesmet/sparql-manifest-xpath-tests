@@ -65,7 +65,6 @@
     <#op-numeric-subtractsht2args-3>
     <#op-numeric-subtractsht2args-4>
     <#op-numeric-subtractsht2args-5>
-    <#op-numeric-subtractmix2args-2>
     <#op-numeric-subtractmix2args-3>
     <#K-NumericSubtract-1>
     <#K-NumericSubtract-2>
@@ -75,7 +74,6 @@
     <#K-NumericSubtract-22>
     <#K-NumericSubtract-23>
     <#K-NumericSubtract-24>
-    <#K-NumericSubtract-25>
     <#K2-NumericSubtract-1>
     <#K2-NumericSubtract-2>
     <#cbcl-numeric-subtract-001>
@@ -503,13 +501,6 @@
   mf:action [ qt:query <op-numeric-subtractsht2args-5.rq> ] ;
   mf:result <../true.srj> .
 
-<#op-numeric-subtractmix2args-2> a mf:QueryEvaluationTest ;
-  mf:name "op-numeric-subtractmix2args-2" ;
-  rdfs:comment "Simple subtraction test pass string for second operator" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
-  mf:action [ qt:query <op-numeric-subtractmix2args-2.rq> ] ;
-  mf:result <../true.srj> .
-
 <#op-numeric-subtractmix2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-subtractmix2args-3" ;
   rdfs:comment "Simple subtraction test, second operator cast string to integer" ;
@@ -571,13 +562,6 @@
   rdfs:comment "A test whose essence is: `string(3 - xs:double(\"NaN\")) eq \"NaN\"`." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
   mf:action [ qt:query <K-NumericSubtract-24.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-NumericSubtract-25> a mf:QueryEvaluationTest ;
-  mf:name "K-NumericSubtract-25" ;
-  rdfs:comment "Invoke the '-' operator with invalid operands." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
-  mf:action [ qt:query <K-NumericSubtract-25.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-NumericSubtract-1> a mf:QueryEvaluationTest ;

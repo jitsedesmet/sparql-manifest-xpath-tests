@@ -1,0 +1,40 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-add-dayTimeDuration-to-dateTime" ;
+  mf:entries (
+    <#K-DateTimeAddDTD-1>
+    <#K-DateTimeAddDTD-2>
+    <#K-DateTimeAddDTD-3>
+    <#K-DateTimeAddDTD-4>
+  ) .
+
+<#K-DateTimeAddDTD-1> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeAddDTD-1" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeAddDTD-1                              \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:date and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-DateTimeAddDTD-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeAddDTD-2> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeAddDTD-2" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeAddDTD-2                              \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:dateTime and xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-DateTimeAddDTD-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeAddDTD-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeAddDTD-3" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeAddDTD-3                              \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:time and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-DateTimeAddDTD-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeAddDTD-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeAddDTD-4" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeAddDTD-4                              \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:dateTime and xs:time. \n*******************************************************" ;
+  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-dateTime.xml> ;
+  mf:action [ qt:query <K-DateTimeAddDTD-4.rq> ] ;
+  mf:result <../true.srj> .

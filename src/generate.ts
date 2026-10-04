@@ -6,12 +6,15 @@
  * Each test case becomes an ASK query that binds the result of the XPath expression to ?result,
  * and that filters on the assertion of the test case, so the expected result of every test is true.
  * Test cases that cannot be expressed in SPARQL are left out.
+ * The tests are divided over three manifests:
+ * - manifest.ttl: the tests that only need what SPARQL defines,
+ * - extensions.ttl: the tests that need XPath functions or operators beyond what SPARQL defines, such as on xsd:date,
+ * - errors.ttl: the tests that expect an error, which also pass on engines that fail for another reason.
  *
  * Usage: yarn run generate
  */
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { GeneratorBuilder } from '@traqula/core';
 import type { Expression } from '@traqula/rules-sparql-1-1';
 import { sparql12GeneratorBuilder } from '@traqula/generator-sparql-1-2';
 import { completeGeneratorContext } from '@traqula/rules-sparql-1-2';
@@ -19,6 +22,7 @@ import fontoxpath from 'fontoxpath';
 import type { Document, Element } from 'slimdom';
 import { parseXmlDocument } from 'slimdom';
 import { assertionToSparql } from './assertions.ts';
+import { extensionReasons } from './extensions.ts';
 import { UnsupportedError, xpathToSparql } from './xpathToSparql.ts';
 
 // fontoxpath is a CommonJS module, of which Node.js cannot detect the named exports
@@ -32,7 +36,8 @@ const ROOT = join(import.meta.dirname, '..');
 const CACHE_DIR = join(ROOT, '.cache', 'qt3', QT3_COMMIT);
 const DIST_DIR = join(ROOT, 'dist');
 
-// The test sets for the functions and operators that SPARQL defines in terms of XPath.
+// The test sets for the functions and operators that SPARQL defines in terms of XPath,
+// and for the ones on the XSD datatypes that SPARQL engines commonly support as an extension, such as xsd:date.
 const TEST_SETS = new RegExp(`^(${[
   String.raw`fn-(abs|ceiling|floor|round|string-length|substring|substring-before|substring-after)`,
   String.raw`fn-(upper-case|lower-case|starts-with|ends-with|contains|encode-for-uri|concat|matches|replace)`,
@@ -59,39 +64,31 @@ const TEST_CASES_QUERY = `
     else false()) = not($dependency/@satisfied = 'false'))
   and not(test/@file)]`;
 
+/**
+ * The manifests that the tests are divided over, by kind of test.
+ */
+const KINDS = {
+  sparql: {
+    file: 'manifest.ttl',
+    label: 'The W3C XQuery and XPath Test Suite (QT3) as SPARQL query evaluation tests',
+  },
+  extensions: {
+    file: 'extensions.ttl',
+    label: 'The tests of QT3 that need XPath functions or operators beyond what SPARQL defines',
+  },
+  errors: {
+    file: 'errors.ttl',
+    label: 'The tests of QT3 that expect an error, which also pass on engines that fail for another reason',
+  },
+};
+type Kind = keyof typeof KINDS;
+
 const PREFIXES = `@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 `;
 
-// Traqula prints a prefix operator directly before its operand, which is not valid SPARQL when the operand has a prefix
-// operator too, such as `- - 1`, so such an operand is printed between brackets.
-const PREFIX_OPERATORS: Record<string, string> = { '!': '!', uplus: '+', uminus: '-' };
-
-function prefixOperator(expression: unknown): string | undefined {
-  return typeof expression === 'object' && expression !== null && 'operator' in expression ?
-    PREFIX_OPERATORS[expression.operator as string] :
-    undefined;
-}
-
-const expressionRule = sparql12GeneratorBuilder.getRule('expression');
-const generator = GeneratorBuilder.create(sparql12GeneratorBuilder).patchRule({
-  name: 'expression',
-  gImpl: (def) => {
-    const original = expressionRule.gImpl(def);
-    return (ast, context) => {
-      const operator = prefixOperator(ast);
-      const operand = operator ? (ast as { args: Expression[] }).args[0] : undefined;
-      if (operator && prefixOperator(operand)) {
-        def.PRINT_WORD(operator, '(');
-        def.SUBRULE(expressionRule, operand!);
-        def.PRINT_WORD(')');
-      } else {
-        original(ast as Expression, context);
-      }
-    };
-  },
-}).build();
+const generator = sparql12GeneratorBuilder.build();
 const generatorContext = completeGeneratorContext({});
 
 /**
@@ -154,10 +151,6 @@ function environmentVariables(testCase: Element, catalog: Document): Record<stri
 }
 
 /**
- * Generate the ASK query of a test case.
- * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
- */
-/**
  * Determine the URL of the definition of a test case on GitHub, at the line of its test-case element.
  */
 function testCaseUrl(testSetFile: string, testSetText: string, name: string): string {
@@ -166,28 +159,39 @@ function testCaseUrl(testSetFile: string, testSetText: string, name: string): st
   return `${QT3_VIEW_BASE}${testSetFile}${match ? `#L${testSetText.slice(0, match.index).split('\n').length}` : ''}`;
 }
 
-function testCaseQuery(testSetName: string, testCase: Element, catalog: Document, url: string): string {
+/**
+ * Generate the ASK query of a test case, and determine the kind of the test.
+ * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
+ */
+function testCaseQuery(testSetName: string, testCase: Element, catalog: Document, url: string):
+{ query: string; kind: Kind } {
   const variables = environmentVariables(testCase, catalog);
   const test = evaluateXPathToString('test', testCase);
   const expression = xpathToSparql(test, variables);
-  const assertion = assertionToSparql(evaluateXPathToFirstNode<Element>('result/*', testCase)!, variables);
-  const comment = test.trim().split('\n').map(line => `#   ${line.trim()}`).join('\n');
-  return `# QT3 test case ${testCase.getAttribute('name')} of test set ${testSetName}, which tests the XPath expression
+  const assertionElement = evaluateXPathToFirstNode<Element>('result/*', testCase)!;
+  const assertion = assertionToSparql(assertionElement, variables);
+  const reasons = extensionReasons(expression, assertion);
+  const kind: Kind = assertionElement.localName === 'error' ? 'errors' : (reasons.length > 0 ? 'extensions' : 'sparql');
+  // A SPARQL comment ends at a carriage return as well as at a line feed
+  const comment = test.trim().split(/\r\n?|\n/u).map(line => `#   ${line.trim()}`).join('\n');
+  const query = `# QT3 test case ${testCase.getAttribute('name')} of test set ${testSetName}, which tests the XPath expression
 ${comment}
-# The test case is defined at ${url}
+# The test case is defined at ${url}${kind === 'extensions' ? `\n# The test needs ${reasons.join(', ')}, which SPARQL does not define` : ''}
 ASK {
   BIND(${sparql(expression)} AS ?result)
   FILTER(${sparql(assertion)})
 }
 `;
+  return { query, kind };
 }
 
 async function main(): Promise<void> {
   rmSync(DIST_DIR, { recursive: true, force: true });
   const catalog = parseXmlDocument(await fetchQt3('catalog.xml'));
-  const includes: string[] = [];
+  const includes: Record<Kind, string[]> = { sparql: [], extensions: [], errors: [] };
+  const counts: Record<Kind, number> = { sparql: 0, extensions: 0, errors: 0 };
+  let testSetCount = 0;
   const skipReasons: Record<string, number> = {};
-  let generated = 0;
 
   for (const testSet of evaluateXPathToNodes<Element>('/catalog/test-set', catalog)) {
     const testSetName = testSet.getAttribute('name')!;
@@ -197,13 +201,13 @@ async function main(): Promise<void> {
     const testSetFile = testSet.getAttribute('file')!;
     const testSetText = await fetchQt3(testSetFile);
     const testSetXml = parseXmlDocument(testSetText);
-    const names: string[] = [];
-    const entries: string[] = [];
+    const entries: Record<Kind, { name: string; entry: string }[]> = { sparql: [], extensions: [], errors: [] };
     for (const testCase of evaluateXPathToNodes<Element>(TEST_CASES_QUERY, testSetXml)) {
       const name = testCase.getAttribute('name')!;
       let query: string;
+      let kind: Kind;
       try {
-        query = testCaseQuery(testSetName, testCase, catalog, testCaseUrl(testSetFile, testSetText, name));
+        ({ query, kind } = testCaseQuery(testSetName, testCase, catalog, testCaseUrl(testSetFile, testSetText, name)));
       } catch (error: unknown) {
         if (!(error instanceof UnsupportedError)) {
           throw error;
@@ -213,40 +217,49 @@ async function main(): Promise<void> {
         continue;
       }
       write(`${testSetName}/${name}.rq`, query);
-      names.push(encodeURIComponent(name));
       const description = evaluateXPathToString('description', testCase).trim();
-      entries.push(`<#${encodeURIComponent(name)}> a mf:QueryEvaluationTest ;
+      entries[kind].push({ name: encodeURIComponent(name), entry: `<#${encodeURIComponent(name)}> a mf:QueryEvaluationTest ;
   mf:name ${turtleString(name)} ;${description ? `\n  rdfs:comment ${turtleString(description)} ;` : ''}
   rdfs:seeAlso <${QT3_BASE}${testSetFile}> ;
   mf:action [ qt:query <${encodeURIComponent(name)}.rq> ] ;
-  mf:result <../true.srj> .`);
-      generated++;
+  mf:result <../true.srj> .` });
     }
-    if (entries.length > 0) {
-      write(`${testSetName}/manifest.ttl`, `${PREFIXES}
+    if (Object.values(entries).some(kindEntries => kindEntries.length > 0)) {
+      testSetCount++;
+    }
+    for (const [ kind, { file } ] of Object.entries(KINDS) as [ Kind, typeof KINDS[Kind] ][]) {
+      counts[kind] += entries[kind].length;
+      if (entries[kind].length > 0) {
+        write(`${testSetName}/${file}`, `${PREFIXES}
 <> a mf:Manifest ;
   rdfs:label ${turtleString(`QT3 test set ${testSetName}`)} ;
   mf:entries (
-${names.map(name => `    <#${name}>`).join('\n')}
+${entries[kind].map(({ name }) => `    <#${name}>`).join('\n')}
   ) .
 
-${entries.join('\n\n')}
+${entries[kind].map(({ entry }) => entry).join('\n\n')}
 `);
-      includes.push(`${testSetName}/manifest.ttl`);
+        includes[kind].push(`${testSetName}/${file}`);
+      }
     }
   }
 
-  write('manifest.ttl', `${PREFIXES}
+  for (const [ kind, { file, label } ] of Object.entries(KINDS) as [ Kind, typeof KINDS[Kind] ][]) {
+    write(file, `${PREFIXES}
 <> a mf:Manifest ;
-  rdfs:label "The W3C XQuery and XPath Test Suite (QT3) as SPARQL query evaluation tests" ;
+  rdfs:label ${turtleString(label)} ;
   rdfs:comment ${turtleString(`Generated from ${QT3_BASE}catalog.xml`)} ;
   mf:include (
-${includes.map(include => `    <${include}>`).join('\n')}
+${includes[kind].map(include => `    <${include}>`).join('\n')}
   ) .
 `);
+  }
   write('true.srj', '{ "head": {}, "boolean": true }\n');
 
-  process.stdout.write(`Generated ${generated} tests in ${includes.length} test sets\n`);
+  process.stdout.write(`Generated ${testSetCount} test sets with\n`);
+  for (const [ kind, { file } ] of Object.entries(KINDS) as [ Kind, typeof KINDS[Kind] ][]) {
+    process.stdout.write(`  ${counts[kind]} tests in ${file}\n`);
+  }
   for (const [ reason, count ] of Object.entries(skipReasons).sort(([ , a ], [ , b ]) => b - a)) {
     process.stdout.write(`  left out ${count}: ${reason}\n`);
   }

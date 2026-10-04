@@ -12,15 +12,11 @@
     <#fn-replace3args-5>
     <#fn-replace3args-6>
     <#fn-replace3args-7>
-    <#fn-replaceErr-1>
-    <#fn-replaceErr-2>
-    <#fn-replaceErr-3>
     <#fn-replace-1>
     <#fn-replace-2>
     <#fn-replace-3>
     <#fn-replace-4>
     <#fn-replace-5>
-    <#fn-replace-6>
     <#fn-replace-7>
     <#fn-replace-8>
     <#fn-replace-9>
@@ -70,20 +66,6 @@
     <#fn-replace-56>
     <#fn-replace-57>
     <#fn-replace-59>
-    <#K-ReplaceFunc-1>
-    <#K-ReplaceFunc-4>
-    <#K-ReplaceFunc-6>
-    <#K-ReplaceFunc-7>
-    <#K-ReplaceFunc-8>
-    <#K-ReplaceFunc-9>
-    <#K2-ReplaceFunc-1>
-    <#K2-ReplaceFunc-2>
-    <#K2-ReplaceFunc-3>
-    <#K2-ReplaceFunc-4>
-    <#K2-ReplaceFunc-5>
-    <#K2-ReplaceFunc-6>
-    <#K2-ReplaceFunc-7>
-    <#cbcl-fn-replace-002>
   ) .
 
 <#fn-replace3args-1> a mf:QueryEvaluationTest ;
@@ -135,27 +117,6 @@
   mf:action [ qt:query <fn-replace3args-7.rq> ] ;
   mf:result <../true.srj> .
 
-<#fn-replaceErr-1> a mf:QueryEvaluationTest ;
-  mf:name "fn-replaceErr-1" ;
-  rdfs:comment "Invalid flag for fn:matches fourth argument." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <fn-replaceErr-1.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-replaceErr-2> a mf:QueryEvaluationTest ;
-  mf:name "fn-replaceErr-2" ;
-  rdfs:comment "the value of $replacement contains a \"\\\" character that is not part of a \"\\\\\" pair, unless it is immediately followed by a \"$\" character." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <fn-replaceErr-2.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-replaceErr-3> a mf:QueryEvaluationTest ;
-  mf:name "fn-replaceErr-3" ;
-  rdfs:comment "The value of $replacement contains a \"$\" character that is not immediately followed by a digit 0-9 and not immediately preceded by a \"\\\"." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <fn-replaceErr-3.rq> ] ;
-  mf:result <../true.srj> .
-
 <#fn-replace-1> a mf:QueryEvaluationTest ;
   mf:name "fn-replace-1" ;
   rdfs:comment "Evaluation of replace function with replacement = \"*\" as an example 1 for this function." ;
@@ -189,13 +150,6 @@
   rdfs:comment "Evaluation of replace function with pattern = \"a(.)\" and replacement = \"a$1$1\" as an example 5 for this function." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
   mf:action [ qt:query <fn-replace-5.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-replace-6> a mf:QueryEvaluationTest ;
-  mf:name "fn-replace-6" ;
-  rdfs:comment "Evaluation of replace function with pattern = \".*?\" and replacement = \"$1\" as an example 6 for this function. Should raise an error" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <fn-replace-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-replace-7> a mf:QueryEvaluationTest ;
@@ -539,102 +493,4 @@
   rdfs:comment "Evaluation of replace with curly braces. SaxonJS bug 6318." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
   mf:action [ qt:query <fn-replace-59.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-ReplaceFunc-1> a mf:QueryEvaluationTest ;
-  mf:name "K-ReplaceFunc-1" ;
-  rdfs:comment "The flags argument cannot contain whitespace." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K-ReplaceFunc-1.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-ReplaceFunc-4> a mf:QueryEvaluationTest ;
-  mf:name "K-ReplaceFunc-4" ;
-  rdfs:comment "The flags argument cannot contain 'X'." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K-ReplaceFunc-4.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-ReplaceFunc-6> a mf:QueryEvaluationTest ;
-  mf:name "K-ReplaceFunc-6" ;
-  rdfs:comment "A '\\' cannot occur at the end of the line." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K-ReplaceFunc-6.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-ReplaceFunc-7> a mf:QueryEvaluationTest ;
-  mf:name "K-ReplaceFunc-7" ;
-  rdfs:comment "A '$' cannot occur at the end of the line." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K-ReplaceFunc-7.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-ReplaceFunc-8> a mf:QueryEvaluationTest ;
-  mf:name "K-ReplaceFunc-8" ;
-  rdfs:comment "A '\\' cannot be used to escape whitespace." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K-ReplaceFunc-8.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-ReplaceFunc-9> a mf:QueryEvaluationTest ;
-  mf:name "K-ReplaceFunc-9" ;
-  rdfs:comment "A '$' cannot be followed by whitespace." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K-ReplaceFunc-9.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-ReplaceFunc-1> a mf:QueryEvaluationTest ;
-  mf:name "K2-ReplaceFunc-1" ;
-  rdfs:comment "Unexpectedly ending escape." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K2-ReplaceFunc-1.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-ReplaceFunc-2> a mf:QueryEvaluationTest ;
-  mf:name "K2-ReplaceFunc-2" ;
-  rdfs:comment "Unexpectedly ending escape." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K2-ReplaceFunc-2.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-ReplaceFunc-3> a mf:QueryEvaluationTest ;
-  mf:name "K2-ReplaceFunc-3" ;
-  rdfs:comment "Use a back reference that isn't preceeded by sufficiently many captures, and therefore match the empty sequence." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K2-ReplaceFunc-3.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-ReplaceFunc-4> a mf:QueryEvaluationTest ;
-  mf:name "K2-ReplaceFunc-4" ;
-  rdfs:comment "Use a back reference inside a character class." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K2-ReplaceFunc-4.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-ReplaceFunc-5> a mf:QueryEvaluationTest ;
-  mf:name "K2-ReplaceFunc-5" ;
-  rdfs:comment "Use a back reference inside a character class(#2)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K2-ReplaceFunc-5.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-ReplaceFunc-6> a mf:QueryEvaluationTest ;
-  mf:name "K2-ReplaceFunc-6" ;
-  rdfs:comment "Use a back reference inside a character class(#3)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K2-ReplaceFunc-6.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-ReplaceFunc-7> a mf:QueryEvaluationTest ;
-  mf:name "K2-ReplaceFunc-7" ;
-  rdfs:comment "Use a back reference inside a character class(#3)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <K2-ReplaceFunc-7.rq> ] ;
-  mf:result <../true.srj> .
-
-<#cbcl-fn-replace-002> a mf:QueryEvaluationTest ;
-  mf:name "cbcl-fn-replace-002" ;
-  rdfs:comment "Tests a prepared expression which matches the empty sequence" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml> ;
-  mf:action [ qt:query <cbcl-fn-replace-002.rq> ] ;
   mf:result <../true.srj> .

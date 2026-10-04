@@ -13,6 +13,14 @@ export const F = new AstFactory();
 export const XSD = 'http://www.w3.org/2001/XMLSchema#';
 
 /**
+ * The namespaces of the XPath functions and of the XSD types, mapped onto their prefixes.
+ */
+const NAMESPACES: Record<string, string> = {
+  'http://www.w3.org/2005/xpath-functions': 'fn',
+  'http://www.w3.org/2001/XMLSchema': 'xs',
+};
+
+/**
  * Thrown for XPath expressions that have no SPARQL equivalent, so the test is left out of the manifest.
  */
 export class UnsupportedError extends Error {}
@@ -51,7 +59,7 @@ const CAST_TYPES = new Set([
  * The XSD types derived from xsd:integer, which SPARQL has no cast function for, with their value ranges.
  * Constructing them from a string literal results in a typed literal, if the string is a valid value.
  */
-const INTEGER_TYPES: Record<string, [ bigint | undefined, bigint | undefined ]> = {
+export const INTEGER_TYPES: Record<string, [ bigint | undefined, bigint | undefined ]> = {
   nonPositiveInteger: [ undefined, 0n ],
   negativeInteger: [ undefined, -1n ],
   long: [ -(2n ** 63n), (2n ** 63n) - 1n ],
@@ -184,6 +192,20 @@ function part(node: IXQueryXNode, name: string): Expression {
 }
 
 /**
+ * The prefixed name of an XQueryX element with a name, which has either a prefix or a namespace URI.
+ * @param node The XQueryX element.
+ * @param defaultPrefix The prefix of a name without prefix.
+ * @throws {UnsupportedError} If the namespace is not the one of the XPath functions or of the XSD types.
+ */
+function prefixedName(node: IXQueryXNode, defaultPrefix = ''): string {
+  const { prefix, URI: uri } = node.attributes;
+  if (uri !== undefined && !NAMESPACES[uri]) {
+    throw new UnsupportedError(`Unsupported namespace ${uri}`);
+  }
+  return `${uri === undefined ? prefix || defaultPrefix : NAMESPACES[uri]}:${node.text}`;
+}
+
+/**
  * Create a SPARQL literal, given its lexical form and the local name of its XSD datatype.
  */
 function literal(value: string, datatype: string): Expression {
@@ -303,16 +325,13 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
           if (optional) {
             throw new UnsupportedError('Unsupported cast to an optional type');
           }
-          return cast(`${atomicType.attributes.prefix}:${atomicType.text}`, part(node, 'argExpr'));
+          return cast(prefixedName(atomicType), part(node, 'argExpr'));
         },
       },
       functionCallExpr: {
         transform(node) {
           const [ functionName, args ] = node.children;
-          return functionCall(
-            `${functionName.attributes.prefix || 'fn'}:${functionName.text}`,
-            args.children as unknown as Expression[],
-          );
+          return functionCall(prefixedName(functionName, 'fn'), args.children as unknown as Expression[]);
         },
       },
     },

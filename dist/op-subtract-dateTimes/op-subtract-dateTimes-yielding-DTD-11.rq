@@ -1,6 +1,7 @@
 # QT3 test case op-subtract-dateTimes-yielding-DTD-11 of test set op-subtract-dateTimes, which tests the XPath expression
 #   (xs:dateTime("1985-07-05T07:07:07Z") - xs:dateTime("1985-07-05T07:07:07Z")) div xs:dayTimeDuration("P05DT08H11M")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L165
+# The test needs - on xsd:dateTime, the constructor function xsd:dayTimeDuration, / on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1985-07-05T07:07:07Z" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "1985-07-05T07:07:07Z" ) ) / <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P05DT08H11M" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))

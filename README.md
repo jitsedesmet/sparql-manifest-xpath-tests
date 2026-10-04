@@ -12,13 +12,21 @@
 
 **[Use the manifest at https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl](https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl).**
 
+The tests are divided over three manifests:
+
+| Manifest | Tests |
+| --- | --- |
+| [`manifest.ttl`](https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl) | Tests that only need what SPARQL defines. |
+| [`extensions.ttl`](https://sparql-manifest-xpath-tests.jitsedesmet.be/extensions.ttl) | Tests that need XPath functions and operators beyond what SPARQL defines, such as the ones on `xsd:date`, `xsd:time` and the durations, which many engines support as an extension. |
+| [`errors.ttl`](https://sparql-manifest-xpath-tests.jitsedesmet.be/errors.ttl) | Tests that only expect an error. As an engine passes these when it fails for any reason, such as not supporting a function, they say little on their own. |
+
 SPARQL defines most of its functions and operators in terms of
 [XPath and XQuery Functions and Operators](https://www.w3.org/TR/xpath-functions-31/).
 This repository turns the tests of the [W3C XQuery and XPath Test Suite (QT3)](https://github.com/w3c/qt3tests)
 for those functions and operators into [SPARQL query evaluation tests](https://www.w3.org/TR/sparql12-query/#conformance),
 so that any SPARQL engine can run them with its existing test harness,
 such as [rdf-test-suite](https://github.com/rubensworks/rdf-test-suite.js).
-The manifest includes a sub-manifest per QT3 test set.
+Each manifest includes a sub-manifest per QT3 test set.
 
 ## Run the tests
 
@@ -27,6 +35,8 @@ With rdf-test-suite, the tests can be run against an engine as follows:
 ```bash
 $ rdf-test-suite path/to/engine.js https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl -c .rdf-test-suite-cache/
 ```
+
+and likewise for `extensions.ttl` and `errors.ttl`.
 
 A locally generated version can be run by mapping the URL onto the `dist/` folder,
 with `-m 'https://sparql-manifest-xpath-tests.jitsedesmet.be/~path/to/dist/'`.
@@ -50,6 +60,12 @@ Test cases that cannot be expressed in SPARQL are left out, such as XPath expres
 and invalid values of the types derived from `xsd:integer`, which are an error in XPath but an ill-typed literal in SPARQL.
 The XPath expressions are parsed with [fontoxpath](https://github.com/FontoXML/fontoxpath),
 and the SPARQL is generated with [Traqula](https://github.com/comunica/traqula).
+
+A test needs more than SPARQL defines when it uses a datatype other than the [operand datatypes of SPARQL](https://www.w3.org/TR/sparql12-query/#operandDataTypes),
+which are `xsd:string`, `xsd:boolean`, `xsd:dateTime` and the numeric ones,
+a constructor function that SPARQL does not have,
+or a function or operator on arguments that SPARQL does not define it for, such as `SUBSTR` with an `xsd:double` position.
+Such a test explains this in a comment in its query.
 
 ## Development Setup
 
@@ -79,7 +95,9 @@ and publishes `dist/` on GitHub Pages on every push to `main`.
 
 ## License
 
-This code is copyrighted by Jitse De Smet and released under the [MIT license](http://opensource.org/licenses/MIT).
+This software is written by [Jitse De Smet](https://jitsedesmet.be/).
+
+This code is released under the [MIT license](https://opensource.org/license/MIT).
 
 The generated tests are derived from QT3, Copyright © World Wide Web Consortium,
 and are released under the [W3C Software and Document License](https://www.w3.org/copyright/software-license/).

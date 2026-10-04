@@ -1,6 +1,7 @@
 # QT3 test case K-YearFromDateFunc-5 of test set fn-year-from-date, which tests the XPath expression
 #   year-from-date(xs:date("2000-02-03")) eq 2000
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/year-from-date.xml#L245
+# The test needs the constructor function xsd:date, YEAR on xsd:date, which SPARQL does not define
 ASK {
   BIND(( YEAR( <http://www.w3.org/2001/XMLSchema#date> ( "2000-02-03" ) ) = "2000"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

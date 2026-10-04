@@ -1,6 +1,7 @@
 # QT3 test case op-duration-equal-13 of test set op-duration-equal, which tests the XPath expression
 #   xs:duration("P36D") ne xs:duration("P39D")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L117
+# The test needs the constructor function xsd:duration, != on xsd:duration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#duration> ( "P36D" ) != <http://www.w3.org/2001/XMLSchema#duration> ( "P39D" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

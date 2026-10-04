@@ -1,6 +1,7 @@
 # QT3 test case K-YearMonthDurationLT-3 of test set op-yearMonthDuration-less-than, which tests the XPath expression
 #   not(xs:yearMonthDuration("P1999Y10M") lt xs:yearMonthDuration("P1999Y9M"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml#L409
+# The test needs the constructor function xsd:yearMonthDuration, < on xsd:yearMonthDuration, which SPARQL does not define
 ASK {
   BIND(! ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1999Y10M" ) < <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1999Y9M" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

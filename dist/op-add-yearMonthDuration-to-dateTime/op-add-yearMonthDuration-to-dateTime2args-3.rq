@@ -1,6 +1,7 @@
 # QT3 test case op-add-yearMonthDuration-to-dateTime2args-3 of test set op-add-yearMonthDuration-to-dateTime, which tests the XPath expression
 #   xs:dateTime("2030-12-31T23:59:59Z") + xs:yearMonthDuration("P0Y0M")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L28
+# The test needs the constructor function xsd:yearMonthDuration, + on xsd:yearMonthDuration, + on xsd:dateTime, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2030-12-31T23:59:59Z" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P0Y0M" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "2030-12-31T23:59:59Z" ))

@@ -1,6 +1,7 @@
 # QT3 test case K-TimezoneFromDateTimeFunc-5 of test set fn-timezone-from-dateTime, which tests the XPath expression
 #   timezone-from-dateTime(xs:dateTime("2004-10-12T23:43:12Z")) eq xs:dayTimeDuration("PT0S")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L224
+# The test needs the constructor function xsd:dayTimeDuration, = on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(( TIMEZONE( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2004-10-12T23:43:12Z" ) ) = <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "PT0S" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

@@ -27,7 +27,6 @@
     <#op-add-dayTimeDuration-to-time-17>
     <#K-TimeAddDTD-1>
     <#K-TimeAddDTD-2>
-    <#K2-TimeAddDTD-1>
   ) .
 
 <#op-add-dayTimeDuration-to-time2args-1> a mf:QueryEvaluationTest ;
@@ -182,11 +181,4 @@
   rdfs:comment "*******************************************************\n Test: K-TimeAddDTD-2                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple testing involving operator '+' between xs:dayTimeDuration and xs:time. \n*******************************************************" ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-time.xml> ;
   mf:action [ qt:query <K-TimeAddDTD-2.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K2-TimeAddDTD-1> a mf:QueryEvaluationTest ;
-  mf:name "K2-TimeAddDTD-1" ;
-  rdfs:comment "*******************************************************\n Test: K2-TimeAddDTD-1                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: No '+' operator is available between xs:time and xs:time. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-time.xml> ;
-  mf:action [ qt:query <K2-TimeAddDTD-1.rq> ] ;
   mf:result <../true.srj> .

@@ -46,7 +46,6 @@
     <#fn-ceilingsht1args-3>
     <#K-CeilingFunc-4>
     <#K-CeilingFunc-5>
-    <#K-CeilingFunc-6>
     <#fn-ceiling-decimal-1>
     <#fn-ceiling-decimal-2>
     <#fn-ceiling-decimal-3>
@@ -363,13 +362,6 @@
   rdfs:comment "A test whose essence is: `ceiling(-10.5) eq -10`." ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
   mf:action [ qt:query <K-CeilingFunc-5.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-CeilingFunc-6> a mf:QueryEvaluationTest ;
-  mf:name "K-CeilingFunc-6" ;
-  rdfs:comment "A test whose essence is: `ceiling(\"a string\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml> ;
-  mf:action [ qt:query <K-CeilingFunc-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-ceiling-decimal-1> a mf:QueryEvaluationTest ;

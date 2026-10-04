@@ -44,7 +44,6 @@
     <#op-numeric-unary-plussht1args-1>
     <#op-numeric-unary-plussht1args-2>
     <#op-numeric-unary-plussht1args-3>
-    <#K-NumericUnaryPlus-1>
     <#K-NumericUnaryPlus-2>
     <#K-NumericUnaryPlus-3>
     <#K-NumericUnaryPlus-4>
@@ -329,13 +328,6 @@
   rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:short(upper bound)" ;
   rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml> ;
   mf:action [ qt:query <op-numeric-unary-plussht1args-3.rq> ] ;
-  mf:result <../true.srj> .
-
-<#K-NumericUnaryPlus-1> a mf:QueryEvaluationTest ;
-  mf:name "K-NumericUnaryPlus-1" ;
-  rdfs:comment "No unary operator is available for xs:string." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml> ;
-  mf:action [ qt:query <K-NumericUnaryPlus-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericUnaryPlus-2> a mf:QueryEvaluationTest ;
