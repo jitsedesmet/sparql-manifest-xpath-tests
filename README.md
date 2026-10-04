@@ -10,7 +10,7 @@
   <a href="https://github.com/jitsedesmet/sparql-manifest-xpath-tests/actions/workflows/pages.yml"><img src="https://github.com/jitsedesmet/sparql-manifest-xpath-tests/actions/workflows/pages.yml/badge.svg?branch=main" alt="Build Status"></a>
 </p>
 
-**[Use the manifest at https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl](https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl).**
+**[Use the manifest at https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl](https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl).**
 
 SPARQL defines most of its functions and operators in terms of
 [XPath and XQuery Functions and Operators](https://www.w3.org/TR/xpath-functions-31/).
@@ -25,11 +25,11 @@ The manifest includes a sub-manifest per QT3 test set.
 With rdf-test-suite, the tests can be run against an engine as follows:
 
 ```bash
-$ rdf-test-suite path/to/engine.js https://jitsedesmet.github.io/sparql-manifest-xpath-tests/manifest.ttl -c .rdf-test-suite-cache/
+$ rdf-test-suite path/to/engine.js https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl -c .rdf-test-suite-cache/
 ```
 
 A locally generated version can be run by mapping the URL onto the `dist/` folder,
-with `-m 'https://jitsedesmet.github.io/sparql-manifest-xpath-tests/~path/to/dist/'`.
+with `-m 'https://sparql-manifest-xpath-tests.jitsedesmet.be/~path/to/dist/'`.
 
 ## How the tests are generated
 
@@ -73,8 +73,7 @@ On every push to `main`, a GitHub Actions workflow generates the tests and publi
 
 ## License
 
-This code is copyrighted by Jitse De Smet, [the Comunica Association](https://comunica.dev/association/)
-and [Ghent University – imec](http://idlab.ugent.be/), and released under the [MIT license](http://opensource.org/licenses/MIT).
+This code is copyrighted by Jitse De Smet and released under the [MIT license](http://opensource.org/licenses/MIT).
 
 The generated tests are derived from QT3, Copyright © World Wide Web Consortium,
 and are released under the [W3C Software and Document License](https://www.w3.org/copyright/software-license/).
