@@ -68,7 +68,9 @@ After that, the tests can be generated into `dist/` as follows:
 $ yarn run generate
 ```
 
-QT3 is fetched at a fixed commit, and cached in `.cache/`.
+QT3 is fetched at a fixed commit, which is set in `src/generate.ts`, and cached in `.cache/`.
+Another GitHub Actions workflow warns, without failing, when QT3 has a newer commit,
+every week and on every push and pull request.
 
 The generated tests in `dist/` are tracked, so that every change to the published tests shows up in the git diff.
 After changing the generator, run `yarn run generate` and commit the changes in `dist/`.
