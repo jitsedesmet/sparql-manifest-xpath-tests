@@ -1,5 +1,6 @@
 # QT3 test case op-yearMonthDuration-less-than-3 of test set op-yearMonthDuration-less-than, which tests the XPath expression
 #   fn:not((xs:yearMonthDuration("P20Y10M") lt xs:yearMonthDuration("P20Y11M")))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/yearMonthDuration-less-than.xml#L187
 ASK {
   BIND(! ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P20Y10M" ) < <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P20Y11M" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))

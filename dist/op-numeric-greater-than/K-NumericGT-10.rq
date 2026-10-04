@@ -1,5 +1,6 @@
 # QT3 test case K-NumericGT-10 of test set op-numeric-greater-than, which tests the XPath expression
 #   xs:float("INF") gt 0
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-greater-than.xml#L1311
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#float> ( "INF" ) > "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

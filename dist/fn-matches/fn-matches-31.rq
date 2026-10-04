@@ -1,5 +1,6 @@
 # QT3 test case fn-matches-31 of test set fn-matches, which tests the XPath expression
 #   fn:matches("abracadabra", "(?:abra(?:cad)?)*")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L377
 ASK {
   BIND(REGEX( "abracadabra" , "(?:abra(?:cad)?)*" ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

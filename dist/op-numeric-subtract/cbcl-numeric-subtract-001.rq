@@ -1,5 +1,6 @@
 # QT3 test case cbcl-numeric-subtract-001 of test set op-numeric-subtract, which tests the XPath expression
 #   -79228162514264337593543950335.0 - 1.0 lt 0.0
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1062
 ASK {
   BIND(( ( - "79228162514264337593543950335.0"^^<http://www.w3.org/2001/XMLSchema#decimal> - "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ) < "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
   FILTER(( ( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ) || ! BOUND( ?result ) ))

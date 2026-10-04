@@ -1,5 +1,6 @@
 # QT3 test case K-NumericUnaryMinus-13 of test set op-numeric-unary-minus, which tests the XPath expression
 #   ---3 eq -3
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L466
 ASK {
   BIND(( -( -( - "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) = - "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

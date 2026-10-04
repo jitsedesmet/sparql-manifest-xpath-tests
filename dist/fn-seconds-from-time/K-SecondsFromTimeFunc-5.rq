@@ -1,5 +1,6 @@
 # QT3 test case K-SecondsFromTimeFunc-5 of test set fn-seconds-from-time, which tests the XPath expression
 #   seconds-from-time(xs:time("23:11:12.43")) eq 12.43
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-time.xml#L241
 ASK {
   BIND(( SECONDS( <http://www.w3.org/2001/XMLSchema#time> ( "23:11:12.43" ) ) = "12.43"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

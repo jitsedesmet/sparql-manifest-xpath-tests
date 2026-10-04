@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-equalusht2args-6 of test set op-numeric-equal, which tests the XPath expression
 #   xs:unsignedShort("0") ne xs:unsignedShort("0")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L592
 ASK {
   BIND(( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> != "0"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))

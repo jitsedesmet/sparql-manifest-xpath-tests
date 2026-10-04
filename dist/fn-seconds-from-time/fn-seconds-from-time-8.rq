@@ -1,5 +1,6 @@
 # QT3 test case fn-seconds-from-time-8 of test set fn-seconds-from-time, which tests the XPath expression
 #   fn:seconds-from-time(xs:time("02:00:00Z")) + fn:seconds-from-time(xs:time("10:00:10Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-time.xml#L97
 ASK {
   BIND(( SECONDS( <http://www.w3.org/2001/XMLSchema#time> ( "02:00:00Z" ) ) + SECONDS( <http://www.w3.org/2001/XMLSchema#time> ( "10:00:10Z" ) ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "10" ))

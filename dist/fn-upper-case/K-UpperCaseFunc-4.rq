@@ -1,5 +1,6 @@
 # QT3 test case K-UpperCaseFunc-4 of test set fn-upper-case, which tests the XPath expression
 #   lower-case("ABc!D") eq "abc!d"
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L279
 ASK {
   BIND(( LCASE( "ABc!D" ) = "abc!d" ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

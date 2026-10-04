@@ -1,5 +1,6 @@
 # QT3 test case K-SubstringAfterFunc-6 of test set fn-substring-after, which tests the XPath expression
 #   substring-after("tattoo", "tat") eq "too"
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L530
 ASK {
   BIND(( STRAFTER( "tattoo" , "tat" ) = "too" ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

@@ -1,5 +1,6 @@
 # QT3 test case fn-string-length1args-2 of test set fn-string-length, which tests the XPath expression
 #   fn:string-length(xs:string("This is a characte"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string-length.xml#L16
 ASK {
   BIND(STRLEN( <http://www.w3.org/2001/XMLSchema#string> ( "This is a characte" ) ) AS ?result)
   FILTER(( ?result = "18"^^<http://www.w3.org/2001/XMLSchema#integer> ))

@@ -1,5 +1,6 @@
 # QT3 test case fn-ceilingusht1args-3 of test set fn-ceiling, which tests the XPath expression
 #   fn:ceiling(xs:unsignedShort("65535"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml#L291
 ASK {
   BIND(CEIL( "65535"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) AS ?result)
   FILTER(( ?result = "65535"^^<http://www.w3.org/2001/XMLSchema#integer> ))

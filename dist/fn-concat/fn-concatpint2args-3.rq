@@ -1,5 +1,6 @@
 # QT3 test case fn-concatpint2args-3 of test set fn-concat, which tests the XPath expression
 #   fn:concat(xs:positiveInteger("999999999999999999"),xs:positiveInteger("1"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L385
 ASK {
   BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> ) , <http://www.w3.org/2001/XMLSchema#string> ( "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "9999999999999999991" ))

@@ -1,5 +1,6 @@
 # QT3 test case K2-MatchesFunc-16 of test set fn-matches, which tests the XPath expression
 #   fn:matches("input", "[0-9-.]*/")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1036
 ASK {
   BIND(REGEX( "input" , "[0-9-.]*/" ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "false" ))

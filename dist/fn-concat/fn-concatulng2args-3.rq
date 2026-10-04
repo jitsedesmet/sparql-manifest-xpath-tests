@@ -1,5 +1,6 @@
 # QT3 test case fn-concatulng2args-3 of test set fn-concat, which tests the XPath expression
 #   fn:concat(xs:unsignedLong("184467440737095516"),xs:unsignedLong("0"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L430
 ASK {
   BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "184467440737095516"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) , <http://www.w3.org/2001/XMLSchema#string> ( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1844674407370955160" ))

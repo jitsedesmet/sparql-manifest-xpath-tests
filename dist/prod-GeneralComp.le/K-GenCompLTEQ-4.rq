@@ -1,5 +1,6 @@
 # QT3 test case K-GenCompLTEQ-4 of test set prod-GeneralComp.le, which tests the XPath expression
 #   1 <= 1
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.le.xml#L1039
 ASK {
   BIND(( "1"^^<http://www.w3.org/2001/XMLSchema#integer> <= "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

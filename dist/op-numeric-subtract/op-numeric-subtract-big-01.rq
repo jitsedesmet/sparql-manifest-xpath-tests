@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-subtract-big-01 of test set op-numeric-subtract, which tests the XPath expression
 #   (-79228162514264337593543950335.0 - 1.0) cast as xs:string
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1165
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#string> ( ( - "79228162514264337593543950335.0"^^<http://www.w3.org/2001/XMLSchema#decimal> - "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) AS ?result)
   FILTER(( ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-79228162514264337593543950336" ) || ! BOUND( ?result ) ))

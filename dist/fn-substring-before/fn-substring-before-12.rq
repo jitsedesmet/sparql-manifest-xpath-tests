@@ -1,5 +1,6 @@
 # QT3 test case fn-substring-before-12 of test set fn-substring-before, which tests the XPath expression
 #   fn:not(fn:substring-before("A","B"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L133
 ASK {
   BIND(! STRBEFORE( "A" , "B" ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

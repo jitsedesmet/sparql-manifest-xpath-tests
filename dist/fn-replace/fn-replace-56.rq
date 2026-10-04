@@ -1,5 +1,6 @@
 # QT3 test case fn-replace-56 of test set fn-replace, which tests the XPath expression
 #   replace('10%', '^\d*\.?\d+', '')
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L605
 ASK {
   BIND(REPLACE( "10%" , "^\\d*\\.?\\d+" , "" ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "%" ))

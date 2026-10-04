@@ -1,5 +1,6 @@
 # QT3 test case K-NumericDivide-32 of test set op-numeric-divide, which tests the XPath expression
 #   "3" div "3"
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L912
 ASK {
   BIND(( "3" / "3" ) AS ?result)
   FILTER(! BOUND( ?result ))

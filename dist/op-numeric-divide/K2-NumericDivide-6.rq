@@ -1,5 +1,6 @@
 # QT3 test case K2-NumericDivide-6 of test set op-numeric-divide, which tests the XPath expression
 #   -1 div 0e0
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1080
 ASK {
   BIND(( - "1"^^<http://www.w3.org/2001/XMLSchema#integer> / "0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-INF" ))

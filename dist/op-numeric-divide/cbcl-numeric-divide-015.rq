@@ -1,5 +1,6 @@
 # QT3 test case cbcl-numeric-divide-015 of test set op-numeric-divide, which tests the XPath expression
 #   10000000000000000000000000000.0 div 0.1 gt 0
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1403
 ASK {
   BIND(( ( "10000000000000000000000000000.0"^^<http://www.w3.org/2001/XMLSchema#decimal> / "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> ) > "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ! BOUND( ?result ) || ( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ) ))

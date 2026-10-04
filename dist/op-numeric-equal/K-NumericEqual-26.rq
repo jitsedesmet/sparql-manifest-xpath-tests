@@ -1,5 +1,6 @@
 # QT3 test case K-NumericEqual-26 of test set op-numeric-equal, which tests the XPath expression
 #   xs:double("0") ne xs:double("-INF")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1414
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#double> ( "0" ) != <http://www.w3.org/2001/XMLSchema#double> ( "-INF" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

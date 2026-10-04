@@ -1,5 +1,6 @@
 # QT3 test case op-subtract-times-3 of test set op-subtract-times, which tests the XPath expression
 #   xs:time("17:00:00-06:00") - xs:time("08:00:00+09:00")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml#L128
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "17:00:00-06:00" ) - <http://www.w3.org/2001/XMLSchema#time> ( "08:00:00+09:00" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "P1D" ))

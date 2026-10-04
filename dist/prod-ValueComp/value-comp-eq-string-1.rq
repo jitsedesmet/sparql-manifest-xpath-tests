@@ -1,5 +1,6 @@
 # QT3 test case value-comp-eq-string-1 of test set prod-ValueComp, which tests the XPath expression
 #   "abc" eq concat("a", "bc")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ValueComp.xml#L586
 ASK {
   BIND(( "abc" = CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "a" ) , <http://www.w3.org/2001/XMLSchema#string> ( "bc" ) ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

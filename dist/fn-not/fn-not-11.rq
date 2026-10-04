@@ -1,5 +1,6 @@
 # QT3 test case fn-not-11 of test set fn-not, which tests the XPath expression
 #   fn:not("true") = fn:not("true")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L448
 ASK {
   BIND(( ! "true" = ! "true" ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

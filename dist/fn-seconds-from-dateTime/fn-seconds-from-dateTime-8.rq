@@ -1,5 +1,6 @@
 # QT3 test case fn-seconds-from-dateTime-8 of test set fn-seconds-from-dateTime, which tests the XPath expression
 #   fn:seconds-from-dateTime(xs:dateTime("1970-01-01T00:00:10Z")) + fn:seconds-from-dateTime(xs:dateTime("1970-01-01T10:00:11Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L98
 ASK {
   BIND(( SECONDS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T00:00:10Z" ) ) + SECONDS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T10:00:11Z" ) ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "21" ))

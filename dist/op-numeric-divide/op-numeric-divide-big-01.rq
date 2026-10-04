@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-divide-big-01 of test set op-numeric-divide, which tests the XPath expression
 #   (10000000000000000000000000000.0 div 0.1) cast as xs:string
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1415
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#string> ( ( "10000000000000000000000000000.0"^^<http://www.w3.org/2001/XMLSchema#decimal> / "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) AS ?result)
   FILTER(( ! BOUND( ?result ) || ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "100000000000000000000000000000" ) ))

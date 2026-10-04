@@ -1,5 +1,6 @@
 # QT3 test case fn-substring-29 of test set fn-substring, which tests the XPath expression
 #   substring("𐀁𐀁", 3)
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L269
 ASK {
   BIND(SUBSTR( "𐀁𐀁" , "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ?result = "" ))

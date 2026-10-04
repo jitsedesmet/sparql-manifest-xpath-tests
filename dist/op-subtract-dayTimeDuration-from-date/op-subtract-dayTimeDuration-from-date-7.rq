@@ -1,5 +1,6 @@
 # QT3 test case op-subtract-dayTimeDuration-from-date-7 of test set op-subtract-dayTimeDuration-from-date, which tests the XPath expression
 #   fn:string(xs:date("1989-07-05Z") - xs:dayTimeDuration("P01DT09H02M"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-date.xml#L192
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#date> ( "1989-07-05Z" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P01DT09H02M" ) ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1989-07-03Z" ))

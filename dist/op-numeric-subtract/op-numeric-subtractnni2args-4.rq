@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-subtractnni2args-4 of test set op-numeric-subtract, which tests the XPath expression
 #   xs:nonNegativeInteger("303884545991464527") - xs:nonNegativeInteger("303884545991464527")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L484
 ASK {
   BIND(( "303884545991464527"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> - "303884545991464527"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
   FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))

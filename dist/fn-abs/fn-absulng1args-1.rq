@@ -1,5 +1,6 @@
 # QT3 test case fn-absulng1args-1 of test set fn-abs, which tests the XPath expression
 #   fn:abs(xs:unsignedLong("0"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L453
 ASK {
   BIND(ABS( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
   FILTER(( ( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> , <http://www.w3.org/2001/XMLSchema#negativeInteger> , <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#positiveInteger> ) ) ))

@@ -1,5 +1,6 @@
 # QT3 test case K-SeqExprCast-147 of test set prod-CastExpr, which tests the XPath expression
 #   xs:duration("+P1Y2M123DT10H30M99S")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8561
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#duration> ( "+P1Y2M123DT10H30M99S" ) AS ?result)
   FILTER(! BOUND( ?result ))

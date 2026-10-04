@@ -1,5 +1,6 @@
 # QT3 test case fn-minutes-from-dateTime-19 of test set fn-minutes-from-dateTime, which tests the XPath expression
 #   fn:minutes-from-dateTime(xs:dateTime("1970-01-01T10:10:00Z")) ge fn:minutes-from-dateTime(xs:dateTime("1970-01-01T10:10:00Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-dateTime.xml#L197
 ASK {
   BIND(( MINUTES( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T10:10:00Z" ) ) >= MINUTES( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T10:10:00Z" ) ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

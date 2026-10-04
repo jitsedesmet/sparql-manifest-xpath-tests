@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-equalintg2args-6 of test set op-numeric-equal, which tests the XPath expression
 #   xs:integer("-999999999999999999") ne xs:integer("-999999999999999999")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L142
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#integer> ( "-999999999999999999" ) != <http://www.w3.org/2001/XMLSchema#integer> ( "-999999999999999999" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))

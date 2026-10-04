@@ -1,5 +1,6 @@
 # QT3 test case K-ReplaceFunc-9 of test set fn-replace, which tests the XPath expression
 #   replace("input", "in", "thisIsInvalid$ ")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L718
 ASK {
   BIND(REPLACE( "input" , "in" , "thisIsInvalid$ " ) AS ?result)
   FILTER(! BOUND( ?result ))

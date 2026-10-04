@@ -1,5 +1,6 @@
 # QT3 test case K-TimeSubtract-7 of test set op-subtract-times, which tests the XPath expression
 #   xs:time("08:01:23") div xs:time("08:01:23")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-times.xml#L447
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "08:01:23" ) / <http://www.w3.org/2001/XMLSchema#time> ( "08:01:23" ) ) AS ?result)
   FILTER(! BOUND( ?result ))

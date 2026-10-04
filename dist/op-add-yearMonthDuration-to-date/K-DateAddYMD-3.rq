@@ -1,5 +1,6 @@
 # QT3 test case K-DateAddYMD-3 of test set op-add-yearMonthDuration-to-date, which tests the XPath expression
 #   xs:yearMonthDuration("P1Y") - xs:date("1999-08-12")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-date.xml#L369
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1Y" ) - <http://www.w3.org/2001/XMLSchema#date> ( "1999-08-12" ) ) AS ?result)
   FILTER(! BOUND( ?result ))

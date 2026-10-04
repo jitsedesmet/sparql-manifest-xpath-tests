@@ -1,5 +1,6 @@
 # QT3 test case K2-ReplaceFunc-7 of test set fn-replace, which tests the XPath expression
 #   replace("abcd", "1[asd\0]", "")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L781
 ASK {
   BIND(REPLACE( "abcd" , "1[asd\\0]" , "" ) AS ?result)
   FILTER(! BOUND( ?result ))

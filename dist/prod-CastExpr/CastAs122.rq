@@ -1,5 +1,6 @@
 # QT3 test case CastAs122 of test set prod-CastExpr, which tests the XPath expression
 #   xs:string("2000-01-16T00:00:00Z") cast as xs:dateTime
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1491
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#dateTime> ( <http://www.w3.org/2001/XMLSchema#string> ( "2000-01-16T00:00:00Z" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "2000-01-16T00:00:00Z" ))

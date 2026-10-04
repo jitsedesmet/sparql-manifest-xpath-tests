@@ -1,5 +1,6 @@
 # QT3 test case op-date-greater-than-2 of test set op-date-greater-than, which tests the XPath expression
 #   (xs:date("2004-12-25-12:00") gt xs:date("2004-12-26+12:00"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-greater-than.xml#L202
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#date> ( "2004-12-25-12:00" ) > <http://www.w3.org/2001/XMLSchema#date> ( "2004-12-26+12:00" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))

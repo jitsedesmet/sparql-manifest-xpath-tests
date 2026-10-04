@@ -1,5 +1,6 @@
 # QT3 test case op-subtract-dateTimes-yielding-DTD-4 of test set op-subtract-dateTimes, which tests the XPath expression
 #   fn:not(fn:string(xs:dateTime("1998-09-12T11:12:12Z") - xs:dateTime("1996-02-02T01:01:01Z")))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L53
 ASK {
   BIND(! <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1998-09-12T11:12:12Z" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "1996-02-02T01:01:01Z" ) ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))

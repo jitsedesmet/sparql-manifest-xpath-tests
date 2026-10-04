@@ -1,5 +1,6 @@
 # QT3 test case CondExpr015 of test set prod-IfExpr, which tests the XPath expression
 #   (if (3 != 2) then 16 else 0) + (if (8 = 7) then 4 else 1)
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml#L171
 ASK {
   BIND(( IF( ( "3"^^<http://www.w3.org/2001/XMLSchema#integer> != "2"^^<http://www.w3.org/2001/XMLSchema#integer> ) , "16"^^<http://www.w3.org/2001/XMLSchema#integer> , "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) + IF( ( "8"^^<http://www.w3.org/2001/XMLSchema#integer> = "7"^^<http://www.w3.org/2001/XMLSchema#integer> ) , "4"^^<http://www.w3.org/2001/XMLSchema#integer> , "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
   FILTER(( ?result = "17"^^<http://www.w3.org/2001/XMLSchema#integer> ))

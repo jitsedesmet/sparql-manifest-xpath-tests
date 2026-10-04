@@ -1,5 +1,6 @@
 # QT3 test case K2-SeqExprCast-17 of test set prod-CastExpr, which tests the XPath expression
 #   xs:long("-9223372036854775808")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L20841
 ASK {
   BIND("-9223372036854775808"^^<http://www.w3.org/2001/XMLSchema#long> AS ?result)
   FILTER(( ( ?result = - "9223372036854775808"^^<http://www.w3.org/2001/XMLSchema#integer> ) || ! BOUND( ?result ) ))

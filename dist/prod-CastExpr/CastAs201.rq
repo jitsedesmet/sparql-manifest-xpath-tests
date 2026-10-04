@@ -1,5 +1,6 @@
 # QT3 test case CastAs201 of test set prod-CastExpr, which tests the XPath expression
 #   xs:double("1e8") cast as xs:string
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2244
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#double> ( "1e8" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1.0E8" ))

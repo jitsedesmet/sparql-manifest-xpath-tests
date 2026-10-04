@@ -1,5 +1,6 @@
 # QT3 test case fn-concatnni2args-4 of test set fn-concat, which tests the XPath expression
 #   fn:concat(xs:nonNegativeInteger("0"),xs:nonNegativeInteger("303884545991464527"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L529
 ASK {
   BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) , <http://www.w3.org/2001/XMLSchema#string> ( "303884545991464527"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0303884545991464527" ))

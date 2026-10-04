@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-multiplyulng2args-3 of test set op-numeric-multiply, which tests the XPath expression
 #   xs:unsignedLong("184467440737095516") * xs:unsignedLong("0")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L250
 ASK {
   BIND(( "184467440737095516"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> * "0"^^<http://www.w3.org/2001/XMLSchema#unsignedLong> ) AS ?result)
   FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))

@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-unary-minusint1args-1 of test set op-numeric-unary-minus, which tests the XPath expression
 #   -(xs:int("-2147483647"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L7
 ASK {
   BIND(- "-2147483647"^^<http://www.w3.org/2001/XMLSchema#int> AS ?result)
   FILTER(( ?result = "2147483647"^^<http://www.w3.org/2001/XMLSchema#integer> ))

@@ -1,5 +1,6 @@
 # QT3 test case K-DurationEQ-35 of test set op-duration-equal, which tests the XPath expression
 #   xs:duration("P1999Y10M3DT08H34M12.143S") lt xs:dayTimeDuration("P3DT08H34M12.143S")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L942
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#duration> ( "P1999Y10M3DT08H34M12.143S" ) < <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3DT08H34M12.143S" ) ) AS ?result)
   FILTER(! BOUND( ?result ))

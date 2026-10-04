@@ -1,5 +1,6 @@
 # QT3 test case K2-SeqExprCast-55 of test set prod-CastExpr, which tests the XPath expression
 #   xs:unsignedByte("-0")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L21193
 ASK {
   BIND("-0"^^<http://www.w3.org/2001/XMLSchema#unsignedByte> AS ?result)
   FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))

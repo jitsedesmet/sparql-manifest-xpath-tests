@@ -1,5 +1,6 @@
 # QT3 test case CondExpr010 of test set prod-IfExpr, which tests the XPath expression
 #   if (2 != 4) then 1 else 0
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml#L120
 ASK {
   BIND(IF( ( "2"^^<http://www.w3.org/2001/XMLSchema#integer> != "4"^^<http://www.w3.org/2001/XMLSchema#integer> ) , "1"^^<http://www.w3.org/2001/XMLSchema#integer> , "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ?result = "1"^^<http://www.w3.org/2001/XMLSchema#integer> ))

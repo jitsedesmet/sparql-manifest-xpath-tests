@@ -1,5 +1,6 @@
 # QT3 test case fn-timezone-from-dateTimealt-8 of test set fn-timezone-from-dateTime, which tests the XPath expression
 #   fn:timezone-from-dateTime(xs:dateTime("1970-01-01T00:02:00Z")) + fn:timezone-from-dateTime(xs:dateTime("1970-01-01T10:03:00Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L71
 ASK {
   BIND(( TIMEZONE( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T00:02:00Z" ) ) + TIMEZONE( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T10:03:00Z" ) ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "PT0S" ))

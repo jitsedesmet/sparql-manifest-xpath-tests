@@ -1,5 +1,6 @@
 # QT3 test case fn-substring-1 of test set fn-substring, which tests the XPath expression
 #   fn:substring("motor car", 6)
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L13
 ASK {
   BIND(SUBSTR( "motor car" , "6"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
   FILTER(( ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = " car" ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#normalizedString> , <http://www.w3.org/2001/XMLSchema#token> , <http://www.w3.org/2001/XMLSchema#language> , <http://www.w3.org/2001/XMLSchema#NMTOKEN> , <http://www.w3.org/2001/XMLSchema#Name> , <http://www.w3.org/2001/XMLSchema#NCName> , <http://www.w3.org/2001/XMLSchema#ID> , <http://www.w3.org/2001/XMLSchema#IDREF> , <http://www.w3.org/2001/XMLSchema#ENTITY> ) ) ))

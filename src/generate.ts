@@ -27,6 +27,7 @@ const { evaluateXPathToFirstNode, evaluateXPathToNodes, evaluateXPathToString } 
 // A fixed commit of the test suite, so that the generated tests are reproducible.
 const QT3_COMMIT = '201a6e466940cdfc727f4babfedcde5332b9f578';
 const QT3_BASE = `https://raw.githubusercontent.com/w3c/qt3tests/${QT3_COMMIT}/`;
+const QT3_VIEW_BASE = `https://github.com/w3c/qt3tests/blob/${QT3_COMMIT}/`;
 const ROOT = join(import.meta.dirname, '..');
 const CACHE_DIR = join(ROOT, '.cache', 'qt3', QT3_COMMIT);
 const DIST_DIR = join(ROOT, 'dist');
@@ -94,9 +95,9 @@ const generator = GeneratorBuilder.create(sparql12GeneratorBuilder).patchRule({
 const generatorContext = completeGeneratorContext({});
 
 /**
- * Fetch a file of the test suite, from the cache if it was fetched before.
+ * Fetch the contents of a file of the test suite, from the cache if it was fetched before.
  */
-async function fetchQt3(path: string): Promise<Document> {
+async function fetchQt3(path: string): Promise<string> {
   const file = join(CACHE_DIR, path);
   if (!existsSync(file)) {
     const response = await fetch(`${QT3_BASE}${path}`);
@@ -106,7 +107,7 @@ async function fetchQt3(path: string): Promise<Document> {
     mkdirSync(dirname(file), { recursive: true });
     writeFileSync(file, await response.text());
   }
-  return parseXmlDocument(readFileSync(file, 'utf8'));
+  return readFileSync(file, 'utf8');
 }
 
 function write(path: string, contents: string): void {
@@ -156,7 +157,16 @@ function environmentVariables(testCase: Element, catalog: Document): Record<stri
  * Generate the ASK query of a test case.
  * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
  */
-function testCaseQuery(testSetName: string, testCase: Element, catalog: Document): string {
+/**
+ * Determine the URL of the definition of a test case on GitHub, at the line of its test-case element.
+ */
+function testCaseUrl(testSetFile: string, testSetText: string, name: string): string {
+  const escapedName = name.replaceAll(/[$()*+.?[\\\]^{|}]/gu, '\\$&');
+  const match = new RegExp(`<test-case\\b[^>]*\\bname="${escapedName}"`, 'u').exec(testSetText);
+  return `${QT3_VIEW_BASE}${testSetFile}${match ? `#L${testSetText.slice(0, match.index).split('\n').length}` : ''}`;
+}
+
+function testCaseQuery(testSetName: string, testCase: Element, catalog: Document, url: string): string {
   const variables = environmentVariables(testCase, catalog);
   const test = evaluateXPathToString('test', testCase);
   const expression = xpathToSparql(test, variables);
@@ -164,6 +174,7 @@ function testCaseQuery(testSetName: string, testCase: Element, catalog: Document
   const comment = test.trim().split('\n').map(line => `#   ${line.trim()}`).join('\n');
   return `# QT3 test case ${testCase.getAttribute('name')} of test set ${testSetName}, which tests the XPath expression
 ${comment}
+# The test case is defined at ${url}
 ASK {
   BIND(${sparql(expression)} AS ?result)
   FILTER(${sparql(assertion)})
@@ -173,7 +184,7 @@ ASK {
 
 async function main(): Promise<void> {
   rmSync(DIST_DIR, { recursive: true, force: true });
-  const catalog = await fetchQt3('catalog.xml');
+  const catalog = parseXmlDocument(await fetchQt3('catalog.xml'));
   const includes: string[] = [];
   const skipReasons: Record<string, number> = {};
   let generated = 0;
@@ -184,14 +195,15 @@ async function main(): Promise<void> {
       continue;
     }
     const testSetFile = testSet.getAttribute('file')!;
-    const testSetXml = await fetchQt3(testSetFile);
+    const testSetText = await fetchQt3(testSetFile);
+    const testSetXml = parseXmlDocument(testSetText);
     const names: string[] = [];
     const entries: string[] = [];
     for (const testCase of evaluateXPathToNodes<Element>(TEST_CASES_QUERY, testSetXml)) {
       const name = testCase.getAttribute('name')!;
       let query: string;
       try {
-        query = testCaseQuery(testSetName, testCase, catalog);
+        query = testCaseQuery(testSetName, testCase, catalog, testCaseUrl(testSetFile, testSetText, name));
       } catch (error: unknown) {
         if (!(error instanceof UnsupportedError)) {
           throw error;

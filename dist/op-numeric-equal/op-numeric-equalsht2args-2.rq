@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-equalsht2args-2 of test set op-numeric-equal, which tests the XPath expression
 #   xs:short("-5324") eq xs:short("-32768")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1096
 ASK {
   BIND(( "-5324"^^<http://www.w3.org/2001/XMLSchema#short> = "-32768"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))

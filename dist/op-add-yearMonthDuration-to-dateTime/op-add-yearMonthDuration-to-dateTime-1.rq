@@ -1,5 +1,6 @@
 # QT3 test case op-add-yearMonthDuration-to-dateTime-1 of test set op-add-yearMonthDuration-to-dateTime, which tests the XPath expression
 #   xs:dateTime("2000-10-30T11:12:00") + xs:yearMonthDuration("P1Y2M")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L55
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2000-10-30T11:12:00" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1Y2M" ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "2001-12-30T11:12:00" ))

@@ -1,5 +1,6 @@
 # QT3 test case fn-starts-with2args-3 of test set fn-starts-with, which tests the XPath expression
 #   fn:starts-with(xs:string("This is a characte"),xs:string("This is a characte"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L25
 ASK {
   BIND(STRSTARTS( <http://www.w3.org/2001/XMLSchema#string> ( "This is a characte" ) , <http://www.w3.org/2001/XMLSchema#string> ( "This is a characte" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

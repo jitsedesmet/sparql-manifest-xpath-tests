@@ -1,5 +1,6 @@
 # QT3 test case Literals019 of test set prod-Literal, which tests the XPath expression
 #   -.65535032e2
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L175
 ASK {
   BIND(- ".65535032e2"^^<http://www.w3.org/2001/XMLSchema#double> AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-65.535032" ))

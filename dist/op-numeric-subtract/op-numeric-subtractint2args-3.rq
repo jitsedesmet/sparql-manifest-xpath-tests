@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-subtractint2args-3 of test set op-numeric-subtract, which tests the XPath expression
 #   xs:int("-1") - xs:int("-2147483648")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L25
 ASK {
   BIND(( "-1"^^<http://www.w3.org/2001/XMLSchema#int> - "-2147483648"^^<http://www.w3.org/2001/XMLSchema#int> ) AS ?result)
   FILTER(( ?result = "2147483647"^^<http://www.w3.org/2001/XMLSchema#integer> ))

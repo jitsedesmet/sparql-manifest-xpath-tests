@@ -1,5 +1,6 @@
 # QT3 test case K-DayTimeDurationEQ-3 of test set op-duration-equal, which tests the XPath expression
 #   not(xs:dayTimeDuration("P3DT08H34M12.043S") eq xs:dayTimeDuration("P3DT08H34M12.143S"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1195
 ASK {
   BIND(! ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3DT08H34M12.043S" ) = <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3DT08H34M12.143S" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

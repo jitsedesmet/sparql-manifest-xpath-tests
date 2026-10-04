@@ -1,5 +1,6 @@
 # QT3 test case K-DateLT-1 of test set op-date-less-than, which tests the XPath expression
 #   xs:date("2004-07-12") lt xs:date("2004-07-13")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L410
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#date> ( "2004-07-12" ) < <http://www.w3.org/2001/XMLSchema#date> ( "2004-07-13" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

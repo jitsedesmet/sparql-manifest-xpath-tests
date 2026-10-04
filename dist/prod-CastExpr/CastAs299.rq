@@ -1,5 +1,6 @@
 # QT3 test case CastAs299 of test set prod-CastExpr, which tests the XPath expression
 #   xs:duration("P1Y2M3DT10H30M23S") cast as xs:boolean
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3132
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#boolean> ( <http://www.w3.org/2001/XMLSchema#duration> ( "P1Y2M3DT10H30M23S" ) ) AS ?result)
   FILTER(! BOUND( ?result ))

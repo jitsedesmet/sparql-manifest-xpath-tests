@@ -1,5 +1,6 @@
 # QT3 test case K2-NumericDivide-9 of test set op-numeric-divide, which tests the XPath expression
 #   +0e0 div -0e0
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1107
 ASK {
   BIND(( + "0e0"^^<http://www.w3.org/2001/XMLSchema#double> / - "0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "NaN" ))

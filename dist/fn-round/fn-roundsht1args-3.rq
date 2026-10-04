@@ -1,5 +1,6 @@
 # QT3 test case fn-roundsht1args-3 of test set fn-round, which tests the XPath expression
 #   fn:round(xs:short("32767"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L379
 ASK {
   BIND(ROUND( "32767"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
   FILTER(( ?result = "32767"^^<http://www.w3.org/2001/XMLSchema#integer> ))

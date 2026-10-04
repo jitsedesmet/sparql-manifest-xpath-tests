@@ -1,5 +1,6 @@
 # QT3 test case fn-substring-20 of test set fn-substring, which tests the XPath expression
 #   fn:substring("ABCD",xs:double(1))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L187
 ASK {
   BIND(SUBSTR( "ABCD" , <http://www.w3.org/2001/XMLSchema#double> ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "ABCD" ))

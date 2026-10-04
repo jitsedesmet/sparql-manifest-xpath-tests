@@ -1,5 +1,6 @@
 # QT3 test case op-numeric-dividenint2args-3 of test set op-numeric-divide, which tests the XPath expression
 #   xs:negativeInteger("-1") div xs:negativeInteger("-999999999999999999")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L325
 ASK {
   BIND(( "-1"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> / "-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) AS ?result)
   FILTER(( ( ( ( ?result = "0.000000000000000001"^^<http://www.w3.org/2001/XMLSchema#decimal> ) || ( ?result = "0.000000000000000001000000000000000001"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) || ( ?result = "0.000000000000000001000000000000000001000000000000000001"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) || ( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ))

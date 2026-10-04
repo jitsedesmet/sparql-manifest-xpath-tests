@@ -1,5 +1,6 @@
 # QT3 test case op-logical-and-068 of test set prod-OrExpr, which tests the XPath expression
 #   xs:decimal(9.99999999999999999999999999) and xs:decimal(-123456789.123456789123456789)
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L692
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#decimal> ( "9.99999999999999999999999999"^^<http://www.w3.org/2001/XMLSchema#decimal> ) && <http://www.w3.org/2001/XMLSchema#decimal> ( - "123456789.123456789123456789"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) AS ?result)
   FILTER(( ( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ) || ! BOUND( ?result ) ))

@@ -1,5 +1,6 @@
 # QT3 test case K-DayTimeDurationAdd-3 of test set op-add-dayTimeDurations, which tests the XPath expression
 #   xs:dayTimeDuration("P3DT4H3M3.100S") + xs:dayTimeDuration("P3DT12H31M56.303S") eq xs:dayTimeDuration("P6DT16H34M59.403S")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L388
 ASK {
   BIND(( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3DT4H3M3.100S" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P3DT12H31M56.303S" ) ) = <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P6DT16H34M59.403S" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))

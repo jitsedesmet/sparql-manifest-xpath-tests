@@ -1,5 +1,6 @@
 # QT3 test case K-NumericMultiply-29 of test set op-numeric-multiply, which tests the XPath expression
 #   1 * "3"
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L706
 ASK {
   BIND(( "1"^^<http://www.w3.org/2001/XMLSchema#integer> * "3" ) AS ?result)
   FILTER(! BOUND( ?result ))

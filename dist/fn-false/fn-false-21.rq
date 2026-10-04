@@ -1,5 +1,6 @@
 # QT3 test case fn-false-21 of test set fn-false, which tests the XPath expression
 #   fn:string-length(xs:string(fn:false()))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/false.xml#L190
 ASK {
   BIND(STRLEN( <http://www.w3.org/2001/XMLSchema#string> ( "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ) AS ?result)
   FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "5" ))

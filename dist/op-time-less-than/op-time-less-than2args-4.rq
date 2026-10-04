@@ -1,5 +1,6 @@
 # QT3 test case op-time-less-than2args-4 of test set op-time-less-than, which tests the XPath expression
 #   xs:time("00:00:00Z") lt xs:time("08:03:35Z")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-less-than.xml#L60
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "00:00:00Z" ) < <http://www.w3.org/2001/XMLSchema#time> ( "08:03:35Z" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
