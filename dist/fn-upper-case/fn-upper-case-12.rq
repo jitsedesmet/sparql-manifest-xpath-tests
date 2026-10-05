@@ -2,6 +2,6 @@
 #   fn:boolean(fn:upper-case("abcde"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L133
 ASK {
-  BIND(! ! UCASE( "abcde" ) AS ?result)
+  BIND(! ( ! UCASE( "abcde" ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
 }

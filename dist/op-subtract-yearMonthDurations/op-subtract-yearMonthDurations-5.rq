@@ -3,6 +3,6 @@
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDurations.xml#L164
 # The test needs the constructor function xsd:yearMonthDuration, - on xsd:yearMonthDuration, which SPARQL does not define
 ASK {
-  BIND(! ! <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P05Y08M" ) - <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P03Y06M" ) ) ) AS ?result)
+  BIND(! ( ! <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P05Y08M" ) - <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P03Y06M" ) ) ) ) AS ?result)
   FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
 }
