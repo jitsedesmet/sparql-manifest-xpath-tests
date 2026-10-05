@@ -1,0 +1,7 @@
+# QT3 test case re00725 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:[\p{Nd}-[a-z]]+)$')) and (every $s in tokenize('az09', ',') satisfies not(matches($s, '^(?:[\p{Nd}-[a-z]]+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5980
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ! REGEX( "az09" , "^(?:[\\p{Nd}-[a-z]]+)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

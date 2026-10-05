@@ -1,0 +1,7 @@
+# QT3 test case re00940 of test set fn-matches.re, which tests the XPath expression
+#   matches('qwerty','a(?=d).')
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7701
+ASK {
+  BIND(REGEX( "qwerty" , "a(?=d)." ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

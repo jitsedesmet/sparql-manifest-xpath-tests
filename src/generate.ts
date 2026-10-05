@@ -9,8 +9,9 @@
  * The tests are divided over three manifests:
  * - manifest.ttl: the tests that only need what SPARQL defines,
  * - extensions.ttl: the tests that need XPath functions or operators beyond what SPARQL defines, such as on xsd:date,
- * - errors.ttl: the tests that expect an error, which also pass on engines that fail for another reason.
- * The left-out test cases are listed with the reason in left-out.tsv.
+ * - errors.ttl: the tests that accept an error, which also pass on engines that fail for another reason.
+ * The left-out test cases are listed with the reason in left-out.tsv,
+ * and LICENSE.txt holds the license of the tests, which are derived from QT3.
  *
  * Usage: yarn run generate
  */
@@ -22,7 +23,7 @@ import { completeGeneratorContext } from '@traqula/rules-sparql-1-2';
 import fontoxpath from 'fontoxpath';
 import type { Document, Element } from 'slimdom';
 import { parseXmlDocument } from 'slimdom';
-import { assertionToSparql } from './assertions.ts';
+import { acceptsError, assertionToSparql } from './assertions.ts';
 import { extensionReasons } from './extensions.ts';
 import { UnsupportedError, xpathToSparql } from './xpathToSparql.ts';
 
@@ -41,7 +42,7 @@ const DIST_DIR = join(ROOT, 'dist');
 // and for the ones on the XSD datatypes that SPARQL engines commonly support as an extension, such as xsd:date.
 const TEST_SETS = new RegExp(`^(${[
   String.raw`fn-(abs|ceiling|floor|round|string-length|substring|substring-before|substring-after)`,
-  String.raw`fn-(upper-case|lower-case|starts-with|ends-with|contains|encode-for-uri|concat|matches|replace)`,
+  String.raw`fn-(upper-case|lower-case|starts-with|ends-with|contains|encode-for-uri|concat|matches|matches\.re|replace)`,
   String.raw`fn-((year|month|day)-from-(date|dateTime)|(hours|minutes|seconds)-from-(dateTime|time))`,
   String.raw`fn-(timezone-from-dateTime|not|true|false|boolean|string)`,
   String.raw`op-numeric-(add|subtract|multiply|divide|equal|less-than|greater-than|unary-minus|unary-plus)`,
@@ -77,12 +78,13 @@ const KINDS = {
   },
   errors: {
     file: 'errors.ttl',
-    label: 'The tests of QT3 that expect an error, which also pass on engines that fail for another reason',
+    label: 'The tests of QT3 that accept an error, which also pass on engines that fail for another reason',
   },
 };
 type Kind = keyof typeof KINDS;
 
-const PREFIXES = `@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+const PREFIXES = `@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 `;
@@ -194,10 +196,9 @@ function testCaseQuery(testSetName: string, testCase: Element, catalog: Document
   const variables = environmentVariables(testCase, catalog);
   const test = evaluateXPathToString('test', testCase);
   const expression = xpathToSparql(test, variables);
-  const assertionElement = evaluateXPathToFirstNode<Element>('result/*', testCase)!;
-  const assertion = assertionToSparql(assertionElement, variables);
+  const assertion = assertionToSparql(evaluateXPathToFirstNode<Element>('result/*', testCase)!, variables);
   const reasons = extensionReasons(expression, assertion);
-  const kind: Kind = assertionElement.localName === 'error' ? 'errors' : (reasons.length > 0 ? 'extensions' : 'sparql');
+  const kind: Kind = acceptsError(assertion) ? 'errors' : (reasons.length > 0 ? 'extensions' : 'sparql');
   // A SPARQL comment ends at a carriage return as well as at a line feed
   const comment = test.trim().split(/\r\n?|\n/u).map(line => `#   ${line.trim()}`).join('\n');
   const query = `# QT3 test case ${testCase.getAttribute('name')} of test set ${testSetName}, which tests the XPath expression
@@ -253,7 +254,7 @@ async function main(): Promise<void> {
       const description = evaluateXPathToString('description', testCase).trim();
       entries[kind].push({ name: encodeURIComponent(name), entry: `<#${encodeURIComponent(name)}> a mf:QueryEvaluationTest ;
   mf:name ${turtleString(name)} ;${description ? `\n  rdfs:comment ${turtleString(description)} ;` : ''}
-  rdfs:seeAlso <${QT3_BASE}${testSetFile}> ;
+  rdfs:seeAlso <${url}> ;
   mf:action [ qt:query <${encodeURIComponent(name)}.rq> ] ;
   mf:result <../true.srj> .` });
     }
@@ -266,6 +267,7 @@ async function main(): Promise<void> {
         write(`${testSetName}/${file}`, `${PREFIXES}
 <> a mf:Manifest ;
   rdfs:label ${turtleString(`QT3 test set ${testSetName}`)} ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
 ${entries[kind].map(({ name }) => `    <#${name}>`).join('\n')}
   ) .
@@ -281,6 +283,7 @@ ${entries[kind].map(({ entry }) => entry).join('\n\n')}
     write(file, `${PREFIXES}
 <> a mf:Manifest ;
   rdfs:label ${turtleString(label)} ;
+  dct:license <LICENSE.txt> ;
   rdfs:comment ${turtleString(`Generated from ${QT3_BASE}catalog.xml`)} ;
   mf:include (
 ${includes[kind].map(include => `    <${include}>`).join('\n')}
@@ -288,6 +291,14 @@ ${includes[kind].map(include => `    <${include}>`).join('\n')}
 `);
   }
   write('true.srj', '{ "head": {}, "boolean": true }\n');
+  write('LICENSE.txt', `The tests in this directory are generated from the W3C XQuery and XPath Test Suite (QT3),
+https://github.com/w3c/qt3tests/tree/${QT3_COMMIT}, by translating its test cases into SPARQL.
+
+This software or document includes material copied from or derived from
+the W3C XQuery and XPath Test Suite (QT3), https://github.com/w3c/qt3tests.
+Copyright © W3C® (MIT, ERCIM, Keio, Beihang).
+
+${readFileSync(join(ROOT, 'LICENSE-W3C.txt'), 'utf8')}`);
   write('left-out.tsv', `test-set\ttest-case\turl\treason\n${leftOut.map(row => `${row}\n`).join('')}`);
 
   process.stdout.write(`Generated ${testSetCount} test sets with\n`);

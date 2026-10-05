@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-numeric-equal" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#op-numeric-equalint2args-1>
     <#op-numeric-equalint2args-2>
@@ -180,1189 +182,1189 @@
 <#op-numeric-equalint2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L7> ;
   mf:action [ qt:query <op-numeric-equalint2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(mid range) $arg2 = xs:int(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L16> ;
   mf:action [ qt:query <op-numeric-equalint2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(upper bound) $arg2 = xs:int(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L25> ;
   mf:action [ qt:query <op-numeric-equalint2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L34> ;
   mf:action [ qt:query <op-numeric-equalint2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L43> ;
   mf:action [ qt:query <op-numeric-equalint2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L52> ;
   mf:action [ qt:query <op-numeric-equalint2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(mid range) $arg2 = xs:int(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L61> ;
   mf:action [ qt:query <op-numeric-equalint2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(upper bound) $arg2 = xs:int(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L70> ;
   mf:action [ qt:query <op-numeric-equalint2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L79> ;
   mf:action [ qt:query <op-numeric-equalint2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalint2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalint2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L88> ;
   mf:action [ qt:query <op-numeric-equalint2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L97> ;
   mf:action [ qt:query <op-numeric-equalintg2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(mid range) $arg2 = xs:integer(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L106> ;
   mf:action [ qt:query <op-numeric-equalintg2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(upper bound) $arg2 = xs:integer(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L115> ;
   mf:action [ qt:query <op-numeric-equalintg2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L124> ;
   mf:action [ qt:query <op-numeric-equalintg2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L133> ;
   mf:action [ qt:query <op-numeric-equalintg2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L142> ;
   mf:action [ qt:query <op-numeric-equalintg2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(mid range) $arg2 = xs:integer(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L151> ;
   mf:action [ qt:query <op-numeric-equalintg2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(upper bound) $arg2 = xs:integer(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L160> ;
   mf:action [ qt:query <op-numeric-equalintg2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L169> ;
   mf:action [ qt:query <op-numeric-equalintg2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalintg2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalintg2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L178> ;
   mf:action [ qt:query <op-numeric-equalintg2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L187> ;
   mf:action [ qt:query <op-numeric-equaldec2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(mid range) $arg2 = xs:decimal(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L196> ;
   mf:action [ qt:query <op-numeric-equaldec2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(upper bound) $arg2 = xs:decimal(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L205> ;
   mf:action [ qt:query <op-numeric-equaldec2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L214> ;
   mf:action [ qt:query <op-numeric-equaldec2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L223> ;
   mf:action [ qt:query <op-numeric-equaldec2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L232> ;
   mf:action [ qt:query <op-numeric-equaldec2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(mid range) $arg2 = xs:decimal(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L241> ;
   mf:action [ qt:query <op-numeric-equaldec2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(upper bound) $arg2 = xs:decimal(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L250> ;
   mf:action [ qt:query <op-numeric-equaldec2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L259> ;
   mf:action [ qt:query <op-numeric-equaldec2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldec2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldec2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L268> ;
   mf:action [ qt:query <op-numeric-equaldec2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L277> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(mid range) $arg2 = xs:double(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L286> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(upper bound) $arg2 = xs:double(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L295> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L304> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L313> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L322> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(mid range) $arg2 = xs:double(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L331> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(upper bound) $arg2 = xs:double(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L340> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L349> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equaldbl2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equaldbl2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L358> ;
   mf:action [ qt:query <op-numeric-equaldbl2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L367> ;
   mf:action [ qt:query <op-numeric-equalflt2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(mid range) $arg2 = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L376> ;
   mf:action [ qt:query <op-numeric-equalflt2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(upper bound) $arg2 = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L385> ;
   mf:action [ qt:query <op-numeric-equalflt2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L394> ;
   mf:action [ qt:query <op-numeric-equalflt2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L403> ;
   mf:action [ qt:query <op-numeric-equalflt2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L412> ;
   mf:action [ qt:query <op-numeric-equalflt2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(mid range) $arg2 = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L421> ;
   mf:action [ qt:query <op-numeric-equalflt2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(upper bound) $arg2 = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L430> ;
   mf:action [ qt:query <op-numeric-equalflt2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L439> ;
   mf:action [ qt:query <op-numeric-equalflt2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalflt2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalflt2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L448> ;
   mf:action [ qt:query <op-numeric-equalflt2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L457> ;
   mf:action [ qt:query <op-numeric-equallng2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(mid range) $arg2 = xs:long(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L466> ;
   mf:action [ qt:query <op-numeric-equallng2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(upper bound) $arg2 = xs:long(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L475> ;
   mf:action [ qt:query <op-numeric-equallng2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L484> ;
   mf:action [ qt:query <op-numeric-equallng2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L493> ;
   mf:action [ qt:query <op-numeric-equallng2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L502> ;
   mf:action [ qt:query <op-numeric-equallng2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(mid range) $arg2 = xs:long(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L511> ;
   mf:action [ qt:query <op-numeric-equallng2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(upper bound) $arg2 = xs:long(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L520> ;
   mf:action [ qt:query <op-numeric-equallng2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L529> ;
   mf:action [ qt:query <op-numeric-equallng2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equallng2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equallng2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L538> ;
   mf:action [ qt:query <op-numeric-equallng2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L547> ;
   mf:action [ qt:query <op-numeric-equalusht2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(mid range) $arg2 = xs:unsignedShort(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L556> ;
   mf:action [ qt:query <op-numeric-equalusht2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(upper bound) $arg2 = xs:unsignedShort(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L565> ;
   mf:action [ qt:query <op-numeric-equalusht2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L574> ;
   mf:action [ qt:query <op-numeric-equalusht2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L583> ;
   mf:action [ qt:query <op-numeric-equalusht2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L592> ;
   mf:action [ qt:query <op-numeric-equalusht2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(mid range) $arg2 = xs:unsignedShort(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L601> ;
   mf:action [ qt:query <op-numeric-equalusht2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(upper bound) $arg2 = xs:unsignedShort(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L610> ;
   mf:action [ qt:query <op-numeric-equalusht2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L619> ;
   mf:action [ qt:query <op-numeric-equalusht2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalusht2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalusht2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L628> ;
   mf:action [ qt:query <op-numeric-equalusht2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L637> ;
   mf:action [ qt:query <op-numeric-equalnint2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(mid range) $arg2 = xs:negativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L646> ;
   mf:action [ qt:query <op-numeric-equalnint2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(upper bound) $arg2 = xs:negativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L655> ;
   mf:action [ qt:query <op-numeric-equalnint2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L664> ;
   mf:action [ qt:query <op-numeric-equalnint2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L673> ;
   mf:action [ qt:query <op-numeric-equalnint2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L682> ;
   mf:action [ qt:query <op-numeric-equalnint2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(mid range) $arg2 = xs:negativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L691> ;
   mf:action [ qt:query <op-numeric-equalnint2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(upper bound) $arg2 = xs:negativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L700> ;
   mf:action [ qt:query <op-numeric-equalnint2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L709> ;
   mf:action [ qt:query <op-numeric-equalnint2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnint2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnint2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L718> ;
   mf:action [ qt:query <op-numeric-equalnint2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L727> ;
   mf:action [ qt:query <op-numeric-equalpint2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(mid range) $arg2 = xs:positiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L736> ;
   mf:action [ qt:query <op-numeric-equalpint2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(upper bound) $arg2 = xs:positiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L745> ;
   mf:action [ qt:query <op-numeric-equalpint2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L754> ;
   mf:action [ qt:query <op-numeric-equalpint2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L763> ;
   mf:action [ qt:query <op-numeric-equalpint2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L772> ;
   mf:action [ qt:query <op-numeric-equalpint2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(mid range) $arg2 = xs:positiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L781> ;
   mf:action [ qt:query <op-numeric-equalpint2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(upper bound) $arg2 = xs:positiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L790> ;
   mf:action [ qt:query <op-numeric-equalpint2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L799> ;
   mf:action [ qt:query <op-numeric-equalpint2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalpint2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalpint2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L808> ;
   mf:action [ qt:query <op-numeric-equalpint2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L817> ;
   mf:action [ qt:query <op-numeric-equalulng2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(mid range) $arg2 = xs:unsignedLong(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L826> ;
   mf:action [ qt:query <op-numeric-equalulng2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(upper bound) $arg2 = xs:unsignedLong(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L835> ;
   mf:action [ qt:query <op-numeric-equalulng2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L844> ;
   mf:action [ qt:query <op-numeric-equalulng2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L853> ;
   mf:action [ qt:query <op-numeric-equalulng2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L862> ;
   mf:action [ qt:query <op-numeric-equalulng2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(mid range) $arg2 = xs:unsignedLong(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L871> ;
   mf:action [ qt:query <op-numeric-equalulng2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(upper bound) $arg2 = xs:unsignedLong(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L880> ;
   mf:action [ qt:query <op-numeric-equalulng2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L889> ;
   mf:action [ qt:query <op-numeric-equalulng2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalulng2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalulng2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L898> ;
   mf:action [ qt:query <op-numeric-equalulng2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L907> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(mid range) $arg2 = xs:nonPositiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L916> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(upper bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L925> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L934> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L943> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L952> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(mid range) $arg2 = xs:nonPositiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L961> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(upper bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L970> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L979> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnpi2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnpi2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L988> ;
   mf:action [ qt:query <op-numeric-equalnpi2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L997> ;
   mf:action [ qt:query <op-numeric-equalnni2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(mid range) $arg2 = xs:nonNegativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1006> ;
   mf:action [ qt:query <op-numeric-equalnni2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(upper bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1015> ;
   mf:action [ qt:query <op-numeric-equalnni2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1024> ;
   mf:action [ qt:query <op-numeric-equalnni2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1033> ;
   mf:action [ qt:query <op-numeric-equalnni2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1042> ;
   mf:action [ qt:query <op-numeric-equalnni2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(mid range) $arg2 = xs:nonNegativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1051> ;
   mf:action [ qt:query <op-numeric-equalnni2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(upper bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1060> ;
   mf:action [ qt:query <op-numeric-equalnni2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1069> ;
   mf:action [ qt:query <op-numeric-equalnni2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalnni2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalnni2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1078> ;
   mf:action [ qt:query <op-numeric-equalnni2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-1" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1087> ;
   mf:action [ qt:query <op-numeric-equalsht2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(mid range) $arg2 = xs:short(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1096> ;
   mf:action [ qt:query <op-numeric-equalsht2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-3" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(upper bound) $arg2 = xs:short(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1105> ;
   mf:action [ qt:query <op-numeric-equalsht2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-4" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1114> ;
   mf:action [ qt:query <op-numeric-equalsht2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-5" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1123> ;
   mf:action [ qt:query <op-numeric-equalsht2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-6" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1132> ;
   mf:action [ qt:query <op-numeric-equalsht2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-7" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(mid range) $arg2 = xs:short(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1141> ;
   mf:action [ qt:query <op-numeric-equalsht2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-8" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(upper bound) $arg2 = xs:short(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1150> ;
   mf:action [ qt:query <op-numeric-equalsht2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-9" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1159> ;
   mf:action [ qt:query <op-numeric-equalsht2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-equalsht2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-equalsht2args-10" ;
   rdfs:comment "Evaluates The \"op:numeric-equal\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1168> ;
   mf:action [ qt:query <op-numeric-equalsht2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-1> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-1" ;
   rdfs:comment "A test whose essence is: `xs:integer(1) eq xs:integer(1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1189> ;
   mf:action [ qt:query <K-NumericEqual-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-2> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-2" ;
   rdfs:comment "A test whose essence is: `xs:integer(1) ne xs:integer(2)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1198> ;
   mf:action [ qt:query <K-NumericEqual-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-3> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-3" ;
   rdfs:comment "A test whose essence is: `xs:integer(1) eq xs:integer(1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1207> ;
   mf:action [ qt:query <K-NumericEqual-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-4> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-4" ;
   rdfs:comment "A test whose essence is: `xs:integer(-1) eq xs:integer(-1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1216> ;
   mf:action [ qt:query <K-NumericEqual-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-5> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-5" ;
   rdfs:comment "A test whose essence is: `xs:integer(1) ne xs:integer(2)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1225> ;
   mf:action [ qt:query <K-NumericEqual-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-6> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-6" ;
   rdfs:comment "A test whose essence is: `xs:decimal(1.1) eq xs:decimal(1.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1234> ;
   mf:action [ qt:query <K-NumericEqual-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-7> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-7" ;
   rdfs:comment "A test whose essence is: `xs:decimal(1.1) ne xs:decimal(2.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1243> ;
   mf:action [ qt:query <K-NumericEqual-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-8> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-8" ;
   rdfs:comment "A test whose essence is: `xs:decimal(1.1) eq xs:decimal(1.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1252> ;
   mf:action [ qt:query <K-NumericEqual-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-9> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-9" ;
   rdfs:comment "A test whose essence is: `xs:decimal(-1.1) eq xs:decimal(-1.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1261> ;
   mf:action [ qt:query <K-NumericEqual-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-10> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-10" ;
   rdfs:comment "A test whose essence is: `xs:decimal(1.1) ne xs:decimal(2.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1270> ;
   mf:action [ qt:query <K-NumericEqual-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-11> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-11" ;
   rdfs:comment "A test whose essence is: `xs:integer(2) ne xs:decimal(2.6)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1279> ;
   mf:action [ qt:query <K-NumericEqual-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-12> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-12" ;
   rdfs:comment "A test whose essence is: `xs:double(1.1) eq xs:double(1.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1288> ;
   mf:action [ qt:query <K-NumericEqual-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-13> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-13" ;
   rdfs:comment "A test whose essence is: `xs:double(-1.1) eq xs:double(-1.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1297> ;
   mf:action [ qt:query <K-NumericEqual-13.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-14> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-14" ;
   rdfs:comment "A test whose essence is: `xs:double(1.1) ne xs:double(2.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1306> ;
   mf:action [ qt:query <K-NumericEqual-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-15> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-15" ;
   rdfs:comment "A test whose essence is: `xs:double(-1) ne xs:double(1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1315> ;
   mf:action [ qt:query <K-NumericEqual-15.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-16> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-16" ;
   rdfs:comment "A test whose essence is: `xs:double(\"NaN\") ne xs:double(\"NaN\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1324> ;
   mf:action [ qt:query <K-NumericEqual-16.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-17> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-17" ;
   rdfs:comment "A test whose essence is: `xs:double(\"NaN\") ne xs:double(0)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1333> ;
   mf:action [ qt:query <K-NumericEqual-17.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-18> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-18" ;
   rdfs:comment "A test whose essence is: `xs:double(0) ne xs:double(\"NaN\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1342> ;
   mf:action [ qt:query <K-NumericEqual-18.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-19> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-19" ;
   rdfs:comment "A test whose essence is: `xs:double(\"-INF\") eq xs:double(\"-INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1351> ;
   mf:action [ qt:query <K-NumericEqual-19.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-20> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-20" ;
   rdfs:comment "A test whose essence is: `xs:double(\"INF\") eq xs:double(\"INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1360> ;
   mf:action [ qt:query <K-NumericEqual-20.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-21> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-21" ;
   rdfs:comment "A test whose essence is: `xs:double(\"-INF\") ne xs:double(\"INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1369> ;
   mf:action [ qt:query <K-NumericEqual-21.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-22> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-22" ;
   rdfs:comment "A test whose essence is: `xs:double(\"INF\") ne xs:double(\"-INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1378> ;
   mf:action [ qt:query <K-NumericEqual-22.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-23> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-23" ;
   rdfs:comment "A test whose essence is: `xs:double(\"INF\") ne xs:double(\"0\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1387> ;
   mf:action [ qt:query <K-NumericEqual-23.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-24> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-24" ;
   rdfs:comment "A test whose essence is: `xs:double(\"-INF\") ne xs:double(\"0\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1396> ;
   mf:action [ qt:query <K-NumericEqual-24.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-25> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-25" ;
   rdfs:comment "A test whose essence is: `xs:double(\"0\") ne xs:double(\"INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1405> ;
   mf:action [ qt:query <K-NumericEqual-25.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-26> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-26" ;
   rdfs:comment "A test whose essence is: `xs:double(\"0\") ne xs:double(\"-INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1414> ;
   mf:action [ qt:query <K-NumericEqual-26.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-27> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-27" ;
   rdfs:comment "A test whose essence is: `xs:float(1.1) eq xs:float(1.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1423> ;
   mf:action [ qt:query <K-NumericEqual-27.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-28> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-28" ;
   rdfs:comment "A test whose essence is: `xs:float(-1.1) eq xs:float(-1.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1432> ;
   mf:action [ qt:query <K-NumericEqual-28.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-29> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-29" ;
   rdfs:comment "A test whose essence is: `xs:float(1.1) ne xs:float(2.1)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1441> ;
   mf:action [ qt:query <K-NumericEqual-29.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-30> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-30" ;
   rdfs:comment "A test whose essence is: `xs:float(\"NaN\") ne xs:float(\"NaN\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1450> ;
   mf:action [ qt:query <K-NumericEqual-30.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-31> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-31" ;
   rdfs:comment "A test whose essence is: `xs:float(\"NaN\") ne xs:float(0)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1459> ;
   mf:action [ qt:query <K-NumericEqual-31.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-32> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-32" ;
   rdfs:comment "A test whose essence is: `xs:float(0) ne xs:float(\"NaN\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1468> ;
   mf:action [ qt:query <K-NumericEqual-32.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-33> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-33" ;
   rdfs:comment "A test whose essence is: `xs:float(\"-INF\") eq xs:float(\"-INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1477> ;
   mf:action [ qt:query <K-NumericEqual-33.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-34> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-34" ;
   rdfs:comment "A test whose essence is: `xs:float(\"INF\") eq xs:float(\"INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1486> ;
   mf:action [ qt:query <K-NumericEqual-34.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-35> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-35" ;
   rdfs:comment "A test whose essence is: `xs:float(\"-INF\") ne xs:float(\"INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1495> ;
   mf:action [ qt:query <K-NumericEqual-35.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-36> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-36" ;
   rdfs:comment "A test whose essence is: `xs:float(\"INF\") ne xs:float(\"-INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1504> ;
   mf:action [ qt:query <K-NumericEqual-36.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-37> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-37" ;
   rdfs:comment "A test whose essence is: `xs:float(\"INF\") ne xs:float(\"0\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1513> ;
   mf:action [ qt:query <K-NumericEqual-37.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-38> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-38" ;
   rdfs:comment "A test whose essence is: `xs:float(\"-INF\") ne xs:float(\"0\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1522> ;
   mf:action [ qt:query <K-NumericEqual-38.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-39> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-39" ;
   rdfs:comment "A test whose essence is: `xs:float(\"0\") ne xs:float(\"INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1531> ;
   mf:action [ qt:query <K-NumericEqual-39.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericEqual-40> a mf:QueryEvaluationTest ;
   mf:name "K-NumericEqual-40" ;
   rdfs:comment "A test whose essence is: `xs:float(\"0\") ne xs:float(\"-INF\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L1540> ;
   mf:action [ qt:query <K-NumericEqual-40.rq> ] ;
   mf:result <../true.srj> .

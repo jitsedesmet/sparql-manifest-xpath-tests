@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set prod-CastExpr" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#CastAs093>
     <#CastAs098>
@@ -25,8 +27,16 @@
     <#CastAs127>
     <#CastAs131>
     <#CastAs152>
+    <#CastAs169>
     <#CastAs180>
     <#CastAs181>
+    <#CastAs182>
+    <#CastAs183>
+    <#CastAs184>
+    <#CastAs185>
+    <#CastAs186>
+    <#CastAs204>
+    <#CastAs213>
     <#CastAs217>
     <#CastAs218>
     <#CastAs219>
@@ -89,6 +99,7 @@
     <#CastAs391>
     <#CastAs395>
     <#CastAs401>
+    <#CastAs408>
     <#CastAs409>
     <#CastAs410>
     <#CastAs411>
@@ -97,6 +108,7 @@
     <#CastAs414>
     <#CastAs415>
     <#CastAs417>
+    <#CastAs419>
     <#CastAs431>
     <#CastAs560>
     <#CastAs561>
@@ -104,12 +116,16 @@
     <#CastAs563>
     <#CastAs564>
     <#CastAs565>
+    <#CastAs647>
+    <#CastAs676>
     <#CastAs688>
     <#CastAs689>
     <#CastAs690>
     <#CastAs691>
     <#CastAs692>
     <#CastAs693>
+    <#CastFOCA0001-1>
+    <#CastFOCA0003-1>
     <#K-SeqExprCast-36>
     <#K-SeqExprCast-147>
     <#K-SeqExprCast-148>
@@ -278,6 +294,8 @@
     <#K-SeqExprCast-1234>
     <#K-SeqExprCast-1236>
     <#K-SeqExprCast-1238>
+    <#K2-SeqExprCast-17>
+    <#K2-SeqExprCast-22>
     <#K2-SeqExprCast-215>
     <#K2-SeqExprCast-216>
     <#K2-SeqExprCast-217>
@@ -389,2652 +407,2764 @@
 <#CastAs093> a mf:QueryEvaluationTest ;
   mf:name "CastAs093" ;
   rdfs:comment "Try casting xs:string(true) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1230> ;
   mf:action [ qt:query <CastAs093.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs098> a mf:QueryEvaluationTest ;
   mf:name "CastAs098" ;
   rdfs:comment "Try casting xs:string(true) to xs:double" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1275> ;
   mf:action [ qt:query <CastAs098.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs099> a mf:QueryEvaluationTest ;
   mf:name "CastAs099" ;
   rdfs:comment "Try casting xs:string(-0.0E0) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1284> ;
   mf:action [ qt:query <CastAs099.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs100> a mf:QueryEvaluationTest ;
   mf:name "CastAs100" ;
   rdfs:comment "Try casting xs:string(NaN) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1293> ;
   mf:action [ qt:query <CastAs100.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs101> a mf:QueryEvaluationTest ;
   mf:name "CastAs101" ;
   rdfs:comment "Try casting xs:string(1e-5) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1302> ;
   mf:action [ qt:query <CastAs101.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs103> a mf:QueryEvaluationTest ;
   mf:name "CastAs103" ;
   rdfs:comment "Try casting xs:string(true) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1320> ;
   mf:action [ qt:query <CastAs103.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs104> a mf:QueryEvaluationTest ;
   mf:name "CastAs104" ;
   rdfs:comment "Try casting xs:string(-0.0E0) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1329> ;
   mf:action [ qt:query <CastAs104.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs105> a mf:QueryEvaluationTest ;
   mf:name "CastAs105" ;
   rdfs:comment "Try casting xs:string(NaN) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1338> ;
   mf:action [ qt:query <CastAs105.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs106> a mf:QueryEvaluationTest ;
   mf:name "CastAs106" ;
   rdfs:comment "Try casting xs:string(1e-5) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1347> ;
   mf:action [ qt:query <CastAs106.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs107> a mf:QueryEvaluationTest ;
   mf:name "CastAs107" ;
   rdfs:comment "Try casting xs:string(-1.1234) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1356> ;
   mf:action [ qt:query <CastAs107.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs108> a mf:QueryEvaluationTest ;
   mf:name "CastAs108" ;
   rdfs:comment "Try casting xs:string(true) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1365> ;
   mf:action [ qt:query <CastAs108.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs111> a mf:QueryEvaluationTest ;
   mf:name "CastAs111" ;
   rdfs:comment "Try casting xs:string(true) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1392> ;
   mf:action [ qt:query <CastAs111.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs112> a mf:QueryEvaluationTest ;
   mf:name "CastAs112" ;
   rdfs:comment "Try casting xs:string(-P1Y1M1DT1H1M1.123S) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1401> ;
   mf:action [ qt:query <CastAs112.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs115> a mf:QueryEvaluationTest ;
   mf:name "CastAs115" ;
   rdfs:comment "Try casting xs:string(true) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1428> ;
   mf:action [ qt:query <CastAs115.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs116> a mf:QueryEvaluationTest ;
   mf:name "CastAs116" ;
   rdfs:comment "Try casting xs:string(-P1Y1M1DT1H1M1.123S) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1437> ;
   mf:action [ qt:query <CastAs116.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs119> a mf:QueryEvaluationTest ;
   mf:name "CastAs119" ;
   rdfs:comment "Try casting xs:string(true) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1464> ;
   mf:action [ qt:query <CastAs119.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs123> a mf:QueryEvaluationTest ;
   mf:name "CastAs123" ;
   rdfs:comment "Try casting xs:string(true) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1500> ;
   mf:action [ qt:query <CastAs123.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs127> a mf:QueryEvaluationTest ;
   mf:name "CastAs127" ;
   rdfs:comment "Try casting xs:string(true) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1536> ;
   mf:action [ qt:query <CastAs127.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs131> a mf:QueryEvaluationTest ;
   mf:name "CastAs131" ;
   rdfs:comment "Try casting xs:string(true) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1572> ;
   mf:action [ qt:query <CastAs131.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs152> a mf:QueryEvaluationTest ;
   mf:name "CastAs152" ;
   rdfs:comment "Try casting xs:string(0.0) to xs:boolean" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1761> ;
   mf:action [ qt:query <CastAs152.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs169> a mf:QueryEvaluationTest ;
+  mf:name "CastAs169" ;
+  rdfs:comment "Try casting xs:float(5.4321E-100) to xs:float" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1914> ;
+  mf:action [ qt:query <CastAs169.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs180> a mf:QueryEvaluationTest ;
   mf:name "CastAs180" ;
   rdfs:comment "Try casting xs:float(INF) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2016> ;
   mf:action [ qt:query <CastAs180.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs181> a mf:QueryEvaluationTest ;
   mf:name "CastAs181" ;
   rdfs:comment "Try casting xs:float(-1.75e-3) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2025> ;
   mf:action [ qt:query <CastAs181.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs182> a mf:QueryEvaluationTest ;
+  mf:name "CastAs182" ;
+  rdfs:comment "Try casting xs:float(5.4321E-100) to xs:yearMonthDuration" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2034> ;
+  mf:action [ qt:query <CastAs182.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs183> a mf:QueryEvaluationTest ;
+  mf:name "CastAs183" ;
+  rdfs:comment "Try casting xs:float(5.4321E-100) to xs:dayTimeDuration" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2046> ;
+  mf:action [ qt:query <CastAs183.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs184> a mf:QueryEvaluationTest ;
+  mf:name "CastAs184" ;
+  rdfs:comment "Try casting xs:float(5.4321E-100) to xs:dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2058> ;
+  mf:action [ qt:query <CastAs184.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs185> a mf:QueryEvaluationTest ;
+  mf:name "CastAs185" ;
+  rdfs:comment "Try casting xs:float(5.4321E-100) to xs:time" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2070> ;
+  mf:action [ qt:query <CastAs185.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs186> a mf:QueryEvaluationTest ;
+  mf:name "CastAs186" ;
+  rdfs:comment "Try casting xs:float(5.4321E-100) to xs:date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2082> ;
+  mf:action [ qt:query <CastAs186.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs204> a mf:QueryEvaluationTest ;
+  mf:name "CastAs204" ;
+  rdfs:comment "Try casting xs:double(5.4321E-1001) to xs:float" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2271> ;
+  mf:action [ qt:query <CastAs204.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs213> a mf:QueryEvaluationTest ;
+  mf:name "CastAs213" ;
+  rdfs:comment "Try casting xs:double(INF) to xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2355> ;
+  mf:action [ qt:query <CastAs213.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs217> a mf:QueryEvaluationTest ;
   mf:name "CastAs217" ;
   rdfs:comment "Try casting xs:double(INF) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2394> ;
   mf:action [ qt:query <CastAs217.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs218> a mf:QueryEvaluationTest ;
   mf:name "CastAs218" ;
   rdfs:comment "Try casting xs:double(NaN) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2403> ;
   mf:action [ qt:query <CastAs218.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs219> a mf:QueryEvaluationTest ;
   mf:name "CastAs219" ;
   rdfs:comment "Try casting xs:double(1e5) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2412> ;
   mf:action [ qt:query <CastAs219.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs220> a mf:QueryEvaluationTest ;
   mf:name "CastAs220" ;
   rdfs:comment "Try casting xs:double(1e5) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2421> ;
   mf:action [ qt:query <CastAs220.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs221> a mf:QueryEvaluationTest ;
   mf:name "CastAs221" ;
   rdfs:comment "Try casting xs:double(1e5) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2430> ;
   mf:action [ qt:query <CastAs221.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs222> a mf:QueryEvaluationTest ;
   mf:name "CastAs222" ;
   rdfs:comment "Try casting xs:double(1e5) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2439> ;
   mf:action [ qt:query <CastAs222.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs223> a mf:QueryEvaluationTest ;
   mf:name "CastAs223" ;
   rdfs:comment "Try casting xs:double(1e5) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2448> ;
   mf:action [ qt:query <CastAs223.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs224> a mf:QueryEvaluationTest ;
   mf:name "CastAs224" ;
   rdfs:comment "Try casting xs:double(1e5) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2457> ;
   mf:action [ qt:query <CastAs224.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs241> a mf:QueryEvaluationTest ;
   mf:name "CastAs241" ;
   rdfs:comment "Try casting xs:decimal(-1.1234) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2610> ;
   mf:action [ qt:query <CastAs241.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs242> a mf:QueryEvaluationTest ;
   mf:name "CastAs242" ;
   rdfs:comment "Try casting xs:decimal(-1.1234) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2619> ;
   mf:action [ qt:query <CastAs242.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs243> a mf:QueryEvaluationTest ;
   mf:name "CastAs243" ;
   rdfs:comment "Try casting xs:decimal(-1.1234) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2628> ;
   mf:action [ qt:query <CastAs243.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs244> a mf:QueryEvaluationTest ;
   mf:name "CastAs244" ;
   rdfs:comment "Try casting xs:decimal(-1.1234) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2637> ;
   mf:action [ qt:query <CastAs244.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs245> a mf:QueryEvaluationTest ;
   mf:name "CastAs245" ;
   rdfs:comment "Try casting xs:decimal(-1.1234) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2646> ;
   mf:action [ qt:query <CastAs245.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs246> a mf:QueryEvaluationTest ;
   mf:name "CastAs246" ;
   rdfs:comment "Try casting xs:decimal(-1.1234) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2655> ;
   mf:action [ qt:query <CastAs246.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs262> a mf:QueryEvaluationTest ;
   mf:name "CastAs262" ;
   rdfs:comment "Try casting xs:integer(-100) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2799> ;
   mf:action [ qt:query <CastAs262.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs263> a mf:QueryEvaluationTest ;
   mf:name "CastAs263" ;
   rdfs:comment "Try casting xs:integer(-100) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2808> ;
   mf:action [ qt:query <CastAs263.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs264> a mf:QueryEvaluationTest ;
   mf:name "CastAs264" ;
   rdfs:comment "Try casting xs:integer(-100) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2817> ;
   mf:action [ qt:query <CastAs264.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs265> a mf:QueryEvaluationTest ;
   mf:name "CastAs265" ;
   rdfs:comment "Try casting xs:integer(-100) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2826> ;
   mf:action [ qt:query <CastAs265.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs266> a mf:QueryEvaluationTest ;
   mf:name "CastAs266" ;
   rdfs:comment "Try casting xs:integer(-100) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2835> ;
   mf:action [ qt:query <CastAs266.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs267> a mf:QueryEvaluationTest ;
   mf:name "CastAs267" ;
   rdfs:comment "Try casting xs:integer(-100) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2844> ;
   mf:action [ qt:query <CastAs267.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs279> a mf:QueryEvaluationTest ;
   mf:name "CastAs279" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2952> ;
   mf:action [ qt:query <CastAs279.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs280> a mf:QueryEvaluationTest ;
   mf:name "CastAs280" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:double" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2961> ;
   mf:action [ qt:query <CastAs280.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs281> a mf:QueryEvaluationTest ;
   mf:name "CastAs281" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2970> ;
   mf:action [ qt:query <CastAs281.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs282> a mf:QueryEvaluationTest ;
   mf:name "CastAs282" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L2979> ;
   mf:action [ qt:query <CastAs282.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs291> a mf:QueryEvaluationTest ;
   mf:name "CastAs291" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3060> ;
   mf:action [ qt:query <CastAs291.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs292> a mf:QueryEvaluationTest ;
   mf:name "CastAs292" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3069> ;
   mf:action [ qt:query <CastAs292.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs293> a mf:QueryEvaluationTest ;
   mf:name "CastAs293" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3078> ;
   mf:action [ qt:query <CastAs293.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs299> a mf:QueryEvaluationTest ;
   mf:name "CastAs299" ;
   rdfs:comment "Try casting xs:duration(P1Y2M3DT10H30M23S) to xs:boolean" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3132> ;
   mf:action [ qt:query <CastAs299.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs305> a mf:QueryEvaluationTest ;
   mf:name "CastAs305" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3186> ;
   mf:action [ qt:query <CastAs305.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs306> a mf:QueryEvaluationTest ;
   mf:name "CastAs306" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:double" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3195> ;
   mf:action [ qt:query <CastAs306.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs307> a mf:QueryEvaluationTest ;
   mf:name "CastAs307" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3204> ;
   mf:action [ qt:query <CastAs307.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs308> a mf:QueryEvaluationTest ;
   mf:name "CastAs308" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3213> ;
   mf:action [ qt:query <CastAs308.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs313> a mf:QueryEvaluationTest ;
   mf:name "CastAs313" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3258> ;
   mf:action [ qt:query <CastAs313.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs314> a mf:QueryEvaluationTest ;
   mf:name "CastAs314" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3267> ;
   mf:action [ qt:query <CastAs314.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs315> a mf:QueryEvaluationTest ;
   mf:name "CastAs315" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3276> ;
   mf:action [ qt:query <CastAs315.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs321> a mf:QueryEvaluationTest ;
   mf:name "CastAs321" ;
   rdfs:comment "Try casting xs:yearMonthDuration(P1Y2M) to xs:boolean" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3330> ;
   mf:action [ qt:query <CastAs321.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs329> a mf:QueryEvaluationTest ;
   mf:name "CastAs329" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3402> ;
   mf:action [ qt:query <CastAs329.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs330> a mf:QueryEvaluationTest ;
   mf:name "CastAs330" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:double" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3411> ;
   mf:action [ qt:query <CastAs330.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs331> a mf:QueryEvaluationTest ;
   mf:name "CastAs331" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3420> ;
   mf:action [ qt:query <CastAs331.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs332> a mf:QueryEvaluationTest ;
   mf:name "CastAs332" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3429> ;
   mf:action [ qt:query <CastAs332.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs340> a mf:QueryEvaluationTest ;
   mf:name "CastAs340" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3501> ;
   mf:action [ qt:query <CastAs340.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs341> a mf:QueryEvaluationTest ;
   mf:name "CastAs341" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3510> ;
   mf:action [ qt:query <CastAs341.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs342> a mf:QueryEvaluationTest ;
   mf:name "CastAs342" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3519> ;
   mf:action [ qt:query <CastAs342.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs348> a mf:QueryEvaluationTest ;
   mf:name "CastAs348" ;
   rdfs:comment "Try casting xs:dayTimeDuration(P3DT10H30M) to xs:boolean" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3573> ;
   mf:action [ qt:query <CastAs348.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs356> a mf:QueryEvaluationTest ;
   mf:name "CastAs356" ;
   rdfs:comment "Try casting xs:dateTime(1999-05-31T13:20:00) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3645> ;
   mf:action [ qt:query <CastAs356.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs357> a mf:QueryEvaluationTest ;
   mf:name "CastAs357" ;
   rdfs:comment "Try casting xs:dateTime(2000-01-16T00:00:00Z) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3654> ;
   mf:action [ qt:query <CastAs357.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs358> a mf:QueryEvaluationTest ;
   mf:name "CastAs358" ;
   rdfs:comment "Try casting xs:dateTime(1999-05-31T13:20:00) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3663> ;
   mf:action [ qt:query <CastAs358.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs359> a mf:QueryEvaluationTest ;
   mf:name "CastAs359" ;
   rdfs:comment "Try casting xs:dateTime(1999-05-31T13:20:00) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3672> ;
   mf:action [ qt:query <CastAs359.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs360> a mf:QueryEvaluationTest ;
   mf:name "CastAs360" ;
   rdfs:comment "Try casting xs:dateTime(1999-05-31T13:20:00) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3681> ;
   mf:action [ qt:query <CastAs360.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs361> a mf:QueryEvaluationTest ;
   mf:name "CastAs361" ;
   rdfs:comment "Try casting xs:dateTime(1999-05-31T13:20:00) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3690> ;
   mf:action [ qt:query <CastAs361.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs362> a mf:QueryEvaluationTest ;
   mf:name "CastAs362" ;
   rdfs:comment "Try casting xs:dateTime(1999-05-31T13:20:00) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3699> ;
   mf:action [ qt:query <CastAs362.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs378> a mf:QueryEvaluationTest ;
   mf:name "CastAs378" ;
   rdfs:comment "Try casting xs:dateTime(1999-05-31T13:20:00) to xs:boolean" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3843> ;
   mf:action [ qt:query <CastAs378.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs384> a mf:QueryEvaluationTest ;
   mf:name "CastAs384" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3897> ;
   mf:action [ qt:query <CastAs384.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs385> a mf:QueryEvaluationTest ;
   mf:name "CastAs385" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:double" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3906> ;
   mf:action [ qt:query <CastAs385.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs386> a mf:QueryEvaluationTest ;
   mf:name "CastAs386" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:decimal" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3915> ;
   mf:action [ qt:query <CastAs386.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs387> a mf:QueryEvaluationTest ;
   mf:name "CastAs387" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3924> ;
   mf:action [ qt:query <CastAs387.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs388> a mf:QueryEvaluationTest ;
   mf:name "CastAs388" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3933> ;
   mf:action [ qt:query <CastAs388.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs389> a mf:QueryEvaluationTest ;
   mf:name "CastAs389" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3942> ;
   mf:action [ qt:query <CastAs389.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs390> a mf:QueryEvaluationTest ;
   mf:name "CastAs390" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3951> ;
   mf:action [ qt:query <CastAs390.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs391> a mf:QueryEvaluationTest ;
   mf:name "CastAs391" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3960> ;
   mf:action [ qt:query <CastAs391.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs395> a mf:QueryEvaluationTest ;
   mf:name "CastAs395" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3996> ;
   mf:action [ qt:query <CastAs395.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs401> a mf:QueryEvaluationTest ;
   mf:name "CastAs401" ;
   rdfs:comment "Try casting xs:time(13:20:00-05:00) to xs:boolean" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4050> ;
   mf:action [ qt:query <CastAs401.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs408> a mf:QueryEvaluationTest ;
+  mf:name "CastAs408" ;
+  rdfs:comment "Try casting xs:date(-0012-12-03-05:00) to xs:string" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4117> ;
+  mf:action [ qt:query <CastAs408.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs409> a mf:QueryEvaluationTest ;
   mf:name "CastAs409" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:float" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4130> ;
   mf:action [ qt:query <CastAs409.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs410> a mf:QueryEvaluationTest ;
   mf:name "CastAs410" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:double" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4139> ;
   mf:action [ qt:query <CastAs410.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs411> a mf:QueryEvaluationTest ;
   mf:name "CastAs411" ;
   rdfs:comment "Try casting xs:date(1999-05-31Z) to xs:double" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4148> ;
   mf:action [ qt:query <CastAs411.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs412> a mf:QueryEvaluationTest ;
   mf:name "CastAs412" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:integer" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4157> ;
   mf:action [ qt:query <CastAs412.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs413> a mf:QueryEvaluationTest ;
   mf:name "CastAs413" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4166> ;
   mf:action [ qt:query <CastAs413.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs414> a mf:QueryEvaluationTest ;
   mf:name "CastAs414" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4175> ;
   mf:action [ qt:query <CastAs414.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs415> a mf:QueryEvaluationTest ;
   mf:name "CastAs415" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4184> ;
   mf:action [ qt:query <CastAs415.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs417> a mf:QueryEvaluationTest ;
   mf:name "CastAs417" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4202> ;
   mf:action [ qt:query <CastAs417.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs419> a mf:QueryEvaluationTest ;
+  mf:name "CastAs419" ;
+  rdfs:comment "Try casting xs:date(-0012-12-03-05:00) to xs:date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4220> ;
+  mf:action [ qt:query <CastAs419.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs431> a mf:QueryEvaluationTest ;
   mf:name "CastAs431" ;
   rdfs:comment "Try casting xs:date(1999-05-31) to xs:boolean" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4344> ;
   mf:action [ qt:query <CastAs431.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs560> a mf:QueryEvaluationTest ;
   mf:name "CastAs560" ;
   rdfs:comment "Try casting xs:boolean(true) to xs:duration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L5505> ;
   mf:action [ qt:query <CastAs560.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs561> a mf:QueryEvaluationTest ;
   mf:name "CastAs561" ;
   rdfs:comment "Try casting xs:boolean(true) to xs:yearMonthDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L5514> ;
   mf:action [ qt:query <CastAs561.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs562> a mf:QueryEvaluationTest ;
   mf:name "CastAs562" ;
   rdfs:comment "Try casting xs:boolean(true) to xs:dayTimeDuration" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L5523> ;
   mf:action [ qt:query <CastAs562.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs563> a mf:QueryEvaluationTest ;
   mf:name "CastAs563" ;
   rdfs:comment "Try casting xs:boolean(true) to xs:dateTime" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L5532> ;
   mf:action [ qt:query <CastAs563.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs564> a mf:QueryEvaluationTest ;
   mf:name "CastAs564" ;
   rdfs:comment "Try casting xs:boolean(true) to xs:time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L5541> ;
   mf:action [ qt:query <CastAs564.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs565> a mf:QueryEvaluationTest ;
   mf:name "CastAs565" ;
   rdfs:comment "Try casting xs:boolean(true) to xs:date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L5550> ;
   mf:action [ qt:query <CastAs565.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs647> a mf:QueryEvaluationTest ;
+  mf:name "CastAs647" ;
+  rdfs:comment "Evaluates casting a string into a decimal.may process casting or raise error. This test may have differentoutcomes." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6288> ;
+  mf:action [ qt:query <CastAs647.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastAs676> a mf:QueryEvaluationTest ;
+  mf:name "CastAs676" ;
+  rdfs:comment "Boundary test for casting a dateTime as a string" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6631> ;
+  mf:action [ qt:query <CastAs676.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs688> a mf:QueryEvaluationTest ;
   mf:name "CastAs688" ;
   rdfs:comment "Leading decimal point in duration values. This is contentious:\n         XSD 1.0 clearly requires a digit before and after the decimal\n         point. XSD 1.1 apparently doesn't, but this is believed to\n         be an error in the spec." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6744> ;
   mf:action [ qt:query <CastAs688.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs689> a mf:QueryEvaluationTest ;
   mf:name "CastAs689" ;
   rdfs:comment "Leading decimal point in duration values. This is contentious:\n         XSD 1.0 clearly requires a digit before and after the decimal\n         point. XSD 1.1 apparently doesn't, but this is believed to\n         be an error in the spec." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6758> ;
   mf:action [ qt:query <CastAs689.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs690> a mf:QueryEvaluationTest ;
   mf:name "CastAs690" ;
   rdfs:comment "Trailing decimal point in duration values. This is contentious:\n         XSD 1.0 clearly requires a digit before and after the decimal\n         point. XSD 1.1 apparently doesn't, but this is believed to\n         be an error in the spec." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6772> ;
   mf:action [ qt:query <CastAs690.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs691> a mf:QueryEvaluationTest ;
   mf:name "CastAs691" ;
   rdfs:comment "Trailing decimal point in duration values. This is contentious:\n         XSD 1.0 clearly requires a digit before and after the decimal\n         point. XSD 1.1 apparently doesn't, but this is believed to\n         be an error in the spec." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6786> ;
   mf:action [ qt:query <CastAs691.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs692> a mf:QueryEvaluationTest ;
   mf:name "CastAs692" ;
   rdfs:comment "Disallow exponential notation in duration values." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6800> ;
   mf:action [ qt:query <CastAs692.rq> ] ;
   mf:result <../true.srj> .
 
 <#CastAs693> a mf:QueryEvaluationTest ;
   mf:name "CastAs693" ;
   rdfs:comment "Disallow exponential notation in duration values." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6811> ;
   mf:action [ qt:query <CastAs693.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastFOCA0001-1> a mf:QueryEvaluationTest ;
+  mf:name "CastFOCA0001-1" ;
+  rdfs:comment "casting an xs:decimal with a value to big for that type." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7051> ;
+  mf:action [ qt:query <CastFOCA0001-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#CastFOCA0003-1> a mf:QueryEvaluationTest ;
+  mf:name "CastFOCA0003-1" ;
+  rdfs:comment "casting an xs:integer with a value to big for that type." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7065> ;
+  mf:action [ qt:query <CastFOCA0003-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-36> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-36" ;
   rdfs:comment "Invalid casting combination, combined with value comparison." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7542> ;
   mf:action [ qt:query <K-SeqExprCast-36.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-147> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-147" ;
   rdfs:comment "A preceding plus sign('+') is disallowed for xs:duration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8561> ;
   mf:action [ qt:query <K-SeqExprCast-147.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-148> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-148" ;
   rdfs:comment "No zone offset is allowed for xs:duration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8570> ;
   mf:action [ qt:query <K-SeqExprCast-148.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-149> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-149" ;
   rdfs:comment "A preceding 'P' must always exist in a xs:duration value." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8579> ;
   mf:action [ qt:query <K-SeqExprCast-149.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-150> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-150" ;
   rdfs:comment "At least one number and its designator must be present in a xs:duration value." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8588> ;
   mf:action [ qt:query <K-SeqExprCast-150.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-151> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-151" ;
   rdfs:comment "At least one number and its designator must be present in a xs:duration value, a minus sign is insufficient." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8597> ;
   mf:action [ qt:query <K-SeqExprCast-151.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-152> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-152" ;
   rdfs:comment "A 'T' separator in a xs:duration must be followed by time components." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8606> ;
   mf:action [ qt:query <K-SeqExprCast-152.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-153> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-153" ;
   rdfs:comment "'P24H' is an invalid lexical representation for xs:duration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8615> ;
   mf:action [ qt:query <K-SeqExprCast-153.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-169> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-169" ;
   rdfs:comment "A preceding plus sign('+') is disallowed for xs:dayTimeDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8759> ;
   mf:action [ qt:query <K-SeqExprCast-169.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-170> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-170" ;
   rdfs:comment "No zone offset is allowed for xs:dayTimeDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8768> ;
   mf:action [ qt:query <K-SeqExprCast-170.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-171> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-171" ;
   rdfs:comment "A preceding 'P' must always exist in a xs:dayTimeDuration value." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8777> ;
   mf:action [ qt:query <K-SeqExprCast-171.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-172> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-172" ;
   rdfs:comment "At least one number and its designator must be present in a xs:dayTimeDuration value." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8786> ;
   mf:action [ qt:query <K-SeqExprCast-172.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-173> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-173" ;
   rdfs:comment "At least one number and its designator must be present in a xs:dayTimeDuration value, a minus sign is insufficient." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8795> ;
   mf:action [ qt:query <K-SeqExprCast-173.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-174> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-174" ;
   rdfs:comment "A 'T' separator in a xs:dayTimeDuration must be followed by time components." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8804> ;
   mf:action [ qt:query <K-SeqExprCast-174.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-176> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-176" ;
   rdfs:comment "'P1Y12M1D' is an invalid lexical representation for xs:dayTimeDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8822> ;
   mf:action [ qt:query <K-SeqExprCast-176.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-177> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-177" ;
   rdfs:comment "'P24M1D' is an invalid lexical representation for xs:dayTimeDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8831> ;
   mf:action [ qt:query <K-SeqExprCast-177.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-178> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-178" ;
   rdfs:comment "'PDT3H2M10.001S' is an invalid lexical representation for xs:dayTimeDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8840> ;
   mf:action [ qt:query <K-SeqExprCast-178.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-194> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-194" ;
   rdfs:comment "A preceding plus sign('+') is disallowed for xs:yearMonthDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8984> ;
   mf:action [ qt:query <K-SeqExprCast-194.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-195> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-195" ;
   rdfs:comment "No zone offset is allowed for xs:yearMonthDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L8993> ;
   mf:action [ qt:query <K-SeqExprCast-195.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-196> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-196" ;
   rdfs:comment "A preceding 'P' must always exist in a xs:yearMonthDuration value." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L9002> ;
   mf:action [ qt:query <K-SeqExprCast-196.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-197> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-197" ;
   rdfs:comment "At least one number and its designator must be present in a xs:yearMonthDuration value." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L9011> ;
   mf:action [ qt:query <K-SeqExprCast-197.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-198> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-198" ;
   rdfs:comment "At least one number and its designator must be present in a xs:yearMonthDuration value, a minus sign is insufficient." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L9020> ;
   mf:action [ qt:query <K-SeqExprCast-198.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-199> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-199" ;
   rdfs:comment "A 'T' separator in a xs:yearMonthDuration is not allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L9029> ;
   mf:action [ qt:query <K-SeqExprCast-199.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-200> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-200" ;
   rdfs:comment "'P731D' is an invalid lexical representation for xs:yearMonthDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L9038> ;
   mf:action [ qt:query <K-SeqExprCast-200.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-201> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-201" ;
   rdfs:comment "'-P3' is an invalid lexical representation for xs:yearMonthDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L9047> ;
   mf:action [ qt:query <K-SeqExprCast-201.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-308> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-308" ;
   rdfs:comment "'+2004-08-01T12:44:05' is an invalid lexical representation, a preceding '+' sign is not allowed for xs:dateTime." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10001> ;
   mf:action [ qt:query <K-SeqExprCast-308.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-309> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-309" ;
   rdfs:comment "'02004-08-01T12:44:05' is an invalid lexical representation for xs:dateTime; if the year part has more than four digits, leading zeros are prohibited." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10010> ;
   mf:action [ qt:query <K-SeqExprCast-309.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-310> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-310" ;
   rdfs:comment "'00004-08-01T12:44:05' is an invalid lexical representation for xs:dateTime; if the year part has more than four digits, leading zeros are prohibited." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10019> ;
   mf:action [ qt:query <K-SeqExprCast-310.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-311> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-311" ;
   rdfs:comment "'2004-32-01T12:44:05' is an invalid lexical representation for xs:dateTime; the month part cannot be larger than 32." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10028> ;
   mf:action [ qt:query <K-SeqExprCast-311.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-312> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-312" ;
   rdfs:comment "'2002-02-30T12:44:05' is a non-existent xs:dateTime date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10037> ;
   mf:action [ qt:query <K-SeqExprCast-312.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-313> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-313" ;
   rdfs:comment "'2002-002-15T12:44:05' is an invalid lexical representation for xs:dateTime." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10046> ;
   mf:action [ qt:query <K-SeqExprCast-313.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-314> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-314" ;
   rdfs:comment "'2002-02-150T12:44:05' is an invalid lexical representation for xs:dateTime." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10055> ;
   mf:action [ qt:query <K-SeqExprCast-314.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-315> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-315" ;
   rdfs:comment "'2002-02-15T24:00:00.001' is an invalid lexical representation for xs:dateTime; if hour is 24, seconds part must be 00." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10064> ;
   mf:action [ qt:query <K-SeqExprCast-315.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-316> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-316" ;
   rdfs:comment "'2002-02-15T24:01:00' is an invalid lexical representation for xs:dateTime; if hour is 24, minutes part must be 00." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10073> ;
   mf:action [ qt:query <K-SeqExprCast-316.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-317> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-317" ;
   rdfs:comment "'2002-02-15T25:00:00' is an invalid lexical representation for xs:dateTime; hour part can never be larger than 24." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10082> ;
   mf:action [ qt:query <K-SeqExprCast-317.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-318> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-318" ;
   rdfs:comment "'2002-02-15T21:60:00' is an invalid lexical representation for xs:dateTime; minute part can never be larger than 59." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10091> ;
   mf:action [ qt:query <K-SeqExprCast-318.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-319> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-319" ;
   rdfs:comment "'2002-02-15T21:01:60' is an invalid lexical representation for xs:dateTime; seconds part can never be larger than 59." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10100> ;
   mf:action [ qt:query <K-SeqExprCast-319.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-320> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-320" ;
   rdfs:comment "'--2002-02-15T21:01:23' is an invalid lexical representation for xs:dateTime." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10109> ;
   mf:action [ qt:query <K-SeqExprCast-320.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-321> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-321" ;
   rdfs:comment "Testing timezone field in xs:dateTime: the hour component cannot be -15." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10118> ;
   mf:action [ qt:query <K-SeqExprCast-321.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-322> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-322" ;
   rdfs:comment "Testing timezone field in xs:dateTime: the hour component cannot be +15." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10127> ;
   mf:action [ qt:query <K-SeqExprCast-322.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-323> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-323" ;
   rdfs:comment "Testing timezone field in xs:dateTime: the minute component cannot be +60." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10136> ;
   mf:action [ qt:query <K-SeqExprCast-323.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-324> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-324" ;
   rdfs:comment "Testing timezone field in xs:dateTime: the minute component cannot be -60." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10145> ;
   mf:action [ qt:query <K-SeqExprCast-324.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-325> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-325" ;
   rdfs:comment "Testing timezone field in xs:dateTime: the minute field must always be present." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10154> ;
   mf:action [ qt:query <K-SeqExprCast-325.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-351> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-351" ;
   rdfs:comment "'24:00:00.001' is an invalid lexical representation for xs:time; if hour is 24, seconds part must be 00." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10388> ;
   mf:action [ qt:query <K-SeqExprCast-351.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-352> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-352" ;
   rdfs:comment "'24:01:00' is an invalid lexical representation for xs:time; if hour is 24, minutes part must be 00." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10397> ;
   mf:action [ qt:query <K-SeqExprCast-352.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-353> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-353" ;
   rdfs:comment "'25:00:00' is an invalid lexical representation for xs:time; hour part can never be larger than 24." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10406> ;
   mf:action [ qt:query <K-SeqExprCast-353.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-354> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-354" ;
   rdfs:comment "'21:60:00' is an invalid lexical representation for xs:time; minute part can never be larger than 59." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10415> ;
   mf:action [ qt:query <K-SeqExprCast-354.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-355> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-355" ;
   rdfs:comment "'21:01:60' is an invalid lexical representation for xs:time; seconds part can never be larger than 59." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10424> ;
   mf:action [ qt:query <K-SeqExprCast-355.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-356> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-356" ;
   rdfs:comment "'+21:01:50' is an invalid lexical representation for xs:time." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10433> ;
   mf:action [ qt:query <K-SeqExprCast-356.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-357> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-357" ;
   rdfs:comment "'-21:01:50' is an invalid lexical representation for xs:time." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10442> ;
   mf:action [ qt:query <K-SeqExprCast-357.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-358> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-358" ;
   rdfs:comment "A valid xs:dateTime is an invalid xs:time." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10451> ;
   mf:action [ qt:query <K-SeqExprCast-358.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-359> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-359" ;
   rdfs:comment "Testing timezone field in xs:time: the hour component cannot be -15." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10460> ;
   mf:action [ qt:query <K-SeqExprCast-359.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-360> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-360" ;
   rdfs:comment "Testing timezone field in xs:time: the hour component cannot be +15." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10469> ;
   mf:action [ qt:query <K-SeqExprCast-360.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-361> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-361" ;
   rdfs:comment "Testing timezone field in xs:time: the minute component cannot be +60." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10478> ;
   mf:action [ qt:query <K-SeqExprCast-361.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-362> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-362" ;
   rdfs:comment "Testing timezone field in xs:time: the minute component cannot be -60." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10487> ;
   mf:action [ qt:query <K-SeqExprCast-362.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-363> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-363" ;
   rdfs:comment "Testing timezone field in xs:time: the minute field must always be present." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10496> ;
   mf:action [ qt:query <K-SeqExprCast-363.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-375> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-375" ;
   rdfs:comment "'+2004-08-01' is an invalid lexical representation, a preceding '+' sign is not allowed for xs:date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10604> ;
   mf:action [ qt:query <K-SeqExprCast-375.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-376> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-376" ;
   rdfs:comment "'02004-08-01' is an invalid lexical representation for xs:date; if the year part has more than four digits, leading zeros are prohibited." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10613> ;
   mf:action [ qt:query <K-SeqExprCast-376.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-377> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-377" ;
   rdfs:comment "'00004-08-01' is an invalid lexical representation for xs:date; if the year part has more than four digits, leading zeros are prohibited." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10622> ;
   mf:action [ qt:query <K-SeqExprCast-377.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-378> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-378" ;
   rdfs:comment "'2004-32-01' is an invalid lexical representation for xs:date; the month part cannot be larger than 32." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10631> ;
   mf:action [ qt:query <K-SeqExprCast-378.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-379> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-379" ;
   rdfs:comment "'2002-02-30' is a non-existent xs:date date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10640> ;
   mf:action [ qt:query <K-SeqExprCast-379.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-380> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-380" ;
   rdfs:comment "'2002-002-15' is an invalid lexical representation for xs:date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10649> ;
   mf:action [ qt:query <K-SeqExprCast-380.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-381> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-381" ;
   rdfs:comment "'2002-02-150' is an invalid lexical representation for xs:date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10658> ;
   mf:action [ qt:query <K-SeqExprCast-381.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-382> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-382" ;
   rdfs:comment "'--2002-02-15' is an invalid lexical representation for xs:date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10667> ;
   mf:action [ qt:query <K-SeqExprCast-382.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-383> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-383" ;
   rdfs:comment "A valid xs:dateTime is an invalid xs:date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10676> ;
   mf:action [ qt:query <K-SeqExprCast-383.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-384> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-384" ;
   rdfs:comment "Testing timezone field in xs:date: the hour component cannot be -15." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10685> ;
   mf:action [ qt:query <K-SeqExprCast-384.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-385> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-385" ;
   rdfs:comment "Testing timezone field in xs:date: the hour component cannot be +15." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10694> ;
   mf:action [ qt:query <K-SeqExprCast-385.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-386> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-386" ;
   rdfs:comment "Testing timezone field in xs:date: the minute component cannot be +60." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10703> ;
   mf:action [ qt:query <K-SeqExprCast-386.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-387> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-387" ;
   rdfs:comment "Testing timezone field in xs:date: the minute component cannot be -60." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10712> ;
   mf:action [ qt:query <K-SeqExprCast-387.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-388> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-388" ;
   rdfs:comment "Testing datezone field in xs:date: the minute field must always be present." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10721> ;
   mf:action [ qt:query <K-SeqExprCast-388.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-441> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-441" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11205> ;
   mf:action [ qt:query <K-SeqExprCast-441.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-452> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-452" ;
   rdfs:comment "Casting from xs:float to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11304> ;
   mf:action [ qt:query <K-SeqExprCast-452.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-454> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-454" ;
   rdfs:comment "Casting from xs:float to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11322> ;
   mf:action [ qt:query <K-SeqExprCast-454.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-456> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-456" ;
   rdfs:comment "Casting from xs:float to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11340> ;
   mf:action [ qt:query <K-SeqExprCast-456.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-458> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-458" ;
   rdfs:comment "Casting from xs:float to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11358> ;
   mf:action [ qt:query <K-SeqExprCast-458.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-460> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-460" ;
   rdfs:comment "Casting from xs:float to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11376> ;
   mf:action [ qt:query <K-SeqExprCast-460.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-462> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-462" ;
   rdfs:comment "Casting from xs:float to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11394> ;
   mf:action [ qt:query <K-SeqExprCast-462.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-489> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-489" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11638> ;
   mf:action [ qt:query <K-SeqExprCast-489.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-500> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-500" ;
   rdfs:comment "Casting from xs:double to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11737> ;
   mf:action [ qt:query <K-SeqExprCast-500.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-502> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-502" ;
   rdfs:comment "Casting from xs:double to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11755> ;
   mf:action [ qt:query <K-SeqExprCast-502.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-504> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-504" ;
   rdfs:comment "Casting from xs:double to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11773> ;
   mf:action [ qt:query <K-SeqExprCast-504.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-506> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-506" ;
   rdfs:comment "Casting from xs:double to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11791> ;
   mf:action [ qt:query <K-SeqExprCast-506.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-508> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-508" ;
   rdfs:comment "Casting from xs:double to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11809> ;
   mf:action [ qt:query <K-SeqExprCast-508.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-510> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-510" ;
   rdfs:comment "Casting from xs:double to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L11827> ;
   mf:action [ qt:query <K-SeqExprCast-510.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-537> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-537" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12071> ;
   mf:action [ qt:query <K-SeqExprCast-537.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-552> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-552" ;
   rdfs:comment "Casting from xs:decimal to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12206> ;
   mf:action [ qt:query <K-SeqExprCast-552.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-554> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-554" ;
   rdfs:comment "Casting from xs:decimal to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12224> ;
   mf:action [ qt:query <K-SeqExprCast-554.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-556> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-556" ;
   rdfs:comment "Casting from xs:decimal to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12242> ;
   mf:action [ qt:query <K-SeqExprCast-556.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-558> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-558" ;
   rdfs:comment "Casting from xs:decimal to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12260> ;
   mf:action [ qt:query <K-SeqExprCast-558.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-560> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-560" ;
   rdfs:comment "Casting from xs:decimal to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12278> ;
   mf:action [ qt:query <K-SeqExprCast-560.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-562> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-562" ;
   rdfs:comment "Casting from xs:decimal to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12296> ;
   mf:action [ qt:query <K-SeqExprCast-562.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-589> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-589" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:integer." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12540> ;
   mf:action [ qt:query <K-SeqExprCast-589.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-604> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-604" ;
   rdfs:comment "Casting from xs:integer to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12675> ;
   mf:action [ qt:query <K-SeqExprCast-604.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-606> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-606" ;
   rdfs:comment "Casting from xs:integer to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12693> ;
   mf:action [ qt:query <K-SeqExprCast-606.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-608> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-608" ;
   rdfs:comment "Casting from xs:integer to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12711> ;
   mf:action [ qt:query <K-SeqExprCast-608.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-610> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-610" ;
   rdfs:comment "Casting from xs:integer to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12729> ;
   mf:action [ qt:query <K-SeqExprCast-610.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-612> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-612" ;
   rdfs:comment "Casting from xs:integer to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12747> ;
   mf:action [ qt:query <K-SeqExprCast-612.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-614> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-614" ;
   rdfs:comment "Casting from xs:integer to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L12765> ;
   mf:action [ qt:query <K-SeqExprCast-614.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-641> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-641" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:duration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13009> ;
   mf:action [ qt:query <K-SeqExprCast-641.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-643> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-643" ;
   rdfs:comment "It is not possible to extract an Effective Boolean Value from the type xs:duration, with the boolean() function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13027> ;
   mf:action [ qt:query <K-SeqExprCast-643.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-648> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-648" ;
   rdfs:comment "Casting from xs:duration to xs:float isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13072> ;
   mf:action [ qt:query <K-SeqExprCast-648.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-650> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-650" ;
   rdfs:comment "Casting from xs:duration to xs:double isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13090> ;
   mf:action [ qt:query <K-SeqExprCast-650.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-652> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-652" ;
   rdfs:comment "Casting from xs:duration to xs:decimal isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13108> ;
   mf:action [ qt:query <K-SeqExprCast-652.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-654> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-654" ;
   rdfs:comment "Casting from xs:duration to xs:integer isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13126> ;
   mf:action [ qt:query <K-SeqExprCast-654.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-662> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-662" ;
   rdfs:comment "Casting from xs:duration to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13198> ;
   mf:action [ qt:query <K-SeqExprCast-662.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-664> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-664" ;
   rdfs:comment "Casting from xs:duration to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13216> ;
   mf:action [ qt:query <K-SeqExprCast-664.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-666> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-666" ;
   rdfs:comment "Casting from xs:duration to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13234> ;
   mf:action [ qt:query <K-SeqExprCast-666.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-678> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-678" ;
   rdfs:comment "Casting from xs:duration to xs:boolean isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13342> ;
   mf:action [ qt:query <K-SeqExprCast-678.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-693> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-693" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:yearMonthDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13478> ;
   mf:action [ qt:query <K-SeqExprCast-693.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-695> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-695" ;
   rdfs:comment "It is not possible to extract an Effective Boolean Value from the type xs:yearMonthDuration, with the boolean() function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13496> ;
   mf:action [ qt:query <K-SeqExprCast-695.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-700> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-700" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:float isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13541> ;
   mf:action [ qt:query <K-SeqExprCast-700.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-702> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-702" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:double isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13559> ;
   mf:action [ qt:query <K-SeqExprCast-702.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-704> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-704" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:decimal isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13577> ;
   mf:action [ qt:query <K-SeqExprCast-704.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-706> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-706" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:integer isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13595> ;
   mf:action [ qt:query <K-SeqExprCast-706.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-714> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-714" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13667> ;
   mf:action [ qt:query <K-SeqExprCast-714.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-716> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-716" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13685> ;
   mf:action [ qt:query <K-SeqExprCast-716.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-718> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-718" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13703> ;
   mf:action [ qt:query <K-SeqExprCast-718.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-730> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-730" ;
   rdfs:comment "Casting from xs:yearMonthDuration to xs:boolean isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13811> ;
   mf:action [ qt:query <K-SeqExprCast-730.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-745> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-745" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:dayTimeDuration." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13947> ;
   mf:action [ qt:query <K-SeqExprCast-745.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-747> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-747" ;
   rdfs:comment "It is not possible to extract an Effective Boolean Value from the type xs:dayTimeDuration, with the boolean() function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L13965> ;
   mf:action [ qt:query <K-SeqExprCast-747.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-752> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-752" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:float isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14010> ;
   mf:action [ qt:query <K-SeqExprCast-752.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-754> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-754" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:double isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14028> ;
   mf:action [ qt:query <K-SeqExprCast-754.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-756> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-756" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:decimal isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14046> ;
   mf:action [ qt:query <K-SeqExprCast-756.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-758> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-758" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:integer isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14064> ;
   mf:action [ qt:query <K-SeqExprCast-758.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-766> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-766" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14136> ;
   mf:action [ qt:query <K-SeqExprCast-766.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-768> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-768" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14154> ;
   mf:action [ qt:query <K-SeqExprCast-768.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-770> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-770" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14172> ;
   mf:action [ qt:query <K-SeqExprCast-770.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-782> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-782" ;
   rdfs:comment "Casting from xs:dayTimeDuration to xs:boolean isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14280> ;
   mf:action [ qt:query <K-SeqExprCast-782.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-797> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-797" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:dateTime." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14416> ;
   mf:action [ qt:query <K-SeqExprCast-797.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-799> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-799" ;
   rdfs:comment "It is not possible to extract an Effective Boolean Value from the type xs:dateTime, with the boolean() function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14434> ;
   mf:action [ qt:query <K-SeqExprCast-799.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-804> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-804" ;
   rdfs:comment "Casting from xs:dateTime to xs:float isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14479> ;
   mf:action [ qt:query <K-SeqExprCast-804.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-806> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-806" ;
   rdfs:comment "Casting from xs:dateTime to xs:double isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14497> ;
   mf:action [ qt:query <K-SeqExprCast-806.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-808> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-808" ;
   rdfs:comment "Casting from xs:dateTime to xs:decimal isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14515> ;
   mf:action [ qt:query <K-SeqExprCast-808.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-810> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-810" ;
   rdfs:comment "Casting from xs:dateTime to xs:integer isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14533> ;
   mf:action [ qt:query <K-SeqExprCast-810.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-812> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-812" ;
   rdfs:comment "Casting from xs:dateTime to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14551> ;
   mf:action [ qt:query <K-SeqExprCast-812.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-814> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-814" ;
   rdfs:comment "Casting from xs:dateTime to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14569> ;
   mf:action [ qt:query <K-SeqExprCast-814.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-816> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-816" ;
   rdfs:comment "Casting from xs:dateTime to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14587> ;
   mf:action [ qt:query <K-SeqExprCast-816.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-834> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-834" ;
   rdfs:comment "Casting from xs:dateTime to xs:boolean isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14749> ;
   mf:action [ qt:query <K-SeqExprCast-834.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-849> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-849" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:time." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14885> ;
   mf:action [ qt:query <K-SeqExprCast-849.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-851> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-851" ;
   rdfs:comment "It is not possible to extract an Effective Boolean Value from the type xs:time, with the boolean() function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14903> ;
   mf:action [ qt:query <K-SeqExprCast-851.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-856> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-856" ;
   rdfs:comment "Casting from xs:time to xs:float isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14948> ;
   mf:action [ qt:query <K-SeqExprCast-856.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-858> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-858" ;
   rdfs:comment "Casting from xs:time to xs:double isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14966> ;
   mf:action [ qt:query <K-SeqExprCast-858.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-860> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-860" ;
   rdfs:comment "Casting from xs:time to xs:decimal isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L14984> ;
   mf:action [ qt:query <K-SeqExprCast-860.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-862> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-862" ;
   rdfs:comment "Casting from xs:time to xs:integer isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15002> ;
   mf:action [ qt:query <K-SeqExprCast-862.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-864> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-864" ;
   rdfs:comment "Casting from xs:time to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15020> ;
   mf:action [ qt:query <K-SeqExprCast-864.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-866> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-866" ;
   rdfs:comment "Casting from xs:time to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15038> ;
   mf:action [ qt:query <K-SeqExprCast-866.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-868> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-868" ;
   rdfs:comment "Casting from xs:time to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15056> ;
   mf:action [ qt:query <K-SeqExprCast-868.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-870> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-870" ;
   rdfs:comment "Casting from xs:time to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15074> ;
   mf:action [ qt:query <K-SeqExprCast-870.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-874> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-874" ;
   rdfs:comment "Casting from xs:time to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15110> ;
   mf:action [ qt:query <K-SeqExprCast-874.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-886> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-886" ;
   rdfs:comment "Casting from xs:time to xs:boolean isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15218> ;
   mf:action [ qt:query <K-SeqExprCast-886.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-901> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-901" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:date." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15354> ;
   mf:action [ qt:query <K-SeqExprCast-901.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-903> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-903" ;
   rdfs:comment "It is not possible to extract an Effective Boolean Value from the type xs:date, with the boolean() function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15372> ;
   mf:action [ qt:query <K-SeqExprCast-903.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-908> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-908" ;
   rdfs:comment "Casting from xs:date to xs:float isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15417> ;
   mf:action [ qt:query <K-SeqExprCast-908.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-910> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-910" ;
   rdfs:comment "Casting from xs:date to xs:double isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15435> ;
   mf:action [ qt:query <K-SeqExprCast-910.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-912> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-912" ;
   rdfs:comment "Casting from xs:date to xs:decimal isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15453> ;
   mf:action [ qt:query <K-SeqExprCast-912.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-914> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-914" ;
   rdfs:comment "Casting from xs:date to xs:integer isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15471> ;
   mf:action [ qt:query <K-SeqExprCast-914.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-916> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-916" ;
   rdfs:comment "Casting from xs:date to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15489> ;
   mf:action [ qt:query <K-SeqExprCast-916.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-918> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-918" ;
   rdfs:comment "Casting from xs:date to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15507> ;
   mf:action [ qt:query <K-SeqExprCast-918.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-920> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-920" ;
   rdfs:comment "Casting from xs:date to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15525> ;
   mf:action [ qt:query <K-SeqExprCast-920.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-924> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-924" ;
   rdfs:comment "Casting from xs:date to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15561> ;
   mf:action [ qt:query <K-SeqExprCast-924.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-938> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-938" ;
   rdfs:comment "Casting from xs:date to xs:boolean isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L15687> ;
   mf:action [ qt:query <K-SeqExprCast-938.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-1213> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-1213" ;
   rdfs:comment "An empty string is not a valid lexical representation of xs:boolean." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L18168> ;
   mf:action [ qt:query <K-SeqExprCast-1213.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-1228> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-1228" ;
   rdfs:comment "Casting from xs:boolean to xs:duration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L18304> ;
   mf:action [ qt:query <K-SeqExprCast-1228.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-1230> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-1230" ;
   rdfs:comment "Casting from xs:boolean to xs:yearMonthDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L18322> ;
   mf:action [ qt:query <K-SeqExprCast-1230.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-1232> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-1232" ;
   rdfs:comment "Casting from xs:boolean to xs:dayTimeDuration isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L18340> ;
   mf:action [ qt:query <K-SeqExprCast-1232.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-1234> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-1234" ;
   rdfs:comment "Casting from xs:boolean to xs:dateTime isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L18358> ;
   mf:action [ qt:query <K-SeqExprCast-1234.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-1236> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-1236" ;
   rdfs:comment "Casting from xs:boolean to xs:time isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L18376> ;
   mf:action [ qt:query <K-SeqExprCast-1236.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-1238> a mf:QueryEvaluationTest ;
   mf:name "K-SeqExprCast-1238" ;
   rdfs:comment "Casting from xs:boolean to xs:date isn't allowed." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L18394> ;
   mf:action [ qt:query <K-SeqExprCast-1238.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-SeqExprCast-17> a mf:QueryEvaluationTest ;
+  mf:name "K2-SeqExprCast-17" ;
+  rdfs:comment "Pass a large, the largest if such a limit exists, to long." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L20841> ;
+  mf:action [ qt:query <K2-SeqExprCast-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-SeqExprCast-22> a mf:QueryEvaluationTest ;
+  mf:name "K2-SeqExprCast-22" ;
+  rdfs:comment "Pass a large, the largest if such a limit exists, to unsignedLong." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L20890> ;
+  mf:action [ qt:query <K2-SeqExprCast-22.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-215> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-215" ;
   rdfs:comment "'Inf' is not a valid value for xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22655> ;
   mf:action [ qt:query <K2-SeqExprCast-215.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-216> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-216" ;
   rdfs:comment "'Inf' is not a valid value for xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22664> ;
   mf:action [ qt:query <K2-SeqExprCast-216.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-217> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-217" ;
   rdfs:comment "'-Inf' is not a valid value for xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22673> ;
   mf:action [ qt:query <K2-SeqExprCast-217.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-218> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-218" ;
   rdfs:comment "'-Inf' is not a valid value for xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22682> ;
   mf:action [ qt:query <K2-SeqExprCast-218.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-219> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-219" ;
   rdfs:comment "'+Inf' is not a valid value for xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22691> ;
   mf:action [ qt:query <K2-SeqExprCast-219.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-220> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-220" ;
   rdfs:comment "'+Inf' is not a valid value for xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22700> ;
   mf:action [ qt:query <K2-SeqExprCast-220.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-225> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-225" ;
   rdfs:comment "'nan' is not a valid value for xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22745> ;
   mf:action [ qt:query <K2-SeqExprCast-225.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-226> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-226" ;
   rdfs:comment "'nan' is not a valid value for xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22754> ;
   mf:action [ qt:query <K2-SeqExprCast-226.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-227> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-227" ;
   rdfs:comment "'- INF' is not a valid value for xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22763> ;
   mf:action [ qt:query <K2-SeqExprCast-227.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-228> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-228" ;
   rdfs:comment "'- INF' is not a valid value for xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22772> ;
   mf:action [ qt:query <K2-SeqExprCast-228.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-229> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-229" ;
   rdfs:comment "'+ INF' is not a valid value for xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22781> ;
   mf:action [ qt:query <K2-SeqExprCast-229.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-230> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-230" ;
   rdfs:comment "'+ INF' is not a valid value for xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22790> ;
   mf:action [ qt:query <K2-SeqExprCast-230.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-233> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-233" ;
   rdfs:comment "'Inf' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22847> ;
   mf:action [ qt:query <K2-SeqExprCast-233.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-234> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-234" ;
   rdfs:comment "'-Inf' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22856> ;
   mf:action [ qt:query <K2-SeqExprCast-234.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-235> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-235" ;
   rdfs:comment "'+Inf' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22865> ;
   mf:action [ qt:query <K2-SeqExprCast-235.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-236> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-236" ;
   rdfs:comment "'nan' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22874> ;
   mf:action [ qt:query <K2-SeqExprCast-236.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-237> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-237" ;
   rdfs:comment "'- INF' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22883> ;
   mf:action [ qt:query <K2-SeqExprCast-237.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-238> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-238" ;
   rdfs:comment "'+ INF' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22892> ;
   mf:action [ qt:query <K2-SeqExprCast-238.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-239> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-239" ;
   rdfs:comment "'+INF' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22901> ;
   mf:action [ qt:query <K2-SeqExprCast-239.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-240> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-240" ;
   rdfs:comment "'INF' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22910> ;
   mf:action [ qt:query <K2-SeqExprCast-240.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-241> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-241" ;
   rdfs:comment "'NaN' is not a valid value for xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22919> ;
   mf:action [ qt:query <K2-SeqExprCast-241.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-242> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-242" ;
   rdfs:comment "Cast xs:float(NaN) to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22928> ;
   mf:action [ qt:query <K2-SeqExprCast-242.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-243> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-243" ;
   rdfs:comment "Cast xs:double(NaN) to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22937> ;
   mf:action [ qt:query <K2-SeqExprCast-243.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-244> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-244" ;
   rdfs:comment "Cast xs:float(NaN) to xs:integer." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22946> ;
   mf:action [ qt:query <K2-SeqExprCast-244.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-245> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-245" ;
   rdfs:comment "Cast xs:double(NaN) to xs:integer." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22955> ;
   mf:action [ qt:query <K2-SeqExprCast-245.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-246> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-246" ;
   rdfs:comment "Cast xs:float(INF) to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22964> ;
   mf:action [ qt:query <K2-SeqExprCast-246.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-247> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-247" ;
   rdfs:comment "Cast xs:double(INF) to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22973> ;
   mf:action [ qt:query <K2-SeqExprCast-247.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-248> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-248" ;
   rdfs:comment "Cast xs:float(INF) to xs:integer." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22982> ;
   mf:action [ qt:query <K2-SeqExprCast-248.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-249> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-249" ;
   rdfs:comment "Cast xs:double(INF) to xs:integer." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L22991> ;
   mf:action [ qt:query <K2-SeqExprCast-249.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-250> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-250" ;
   rdfs:comment "Cast xs:float(-INF) to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L23000> ;
   mf:action [ qt:query <K2-SeqExprCast-250.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-251> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-251" ;
   rdfs:comment "Cast xs:double(-INF) to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L23009> ;
   mf:action [ qt:query <K2-SeqExprCast-251.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-252> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-252" ;
   rdfs:comment "Cast xs:float(-INF) to xs:integer." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L23018> ;
   mf:action [ qt:query <K2-SeqExprCast-252.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-253> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-253" ;
   rdfs:comment "Cast xs:double(-INF) to xs:integer." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L23027> ;
   mf:action [ qt:query <K2-SeqExprCast-253.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-429> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-429" ;
   rdfs:comment "Cast xs:time(\"11:-1:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24640> ;
   mf:action [ qt:query <K2-SeqExprCast-429.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-430> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-430" ;
   rdfs:comment "Cast xs:time(\"11:+1:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24649> ;
   mf:action [ qt:query <K2-SeqExprCast-430.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-431> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-431" ;
   rdfs:comment "Cast xs:time(\"11: 1:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24658> ;
   mf:action [ qt:query <K2-SeqExprCast-431.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-432> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-432" ;
   rdfs:comment "Cast xs:time(\"11:11:-1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24667> ;
   mf:action [ qt:query <K2-SeqExprCast-432.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-433> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-433" ;
   rdfs:comment "Cast xs:time(\"11:11:-1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24676> ;
   mf:action [ qt:query <K2-SeqExprCast-433.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-434> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-434" ;
   rdfs:comment "Cast xs:time(\"11:11:+1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24685> ;
   mf:action [ qt:query <K2-SeqExprCast-434.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-435> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-435" ;
   rdfs:comment "Cast xs:time(\"11:11: 1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24694> ;
   mf:action [ qt:query <K2-SeqExprCast-435.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-436> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-436" ;
   rdfs:comment "Cast xs:time(\"-1:11:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24703> ;
   mf:action [ qt:query <K2-SeqExprCast-436.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-437> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-437" ;
   rdfs:comment "Cast xs:time(\"+1:11:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24712> ;
   mf:action [ qt:query <K2-SeqExprCast-437.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-438> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-438" ;
   rdfs:comment "Cast xs:time(\"+1:11:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24721> ;
   mf:action [ qt:query <K2-SeqExprCast-438.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-439> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-439" ;
   rdfs:comment "Cast xs:time(\"11:11:1e0\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24730> ;
   mf:action [ qt:query <K2-SeqExprCast-439.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-440> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-440" ;
   rdfs:comment "Cast xs:time(\"11:11:1E0\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24739> ;
   mf:action [ qt:query <K2-SeqExprCast-440.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-441> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-441" ;
   rdfs:comment "Cast xs:time(\"11:11:1b0\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24748> ;
   mf:action [ qt:query <K2-SeqExprCast-441.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-442> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-442" ;
   rdfs:comment "Cast xs:time(\"11:11: 10\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24757> ;
   mf:action [ qt:query <K2-SeqExprCast-442.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-443> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-443" ;
   rdfs:comment "Cast xs:time(\"11:11:11b33\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24766> ;
   mf:action [ qt:query <K2-SeqExprCast-443.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-444> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-444" ;
   rdfs:comment "Cast xs:time(\"11:11:111\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24775> ;
   mf:action [ qt:query <K2-SeqExprCast-444.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-445> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-445" ;
   rdfs:comment "Cast xs:time(\"11:11:11.+11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24784> ;
   mf:action [ qt:query <K2-SeqExprCast-445.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-446> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-446" ;
   rdfs:comment "Cast xs:time(\"11:11:11.-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24793> ;
   mf:action [ qt:query <K2-SeqExprCast-446.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-447> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-447" ;
   rdfs:comment "Cast xs:time(\"11:11:11. 11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24802> ;
   mf:action [ qt:query <K2-SeqExprCast-447.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-448> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-448" ;
   rdfs:comment "Cast xs:time(\"24:00:00.1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24811> ;
   mf:action [ qt:query <K2-SeqExprCast-448.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-449> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-449" ;
   rdfs:comment "Cast xs:time(\"24:01:00\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24820> ;
   mf:action [ qt:query <K2-SeqExprCast-449.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-450> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-450" ;
   rdfs:comment "Cast xs:time(\"24:00:01\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24829> ;
   mf:action [ qt:query <K2-SeqExprCast-450.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-451> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-451" ;
   rdfs:comment "Cast xs:time(\"11:11:11++1:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24838> ;
   mf:action [ qt:query <K2-SeqExprCast-451.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-452> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-452" ;
   rdfs:comment "Cast xs:time(\"11:11:11+-1:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24847> ;
   mf:action [ qt:query <K2-SeqExprCast-452.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-453> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-453" ;
   rdfs:comment "Cast xs:time(\"11:11:11+ 1:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24856> ;
   mf:action [ qt:query <K2-SeqExprCast-453.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-454> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-454" ;
   rdfs:comment "Cast xs:time(\"11:11:11+11:+1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24865> ;
   mf:action [ qt:query <K2-SeqExprCast-454.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-455> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-455" ;
   rdfs:comment "Cast xs:time(\"11:11:11+11:-1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24874> ;
   mf:action [ qt:query <K2-SeqExprCast-455.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-456> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-456" ;
   rdfs:comment "Cast xs:time(\"11:11:11+11: 1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24883> ;
   mf:action [ qt:query <K2-SeqExprCast-456.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-457> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-457" ;
   rdfs:comment "Cast xs:time(\"11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24892> ;
   mf:action [ qt:query <K2-SeqExprCast-457.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-458> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-458" ;
   rdfs:comment "Cast xs:time(\"1 :11:11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24901> ;
   mf:action [ qt:query <K2-SeqExprCast-458.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-459> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-459" ;
   rdfs:comment "Cast xs:time(\"11:11:1 \"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24910> ;
   mf:action [ qt:query <K2-SeqExprCast-459.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-460> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-460" ;
   rdfs:comment "Cast xs:date(\"+2002-12-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24919> ;
   mf:action [ qt:query <K2-SeqExprCast-460.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-461> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-461" ;
   rdfs:comment "Cast xs:date(\" 111-11-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24928> ;
   mf:action [ qt:query <K2-SeqExprCast-461.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-462> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-462" ;
   rdfs:comment "Cast xs:date(\" +11-11-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24937> ;
   mf:action [ qt:query <K2-SeqExprCast-462.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-463> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-463" ;
   rdfs:comment "Cast xs:date(\"1111- 1-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24946> ;
   mf:action [ qt:query <K2-SeqExprCast-463.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-464> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-464" ;
   rdfs:comment "Cast xs:date(\"-111-11-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24955> ;
   mf:action [ qt:query <K2-SeqExprCast-464.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-465> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-465" ;
   rdfs:comment "Cast xs:date(\"+111-11-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24964> ;
   mf:action [ qt:query <K2-SeqExprCast-465.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-466> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-466" ;
   rdfs:comment "Cast xs:date(\"1111-11- 1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24973> ;
   mf:action [ qt:query <K2-SeqExprCast-466.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-467> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-467" ;
   rdfs:comment "Cast xs:date(\"1111-+1-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24982> ;
   mf:action [ qt:query <K2-SeqExprCast-467.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-468> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-468" ;
   rdfs:comment "Cast xs:date(\"1111-11-+1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L24991> ;
   mf:action [ qt:query <K2-SeqExprCast-468.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-469> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-469" ;
   rdfs:comment "Cast xs:date(\"1111--1-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25000> ;
   mf:action [ qt:query <K2-SeqExprCast-469.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-470> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-470" ;
   rdfs:comment "Cast xs:date(\"1111-11--1\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25009> ;
   mf:action [ qt:query <K2-SeqExprCast-470.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-471> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-471" ;
   rdfs:comment "Cast xs:date(\"1111-11-1F\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25018> ;
   mf:action [ qt:query <K2-SeqExprCast-471.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-472> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-472" ;
   rdfs:comment "Cast xs:date(\"0x10-11-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25027> ;
   mf:action [ qt:query <K2-SeqExprCast-472.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-473> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-473" ;
   rdfs:comment "Cast xs:date(\"111 -11-11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25036> ;
   mf:action [ qt:query <K2-SeqExprCast-473.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-474> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-474" ;
   rdfs:comment "Cast xs:date(\"1111-1 -11\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25045> ;
   mf:action [ qt:query <K2-SeqExprCast-474.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-475> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-475" ;
   rdfs:comment "Cast xs:date(\"1111-11-1 \"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25054> ;
   mf:action [ qt:query <K2-SeqExprCast-475.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-476> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-476" ;
   rdfs:comment "Cast xs:dateTime(\"2002-11-23\"), which is an invalid lexical representation." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25063> ;
   mf:action [ qt:query <K2-SeqExprCast-476.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-481> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-481" ;
   rdfs:comment "Try to cast inf to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25123> ;
   mf:action [ qt:query <K2-SeqExprCast-481.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-482> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-482" ;
   rdfs:comment "Try to cast 'inF' to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25132> ;
   mf:action [ qt:query <K2-SeqExprCast-482.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-483> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-483" ;
   rdfs:comment "Try to cast '-inF' to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25141> ;
   mf:action [ qt:query <K2-SeqExprCast-483.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-484> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-484" ;
   rdfs:comment "Try to cast 'inF ' to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25150> ;
   mf:action [ qt:query <K2-SeqExprCast-484.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-485> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-485" ;
   rdfs:comment "Try to cast '-inF(space)' to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25159> ;
   mf:action [ qt:query <K2-SeqExprCast-485.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-486> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-486" ;
   rdfs:comment "Try to cast 'naN' to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25168> ;
   mf:action [ qt:query <K2-SeqExprCast-486.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-487> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-487" ;
   rdfs:comment "Try to cast ' naN' to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25177> ;
   mf:action [ qt:query <K2-SeqExprCast-487.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-507> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-507" ;
   rdfs:comment "Cast inF to xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25359> ;
   mf:action [ qt:query <K2-SeqExprCast-507.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-508> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-508" ;
   rdfs:comment "Cast inF to xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25368> ;
   mf:action [ qt:query <K2-SeqExprCast-508.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-509> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-509" ;
   rdfs:comment "Cast inF to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25377> ;
   mf:action [ qt:query <K2-SeqExprCast-509.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-510> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-510" ;
   rdfs:comment "Cast inf to xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25386> ;
   mf:action [ qt:query <K2-SeqExprCast-510.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-511> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-511" ;
   rdfs:comment "Cast inf to xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25395> ;
   mf:action [ qt:query <K2-SeqExprCast-511.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-512> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-512" ;
   rdfs:comment "Cast inf to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25404> ;
   mf:action [ qt:query <K2-SeqExprCast-512.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-513> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-513" ;
   rdfs:comment "Cast InF to xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25413> ;
   mf:action [ qt:query <K2-SeqExprCast-513.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-514> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-514" ;
   rdfs:comment "Cast InF to xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25422> ;
   mf:action [ qt:query <K2-SeqExprCast-514.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-515> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-515" ;
   rdfs:comment "Cast InF to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25431> ;
   mf:action [ qt:query <K2-SeqExprCast-515.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-516> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-516" ;
   rdfs:comment "Cast -InF to xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25440> ;
   mf:action [ qt:query <K2-SeqExprCast-516.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-517> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-517" ;
   rdfs:comment "Cast -InF to xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25449> ;
   mf:action [ qt:query <K2-SeqExprCast-517.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-518> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-518" ;
   rdfs:comment "Cast -InF to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25458> ;
   mf:action [ qt:query <K2-SeqExprCast-518.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-519> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-519" ;
   rdfs:comment "Cast +InF to xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25467> ;
   mf:action [ qt:query <K2-SeqExprCast-519.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-520> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-520" ;
   rdfs:comment "Cast +InF to xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25476> ;
   mf:action [ qt:query <K2-SeqExprCast-520.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-521> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-521" ;
   rdfs:comment "Cast +InF to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25485> ;
   mf:action [ qt:query <K2-SeqExprCast-521.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-522> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-522" ;
   rdfs:comment "Cast naN to xs:float." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25494> ;
   mf:action [ qt:query <K2-SeqExprCast-522.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-523> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-523" ;
   rdfs:comment "Cast naN to xs:double." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25503> ;
   mf:action [ qt:query <K2-SeqExprCast-523.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-SeqExprCast-524> a mf:QueryEvaluationTest ;
   mf:name "K2-SeqExprCast-524" ;
   rdfs:comment "Cast naN to xs:decimal." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L25512> ;
   mf:action [ qt:query <K2-SeqExprCast-524.rq> ] ;
   mf:result <../true.srj> .

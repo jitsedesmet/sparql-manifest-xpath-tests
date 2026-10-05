@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-time-greater-than" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#op-time-greater-than2args-1>
     <#op-time-greater-than2args-2>
@@ -44,237 +46,237 @@
 <#op-time-greater-than2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-1" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-1                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L6> ;
   mf:action [ qt:query <op-time-greater-than2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-2" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-2                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L24> ;
   mf:action [ qt:query <op-time-greater-than2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-3" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-3                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L42> ;
   mf:action [ qt:query <op-time-greater-than2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-4" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-4                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(mid range)                             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L60> ;
   mf:action [ qt:query <op-time-greater-than2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-5" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-5                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(upper bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L78> ;
   mf:action [ qt:query <op-time-greater-than2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-6" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-6                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L96> ;
   mf:action [ qt:query <op-time-greater-than2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-7" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-7                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L114> ;
   mf:action [ qt:query <op-time-greater-than2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-8" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-8                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:time(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L132> ;
   mf:action [ qt:query <op-time-greater-than2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-9" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-9                       \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(mid range)                             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L150> ;
   mf:action [ qt:query <op-time-greater-than2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than2args-10" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than2args-10                      \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:time-greater-than\" operator \n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:time(upper bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L168> ;
   mf:action [ qt:query <op-time-greater-than2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-1> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-1" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-1                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function    \nAs per example 1 (for this function)of the F&O specs   \n(gt operator).                                         \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L186> ;
   mf:action [ qt:query <op-time-greater-than-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-2> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-2" ;
   rdfs:comment "*******************************************************\nTest:  op-time-greater-than-2                          \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function    \nAs per example 1 (for this function)of the F&O specs   \n(ge operator).                                         \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L203> ;
   mf:action [ qt:query <op-time-greater-than-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-3> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-3" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-3                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function that\nreturn true and used together with fn:not (gt operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L220> ;
   mf:action [ qt:query <op-time-greater-than-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-4> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-4" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-4                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function that\nreturn true and used together with fn:not (ge operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L236> ;
   mf:action [ qt:query <op-time-greater-than-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-5> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-5" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-5                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function that\nreturn false and used together with fn:not (gt operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L252> ;
   mf:action [ qt:query <op-time-greater-than-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-6> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-6" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-6                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function that\nreturn false and used together with fn:not(ge operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L268> ;
   mf:action [ qt:query <op-time-greater-than-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-7> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-7" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-7                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"and\" expression (gt operator).          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L284> ;
   mf:action [ qt:query <op-time-greater-than-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-8> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-8" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-8                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"and\" expression (ge operator).          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L300> ;
   mf:action [ qt:query <op-time-greater-than-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-9> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-9" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-9                           \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"or\" expression (gt operator).          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L316> ;
   mf:action [ qt:query <op-time-greater-than-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-10> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-10" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-10                          \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"or\" expression (ge operator).          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L332> ;
   mf:action [ qt:query <op-time-greater-than-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-11> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-11" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-11                          \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"fn:true\"/or expression (gt operator).   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L348> ;
   mf:action [ qt:query <op-time-greater-than-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-12> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-12" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-12                          \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"fn:true\"/or expression (ge operator).   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L364> ;
   mf:action [ qt:query <op-time-greater-than-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-13> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-13" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-13                          \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"fn:false\"/or expression (gt operator).  \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L380> ;
   mf:action [ qt:query <op-time-greater-than-13.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-time-greater-than-14> a mf:QueryEvaluationTest ;
   mf:name "op-time-greater-than-14" ;
   rdfs:comment "*******************************************************\nTest: op-time-greater-than-14                          \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"time-greater-than\" function used\ntogether with \"fn:false\"/or expression (ge operator).  \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L396> ;
   mf:action [ qt:query <op-time-greater-than-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimeGT-1> a mf:QueryEvaluationTest ;
   mf:name "K-TimeGT-1" ;
   rdfs:comment "*******************************************************\n Test: K-TimeGT-1                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:time.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L412> ;
   mf:action [ qt:query <K-TimeGT-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimeGT-2> a mf:QueryEvaluationTest ;
   mf:name "K-TimeGT-2" ;
   rdfs:comment "*******************************************************\n Test: K-TimeGT-2                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:time.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L427> ;
   mf:action [ qt:query <K-TimeGT-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimeGT-3> a mf:QueryEvaluationTest ;
   mf:name "K-TimeGT-3" ;
   rdfs:comment "*******************************************************\n Test: K-TimeGT-3                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:time.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L442> ;
   mf:action [ qt:query <K-TimeGT-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimeGT-4> a mf:QueryEvaluationTest ;
   mf:name "K-TimeGT-4" ;
   rdfs:comment "*******************************************************\n Test: K-TimeGT-4                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:time.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L457> ;
   mf:action [ qt:query <K-TimeGT-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimeGT-5> a mf:QueryEvaluationTest ;
   mf:name "K-TimeGT-5" ;
   rdfs:comment "*******************************************************\n Test: K-TimeGT-5                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:time.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L472> ;
   mf:action [ qt:query <K-TimeGT-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimeGT-6> a mf:QueryEvaluationTest ;
   mf:name "K-TimeGT-6" ;
   rdfs:comment "*******************************************************\n Test: K-TimeGT-6                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:time.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L487> ;
   mf:action [ qt:query <K-TimeGT-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-time-greater-than-002> a mf:QueryEvaluationTest ;
   mf:name "cbcl-time-greater-than-002" ;
   rdfs:comment "test comparison of time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L516> ;
   mf:action [ qt:query <cbcl-time-greater-than-002.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-time-greater-than-003> a mf:QueryEvaluationTest ;
   mf:name "cbcl-time-greater-than-003" ;
   rdfs:comment "test comparison of time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L525> ;
   mf:action [ qt:query <cbcl-time-greater-than-003.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-time-greater-than-007> a mf:QueryEvaluationTest ;
   mf:name "cbcl-time-greater-than-007" ;
   rdfs:comment "test comparison of time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L571> ;
   mf:action [ qt:query <cbcl-time-greater-than-007.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-time-greater-than-008> a mf:QueryEvaluationTest ;
   mf:name "cbcl-time-greater-than-008" ;
   rdfs:comment "test comparison of time" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L580> ;
   mf:action [ qt:query <cbcl-time-greater-than-008.rq> ] ;
   mf:result <../true.srj> .

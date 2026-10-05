@@ -1,0 +1,7 @@
+# QT3 test case re00190 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('‿', ',') satisfies matches($s, '^(?:\P{No}*)$')) and (every $s in tokenize('²𐌣', ',') satisfies not(matches($s, '^(?:\P{No}*)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1650
+ASK {
+  BIND(( REGEX( "‿" , "^(?:\\P{No}*)$" ) && ! REGEX( "²𐌣" , "^(?:\\P{No}*)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

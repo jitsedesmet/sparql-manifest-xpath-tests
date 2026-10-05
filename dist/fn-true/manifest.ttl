@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set fn-true" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#fn-true-1>
     <#fn-true-2>
@@ -33,160 +35,160 @@
 <#fn-true-1> a mf:QueryEvaluationTest ;
   mf:name "fn-true-1" ;
   rdfs:comment "Simple call to an \"fn:true\" function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L7> ;
   mf:action [ qt:query <fn-true-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-2> a mf:QueryEvaluationTest ;
   mf:name "fn-true-2" ;
   rdfs:comment "Evaluation of \"fn:true\" function as an argument to \"fn:not\" function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L19> ;
   mf:action [ qt:query <fn-true-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-3> a mf:QueryEvaluationTest ;
   mf:name "fn-true-3" ;
   rdfs:comment "Evaluation of a \"true\" function with a logical expression involving the \"and\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L28> ;
   mf:action [ qt:query <fn-true-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-4> a mf:QueryEvaluationTest ;
   mf:name "fn-true-4" ;
   rdfs:comment "Evaluation of a \"fn:true\" function with a logical expression involving the \"or\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L37> ;
   mf:action [ qt:query <fn-true-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-5> a mf:QueryEvaluationTest ;
   mf:name "fn-true-5" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"eq\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L46> ;
   mf:action [ qt:query <fn-true-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-6> a mf:QueryEvaluationTest ;
   mf:name "fn-true-6" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"ne\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L55> ;
   mf:action [ qt:query <fn-true-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-7> a mf:QueryEvaluationTest ;
   mf:name "fn-true-7" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"lt\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L64> ;
   mf:action [ qt:query <fn-true-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-8> a mf:QueryEvaluationTest ;
   mf:name "fn-true-8" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"le\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L73> ;
   mf:action [ qt:query <fn-true-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-9> a mf:QueryEvaluationTest ;
   mf:name "fn-true-9" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"gt\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L82> ;
   mf:action [ qt:query <fn-true-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-10> a mf:QueryEvaluationTest ;
   mf:name "fn-true-10" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"ge\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L91> ;
   mf:action [ qt:query <fn-true-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-11> a mf:QueryEvaluationTest ;
   mf:name "fn-true-11" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"=\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L100> ;
   mf:action [ qt:query <fn-true-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-12> a mf:QueryEvaluationTest ;
   mf:name "fn-true-12" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"!=\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L109> ;
   mf:action [ qt:query <fn-true-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-13> a mf:QueryEvaluationTest ;
   mf:name "fn-true-13" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"<\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L118> ;
   mf:action [ qt:query <fn-true-13.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-14> a mf:QueryEvaluationTest ;
   mf:name "fn-true-14" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \"<=\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L127> ;
   mf:action [ qt:query <fn-true-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-15> a mf:QueryEvaluationTest ;
   mf:name "fn-true-15" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \">\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L136> ;
   mf:action [ qt:query <fn-true-15.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-16> a mf:QueryEvaluationTest ;
   mf:name "fn-true-16" ;
   rdfs:comment "Evaluation of an \"fn:true\" function with a comparison expression involving the \">=\" operator." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L145> ;
   mf:action [ qt:query <fn-true-16.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-17> a mf:QueryEvaluationTest ;
   mf:name "fn-true-17" ;
   rdfs:comment "Evaluation of an \"fn:true\" function as an argument to an \"xs:boolean\" function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L154> ;
   mf:action [ qt:query <fn-true-17.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-18> a mf:QueryEvaluationTest ;
   mf:name "fn-true-18" ;
   rdfs:comment "Evaluation of an \"fn:true\" function as an argument to an \"fn:string\" function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L163> ;
   mf:action [ qt:query <fn-true-18.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-19> a mf:QueryEvaluationTest ;
   mf:name "fn-true-19" ;
   rdfs:comment "Evaluation of an \"fn:true\" function as arguments to an \"fn:concat\" function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L172> ;
   mf:action [ qt:query <fn-true-19.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-20> a mf:QueryEvaluationTest ;
   mf:name "fn-true-20" ;
   rdfs:comment "Evaluation of an \"fn:true\" function as arguments to an \"fn:contains\" function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L181> ;
   mf:action [ qt:query <fn-true-20.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-true-21> a mf:QueryEvaluationTest ;
   mf:name "fn-true-21" ;
   rdfs:comment "Evaluation of an \"fn:true\" function as an argument to an \"fn:string-length\" function." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L190> ;
   mf:action [ qt:query <fn-true-21.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TrueFunc-2> a mf:QueryEvaluationTest ;
   mf:name "K-TrueFunc-2" ;
   rdfs:comment "A test whose essence is: `true() eq true()`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L219> ;
   mf:action [ qt:query <K-TrueFunc-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TrueFunc-3> a mf:QueryEvaluationTest ;
   mf:name "K-TrueFunc-3" ;
   rdfs:comment "A test whose essence is: `true()`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/true.xml#L228> ;
   mf:action [ qt:query <K-TrueFunc-3.rq> ] ;
   mf:result <../true.srj> .

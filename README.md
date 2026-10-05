@@ -18,7 +18,7 @@ The tests are divided over three manifests:
 | --- | --- |
 | [`manifest.ttl`](https://sparql-manifest-xpath-tests.jitsedesmet.be/manifest.ttl) | Tests that only need what SPARQL defines. |
 | [`extensions.ttl`](https://sparql-manifest-xpath-tests.jitsedesmet.be/extensions.ttl) | Tests that need XPath functions and operators beyond what SPARQL defines, such as the ones on `xsd:date`, `xsd:time` and the durations, which many engines support as an extension. |
-| [`errors.ttl`](https://sparql-manifest-xpath-tests.jitsedesmet.be/errors.ttl) | Tests that only expect an error. As an engine passes these when it fails for any reason, such as not supporting a function, they say little on their own. |
+| [`errors.ttl`](https://sparql-manifest-xpath-tests.jitsedesmet.be/errors.ttl) | Tests that accept an error, as their only expected result or as one of the alternatives. As an engine passes these when it fails for any reason, such as not supporting a function, they say little on their own. |
 
 SPARQL defines most of its functions and operators in terms of
 [XPath and XQuery Functions and Operators](https://www.w3.org/TR/xpath-functions-31/).
@@ -101,5 +101,8 @@ This software is written by [Jitse De Smet](https://jitsedesmet.be/).
 
 This code is released under the [MIT license](https://opensource.org/license/MIT).
 
-The generated tests are derived from QT3, Copyright © World Wide Web Consortium,
-and are released under the [W3C Software and Document License](https://www.w3.org/copyright/software-license/).
+The generated tests are derived from QT3, Copyright © W3C® (MIT, ERCIM, Keio, Beihang),
+and are released under the [W3C Software and Document License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document),
+of which the full text is in [`LICENSE-W3C.txt`](LICENSE-W3C.txt).
+The generator publishes it with the tests as [`LICENSE.txt`](https://sparql-manifest-xpath-tests.jitsedesmet.be/LICENSE.txt),
+which each manifest links with `dct:license`.

@@ -1,0 +1,7 @@
+# QT3 test case re00230 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('਀੿,਀ਁਂਃ਄ਅਆਇਈਉਊ਋਌਍਎ਏਐ਑਒ਓਔਕਖਗਘਙਚਛਜਝਞਟਠਡਢਣਤਥਦਧਨ਩ਪਫਬਭਮਯਰ਱ਲਲ਼਴ਵਸ਼਷ਸਹ਺਻਼਽ਾਿੀੁੂ੃੄੅੆ੇੈ੉੊ੋੌ੍੎੏੐ੑ੒੓੔੕੖੗੘ਖ਼ਗ਼ਜ਼ੜ੝ਫ਼੟੠੡੢੣੤੥੦੧੨੩੪੫੬੭੮੯ੰੱੲੳੴੵ੶੷੸੹੺੻੼੽੾੿', ',') satisfies matches($s, '^(?:\p{IsGurmukhi}+)$')) and (every $s in tokenize('', ',') satisfies not(matches($s, '^(?:\p{IsGurmukhi}+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1974
+ASK {
+  BIND(( ( REGEX( "਀੿" , "^(?:\\p{IsGurmukhi}+)$" ) && REGEX( "਀ਁਂਃ਄ਅਆਇਈਉਊ਋਌਍਎ਏਐ਑਒ਓਔਕਖਗਘਙਚਛਜਝਞਟਠਡਢਣਤਥਦਧਨ਩ਪਫਬਭਮਯਰ਱ਲਲ਼਴ਵਸ਼਷ਸਹ਺਻਼਽ਾਿੀੁੂ੃੄੅੆ੇੈ੉੊ੋੌ੍੎੏੐ੑ੒੓੔੕੖੗੘ਖ਼ਗ਼ਜ਼ੜ੝ਫ਼੟੠੡੢੣੤੥੦੧੨੩੪੫੬੭੮੯ੰੱੲੳੴੵ੶੷੸੹੺੻੼੽੾੿" , "^(?:\\p{IsGurmukhi}+)$" ) ) && "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-add-dayTimeDuration-to-time" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#K2-TimeAddDTD-1>
   ) .
@@ -11,6 +13,6 @@
 <#K2-TimeAddDTD-1> a mf:QueryEvaluationTest ;
   mf:name "K2-TimeAddDTD-1" ;
   rdfs:comment "*******************************************************\n Test: K2-TimeAddDTD-1                                 \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: No '+' operator is available between xs:time and xs:time. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-time.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-time.xml#L389> ;
   mf:action [ qt:query <K2-TimeAddDTD-1.rq> ] ;
   mf:result <../true.srj> .

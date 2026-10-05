@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "The W3C XQuery and XPath Test Suite (QT3) as SPARQL query evaluation tests" ;
+  dct:license <LICENSE.txt> ;
   rdfs:comment "Generated from https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/catalog.xml" ;
   mf:include (
     <fn-abs/manifest.ttl>
@@ -19,6 +21,7 @@
     <fn-hours-from-dateTime/manifest.ttl>
     <fn-lower-case/manifest.ttl>
     <fn-matches/manifest.ttl>
+    <fn-matches.re/manifest.ttl>
     <fn-minutes-from-dateTime/manifest.ttl>
     <fn-month-from-dateTime/manifest.ttl>
     <fn-not/manifest.ttl>

@@ -1,7 +1,6 @@
 # QT3 test case CastAs408 of test set prod-CastExpr, which tests the XPath expression
 #   xs:date("-0012-12-03-05:00") cast as xs:string
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L4117
-# The test needs the constructor function xsd:date, xsd:string on xsd:date, which SPARQL does not define
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#date> ( "-0012-12-03-05:00" ) ) AS ?result)
   FILTER(( ! BOUND( ?result ) || ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-0012-12-03-05:00" ) ))

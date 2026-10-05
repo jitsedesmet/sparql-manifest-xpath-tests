@@ -1,0 +1,7 @@
+# QT3 test case re00538 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('123', ',') satisfies matches($s, '^(?:\d+\d+\d+)$')) and (every $s in tokenize('12', ',') satisfies not(matches($s, '^(?:\d+\d+\d+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4484
+ASK {
+  BIND(( REGEX( "123" , "^(?:\\d+\\d+\\d+)$" ) && ! REGEX( "12" , "^(?:\\d+\\d+\\d+)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

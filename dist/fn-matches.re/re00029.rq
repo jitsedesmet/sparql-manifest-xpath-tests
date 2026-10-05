@@ -1,0 +1,7 @@
+# QT3 test case re00029 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('ab,abac,abacac', ',') satisfies matches($s, '^(?:((ab)(ac){0,2})?)$')) and (every $s in tokenize('ac,abacacac,abaca,abab,abacabac', ',') satisfies not(matches($s, '^(?:((ab)(ac){0,2})?)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L240
+ASK {
+  BIND(( ( ( REGEX( "ab" , "^(?:((ab)(ac){0,2})?)$" ) && REGEX( "abac" , "^(?:((ab)(ac){0,2})?)$" ) ) && REGEX( "abacac" , "^(?:((ab)(ac){0,2})?)$" ) ) && ( ( ( ( ! REGEX( "ac" , "^(?:((ab)(ac){0,2})?)$" ) && ! REGEX( "abacacac" , "^(?:((ab)(ac){0,2})?)$" ) ) && ! REGEX( "abaca" , "^(?:((ab)(ac){0,2})?)$" ) ) && ! REGEX( "abab" , "^(?:((ab)(ac){0,2})?)$" ) ) && ! REGEX( "abacabac" , "^(?:((ab)(ac){0,2})?)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

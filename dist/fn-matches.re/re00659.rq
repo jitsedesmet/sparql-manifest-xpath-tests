@@ -1,0 +1,7 @@
+# QT3 test case re00659 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:(([0-9])|([a-z])|([A-Z]))+)$')) and (every $s in tokenize('{hello 1234567890 world},{HELLO 1234567890 world},{1234567890 hello world}', ',') satisfies not(matches($s, '^(?:(([0-9])|([a-z])|([A-Z]))+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5452
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ( ( ! REGEX( "{hello 1234567890 world}" , "^(?:(([0-9])|([a-z])|([A-Z]))+)$" ) && ! REGEX( "{HELLO 1234567890 world}" , "^(?:(([0-9])|([a-z])|([A-Z]))+)$" ) ) && ! REGEX( "{1234567890 hello world}" , "^(?:(([0-9])|([a-z])|([A-Z]))+)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set prod-GeneralComp.eq" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#generalexpression21>
     <#generalexpression22>
@@ -16,41 +18,41 @@
 <#generalexpression21> a mf:QueryEvaluationTest ;
   mf:name "generalexpression21" ;
   rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = = operand2 = Atomic Value" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml#L208> ;
   mf:action [ qt:query <generalexpression21.rq> ] ;
   mf:result <../true.srj> .
 
 <#generalexpression22> a mf:QueryEvaluationTest ;
   mf:name "generalexpression22" ;
   rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = = operand2 = Sequence of single atomic value" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml#L217> ;
   mf:action [ qt:query <generalexpression22.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-GenCompEq-24> a mf:QueryEvaluationTest ;
   mf:name "K-GenCompEq-24" ;
   rdfs:comment "General comparison involving xs:untypedAtomic/xs:string." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml#L1225> ;
   mf:action [ qt:query <K-GenCompEq-24.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-GenCompEq-29> a mf:QueryEvaluationTest ;
   mf:name "K-GenCompEq-29" ;
   rdfs:comment "General comparison involving xs:untypedAtomic/xs:string." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml#L1270> ;
   mf:action [ qt:query <K-GenCompEq-29.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-GenCompEq-36> a mf:QueryEvaluationTest ;
   mf:name "K-GenCompEq-36" ;
   rdfs:comment "General comparison where the operands are various various sequence of xs:integers." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml#L1345> ;
   mf:action [ qt:query <K-GenCompEq-36.rq> ] ;
   mf:result <../true.srj> .
 
 <#GenCompEq-25> a mf:QueryEvaluationTest ;
   mf:name "GenCompEq-25" ;
   rdfs:comment "Only one comparison allowed per expression, unless parenthesized" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.eq.xml#L1910> ;
   mf:action [ qt:query <GenCompEq-25.rq> ] ;
   mf:result <../true.srj> .

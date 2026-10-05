@@ -1,0 +1,7 @@
+# QT3 test case re00026 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('abbc', ',') satisfies matches($s, '^(?:ab{2}c)$')) and (every $s in tokenize('ac,abc,abbbc,a,', ',') satisfies not(matches($s, '^(?:ab{2}c)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L216
+ASK {
+  BIND(( REGEX( "abbc" , "^(?:ab{2}c)$" ) && ( ( ( ( ! REGEX( "ac" , "^(?:ab{2}c)$" ) && ! REGEX( "abc" , "^(?:ab{2}c)$" ) ) && ! REGEX( "abbbc" , "^(?:ab{2}c)$" ) ) && ! REGEX( "a" , "^(?:ab{2}c)$" ) ) && ! REGEX( "" , "^(?:ab{2}c)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

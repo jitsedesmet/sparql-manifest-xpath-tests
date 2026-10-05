@@ -1,0 +1,7 @@
+# QT3 test case re00657 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:([^{}]|\n)+)$')) and (every $s in tokenize('{{{{Hello  World  }END', ',') satisfies not(matches($s, '^(?:([^{}]|\n)+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5436
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ! REGEX( "{{{{Hello  World  }END" , "^(?:([^{}]|\\n)+)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

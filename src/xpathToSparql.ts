@@ -6,7 +6,7 @@ import fontoxpath from 'fontoxpath';
 import * as slimdom from 'slimdom';
 
 // fontoxpath is a CommonJS module, of which Node.js cannot detect the named exports
-const { evaluateXPath, parseScript } = fontoxpath;
+const { evaluateXPath, evaluateXPathToStrings, parseScript } = fontoxpath;
 
 export const F = new AstFactory();
 
@@ -166,6 +166,83 @@ function toNode(element: slimdom.Element): IXQueryXNode {
   };
 }
 
+function xqueryxNode(subType: string, children: IXQueryXNode[] = [], text = '',
+  attributes: Record<string, string> = {}): IXQueryXNode {
+  return { type: 'xqueryx', subType, attributes, text, children };
+}
+
+/**
+ * Determine the strings that the source of a quantified expression evaluates to,
+ * if it is a call of fn:tokenize on string literals, as in the tests of regular expressions.
+ * @returns The strings, or undefined if they are not known statically.
+ */
+function staticStrings(source: IXQueryXNode): string[] | undefined {
+  if (source.subType !== 'functionCallExpr') {
+    return undefined;
+  }
+  const [ functionName, args ] = source.children;
+  if (functionName.attributes.URI !== undefined || ![ '', 'fn' ].includes(functionName.attributes.prefix ?? '') ||
+    functionName.text !== 'tokenize' || args.children.length < 2 ||
+    !args.children.every(arg => arg.subType === 'stringConstantExpr')) {
+    return undefined;
+  }
+  const [ input, pattern, flags ] = args.children.map(arg => arg.text);
+  try {
+    return evaluateXPathToStrings(
+      `tokenize($input, $pattern${flags === undefined ? '' : ', $flags'})`,
+      null,
+      null,
+      { input, pattern, flags: flags ?? '' },
+    );
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Substitute the references to a variable in an XQueryX syntax tree.
+ */
+function substitute(node: IXQueryXNode, name: string, value: IXQueryXNode): IXQueryXNode {
+  if (node.subType === 'varRef' && node.text === name) {
+    return value;
+  }
+  return { ...node, children: node.children.map(child => substitute(child, name, value)) };
+}
+
+/**
+ * Expand the quantified expressions over a sequence that is known statically into a conjunction (every)
+ * or a disjunction (some) of their predicate for each item, as SPARQL has no sequences.
+ * Other quantified expressions are left as they are, so they are unsupported.
+ */
+function expandQuantifiers(node: IXQueryXNode): IXQueryXNode {
+  const expanded = { ...node, children: node.children.map(expandQuantifiers) };
+  if (expanded.subType !== 'quantifiedExpr') {
+    return expanded;
+  }
+  const [ quantifier, ...parts ] = expanded.children;
+  const clauses = parts.filter(child => child.subType === 'quantifiedExprInClause');
+  const [ binding, source ] = clauses[0].children;
+  const [ varName, ...typeDeclaration ] = binding.children;
+  const strings = staticStrings(source.children[0]);
+  if (clauses.length !== 1 || typeDeclaration.length > 0 || varName.attributes.prefix || !strings) {
+    return expanded;
+  }
+  const every = quantifier.text === 'every';
+  const predicate = parts.find(child => child.subType === 'predicateExpr')!.children[0];
+  const operands = strings.map(value =>
+    substitute(predicate, varName.text, xqueryxNode('stringConstantExpr', [], value)));
+  if (operands.length === 0) {
+    return xqueryxNode('functionCallExpr', [
+      xqueryxNode('functionName', [], every ? 'true' : 'false', { prefix: 'fn' }),
+      xqueryxNode('arguments'),
+    ]);
+  }
+  return operands.reduce((left, right) => xqueryxNode(every ? 'andOp' : 'orOp', [
+    xqueryxNode('firstOperand', [ left ]),
+    xqueryxNode('secondOperand', [ right ]),
+  ]));
+}
+
 /**
  * Parse an XPath expression into the XQueryX syntax tree of its body.
  */
@@ -181,7 +258,7 @@ function parse(xpath: string): IXQueryXNode {
     throw new UnsupportedError(`Invalid XPath: ${(error as Error).message}`);
   }
   const queryBody = module.getElementsByTagNameNS('http://www.w3.org/2005/XQueryX', 'queryBody')[0];
-  return toNode(queryBody.children[0]);
+  return expandQuantifiers(toNode(queryBody.children[0]));
 }
 
 /**

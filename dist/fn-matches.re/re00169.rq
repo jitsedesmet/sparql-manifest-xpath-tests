@@ -1,0 +1,7 @@
+# QT3 test case re00169 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('㆐𝇝', ',') satisfies matches($s, '^(?:\p{So}*)$')) and (every $s in tokenize('	', ',') satisfies not(matches($s, '^(?:\p{So}*)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1482
+ASK {
+  BIND(( REGEX( "㆐𝇝" , "^(?:\\p{So}*)$" ) && ! REGEX( "\t" , "^(?:\\p{So}*)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,7 @@
+# QT3 test case re00128 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:\t\ta\t\tb\t\t)$')) and (every $s in tokenize('		a		b	,	a		b		,		a				,		a			b		', ',') satisfies not(matches($s, '^(?:\t\ta\t\tb\t\t)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1110
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ( ( ( ! REGEX( "\t\ta\t\tb\t" , "^(?:\\t\\ta\\t\\tb\\t\\t)$" ) && ! REGEX( "\ta\t\tb\t\t" , "^(?:\\t\\ta\\t\\tb\\t\\t)$" ) ) && ! REGEX( "\t\ta\t\t\t\t" , "^(?:\\t\\ta\\t\\tb\\t\\t)$" ) ) && ! REGEX( "\t\ta\t\t\tb\t\t" , "^(?:\\t\\ta\\t\\tb\\t\\t)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

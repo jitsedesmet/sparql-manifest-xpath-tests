@@ -1,0 +1,7 @@
+# QT3 test case re00102 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('a-x', ',') satisfies matches($s, '^(?:[a-a-x-x]+)$')) and (every $s in tokenize('j,a-b', ',') satisfies not(matches($s, '^(?:[a-a-x-x]+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L854
+ASK {
+  BIND(( REGEX( "a-x" , "^(?:[a-a-x-x]+)$" ) && ( ! REGEX( "j" , "^(?:[a-a-x-x]+)$" ) && ! REGEX( "a-b" , "^(?:[a-a-x-x]+)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

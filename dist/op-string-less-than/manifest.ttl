@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-string-less-than" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#K-StringLT-1>
     <#K-StringLT-2>
@@ -16,41 +18,41 @@
 <#K-StringLT-1> a mf:QueryEvaluationTest ;
   mf:name "K-StringLT-1" ;
   rdfs:comment "A test whose essence is: `'a' lt 'abc'`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml#L7> ;
   mf:action [ qt:query <K-StringLT-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-StringLT-2> a mf:QueryEvaluationTest ;
   mf:name "K-StringLT-2" ;
   rdfs:comment "A test whose essence is: `not('abc' lt 'a')`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml#L16> ;
   mf:action [ qt:query <K-StringLT-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-StringLT-3> a mf:QueryEvaluationTest ;
   mf:name "K-StringLT-3" ;
   rdfs:comment "A test whose essence is: `'a' le 'abc'`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml#L25> ;
   mf:action [ qt:query <K-StringLT-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-StringLT-4> a mf:QueryEvaluationTest ;
   mf:name "K-StringLT-4" ;
   rdfs:comment "A test whose essence is: `not('abc' le 'a')`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml#L34> ;
   mf:action [ qt:query <K-StringLT-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-StringLT-5> a mf:QueryEvaluationTest ;
   mf:name "K-StringLT-5" ;
   rdfs:comment "A test whose essence is: `'abc' le 'abc'`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml#L43> ;
   mf:action [ qt:query <K-StringLT-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-StringLT-1> a mf:QueryEvaluationTest ;
   mf:name "K2-StringLT-1" ;
   rdfs:comment "Compare two large codepoints." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-less-than.xml#L52> ;
   mf:action [ qt:query <K2-StringLT-1.rq> ] ;
   mf:result <../true.srj> .

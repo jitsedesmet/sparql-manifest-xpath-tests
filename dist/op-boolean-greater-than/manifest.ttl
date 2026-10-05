@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-boolean-greater-than" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#op-boolean-greater-than2args-1>
     <#op-boolean-greater-than2args-2>
@@ -49,272 +51,272 @@
 <#op-boolean-greater-than2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-1" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(lower bound)                        \n$arg2 = xs:boolean(lower bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L6> ;
   mf:action [ qt:query <op-boolean-greater-than2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-2" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(mid range)                          \n$arg2 = xs:boolean(lower bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L24> ;
   mf:action [ qt:query <op-boolean-greater-than2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-3" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(upper bound)                        \n$arg2 = xs:boolean(lower bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L42> ;
   mf:action [ qt:query <op-boolean-greater-than2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-4" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(lower bound)                        \n$arg2 = xs:boolean(mid range)                          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L60> ;
   mf:action [ qt:query <op-boolean-greater-than2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-5" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(lower bound)                        \n$arg2 = xs:boolean(upper bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L78> ;
   mf:action [ qt:query <op-boolean-greater-than2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-6" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-6                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(lower bound)                        \n$arg2 = xs:boolean(lower bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L96> ;
   mf:action [ qt:query <op-boolean-greater-than2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-7" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-7                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(mid range)                          \n$arg2 = xs:boolean(lower bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L114> ;
   mf:action [ qt:query <op-boolean-greater-than2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-8" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-8                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(upper bound)                        \n$arg2 = xs:boolean(lower bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L132> ;
   mf:action [ qt:query <op-boolean-greater-than2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-9" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-9                    \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(lower bound)                        \n$arg2 = xs:boolean(mid range)                          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L150> ;
   mf:action [ qt:query <op-boolean-greater-than2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than2args-10" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than2args-10                   \nWritten By: Carmelo Montanez                            \nDate: Thu Dec 16 10:48:17 GMT-05:00 2004                \nPurpose: Evaluates The \"op:boolean-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:boolean(lower bound)                        \n$arg2 = xs:boolean(upper bound)                        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L168> ;
   mf:action [ qt:query <op-boolean-greater-than2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-1> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-1" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-1                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(true)\", \"true\" respectively.\n Use of gt operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L186> ;
   mf:action [ qt:query <op-boolean-greater-than-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-2> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-2" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-2                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(true)\", \"true\" respectively.\n Use of le operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L203> ;
   mf:action [ qt:query <op-boolean-greater-than-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-3> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-3" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-3                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(true)\", \"false\" respectively.\n Use of gt operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L220> ;
   mf:action [ qt:query <op-boolean-greater-than-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-4> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-4" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-4                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(true)\", \"false\" respectively.\n Use of le operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L237> ;
   mf:action [ qt:query <op-boolean-greater-than-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-5> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-5" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-5                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(false)\", \"true\" respectively.\n Use of gt operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L254> ;
   mf:action [ qt:query <op-boolean-greater-than-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-6> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-6" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-6                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(false)\", \"true\" respectively.\n Use of le operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L271> ;
   mf:action [ qt:query <op-boolean-greater-than-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-7> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-7" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-7                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(false)\", \"false\" respectively.\n Use of gt operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L288> ;
   mf:action [ qt:query <op-boolean-greater-than-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-8> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-8" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-8                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"not(false)\", \"false\" respectively.\n Use of le operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L305> ;
   mf:action [ qt:query <op-boolean-greater-than-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-9> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-9" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-9                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"(7 eq 7)\", \"true\" respectively.\n Use of gt operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L322> ;
   mf:action [ qt:query <op-boolean-greater-than-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-10> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-10" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-10                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"(7 eq 7)\", \"true\" respectively.\n Use of le operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L339> ;
   mf:action [ qt:query <op-boolean-greater-than-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-11> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-11" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-11                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"(7 eq 7)\", \"false\" respectively.\n Use of gt operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L356> ;
   mf:action [ qt:query <op-boolean-greater-than-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-12> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-12" ;
   rdfs:comment "*******************************************************\nTest: op-boolean-greater-than-12                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"boolean-greater-than\" function \n with operands set to \"(7 eq 7)\", \"false\" respectively.\n Use of le operator.                                   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L373> ;
   mf:action [ qt:query <op-boolean-greater-than-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-001> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-001" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-001.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is greater than arg2:Boolean \n*****************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L390> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-001.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-002> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-002" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-002.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is greater than arg2:Boolean \n*****************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L405> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-002.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-003> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-003" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-003.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is greater than arg2:Boolean \n*****************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L420> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-003.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-004> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-004" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-004.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is greater than arg2:Boolean \n*****************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L435> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-004.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-005> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-005" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-005.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is greater than arg2:Boolean \n*****************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L450> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-005.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-006> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-006" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-006.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is greater than arg2:Boolean \n*****************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L465> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-006.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-007> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-007" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-007.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is greater than arg2:Boolean \n*****************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L480> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-007.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-008> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-008" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-008.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is less or equal to arg2:Boolean \n*********************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L495> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-008.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-009> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-009" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-009.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is less or equal to arg2:Boolean \n*********************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L510> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-009.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-010> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-010" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-010.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is less or equal to arg2:Boolean \n*********************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L525> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-010.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-011> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-011" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-011.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is less or equal to arg2:Boolean \n*********************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L540> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-011.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-012> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-012" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-012.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is less or equal to arg2:Boolean \n*********************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L555> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-012.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-013> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-013" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-013.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is less or equal to arg2:Boolean \n*********************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L570> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-013.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-boolean-greater-than-more-args-014> a mf:QueryEvaluationTest ;
   mf:name "op-boolean-greater-than-more-args-014" ;
   rdfs:comment "*******************************************************\n Test: op-boolean-greater-than-more-args-014.xq          \n Written By: Pulkita Tyagi                             \n Date: Thu Jun  2 00:16:48 2005                        \n Purpose: To check if arg1: Boolean is less or equal to arg2:Boolean \n*********************************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L585> ;
   mf:action [ qt:query <op-boolean-greater-than-more-args-014.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-BooleanGT-1> a mf:QueryEvaluationTest ;
   mf:name "K-BooleanGT-1" ;
   rdfs:comment "*******************************************************\n Test: K-BooleanGT-1                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Compare two xs:boolean values.               \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L600> ;
   mf:action [ qt:query <K-BooleanGT-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-BooleanGT-2> a mf:QueryEvaluationTest ;
   mf:name "K-BooleanGT-2" ;
   rdfs:comment "*******************************************************\n Test: K-BooleanGT-2                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Compare two xs:boolean values.               \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L615> ;
   mf:action [ qt:query <K-BooleanGT-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-BooleanGT-3> a mf:QueryEvaluationTest ;
   mf:name "K-BooleanGT-3" ;
   rdfs:comment "*******************************************************\n Test: K-BooleanGT-3                                   \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Compare two xs:boolean values.               \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L630> ;
   mf:action [ qt:query <K-BooleanGT-3.rq> ] ;
   mf:result <../true.srj> .

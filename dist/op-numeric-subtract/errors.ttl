@@ -1,24 +1,50 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-numeric-subtract" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#op-numeric-subtractmix2args-2>
     <#K-NumericSubtract-25>
+    <#cbcl-numeric-subtract-001>
+    <#cbcl-numeric-subtract-002>
+    <#op-numeric-subtract-big-01>
   ) .
 
 <#op-numeric-subtractmix2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-subtractmix2args-2" ;
   rdfs:comment "Simple subtraction test pass string for second operator" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L559> ;
   mf:action [ qt:query <op-numeric-subtractmix2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-NumericSubtract-25> a mf:QueryEvaluationTest ;
   mf:name "K-NumericSubtract-25" ;
   rdfs:comment "Invoke the '-' operator with invalid operands." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L853> ;
   mf:action [ qt:query <K-NumericSubtract-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-numeric-subtract-001> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-numeric-subtract-001" ;
+  rdfs:comment "test subtraction of large xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1062> ;
+  mf:action [ qt:query <cbcl-numeric-subtract-001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-numeric-subtract-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-numeric-subtract-002" ;
+  rdfs:comment "test subtraction of large xs:integer" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1075> ;
+  mf:action [ qt:query <cbcl-numeric-subtract-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-subtract-big-01> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-subtract-big-01" ;
+  rdfs:comment "test subtraction of large xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1165> ;
+  mf:action [ qt:query <op-numeric-subtract-big-01.rq> ] ;
   mf:result <../true.srj> .

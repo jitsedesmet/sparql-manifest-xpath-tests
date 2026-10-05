@@ -1,0 +1,7 @@
+# QT3 test case re00010 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('abc,abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbc', ',') satisfies matches($s, '^(?:ab+c)$')) and (every $s in tokenize('ac,bbbc,abbb,', ',') satisfies not(matches($s, '^(?:ab+c)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L88
+ASK {
+  BIND(( ( REGEX( "abc" , "^(?:ab+c)$" ) && REGEX( "abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbc" , "^(?:ab+c)$" ) ) && ( ( ( ! REGEX( "ac" , "^(?:ab+c)$" ) && ! REGEX( "bbbc" , "^(?:ab+c)$" ) ) && ! REGEX( "abbb" , "^(?:ab+c)$" ) ) && ! REGEX( "" , "^(?:ab+c)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

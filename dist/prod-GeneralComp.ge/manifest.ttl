@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set prod-GeneralComp.ge" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#generalexpression507>
     <#generalexpression516>
@@ -13,20 +15,20 @@
 <#generalexpression507> a mf:QueryEvaluationTest ;
   mf:name "generalexpression507" ;
   rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Atomic Value operator = >= operand2 = Sequence of single atomic value" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ge.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ge.xml#L115> ;
   mf:action [ qt:query <generalexpression507.rq> ] ;
   mf:result <../true.srj> .
 
 <#generalexpression516> a mf:QueryEvaluationTest ;
   mf:name "generalexpression516" ;
   rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = >= operand2 = Atomic Value" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ge.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ge.xml#L202> ;
   mf:action [ qt:query <generalexpression516.rq> ] ;
   mf:result <../true.srj> .
 
 <#generalexpression517> a mf:QueryEvaluationTest ;
   mf:name "generalexpression517" ;
   rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = >= operand2 = Sequence of single atomic value" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ge.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ge.xml#L211> ;
   mf:action [ qt:query <generalexpression517.rq> ] ;
   mf:result <../true.srj> .

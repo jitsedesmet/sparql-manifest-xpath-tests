@@ -1,0 +1,7 @@
+# QT3 test case re00134 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('\c', ',') satisfies matches($s, '^(?:\\c)$')) and (every $s in tokenize('\p{_xmlC},\\c,\\', ',') satisfies not(matches($s, '^(?:\\c)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1202
+ASK {
+  BIND(( REGEX( "\\c" , "^(?:\\\\c)$" ) && ( ( ! REGEX( "\\p{_xmlC}" , "^(?:\\\\c)$" ) && ! REGEX( "\\\\c" , "^(?:\\\\c)$" ) ) && ! REGEX( "\\\\" , "^(?:\\\\c)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

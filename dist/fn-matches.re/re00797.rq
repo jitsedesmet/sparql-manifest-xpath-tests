@@ -1,0 +1,7 @@
+# QT3 test case re00797 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:qqq(123)*)$')) and (every $s in tokenize('Startqqq123123End', ',') satisfies not(matches($s, '^(?:qqq(123)*)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6557
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ! REGEX( "Startqqq123123End" , "^(?:qqq(123)*)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

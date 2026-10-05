@@ -1,0 +1,7 @@
+# QT3 test case re00180 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('ʰ', ',') satisfies matches($s, '^(?:\P{Lt}*)$')) and (every $s in tokenize('ǅῼ', ',') satisfies not(matches($s, '^(?:\P{Lt}*)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1570
+ASK {
+  BIND(( REGEX( "ʰ" , "^(?:\\P{Lt}*)$" ) && ! REGEX( "ǅῼ" , "^(?:\\P{Lt}*)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

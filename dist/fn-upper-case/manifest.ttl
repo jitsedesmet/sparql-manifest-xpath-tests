@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set fn-upper-case" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#fn-upper-case1args-1>
     <#fn-upper-case1args-2>
@@ -29,132 +31,132 @@
 <#fn-upper-case1args-1> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case1args-1" ;
   rdfs:comment "Evaluates The \"upper-case\" function with the arguments set as follows: $arg = xs:string(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L7> ;
   mf:action [ qt:query <fn-upper-case1args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case1args-2> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case1args-2" ;
   rdfs:comment "Evaluates The \"upper-case\" function with the arguments set as follows: $arg = xs:string(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L16> ;
   mf:action [ qt:query <fn-upper-case1args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case1args-3> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case1args-3" ;
   rdfs:comment "Evaluates The \"upper-case\" function with the arguments set as follows: $arg = xs:string(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L25> ;
   mf:action [ qt:query <fn-upper-case1args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-1> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-1" ;
   rdfs:comment "Evaluation of upper-case function as per example 1 (for this function) from the F&O specs." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L34> ;
   mf:action [ qt:query <fn-upper-case-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-3> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-3" ;
   rdfs:comment "Evaluation of upper-case function that uses only numbers as part of argument Use of count function to avoid empty file." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L52> ;
   mf:action [ qt:query <fn-upper-case-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-4> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-4" ;
   rdfs:comment "Evaluation of upper-case function that uses both numbers and letters as part of argument" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L61> ;
   mf:action [ qt:query <fn-upper-case-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-5> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-5" ;
   rdfs:comment "Evaluation of upper-case function that uses only upper case letters as part of argument" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L70> ;
   mf:action [ qt:query <fn-upper-case-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-6> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-6" ;
   rdfs:comment "Evaluation of upper-case function that uses only lower case letters as part of argument" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L79> ;
   mf:action [ qt:query <fn-upper-case-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-7> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-7" ;
   rdfs:comment "Evaluation of upper-case function that uses both upper and lower case letters as part of argument" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L88> ;
   mf:action [ qt:query <fn-upper-case-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-9> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-9" ;
   rdfs:comment "Evaluation of upper-case function that uses the \"lower-case\" as part of argument" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L106> ;
   mf:action [ qt:query <fn-upper-case-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-10> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-10" ;
   rdfs:comment "Evaluation of upper-case function with argument set to \"*****\"" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L115> ;
   mf:action [ qt:query <fn-upper-case-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-11> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-11" ;
   rdfs:comment "Evaluation of upper-case function with argument set to another upper case function" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L124> ;
   mf:action [ qt:query <fn-upper-case-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-12> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-12" ;
   rdfs:comment "Evaluation of upper-case function as an argument to the \"fn:boolean\" function" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L133> ;
   mf:action [ qt:query <fn-upper-case-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-13> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-13" ;
   rdfs:comment "Evaluation of upper-case function as an argument to the \"fn:concat\" function" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L142> ;
   mf:action [ qt:query <fn-upper-case-13.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-14> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-14" ;
   rdfs:comment "Evaluation of upper-case function as an argument to the \"fn:not\" function" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L151> ;
   mf:action [ qt:query <fn-upper-case-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-15> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-15" ;
   rdfs:comment "Evaluation of upper-case function with argument set to \"%$#@!\"" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L160> ;
   mf:action [ qt:query <fn-upper-case-15.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-16> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-16" ;
   rdfs:comment "Evaluation of upper-case function with argument set to \"upper-case\"" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L169> ;
   mf:action [ qt:query <fn-upper-case-16.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-upper-case-17> a mf:QueryEvaluationTest ;
   mf:name "fn-upper-case-17" ;
   rdfs:comment "Evaluation of upper-case function as part of a boolean expression" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L178> ;
   mf:action [ qt:query <fn-upper-case-17.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-UpperCaseFunc-4> a mf:QueryEvaluationTest ;
   mf:name "K-UpperCaseFunc-4" ;
   rdfs:comment "A test whose essence is: `lower-case(\"ABc!D\") eq \"abc!d\"`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L279> ;
   mf:action [ qt:query <K-UpperCaseFunc-4.rq> ] ;
   mf:result <../true.srj> .

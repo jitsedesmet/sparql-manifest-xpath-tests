@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set fn-month-from-dateTime" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#fn-month-from-dateTime1args-1>
     <#fn-month-from-dateTime1args-2>
@@ -28,125 +30,125 @@
 <#fn-month-from-dateTime1args-1> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime1args-1" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function with the arguments set as follows: $arg = xs:dateTime(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L7> ;
   mf:action [ qt:query <fn-month-from-dateTime1args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime1args-2> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime1args-2" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function with the arguments set as follows: $arg = xs:dateTime(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L16> ;
   mf:action [ qt:query <fn-month-from-dateTime1args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime1args-3> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime1args-3" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function with the arguments set as follows: $arg = xs:dateTime(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L25> ;
   mf:action [ qt:query <fn-month-from-dateTime1args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-1> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-1" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function As per example 1 (of this fucntion) of the F&O specs" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L34> ;
   mf:action [ qt:query <fn-month-from-dateTime-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-2> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-2" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function As per example 2 (for this function)of the F&O specs" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L43> ;
   mf:action [ qt:query <fn-month-from-dateTime-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-6> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-6" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function that returns a 1." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L79> ;
   mf:action [ qt:query <fn-month-from-dateTime-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-7> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-7" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function that returns 12. Uses Zulu." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L88> ;
   mf:action [ qt:query <fn-month-from-dateTime-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-8> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-8" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"+\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L97> ;
   mf:action [ qt:query <fn-month-from-dateTime-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-9> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-9" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"-\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L106> ;
   mf:action [ qt:query <fn-month-from-dateTime-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTimeNew-10> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTimeNew-10" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"*\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L115> ;
   mf:action [ qt:query <fn-month-from-dateTimeNew-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-11> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-11" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"div\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L124> ;
   mf:action [ qt:query <fn-month-from-dateTime-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-14> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-14" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"numeric-unary-plus\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L151> ;
   mf:action [ qt:query <fn-month-from-dateTime-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-15> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-15" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"numeric-unary-minus\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L160> ;
   mf:action [ qt:query <fn-month-from-dateTime-15.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-16> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-16" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"numeric-equal\" expression (eq operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L169> ;
   mf:action [ qt:query <fn-month-from-dateTime-16.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-17> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-17" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"numeric-equal\" expression (ne operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L178> ;
   mf:action [ qt:query <fn-month-from-dateTime-17.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-18> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-18" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"numeric-equal\" expression (le operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L187> ;
   mf:action [ qt:query <fn-month-from-dateTime-18.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-month-from-dateTime-19> a mf:QueryEvaluationTest ;
   mf:name "fn-month-from-dateTime-19" ;
   rdfs:comment "Evaluates The \"month-from-dateTime\" function as part of a \"numeric-equal\" expression (ge operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L196> ;
   mf:action [ qt:query <fn-month-from-dateTime-19.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-MonthFromDateTimeFunc-5> a mf:QueryEvaluationTest ;
   mf:name "K-MonthFromDateTimeFunc-5" ;
   rdfs:comment "A test whose essence is: `month-from-dateTime(xs:dateTime(\"2001-02-03T08:23:12.43\")) eq 2`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L241> ;
   mf:action [ qt:query <K-MonthFromDateTimeFunc-5.rq> ] ;
   mf:result <../true.srj> .

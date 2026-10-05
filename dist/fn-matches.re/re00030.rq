@@ -1,0 +1,7 @@
+# QT3 test case re00030 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize(',a b,a ba b', ',') satisfies matches($s, '^(?:(a\sb){0,2})$')) and (every $s in tokenize('a ba ba b,ab,a b a b,a  b', ',') satisfies not(matches($s, '^(?:(a\sb){0,2})$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L248
+ASK {
+  BIND(( ( ( REGEX( "" , "^(?:(a\\sb){0,2})$" ) && REGEX( "a b" , "^(?:(a\\sb){0,2})$" ) ) && REGEX( "a ba b" , "^(?:(a\\sb){0,2})$" ) ) && ( ( ( ! REGEX( "a ba ba b" , "^(?:(a\\sb){0,2})$" ) && ! REGEX( "ab" , "^(?:(a\\sb){0,2})$" ) ) && ! REGEX( "a b a b" , "^(?:(a\\sb){0,2})$" ) ) && ! REGEX( "a  b" , "^(?:(a\\sb){0,2})$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

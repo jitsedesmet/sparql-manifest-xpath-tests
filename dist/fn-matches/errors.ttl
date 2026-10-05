@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set fn-matches" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#fn-matchesErr-1>
     <#fn-matchesErr-2>
@@ -28,6 +30,7 @@
     <#K2-MatchesFunc-14>
     <#cbcl-matches-001>
     <#cbcl-matches-002>
+    <#cbcl-matches-004>
     <#cbcl-matches-005>
     <#cbcl-matches-008>
     <#cbcl-matches-009>
@@ -48,265 +51,272 @@
 <#fn-matchesErr-1> a mf:QueryEvaluationTest ;
   mf:name "fn-matchesErr-1" ;
   rdfs:comment "Invalid flag for third argument of fn:matches." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L52> ;
   mf:action [ qt:query <fn-matchesErr-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matchesErr-2> a mf:QueryEvaluationTest ;
   mf:name "fn-matchesErr-2" ;
   rdfs:comment "back-reference illegal in square brackets See erratum FO.E24" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L61> ;
   mf:action [ qt:query <fn-matchesErr-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matchesErr-3> a mf:QueryEvaluationTest ;
   mf:name "fn-matchesErr-3" ;
   rdfs:comment "single-digit back-reference to non-existent group See erratum FO.E24" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L70> ;
   mf:action [ qt:query <fn-matchesErr-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matchesErr-4> a mf:QueryEvaluationTest ;
   mf:name "fn-matchesErr-4" ;
   rdfs:comment "single-digit back-reference to group not yet closed See erratum FO.E24" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L79> ;
   mf:action [ qt:query <fn-matchesErr-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matchesErr-5> a mf:QueryEvaluationTest ;
   mf:name "fn-matchesErr-5" ;
   rdfs:comment "double-digit back-reference to group not yet closed See erratum FO.E24" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L88> ;
   mf:action [ qt:query <fn-matchesErr-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matches-25> a mf:QueryEvaluationTest ;
   mf:name "fn-matches-25" ;
   rdfs:comment "Evaluation of matches function with invalid regular expression" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L314> ;
   mf:action [ qt:query <fn-matches-25.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matches-35> a mf:QueryEvaluationTest ;
   mf:name "fn-matches-35" ;
   rdfs:comment "Test for bug fix of 5348 in Errata for F+O. Expect FORX0002 err because \\99 is an invalid reference as 99th subexpression does not exist" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L421> ;
   mf:action [ qt:query <fn-matches-35.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matches-37> a mf:QueryEvaluationTest ;
   mf:name "fn-matches-37" ;
   rdfs:comment "Test for bug fix of 5348 in Errata for F+O. Expect FORX0002 err because \\11 reference is made before the closing right parenthesis of 11th reference" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L439> ;
   mf:action [ qt:query <fn-matches-37.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matches-38> a mf:QueryEvaluationTest ;
   mf:name "fn-matches-38" ;
   rdfs:comment "Test for bug fix of 5348 in Errata for F+O. Expect FORX0002 err because \\10 reference is made before the closing right parenthesis of 10th reference" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L448> ;
   mf:action [ qt:query <fn-matches-38.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matches-39> a mf:QueryEvaluationTest ;
   mf:name "fn-matches-39" ;
   rdfs:comment "Test for bug fix of 5348 in Errata for F+O. Expect FORX0002 err because \\9 reference is made before the closing right parenthesis of 9th reference" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L457> ;
   mf:action [ qt:query <fn-matches-39.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-matches-40> a mf:QueryEvaluationTest ;
   mf:name "fn-matches-40" ;
   rdfs:comment "Test for bug fix of 5348 in Errata for F+O. Expect FORX0002 err because \\1 reference is made before the closing right parenthesis of 1st reference" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L466> ;
   mf:action [ qt:query <fn-matches-40.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-MatchesFunc-5> a mf:QueryEvaluationTest ;
   mf:name "K-MatchesFunc-5" ;
   rdfs:comment "The flags argument cannot contain whitespace." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L883> ;
   mf:action [ qt:query <K-MatchesFunc-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-MatchesFunc-6> a mf:QueryEvaluationTest ;
   mf:name "K-MatchesFunc-6" ;
   rdfs:comment "The flags argument cannot contain 'X'." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L892> ;
   mf:action [ qt:query <K-MatchesFunc-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-7> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-7" ;
   rdfs:comment "whitespace in the regexp is not collapsed, and should therefore not compile." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L955> ;
   mf:action [ qt:query <K2-MatchesFunc-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-8> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-8" ;
   rdfs:comment "Since no string is captured by the back-reference, the single character is matched." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L964> ;
   mf:action [ qt:query <K2-MatchesFunc-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-9> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-9" ;
   rdfs:comment "Since no string is captured by the back-reference, the single character is matched(#2)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L973> ;
   mf:action [ qt:query <K2-MatchesFunc-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-10> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-10" ;
   rdfs:comment "A non-matching backwards-reference matches the empty string." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L982> ;
   mf:action [ qt:query <K2-MatchesFunc-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-11> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-11" ;
   rdfs:comment "Use a back reference inside a character class." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L991> ;
   mf:action [ qt:query <K2-MatchesFunc-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-12> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-12" ;
   rdfs:comment "Use a back reference inside a character class(#2)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1000> ;
   mf:action [ qt:query <K2-MatchesFunc-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-13> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-13" ;
   rdfs:comment "Use a back reference inside a character class(#3)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1009> ;
   mf:action [ qt:query <K2-MatchesFunc-13.rq> ] ;
   mf:result <../true.srj> .
 
 <#K2-MatchesFunc-14> a mf:QueryEvaluationTest ;
   mf:name "K2-MatchesFunc-14" ;
   rdfs:comment "Use a back reference inside a character class(#3)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1018> ;
   mf:action [ qt:query <K2-MatchesFunc-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-001> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-001" ;
   rdfs:comment "test an invalid negative pos char group" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1067> ;
   mf:action [ qt:query <cbcl-matches-001.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-002> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-002" ;
   rdfs:comment "test an invalid char range" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1078> ;
   mf:action [ qt:query <cbcl-matches-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-matches-004> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-matches-004" ;
+  rdfs:comment "test a very large exact quantifier" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1100> ;
+  mf:action [ qt:query <cbcl-matches-004.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-005> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-005" ;
   rdfs:comment "test with an invalid character range" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1114> ;
   mf:action [ qt:query <cbcl-matches-005.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-008> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-008" ;
   rdfs:comment "test a badly formed category name" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1157> ;
   mf:action [ qt:query <cbcl-matches-008.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-009> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-009" ;
   rdfs:comment "test a badly formed category name" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1168> ;
   mf:action [ qt:query <cbcl-matches-009.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-010> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-010" ;
   rdfs:comment "test a badly formed category name" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1179> ;
   mf:action [ qt:query <cbcl-matches-010.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-011> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-011" ;
   rdfs:comment "test a badly formed category name" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1190> ;
   mf:action [ qt:query <cbcl-matches-011.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-012> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-012" ;
   rdfs:comment "test a badly formed category name" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1201> ;
   mf:action [ qt:query <cbcl-matches-012.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-013> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-013" ;
   rdfs:comment "test a badly formed category name" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1212> ;
   mf:action [ qt:query <cbcl-matches-013.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-014> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-014" ;
   rdfs:comment "test a badly formed category name" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1223> ;
   mf:action [ qt:query <cbcl-matches-014.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-029> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-029" ;
   rdfs:comment "test invalid category name La" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1388> ;
   mf:action [ qt:query <cbcl-matches-029.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-030> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-030" ;
   rdfs:comment "test invalid category name Ma" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1399> ;
   mf:action [ qt:query <cbcl-matches-030.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-031> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-031" ;
   rdfs:comment "test invalid category name Na" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1410> ;
   mf:action [ qt:query <cbcl-matches-031.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-032> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-032" ;
   rdfs:comment "test invalid category name Pa" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1421> ;
   mf:action [ qt:query <cbcl-matches-032.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-033> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-033" ;
   rdfs:comment "test invalid category name Za" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1432> ;
   mf:action [ qt:query <cbcl-matches-033.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-034> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-034" ;
   rdfs:comment "test invalid category name Sa" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1443> ;
   mf:action [ qt:query <cbcl-matches-034.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-matches-035> a mf:QueryEvaluationTest ;
   mf:name "cbcl-matches-035" ;
   rdfs:comment "test invalid category name Ca" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1454> ;
   mf:action [ qt:query <cbcl-matches-035.rq> ] ;
   mf:result <../true.srj> .

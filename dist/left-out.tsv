@@ -362,6 +362,18 @@ fn-matches	K2-MatchesFunc-16a	https://github.com/w3c/qt3tests/blob/201a6e466940c
 fn-matches	cbcl-matches-006	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1124	Unsupported dependencies spec XQ10+
 fn-matches	cbcl-matches-041	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1517	Unsupported dependencies spec XQ10+
 fn-matches	cbcl-matches-047	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1592	Unsupported dependencies spec XQ10+
+fn-matches.re	re00056	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L456	Unsupported dependencies xsd-version 1.0
+fn-matches.re	re00086	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L710	Unsupported dependencies xsd-version 1.0
+fn-matches.re	re00102a	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L864	Unsupported dependencies xsd-version 1.0
+fn-matches.re	re00127	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1075	Unsupported varName
+fn-matches.re	re00127a	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1094	Unsupported dependencies spec XQ30+
+fn-matches.re	re00129	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1118	Unsupported varName
+fn-matches.re	re00129a	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1133	Unsupported dependencies spec XQ30+
+fn-matches.re	re00130	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1144	Unsupported varName
+fn-matches.re	re00130a	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1160	Unsupported dependencies spec XQ30+
+fn-matches.re	re00984	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8093	Unsupported quantifier
+fn-matches.re	re00985	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8105	Unsupported quantifier
+fn-matches.re	re00987	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8117	Unsupported dependencies spec XQ30+
 fn-minutes-from-dateTime	fn-minutes-from-dateTime-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-dateTime.xml#L71	Unsupported sequenceExpr
 fn-minutes-from-dateTime	fn-minutes-from-dateTime-12	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-dateTime.xml#L134	Unsupported idivOp
 fn-minutes-from-dateTime	fn-minutes-from-dateTime-13	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-dateTime.xml#L143	Unsupported modOp

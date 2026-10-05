@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-add-dayTimeDurations" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#op-add-dayTimeDurations2args-1>
     <#op-add-dayTimeDurations2args-2>
@@ -33,160 +35,160 @@
 <#op-add-dayTimeDurations2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations2args-1" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations2args-1                    \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-dayTimeDurations\" operator\n with the arguments set as follows:                    \nSarg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L6> ;
   mf:action [ qt:query <op-add-dayTimeDurations2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations2args-2" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations2args-2                    \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-dayTimeDurations\" operator\n with the arguments set as follows:                    \nSarg1 = xs:dayTimeDuration(mid range)                 \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L24> ;
   mf:action [ qt:query <op-add-dayTimeDurations2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations2args-3" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations2args-3                    \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-dayTimeDurations\" operator\n with the arguments set as follows:                    \nSarg1 = xs:dayTimeDuration(upper bound)               \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L42> ;
   mf:action [ qt:query <op-add-dayTimeDurations2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations2args-4" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations2args-4                    \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-dayTimeDurations\" operator\n with the arguments set as follows:                    \nSarg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(mid range)                 \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L60> ;
   mf:action [ qt:query <op-add-dayTimeDurations2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations2args-5" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations2args-5                    \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-dayTimeDurations\" operator\n with the arguments set as follows:                    \nSarg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(upper bound)               \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L78> ;
   mf:action [ qt:query <op-add-dayTimeDurations2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-1> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-1" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-1                        \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function \nAs per example 1 (for this function)of the F&O specs.  \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L96> ;
   mf:action [ qt:query <op-add-dayTimeDurations-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-2> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-2" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-2                        \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function \nused as part of a boolean expression (and operator) and the \"fn:false\" function. \n Uses \"fn:string\" to account for new EBV rules.        \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L112> ;
   mf:action [ qt:query <op-add-dayTimeDurations-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-3> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-3" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-3                        \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function as \npart of a boolean expression (or operator) and the \"fn:boolean\" function. \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L129> ;
   mf:action [ qt:query <op-add-dayTimeDurations-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-4> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-4" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-4                        \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function that  \nreturn true and used together with fn:not.             \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L145> ;
   mf:action [ qt:query <op-add-dayTimeDurations-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-5> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-5" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-5                        \nWritten By: Carmelo Montanez                           \nDate: June 29 2005                                     \nPurpose: Evaluates The \"add-dayTimeDurations\" function that  \nis used as an argument to the fn:boolean function.     \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L162> ;
   mf:action [ qt:query <op-add-dayTimeDurations-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-7> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-7" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-7                        \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used  \nas an argument to the \"fn:string\" function).           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L195> ;
   mf:action [ qt:query <op-add-dayTimeDurations-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-8> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-8" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-8                        \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function that  \nreturns a negative value.                              \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L211> ;
   mf:action [ qt:query <op-add-dayTimeDurations-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-9> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-9" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-9                        \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used \ntogether with and \"and\" expression.                    \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L227> ;
   mf:action [ qt:query <op-add-dayTimeDurations-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-10> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-10" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-10                       \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used  \ntogether with an \"or\" expression.                      \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L244> ;
   mf:action [ qt:query <op-add-dayTimeDurations-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-11> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-11" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-11                       \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used  \ntogether with a \"div\" expression.                      \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L261> ;
   mf:action [ qt:query <op-add-dayTimeDurations-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-12> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-12" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-12                       \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" operators used \nwith a boolean expression and the \"fn:true\" function.   \n Uses the \"fn:string\" function to account for new EBV rules. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L277> ;
   mf:action [ qt:query <op-add-dayTimeDurations-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-13> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-13" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-13                       \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used  \ntogether with the numeric-equal-operator \"eq\".         \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L294> ;
   mf:action [ qt:query <op-add-dayTimeDurations-13.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-14> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-14" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-14                       \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used  \ntogether with the numeric-equal operator \"ne\".         \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L310> ;
   mf:action [ qt:query <op-add-dayTimeDurations-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-15> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-15" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-15                       \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used  \ntogether with the numeric-equal operator \"le\".         \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L326> ;
   mf:action [ qt:query <op-add-dayTimeDurations-15.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-add-dayTimeDurations-16> a mf:QueryEvaluationTest ;
   mf:name "op-add-dayTimeDurations-16" ;
   rdfs:comment "*******************************************************\nTest: op-add-dayTimeDurations-16                       \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-dayTimeDurations\" function used  \ntogether with the numeric-equal operator \"ge\".         \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L342> ;
   mf:action [ qt:query <op-add-dayTimeDurations-16.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DayTimeDurationAdd-1> a mf:QueryEvaluationTest ;
   mf:name "K-DayTimeDurationAdd-1" ;
   rdfs:comment "*******************************************************\n Test: K-DayTimeDurationAdd-1                          \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of adding an xs:dayTimeDuration with PT0S. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L358> ;
   mf:action [ qt:query <K-DayTimeDurationAdd-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DayTimeDurationAdd-2> a mf:QueryEvaluationTest ;
   mf:name "K-DayTimeDurationAdd-2" ;
   rdfs:comment "*******************************************************\n Test: K-DayTimeDurationAdd-2                          \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of substraction PT0S with an xs:dayTimeDuration. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L373> ;
   mf:action [ qt:query <K-DayTimeDurationAdd-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DayTimeDurationAdd-3> a mf:QueryEvaluationTest ;
   mf:name "K-DayTimeDurationAdd-3" ;
   rdfs:comment "*******************************************************\n Test: K-DayTimeDurationAdd-3                          \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of adding two arbitrary xs:yearMonthDurations. \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDurations.xml#L388> ;
   mf:action [ qt:query <K-DayTimeDurationAdd-3.rq> ] ;
   mf:result <../true.srj> .

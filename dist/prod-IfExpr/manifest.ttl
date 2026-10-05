@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set prod-IfExpr" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#CondExpr010>
     <#CondExpr015>
@@ -13,20 +15,20 @@
 <#CondExpr010> a mf:QueryEvaluationTest ;
   mf:name "CondExpr010" ;
   rdfs:comment "FileName: CondExpr010  a true expression in if expression" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml#L120> ;
   mf:action [ qt:query <CondExpr010.rq> ] ;
   mf:result <../true.srj> .
 
 <#CondExpr015> a mf:QueryEvaluationTest ;
   mf:name "CondExpr015" ;
   rdfs:comment "FileName: CondExpr015  Two if expressions at same depth in larger expression, each parenthesized" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml#L171> ;
   mf:action [ qt:query <CondExpr015.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-CondExpr-1> a mf:QueryEvaluationTest ;
   mf:name "K-CondExpr-1" ;
   rdfs:comment "A test whose essence is: `(if(2) then 1 else 0) eq 1`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/IfExpr.xml#L275> ;
   mf:action [ qt:query <K-CondExpr-1.rq> ] ;
   mf:result <../true.srj> .

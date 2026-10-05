@@ -1,0 +1,7 @@
+# QT3 test case re00875 of test set fn-matches.re, which tests the XPath expression
+#   matches('qwerty','((?-i:a.))b')
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7181
+ASK {
+  BIND(REGEX( "qwerty" , "((?-i:a.))b" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

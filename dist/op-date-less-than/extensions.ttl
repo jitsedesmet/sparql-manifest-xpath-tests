@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set op-date-less-than" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#op-date-less-than2args-1>
     <#op-date-less-than2args-2>
@@ -35,7 +37,6 @@
     <#K-DateLT-4>
     <#K-DateLT-5>
     <#K-DateLT-6>
-    <#cbcl-date-ge-001>
     <#cbcl-date-less-than-002>
     <#cbcl-date-less-than-003>
     <#cbcl-date-less-than-004>
@@ -49,272 +50,265 @@
 <#op-date-less-than2args-1> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-1" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-1                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L6> ;
   mf:action [ qt:query <op-date-less-than2args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-2> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-2" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-2                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(mid range)                             \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L24> ;
   mf:action [ qt:query <op-date-less-than2args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-3> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-3" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-3                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(upper bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L42> ;
   mf:action [ qt:query <op-date-less-than2args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-4> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-4" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-4                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(mid range)                             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L60> ;
   mf:action [ qt:query <op-date-less-than2args-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-5> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-5" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-5                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(upper bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L78> ;
   mf:action [ qt:query <op-date-less-than2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-6> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-6" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-6                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L96> ;
   mf:action [ qt:query <op-date-less-than2args-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-7> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-7" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-7                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(mid range)                             \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L114> ;
   mf:action [ qt:query <op-date-less-than2args-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-8> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-8" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-8                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(upper bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L132> ;
   mf:action [ qt:query <op-date-less-than2args-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-9> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-9" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-9                          \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(mid range)                             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L150> ;
   mf:action [ qt:query <op-date-less-than2args-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than2args-10> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than2args-10" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than2args-10                         \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-less-than\" operator    \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(upper bound)                           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L168> ;
   mf:action [ qt:query <op-date-less-than2args-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-1> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-1" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-1                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function       \nAs per example 1 (for this function)of the F&O specs   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L186> ;
   mf:action [ qt:query <op-date-less-than-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-2> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-2" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-2                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function       \nAs per example 2 (for this function) of the F&O  specs \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L202> ;
   mf:action [ qt:query <op-date-less-than-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-3> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-3" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-3                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function that  \nreturn true and used together with fn:not (lt operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L218> ;
   mf:action [ qt:query <op-date-less-than-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-4> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-4" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-4                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function that  \nreturn true and used together with fn:not (le operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L234> ;
   mf:action [ qt:query <op-date-less-than-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-5> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-5" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-5                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function that  \nreturn false and used together with fn:not (lt operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L250> ;
   mf:action [ qt:query <op-date-less-than-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-6> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-6" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-6                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function that  \nreturn false and used together with fn:not(le operator)\n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L266> ;
   mf:action [ qt:query <op-date-less-than-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-7> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-7" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-7                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"and\" expression (lt operator).          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L282> ;
   mf:action [ qt:query <op-date-less-than-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-8> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-8" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-8                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"and\" expression (le operator).          \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L298> ;
   mf:action [ qt:query <op-date-less-than-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-9> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-9" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-9                              \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"or\" expression (lt operator).           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L314> ;
   mf:action [ qt:query <op-date-less-than-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-10> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-10" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-10                             \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"or\" expression (le operator).           \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L330> ;
   mf:action [ qt:query <op-date-less-than-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-11> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-11" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-11                             \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"fn:true\"/or expression (lt operator).   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L346> ;
   mf:action [ qt:query <op-date-less-than-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-12> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-12" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-12                             \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"fn:true\"/or expression (le operator).   \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L362> ;
   mf:action [ qt:query <op-date-less-than-12.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-13> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-13" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-13                             \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"fn:false\"/or expression (lt operator).  \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L378> ;
   mf:action [ qt:query <op-date-less-than-13.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-date-less-than-14> a mf:QueryEvaluationTest ;
   mf:name "op-date-less-than-14" ;
   rdfs:comment "*******************************************************\nTest: op-date-less-than-14                             \nWritten By: Carmelo Montanez                           \nDate: June 13, 2005                                    \nPurpose: Evaluates The \"date-less-than\" function used  \ntogether with \"fn:false\"/or expression (le operator).  \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L394> ;
   mf:action [ qt:query <op-date-less-than-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DateLT-1> a mf:QueryEvaluationTest ;
   mf:name "K-DateLT-1" ;
   rdfs:comment "*******************************************************\n Test: K-DateLT-1                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:date.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L410> ;
   mf:action [ qt:query <K-DateLT-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DateLT-2> a mf:QueryEvaluationTest ;
   mf:name "K-DateLT-2" ;
   rdfs:comment "*******************************************************\n Test: K-DateLT-2                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:date.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L425> ;
   mf:action [ qt:query <K-DateLT-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DateLT-3> a mf:QueryEvaluationTest ;
   mf:name "K-DateLT-3" ;
   rdfs:comment "*******************************************************\n Test: K-DateLT-3                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:date.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L440> ;
   mf:action [ qt:query <K-DateLT-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DateLT-4> a mf:QueryEvaluationTest ;
   mf:name "K-DateLT-4" ;
   rdfs:comment "*******************************************************\n Test: K-DateLT-4                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:date.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L455> ;
   mf:action [ qt:query <K-DateLT-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DateLT-5> a mf:QueryEvaluationTest ;
   mf:name "K-DateLT-5" ;
   rdfs:comment "*******************************************************\n Test: K-DateLT-5                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:date.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L470> ;
   mf:action [ qt:query <K-DateLT-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-DateLT-6> a mf:QueryEvaluationTest ;
   mf:name "K-DateLT-6" ;
   rdfs:comment "*******************************************************\n Test: K-DateLT-6                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:date.             \n*******************************************************" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L485> ;
   mf:action [ qt:query <K-DateLT-6.rq> ] ;
-  mf:result <../true.srj> .
-
-<#cbcl-date-ge-001> a mf:QueryEvaluationTest ;
-  mf:name "cbcl-date-ge-001" ;
-  rdfs:comment "Test that comparing large dates does not overflow." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
-  mf:action [ qt:query <cbcl-date-ge-001.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-002> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-002" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L549> ;
   mf:action [ qt:query <cbcl-date-less-than-002.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-003> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-003" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L559> ;
   mf:action [ qt:query <cbcl-date-less-than-003.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-004> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-004" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L569> ;
   mf:action [ qt:query <cbcl-date-less-than-004.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-005> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-005" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L579> ;
   mf:action [ qt:query <cbcl-date-less-than-005.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-007> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-007" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L604> ;
   mf:action [ qt:query <cbcl-date-less-than-007.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-008> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-008" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L614> ;
   mf:action [ qt:query <cbcl-date-less-than-008.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-009> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-009" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L624> ;
   mf:action [ qt:query <cbcl-date-less-than-009.rq> ] ;
   mf:result <../true.srj> .
 
 <#cbcl-date-less-than-010> a mf:QueryEvaluationTest ;
   mf:name "cbcl-date-less-than-010" ;
   rdfs:comment "test comparison of date" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-less-than.xml#L634> ;
   mf:action [ qt:query <cbcl-date-less-than-010.rq> ] ;
   mf:result <../true.srj> .

@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set fn-timezone-from-dateTime" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#fn-timezone-from-dateTimealt-1>
     <#fn-timezone-from-dateTimealt-2>
@@ -27,118 +29,118 @@
 <#fn-timezone-from-dateTimealt-1> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-1" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function As per example 1 (for this function) of the F&O specs" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L8> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-2> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-2" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function As per example 2 (for this function) of the F&O specs." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L17> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-4> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-4" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function uses as part of a numeric-less-than expression (le operator)." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L35> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-6> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-6" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function that returns dayTimeDuration of 0." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L53> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-7> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-7" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function that evaluates a timezone of \"-00:00\"." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L62> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-8> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-8" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of a \"+\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L71> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-9> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-9" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of a \"-\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L80> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-11> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-11" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of a \"div\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L98> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-14> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-14" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as an argument to the \"fn:string\" function" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L125> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-15> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-15" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of an \"and\" expression. Uses the \"fn:string\" function to account for new EBV rules." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L134> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-15.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-16> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-16" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of a \"numeric-equal\" expression (eq operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L143> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-16.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-17> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-17" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of a \"numeric-equal\" expression (ne operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L152> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-17.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-18> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-18" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of a \"numeric-equal\" expression (le operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L161> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-18.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-19> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-19" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of a \"numeric-equal\" expression (ge operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L170> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-19.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-timezone-from-dateTimealt-20> a mf:QueryEvaluationTest ;
   mf:name "fn-timezone-from-dateTimealt-20" ;
   rdfs:comment "Evaluates The \"timezone-from-dateTime\" function as part of an \"or\" expression. Uses the \"fn:string\" function to account for new EBV rules." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L179> ;
   mf:action [ qt:query <fn-timezone-from-dateTimealt-20.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimezoneFromDateTimeFunc-5> a mf:QueryEvaluationTest ;
   mf:name "K-TimezoneFromDateTimeFunc-5" ;
   rdfs:comment "A test whose essence is: `timezone-from-dateTime(xs:dateTime(\"2004-10-12T23:43:12Z\")) eq xs:dayTimeDuration(\"PT0S\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L224> ;
   mf:action [ qt:query <K-TimezoneFromDateTimeFunc-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-TimezoneFromDateTimeFunc-6> a mf:QueryEvaluationTest ;
   mf:name "K-TimezoneFromDateTimeFunc-6" ;
   rdfs:comment "A test whose essence is: `timezone-from-dateTime(xs:dateTime(\"2004-10-12T23:43:12-08:23\")) eq xs:dayTimeDuration(\"-PT8H23M\")`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/timezone-from-dateTime.xml#L233> ;
   mf:action [ qt:query <K-TimezoneFromDateTimeFunc-6.rq> ] ;
   mf:result <../true.srj> .

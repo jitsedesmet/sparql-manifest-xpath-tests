@@ -1,0 +1,2114 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-matches.re" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#re00016>
+    <#re00017>
+    <#re00018>
+    <#re00019>
+    <#re00021>
+    <#re00022>
+    <#re00032>
+    <#re00033>
+    <#re00037>
+    <#re00038>
+    <#re00039>
+    <#re00040>
+    <#re00041>
+    <#re00042>
+    <#re00043>
+    <#re00044>
+    <#re00045>
+    <#re00046>
+    <#re00048>
+    <#re00071>
+    <#re00072>
+    <#re00087>
+    <#re00088>
+    <#re00090>
+    <#re00093>
+    <#re00097>
+    <#re00101>
+    <#re00212>
+    <#re00214>
+    <#re00215>
+    <#re00216>
+    <#re00521>
+    <#re00541>
+    <#re00556>
+    <#re00558>
+    <#re00561>
+    <#re00562>
+    <#re00563>
+    <#re00564>
+    <#re00566>
+    <#re00567>
+    <#re00568>
+    <#re00569>
+    <#re00570>
+    <#re00571>
+    <#re00572>
+    <#re00573>
+    <#re00574>
+    <#re00583>
+    <#re00584>
+    <#re00585>
+    <#re00586>
+    <#re00587>
+    <#re00588>
+    <#re00589>
+    <#re00590>
+    <#re00591>
+    <#re00592>
+    <#re00593>
+    <#re00594>
+    <#re00595>
+    <#re00596>
+    <#re00597>
+    <#re00598>
+    <#re00600>
+    <#re00609>
+    <#re00610>
+    <#re00613>
+    <#re00614>
+    <#re00615>
+    <#re00616>
+    <#re00618>
+    <#re00619>
+    <#re00620>
+    <#re00621>
+    <#re00622>
+    <#re00623>
+    <#re00624>
+    <#re00625>
+    <#re00626>
+    <#re00627>
+    <#re00628>
+    <#re00629>
+    <#re00630>
+    <#re00631>
+    <#re00632>
+    <#re00633>
+    <#re00634>
+    <#re00635>
+    <#re00636>
+    <#re00637>
+    <#re00638>
+    <#re00642>
+    <#re00646>
+    <#re00647>
+    <#re00648>
+    <#re00649>
+    <#re00650>
+    <#re00651>
+    <#re00652>
+    <#re00653>
+    <#re00654>
+    <#re00674>
+    <#re00675>
+    <#re00676>
+    <#re00677>
+    <#re00678>
+    <#re00679>
+    <#re00680>
+    <#re00681>
+    <#re00682>
+    <#re00683>
+    <#re00684>
+    <#re00685>
+    <#re00686>
+    <#re00687>
+    <#re00688>
+    <#re00741>
+    <#re00742>
+    <#re00743>
+    <#re00744>
+    <#re00745>
+    <#re00746>
+    <#re00750>
+    <#re00751>
+    <#re00754>
+    <#re00755>
+    <#re00756>
+    <#re00757>
+    <#re00761>
+    <#re00762>
+    <#re00763>
+    <#re00764>
+    <#re00765>
+    <#re00767>
+    <#re00768>
+    <#re00769>
+    <#re00784>
+    <#re00785>
+    <#re00786>
+    <#re00787>
+    <#re00791>
+    <#re00792>
+    <#re00801>
+    <#re00802>
+    <#re00803>
+    <#re00804>
+    <#re00805>
+    <#re00806>
+    <#re00807>
+    <#re00808>
+    <#re00809>
+    <#re00810>
+    <#re00811>
+    <#re00812>
+    <#re00813>
+    <#re00814>
+    <#re00815>
+    <#re00816>
+    <#re00817>
+    <#re00819>
+    <#re00820>
+    <#re00821>
+    <#re00822>
+    <#re00823>
+    <#re00824>
+    <#re00826>
+    <#re00827>
+    <#re00828>
+    <#re00829>
+    <#re00830>
+    <#re00854>
+    <#re00862>
+    <#re00863>
+    <#re00867>
+    <#re00868>
+    <#re00869>
+    <#re00870>
+    <#re00871>
+    <#re00872>
+    <#re00873>
+    <#re00874>
+    <#re00875>
+    <#re00876>
+    <#re00879>
+    <#re00881>
+    <#re00882>
+    <#re00883>
+    <#re00884>
+    <#re00885>
+    <#re00886>
+    <#re00887>
+    <#re00888>
+    <#re00889>
+    <#re00890>
+    <#re00891>
+    <#re00892>
+    <#re00893>
+    <#re00894>
+    <#re00895>
+    <#re00896>
+    <#re00897>
+    <#re00898>
+    <#re00899>
+    <#re00900>
+    <#re00901>
+    <#re00902>
+    <#re00903>
+    <#re00904>
+    <#re00905>
+    <#re00906>
+    <#re00907>
+    <#re00908>
+    <#re00909>
+    <#re00910>
+    <#re00911>
+    <#re00912>
+    <#re00913>
+    <#re00914>
+    <#re00915>
+    <#re00916>
+    <#re00917>
+    <#re00918>
+    <#re00919>
+    <#re00920>
+    <#re00921>
+    <#re00922>
+    <#re00923>
+    <#re00924>
+    <#re00925>
+    <#re00926>
+    <#re00927>
+    <#re00928>
+    <#re00929>
+    <#re00930>
+    <#re00931>
+    <#re00937>
+    <#re00938>
+    <#re00939>
+    <#re00940>
+    <#re00941>
+    <#re00956>
+    <#re00958>
+    <#re00959>
+    <#re00960>
+    <#re00961>
+    <#re00962>
+    <#re00963>
+    <#re00964>
+    <#re00965>
+    <#re00966>
+    <#re00967>
+    <#re00968>
+    <#re00969>
+    <#re00970>
+    <#re00971>
+    <#re00977>
+    <#re00978>
+    <#re00988>
+    <#re00989>
+    <#re00995>
+    <#re00996>
+    <#re00997>
+  ) .
+
+<#re00016> a mf:QueryEvaluationTest ;
+  mf:name "re00016" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L136> ;
+  mf:action [ qt:query <re00016.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00017> a mf:QueryEvaluationTest ;
+  mf:name "re00017" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L144> ;
+  mf:action [ qt:query <re00017.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00018> a mf:QueryEvaluationTest ;
+  mf:name "re00018" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L152> ;
+  mf:action [ qt:query <re00018.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00019> a mf:QueryEvaluationTest ;
+  mf:name "re00019" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L160> ;
+  mf:action [ qt:query <re00019.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00021> a mf:QueryEvaluationTest ;
+  mf:name "re00021" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L176> ;
+  mf:action [ qt:query <re00021.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00022> a mf:QueryEvaluationTest ;
+  mf:name "re00022" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L184> ;
+  mf:action [ qt:query <re00022.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00032> a mf:QueryEvaluationTest ;
+  mf:name "re00032" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L264> ;
+  mf:action [ qt:query <re00032.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00033> a mf:QueryEvaluationTest ;
+  mf:name "re00033" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L272> ;
+  mf:action [ qt:query <re00033.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00037> a mf:QueryEvaluationTest ;
+  mf:name "re00037" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L304> ;
+  mf:action [ qt:query <re00037.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00038> a mf:QueryEvaluationTest ;
+  mf:name "re00038" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L312> ;
+  mf:action [ qt:query <re00038.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00039> a mf:QueryEvaluationTest ;
+  mf:name "re00039" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L320> ;
+  mf:action [ qt:query <re00039.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00040> a mf:QueryEvaluationTest ;
+  mf:name "re00040" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L328> ;
+  mf:action [ qt:query <re00040.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00041> a mf:QueryEvaluationTest ;
+  mf:name "re00041" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L336> ;
+  mf:action [ qt:query <re00041.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00042> a mf:QueryEvaluationTest ;
+  mf:name "re00042" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L344> ;
+  mf:action [ qt:query <re00042.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00043> a mf:QueryEvaluationTest ;
+  mf:name "re00043" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L352> ;
+  mf:action [ qt:query <re00043.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00044> a mf:QueryEvaluationTest ;
+  mf:name "re00044" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L360> ;
+  mf:action [ qt:query <re00044.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00045> a mf:QueryEvaluationTest ;
+  mf:name "re00045" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L368> ;
+  mf:action [ qt:query <re00045.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00046> a mf:QueryEvaluationTest ;
+  mf:name "re00046" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L376> ;
+  mf:action [ qt:query <re00046.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00048> a mf:QueryEvaluationTest ;
+  mf:name "re00048" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L392> ;
+  mf:action [ qt:query <re00048.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00071> a mf:QueryEvaluationTest ;
+  mf:name "re00071" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L589> ;
+  mf:action [ qt:query <re00071.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00072> a mf:QueryEvaluationTest ;
+  mf:name "re00072" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L597> ;
+  mf:action [ qt:query <re00072.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00087> a mf:QueryEvaluationTest ;
+  mf:name "re00087" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L730> ;
+  mf:action [ qt:query <re00087.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00088> a mf:QueryEvaluationTest ;
+  mf:name "re00088" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L738> ;
+  mf:action [ qt:query <re00088.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00090> a mf:QueryEvaluationTest ;
+  mf:name "re00090" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L754> ;
+  mf:action [ qt:query <re00090.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00093> a mf:QueryEvaluationTest ;
+  mf:name "re00093" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L778> ;
+  mf:action [ qt:query <re00093.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00097> a mf:QueryEvaluationTest ;
+  mf:name "re00097" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L810> ;
+  mf:action [ qt:query <re00097.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00101> a mf:QueryEvaluationTest ;
+  mf:name "re00101" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L842> ;
+  mf:action [ qt:query <re00101.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00212> a mf:QueryEvaluationTest ;
+  mf:name "re00212" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1826> ;
+  mf:action [ qt:query <re00212.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00214> a mf:QueryEvaluationTest ;
+  mf:name "re00214" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1842> ;
+  mf:action [ qt:query <re00214.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00215> a mf:QueryEvaluationTest ;
+  mf:name "re00215" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1850> ;
+  mf:action [ qt:query <re00215.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00216> a mf:QueryEvaluationTest ;
+  mf:name "re00216" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1858> ;
+  mf:action [ qt:query <re00216.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00521> a mf:QueryEvaluationTest ;
+  mf:name "re00521" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4348> ;
+  mf:action [ qt:query <re00521.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00541> a mf:QueryEvaluationTest ;
+  mf:name "re00541" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4508> ;
+  mf:action [ qt:query <re00541.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00556> a mf:QueryEvaluationTest ;
+  mf:name "re00556" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4628> ;
+  mf:action [ qt:query <re00556.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00558> a mf:QueryEvaluationTest ;
+  mf:name "re00558" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4644> ;
+  mf:action [ qt:query <re00558.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00561> a mf:QueryEvaluationTest ;
+  mf:name "re00561" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4668> ;
+  mf:action [ qt:query <re00561.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00562> a mf:QueryEvaluationTest ;
+  mf:name "re00562" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4676> ;
+  mf:action [ qt:query <re00562.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00563> a mf:QueryEvaluationTest ;
+  mf:name "re00563" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4684> ;
+  mf:action [ qt:query <re00563.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00564> a mf:QueryEvaluationTest ;
+  mf:name "re00564" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4692> ;
+  mf:action [ qt:query <re00564.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00566> a mf:QueryEvaluationTest ;
+  mf:name "re00566" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4708> ;
+  mf:action [ qt:query <re00566.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00567> a mf:QueryEvaluationTest ;
+  mf:name "re00567" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4716> ;
+  mf:action [ qt:query <re00567.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00568> a mf:QueryEvaluationTest ;
+  mf:name "re00568" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4724> ;
+  mf:action [ qt:query <re00568.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00569> a mf:QueryEvaluationTest ;
+  mf:name "re00569" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4732> ;
+  mf:action [ qt:query <re00569.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00570> a mf:QueryEvaluationTest ;
+  mf:name "re00570" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4740> ;
+  mf:action [ qt:query <re00570.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00571> a mf:QueryEvaluationTest ;
+  mf:name "re00571" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4748> ;
+  mf:action [ qt:query <re00571.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00572> a mf:QueryEvaluationTest ;
+  mf:name "re00572" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4756> ;
+  mf:action [ qt:query <re00572.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00573> a mf:QueryEvaluationTest ;
+  mf:name "re00573" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4764> ;
+  mf:action [ qt:query <re00573.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00574> a mf:QueryEvaluationTest ;
+  mf:name "re00574" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4772> ;
+  mf:action [ qt:query <re00574.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00583> a mf:QueryEvaluationTest ;
+  mf:name "re00583" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4844> ;
+  mf:action [ qt:query <re00583.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00584> a mf:QueryEvaluationTest ;
+  mf:name "re00584" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4852> ;
+  mf:action [ qt:query <re00584.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00585> a mf:QueryEvaluationTest ;
+  mf:name "re00585" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4860> ;
+  mf:action [ qt:query <re00585.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00586> a mf:QueryEvaluationTest ;
+  mf:name "re00586" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4868> ;
+  mf:action [ qt:query <re00586.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00587> a mf:QueryEvaluationTest ;
+  mf:name "re00587" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4876> ;
+  mf:action [ qt:query <re00587.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00588> a mf:QueryEvaluationTest ;
+  mf:name "re00588" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4884> ;
+  mf:action [ qt:query <re00588.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00589> a mf:QueryEvaluationTest ;
+  mf:name "re00589" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4892> ;
+  mf:action [ qt:query <re00589.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00590> a mf:QueryEvaluationTest ;
+  mf:name "re00590" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4900> ;
+  mf:action [ qt:query <re00590.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00591> a mf:QueryEvaluationTest ;
+  mf:name "re00591" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4908> ;
+  mf:action [ qt:query <re00591.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00592> a mf:QueryEvaluationTest ;
+  mf:name "re00592" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4916> ;
+  mf:action [ qt:query <re00592.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00593> a mf:QueryEvaluationTest ;
+  mf:name "re00593" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4924> ;
+  mf:action [ qt:query <re00593.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00594> a mf:QueryEvaluationTest ;
+  mf:name "re00594" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4932> ;
+  mf:action [ qt:query <re00594.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00595> a mf:QueryEvaluationTest ;
+  mf:name "re00595" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4940> ;
+  mf:action [ qt:query <re00595.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00596> a mf:QueryEvaluationTest ;
+  mf:name "re00596" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4948> ;
+  mf:action [ qt:query <re00596.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00597> a mf:QueryEvaluationTest ;
+  mf:name "re00597" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4956> ;
+  mf:action [ qt:query <re00597.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00598> a mf:QueryEvaluationTest ;
+  mf:name "re00598" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4964> ;
+  mf:action [ qt:query <re00598.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00600> a mf:QueryEvaluationTest ;
+  mf:name "re00600" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4980> ;
+  mf:action [ qt:query <re00600.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00609> a mf:QueryEvaluationTest ;
+  mf:name "re00609" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5052> ;
+  mf:action [ qt:query <re00609.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00610> a mf:QueryEvaluationTest ;
+  mf:name "re00610" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5060> ;
+  mf:action [ qt:query <re00610.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00613> a mf:QueryEvaluationTest ;
+  mf:name "re00613" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5084> ;
+  mf:action [ qt:query <re00613.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00614> a mf:QueryEvaluationTest ;
+  mf:name "re00614" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5092> ;
+  mf:action [ qt:query <re00614.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00615> a mf:QueryEvaluationTest ;
+  mf:name "re00615" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5100> ;
+  mf:action [ qt:query <re00615.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00616> a mf:QueryEvaluationTest ;
+  mf:name "re00616" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5108> ;
+  mf:action [ qt:query <re00616.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00618> a mf:QueryEvaluationTest ;
+  mf:name "re00618" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5124> ;
+  mf:action [ qt:query <re00618.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00619> a mf:QueryEvaluationTest ;
+  mf:name "re00619" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5132> ;
+  mf:action [ qt:query <re00619.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00620> a mf:QueryEvaluationTest ;
+  mf:name "re00620" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5140> ;
+  mf:action [ qt:query <re00620.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00621> a mf:QueryEvaluationTest ;
+  mf:name "re00621" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5148> ;
+  mf:action [ qt:query <re00621.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00622> a mf:QueryEvaluationTest ;
+  mf:name "re00622" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5156> ;
+  mf:action [ qt:query <re00622.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00623> a mf:QueryEvaluationTest ;
+  mf:name "re00623" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5164> ;
+  mf:action [ qt:query <re00623.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00624> a mf:QueryEvaluationTest ;
+  mf:name "re00624" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5172> ;
+  mf:action [ qt:query <re00624.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00625> a mf:QueryEvaluationTest ;
+  mf:name "re00625" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5180> ;
+  mf:action [ qt:query <re00625.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00626> a mf:QueryEvaluationTest ;
+  mf:name "re00626" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5188> ;
+  mf:action [ qt:query <re00626.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00627> a mf:QueryEvaluationTest ;
+  mf:name "re00627" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5196> ;
+  mf:action [ qt:query <re00627.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00628> a mf:QueryEvaluationTest ;
+  mf:name "re00628" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5204> ;
+  mf:action [ qt:query <re00628.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00629> a mf:QueryEvaluationTest ;
+  mf:name "re00629" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5212> ;
+  mf:action [ qt:query <re00629.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00630> a mf:QueryEvaluationTest ;
+  mf:name "re00630" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5220> ;
+  mf:action [ qt:query <re00630.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00631> a mf:QueryEvaluationTest ;
+  mf:name "re00631" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5228> ;
+  mf:action [ qt:query <re00631.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00632> a mf:QueryEvaluationTest ;
+  mf:name "re00632" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5236> ;
+  mf:action [ qt:query <re00632.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00633> a mf:QueryEvaluationTest ;
+  mf:name "re00633" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5244> ;
+  mf:action [ qt:query <re00633.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00634> a mf:QueryEvaluationTest ;
+  mf:name "re00634" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5252> ;
+  mf:action [ qt:query <re00634.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00635> a mf:QueryEvaluationTest ;
+  mf:name "re00635" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5260> ;
+  mf:action [ qt:query <re00635.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00636> a mf:QueryEvaluationTest ;
+  mf:name "re00636" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5268> ;
+  mf:action [ qt:query <re00636.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00637> a mf:QueryEvaluationTest ;
+  mf:name "re00637" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5276> ;
+  mf:action [ qt:query <re00637.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00638> a mf:QueryEvaluationTest ;
+  mf:name "re00638" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5284> ;
+  mf:action [ qt:query <re00638.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00642> a mf:QueryEvaluationTest ;
+  mf:name "re00642" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5316> ;
+  mf:action [ qt:query <re00642.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00646> a mf:QueryEvaluationTest ;
+  mf:name "re00646" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5348> ;
+  mf:action [ qt:query <re00646.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00647> a mf:QueryEvaluationTest ;
+  mf:name "re00647" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5356> ;
+  mf:action [ qt:query <re00647.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00648> a mf:QueryEvaluationTest ;
+  mf:name "re00648" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5364> ;
+  mf:action [ qt:query <re00648.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00649> a mf:QueryEvaluationTest ;
+  mf:name "re00649" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5372> ;
+  mf:action [ qt:query <re00649.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00650> a mf:QueryEvaluationTest ;
+  mf:name "re00650" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5380> ;
+  mf:action [ qt:query <re00650.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00651> a mf:QueryEvaluationTest ;
+  mf:name "re00651" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5388> ;
+  mf:action [ qt:query <re00651.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00652> a mf:QueryEvaluationTest ;
+  mf:name "re00652" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5396> ;
+  mf:action [ qt:query <re00652.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00653> a mf:QueryEvaluationTest ;
+  mf:name "re00653" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5404> ;
+  mf:action [ qt:query <re00653.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00654> a mf:QueryEvaluationTest ;
+  mf:name "re00654" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5412> ;
+  mf:action [ qt:query <re00654.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00674> a mf:QueryEvaluationTest ;
+  mf:name "re00674" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5572> ;
+  mf:action [ qt:query <re00674.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00675> a mf:QueryEvaluationTest ;
+  mf:name "re00675" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5580> ;
+  mf:action [ qt:query <re00675.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00676> a mf:QueryEvaluationTest ;
+  mf:name "re00676" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5588> ;
+  mf:action [ qt:query <re00676.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00677> a mf:QueryEvaluationTest ;
+  mf:name "re00677" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5596> ;
+  mf:action [ qt:query <re00677.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00678> a mf:QueryEvaluationTest ;
+  mf:name "re00678" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5604> ;
+  mf:action [ qt:query <re00678.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00679> a mf:QueryEvaluationTest ;
+  mf:name "re00679" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5612> ;
+  mf:action [ qt:query <re00679.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00680> a mf:QueryEvaluationTest ;
+  mf:name "re00680" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5620> ;
+  mf:action [ qt:query <re00680.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00681> a mf:QueryEvaluationTest ;
+  mf:name "re00681" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5628> ;
+  mf:action [ qt:query <re00681.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00682> a mf:QueryEvaluationTest ;
+  mf:name "re00682" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5636> ;
+  mf:action [ qt:query <re00682.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00683> a mf:QueryEvaluationTest ;
+  mf:name "re00683" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5644> ;
+  mf:action [ qt:query <re00683.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00684> a mf:QueryEvaluationTest ;
+  mf:name "re00684" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5652> ;
+  mf:action [ qt:query <re00684.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00685> a mf:QueryEvaluationTest ;
+  mf:name "re00685" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5660> ;
+  mf:action [ qt:query <re00685.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00686> a mf:QueryEvaluationTest ;
+  mf:name "re00686" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5668> ;
+  mf:action [ qt:query <re00686.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00687> a mf:QueryEvaluationTest ;
+  mf:name "re00687" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5676> ;
+  mf:action [ qt:query <re00687.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00688> a mf:QueryEvaluationTest ;
+  mf:name "re00688" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5684> ;
+  mf:action [ qt:query <re00688.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00741> a mf:QueryEvaluationTest ;
+  mf:name "re00741" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6109> ;
+  mf:action [ qt:query <re00741.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00742> a mf:QueryEvaluationTest ;
+  mf:name "re00742" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6117> ;
+  mf:action [ qt:query <re00742.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00743> a mf:QueryEvaluationTest ;
+  mf:name "re00743" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6125> ;
+  mf:action [ qt:query <re00743.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00744> a mf:QueryEvaluationTest ;
+  mf:name "re00744" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6133> ;
+  mf:action [ qt:query <re00744.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00745> a mf:QueryEvaluationTest ;
+  mf:name "re00745" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6141> ;
+  mf:action [ qt:query <re00745.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00746> a mf:QueryEvaluationTest ;
+  mf:name "re00746" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6149> ;
+  mf:action [ qt:query <re00746.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00750> a mf:QueryEvaluationTest ;
+  mf:name "re00750" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6181> ;
+  mf:action [ qt:query <re00750.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00751> a mf:QueryEvaluationTest ;
+  mf:name "re00751" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6189> ;
+  mf:action [ qt:query <re00751.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00754> a mf:QueryEvaluationTest ;
+  mf:name "re00754" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6213> ;
+  mf:action [ qt:query <re00754.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00755> a mf:QueryEvaluationTest ;
+  mf:name "re00755" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6221> ;
+  mf:action [ qt:query <re00755.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00756> a mf:QueryEvaluationTest ;
+  mf:name "re00756" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6229> ;
+  mf:action [ qt:query <re00756.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00757> a mf:QueryEvaluationTest ;
+  mf:name "re00757" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6237> ;
+  mf:action [ qt:query <re00757.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00761> a mf:QueryEvaluationTest ;
+  mf:name "re00761" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6269> ;
+  mf:action [ qt:query <re00761.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00762> a mf:QueryEvaluationTest ;
+  mf:name "re00762" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6277> ;
+  mf:action [ qt:query <re00762.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00763> a mf:QueryEvaluationTest ;
+  mf:name "re00763" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6285> ;
+  mf:action [ qt:query <re00763.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00764> a mf:QueryEvaluationTest ;
+  mf:name "re00764" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6293> ;
+  mf:action [ qt:query <re00764.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00765> a mf:QueryEvaluationTest ;
+  mf:name "re00765" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6301> ;
+  mf:action [ qt:query <re00765.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00767> a mf:QueryEvaluationTest ;
+  mf:name "re00767" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6317> ;
+  mf:action [ qt:query <re00767.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00768> a mf:QueryEvaluationTest ;
+  mf:name "re00768" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6325> ;
+  mf:action [ qt:query <re00768.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00769> a mf:QueryEvaluationTest ;
+  mf:name "re00769" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6333> ;
+  mf:action [ qt:query <re00769.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00784> a mf:QueryEvaluationTest ;
+  mf:name "re00784" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6453> ;
+  mf:action [ qt:query <re00784.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00785> a mf:QueryEvaluationTest ;
+  mf:name "re00785" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6461> ;
+  mf:action [ qt:query <re00785.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00786> a mf:QueryEvaluationTest ;
+  mf:name "re00786" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6469> ;
+  mf:action [ qt:query <re00786.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00787> a mf:QueryEvaluationTest ;
+  mf:name "re00787" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6477> ;
+  mf:action [ qt:query <re00787.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00791> a mf:QueryEvaluationTest ;
+  mf:name "re00791" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6509> ;
+  mf:action [ qt:query <re00791.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00792> a mf:QueryEvaluationTest ;
+  mf:name "re00792" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6517> ;
+  mf:action [ qt:query <re00792.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00801> a mf:QueryEvaluationTest ;
+  mf:name "re00801" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6589> ;
+  mf:action [ qt:query <re00801.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00802> a mf:QueryEvaluationTest ;
+  mf:name "re00802" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6597> ;
+  mf:action [ qt:query <re00802.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00803> a mf:QueryEvaluationTest ;
+  mf:name "re00803" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6605> ;
+  mf:action [ qt:query <re00803.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00804> a mf:QueryEvaluationTest ;
+  mf:name "re00804" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6613> ;
+  mf:action [ qt:query <re00804.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00805> a mf:QueryEvaluationTest ;
+  mf:name "re00805" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6621> ;
+  mf:action [ qt:query <re00805.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00806> a mf:QueryEvaluationTest ;
+  mf:name "re00806" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6629> ;
+  mf:action [ qt:query <re00806.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00807> a mf:QueryEvaluationTest ;
+  mf:name "re00807" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6637> ;
+  mf:action [ qt:query <re00807.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00808> a mf:QueryEvaluationTest ;
+  mf:name "re00808" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6645> ;
+  mf:action [ qt:query <re00808.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00809> a mf:QueryEvaluationTest ;
+  mf:name "re00809" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6653> ;
+  mf:action [ qt:query <re00809.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00810> a mf:QueryEvaluationTest ;
+  mf:name "re00810" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6661> ;
+  mf:action [ qt:query <re00810.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00811> a mf:QueryEvaluationTest ;
+  mf:name "re00811" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6669> ;
+  mf:action [ qt:query <re00811.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00812> a mf:QueryEvaluationTest ;
+  mf:name "re00812" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6677> ;
+  mf:action [ qt:query <re00812.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00813> a mf:QueryEvaluationTest ;
+  mf:name "re00813" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6685> ;
+  mf:action [ qt:query <re00813.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00814> a mf:QueryEvaluationTest ;
+  mf:name "re00814" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6693> ;
+  mf:action [ qt:query <re00814.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00815> a mf:QueryEvaluationTest ;
+  mf:name "re00815" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6701> ;
+  mf:action [ qt:query <re00815.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00816> a mf:QueryEvaluationTest ;
+  mf:name "re00816" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6709> ;
+  mf:action [ qt:query <re00816.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00817> a mf:QueryEvaluationTest ;
+  mf:name "re00817" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6717> ;
+  mf:action [ qt:query <re00817.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00819> a mf:QueryEvaluationTest ;
+  mf:name "re00819" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6733> ;
+  mf:action [ qt:query <re00819.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00820> a mf:QueryEvaluationTest ;
+  mf:name "re00820" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6741> ;
+  mf:action [ qt:query <re00820.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00821> a mf:QueryEvaluationTest ;
+  mf:name "re00821" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6749> ;
+  mf:action [ qt:query <re00821.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00822> a mf:QueryEvaluationTest ;
+  mf:name "re00822" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6757> ;
+  mf:action [ qt:query <re00822.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00823> a mf:QueryEvaluationTest ;
+  mf:name "re00823" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6765> ;
+  mf:action [ qt:query <re00823.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00824> a mf:QueryEvaluationTest ;
+  mf:name "re00824" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6773> ;
+  mf:action [ qt:query <re00824.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00826> a mf:QueryEvaluationTest ;
+  mf:name "re00826" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6789> ;
+  mf:action [ qt:query <re00826.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00827> a mf:QueryEvaluationTest ;
+  mf:name "re00827" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6797> ;
+  mf:action [ qt:query <re00827.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00828> a mf:QueryEvaluationTest ;
+  mf:name "re00828" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6805> ;
+  mf:action [ qt:query <re00828.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00829> a mf:QueryEvaluationTest ;
+  mf:name "re00829" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6813> ;
+  mf:action [ qt:query <re00829.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00830> a mf:QueryEvaluationTest ;
+  mf:name "re00830" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6821> ;
+  mf:action [ qt:query <re00830.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00854> a mf:QueryEvaluationTest ;
+  mf:name "re00854" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7013> ;
+  mf:action [ qt:query <re00854.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00862> a mf:QueryEvaluationTest ;
+  mf:name "re00862" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7077> ;
+  mf:action [ qt:query <re00862.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00863> a mf:QueryEvaluationTest ;
+  mf:name "re00863" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7085> ;
+  mf:action [ qt:query <re00863.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00867> a mf:QueryEvaluationTest ;
+  mf:name "re00867" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7117> ;
+  mf:action [ qt:query <re00867.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00868> a mf:QueryEvaluationTest ;
+  mf:name "re00868" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7125> ;
+  mf:action [ qt:query <re00868.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00869> a mf:QueryEvaluationTest ;
+  mf:name "re00869" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7133> ;
+  mf:action [ qt:query <re00869.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00870> a mf:QueryEvaluationTest ;
+  mf:name "re00870" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7141> ;
+  mf:action [ qt:query <re00870.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00871> a mf:QueryEvaluationTest ;
+  mf:name "re00871" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7149> ;
+  mf:action [ qt:query <re00871.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00872> a mf:QueryEvaluationTest ;
+  mf:name "re00872" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7157> ;
+  mf:action [ qt:query <re00872.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00873> a mf:QueryEvaluationTest ;
+  mf:name "re00873" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7165> ;
+  mf:action [ qt:query <re00873.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00874> a mf:QueryEvaluationTest ;
+  mf:name "re00874" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7173> ;
+  mf:action [ qt:query <re00874.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00875> a mf:QueryEvaluationTest ;
+  mf:name "re00875" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7181> ;
+  mf:action [ qt:query <re00875.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00876> a mf:QueryEvaluationTest ;
+  mf:name "re00876" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7189> ;
+  mf:action [ qt:query <re00876.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00879> a mf:QueryEvaluationTest ;
+  mf:name "re00879" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7213> ;
+  mf:action [ qt:query <re00879.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00881> a mf:QueryEvaluationTest ;
+  mf:name "re00881" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7229> ;
+  mf:action [ qt:query <re00881.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00882> a mf:QueryEvaluationTest ;
+  mf:name "re00882" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7237> ;
+  mf:action [ qt:query <re00882.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00883> a mf:QueryEvaluationTest ;
+  mf:name "re00883" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7245> ;
+  mf:action [ qt:query <re00883.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00884> a mf:QueryEvaluationTest ;
+  mf:name "re00884" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7253> ;
+  mf:action [ qt:query <re00884.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00885> a mf:QueryEvaluationTest ;
+  mf:name "re00885" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7261> ;
+  mf:action [ qt:query <re00885.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00886> a mf:QueryEvaluationTest ;
+  mf:name "re00886" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7269> ;
+  mf:action [ qt:query <re00886.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00887> a mf:QueryEvaluationTest ;
+  mf:name "re00887" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7277> ;
+  mf:action [ qt:query <re00887.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00888> a mf:QueryEvaluationTest ;
+  mf:name "re00888" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7285> ;
+  mf:action [ qt:query <re00888.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00889> a mf:QueryEvaluationTest ;
+  mf:name "re00889" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7293> ;
+  mf:action [ qt:query <re00889.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00890> a mf:QueryEvaluationTest ;
+  mf:name "re00890" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7301> ;
+  mf:action [ qt:query <re00890.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00891> a mf:QueryEvaluationTest ;
+  mf:name "re00891" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7309> ;
+  mf:action [ qt:query <re00891.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00892> a mf:QueryEvaluationTest ;
+  mf:name "re00892" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7317> ;
+  mf:action [ qt:query <re00892.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00893> a mf:QueryEvaluationTest ;
+  mf:name "re00893" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7325> ;
+  mf:action [ qt:query <re00893.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00894> a mf:QueryEvaluationTest ;
+  mf:name "re00894" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7333> ;
+  mf:action [ qt:query <re00894.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00895> a mf:QueryEvaluationTest ;
+  mf:name "re00895" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7341> ;
+  mf:action [ qt:query <re00895.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00896> a mf:QueryEvaluationTest ;
+  mf:name "re00896" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7349> ;
+  mf:action [ qt:query <re00896.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00897> a mf:QueryEvaluationTest ;
+  mf:name "re00897" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7357> ;
+  mf:action [ qt:query <re00897.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00898> a mf:QueryEvaluationTest ;
+  mf:name "re00898" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7365> ;
+  mf:action [ qt:query <re00898.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00899> a mf:QueryEvaluationTest ;
+  mf:name "re00899" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7373> ;
+  mf:action [ qt:query <re00899.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00900> a mf:QueryEvaluationTest ;
+  mf:name "re00900" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7381> ;
+  mf:action [ qt:query <re00900.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00901> a mf:QueryEvaluationTest ;
+  mf:name "re00901" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7389> ;
+  mf:action [ qt:query <re00901.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00902> a mf:QueryEvaluationTest ;
+  mf:name "re00902" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7397> ;
+  mf:action [ qt:query <re00902.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00903> a mf:QueryEvaluationTest ;
+  mf:name "re00903" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7405> ;
+  mf:action [ qt:query <re00903.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00904> a mf:QueryEvaluationTest ;
+  mf:name "re00904" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7413> ;
+  mf:action [ qt:query <re00904.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00905> a mf:QueryEvaluationTest ;
+  mf:name "re00905" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7421> ;
+  mf:action [ qt:query <re00905.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00906> a mf:QueryEvaluationTest ;
+  mf:name "re00906" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7429> ;
+  mf:action [ qt:query <re00906.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00907> a mf:QueryEvaluationTest ;
+  mf:name "re00907" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7437> ;
+  mf:action [ qt:query <re00907.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00908> a mf:QueryEvaluationTest ;
+  mf:name "re00908" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7445> ;
+  mf:action [ qt:query <re00908.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00909> a mf:QueryEvaluationTest ;
+  mf:name "re00909" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7453> ;
+  mf:action [ qt:query <re00909.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00910> a mf:QueryEvaluationTest ;
+  mf:name "re00910" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7461> ;
+  mf:action [ qt:query <re00910.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00911> a mf:QueryEvaluationTest ;
+  mf:name "re00911" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7469> ;
+  mf:action [ qt:query <re00911.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00912> a mf:QueryEvaluationTest ;
+  mf:name "re00912" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7477> ;
+  mf:action [ qt:query <re00912.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00913> a mf:QueryEvaluationTest ;
+  mf:name "re00913" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7485> ;
+  mf:action [ qt:query <re00913.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00914> a mf:QueryEvaluationTest ;
+  mf:name "re00914" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7493> ;
+  mf:action [ qt:query <re00914.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00915> a mf:QueryEvaluationTest ;
+  mf:name "re00915" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7501> ;
+  mf:action [ qt:query <re00915.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00916> a mf:QueryEvaluationTest ;
+  mf:name "re00916" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7509> ;
+  mf:action [ qt:query <re00916.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00917> a mf:QueryEvaluationTest ;
+  mf:name "re00917" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7517> ;
+  mf:action [ qt:query <re00917.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00918> a mf:QueryEvaluationTest ;
+  mf:name "re00918" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7525> ;
+  mf:action [ qt:query <re00918.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00919> a mf:QueryEvaluationTest ;
+  mf:name "re00919" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7533> ;
+  mf:action [ qt:query <re00919.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00920> a mf:QueryEvaluationTest ;
+  mf:name "re00920" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7541> ;
+  mf:action [ qt:query <re00920.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00921> a mf:QueryEvaluationTest ;
+  mf:name "re00921" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7549> ;
+  mf:action [ qt:query <re00921.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00922> a mf:QueryEvaluationTest ;
+  mf:name "re00922" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7557> ;
+  mf:action [ qt:query <re00922.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00923> a mf:QueryEvaluationTest ;
+  mf:name "re00923" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7565> ;
+  mf:action [ qt:query <re00923.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00924> a mf:QueryEvaluationTest ;
+  mf:name "re00924" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7573> ;
+  mf:action [ qt:query <re00924.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00925> a mf:QueryEvaluationTest ;
+  mf:name "re00925" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7581> ;
+  mf:action [ qt:query <re00925.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00926> a mf:QueryEvaluationTest ;
+  mf:name "re00926" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7589> ;
+  mf:action [ qt:query <re00926.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00927> a mf:QueryEvaluationTest ;
+  mf:name "re00927" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7597> ;
+  mf:action [ qt:query <re00927.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00928> a mf:QueryEvaluationTest ;
+  mf:name "re00928" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7605> ;
+  mf:action [ qt:query <re00928.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00929> a mf:QueryEvaluationTest ;
+  mf:name "re00929" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7613> ;
+  mf:action [ qt:query <re00929.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00930> a mf:QueryEvaluationTest ;
+  mf:name "re00930" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7621> ;
+  mf:action [ qt:query <re00930.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00931> a mf:QueryEvaluationTest ;
+  mf:name "re00931" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7629> ;
+  mf:action [ qt:query <re00931.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00937> a mf:QueryEvaluationTest ;
+  mf:name "re00937" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7677> ;
+  mf:action [ qt:query <re00937.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00938> a mf:QueryEvaluationTest ;
+  mf:name "re00938" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7685> ;
+  mf:action [ qt:query <re00938.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00939> a mf:QueryEvaluationTest ;
+  mf:name "re00939" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7693> ;
+  mf:action [ qt:query <re00939.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00940> a mf:QueryEvaluationTest ;
+  mf:name "re00940" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7701> ;
+  mf:action [ qt:query <re00940.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00941> a mf:QueryEvaluationTest ;
+  mf:name "re00941" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7709> ;
+  mf:action [ qt:query <re00941.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00956> a mf:QueryEvaluationTest ;
+  mf:name "re00956" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7829> ;
+  mf:action [ qt:query <re00956.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00958> a mf:QueryEvaluationTest ;
+  mf:name "re00958" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7846> ;
+  mf:action [ qt:query <re00958.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00959> a mf:QueryEvaluationTest ;
+  mf:name "re00959" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7854> ;
+  mf:action [ qt:query <re00959.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00960> a mf:QueryEvaluationTest ;
+  mf:name "re00960" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7862> ;
+  mf:action [ qt:query <re00960.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00961> a mf:QueryEvaluationTest ;
+  mf:name "re00961" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7870> ;
+  mf:action [ qt:query <re00961.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00962> a mf:QueryEvaluationTest ;
+  mf:name "re00962" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7878> ;
+  mf:action [ qt:query <re00962.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00963> a mf:QueryEvaluationTest ;
+  mf:name "re00963" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7886> ;
+  mf:action [ qt:query <re00963.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00964> a mf:QueryEvaluationTest ;
+  mf:name "re00964" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7894> ;
+  mf:action [ qt:query <re00964.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00965> a mf:QueryEvaluationTest ;
+  mf:name "re00965" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7902> ;
+  mf:action [ qt:query <re00965.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00966> a mf:QueryEvaluationTest ;
+  mf:name "re00966" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7910> ;
+  mf:action [ qt:query <re00966.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00967> a mf:QueryEvaluationTest ;
+  mf:name "re00967" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7918> ;
+  mf:action [ qt:query <re00967.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00968> a mf:QueryEvaluationTest ;
+  mf:name "re00968" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7926> ;
+  mf:action [ qt:query <re00968.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00969> a mf:QueryEvaluationTest ;
+  mf:name "re00969" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7934> ;
+  mf:action [ qt:query <re00969.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00970> a mf:QueryEvaluationTest ;
+  mf:name "re00970" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7942> ;
+  mf:action [ qt:query <re00970.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00971> a mf:QueryEvaluationTest ;
+  mf:name "re00971" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L7950> ;
+  mf:action [ qt:query <re00971.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00977> a mf:QueryEvaluationTest ;
+  mf:name "re00977" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8034> ;
+  mf:action [ qt:query <re00977.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00978> a mf:QueryEvaluationTest ;
+  mf:name "re00978" ;
+  rdfs:comment "Test regex syntax" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8042> ;
+  mf:action [ qt:query <re00978.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00988> a mf:QueryEvaluationTest ;
+  mf:name "re00988" ;
+  rdfs:comment "Test regex syntax: invalid subtraction" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8151> ;
+  mf:action [ qt:query <re00988.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00989> a mf:QueryEvaluationTest ;
+  mf:name "re00989" ;
+  rdfs:comment "Test regex syntax: invalid subtraction" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8159> ;
+  mf:action [ qt:query <re00989.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00995> a mf:QueryEvaluationTest ;
+  mf:name "re00995" ;
+  rdfs:comment "Invalid single-digit Backreference" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8207> ;
+  mf:action [ qt:query <re00995.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00996> a mf:QueryEvaluationTest ;
+  mf:name "re00996" ;
+  rdfs:comment "Invalid single-digit Backreference" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8215> ;
+  mf:action [ qt:query <re00996.rq> ] ;
+  mf:result <../true.srj> .
+
+<#re00997> a mf:QueryEvaluationTest ;
+  mf:name "re00997" ;
+  rdfs:comment "Invalid two-digit Backreference" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8223> ;
+  mf:action [ qt:query <re00997.rq> ] ;
+  mf:result <../true.srj> .

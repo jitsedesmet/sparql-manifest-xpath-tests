@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set prod-OrExpr" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#op-logical-and-038>
     <#op-logical-and-039>
@@ -33,9 +35,7 @@
     <#op-logical-and-063>
     <#op-logical-and-064>
     <#op-logical-and-065>
-    <#op-logical-and-066>
     <#op-logical-and-067>
-    <#op-logical-and-068>
     <#op-logical-and-069>
     <#op-logical-and-070>
     <#op-logical-and-071>
@@ -96,9 +96,7 @@
     <#op-logical-or-063>
     <#op-logical-or-064>
     <#op-logical-or-065>
-    <#op-logical-or-066>
     <#op-logical-or-067>
-    <#op-logical-or-068>
     <#op-logical-or-069>
     <#op-logical-or-070>
     <#op-logical-or-071>
@@ -122,783 +120,755 @@
 <#op-logical-and-038> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-038" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L389> ;
   mf:action [ qt:query <op-logical-and-038.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-039> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-039" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L399> ;
   mf:action [ qt:query <op-logical-and-039.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-040> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-040" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L409> ;
   mf:action [ qt:query <op-logical-and-040.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-041> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-041" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L419> ;
   mf:action [ qt:query <op-logical-and-041.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-042> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-042" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L429> ;
   mf:action [ qt:query <op-logical-and-042.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-043> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-043" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L439> ;
   mf:action [ qt:query <op-logical-and-043.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-044> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-044" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L449> ;
   mf:action [ qt:query <op-logical-and-044.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-045> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-045" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L459> ;
   mf:action [ qt:query <op-logical-and-045.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-046> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-046" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L469> ;
   mf:action [ qt:query <op-logical-and-046.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-047> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-047" ;
   rdfs:comment "Logical 'and' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L479> ;
   mf:action [ qt:query <op-logical-and-047.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-048> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-048" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L489> ;
   mf:action [ qt:query <op-logical-and-048.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-049> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-049" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L499> ;
   mf:action [ qt:query <op-logical-and-049.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-050> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-050" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L509> ;
   mf:action [ qt:query <op-logical-and-050.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-051> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-051" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L519> ;
   mf:action [ qt:query <op-logical-and-051.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-052> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-052" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L529> ;
   mf:action [ qt:query <op-logical-and-052.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-053> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-053" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L539> ;
   mf:action [ qt:query <op-logical-and-053.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-054> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-054" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L549> ;
   mf:action [ qt:query <op-logical-and-054.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-055> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-055" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L559> ;
   mf:action [ qt:query <op-logical-and-055.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-056> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-056" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L569> ;
   mf:action [ qt:query <op-logical-and-056.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-057> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-057" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L579> ;
   mf:action [ qt:query <op-logical-and-057.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-058> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-058" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L589> ;
   mf:action [ qt:query <op-logical-and-058.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-059> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-059" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L599> ;
   mf:action [ qt:query <op-logical-and-059.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-060> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-060" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L609> ;
   mf:action [ qt:query <op-logical-and-060.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-061> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-061" ;
   rdfs:comment "Logical 'and' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L619> ;
   mf:action [ qt:query <op-logical-and-061.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-062> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-062" ;
   rdfs:comment "Logical 'and' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L629> ;
   mf:action [ qt:query <op-logical-and-062.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-063> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-063" ;
   rdfs:comment "Logical 'and' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L639> ;
   mf:action [ qt:query <op-logical-and-063.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-064> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-064" ;
   rdfs:comment "Logical 'and' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L649> ;
   mf:action [ qt:query <op-logical-and-064.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-065> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-065" ;
   rdfs:comment "Logical 'and' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L659> ;
   mf:action [ qt:query <op-logical-and-065.rq> ] ;
-  mf:result <../true.srj> .
-
-<#op-logical-and-066> a mf:QueryEvaluationTest ;
-  mf:name "op-logical-and-066" ;
-  rdfs:comment "Logical 'and' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
-  mf:action [ qt:query <op-logical-and-066.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-067> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-067" ;
   rdfs:comment "Logical 'and' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L682> ;
   mf:action [ qt:query <op-logical-and-067.rq> ] ;
-  mf:result <../true.srj> .
-
-<#op-logical-and-068> a mf:QueryEvaluationTest ;
-  mf:name "op-logical-and-068" ;
-  rdfs:comment "Logical 'and' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
-  mf:action [ qt:query <op-logical-and-068.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-069> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-069" ;
   rdfs:comment "Logical 'and' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L705> ;
   mf:action [ qt:query <op-logical-and-069.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-070> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-070" ;
   rdfs:comment "Logical 'and' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L715> ;
   mf:action [ qt:query <op-logical-and-070.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-071> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-071" ;
   rdfs:comment "Logical 'and' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L725> ;
   mf:action [ qt:query <op-logical-and-071.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-072> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-072" ;
   rdfs:comment "Logical 'and' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L735> ;
   mf:action [ qt:query <op-logical-and-072.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-073> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-073" ;
   rdfs:comment "Logical 'and' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L745> ;
   mf:action [ qt:query <op-logical-and-073.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-074> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-074" ;
   rdfs:comment "Logical 'and' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L755> ;
   mf:action [ qt:query <op-logical-and-074.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-and-075> a mf:QueryEvaluationTest ;
   mf:name "op-logical-and-075" ;
   rdfs:comment "Logical 'and' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L765> ;
   mf:action [ qt:query <op-logical-and-075.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-001> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-001" ;
   rdfs:comment "Logical 'or' using boolean values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1615> ;
   mf:action [ qt:query <op-logical-or-001.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-002> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-002" ;
   rdfs:comment "Logical 'or' using boolean values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1625> ;
   mf:action [ qt:query <op-logical-or-002.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-003> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-003" ;
   rdfs:comment "Logical 'or' using boolean values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1635> ;
   mf:action [ qt:query <op-logical-or-003.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-004> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-004" ;
   rdfs:comment "Logical 'or' using boolean values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1645> ;
   mf:action [ qt:query <op-logical-or-004.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-008> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-008" ;
   rdfs:comment "Logical 'or' using sequences values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1685> ;
   mf:action [ qt:query <op-logical-or-008.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-011> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-011" ;
   rdfs:comment "Logical 'or' using sequences values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1715> ;
   mf:action [ qt:query <op-logical-or-011.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-012> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-012" ;
   rdfs:comment "Logical 'or' using sequences values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1725> ;
   mf:action [ qt:query <op-logical-or-012.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-013> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-013" ;
   rdfs:comment "Logical 'or' using sequences values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1735> ;
   mf:action [ qt:query <op-logical-or-013.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-017> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-017" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1778> ;
   mf:action [ qt:query <op-logical-or-017.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-018> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-018" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1788> ;
   mf:action [ qt:query <op-logical-or-018.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-019> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-019" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1798> ;
   mf:action [ qt:query <op-logical-or-019.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-020> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-020" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1808> ;
   mf:action [ qt:query <op-logical-or-020.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-021> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-021" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1818> ;
   mf:action [ qt:query <op-logical-or-021.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-022> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-022" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1828> ;
   mf:action [ qt:query <op-logical-or-022.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-023> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-023" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1838> ;
   mf:action [ qt:query <op-logical-or-023.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-024> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-024" ;
   rdfs:comment "Logical 'or' using string values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1848> ;
   mf:action [ qt:query <op-logical-or-024.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-029> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-029" ;
   rdfs:comment "Logical 'or' using number values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1898> ;
   mf:action [ qt:query <op-logical-or-029.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-030> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-030" ;
   rdfs:comment "Logical 'or' using number values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1908> ;
   mf:action [ qt:query <op-logical-or-030.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-031> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-031" ;
   rdfs:comment "Logical 'or' using number values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1918> ;
   mf:action [ qt:query <op-logical-or-031.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-032> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-032" ;
   rdfs:comment "Logical 'or' using number values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1928> ;
   mf:action [ qt:query <op-logical-or-032.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-033> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-033" ;
   rdfs:comment "Logical 'or' using number values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1938> ;
   mf:action [ qt:query <op-logical-or-033.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-034> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-034" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1948> ;
   mf:action [ qt:query <op-logical-or-034.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-035> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-035" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1958> ;
   mf:action [ qt:query <op-logical-or-035.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-036> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-036" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1968> ;
   mf:action [ qt:query <op-logical-or-036.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-037> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-037" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1978> ;
   mf:action [ qt:query <op-logical-or-037.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-038> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-038" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1988> ;
   mf:action [ qt:query <op-logical-or-038.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-039> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-039" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L1998> ;
   mf:action [ qt:query <op-logical-or-039.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-040> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-040" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2008> ;
   mf:action [ qt:query <op-logical-or-040.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-041> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-041" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2018> ;
   mf:action [ qt:query <op-logical-or-041.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-042> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-042" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2028> ;
   mf:action [ qt:query <op-logical-or-042.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-043> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-043" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2038> ;
   mf:action [ qt:query <op-logical-or-043.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-044> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-044" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2048> ;
   mf:action [ qt:query <op-logical-or-044.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-045> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-045" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2058> ;
   mf:action [ qt:query <op-logical-or-045.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-046> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-046" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2068> ;
   mf:action [ qt:query <op-logical-or-046.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-047> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-047" ;
   rdfs:comment "Logical 'or' using float values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2078> ;
   mf:action [ qt:query <op-logical-or-047.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-048> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-048" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2088> ;
   mf:action [ qt:query <op-logical-or-048.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-049> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-049" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2098> ;
   mf:action [ qt:query <op-logical-or-049.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-050> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-050" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2108> ;
   mf:action [ qt:query <op-logical-or-050.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-051> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-051" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2118> ;
   mf:action [ qt:query <op-logical-or-051.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-052> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-052" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2128> ;
   mf:action [ qt:query <op-logical-or-052.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-053> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-053" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2138> ;
   mf:action [ qt:query <op-logical-or-053.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-054> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-054" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2148> ;
   mf:action [ qt:query <op-logical-or-054.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-055> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-055" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2158> ;
   mf:action [ qt:query <op-logical-or-055.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-056> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-056" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2168> ;
   mf:action [ qt:query <op-logical-or-056.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-057> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-057" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2178> ;
   mf:action [ qt:query <op-logical-or-057.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-058> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-058" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2188> ;
   mf:action [ qt:query <op-logical-or-058.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-059> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-059" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2198> ;
   mf:action [ qt:query <op-logical-or-059.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-060> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-060" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2208> ;
   mf:action [ qt:query <op-logical-or-060.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-061> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-061" ;
   rdfs:comment "Logical 'or' using double values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2218> ;
   mf:action [ qt:query <op-logical-or-061.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-062> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-062" ;
   rdfs:comment "Logical 'or' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2228> ;
   mf:action [ qt:query <op-logical-or-062.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-063> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-063" ;
   rdfs:comment "Logical 'or' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2238> ;
   mf:action [ qt:query <op-logical-or-063.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-064> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-064" ;
   rdfs:comment "Logical 'or' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2248> ;
   mf:action [ qt:query <op-logical-or-064.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-065> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-065" ;
   rdfs:comment "Logical 'or' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2258> ;
   mf:action [ qt:query <op-logical-or-065.rq> ] ;
-  mf:result <../true.srj> .
-
-<#op-logical-or-066> a mf:QueryEvaluationTest ;
-  mf:name "op-logical-or-066" ;
-  rdfs:comment "Logical 'or' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
-  mf:action [ qt:query <op-logical-or-066.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-067> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-067" ;
   rdfs:comment "Logical 'or' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2281> ;
   mf:action [ qt:query <op-logical-or-067.rq> ] ;
-  mf:result <../true.srj> .
-
-<#op-logical-or-068> a mf:QueryEvaluationTest ;
-  mf:name "op-logical-or-068" ;
-  rdfs:comment "Logical 'or' using decimal values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
-  mf:action [ qt:query <op-logical-or-068.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-069> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-069" ;
   rdfs:comment "Logical 'or' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2304> ;
   mf:action [ qt:query <op-logical-or-069.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-070> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-070" ;
   rdfs:comment "Logical 'or' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2314> ;
   mf:action [ qt:query <op-logical-or-070.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-071> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-071" ;
   rdfs:comment "Logical 'or' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2324> ;
   mf:action [ qt:query <op-logical-or-071.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-072> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-072" ;
   rdfs:comment "Logical 'or' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2334> ;
   mf:action [ qt:query <op-logical-or-072.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-073> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-073" ;
   rdfs:comment "Logical 'or' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2344> ;
   mf:action [ qt:query <op-logical-or-073.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-074> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-074" ;
   rdfs:comment "Logical 'or' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2354> ;
   mf:action [ qt:query <op-logical-or-074.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-logical-or-075> a mf:QueryEvaluationTest ;
   mf:name "op-logical-or-075" ;
   rdfs:comment "Logical 'or' using integer values" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2364> ;
   mf:action [ qt:query <op-logical-or-075.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-1> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-1" ;
   rdfs:comment "A test whose essence is: `not(\"\" or 0)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3214> ;
   mf:action [ qt:query <K-LogicExpr-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-2> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-2" ;
   rdfs:comment "A test whose essence is: `not(0 or 0)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3223> ;
   mf:action [ qt:query <K-LogicExpr-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-3> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-3" ;
   rdfs:comment "A test whose essence is: `not(0 or 0)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3232> ;
   mf:action [ qt:query <K-LogicExpr-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-4> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-4" ;
   rdfs:comment "A test whose essence is: `not(\"\" or 0)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3241> ;
   mf:action [ qt:query <K-LogicExpr-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-5> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-5" ;
   rdfs:comment "A test whose essence is: `1 or 1`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3250> ;
   mf:action [ qt:query <K-LogicExpr-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-6> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-6" ;
   rdfs:comment "A test whose essence is: `1 or 0`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3259> ;
   mf:action [ qt:query <K-LogicExpr-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-7> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-7" ;
   rdfs:comment "A test whose essence is: `1 or 5`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3268> ;
   mf:action [ qt:query <K-LogicExpr-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-28> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-28" ;
   rdfs:comment "A test whose essence is: `not(\"\" and 0)`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3457> ;
   mf:action [ qt:query <K-LogicExpr-28.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-29> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-29" ;
   rdfs:comment "A test whose essence is: `1 and 1`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3466> ;
   mf:action [ qt:query <K-LogicExpr-29.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-30> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-30" ;
   rdfs:comment "A test whose essence is: `10.3 and \"non-zero length string\"`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3475> ;
   mf:action [ qt:query <K-LogicExpr-30.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-LogicExpr-31> a mf:QueryEvaluationTest ;
   mf:name "K-LogicExpr-31" ;
   rdfs:comment "A test whose essence is: `1 and 5`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L3484> ;
   mf:action [ qt:query <K-LogicExpr-31.rq> ] ;
   mf:result <../true.srj> .

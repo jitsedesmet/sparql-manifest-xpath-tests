@@ -1,0 +1,7 @@
+# QT3 test case re00732 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:([^0-9-[a-zAE-Z]]|[\w-[a-zAF-Z]])+)$')) and (every $s in tokenize('azBCDE1234567890BCDEFza', ',') satisfies not(matches($s, '^(?:([^0-9-[a-zAE-Z]]|[\w-[a-zAF-Z]])+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6036
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ! REGEX( "azBCDE1234567890BCDEFza" , "^(?:([^0-9-[a-zAE-Z]]|[\\w-[a-zAF-Z]])+)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

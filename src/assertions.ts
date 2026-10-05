@@ -99,6 +99,39 @@ function normalizeSpace(expression: Expression): Expression {
 }
 
 /**
+ * Evaluate the SPARQL expression of an assertion for an unbound ?result, as when the test errors,
+ * following the treatment of errors by the logical operators of SPARQL.
+ * Any other expression over ?result is an error then.
+ * @returns The value, or undefined for an error.
+ */
+function valueWhenUnbound(expression: Expression): boolean | undefined {
+  if (!F.isExpressionOperator(expression)) {
+    return undefined;
+  }
+  const values = (expression.args as Expression[]).map(valueWhenUnbound);
+  switch (expression.operator) {
+    case 'bound':
+      return false;
+    case '!':
+      return values[0] === undefined ? undefined : !values[0];
+    case '&&':
+      return values.includes(false) ? false : (values.includes(undefined) ? undefined : true);
+    case '||':
+      return values.includes(true) ? true : (values.includes(undefined) ? undefined : false);
+    default:
+      return undefined;
+  }
+}
+
+/**
+ * Determine whether the SPARQL expression of an assertion is satisfied when the test errors,
+ * so that the test also passes on an engine that fails for another reason.
+ */
+export function acceptsError(assertion: Expression): boolean {
+  return valueWhenUnbound(assertion) === true;
+}
+
+/**
  * Translate an assertion of the test suite into a SPARQL expression over ?result, the result of the test,
  * which is true if the result satisfies the assertion. An error of the test leaves ?result unbound.
  * @param assertion The assertion element.
@@ -133,7 +166,8 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
     case 'assert-string-value': {
       const actual = F.expressionFunctionCall(F.termNamed(F.gen(), `${XSD}string`), [ result ], false, F.gen());
       return assertion.getAttribute('normalize-space') === 'true' ?
-        operation('=', normalizeSpace(actual), string(assertion.textContent!.replaceAll(/\s+/gu, ' ').trim())) :
+        operation('=', normalizeSpace(actual), string(assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ')
+          .replace(/^ | $/gu, ''))) :
         operation('=', actual, string(assertion.textContent!));
     }
     case 'assert-type': {

@@ -1,9 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
   rdfs:label "QT3 test set fn-seconds-from-dateTime" ;
+  dct:license <../LICENSE.txt> ;
   mf:entries (
     <#fn-seconds-from-dateTime1args-1>
     <#fn-seconds-from-dateTime1args-2>
@@ -29,132 +31,132 @@
 <#fn-seconds-from-dateTime1args-1> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime1args-1" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function with the arguments set as follows: $arg = xs:dateTime(lower bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L8> ;
   mf:action [ qt:query <fn-seconds-from-dateTime1args-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime1args-2> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime1args-2" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function with the arguments set as follows: $arg = xs:dateTime(mid range)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L17> ;
   mf:action [ qt:query <fn-seconds-from-dateTime1args-2.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime1args-3> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime1args-3" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function with the arguments set as follows: $arg = xs:dateTime(upper bound)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L26> ;
   mf:action [ qt:query <fn-seconds-from-dateTime1args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-1> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-1" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function As per example 1 of the F&O specs." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L35> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-3> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-3" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function involving a \"numeric-less-than\" operation (lt operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L53> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-4> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-4" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function involving a \"numeric-less-than\" operation (le operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L62> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-4.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-6> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-6" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function that returns 0." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L80> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-6.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-7> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-7" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function that returns 59." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L89> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-7.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-8> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-8" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"+\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L98> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-8.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-9> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-9" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"-\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L107> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-9.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-10> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-10" ;
   rdfs:comment "Evaluates The \"secondss-from-dateTime\" function as part of a \"*\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L116> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-10.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-11> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-11" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"div\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L125> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-11.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-14> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-14" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"numeric-unary-plus\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L152> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-14.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-15> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-15" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"numeric-unary-minus\" expression." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L161> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-15.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-16> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-16" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"numeric-equal\" expression (eq operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L170> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-16.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-17> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-17" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"numeric-equal\" expression (ne operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L179> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-17.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-18> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-18" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"numeric-equal\" expression (le operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L188> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-18.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-seconds-from-dateTime-19> a mf:QueryEvaluationTest ;
   mf:name "fn-seconds-from-dateTime-19" ;
   rdfs:comment "Evaluates The \"seconds-from-dateTime\" function as part of a \"numeric-equal\" expression (ge operator)" ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L197> ;
   mf:action [ qt:query <fn-seconds-from-dateTime-19.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SecondsFromDateTimeFunc-5> a mf:QueryEvaluationTest ;
   mf:name "K-SecondsFromDateTimeFunc-5" ;
   rdfs:comment "A test whose essence is: `seconds-from-dateTime(xs:dateTime(\"2001-02-03T08:23:12.43\")) eq 12.43`." ;
-  rdfs:seeAlso <https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml> ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L242> ;
   mf:action [ qt:query <K-SecondsFromDateTimeFunc-5.rq> ] ;
   mf:result <../true.srj> .
