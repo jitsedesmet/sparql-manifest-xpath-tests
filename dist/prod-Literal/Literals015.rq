@@ -1,0 +1,7 @@
+# QT3 test case Literals015 of test set prod-Literal, which tests the XPath expression
+#   +.65535032
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L139
+ASK {
+  BIND(+ ".65535032"^^<http://www.w3.org/2001/XMLSchema#decimal> AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0.65535032" ))
+}

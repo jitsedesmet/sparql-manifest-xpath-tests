@@ -1,0 +1,8 @@
+# QT3 test case re00502 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('a*a**a***,aa*a', ',') satisfies matches($s, '^(?:\c\C?\c\C+\c\C*)$'))
+#   and (every $s in tokenize(',a12b1c1,ab12345,1a2a2,a1b1c1a', ',') satisfies not(matches($s, '^(?:\c\C?\c\C+\c\C*)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4193
+ASK {
+  BIND(( ( REGEX( "a*a**a***" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) && REGEX( "aa*a" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ( ( ( ( ! REGEX( "" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) && ! REGEX( "a12b1c1" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ! REGEX( "ab12345" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ! REGEX( "1a2a2" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ! REGEX( "a1b1c1a" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,72 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "The W3C XQuery and XPath Test Suite (QT3) as SPARQL query evaluation tests" ;
+  dct:license <LICENSE.txt> ;
+  rdfs:comment "Generated from https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/catalog.xml" ;
+  mf:include (
+    <fn-abs/manifest.ttl>
+    <fn-boolean/manifest.ttl>
+    <fn-ceiling/manifest.ttl>
+    <fn-concat/manifest.ttl>
+    <fn-contains/manifest.ttl>
+    <fn-day-from-dateTime/manifest.ttl>
+    <fn-encode-for-uri/manifest.ttl>
+    <fn-ends-with/manifest.ttl>
+    <fn-false/manifest.ttl>
+    <fn-floor/manifest.ttl>
+    <fn-hours-from-dateTime/manifest.ttl>
+    <fn-lower-case/manifest.ttl>
+    <fn-matches/manifest.ttl>
+    <fn-matches.re/manifest.ttl>
+    <fn-minutes-from-dateTime/manifest.ttl>
+    <fn-month-from-dateTime/manifest.ttl>
+    <fn-not/manifest.ttl>
+    <fn-replace/manifest.ttl>
+    <fn-round/manifest.ttl>
+    <fn-seconds-from-dateTime/manifest.ttl>
+    <fn-starts-with/manifest.ttl>
+    <fn-string/manifest.ttl>
+    <fn-string-length/manifest.ttl>
+    <fn-substring/manifest.ttl>
+    <fn-substring-after/manifest.ttl>
+    <fn-substring-before/manifest.ttl>
+    <fn-true/manifest.ttl>
+    <fn-upper-case/manifest.ttl>
+    <fn-year-from-dateTime/manifest.ttl>
+    <xs-double/manifest.ttl>
+    <xs-float/manifest.ttl>
+    <op-boolean-equal/manifest.ttl>
+    <op-boolean-greater-than/manifest.ttl>
+    <op-boolean-less-than/manifest.ttl>
+    <op-dateTime-equal/manifest.ttl>
+    <op-dateTime-greater-than/manifest.ttl>
+    <op-dateTime-less-than/manifest.ttl>
+    <op-numeric-add/manifest.ttl>
+    <op-numeric-equal/manifest.ttl>
+    <op-numeric-divide/manifest.ttl>
+    <op-numeric-greater-than/manifest.ttl>
+    <op-numeric-less-than/manifest.ttl>
+    <op-numeric-multiply/manifest.ttl>
+    <op-numeric-subtract/manifest.ttl>
+    <op-numeric-unary-minus/manifest.ttl>
+    <op-numeric-unary-plus/manifest.ttl>
+    <op-string-equal/manifest.ttl>
+    <op-string-greater-than/manifest.ttl>
+    <op-string-less-than/manifest.ttl>
+    <prod-CastExpr/manifest.ttl>
+    <prod-GeneralComp.eq/manifest.ttl>
+    <prod-GeneralComp.ge/manifest.ttl>
+    <prod-GeneralComp.gt/manifest.ttl>
+    <prod-GeneralComp.le/manifest.ttl>
+    <prod-GeneralComp.lt/manifest.ttl>
+    <prod-GeneralComp.ne/manifest.ttl>
+    <prod-IfExpr/manifest.ttl>
+    <prod-Literal/manifest.ttl>
+    <prod-OrExpr/manifest.ttl>
+    <prod-ParenthesizedExpr/manifest.ttl>
+    <prod-ValueComp/manifest.ttl>
+  ) .

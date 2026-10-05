@@ -1,0 +1,98 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-substring-after" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-substring-after-8>
+    <#fn-substring-after-11>
+    <#fn-substring-after-12>
+    <#fn-substring-after-18>
+    <#fn-substring-after-19>
+    <#fn-substring-after-20>
+    <#fn-substring-after-25>
+    <#K-SubstringAfterFunc-6>
+    <#K-SubstringAfterFunc-7>
+    <#K-SubstringAfterFunc-8>
+    <#K-SubstringAfterFunc-11>
+  ) .
+
+<#fn-substring-after-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-after-8" ;
+  rdfs:comment "Evaluates The \"substring-after\" function with the arguments set as follows: $arg1 = \"AAAAABBBBBCCCCC\" $arg2 = \"BBBBB\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L91> ;
+  mf:action [ qt:query <fn-substring-after-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-after-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-after-11" ;
+  rdfs:comment "Evaluates The \"substring-after\" function using it as a argument of a fn:not - returns true" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L124> ;
+  mf:action [ qt:query <fn-substring-after-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-after-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-after-12" ;
+  rdfs:comment "Evaluates The \"substring-after\" function using it as a argument of a fn:not - returns true" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L133> ;
+  mf:action [ qt:query <fn-substring-after-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-after-18> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-after-18" ;
+  rdfs:comment "Evaluates The \"substring-after\" function with the arguments set as follows: $arg1 = \"substring-aftersubstring-after\" $arg2 = \"substring-after\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L202> ;
+  mf:action [ qt:query <fn-substring-after-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-after-19> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-after-19" ;
+  rdfs:comment "Evaluates The \"substring-after\" function with the arguments set as follows: $arg1 = \"****\" $arg2 = \"***\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L211> ;
+  mf:action [ qt:query <fn-substring-after-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-after-20> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-after-20" ;
+  rdfs:comment "Evaluates The \"substring-after\" function with the arguments set as follows: $arg1 = \"12345\" $arg2 = \"1234\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L220> ;
+  mf:action [ qt:query <fn-substring-after-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-after-25> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-after-25" ;
+  rdfs:comment "Use non-BMP characters" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L276> ;
+  mf:action [ qt:query <fn-substring-after-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringAfterFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringAfterFunc-6" ;
+  rdfs:comment "A test whose essence is: `substring-after(\"tattoo\", \"tat\") eq \"too\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L530> ;
+  mf:action [ qt:query <K-SubstringAfterFunc-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringAfterFunc-7> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringAfterFunc-7" ;
+  rdfs:comment "A test whose essence is: `substring-after(\"tattoo\", \"tattoo\") eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L539> ;
+  mf:action [ qt:query <K-SubstringAfterFunc-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringAfterFunc-8> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringAfterFunc-8" ;
+  rdfs:comment "A test whose essence is: `substring-after(\"abcdefgedij\", \"def\") eq \"gedij\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L548> ;
+  mf:action [ qt:query <K-SubstringAfterFunc-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringAfterFunc-11> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringAfterFunc-11" ;
+  rdfs:comment "A test whose essence is: `substring-after(\"a string\", \"not in other\") eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-after.xml#L575> ;
+  mf:action [ qt:query <K-SubstringAfterFunc-11.rq> ] ;
+  mf:result <../true.srj> .

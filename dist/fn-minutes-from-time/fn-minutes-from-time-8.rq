@@ -1,0 +1,8 @@
+# QT3 test case fn-minutes-from-time-8 of test set fn-minutes-from-time, which tests the XPath expression
+#   fn:minutes-from-time(xs:time("02:00:00Z")) + fn:minutes-from-time(xs:time("10:00:00Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-time.xml#L97
+# The test needs the constructor function xsd:time, MINUTES on xsd:time, which SPARQL does not define
+ASK {
+  BIND(( MINUTES( <http://www.w3.org/2001/XMLSchema#time> ( "02:00:00Z" ) ) + MINUTES( <http://www.w3.org/2001/XMLSchema#time> ( "10:00:00Z" ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))
+}

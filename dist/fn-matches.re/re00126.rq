@@ -1,0 +1,25 @@
+# QT3 test case re00126 of test set fn-matches.re, which tests the XPath expression
+#   not(matches('', '^(?:\n\na\n\nb\n\n)$')) and
+#   (every $s in tokenize('
+#   
+#   a
+#   
+#   b;
+#   ,
+#   a
+#   
+#   b;
+#   
+#   ,
+#   
+#   a
+#   
+#   b;
+#   
+#   ', ',')
+#   satisfies not(matches($s, '^(?:\n\na\n\nb\n\n)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1064
+ASK {
+  BIND(( ! REGEX( "" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) && ( ( ! REGEX( "\n\na\n\nb;\n" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) && ! REGEX( "\na\n\nb;\n\n" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) ) && ! REGEX( "\n\na\n\nb;\n\n" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

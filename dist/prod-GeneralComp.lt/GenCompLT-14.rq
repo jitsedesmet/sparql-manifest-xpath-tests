@@ -1,0 +1,7 @@
+# QT3 test case GenCompLT-14 of test set prod-GeneralComp.lt, which tests the XPath expression
+#   (true() < true()) < true()
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.lt.xml#L1323
+ASK {
+  BIND(( ( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> < "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) < "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

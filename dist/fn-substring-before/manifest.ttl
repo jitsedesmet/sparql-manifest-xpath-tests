@@ -1,0 +1,74 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-substring-before" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-substring-before-8>
+    <#fn-substring-before-11>
+    <#fn-substring-before-12>
+    <#fn-substring-before-25>
+    <#K-SubstringBeforeFunc-6>
+    <#K-SubstringBeforeFunc-7>
+    <#K-SubstringBeforeFunc-9>
+    <#K-SubstringBeforeFunc-10>
+  ) .
+
+<#fn-substring-before-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-before-8" ;
+  rdfs:comment "fn-substring-before-8 Evaluates The \"substring-before\" function with the arguments set as follows: $arg1 = \"AAAAABBBBBCCCCC\" $arg2 = \"BBBBB\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L91> ;
+  mf:action [ qt:query <fn-substring-before-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-before-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-before-11" ;
+  rdfs:comment "fn-substring-before-11 Evaluates The \"substring-before\" function using it as a argument of a fn:not - returns true" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L124> ;
+  mf:action [ qt:query <fn-substring-before-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-before-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-before-12" ;
+  rdfs:comment "fn-substring-before-12 Evaluates The \"substring-before\" function using it as a argument of a fn:not - returns true" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L133> ;
+  mf:action [ qt:query <fn-substring-before-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-before-25> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-before-25" ;
+  rdfs:comment "Use non-BMP characters" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L287> ;
+  mf:action [ qt:query <fn-substring-before-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringBeforeFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringBeforeFunc-6" ;
+  rdfs:comment "K-SubstringBeforeFunc-6  A test whose essence is: `substring-before(\"tattoo\", \"attoo\") eq \"t\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L542> ;
+  mf:action [ qt:query <K-SubstringBeforeFunc-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringBeforeFunc-7> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringBeforeFunc-7" ;
+  rdfs:comment "K-SubstringBeforeFunc-7  A test whose essence is: `substring-before(\"tattoo\", \"tatto\") eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L551> ;
+  mf:action [ qt:query <K-SubstringBeforeFunc-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringBeforeFunc-9> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringBeforeFunc-9" ;
+  rdfs:comment "K-SubstringBeforeFunc-9  A test whose essence is: `substring-before(\"a string\", \"\") eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L569> ;
+  mf:action [ qt:query <K-SubstringBeforeFunc-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringBeforeFunc-10> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringBeforeFunc-10" ;
+  rdfs:comment "K-SubstringBeforeFunc-10  A test whose essence is: `substring-before(\"a string\", \"not in other\") eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring-before.xml#L578> ;
+  mf:action [ qt:query <K-SubstringBeforeFunc-10.rq> ] ;
+  mf:result <../true.srj> .

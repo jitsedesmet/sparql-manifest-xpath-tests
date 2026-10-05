@@ -1,0 +1,8 @@
+# QT3 test case op-add-dayTimeDuration-to-time-14 of test set op-add-dayTimeDuration-to-time, which tests the XPath expression
+#   (xs:time("04:04:05Z") + xs:dayTimeDuration("P08DT08H05M")) ne xs:time("05:08:02Z")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-time.xml#L294
+# The test needs the constructor function xsd:time, the constructor function xsd:dayTimeDuration, + on xsd:time, + on xsd:dayTimeDuration, != on xsd:time, which SPARQL does not define
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#time> ( "04:04:05Z" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P08DT08H05M" ) ) != <http://www.w3.org/2001/XMLSchema#time> ( "05:08:02Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

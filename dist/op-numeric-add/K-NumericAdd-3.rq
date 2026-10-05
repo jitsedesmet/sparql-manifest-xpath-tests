@@ -1,0 +1,7 @@
+# QT3 test case K-NumericAdd-3 of test set op-numeric-add, which tests the XPath expression
+#   xs:decimal(6.1) + xs:decimal(2.1) eq 8.2
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L671
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#decimal> ( "6.1"^^<http://www.w3.org/2001/XMLSchema#decimal> ) + <http://www.w3.org/2001/XMLSchema#decimal> ( "2.1"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) = "8.2"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,178 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-add-yearMonthDuration-to-dateTime" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-add-yearMonthDuration-to-dateTime2args-1>
+    <#op-add-yearMonthDuration-to-dateTime2args-2>
+    <#op-add-yearMonthDuration-to-dateTime2args-3>
+    <#op-add-yearMonthDuration-to-dateTime2args-4>
+    <#op-add-yearMonthDuration-to-dateTime2args-5>
+    <#op-add-yearMonthDuration-to-dateTime-1>
+    <#op-add-yearMonthDuration-to-dateTime-2>
+    <#op-add-yearMonthDuration-to-dateTime-3>
+    <#op-add-yearMonthDuration-to-dateTime-4>
+    <#op-add-yearMonthDuration-to-dateTimealt-5>
+    <#op-add-yearMonthDuration-to-dateTime-7>
+    <#op-add-yearMonthDuration-to-dateTime-8>
+    <#op-add-yearMonthDuration-to-dateTime-9>
+    <#op-add-yearMonthDuration-to-dateTime-10>
+    <#op-add-yearMonthDuration-to-dateTime-12>
+    <#op-add-yearMonthDuration-to-dateTime-13>
+    <#op-add-yearMonthDuration-to-dateTime-14>
+    <#op-add-yearMonthDuration-to-dateTime-15>
+    <#op-add-yearMonthDuration-to-dateTime-16>
+    <#K-YearMonthDurationAddDT-1>
+    <#K-YearMonthDurationAddDT-2>
+  ) .
+
+<#op-add-yearMonthDuration-to-dateTime2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime2args-1" ;
+  rdfs:comment "Evaluates The \"op:add-yearMonthDuration-to-dateTime\" operator with the arguments set as follows: $arg1 = xs:dateTime(lower bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L10> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime2args-2" ;
+  rdfs:comment "Evaluates The \"op:add-yearMonthDuration-to-dateTime\" operator with the arguments set as follows: $arg1 = xs:dateTime(mid range) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L19> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime2args-3" ;
+  rdfs:comment "Evaluates The \"op:add-yearMonthDuration-to-dateTime\" operator with the arguments set as follows: $arg1 = xs:dateTime(upper bound) $arg2 = xs:yearMonthDuration(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L28> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime2args-4" ;
+  rdfs:comment "Evaluates The \"op:add-yearMonthDuration-to-dateTime\" operator with the arguments set as follows: $arg1 = xs:dateTime(lower bound) $arg2 = xs:yearMonthDuration(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L37> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime2args-5" ;
+  rdfs:comment "Evaluates The \"op:add-yearMonthDuration-to-dateTime\" operator with the arguments set as follows: $arg1 = xs:dateTime(lower bound) $arg2 = xs:yearMonthDuration(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L46> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-1> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-1" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The \"add-yearMonthDuration-to-dateTime\" operator As per example 1 (for this function)of the F&O specs." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L55> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-2> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-2" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The string value of \"add-dayTimeDuration-to-dateTime\" operator used as part of a boolean expression (and operator) and the \"fn:false\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L64> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-3> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-3" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The string value of \"add-yearMonthDuration-to-dateTime\" operator as part of a boolean expression (or operator) and the \"fn:boolean\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L73> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-4> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-4" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The string value of the \"add-yearMonthDuration-to-dateTime\" operator that return true and used together with fn:not." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L82> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTimealt-5> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTimealt-5" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The string value of the \"add-yearMonthDuration-to-dateTime\" operator that is used as an argument to the fn:boolean function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L91> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTimealt-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-7> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-7" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The \"add-yearMonthDuration-to-dateTime\" operator used as an argument to the \"fn:string\" function)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L109> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-8> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-8" ;
+  rdfs:comment "date: July 8, 2005  Evaluates The \"add-yearMonthDuration-to-dateTime\" operator that returns a negative value." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L118> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-9> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-9" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The string value of the \"add-yearMonthDuration-to-dateTime\" operator used together with an \"and\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L130> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-10> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-10" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The string value of the \"add-yearMonthDuration-to-dateTime\" operator used together with an \"or\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L139> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-12> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-12" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The string value of the \"add-yearMonthDuration-to-dateTime\" operator used with a boolean expression and the \"fn:true\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L148> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-13> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-13" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The \"add-yearMonthDuration-to-dateTime\" operator used together with the numeric-equal-operator \"eq\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L157> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-14> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-14" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The \"add-yearMonthDuration-to-dateTime\" operator used together with the numeric-equal operator \"ne\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L166> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-15> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-15" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The \"add-yearMonthDuration-to-dateTime\" operator used together with the numeric-equal operator \"le\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L175> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDuration-to-dateTime-16> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDuration-to-dateTime-16" ;
+  rdfs:comment "date: July 5, 2005  Evaluates The \"add-yearMonthDuration-to-dateTime\" operator used together with the numeric-equal operator \"ge\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L184> ;
+  mf:action [ qt:query <op-add-yearMonthDuration-to-dateTime-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAddDT-1> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAddDT-1" ;
+  rdfs:comment "Simple testing involving operator '+' between xs:dateTime and xs:yearMonthDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L193> ;
+  mf:action [ qt:query <K-YearMonthDurationAddDT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAddDT-2> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAddDT-2" ;
+  rdfs:comment "Simple testing involving operator '+' between xs:yearMonthDuration and xs:dateTime." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L202> ;
+  mf:action [ qt:query <K-YearMonthDurationAddDT-2.rq> ] ;
+  mf:result <../true.srj> .

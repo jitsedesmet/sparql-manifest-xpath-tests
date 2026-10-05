@@ -1,0 +1,570 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-floor" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-floorint1args-1>
+    <#fn-floorint1args-2>
+    <#fn-floorint1args-3>
+    <#fn-floorintg1args-1>
+    <#fn-floorintg1args-2>
+    <#fn-floorintg1args-3>
+    <#fn-floordec1args-1>
+    <#fn-floordec1args-2>
+    <#fn-floordec1args-3>
+    <#fn-floordbl1args-1>
+    <#fn-floordbl1args-2>
+    <#fn-floordbl1args-3>
+    <#fn-floorflt1args-1>
+    <#fn-floorflt1args-2>
+    <#fn-floorflt1args-3>
+    <#fn-floorlng1args-1>
+    <#fn-floorlng1args-2>
+    <#fn-floorlng1args-3>
+    <#fn-floorusht1args-1>
+    <#fn-floorusht1args-2>
+    <#fn-floorusht1args-3>
+    <#fn-floornint1args-1>
+    <#fn-floornint1args-2>
+    <#fn-floornint1args-3>
+    <#fn-floorpint1args-1>
+    <#fn-floorpint1args-2>
+    <#fn-floorpint1args-3>
+    <#fn-floorulng1args-1>
+    <#fn-floorulng1args-2>
+    <#fn-floorulng1args-3>
+    <#fn-floornpi1args-1>
+    <#fn-floornpi1args-2>
+    <#fn-floornpi1args-3>
+    <#fn-floornni1args-1>
+    <#fn-floornni1args-2>
+    <#fn-floornni1args-3>
+    <#fn-floorsht1args-1>
+    <#fn-floorsht1args-2>
+    <#fn-floorsht1args-3>
+    <#K-FloorFunc-4>
+    <#K-FloorFunc-5>
+    <#fn-floor-decimal-1>
+    <#fn-floor-decimal-2>
+    <#fn-floor-decimal-3>
+    <#fn-floor-decimal-4>
+    <#fn-floor-decimal-5>
+    <#fn-floor-decimal-6>
+    <#fn-floor-decimal-7>
+    <#fn-floor-double-1>
+    <#fn-floor-double-2>
+    <#fn-floor-double-3>
+    <#fn-floor-double-4>
+    <#fn-floor-double-5>
+    <#fn-floor-double-6>
+    <#fn-floor-double-7>
+    <#fn-floor-double-8>
+    <#fn-floor-double-9>
+    <#fn-floor-double-10>
+    <#fn-floor-double-11>
+    <#fn-floor-float-1>
+    <#fn-floor-float-2>
+    <#fn-floor-float-3>
+    <#fn-floor-float-4>
+    <#fn-floor-float-5>
+    <#fn-floor-float-6>
+    <#fn-floor-float-7>
+    <#fn-floor-float-8>
+    <#fn-floor-float-9>
+    <#fn-floor-float-10>
+    <#fn-floor-float-11>
+  ) .
+
+<#fn-floorint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorint1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L26> ;
+  mf:action [ qt:query <fn-floorint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorint1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:int(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L36> ;
+  mf:action [ qt:query <fn-floorint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorint1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L46> ;
+  mf:action [ qt:query <fn-floorint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorintg1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L56> ;
+  mf:action [ qt:query <fn-floorintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorintg1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L66> ;
+  mf:action [ qt:query <fn-floorintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorintg1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L76> ;
+  mf:action [ qt:query <fn-floorintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floordec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floordec1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L86> ;
+  mf:action [ qt:query <fn-floordec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floordec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floordec1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L96> ;
+  mf:action [ qt:query <fn-floordec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floordec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floordec1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L106> ;
+  mf:action [ qt:query <fn-floordec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floordbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floordbl1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L116> ;
+  mf:action [ qt:query <fn-floordbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floordbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floordbl1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:double(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L126> ;
+  mf:action [ qt:query <fn-floordbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floordbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floordbl1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L136> ;
+  mf:action [ qt:query <fn-floordbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorflt1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L146> ;
+  mf:action [ qt:query <fn-floorflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorflt1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:float(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L156> ;
+  mf:action [ qt:query <fn-floorflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorflt1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L166> ;
+  mf:action [ qt:query <fn-floorflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorlng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorlng1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L176> ;
+  mf:action [ qt:query <fn-floorlng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorlng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorlng1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L186> ;
+  mf:action [ qt:query <fn-floorlng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorlng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorlng1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L196> ;
+  mf:action [ qt:query <fn-floorlng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorusht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorusht1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L206> ;
+  mf:action [ qt:query <fn-floorusht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorusht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorusht1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L216> ;
+  mf:action [ qt:query <fn-floorusht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorusht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorusht1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L226> ;
+  mf:action [ qt:query <fn-floorusht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornint1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L236> ;
+  mf:action [ qt:query <fn-floornint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornint1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L246> ;
+  mf:action [ qt:query <fn-floornint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornint1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L256> ;
+  mf:action [ qt:query <fn-floornint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorpint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorpint1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L266> ;
+  mf:action [ qt:query <fn-floorpint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorpint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorpint1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L276> ;
+  mf:action [ qt:query <fn-floorpint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorpint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorpint1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L286> ;
+  mf:action [ qt:query <fn-floorpint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorulng1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L296> ;
+  mf:action [ qt:query <fn-floorulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorulng1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L306> ;
+  mf:action [ qt:query <fn-floorulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorulng1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L316> ;
+  mf:action [ qt:query <fn-floorulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornpi1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L326> ;
+  mf:action [ qt:query <fn-floornpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornpi1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L336> ;
+  mf:action [ qt:query <fn-floornpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornpi1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L346> ;
+  mf:action [ qt:query <fn-floornpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornni1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L356> ;
+  mf:action [ qt:query <fn-floornni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornni1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L366> ;
+  mf:action [ qt:query <fn-floornni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floornni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floornni1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L376> ;
+  mf:action [ qt:query <fn-floornni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorsht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorsht1args-1" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L386> ;
+  mf:action [ qt:query <fn-floorsht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorsht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorsht1args-2" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L396> ;
+  mf:action [ qt:query <fn-floorsht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floorsht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floorsht1args-3" ;
+  rdfs:comment "Evaluates The \"floor\" function with the arguments set as follows: $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L406> ;
+  mf:action [ qt:query <fn-floorsht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-FloorFunc-4> a mf:QueryEvaluationTest ;
+  mf:name "K-FloorFunc-4" ;
+  rdfs:comment "A test whose essence is: `floor(10.5) eq 10`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L446> ;
+  mf:action [ qt:query <K-FloorFunc-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-FloorFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-FloorFunc-5" ;
+  rdfs:comment "A test whose essence is: `floor(-10.5) eq -11`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L456> ;
+  mf:action [ qt:query <K-FloorFunc-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-decimal-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-decimal-1" ;
+  rdfs:comment "Basic test of floor(decimal)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L621> ;
+  mf:action [ qt:query <fn-floor-decimal-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-decimal-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-decimal-2" ;
+  rdfs:comment "Basic test of floor(decimal)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L633> ;
+  mf:action [ qt:query <fn-floor-decimal-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-decimal-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-decimal-3" ;
+  rdfs:comment "Basic test of floor(decimal)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L645> ;
+  mf:action [ qt:query <fn-floor-decimal-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-decimal-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-decimal-4" ;
+  rdfs:comment "Basic test of floor(decimal)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L657> ;
+  mf:action [ qt:query <fn-floor-decimal-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-decimal-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-decimal-5" ;
+  rdfs:comment "Basic test of floor(decimal)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L669> ;
+  mf:action [ qt:query <fn-floor-decimal-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-decimal-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-decimal-6" ;
+  rdfs:comment "Basic test of floor(decimal)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L681> ;
+  mf:action [ qt:query <fn-floor-decimal-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-decimal-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-decimal-7" ;
+  rdfs:comment "Basic test of floor(decimal)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L693> ;
+  mf:action [ qt:query <fn-floor-decimal-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-1" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L705> ;
+  mf:action [ qt:query <fn-floor-double-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-2" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L717> ;
+  mf:action [ qt:query <fn-floor-double-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-3" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L729> ;
+  mf:action [ qt:query <fn-floor-double-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-4" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L741> ;
+  mf:action [ qt:query <fn-floor-double-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-5" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L753> ;
+  mf:action [ qt:query <fn-floor-double-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-6" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L765> ;
+  mf:action [ qt:query <fn-floor-double-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-7" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L777> ;
+  mf:action [ qt:query <fn-floor-double-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-8" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L789> ;
+  mf:action [ qt:query <fn-floor-double-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-9" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L801> ;
+  mf:action [ qt:query <fn-floor-double-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-10" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L813> ;
+  mf:action [ qt:query <fn-floor-double-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-double-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-double-11" ;
+  rdfs:comment "Basic test of floor(double)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L825> ;
+  mf:action [ qt:query <fn-floor-double-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-1" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L837> ;
+  mf:action [ qt:query <fn-floor-float-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-2" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L849> ;
+  mf:action [ qt:query <fn-floor-float-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-3" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L861> ;
+  mf:action [ qt:query <fn-floor-float-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-4" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L873> ;
+  mf:action [ qt:query <fn-floor-float-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-5" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L885> ;
+  mf:action [ qt:query <fn-floor-float-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-6" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L897> ;
+  mf:action [ qt:query <fn-floor-float-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-7" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L909> ;
+  mf:action [ qt:query <fn-floor-float-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-8" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L921> ;
+  mf:action [ qt:query <fn-floor-float-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-9" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L933> ;
+  mf:action [ qt:query <fn-floor-float-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-10" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L945> ;
+  mf:action [ qt:query <fn-floor-float-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-floor-float-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-floor-float-11" ;
+  rdfs:comment "Basic test of floor(float))" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L957> ;
+  mf:action [ qt:query <fn-floor-float-11.rq> ] ;
+  mf:result <../true.srj> .

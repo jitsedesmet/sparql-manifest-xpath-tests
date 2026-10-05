@@ -1,0 +1,7 @@
+# QT3 test case K-NumericSubtract-4 of test set op-numeric-subtract, which tests the XPath expression
+#   xs:float(5) - xs:float(1) eq 4
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L664
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#float> ( "5"^^<http://www.w3.org/2001/XMLSchema#integer> ) - <http://www.w3.org/2001/XMLSchema#float> ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) = "4"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

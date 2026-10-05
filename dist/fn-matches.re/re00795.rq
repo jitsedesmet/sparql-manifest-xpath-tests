@@ -1,0 +1,7 @@
+# QT3 test case re00795 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:^(cat|chat))$')) and (every $s in tokenize('cats are bad', ',') satisfies not(matches($s, '^(?:^(cat|chat))$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6541
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ! REGEX( "cats are bad" , "^(?:^(cat|chat))$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

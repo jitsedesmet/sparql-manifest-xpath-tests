@@ -1,0 +1,178 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-subtract-dayTimeDuration-from-time" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-subtract-dayTimeDuration-from-time2args-1>
+    <#op-subtract-dayTimeDuration-from-time2args-2>
+    <#op-subtract-dayTimeDuration-from-time2args-3>
+    <#op-subtract-dayTimeDuration-from-time2args-4>
+    <#op-subtract-dayTimeDuration-from-time2args-5>
+    <#op-subtract-dayTimeDuration-from-time-1>
+    <#op-subtract-dayTimeDuration-from-time-2>
+    <#op-subtract-dayTimeDuration-from-time-3>
+    <#op-subtract-dayTimeDuration-from-time-4>
+    <#op-subtract-dayTimeDuration-from-time-5>
+    <#op-subtract-dayTimeDuration-from-time-7>
+    <#op-subtract-dayTimeDuration-from-time-8>
+    <#op-subtract-dayTimeDuration-from-time-9>
+    <#op-subtract-dayTimeDuration-from-time-10>
+    <#op-subtract-dayTimeDuration-from-time-12>
+    <#op-subtract-dayTimeDuration-from-time-13>
+    <#op-subtract-dayTimeDuration-from-time-14>
+    <#op-subtract-dayTimeDuration-from-time-15>
+    <#op-subtract-dayTimeDuration-from-time-16>
+    <#op-subtract-dayTimeDuration-from-time-17>
+    <#K-TimeSubtractDTD-1>
+  ) .
+
+<#op-subtract-dayTimeDuration-from-time2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time2args-1      \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-dayTimeDuration-from-time\" operator\n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L7> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time2args-2      \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-dayTimeDuration-from-time\" operator\n with the arguments set as follows:                    \n$arg1 = xs:time(mid range)                             \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L25> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time2args-3      \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-dayTimeDuration-from-time\" operator\n with the arguments set as follows:                    \n$arg1 = xs:time(upper bound)                           \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L43> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time2args-4      \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-dayTimeDuration-from-time\" operator\n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:dayTimeDuration(mid range)                 \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L61> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time2args-5      \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:subtract-dayTimeDuration-from-time\" operator\n with the arguments set as follows:                    \n$arg1 = xs:time(lower bound)                           \n$arg2 = xs:dayTimeDuration(upper bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L79> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-1> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-1" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-1          \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The \"subtract-dayTimeDuration-from-time\" operator \nAs per example 1 (for this function)of the F&O specs.  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L97> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-2> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-2" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-2          \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The \"subtract-dayTimeDuration-from-time\" operator \nas per example 2 (for this function) from the F&O specs. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L113> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-3> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-3" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-3          \nDate: July 1, 2005                                     \nPurpose: Evaluates The string value \"subtract-dayTimeDuration-from-time\" operator as \npart of a boolean expression (or operator) and the \"fn:boolean\" function. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L129> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-4> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-4" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-4          \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The string value of \"subtract-dayTimeDuration-from-time\" operator that  \nreturn true and used together with fn:not.             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L144> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-5> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-5" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-5          \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The string value of \"subtract-dayTimeDuration-from-time\" operator that  \nis used as an argument to the fn:boolean function.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L160> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-7> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-7" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-7          \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The \"subtract-dayTimeDuration-from-time\" operator used  \nas an argument to the \"fn:string\" function).           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L192> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-8> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-8" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-8          \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The \"subtract-dayTimeDuration-from-time\" operator that  \nreturns a negative value.                              \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L208> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-9> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-9" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-9          \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                    \nPurpose: Evaluates The string value \"subtract-dayTimeDuration-from-time\" subtract used \ntogether with and \"and\" expression.                    \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L224> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-10> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-10" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-10         \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The string value of \"subtract-dayTimeDuration-from-time\" operator used  \ntogether with an \"or\" expression.                      \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L240> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-12> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-12" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-12         \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The string value of \"subtract-dayTimeDuration-from-time\" operator used \nwith a boolean expression and the \"fn:true\" function.   \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L256> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-13> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-13" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-13         \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The \"subtract-dayTimeDuration-from-time\" operator used  \ntogether with the numeric-equal-operator \"eq\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L272> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-14> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-14" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-14         \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The \"subtract-dayTimeDuration-from-time\" operator used  \ntogether with the numeric-equal operator \"ne\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L288> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-15> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-15" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-15         \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The string value of \"subtract-dayTimeDuration-from-time\" operator used  \ntogether with the numeric-equal operator \"le\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L304> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-16> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-16" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-16         \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The string value of the \"subtract-dayTimeDuration-from-time\" operator used  \ntogether with the numeric-equal operator \"ge\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L320> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-subtract-dayTimeDuration-from-time-17> a mf:QueryEvaluationTest ;
+  mf:name "op-subtract-dayTimeDuration-from-time-17" ;
+  rdfs:comment "*******************************************************\nTest: op-subtract-dayTimeDuration-from-time-17         \nWritten By: Carmelo Montanez                           \nDate: July 1, 2005                                     \nPurpose: Evaluates The \"subtract-dayTimeDuration-from-time\" operator \nused as part of a boolean expression (and operator) and the \"fn:false\" function. \n Should raise a type error.                            \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L336> ;
+  mf:action [ qt:query <op-subtract-dayTimeDuration-from-time-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-TimeSubtractDTD-1> a mf:QueryEvaluationTest ;
+  mf:name "K-TimeSubtractDTD-1" ;
+  rdfs:comment "*******************************************************\n Test: K-TimeSubtractDTD-1                             \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple testing involving operator '-' between xs:time and xs:dayTimeDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L353> ;
+  mf:action [ qt:query <K-TimeSubtractDTD-1.rq> ] ;
+  mf:result <../true.srj> .

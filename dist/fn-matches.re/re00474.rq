@@ -1,0 +1,7 @@
+# QT3 test case re00474 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:\p{IsByzantineMusicalSymbols})$')) and (every $s in tokenize('𐑏', ',') satisfies not(matches($s, '^(?:\p{IsByzantineMusicalSymbols})$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L3954
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ! REGEX( "𐑏" , "^(?:\\p{IsByzantineMusicalSymbols})$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

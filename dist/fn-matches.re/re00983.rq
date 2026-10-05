@@ -1,0 +1,7 @@
+# QT3 test case re00983 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('first.last@seznam.cz,first-last@seznam.cz', ',') satisfies matches($s, '^(?:[\w\-\.]+@.*)$')) and (every $s in tokenize('first_last@seznam.cz', ',') satisfies not(matches($s, '^(?:[\w\-\.]+@.*)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8085
+ASK {
+  BIND(( ( REGEX( "first.last@seznam.cz" , "^(?:[\\w\\-\\.]+@.*)$" ) && REGEX( "first-last@seznam.cz" , "^(?:[\\w\\-\\.]+@.*)$" ) ) && ! REGEX( "first_last@seznam.cz" , "^(?:[\\w\\-\\.]+@.*)$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

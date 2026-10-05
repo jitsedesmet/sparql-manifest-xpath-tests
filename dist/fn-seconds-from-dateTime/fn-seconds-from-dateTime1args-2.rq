@@ -1,0 +1,7 @@
+# QT3 test case fn-seconds-from-dateTime1args-2 of test set fn-seconds-from-dateTime, which tests the XPath expression
+#   fn:seconds-from-dateTime(xs:dateTime("1996-04-07T01:40:52Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-dateTime.xml#L17
+ASK {
+  BIND(SECONDS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1996-04-07T01:40:52Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "52" ))
+}

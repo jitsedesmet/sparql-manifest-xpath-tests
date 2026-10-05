@@ -1,0 +1,7 @@
+# QT3 test case fn-concatsht2args-3 of test set fn-concat, which tests the XPath expression
+#   fn:concat(xs:short("32767"),xs:short("-32768"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L565
+ASK {
+  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "32767"^^<http://www.w3.org/2001/XMLSchema#short> ) , <http://www.w3.org/2001/XMLSchema#string> ( "-32768"^^<http://www.w3.org/2001/XMLSchema#short> ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "32767-32768" ))
+}

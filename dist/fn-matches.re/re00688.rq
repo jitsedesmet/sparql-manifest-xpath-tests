@@ -1,0 +1,7 @@
+# QT3 test case re00688 of test set fn-matches.re, which tests the XPath expression
+#   matches('qwerty','^[abcd]?{0,5}$')
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5684
+ASK {
+  BIND(REGEX( "qwerty" , "^[abcd]?{0,5}$" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

@@ -1,0 +1,8 @@
+# QT3 test case op-dayTimeDuration-greater-than2args-6 of test set op-dayTimeDuration-greater-than, which tests the XPath expression
+#   xs:dayTimeDuration("P0DT0H0M0S") le xs:dayTimeDuration("P0DT0H0M0S")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-greater-than.xml#L97
+# The test needs the constructor function xsd:dayTimeDuration, <= on xsd:dayTimeDuration, which SPARQL does not define
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P0DT0H0M0S" ) <= <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P0DT0H0M0S" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

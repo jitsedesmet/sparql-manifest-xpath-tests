@@ -1,0 +1,7 @@
+# QT3 test case K2-Literals-13 of test set prod-Literal, which tests the XPath expression
+#   -0.0
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L1337
+ASK {
+  BIND(- "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> AS ?result)
+  FILTER(( ( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) && ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ) ))
+}

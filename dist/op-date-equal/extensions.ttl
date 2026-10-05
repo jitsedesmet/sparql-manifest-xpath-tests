@@ -1,0 +1,306 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-date-equal" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-date-equal2args-1>
+    <#op-date-equal2args-2>
+    <#op-date-equal2args-3>
+    <#op-date-equal2args-4>
+    <#op-date-equal2args-5>
+    <#op-date-equal2args-6>
+    <#op-date-equal2args-7>
+    <#op-date-equal2args-8>
+    <#op-date-equal2args-9>
+    <#op-date-equal2args-10>
+    <#op-date-equal2args-11>
+    <#op-date-equal2args-12>
+    <#op-date-equal2args-13>
+    <#op-date-equal2args-14>
+    <#op-date-equal2args-15>
+    <#op-date-equal2args-16>
+    <#op-date-equal2args-17>
+    <#op-date-equal2args-18>
+    <#op-date-equal2args-19>
+    <#op-date-equal2args-20>
+    <#K-DateEQ-1>
+    <#K-DateEQ-2>
+    <#K-DateEQ-3>
+    <#K-DateEQ-4>
+    <#K-DateEQ-5>
+    <#K-DateEQ-6>
+    <#K-DateEQ-7>
+    <#K-DateEQ-8>
+    <#K2-DateEQ-1>
+    <#cbcl-date-equal-002>
+    <#cbcl-date-equal-003>
+    <#cbcl-date-equal-004>
+    <#cbcl-date-equal-005>
+    <#cbcl-date-equal-007>
+    <#cbcl-date-equal-008>
+    <#cbcl-date-equal-009>
+    <#cbcl-date-equal-010>
+  ) .
+
+<#op-date-equal2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-1                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L6> ;
+  mf:action [ qt:query <op-date-equal2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-2                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(mid range)                             \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L24> ;
+  mf:action [ qt:query <op-date-equal2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-3                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(upper bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L42> ;
+  mf:action [ qt:query <op-date-equal2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-4                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L60> ;
+  mf:action [ qt:query <op-date-equal2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-5                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L78> ;
+  mf:action [ qt:query <op-date-equal2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-6                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L96> ;
+  mf:action [ qt:query <op-date-equal2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-7                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(mid range)                             \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L114> ;
+  mf:action [ qt:query <op-date-equal2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-8                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(upper bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L132> ;
+  mf:action [ qt:query <op-date-equal2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-9                              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L150> ;
+  mf:action [ qt:query <op-date-equal2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-10                             \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:07 GMT-05:00 2005                \nPurpose: Evaluates The \"op:date-equal\" operator        \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L168> ;
+  mf:action [ qt:query <op-date-equal2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-11> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-11" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-11                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L186> ;
+  mf:action [ qt:query <op-date-equal2args-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-12> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-12" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-12                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:date(mid range)                             \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L204> ;
+  mf:action [ qt:query <op-date-equal2args-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-13> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-13" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-13                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:date(upper bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L222> ;
+  mf:action [ qt:query <op-date-equal2args-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-14> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-14" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-14                            \nWritten By: Carmelo Montanez                           \nDate: June 14, 2005                                    \nPurpose: Evaluates The \"op:date-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L240> ;
+  mf:action [ qt:query <op-date-equal2args-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-15> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-15" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-15                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (le)   \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L258> ;
+  mf:action [ qt:query <op-date-equal2args-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-16> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-16" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-16                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L276> ;
+  mf:action [ qt:query <op-date-equal2args-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-17> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-17" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-17                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:date(mid range)                             \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L294> ;
+  mf:action [ qt:query <op-date-equal2args-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-18> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-18" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-18                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:date(upper bound)                           \n$arg2 = xs:date(lower bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L312> ;
+  mf:action [ qt:query <op-date-equal2args-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-19> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-19" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-19                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(mid range)                             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L330> ;
+  mf:action [ qt:query <op-date-equal2args-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-date-equal2args-20> a mf:QueryEvaluationTest ;
+  mf:name "op-date-equal2args-20" ;
+  rdfs:comment "*******************************************************\nTest: op-date-equal2args-20                            \nWritten By: Carmelo Montanez                           \nDate: June 3, 2005                                     \nPurpose: Evaluates The \"op:date-equal\" operator (ge)   \n with the arguments set as follows:                    \n$arg1 = xs:date(lower bound)                           \n$arg2 = xs:date(upper bound)                           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L348> ;
+  mf:action [ qt:query <op-date-equal2args-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-1" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-1                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'eq' for xs:date, returning positive. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L366> ;
+  mf:action [ qt:query <K-DateEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-2> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-2" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-2                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'eq' for xs:date.             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L381> ;
+  mf:action [ qt:query <K-DateEQ-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-3" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-3                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ne' for xs:date.             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L396> ;
+  mf:action [ qt:query <K-DateEQ-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-4" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-4                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ne' for xs:date.             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L411> ;
+  mf:action [ qt:query <K-DateEQ-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-5> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-5" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-5                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset -00:00 is equal to Z, in xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L426> ;
+  mf:action [ qt:query <K-DateEQ-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-6> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-6" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-6                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset +00:00 is equal to Z, in xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L441> ;
+  mf:action [ qt:query <K-DateEQ-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-7> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-7" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-7                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset Z is equal to Z, in xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L456> ;
+  mf:action [ qt:query <K-DateEQ-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateEQ-8> a mf:QueryEvaluationTest ;
+  mf:name "K-DateEQ-8" ;
+  rdfs:comment "*******************************************************\n Test: K-DateEQ-8                                      \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Test that zone offset -00:00 is equal to +00:00, in xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L471> ;
+  mf:action [ qt:query <K-DateEQ-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-DateEQ-1> a mf:QueryEvaluationTest ;
+  mf:name "K2-DateEQ-1" ;
+  rdfs:comment "*******************************************************\n Test: K2-DateEQ-1                                     \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Basic negative equalness test for xs:date.   \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L486> ;
+  mf:action [ qt:query <K2-DateEQ-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-002" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L541> ;
+  mf:action [ qt:query <cbcl-date-equal-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-003> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-003" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L551> ;
+  mf:action [ qt:query <cbcl-date-equal-003.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-004> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-004" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L561> ;
+  mf:action [ qt:query <cbcl-date-equal-004.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-005> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-005" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L571> ;
+  mf:action [ qt:query <cbcl-date-equal-005.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-007> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-007" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L592> ;
+  mf:action [ qt:query <cbcl-date-equal-007.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-008> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-008" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L602> ;
+  mf:action [ qt:query <cbcl-date-equal-008.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-009> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-009" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L612> ;
+  mf:action [ qt:query <cbcl-date-equal-009.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-date-equal-010> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-date-equal-010" ;
+  rdfs:comment "test comparison of date" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/date-equal.xml#L622> ;
+  mf:action [ qt:query <cbcl-date-equal-010.rq> ] ;
+  mf:result <../true.srj> .

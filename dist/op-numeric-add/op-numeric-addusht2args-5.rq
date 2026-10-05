@@ -1,0 +1,7 @@
+# QT3 test case op-numeric-addusht2args-5 of test set op-numeric-add, which tests the XPath expression
+#   xs:unsignedShort("0") + xs:unsignedShort("65535")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L266
+ASK {
+  BIND(( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> + "65535"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) AS ?result)
+  FILTER(( ?result = "65535"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

@@ -1,0 +1,7 @@
+# QT3 test case K-StringGT-4 of test set op-string-greater-than, which tests the XPath expression
+#   not('a' ge 'abc')
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/string-greater-than.xml#L34
+ASK {
+  BIND(! ( "a" >= "abc" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

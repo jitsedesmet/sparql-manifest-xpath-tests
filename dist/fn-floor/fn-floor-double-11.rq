@@ -1,0 +1,7 @@
+# QT3 test case fn-floor-double-11 of test set fn-floor, which tests the XPath expression
+#   floor(xs:double('-0'))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L825
+ASK {
+  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#double> ( "-0" ) ) AS ?result)
+  FILTER(( ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-0" ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#double> ) ) ))
+}

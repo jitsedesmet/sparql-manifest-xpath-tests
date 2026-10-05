@@ -1,0 +1,8 @@
+# QT3 test case K-DateAddDTD-2 of test set op-add-dayTimeDuration-to-date, which tests the XPath expression
+#   xs:dayTimeDuration("P23DT09H32M59S") + xs:date("1999-08-12") eq xs:date("1999-09-04")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-date.xml#L362
+# The test needs the constructor function xsd:dayTimeDuration, the constructor function xsd:date, + on xsd:dayTimeDuration, + on xsd:date, = on xsd:date, which SPARQL does not define
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P23DT09H32M59S" ) + <http://www.w3.org/2001/XMLSchema#date> ( "1999-08-12" ) ) = <http://www.w3.org/2001/XMLSchema#date> ( "1999-09-04" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

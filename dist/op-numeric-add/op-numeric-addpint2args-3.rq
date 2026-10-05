@@ -1,0 +1,7 @@
+# QT3 test case op-numeric-addpint2args-3 of test set op-numeric-add, which tests the XPath expression
+#   xs:positiveInteger("999999999999999998") + xs:positiveInteger("1")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L329
+ASK {
+  BIND(( "999999999999999998"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> + "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> ) AS ?result)
+  FILTER(( ?result = "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

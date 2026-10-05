@@ -1,0 +1,26 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-add-yearMonthDuration-to-date" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#K-DateAddYMD-3>
+    <#K-DateAddYMD-4>
+  ) .
+
+<#K-DateAddYMD-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DateAddYMD-3" ;
+  rdfs:comment "*******************************************************\n Test: K-DateAddYMD-3                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:yearMonthDuration and xs:date. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-date.xml#L369> ;
+  mf:action [ qt:query <K-DateAddYMD-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateAddYMD-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DateAddYMD-4" ;
+  rdfs:comment "*******************************************************\n Test: K-DateAddYMD-4                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:yearMonthDuration and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-date.xml#L384> ;
+  mf:action [ qt:query <K-DateAddYMD-4.rq> ] ;
+  mf:result <../true.srj> .

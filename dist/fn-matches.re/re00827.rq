@@ -1,0 +1,7 @@
+# QT3 test case re00827 of test set fn-matches.re, which tests the XPath expression
+#   matches('qwerty','(\2b*?([a-c]))*')
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L6797
+ASK {
+  BIND(REGEX( "qwerty" , "(\\2b*?([a-c]))*" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

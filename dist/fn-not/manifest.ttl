@@ -1,0 +1,542 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-not" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-notint1args-1>
+    <#fn-notint1args-2>
+    <#fn-notint1args-3>
+    <#fn-notintg1args-1>
+    <#fn-notintg1args-2>
+    <#fn-notintg1args-3>
+    <#fn-notdec1args-1>
+    <#fn-notdec1args-2>
+    <#fn-notdec1args-3>
+    <#fn-notdbl1args-1>
+    <#fn-notdbl1args-2>
+    <#fn-notdbl1args-3>
+    <#fn-notflt1args-1>
+    <#fn-notflt1args-2>
+    <#fn-notflt1args-3>
+    <#fn-notlng1args-1>
+    <#fn-notlng1args-2>
+    <#fn-notlng1args-3>
+    <#fn-notusht1args-1>
+    <#fn-notusht1args-2>
+    <#fn-notusht1args-3>
+    <#fn-notnint1args-1>
+    <#fn-notnint1args-2>
+    <#fn-notnint1args-3>
+    <#fn-notpint1args-1>
+    <#fn-notpint1args-2>
+    <#fn-notpint1args-3>
+    <#fn-notulng1args-1>
+    <#fn-notulng1args-2>
+    <#fn-notulng1args-3>
+    <#fn-notnpi1args-1>
+    <#fn-notnpi1args-2>
+    <#fn-notnpi1args-3>
+    <#fn-notnni1args-1>
+    <#fn-notnni1args-2>
+    <#fn-notnni1args-3>
+    <#fn-notsht1args-1>
+    <#fn-notsht1args-2>
+    <#fn-notsht1args-3>
+    <#fn-not-1>
+    <#fn-not-2>
+    <#fn-not-3>
+    <#fn-not-4>
+    <#fn-not-5>
+    <#fn-not-6>
+    <#fn-not-7>
+    <#fn-not-8>
+    <#fn-not-9>
+    <#fn-not-10>
+    <#fn-not-11>
+    <#fn-not-12>
+    <#fn-not-13>
+    <#fn-not-14>
+    <#fn-not-15>
+    <#fn-not-16>
+    <#fn-not-17>
+    <#fn-not-18>
+    <#fn-not-19>
+    <#fn-not-20>
+    <#fn-not-21>
+    <#fn-not-24>
+    <#fn-not-25>
+    <#fn-not-26>
+    <#K-NotFunc-3>
+    <#K-NotFunc-4>
+    <#K-NotFunc-5>
+    <#K-NotFunc-6>
+  ) .
+
+<#fn-notint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notint1args-1" ;
+  rdfs:comment "notint1args-1 The \"not\" function with the arguments set as follows: $arg = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L7> ;
+  mf:action [ qt:query <fn-notint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notint1args-2" ;
+  rdfs:comment "notint1args-2 The \"not\" function with the arguments set as follows: $arg = xs:int(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L16> ;
+  mf:action [ qt:query <fn-notint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notint1args-3" ;
+  rdfs:comment "notint1args-3 The \"not\" function with the arguments set as follows: $arg = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L25> ;
+  mf:action [ qt:query <fn-notint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notintg1args-1" ;
+  rdfs:comment "notintg1args-1 The \"not\" function with the arguments set as follows: $arg = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L34> ;
+  mf:action [ qt:query <fn-notintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notintg1args-2" ;
+  rdfs:comment "notintg1args-2 The \"not\" function with the arguments set as follows: $arg = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L43> ;
+  mf:action [ qt:query <fn-notintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notintg1args-3" ;
+  rdfs:comment "notintg1args-3 The \"not\" function with the arguments set as follows: $arg = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L52> ;
+  mf:action [ qt:query <fn-notintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notdec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notdec1args-1" ;
+  rdfs:comment "notdec1args-1 The \"not\" function with the arguments set as follows: $arg = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L61> ;
+  mf:action [ qt:query <fn-notdec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notdec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notdec1args-2" ;
+  rdfs:comment "notdec1args-2 The \"not\" function with the arguments set as follows: $arg = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L70> ;
+  mf:action [ qt:query <fn-notdec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notdec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notdec1args-3" ;
+  rdfs:comment "notdec1args-3 The \"not\" function with the arguments set as follows: $arg = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L79> ;
+  mf:action [ qt:query <fn-notdec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notdbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notdbl1args-1" ;
+  rdfs:comment "notdbl1args-1 The \"not\" function with the arguments set as follows: $arg = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L88> ;
+  mf:action [ qt:query <fn-notdbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notdbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notdbl1args-2" ;
+  rdfs:comment "notdbl1args-2 The \"not\" function with the arguments set as follows: $arg = xs:double(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L97> ;
+  mf:action [ qt:query <fn-notdbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notdbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notdbl1args-3" ;
+  rdfs:comment "notdbl1args-3 The \"not\" function with the arguments set as follows: $arg = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L106> ;
+  mf:action [ qt:query <fn-notdbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notflt1args-1" ;
+  rdfs:comment "notflt1args-1 The \"not\" function with the arguments set as follows: $arg = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L115> ;
+  mf:action [ qt:query <fn-notflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notflt1args-2" ;
+  rdfs:comment "notflt1args-2 The \"not\" function with the arguments set as follows: $arg = xs:float(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L124> ;
+  mf:action [ qt:query <fn-notflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notflt1args-3" ;
+  rdfs:comment "notflt1args-3 The \"not\" function with the arguments set as follows: $arg = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L133> ;
+  mf:action [ qt:query <fn-notflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notlng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notlng1args-1" ;
+  rdfs:comment "notlng1args-1 The \"not\" function with the arguments set as follows: $arg = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L142> ;
+  mf:action [ qt:query <fn-notlng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notlng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notlng1args-2" ;
+  rdfs:comment "notlng1args-2 The \"not\" function with the arguments set as follows: $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L151> ;
+  mf:action [ qt:query <fn-notlng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notlng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notlng1args-3" ;
+  rdfs:comment "notlng1args-3 The \"not\" function with the arguments set as follows: $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L160> ;
+  mf:action [ qt:query <fn-notlng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notusht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notusht1args-1" ;
+  rdfs:comment "notusht1args-1 The \"not\" function with the arguments set as follows: $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L169> ;
+  mf:action [ qt:query <fn-notusht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notusht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notusht1args-2" ;
+  rdfs:comment "notusht1args-2 The \"not\" function with the arguments set as follows: $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L178> ;
+  mf:action [ qt:query <fn-notusht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notusht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notusht1args-3" ;
+  rdfs:comment "notusht1args-3 The \"not\" function with the arguments set as follows: $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L187> ;
+  mf:action [ qt:query <fn-notusht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnint1args-1" ;
+  rdfs:comment "notnint1args-1 The \"not\" function with the arguments set as follows: $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L196> ;
+  mf:action [ qt:query <fn-notnint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnint1args-2" ;
+  rdfs:comment "notnint1args-2 The \"not\" function with the arguments set as follows: $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L205> ;
+  mf:action [ qt:query <fn-notnint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnint1args-3" ;
+  rdfs:comment "notnint1args-3 The \"not\" function with the arguments set as follows: $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L214> ;
+  mf:action [ qt:query <fn-notnint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notpint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notpint1args-1" ;
+  rdfs:comment "notpint1args-1 The \"not\" function with the arguments set as follows: $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L223> ;
+  mf:action [ qt:query <fn-notpint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notpint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notpint1args-2" ;
+  rdfs:comment "notpint1args-2 The \"not\" function with the arguments set as follows: $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L232> ;
+  mf:action [ qt:query <fn-notpint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notpint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notpint1args-3" ;
+  rdfs:comment "notpint1args-3 The \"not\" function with the arguments set as follows: $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L241> ;
+  mf:action [ qt:query <fn-notpint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notulng1args-1" ;
+  rdfs:comment "notulng1args-1 The \"not\" function with the arguments set as follows: $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L250> ;
+  mf:action [ qt:query <fn-notulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notulng1args-2" ;
+  rdfs:comment "notulng1args-2 The \"not\" function with the arguments set as follows: $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L259> ;
+  mf:action [ qt:query <fn-notulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notulng1args-3" ;
+  rdfs:comment "notulng1args-3 The \"not\" function with the arguments set as follows: $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L268> ;
+  mf:action [ qt:query <fn-notulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnpi1args-1" ;
+  rdfs:comment "notnpi1args-1 The \"not\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L277> ;
+  mf:action [ qt:query <fn-notnpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnpi1args-2" ;
+  rdfs:comment "notnpi1args-2 The \"not\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L286> ;
+  mf:action [ qt:query <fn-notnpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnpi1args-3" ;
+  rdfs:comment "notnpi1args-3 The \"not\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L295> ;
+  mf:action [ qt:query <fn-notnpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnni1args-1" ;
+  rdfs:comment "notnni1args-1 The \"not\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L304> ;
+  mf:action [ qt:query <fn-notnni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnni1args-2" ;
+  rdfs:comment "notnni1args-2 The \"not\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L313> ;
+  mf:action [ qt:query <fn-notnni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notnni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notnni1args-3" ;
+  rdfs:comment "notnni1args-3 The \"not\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L322> ;
+  mf:action [ qt:query <fn-notnni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notsht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-notsht1args-1" ;
+  rdfs:comment "notsht1args-1 The \"not\" function with the arguments set as follows: $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L331> ;
+  mf:action [ qt:query <fn-notsht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notsht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-notsht1args-2" ;
+  rdfs:comment "notsht1args-2 The \"not\" function with the arguments set as follows: $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L340> ;
+  mf:action [ qt:query <fn-notsht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-notsht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-notsht1args-3" ;
+  rdfs:comment "notsht1args-3 The \"not\" function with the arguments set as follows: $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L349> ;
+  mf:action [ qt:query <fn-notsht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-1" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L358> ;
+  mf:action [ qt:query <fn-not-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-2" ;
+  rdfs:comment "fn:not function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L367> ;
+  mf:action [ qt:query <fn-not-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-3" ;
+  rdfs:comment "expression involving the \"and\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L376> ;
+  mf:action [ qt:query <fn-not-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-4" ;
+  rdfs:comment "expression involving the \"or\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L385> ;
+  mf:action [ qt:query <fn-not-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-5" ;
+  rdfs:comment "expression involving the \"eq\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L394> ;
+  mf:action [ qt:query <fn-not-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-6" ;
+  rdfs:comment "expression involving the \"ne\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L403> ;
+  mf:action [ qt:query <fn-not-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-7" ;
+  rdfs:comment "expression involving the \"lt\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L412> ;
+  mf:action [ qt:query <fn-not-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-8" ;
+  rdfs:comment "expression involving the \"le\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L421> ;
+  mf:action [ qt:query <fn-not-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-9" ;
+  rdfs:comment "expression involving the \"gt\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L430> ;
+  mf:action [ qt:query <fn-not-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-10" ;
+  rdfs:comment "comparison expression involving the \"ge\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L439> ;
+  mf:action [ qt:query <fn-not-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-11" ;
+  rdfs:comment "comparison expression involving the \"=\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L448> ;
+  mf:action [ qt:query <fn-not-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-12" ;
+  rdfs:comment "comparison expression involving the \"!=\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L457> ;
+  mf:action [ qt:query <fn-not-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-13" ;
+  rdfs:comment "comparison expression involving the \"<\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L466> ;
+  mf:action [ qt:query <fn-not-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-14" ;
+  rdfs:comment "comparison expression involving the \"<=\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L475> ;
+  mf:action [ qt:query <fn-not-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-15" ;
+  rdfs:comment "comparison expression involving the \">\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L484> ;
+  mf:action [ qt:query <fn-not-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-16" ;
+  rdfs:comment "comparison expression involving the \">=\" operator." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L493> ;
+  mf:action [ qt:query <fn-not-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-17> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-17" ;
+  rdfs:comment "to an \"xs:boolean\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L502> ;
+  mf:action [ qt:query <fn-not-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-18> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-18" ;
+  rdfs:comment "to an \"fn:string\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L511> ;
+  mf:action [ qt:query <fn-not-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-19> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-19" ;
+  rdfs:comment "an \"fn:concat\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L520> ;
+  mf:action [ qt:query <fn-not-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-20> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-20" ;
+  rdfs:comment "an \"fn:contains\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L529> ;
+  mf:action [ qt:query <fn-not-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-21> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-21" ;
+  rdfs:comment "to an \"fn:string-length\" function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L538> ;
+  mf:action [ qt:query <fn-not-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-24> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-24" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L567> ;
+  mf:action [ qt:query <fn-not-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-25> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-25" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L577> ;
+  mf:action [ qt:query <fn-not-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-not-26> a mf:QueryEvaluationTest ;
+  mf:name "fn-not-26" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L586> ;
+  mf:action [ qt:query <fn-not-26.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NotFunc-3> a mf:QueryEvaluationTest ;
+  mf:name "K-NotFunc-3" ;
+  rdfs:comment "K-NotFunc-3  A test whose essence is: `not(false() and false())`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L642> ;
+  mf:action [ qt:query <K-NotFunc-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NotFunc-4> a mf:QueryEvaluationTest ;
+  mf:name "K-NotFunc-4" ;
+  rdfs:comment "K-NotFunc-4  A test whose essence is: `not(not(true()))`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L651> ;
+  mf:action [ qt:query <K-NotFunc-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NotFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-NotFunc-5" ;
+  rdfs:comment "K-NotFunc-5  A test whose essence is: `not(false())`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L660> ;
+  mf:action [ qt:query <K-NotFunc-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NotFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-NotFunc-6" ;
+  rdfs:comment "K-NotFunc-6  A test whose essence is: `not(0)`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L669> ;
+  mf:action [ qt:query <K-NotFunc-6.rq> ] ;
+  mf:result <../true.srj> .

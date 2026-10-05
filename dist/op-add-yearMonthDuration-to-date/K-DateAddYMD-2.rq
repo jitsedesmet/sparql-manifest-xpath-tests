@@ -1,0 +1,8 @@
+# QT3 test case K-DateAddYMD-2 of test set op-add-yearMonthDuration-to-date, which tests the XPath expression
+#   xs:yearMonthDuration("P3Y7M") + xs:date("1999-08-12") eq xs:date("2003-03-12")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-date.xml#L354
+# The test needs the constructor function xsd:yearMonthDuration, the constructor function xsd:date, + on xsd:yearMonthDuration, + on xsd:date, = on xsd:date, which SPARQL does not define
+ASK {
+  BIND(( ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P3Y7M" ) + <http://www.w3.org/2001/XMLSchema#date> ( "1999-08-12" ) ) = <http://www.w3.org/2001/XMLSchema#date> ( "2003-03-12" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

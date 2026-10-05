@@ -1,0 +1,7 @@
+# QT3 test case Parenexpr-3 of test set prod-ParenthesizedExpr, which tests the XPath expression
+#   -(2 + 5)
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/ParenthesizedExpr.xml#L42
+ASK {
+  BIND(- ( "2"^^<http://www.w3.org/2001/XMLSchema#integer> + "5"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ?result = - "7"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

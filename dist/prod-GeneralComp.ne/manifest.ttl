@@ -1,0 +1,58 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set prod-GeneralComp.ne" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#generalexpression111>
+    <#generalexpression120>
+    <#generalexpression121>
+    <#K-GenCompNE-14>
+    <#K-GenCompNE-15>
+    <#K-GenCompNE-27>
+  ) .
+
+<#generalexpression111> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression111" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Atomic Value operator = != operand2 = Sequence of single atomic value" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml#L116> ;
+  mf:action [ qt:query <generalexpression111.rq> ] ;
+  mf:result <../true.srj> .
+
+<#generalexpression120> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression120" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = != operand2 = Atomic Value" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml#L203> ;
+  mf:action [ qt:query <generalexpression120.rq> ] ;
+  mf:result <../true.srj> .
+
+<#generalexpression121> a mf:QueryEvaluationTest ;
+  mf:name "generalexpression121" ;
+  rdfs:comment "Test of a General Expression with the operands set as follows operand1 = Sequence of single atomic value operator = != operand2 = Sequence of single atomic value" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml#L212> ;
+  mf:action [ qt:query <generalexpression121.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompNE-14> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompNE-14" ;
+  rdfs:comment "General comparison involving xs:untypedAtomic/xs:string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml#L1121> ;
+  mf:action [ qt:query <K-GenCompNE-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompNE-15> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompNE-15" ;
+  rdfs:comment "General comparison involving xs:untypedAtomic/xs:string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml#L1130> ;
+  mf:action [ qt:query <K-GenCompNE-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-GenCompNE-27> a mf:QueryEvaluationTest ;
+  mf:name "K-GenCompNE-27" ;
+  rdfs:comment "General comparison where the operands are various various sequence of xs:integers." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.ne.xml#L1238> ;
+  mf:action [ qt:query <K-GenCompNE-27.rq> ] ;
+  mf:result <../true.srj> .

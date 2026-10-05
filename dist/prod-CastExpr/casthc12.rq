@@ -1,0 +1,7 @@
+# QT3 test case casthc12 of test set prod-CastExpr, which tests the XPath expression
+#   xs:double(1267.43233E12) cast as xs:double
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L114
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#double> ( <http://www.w3.org/2001/XMLSchema#double> ( "1267.43233E12"^^<http://www.w3.org/2001/XMLSchema#double> ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1.26743233E15" ))
+}

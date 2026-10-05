@@ -1,0 +1,8 @@
+# QT3 test case K-SeqExprCast-336 of test set prod-CastExpr, which tests the XPath expression
+#   xs:date(xs:dateTime("2002-11-23T22:12:23.867-00:00")) eq xs:date("2002-11-23Z")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L10253
+# The test needs the constructor function xsd:date, = on xsd:date, which SPARQL does not define
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#date> ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2002-11-23T22:12:23.867-00:00" ) ) = <http://www.w3.org/2001/XMLSchema#date> ( "2002-11-23Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

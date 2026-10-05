@@ -1,0 +1,7 @@
+# QT3 test case re00671 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('', ',') satisfies matches($s, '^(?:İ)$')) and (every $s in tokenize('i,i,I,i,I,i', ',') satisfies not(matches($s, '^(?:İ)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5548
+ASK {
+  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ( ( ( ( ( ! REGEX( "i" , "^(?:İ)$" ) && ! REGEX( "i" , "^(?:İ)$" ) ) && ! REGEX( "I" , "^(?:İ)$" ) ) && ! REGEX( "i" , "^(?:İ)$" ) ) && ! REGEX( "I" , "^(?:İ)$" ) ) && ! REGEX( "i" , "^(?:İ)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

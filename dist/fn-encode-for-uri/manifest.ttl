@@ -1,0 +1,186 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-encode-for-uri" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-encode-for-uri1args-1>
+    <#fn-encode-for-uri1args-2>
+    <#fn-encode-for-uri1args-3>
+    <#fn-encode-for-uri1args-4>
+    <#fn-encode-for-uri-1>
+    <#fn-encode-for-uri-2>
+    <#fn-encode-for-uri-3>
+    <#fn-encode-for-uri-4>
+    <#fn-encode-for-uri-5>
+    <#fn-encode-for-uri-6>
+    <#fn-encode-for-uri-7>
+    <#fn-encode-for-uri-8>
+    <#fn-encode-for-uri-9>
+    <#fn-encode-for-uri-10>
+    <#fn-encode-for-uri-11>
+    <#fn-encode-for-uri-12>
+    <#fn-encode-for-uri-13>
+    <#fn-encode-for-uri-14>
+    <#fn-encode-for-uri-15>
+    <#fn-encode-for-uri-16>
+    <#K-EncodeURIfunc-4>
+    <#K-EncodeURIfunc-5>
+  ) .
+
+<#fn-encode-for-uri1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri1args-1" ;
+  rdfs:comment "Test encode-for-uri from example defined in functions and operators specification" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L7> ;
+  mf:action [ qt:query <fn-encode-for-uri1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri1args-2" ;
+  rdfs:comment "Test encode-for-uri from example defined in functions and operators specification" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L16> ;
+  mf:action [ qt:query <fn-encode-for-uri1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri1args-3" ;
+  rdfs:comment "Test encode-for-uri from example defined in functions and operators specification" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L25> ;
+  mf:action [ qt:query <fn-encode-for-uri1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri1args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri1args-4" ;
+  rdfs:comment "Test encode-for-uri with zero-length string argument" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L34> ;
+  mf:action [ qt:query <fn-encode-for-uri1args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-1" ;
+  rdfs:comment "Evaluation of fn-encode-for-uri function with argument thast ha nothing to encode." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L70> ;
+  mf:action [ qt:query <fn-encode-for-uri-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-2" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does escape the \"#\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L79> ;
+  mf:action [ qt:query <fn-encode-for-uri-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-3" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does not escape the \"-\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L88> ;
+  mf:action [ qt:query <fn-encode-for-uri-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-4" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does not escape the \"_\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L97> ;
+  mf:action [ qt:query <fn-encode-for-uri-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-5" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does not escape the \".\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L106> ;
+  mf:action [ qt:query <fn-encode-for-uri-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-6" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does escapes the \"!\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L115> ;
+  mf:action [ qt:query <fn-encode-for-uri-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-7" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does not escape the \"~\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L124> ;
+  mf:action [ qt:query <fn-encode-for-uri-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-8" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does escape the \"*\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L133> ;
+  mf:action [ qt:query <fn-encode-for-uri-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-9" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does escape the \"'\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L142> ;
+  mf:action [ qt:query <fn-encode-for-uri-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-10" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does escape the \"(\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L151> ;
+  mf:action [ qt:query <fn-encode-for-uri-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-11" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does escape the \")\" symbol." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L160> ;
+  mf:action [ qt:query <fn-encode-for-uri-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-12" ;
+  rdfs:comment "Examines that fn-encode-for-uri function does not escape numbers." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L169> ;
+  mf:action [ qt:query <fn-encode-for-uri-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-13" ;
+  rdfs:comment "Examines that fn-encode-for-uri function escapes the space." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L178> ;
+  mf:action [ qt:query <fn-encode-for-uri-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-14" ;
+  rdfs:comment "Examines that fn-encode-for-uri function escapes the \"/\" character." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L187> ;
+  mf:action [ qt:query <fn-encode-for-uri-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-15" ;
+  rdfs:comment "Examines that fn-encode-for-uri function escapes the \":\" character." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L196> ;
+  mf:action [ qt:query <fn-encode-for-uri-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-encode-for-uri-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-encode-for-uri-16" ;
+  rdfs:comment "Examines that fn-encode-for-uri function escapes the \"%\" character." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L205> ;
+  mf:action [ qt:query <fn-encode-for-uri-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-EncodeURIfunc-4> a mf:QueryEvaluationTest ;
+  mf:name "K-EncodeURIfunc-4" ;
+  rdfs:comment "Combine fn:concat and fn:encode-for-uri." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L241> ;
+  mf:action [ qt:query <K-EncodeURIfunc-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-EncodeURIfunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-EncodeURIfunc-5" ;
+  rdfs:comment "Combine fn:concat and fn:encode-for-uri." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L250> ;
+  mf:action [ qt:query <K-EncodeURIfunc-5.rq> ] ;
+  mf:result <../true.srj> .

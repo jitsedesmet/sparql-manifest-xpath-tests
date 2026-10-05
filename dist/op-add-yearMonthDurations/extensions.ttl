@@ -1,0 +1,194 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-add-yearMonthDurations" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-add-yearMonthDurations2args-1>
+    <#op-add-yearMonthDurations2args-2>
+    <#op-add-yearMonthDurations2args-3>
+    <#op-add-yearMonthDurations2args-4>
+    <#op-add-yearMonthDurations2args-5>
+    <#op-add-yearMonthDurations-1>
+    <#op-add-yearMonthDurations-2>
+    <#op-add-yearMonthDurations-3>
+    <#op-add-yearMonthDurations-4>
+    <#op-add-yearMonthDurations-5>
+    <#op-add-yearMonthDurations-7>
+    <#op-add-yearMonthDurations-8>
+    <#op-add-yearMonthDurations-9>
+    <#op-add-yearMonthDurations-10>
+    <#op-add-yearMonthDurations-11>
+    <#op-add-yearMonthDurations-12>
+    <#op-add-yearMonthDurations-13>
+    <#op-add-yearMonthDurations-14>
+    <#op-add-yearMonthDurations-15>
+    <#op-add-yearMonthDurations-16>
+    <#K-YearMonthDurationAdd-1>
+    <#K-YearMonthDurationAdd-2>
+    <#K-YearMonthDurationAdd-3>
+  ) .
+
+<#op-add-yearMonthDurations2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations2args-1                  \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L7> ;
+  mf:action [ qt:query <op-add-yearMonthDurations2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations2args-2                  \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(mid range)               \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L25> ;
+  mf:action [ qt:query <op-add-yearMonthDurations2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations2args-3                  \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(upper bound)             \n$arg2 = xs:yearMonthDuration(lower bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L43> ;
+  mf:action [ qt:query <op-add-yearMonthDurations2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations2args-4                  \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(mid range)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L61> ;
+  mf:action [ qt:query <op-add-yearMonthDurations2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations2args-5                  \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:08 GMT-05:00 2005                \nPurpose: Evaluates The \"op:add-yearMonthDurations\" operator\n with the arguments set as follows:                    \n$arg1 = xs:yearMonthDuration(lower bound)             \n$arg2 = xs:yearMonthDuration(upper bound)             \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L79> ;
+  mf:action [ qt:query <op-add-yearMonthDurations2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-1> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-1" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-1                      \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function \nAs per example 1 (for this function)of the F&O specs.  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L97> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-2> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-2" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-2                      \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function \nused as part of a boolean expression (and operator) and the \"fn:false\" function. \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L113> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-3> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-3" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-3                      \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function as \npart of a boolean expression (or operator) and the \"fn:boolean\" function. \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L130> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-4> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-4" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-4                      \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function that  \nreturn true and used together with fn:not.             \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L147> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-5> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-5" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-5                      \nWritten By: Carmelo Montanez                           \nDate: June 29 2005                                     \nPurpose: Evaluates The \"add-yearMonthDurations\" function that  \nis used as an argument to the fn:boolean function.     \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L164> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-7> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-7" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-7                      \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used  \nas an argument to the \"fn:string\" function).           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L197> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-8> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-8" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-8                      \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function that  \nreturns a negative value.                              \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L213> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-9> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-9" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-9                      \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used \ntogether with and \"and\" expression.                    \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L229> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-10> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-10" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-10                     \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used  \ntogether with an \"or\" expression.                      \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L246> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-11> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-11" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-11                     \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used  \ntogether with a \"div\" expression.                      \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L263> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-12> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-12" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-12                     \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" operators used \nwith a boolean expression and the \"fn:true\" function.   \n Apply \"fn:string\" function to account for new EBV.     \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L279> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-13> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-13" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-13                     \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used  \ntogether with the numeric-equal- operator \"eq\".        \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L296> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-14> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-14" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-14                     \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used  \ntogether with the numeric-equal operator \"ne\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L312> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-15> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-15" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-15                     \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used  \ntogether with the numeric-equal operator \"le\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L328> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-add-yearMonthDurations-16> a mf:QueryEvaluationTest ;
+  mf:name "op-add-yearMonthDurations-16" ;
+  rdfs:comment "*******************************************************\nTest: op-add-yearMonthDurations-16                     \nWritten By: Carmelo Montanez                           \nDate: June 29, 2005                                    \nPurpose: Evaluates The \"add-yearMonthDurations\" function used  \ntogether with the numeric-equal operator \"ge\".         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L344> ;
+  mf:action [ qt:query <op-add-yearMonthDurations-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAdd-1> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAdd-1" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationAdd-1                        \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of adding an xs:yearMonthDuration with P0M. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L360> ;
+  mf:action [ qt:query <K-YearMonthDurationAdd-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAdd-2> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAdd-2" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationAdd-2                        \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of adding P0M with an xs:yearMonthDuration. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L375> ;
+  mf:action [ qt:query <K-YearMonthDurationAdd-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-YearMonthDurationAdd-3> a mf:QueryEvaluationTest ;
+  mf:name "K-YearMonthDurationAdd-3" ;
+  rdfs:comment "*******************************************************\n Test: K-YearMonthDurationAdd-3                        \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of adding two arbitrary xs:yearMonthDurations. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDurations.xml#L390> ;
+  mf:action [ qt:query <K-YearMonthDurationAdd-3.rq> ] ;
+  mf:result <../true.srj> .

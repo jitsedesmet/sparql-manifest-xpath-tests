@@ -1,0 +1,234 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-dayTimeDuration-less-than" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-dayTimeDuration-less-than2args-1>
+    <#op-dayTimeDuration-less-than2args-2>
+    <#op-dayTimeDuration-less-than2args-3>
+    <#op-dayTimeDuration-less-than2args-4>
+    <#op-dayTimeDuration-less-than2args-5>
+    <#op-dayTimeDuration-less-than2args-6>
+    <#op-dayTimeDuration-less-than2args-7>
+    <#op-dayTimeDuration-less-than2args-8>
+    <#op-dayTimeDuration-less-than2args-9>
+    <#op-dayTimeDuration-less-than2args-10>
+    <#op-dayTimeDuration-less-than-3>
+    <#op-dayTimeDuration-less-than-4>
+    <#op-dayTimeDuration-less-than-5>
+    <#op-dayTimeDuration-less-than-6>
+    <#op-dayTimeDuration-less-than-7>
+    <#op-dayTimeDuration-less-than-8>
+    <#op-dayTimeDuration-less-than-9>
+    <#op-dayTimeDuration-less-than-10>
+    <#op-dayTimeDuration-less-than-11>
+    <#op-dayTimeDuration-less-than-12>
+    <#op-dayTimeDuration-less-than-13>
+    <#op-dayTimeDuration-less-than-14>
+    <#K-DayTimeDurationLT-1>
+    <#K-DayTimeDurationLT-2>
+    <#K-DayTimeDurationLT-3>
+    <#K-DayTimeDurationLT-4>
+    <#K-DayTimeDurationLT-5>
+    <#K-DayTimeDurationLT-6>
+  ) .
+
+<#op-dayTimeDuration-less-than2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-1               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L7> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-2               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(mid range)                 \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L25> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-3               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(upper bound)               \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L43> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-4               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(mid range)                 \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L61> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-5               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(upper bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L79> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-6               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L97> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-7               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(mid range)                 \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L115> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-8               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(upper bound)               \n$arg2 = xs:dayTimeDuration(lower bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L133> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-9               \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(mid range)                 \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L151> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than2args-10              \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dayTimeDuration-less-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dayTimeDuration(lower bound)               \n$arg2 = xs:dayTimeDuration(upper bound)               \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L169> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-3> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-3" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-3                   \nWritten By: Carmelo Montanez                           \nDate: June 17, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function that  \nreturn true and used together with fn:not (lt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L187> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-4> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-4" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-4                   \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function that  \nreturn true and used together with fn:not (le operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L203> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-5> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-5" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-5                   \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function that  \nreturn false and used together with fn:not (lt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L219> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-6> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-6" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-6                   \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function that  \nreturn false and used together with fn:not(le operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L235> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-7> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-7" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-7                   \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used  \ntogether with \"and\" expression (lt operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L251> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-8> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-8" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-8                   \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used  \ntogether with \"and\" expression (le operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L267> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-9> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-9" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-9                   \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used\ntogether with \"or\" expression (lt operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L283> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-10> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-10" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-10                  \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used  \ntogether with \"or\" expression (le operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L299> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-11> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-11" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-11                  \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used  \ntogether with \"fn:true\"/or expression (lt operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L315> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-12> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-12" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-12                  \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used  \ntogether with \"fn:true\"/or expression (le operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L331> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-13> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-13" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-13                  \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used  \ntogether with \"fn:false\"/or expression (lt operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L347> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dayTimeDuration-less-than-14> a mf:QueryEvaluationTest ;
+  mf:name "op-dayTimeDuration-less-than-14" ;
+  rdfs:comment "*******************************************************\nTest: op-dayTimeDuration-less-than-14                  \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dayTimeDuration-less-than\" function used  \ntogether with \"fn:false\"/or expression (le operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L363> ;
+  mf:action [ qt:query <op-dayTimeDuration-less-than-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationLT-1> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationLT-1" ;
+  rdfs:comment "*******************************************************\n Test: K-DayTimeDurationLT-1                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:dayTimeDuration.  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L379> ;
+  mf:action [ qt:query <K-DayTimeDurationLT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationLT-2> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationLT-2" ;
+  rdfs:comment "*******************************************************\n Test: K-DayTimeDurationLT-2                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:dayTimeDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L394> ;
+  mf:action [ qt:query <K-DayTimeDurationLT-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationLT-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationLT-3" ;
+  rdfs:comment "*******************************************************\n Test: K-DayTimeDurationLT-3                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'lt' for xs:dayTimeDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L409> ;
+  mf:action [ qt:query <K-DayTimeDurationLT-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationLT-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationLT-4" ;
+  rdfs:comment "*******************************************************\n Test: K-DayTimeDurationLT-4                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:dayTimeDuration.  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L424> ;
+  mf:action [ qt:query <K-DayTimeDurationLT-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationLT-5> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationLT-5" ;
+  rdfs:comment "*******************************************************\n Test: K-DayTimeDurationLT-5                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:dayTimeDuration.  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L439> ;
+  mf:action [ qt:query <K-DayTimeDurationLT-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DayTimeDurationLT-6> a mf:QueryEvaluationTest ;
+  mf:name "K-DayTimeDurationLT-6" ;
+  rdfs:comment "*******************************************************\n Test: K-DayTimeDurationLT-6                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'le' for xs:dayTimeDuration, evaluating to false. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dayTimeDuration-less-than.xml#L454> ;
+  mf:action [ qt:query <K-DayTimeDurationLT-6.rq> ] ;
+  mf:result <../true.srj> .

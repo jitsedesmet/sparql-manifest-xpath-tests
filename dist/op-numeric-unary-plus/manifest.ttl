@@ -1,0 +1,410 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-numeric-unary-plus" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-numeric-unary-plusint1args-1>
+    <#op-numeric-unary-plusint1args-2>
+    <#op-numeric-unary-plusint1args-3>
+    <#op-numeric-unary-plusintg1args-1>
+    <#op-numeric-unary-plusintg1args-2>
+    <#op-numeric-unary-plusintg1args-3>
+    <#op-numeric-unary-plusdec1args-1>
+    <#op-numeric-unary-plusdec1args-2>
+    <#op-numeric-unary-plusdec1args-3>
+    <#op-numeric-unary-plusdbl1args-1>
+    <#op-numeric-unary-plusdbl1args-2>
+    <#op-numeric-unary-plusdbl1args-3>
+    <#op-numeric-unary-plusflt1args-1>
+    <#op-numeric-unary-plusflt1args-2>
+    <#op-numeric-unary-plusflt1args-3>
+    <#op-numeric-unary-pluslng1args-1>
+    <#op-numeric-unary-pluslng1args-2>
+    <#op-numeric-unary-pluslng1args-3>
+    <#op-numeric-unary-plususht1args-1>
+    <#op-numeric-unary-plususht1args-2>
+    <#op-numeric-unary-plususht1args-3>
+    <#op-numeric-unary-plusnint1args-1>
+    <#op-numeric-unary-plusnint1args-2>
+    <#op-numeric-unary-plusnint1args-3>
+    <#op-numeric-unary-pluspint1args-1>
+    <#op-numeric-unary-pluspint1args-2>
+    <#op-numeric-unary-pluspint1args-3>
+    <#op-numeric-unary-plusulng1args-1>
+    <#op-numeric-unary-plusulng1args-2>
+    <#op-numeric-unary-plusulng1args-3>
+    <#op-numeric-unary-plusnpi1args-1>
+    <#op-numeric-unary-plusnpi1args-2>
+    <#op-numeric-unary-plusnpi1args-3>
+    <#op-numeric-unary-plusnni1args-1>
+    <#op-numeric-unary-plusnni1args-2>
+    <#op-numeric-unary-plusnni1args-3>
+    <#op-numeric-unary-plussht1args-1>
+    <#op-numeric-unary-plussht1args-2>
+    <#op-numeric-unary-plussht1args-3>
+    <#K-NumericUnaryPlus-2>
+    <#K-NumericUnaryPlus-3>
+    <#K-NumericUnaryPlus-4>
+    <#K-NumericUnaryPlus-5>
+    <#K-NumericUnaryPlus-6>
+    <#K-NumericUnaryPlus-7>
+    <#K-NumericUnaryPlus-8>
+    <#K-NumericUnaryPlus-9>
+    <#K-NumericUnaryPlus-10>
+    <#K-NumericUnaryPlus-11>
+    <#K-NumericUnaryPlus-12>
+  ) .
+
+<#op-numeric-unary-plusint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusint1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L7> ;
+  mf:action [ qt:query <op-numeric-unary-plusint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusint1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:int(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L16> ;
+  mf:action [ qt:query <op-numeric-unary-plusint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusint1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L25> ;
+  mf:action [ qt:query <op-numeric-unary-plusint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusintg1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L34> ;
+  mf:action [ qt:query <op-numeric-unary-plusintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusintg1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L43> ;
+  mf:action [ qt:query <op-numeric-unary-plusintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusintg1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L52> ;
+  mf:action [ qt:query <op-numeric-unary-plusintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusdec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusdec1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L61> ;
+  mf:action [ qt:query <op-numeric-unary-plusdec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusdec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusdec1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L70> ;
+  mf:action [ qt:query <op-numeric-unary-plusdec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusdec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusdec1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L79> ;
+  mf:action [ qt:query <op-numeric-unary-plusdec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusdbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusdbl1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L88> ;
+  mf:action [ qt:query <op-numeric-unary-plusdbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusdbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusdbl1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:double(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L97> ;
+  mf:action [ qt:query <op-numeric-unary-plusdbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusdbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusdbl1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L106> ;
+  mf:action [ qt:query <op-numeric-unary-plusdbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusflt1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L115> ;
+  mf:action [ qt:query <op-numeric-unary-plusflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusflt1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:float(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L124> ;
+  mf:action [ qt:query <op-numeric-unary-plusflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusflt1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L133> ;
+  mf:action [ qt:query <op-numeric-unary-plusflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-pluslng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-pluslng1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L142> ;
+  mf:action [ qt:query <op-numeric-unary-pluslng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-pluslng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-pluslng1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L151> ;
+  mf:action [ qt:query <op-numeric-unary-pluslng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-pluslng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-pluslng1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L160> ;
+  mf:action [ qt:query <op-numeric-unary-pluslng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plususht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plususht1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L169> ;
+  mf:action [ qt:query <op-numeric-unary-plususht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plususht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plususht1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L178> ;
+  mf:action [ qt:query <op-numeric-unary-plususht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plususht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plususht1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L187> ;
+  mf:action [ qt:query <op-numeric-unary-plususht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnint1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L196> ;
+  mf:action [ qt:query <op-numeric-unary-plusnint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnint1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L205> ;
+  mf:action [ qt:query <op-numeric-unary-plusnint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnint1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L214> ;
+  mf:action [ qt:query <op-numeric-unary-plusnint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-pluspint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-pluspint1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L223> ;
+  mf:action [ qt:query <op-numeric-unary-pluspint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-pluspint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-pluspint1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L232> ;
+  mf:action [ qt:query <op-numeric-unary-pluspint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-pluspint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-pluspint1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L241> ;
+  mf:action [ qt:query <op-numeric-unary-pluspint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusulng1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L250> ;
+  mf:action [ qt:query <op-numeric-unary-plusulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusulng1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L259> ;
+  mf:action [ qt:query <op-numeric-unary-plusulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusulng1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L268> ;
+  mf:action [ qt:query <op-numeric-unary-plusulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnpi1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L277> ;
+  mf:action [ qt:query <op-numeric-unary-plusnpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnpi1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L286> ;
+  mf:action [ qt:query <op-numeric-unary-plusnpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnpi1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L295> ;
+  mf:action [ qt:query <op-numeric-unary-plusnpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnni1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L304> ;
+  mf:action [ qt:query <op-numeric-unary-plusnni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnni1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L313> ;
+  mf:action [ qt:query <op-numeric-unary-plusnni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plusnni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plusnni1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L322> ;
+  mf:action [ qt:query <op-numeric-unary-plusnni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plussht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plussht1args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L331> ;
+  mf:action [ qt:query <op-numeric-unary-plussht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plussht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plussht1args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L340> ;
+  mf:action [ qt:query <op-numeric-unary-plussht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-unary-plussht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-unary-plussht1args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-unary-plus\" operator with the arguments set as follows: $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L349> ;
+  mf:action [ qt:query <op-numeric-unary-plussht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-2> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-2" ;
+  rdfs:comment "A test whose essence is: `(+3) eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L367> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-3> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-3" ;
+  rdfs:comment "A test whose essence is: `(+3) eq +3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L376> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-4> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-4" ;
+  rdfs:comment "A test whose essence is: `(+3) eq +(3)`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L385> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-5> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-5" ;
+  rdfs:comment "A test whose essence is: `+(3) eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L394> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-6> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-6" ;
+  rdfs:comment "A test whose essence is: `+(3) eq +3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L403> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-7> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-7" ;
+  rdfs:comment "A test whose essence is: `-(3) ne 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L412> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-8> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-8" ;
+  rdfs:comment "A test whose essence is: `----------3 eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L421> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-9> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-9" ;
+  rdfs:comment "A test whose essence is: `+++++++++++3 eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L430> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-10> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-10" ;
+  rdfs:comment "A test whose essence is: `-+-+-+-+-+-+-+-3 eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L439> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-11> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-11" ;
+  rdfs:comment "A test whose essence is: `-+-+-+-+-+-++-+-++-+-+-+-+++3 eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L448> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericUnaryPlus-12> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericUnaryPlus-12" ;
+  rdfs:comment "A test whose essence is: `+++3 eq ++3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L457> ;
+  mf:action [ qt:query <K-NumericUnaryPlus-12.rq> ] ;
+  mf:result <../true.srj> .

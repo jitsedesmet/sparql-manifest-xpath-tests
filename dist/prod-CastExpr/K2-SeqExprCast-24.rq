@@ -1,0 +1,7 @@
+# QT3 test case K2-SeqExprCast-24 of test set prod-CastExpr, which tests the XPath expression
+#   xs:unsignedShort("65535")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L20911
+ASK {
+  BIND("65535"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> AS ?result)
+  FILTER(( ?result = "65535"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

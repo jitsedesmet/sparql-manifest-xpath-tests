@@ -1,0 +1,7 @@
+# QT3 test case CastAs308 of test set prod-CastExpr, which tests the XPath expression
+#   xs:yearMonthDuration("P1Y2M") cast as xs:integer
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3213
+ASK {
+  BIND(<http://www.w3.org/2001/XMLSchema#integer> ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1Y2M" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

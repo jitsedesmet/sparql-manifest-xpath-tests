@@ -1,0 +1,32 @@
+name: Check for a newer version of QT3
+
+# Warns, without failing, when the QT3 commit that the tests are generated from is not the latest one.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Compare the pinned QT3 commit with the latest one
+        run: |
+          pinned=$(sed -n "s/^const QT3_COMMIT = '\([0-9a-f]*\)';$/\1/p" src/generate.ts)
+          latest=$(git ls-remote https://github.com/w3c/qt3tests.git HEAD | cut -f1)
+          if [ -z "$pinned" ] || [ -z "$latest" ]; then
+            echo "::warning title=Unknown QT3 version::Could not determine the pinned (${pinned:-?}) or latest (${latest:-?}) QT3 commit."
+          elif [ "$pinned" != "$latest" ]; then
+            compare="https://github.com/w3c/qt3tests/compare/${pinned}...${latest}"
+            echo "::warning title=Newer QT3 version::QT3 has a newer commit ${latest} than the pinned ${pinned} in src/generate.ts, see ${compare}"
+            echo "QT3 has a newer commit \`${latest}\` than the pinned \`${pinned}\` in \`src/generate.ts\`: [compare the changes](${compare})." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "The pinned QT3 commit ${pinned} is the latest one."
+          fi

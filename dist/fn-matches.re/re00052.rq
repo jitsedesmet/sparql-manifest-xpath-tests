@@ -1,0 +1,7 @@
+# QT3 test case re00052 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('abc', ',') satisfies matches($s, '^(?:[^\s]{3})$')) and (every $s in tokenize('a c', ',') satisfies not(matches($s, '^(?:[^\s]{3})$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L424
+ASK {
+  BIND(( REGEX( "abc" , "^(?:[^\\s]{3})$" ) && ! REGEX( "a c" , "^(?:[^\\s]{3})$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

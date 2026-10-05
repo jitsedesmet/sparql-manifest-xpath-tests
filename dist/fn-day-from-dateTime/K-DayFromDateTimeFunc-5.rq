@@ -1,0 +1,7 @@
+# QT3 test case K-DayFromDateTimeFunc-5 of test set fn-day-from-dateTime, which tests the XPath expression
+#   day-from-dateTime(xs:dateTime("2001-02-03T08:23:12.43")) eq 3
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/day-from-dateTime.xml#L241
+ASK {
+  BIND(( DAY( <http://www.w3.org/2001/XMLSchema#dateTime> ( "2001-02-03T08:23:12.43" ) ) = "3"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

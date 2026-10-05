@@ -1,0 +1,7 @@
+# QT3 test case fn-floorpint1args-2 of test set fn-floor, which tests the XPath expression
+#   fn:floor(xs:positiveInteger("52704602390610033"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L276
+ASK {
+  BIND(FLOOR( "52704602390610033"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "52704602390610033" ))
+}

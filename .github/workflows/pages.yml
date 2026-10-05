@@ -1,0 +1,60 @@
+name: Check and publish the manifest
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Only cancel the runs of pull requests, as cancelling a deployment of GitHub Pages can break it
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+          cache: yarn
+      - id: qt3
+        run: echo "commit=$(sed -n "s/^const QT3_COMMIT = '\([0-9a-f]*\)';$/\1/p" src/generate.ts)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v6
+        with:
+          path: .cache
+          key: qt3-${{ steps.qt3.outputs.commit }}
+      - run: yarn install --frozen-lockfile
+      - run: yarn run typecheck
+      - run: yarn run generate
+      - name: Check that the tracked tests in dist/ are up to date
+        run: |
+          if [ -n "$(git status --porcelain -- dist)" ]; then
+            git status --short -- dist | head -50
+            echo "::error::The tests in dist/ differ from the generated ones, run 'yarn run generate' and commit dist/."
+            exit 1
+          fi
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v5

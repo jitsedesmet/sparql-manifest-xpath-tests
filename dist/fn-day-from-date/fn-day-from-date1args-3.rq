@@ -1,0 +1,8 @@
+# QT3 test case fn-day-from-date1args-3 of test set fn-day-from-date, which tests the XPath expression
+#   fn:day-from-date(xs:date("2030-12-31Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/day-from-date.xml#L25
+# The test needs the constructor function xsd:date, DAY on xsd:date, which SPARQL does not define
+ASK {
+  BIND(DAY( <http://www.w3.org/2001/XMLSchema#date> ( "2030-12-31Z" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "31" ))
+}

@@ -1,0 +1,7 @@
+# QT3 test case op-numeric-equalnpi2args-4 of test set op-numeric-equal, which tests the XPath expression
+#   xs:nonPositiveInteger("-999999999999999999") eq xs:nonPositiveInteger("-475688437271870490")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L934
+ASK {
+  BIND(( "-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> = "-475688437271870490"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

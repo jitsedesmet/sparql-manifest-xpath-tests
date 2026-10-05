@@ -1,0 +1,7 @@
+# QT3 test case op-numeric-less-thannni2args-6 of test set op-numeric-less-than, which tests the XPath expression
+#   xs:nonNegativeInteger("0") ge xs:nonNegativeInteger("0")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml#L2076
+ASK {
+  BIND(( "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> >= "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

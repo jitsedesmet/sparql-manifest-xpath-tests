@@ -1,0 +1,42 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set prod-OrExpr" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-logical-and-066>
+    <#op-logical-and-068>
+    <#op-logical-or-066>
+    <#op-logical-or-068>
+  ) .
+
+<#op-logical-and-066> a mf:QueryEvaluationTest ;
+  mf:name "op-logical-and-066" ;
+  rdfs:comment "Logical 'and' using decimal values" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L669> ;
+  mf:action [ qt:query <op-logical-and-066.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-logical-and-068> a mf:QueryEvaluationTest ;
+  mf:name "op-logical-and-068" ;
+  rdfs:comment "Logical 'and' using decimal values" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L692> ;
+  mf:action [ qt:query <op-logical-and-068.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-logical-or-066> a mf:QueryEvaluationTest ;
+  mf:name "op-logical-or-066" ;
+  rdfs:comment "Logical 'or' using decimal values" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2268> ;
+  mf:action [ qt:query <op-logical-or-066.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-logical-or-068> a mf:QueryEvaluationTest ;
+  mf:name "op-logical-or-068" ;
+  rdfs:comment "Logical 'or' using decimal values" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/OrExpr.xml#L2291> ;
+  mf:action [ qt:query <op-logical-or-068.rq> ] ;
+  mf:result <../true.srj> .

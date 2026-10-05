@@ -1,0 +1,570 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-abs" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-absint1args-1>
+    <#fn-absint1args-2>
+    <#fn-absint1args-3>
+    <#fn-absintg1args-1>
+    <#fn-absintg1args-2>
+    <#fn-absintg1args-3>
+    <#fn-absdec1args-1>
+    <#fn-absdec1args-2>
+    <#fn-absdec1args-3>
+    <#fn-absdbl1args-1>
+    <#fn-absdbl1args-2>
+    <#fn-absdbl1args-3>
+    <#fn-absflt1args-1>
+    <#fn-absflt1args-2>
+    <#fn-absflt1args-3>
+    <#fn-abslng1args-1>
+    <#fn-abslng1args-2>
+    <#fn-abslng1args-3>
+    <#fn-absusht1args-1>
+    <#fn-absusht1args-2>
+    <#fn-absusht1args-3>
+    <#fn-absnint1args-1>
+    <#fn-absnint1args-2>
+    <#fn-absnint1args-3>
+    <#fn-abspint1args-1>
+    <#fn-abspint1args-2>
+    <#fn-abspint1args-3>
+    <#fn-absulng1args-1>
+    <#fn-absulng1args-2>
+    <#fn-absulng1args-3>
+    <#fn-absnpi1args-1>
+    <#fn-absnpi1args-2>
+    <#fn-absnpi1args-3>
+    <#fn-absnni1args-1>
+    <#fn-absnni1args-2>
+    <#fn-absnni1args-3>
+    <#fn-abssht1args-1>
+    <#fn-abssht1args-2>
+    <#fn-abssht1args-3>
+    <#fn-abs-more-args-001>
+    <#fn-abs-more-args-002>
+    <#fn-abs-more-args-003>
+    <#fn-abs-more-args-004>
+    <#fn-abs-more-args-005>
+    <#fn-abs-more-args-006>
+    <#fn-abs-more-args-007>
+    <#fn-abs-more-args-008>
+    <#fn-abs-more-args-009>
+    <#fn-abs-more-args-010>
+    <#fn-abs-more-args-011>
+    <#fn-abs-more-args-012>
+    <#fn-abs-more-args-013>
+    <#fn-abs-more-args-014>
+    <#fn-abs-more-args-015>
+    <#fn-abs-more-args-016>
+    <#fn-abs-more-args-017>
+    <#fn-abs-more-args-018>
+    <#fn-abs-more-args-019>
+    <#fn-abs-more-args-020>
+    <#fn-abs-more-args-021>
+    <#fn-abs-more-args-022>
+    <#fn-abs-more-args-023>
+    <#fn-abs-more-args-024>
+    <#K-ABSFunc-4>
+    <#K-ABSFunc-5>
+    <#K2-ABSFunc-1>
+    <#K2-ABSFunc-47>
+    <#K2-ABSFunc-48>
+    <#K2-ABSFunc-49>
+    <#K2-ABSFunc-50>
+  ) .
+
+<#fn-absint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absint1args-1" ;
+  rdfs:comment "Test: absint1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L46> ;
+  mf:action [ qt:query <fn-absint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absint1args-2" ;
+  rdfs:comment "Test: absint1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:int(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L73> ;
+  mf:action [ qt:query <fn-absint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absint1args-3" ;
+  rdfs:comment "Test: absint1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L86> ;
+  mf:action [ qt:query <fn-absint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absintg1args-1" ;
+  rdfs:comment "Test: absintg1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L99> ;
+  mf:action [ qt:query <fn-absintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absintg1args-2" ;
+  rdfs:comment "Test: absintg1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L112> ;
+  mf:action [ qt:query <fn-absintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absintg1args-3" ;
+  rdfs:comment "Test: absintg1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L125> ;
+  mf:action [ qt:query <fn-absintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absdec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absdec1args-1" ;
+  rdfs:comment "Test: absdec1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L138> ;
+  mf:action [ qt:query <fn-absdec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absdec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absdec1args-2" ;
+  rdfs:comment "Test: absdec1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L151> ;
+  mf:action [ qt:query <fn-absdec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absdec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absdec1args-3" ;
+  rdfs:comment "Test: absdec1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L178> ;
+  mf:action [ qt:query <fn-absdec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absdbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absdbl1args-1" ;
+  rdfs:comment "Test: absdbl1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L191> ;
+  mf:action [ qt:query <fn-absdbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absdbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absdbl1args-2" ;
+  rdfs:comment "Test: absdbl1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:double(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L218> ;
+  mf:action [ qt:query <fn-absdbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absdbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absdbl1args-3" ;
+  rdfs:comment "Test: absdbl1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L231> ;
+  mf:action [ qt:query <fn-absdbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absflt1args-1" ;
+  rdfs:comment "Test: absflt1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L244> ;
+  mf:action [ qt:query <fn-absflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absflt1args-2" ;
+  rdfs:comment "Test: absflt1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:float(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L271> ;
+  mf:action [ qt:query <fn-absflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absflt1args-3" ;
+  rdfs:comment "Test: absflt1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L284> ;
+  mf:action [ qt:query <fn-absflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abslng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-abslng1args-1" ;
+  rdfs:comment "Test: abslng1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L297> ;
+  mf:action [ qt:query <fn-abslng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abslng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-abslng1args-2" ;
+  rdfs:comment "Test: abslng1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L310> ;
+  mf:action [ qt:query <fn-abslng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abslng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-abslng1args-3" ;
+  rdfs:comment "Test: abslng1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L323> ;
+  mf:action [ qt:query <fn-abslng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absusht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absusht1args-1" ;
+  rdfs:comment "Test: absusht1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L336> ;
+  mf:action [ qt:query <fn-absusht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absusht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absusht1args-2" ;
+  rdfs:comment "Test: absusht1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L349> ;
+  mf:action [ qt:query <fn-absusht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absusht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absusht1args-3" ;
+  rdfs:comment "Test: absusht1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L362> ;
+  mf:action [ qt:query <fn-absusht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnint1args-1" ;
+  rdfs:comment "Test: absnint1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L375> ;
+  mf:action [ qt:query <fn-absnint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnint1args-2" ;
+  rdfs:comment "Test: absnint1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L388> ;
+  mf:action [ qt:query <fn-absnint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnint1args-3" ;
+  rdfs:comment "Test: absnint1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L401> ;
+  mf:action [ qt:query <fn-absnint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abspint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-abspint1args-1" ;
+  rdfs:comment "Test: abspint1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L414> ;
+  mf:action [ qt:query <fn-abspint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abspint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-abspint1args-2" ;
+  rdfs:comment "Test: abspint1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L427> ;
+  mf:action [ qt:query <fn-abspint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abspint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-abspint1args-3" ;
+  rdfs:comment "Test: abspint1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L440> ;
+  mf:action [ qt:query <fn-abspint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absulng1args-1" ;
+  rdfs:comment "Test: absulng1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L453> ;
+  mf:action [ qt:query <fn-absulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absulng1args-2" ;
+  rdfs:comment "Test: absulng1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L466> ;
+  mf:action [ qt:query <fn-absulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absulng1args-3" ;
+  rdfs:comment "Test: absulng1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L479> ;
+  mf:action [ qt:query <fn-absulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnpi1args-1" ;
+  rdfs:comment "Test: absnpi1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L492> ;
+  mf:action [ qt:query <fn-absnpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnpi1args-2" ;
+  rdfs:comment "Test: absnpi1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L505> ;
+  mf:action [ qt:query <fn-absnpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnpi1args-3" ;
+  rdfs:comment "Test: absnpi1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L518> ;
+  mf:action [ qt:query <fn-absnpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnni1args-1" ;
+  rdfs:comment "Test: absnni1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L531> ;
+  mf:action [ qt:query <fn-absnni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnni1args-2" ;
+  rdfs:comment "Test: absnni1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L544> ;
+  mf:action [ qt:query <fn-absnni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-absnni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-absnni1args-3" ;
+  rdfs:comment "Test: absnni1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L557> ;
+  mf:action [ qt:query <fn-absnni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abssht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-abssht1args-1" ;
+  rdfs:comment "Test: abssht1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L570> ;
+  mf:action [ qt:query <fn-abssht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abssht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-abssht1args-2" ;
+  rdfs:comment "Test: abssht1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L583> ;
+  mf:action [ qt:query <fn-abssht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abssht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-abssht1args-3" ;
+  rdfs:comment "Test: abssht1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L596> ;
+  mf:action [ qt:query <fn-abssht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-001> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-001" ;
+  rdfs:comment "Test: fn-abs-more-args-001.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L609> ;
+  mf:action [ qt:query <fn-abs-more-args-001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-002> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-002" ;
+  rdfs:comment "Test: fn-abs-more-args-002.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L622> ;
+  mf:action [ qt:query <fn-abs-more-args-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-003> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-003" ;
+  rdfs:comment "Test: fn-abs-more-args-003.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L635> ;
+  mf:action [ qt:query <fn-abs-more-args-003.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-004> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-004" ;
+  rdfs:comment "Test: fn-abs-more-args-004.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L648> ;
+  mf:action [ qt:query <fn-abs-more-args-004.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-005> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-005" ;
+  rdfs:comment "Test: fn-abs-more-args-005.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: double" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L675> ;
+  mf:action [ qt:query <fn-abs-more-args-005.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-006> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-006" ;
+  rdfs:comment "Test: fn-abs-more-args-006.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L688> ;
+  mf:action [ qt:query <fn-abs-more-args-006.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-007> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-007" ;
+  rdfs:comment "Test: fn-abs-more-args-007.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L701> ;
+  mf:action [ qt:query <fn-abs-more-args-007.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-008> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-008" ;
+  rdfs:comment "Test: fn-abs-more-args-008.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L714> ;
+  mf:action [ qt:query <fn-abs-more-args-008.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-009> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-009" ;
+  rdfs:comment "Test: fn-abs-more-args-009.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L727> ;
+  mf:action [ qt:query <fn-abs-more-args-009.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-010> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-010" ;
+  rdfs:comment "Test: fn-abs-more-args-010.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L740> ;
+  mf:action [ qt:query <fn-abs-more-args-010.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-011> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-011" ;
+  rdfs:comment "Test: fn-abs-more-args-011.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L753> ;
+  mf:action [ qt:query <fn-abs-more-args-011.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-012> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-012" ;
+  rdfs:comment "Test: fn-abs-more-args-012.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: float" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L766> ;
+  mf:action [ qt:query <fn-abs-more-args-012.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-013> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-013" ;
+  rdfs:comment "Test: fn-abs-more-args-013.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: int" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L779> ;
+  mf:action [ qt:query <fn-abs-more-args-013.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-014> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-014" ;
+  rdfs:comment "Test: fn-abs-more-args-014.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: int" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L792> ;
+  mf:action [ qt:query <fn-abs-more-args-014.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-015> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-015" ;
+  rdfs:comment "Test: fn-abs-more-args-015.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L805> ;
+  mf:action [ qt:query <fn-abs-more-args-015.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-016> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-016" ;
+  rdfs:comment "Test: fn-abs-more-args-016.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: integer" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L818> ;
+  mf:action [ qt:query <fn-abs-more-args-016.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-017> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-017" ;
+  rdfs:comment "Test: fn-abs-more-args-017.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: long" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L831> ;
+  mf:action [ qt:query <fn-abs-more-args-017.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-018> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-018" ;
+  rdfs:comment "Test: fn-abs-more-args-018.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: long" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L844> ;
+  mf:action [ qt:query <fn-abs-more-args-018.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-019> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-019" ;
+  rdfs:comment "Test: fn-abs-more-args-019.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: nonNegativeInteger" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L857> ;
+  mf:action [ qt:query <fn-abs-more-args-019.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-020> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-020" ;
+  rdfs:comment "Test: fn-abs-more-args-020.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: nonPositiveIntege" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L870> ;
+  mf:action [ qt:query <fn-abs-more-args-020.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-021> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-021" ;
+  rdfs:comment "Test: fn-abs-more-args-021.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: short" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L883> ;
+  mf:action [ qt:query <fn-abs-more-args-021.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-022> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-022" ;
+  rdfs:comment "Test: fn-abs-more-args-022.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: short" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L896> ;
+  mf:action [ qt:query <fn-abs-more-args-022.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-023> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-023" ;
+  rdfs:comment "Test: fn-abs-more-args-023.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: unsignedLong" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L909> ;
+  mf:action [ qt:query <fn-abs-more-args-023.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-abs-more-args-024> a mf:QueryEvaluationTest ;
+  mf:name "fn-abs-more-args-024" ;
+  rdfs:comment "Test: fn-abs-more-args-024.xq Written By: Pulkita Tyagi Date: Thu Oct 27 03:56:31 2005 Purpose: arg: unsignedShort" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L922> ;
+  mf:action [ qt:query <fn-abs-more-args-024.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ABSFunc-4> a mf:QueryEvaluationTest ;
+  mf:name "K-ABSFunc-4" ;
+  rdfs:comment "Test: K-ABSFunc-4 `abs(10.5) eq 10.5`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L1585> ;
+  mf:action [ qt:query <K-ABSFunc-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-ABSFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-ABSFunc-5" ;
+  rdfs:comment "Test: K-ABSFunc-5 `abs(-10.5) eq 10.5`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L1595> ;
+  mf:action [ qt:query <K-ABSFunc-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-ABSFunc-1> a mf:QueryEvaluationTest ;
+  mf:name "K2-ABSFunc-1" ;
+  rdfs:comment "Test: K2-ABSFunc-1 type xs:integer." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L1615> ;
+  mf:action [ qt:query <K2-ABSFunc-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-ABSFunc-47> a mf:QueryEvaluationTest ;
+  mf:name "K2-ABSFunc-47" ;
+  rdfs:comment "Test: K2-ABSFunc-47" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L2113> ;
+  mf:action [ qt:query <K2-ABSFunc-47.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-ABSFunc-48> a mf:QueryEvaluationTest ;
+  mf:name "K2-ABSFunc-48" ;
+  rdfs:comment "Test: K2-ABSFunc-48 -INF/xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L2123> ;
+  mf:action [ qt:query <K2-ABSFunc-48.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-ABSFunc-49> a mf:QueryEvaluationTest ;
+  mf:name "K2-ABSFunc-49" ;
+  rdfs:comment "Test: K2-ABSFunc-49" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L2133> ;
+  mf:action [ qt:query <K2-ABSFunc-49.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-ABSFunc-50> a mf:QueryEvaluationTest ;
+  mf:name "K2-ABSFunc-50" ;
+  rdfs:comment "Test: K2-ABSFunc-50 -INF/xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L2143> ;
+  mf:action [ qt:query <K2-ABSFunc-50.rq> ] ;
+  mf:result <../true.srj> .

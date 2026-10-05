@@ -1,0 +1,7 @@
+# QT3 test case op-numeric-addsht2args-3 of test set op-numeric-add, which tests the XPath expression
+#   xs:short("-27444") + xs:short("-5324")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L500
+ASK {
+  BIND(( "-27444"^^<http://www.w3.org/2001/XMLSchema#short> + "-5324"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
+  FILTER(( ?result = - "32768"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

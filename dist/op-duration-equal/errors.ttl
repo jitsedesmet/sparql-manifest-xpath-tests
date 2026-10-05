@@ -1,0 +1,266 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-duration-equal" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#K-DurationEQ-11>
+    <#K-DurationEQ-12>
+    <#K-DurationEQ-13>
+    <#K-DurationEQ-14>
+    <#K-DurationEQ-33>
+    <#K-DurationEQ-34>
+    <#K-DurationEQ-35>
+    <#K-DurationEQ-36>
+    <#K-DurationEQ-37>
+    <#K-DurationEQ-38>
+    <#K-DurationEQ-39>
+    <#K-DurationEQ-40>
+    <#K-DurationEQ-41>
+    <#K-DurationEQ-42>
+    <#K-DurationEQ-43>
+    <#K-DurationEQ-44>
+    <#K-DurationEQ-45>
+    <#K-DurationEQ-46>
+    <#K-DurationEQ-47>
+    <#K-DurationEQ-48>
+    <#K-DurationEQ-49>
+    <#K-DurationEQ-50>
+    <#K-DurationEQ-51>
+    <#K-DurationEQ-52>
+    <#K-DurationEQ-53>
+    <#K-DurationEQ-54>
+    <#K-DurationEQ-55>
+    <#K-DurationEQ-56>
+    <#K-DurationEQ-57>
+    <#K-DurationEQ-58>
+    <#K-DurationEQ-59>
+    <#K-DurationEQ-60>
+  ) .
+
+<#K-DurationEQ-11> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-11" ;
+  rdfs:comment "The 'lt' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L726> ;
+  mf:action [ qt:query <K-DurationEQ-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-12> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-12" ;
+  rdfs:comment "The 'le' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L735> ;
+  mf:action [ qt:query <K-DurationEQ-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-13> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-13" ;
+  rdfs:comment "The 'gt' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L744> ;
+  mf:action [ qt:query <K-DurationEQ-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-14> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-14" ;
+  rdfs:comment "The 'ge' operator is not available between xs:duration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L753> ;
+  mf:action [ qt:query <K-DurationEQ-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-33> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-33" ;
+  rdfs:comment "The 'ge' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L924> ;
+  mf:action [ qt:query <K-DurationEQ-33.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-34> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-34" ;
+  rdfs:comment "The 'gt' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L933> ;
+  mf:action [ qt:query <K-DurationEQ-34.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-35> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-35" ;
+  rdfs:comment "The 'lt' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L942> ;
+  mf:action [ qt:query <K-DurationEQ-35.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-36> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-36" ;
+  rdfs:comment "The 'le' operator is not available between xs:duration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L951> ;
+  mf:action [ qt:query <K-DurationEQ-36.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-37> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-37" ;
+  rdfs:comment "The 'ge' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L960> ;
+  mf:action [ qt:query <K-DurationEQ-37.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-38> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-38" ;
+  rdfs:comment "The 'gt' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L969> ;
+  mf:action [ qt:query <K-DurationEQ-38.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-39> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-39" ;
+  rdfs:comment "The 'lt' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L978> ;
+  mf:action [ qt:query <K-DurationEQ-39.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-40> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-40" ;
+  rdfs:comment "The 'le' operator is not available between xs:duration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L987> ;
+  mf:action [ qt:query <K-DurationEQ-40.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-41> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-41" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L996> ;
+  mf:action [ qt:query <K-DurationEQ-41.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-42> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-42" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1005> ;
+  mf:action [ qt:query <K-DurationEQ-42.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-43> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-43" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1014> ;
+  mf:action [ qt:query <K-DurationEQ-43.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-44> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-44" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1023> ;
+  mf:action [ qt:query <K-DurationEQ-44.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-45> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-45" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1032> ;
+  mf:action [ qt:query <K-DurationEQ-45.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-46> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-46" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1041> ;
+  mf:action [ qt:query <K-DurationEQ-46.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-47> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-47" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1050> ;
+  mf:action [ qt:query <K-DurationEQ-47.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-48> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-48" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:dayTimeDuration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1059> ;
+  mf:action [ qt:query <K-DurationEQ-48.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-49> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-49" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1068> ;
+  mf:action [ qt:query <K-DurationEQ-49.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-50> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-50" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1077> ;
+  mf:action [ qt:query <K-DurationEQ-50.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-51> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-51" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1086> ;
+  mf:action [ qt:query <K-DurationEQ-51.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-52> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-52" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:duration." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1095> ;
+  mf:action [ qt:query <K-DurationEQ-52.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-53> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-53" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1104> ;
+  mf:action [ qt:query <K-DurationEQ-53.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-54> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-54" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1113> ;
+  mf:action [ qt:query <K-DurationEQ-54.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-55> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-55" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1122> ;
+  mf:action [ qt:query <K-DurationEQ-55.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-56> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-56" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1131> ;
+  mf:action [ qt:query <K-DurationEQ-56.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-57> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-57" ;
+  rdfs:comment "The 'ge' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1140> ;
+  mf:action [ qt:query <K-DurationEQ-57.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-58> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-58" ;
+  rdfs:comment "The 'gt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1149> ;
+  mf:action [ qt:query <K-DurationEQ-58.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-59> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-59" ;
+  rdfs:comment "The 'lt' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1158> ;
+  mf:action [ qt:query <K-DurationEQ-59.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DurationEQ-60> a mf:QueryEvaluationTest ;
+  mf:name "K-DurationEQ-60" ;
+  rdfs:comment "The 'le' operator is not available between xs:yearMonthDuration and xs:duration(reversed operand order)(reversed operand order)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1167> ;
+  mf:action [ qt:query <K-DurationEQ-60.rq> ] ;
+  mf:result <../true.srj> .

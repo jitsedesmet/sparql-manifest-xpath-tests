@@ -1,0 +1,82 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-substring" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-substring-3>
+    <#fn-substring-10>
+    <#fn-substring-20>
+    <#fn-substring-31>
+    <#K-SubstringFunc-5>
+    <#K-SubstringFunc-10>
+    <#K-SubstringFunc-11>
+    <#K-SubstringFunc-13>
+    <#K-SubstringFunc-14>
+  ) .
+
+<#fn-substring-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-3" ;
+  rdfs:comment "Evaluation of substring function as per example 3 (for this function) from the F&O specs." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L34> ;
+  mf:action [ qt:query <fn-substring-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-10" ;
+  rdfs:comment "Evaluation of substring function as per example 10 (for this function) from the F&O specs." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L97> ;
+  mf:action [ qt:query <fn-substring-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-20> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-20" ;
+  rdfs:comment "Evaluation of substring function, where the start location uses a \"double\" constructor." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L187> ;
+  mf:action [ qt:query <fn-substring-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-substring-31> a mf:QueryEvaluationTest ;
+  mf:name "fn-substring-31" ;
+  rdfs:comment "start is a double less than zero" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L287> ;
+  mf:action [ qt:query <fn-substring-31.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringFunc-5" ;
+  rdfs:comment "A test whose essence is: `substring(\"12345\", 1.5, 2.6) eq \"234\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L332> ;
+  mf:action [ qt:query <K-SubstringFunc-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringFunc-10> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringFunc-10" ;
+  rdfs:comment "A test whose essence is: `substring(\"12345\", 0 div 0E0, 3) eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L377> ;
+  mf:action [ qt:query <K-SubstringFunc-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringFunc-11> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringFunc-11" ;
+  rdfs:comment "A test whose essence is: `substring(\"12345\", 1, 0 div 0E0) eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L386> ;
+  mf:action [ qt:query <K-SubstringFunc-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringFunc-13> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringFunc-13" ;
+  rdfs:comment "A test whose essence is: `substring(\"12345\", -42, 1 div 0E0) eq \"12345\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L404> ;
+  mf:action [ qt:query <K-SubstringFunc-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-SubstringFunc-14> a mf:QueryEvaluationTest ;
+  mf:name "K-SubstringFunc-14" ;
+  rdfs:comment "A test whose essence is: `substring(\"12345\", -1 div 0E0, 1 div 0E0) eq \"\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L413> ;
+  mf:action [ qt:query <K-SubstringFunc-14.rq> ] ;
+  mf:result <../true.srj> .

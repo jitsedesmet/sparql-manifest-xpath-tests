@@ -1,0 +1,522 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-numeric-divide" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-numeric-divideint2args-1>
+    <#op-numeric-divideintg2args-1>
+    <#op-numeric-divideintg2args-3>
+    <#op-numeric-divideintg2args-5>
+    <#op-numeric-dividedec2args-1>
+    <#op-numeric-dividedec2args-3>
+    <#op-numeric-dividedec2args-5>
+    <#op-numeric-dividedbl2args-1>
+    <#op-numeric-dividedbl2args-2>
+    <#op-numeric-dividedbl2args-3>
+    <#op-numeric-dividedbl2args-4>
+    <#op-numeric-divideflt2args-1>
+    <#op-numeric-divideflt2args-2>
+    <#op-numeric-divideflt2args-3>
+    <#op-numeric-divideflt2args-4>
+    <#op-numeric-dividelng2args-1>
+    <#op-numeric-dividelng2args-3>
+    <#op-numeric-dividelng2args-5>
+    <#op-numeric-divideusht2args-1>
+    <#op-numeric-divideusht2args-2>
+    <#op-numeric-dividenint2args-1>
+    <#op-numeric-dividenint2args-3>
+    <#op-numeric-dividenint2args-5>
+    <#op-numeric-dividepint2args-1>
+    <#op-numeric-dividepint2args-2>
+    <#op-numeric-dividepint2args-3>
+    <#op-numeric-dividepint2args-5>
+    <#op-numeric-divideulng2args-1>
+    <#op-numeric-divideulng2args-2>
+    <#op-numeric-dividenpi2args-1>
+    <#op-numeric-dividenpi2args-3>
+    <#op-numeric-dividenni2args-1>
+    <#op-numeric-dividenni2args-2>
+    <#op-numeric-dividesht2args-1>
+    <#op-numeric-dividesht2args-3>
+    <#op-numeric-dividesht2args-5>
+    <#op-numeric-dividemix2args-3>
+    <#K-NumericDivide-1>
+    <#K-NumericDivide-2>
+    <#K-NumericDivide-3>
+    <#K-NumericDivide-4>
+    <#K-NumericDivide-5>
+    <#K-NumericDivide-6>
+    <#K-NumericDivide-7>
+    <#K-NumericDivide-8>
+    <#K-NumericDivide-9>
+    <#K-NumericDivide-10>
+    <#K-NumericDivide-11>
+    <#K-NumericDivide-12>
+    <#K-NumericDivide-13>
+    <#K-NumericDivide-14>
+    <#K-NumericDivide-15>
+    <#K2-NumericDivide-5>
+    <#K2-NumericDivide-6>
+    <#K2-NumericDivide-7>
+    <#K2-NumericDivide-8>
+    <#K2-NumericDivide-9>
+    <#K2-NumericDivide-10>
+    <#K2-NumericDivide-11>
+    <#K2-NumericDivide-12>
+    <#K2-NumericDivide-13>
+    <#K2-NumericDivide-14>
+    <#K2-NumericDivide-15>
+    <#K2-NumericDivide-16>
+  ) .
+
+<#op-numeric-divideint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L7> ;
+  mf:action [ qt:query <op-numeric-divideint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideintg2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideintg2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L52> ;
+  mf:action [ qt:query <op-numeric-divideintg2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideintg2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideintg2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:integer(upper bound) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L73> ;
+  mf:action [ qt:query <op-numeric-divideintg2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideintg2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideintg2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L94> ;
+  mf:action [ qt:query <op-numeric-divideintg2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividedec2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividedec2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L112> ;
+  mf:action [ qt:query <op-numeric-dividedec2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividedec2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividedec2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:decimal(upper bound) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L133> ;
+  mf:action [ qt:query <op-numeric-dividedec2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividedec2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividedec2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L154> ;
+  mf:action [ qt:query <op-numeric-dividedec2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividedbl2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividedbl2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L163> ;
+  mf:action [ qt:query <op-numeric-dividedbl2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividedbl2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividedbl2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:double(mid range) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L172> ;
+  mf:action [ qt:query <op-numeric-dividedbl2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividedbl2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividedbl2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:double(upper bound) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L181> ;
+  mf:action [ qt:query <op-numeric-dividedbl2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividedbl2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividedbl2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L190> ;
+  mf:action [ qt:query <op-numeric-dividedbl2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideflt2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideflt2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L199> ;
+  mf:action [ qt:query <op-numeric-divideflt2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideflt2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideflt2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:float(mid range) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L208> ;
+  mf:action [ qt:query <op-numeric-divideflt2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideflt2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideflt2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:float(upper bound) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L217> ;
+  mf:action [ qt:query <op-numeric-divideflt2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideflt2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideflt2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L226> ;
+  mf:action [ qt:query <op-numeric-divideflt2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividelng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividelng2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L235> ;
+  mf:action [ qt:query <op-numeric-dividelng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividelng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividelng2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:long(upper bound) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L256> ;
+  mf:action [ qt:query <op-numeric-dividelng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividelng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividelng2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L277> ;
+  mf:action [ qt:query <op-numeric-dividelng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideusht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideusht2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L286> ;
+  mf:action [ qt:query <op-numeric-divideusht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideusht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideusht2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L295> ;
+  mf:action [ qt:query <op-numeric-divideusht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividenint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividenint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L304> ;
+  mf:action [ qt:query <op-numeric-dividenint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividenint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividenint2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(upper bound) $arg2 = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L325> ;
+  mf:action [ qt:query <op-numeric-dividenint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividenint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividenint2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L352> ;
+  mf:action [ qt:query <op-numeric-dividenint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividepint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividepint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L361> ;
+  mf:action [ qt:query <op-numeric-dividepint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividepint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividepint2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(mid range) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L370> ;
+  mf:action [ qt:query <op-numeric-dividepint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividepint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividepint2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(upper bound) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L379> ;
+  mf:action [ qt:query <op-numeric-dividepint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividepint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividepint2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L400> ;
+  mf:action [ qt:query <op-numeric-dividepint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideulng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideulng2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L415> ;
+  mf:action [ qt:query <op-numeric-divideulng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divideulng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divideulng2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L424> ;
+  mf:action [ qt:query <op-numeric-divideulng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividenpi2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividenpi2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L433> ;
+  mf:action [ qt:query <op-numeric-dividenpi2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividenpi2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividenpi2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(upper bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L454> ;
+  mf:action [ qt:query <op-numeric-dividenpi2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividenni2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividenni2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L475> ;
+  mf:action [ qt:query <op-numeric-dividenni2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividenni2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividenni2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L484> ;
+  mf:action [ qt:query <op-numeric-dividenni2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividesht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividesht2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L493> ;
+  mf:action [ qt:query <op-numeric-dividesht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividesht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividesht2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:short(upper bound) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L511> ;
+  mf:action [ qt:query <op-numeric-dividesht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividesht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividesht2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L532> ;
+  mf:action [ qt:query <op-numeric-dividesht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-dividemix2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividemix2args-3" ;
+  rdfs:comment "Simple division test, second operator cast string to integer" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L564> ;
+  mf:action [ qt:query <op-numeric-dividemix2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-1> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-1" ;
+  rdfs:comment "A test whose essence is: `xs:double(6) div xs:double(2) eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L633> ;
+  mf:action [ qt:query <K-NumericDivide-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-2> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-2" ;
+  rdfs:comment "A test whose essence is: `xs:decimal(6) div xs:decimal(2) eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L642> ;
+  mf:action [ qt:query <K-NumericDivide-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-3> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-3" ;
+  rdfs:comment "A test whose essence is: `xs:integer(6) div xs:integer(2) eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L651> ;
+  mf:action [ qt:query <K-NumericDivide-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-4> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-4" ;
+  rdfs:comment "A test whose essence is: `xs:float(6) div xs:float(2) eq 3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L660> ;
+  mf:action [ qt:query <K-NumericDivide-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-5> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-5" ;
+  rdfs:comment "A test whose essence is: `xs:double(5) div xs:double(2) eq 2.5`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L669> ;
+  mf:action [ qt:query <K-NumericDivide-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-6> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-6" ;
+  rdfs:comment "A test whose essence is: `xs:double(5) div xs:double(2) ne 2.6`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L678> ;
+  mf:action [ qt:query <K-NumericDivide-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-7> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-7" ;
+  rdfs:comment "A test whose essence is: `xs:float(5) div xs:float(2) eq 2.5`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L687> ;
+  mf:action [ qt:query <K-NumericDivide-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-8> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-8" ;
+  rdfs:comment "A test whose essence is: `xs:float(5) div xs:float(2) ne 2.6`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L696> ;
+  mf:action [ qt:query <K-NumericDivide-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-9> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-9" ;
+  rdfs:comment "A test whose essence is: `xs:integer(5) div xs:integer(2) eq 2.5`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L705> ;
+  mf:action [ qt:query <K-NumericDivide-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-10> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-10" ;
+  rdfs:comment "A test whose essence is: `xs:integer(5) div xs:integer(2) ne 2.6`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L714> ;
+  mf:action [ qt:query <K-NumericDivide-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-11> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-11" ;
+  rdfs:comment "A test whose essence is: `xs:decimal(5) div xs:decimal(2) eq 2.5`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L723> ;
+  mf:action [ qt:query <K-NumericDivide-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-12> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-12" ;
+  rdfs:comment "A test whose essence is: `xs:decimal(5) div xs:decimal(2) ne 2.6`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L732> ;
+  mf:action [ qt:query <K-NumericDivide-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-13> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-13" ;
+  rdfs:comment "A test whose essence is: `5 div 2 ne 2.6`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L741> ;
+  mf:action [ qt:query <K-NumericDivide-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-14> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-14" ;
+  rdfs:comment "A test whose essence is: `5.0 div 2.0 eq 2.5`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L750> ;
+  mf:action [ qt:query <K-NumericDivide-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-15> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-15" ;
+  rdfs:comment "A test whose essence is: `5.0 div 2.0 ne 2.6`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L759> ;
+  mf:action [ qt:query <K-NumericDivide-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-5> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-5" ;
+  rdfs:comment "Divide by 0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1071> ;
+  mf:action [ qt:query <K2-NumericDivide-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-6> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-6" ;
+  rdfs:comment "Divide -1 by 0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1080> ;
+  mf:action [ qt:query <K2-NumericDivide-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-7> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-7" ;
+  rdfs:comment "Divide by xs:float(0)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1089> ;
+  mf:action [ qt:query <K2-NumericDivide-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-8> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-8" ;
+  rdfs:comment "Divide -1 by xs:float(0)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1098> ;
+  mf:action [ qt:query <K2-NumericDivide-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-9> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-9" ;
+  rdfs:comment "Divide +0e0 with -0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1107> ;
+  mf:action [ qt:query <K2-NumericDivide-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-10> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-10" ;
+  rdfs:comment "Divide +0e0 with +0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1116> ;
+  mf:action [ qt:query <K2-NumericDivide-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-11> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-11" ;
+  rdfs:comment "Divide -0e0 with -0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1125> ;
+  mf:action [ qt:query <K2-NumericDivide-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-12> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-12" ;
+  rdfs:comment "Divide -0e0 with +0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1134> ;
+  mf:action [ qt:query <K2-NumericDivide-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-13> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-13" ;
+  rdfs:comment "Divide +3 with +0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1143> ;
+  mf:action [ qt:query <K2-NumericDivide-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-14> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-14" ;
+  rdfs:comment "Divide -3 with +0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1152> ;
+  mf:action [ qt:query <K2-NumericDivide-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-15> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-15" ;
+  rdfs:comment "Divide +3 with -0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1161> ;
+  mf:action [ qt:query <K2-NumericDivide-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-16> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-16" ;
+  rdfs:comment "Divide -3 with -0e0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1170> ;
+  mf:action [ qt:query <K2-NumericDivide-16.rq> ] ;
+  mf:result <../true.srj> .

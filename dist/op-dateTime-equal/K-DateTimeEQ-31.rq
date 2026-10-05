@@ -1,0 +1,7 @@
+# QT3 test case K-DateTimeEQ-31 of test set op-dateTime-equal, which tests the XPath expression
+#   xs:time("22:12:04") ge xs:dateTime("1999-12-04T12:12:23")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml#L824
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "22:12:04" ) >= <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-12-04T12:12:23" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

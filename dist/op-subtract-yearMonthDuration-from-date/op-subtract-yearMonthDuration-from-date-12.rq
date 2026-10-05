@@ -1,0 +1,8 @@
+# QT3 test case op-subtract-yearMonthDuration-from-date-12 of test set op-subtract-yearMonthDuration-from-date, which tests the XPath expression
+#   fn:string((xs:date("1980-03-02Z") - xs:yearMonthDuration("P05Y05M"))) and (fn:true())
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-yearMonthDuration-from-date.xml#L260
+# The test needs the constructor function xsd:date, the constructor function xsd:yearMonthDuration, - on xsd:date, - on xsd:yearMonthDuration, which SPARQL does not define
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#date> ( "1980-03-02Z" ) - <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P05Y05M" ) ) ) && "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

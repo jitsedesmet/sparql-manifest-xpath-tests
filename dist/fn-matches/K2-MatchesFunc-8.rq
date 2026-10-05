@@ -1,0 +1,7 @@
+# QT3 test case K2-MatchesFunc-8 of test set fn-matches, which tests the XPath expression
+#   fn:matches("h", "(.)\3")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L964
+ASK {
+  BIND(REGEX( "h" , "(.)\\3" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

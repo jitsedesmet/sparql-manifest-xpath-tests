@@ -1,0 +1,8 @@
+# QT3 test case fn-month-from-date-8 of test set fn-month-from-date, which tests the XPath expression
+#   fn:month-from-date(xs:date("1970-01-01Z")) + fn:month-from-date(xs:date("1970-01-01Z"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L97
+# The test needs the constructor function xsd:date, MONTH on xsd:date, which SPARQL does not define
+ASK {
+  BIND(( MONTH( <http://www.w3.org/2001/XMLSchema#date> ( "1970-01-01Z" ) ) + MONTH( <http://www.w3.org/2001/XMLSchema#date> ( "1970-01-01Z" ) ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "2" ))
+}

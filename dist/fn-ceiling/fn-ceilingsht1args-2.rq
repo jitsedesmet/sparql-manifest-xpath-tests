@@ -1,0 +1,7 @@
+# QT3 test case fn-ceilingsht1args-2 of test set fn-ceiling, which tests the XPath expression
+#   fn:ceiling(xs:short("-5324"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml#L461
+ASK {
+  BIND(CEIL( "-5324"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
+  FILTER(( ?result = - "5324"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

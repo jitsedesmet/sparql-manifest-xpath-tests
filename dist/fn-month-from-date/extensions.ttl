@@ -1,0 +1,170 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-month-from-date" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-month-from-date1args-1>
+    <#fn-month-from-date1args-2>
+    <#fn-month-from-date1args-3>
+    <#fn-month-from-date-1>
+    <#fn-month-from-date-2>
+    <#fn-month-from-date-3>
+    <#fn-month-from-date-4>
+    <#fn-month-from-date-6>
+    <#fn-month-from-date-7>
+    <#fn-month-from-date-8>
+    <#fn-month-from-date-9>
+    <#fn-month-from-date-10>
+    <#fn-month-from-date-11>
+    <#fn-month-from-date-14>
+    <#fn-month-from-date-15>
+    <#fn-month-from-date-16>
+    <#fn-month-from-date-17>
+    <#fn-month-from-date-18>
+    <#fn-month-from-date-19>
+    <#K-MonthFromDateFunc-5>
+  ) .
+
+<#fn-month-from-date1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date1args-1" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function with the arguments set as follows: $arg = xs:date(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L7> ;
+  mf:action [ qt:query <fn-month-from-date1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date1args-2" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function with the arguments set as follows: $arg = xs:date(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L16> ;
+  mf:action [ qt:query <fn-month-from-date1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date1args-3" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function with the arguments set as follows: $arg = xs:date(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L25> ;
+  mf:action [ qt:query <fn-month-from-date1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-1" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function As per example 1 of the F&O specs" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L34> ;
+  mf:action [ qt:query <fn-month-from-date-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-2" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function As per example 2 of the F&O specs" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L43> ;
+  mf:action [ qt:query <fn-month-from-date-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-3" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function involving a \"numeric-less-than\" operation (lt operator)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L52> ;
+  mf:action [ qt:query <fn-month-from-date-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-4" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function involving a \"numeric-less-than\" operation (le operator)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L61> ;
+  mf:action [ qt:query <fn-month-from-date-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-6" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function that returns 1." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L79> ;
+  mf:action [ qt:query <fn-month-from-date-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-7" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function that returns 12." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L88> ;
+  mf:action [ qt:query <fn-month-from-date-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-8" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"+\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L97> ;
+  mf:action [ qt:query <fn-month-from-date-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-9" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"-\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L106> ;
+  mf:action [ qt:query <fn-month-from-date-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-10" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"*\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L115> ;
+  mf:action [ qt:query <fn-month-from-date-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-11" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"div\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L124> ;
+  mf:action [ qt:query <fn-month-from-date-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-14" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"numeric-unary-plus\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L151> ;
+  mf:action [ qt:query <fn-month-from-date-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-15" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"numeric-unary-minus\" expression." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L160> ;
+  mf:action [ qt:query <fn-month-from-date-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-16" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"numeric-equal\" expression (eq operator)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L169> ;
+  mf:action [ qt:query <fn-month-from-date-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-17> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-17" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"numeric-equal\" expression (ne operator)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L178> ;
+  mf:action [ qt:query <fn-month-from-date-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-18> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-18" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"numeric-equal\" expression (le operator)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L187> ;
+  mf:action [ qt:query <fn-month-from-date-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-month-from-date-19> a mf:QueryEvaluationTest ;
+  mf:name "fn-month-from-date-19" ;
+  rdfs:comment "Evaluates The \"month-from-date\" function as part of a \"numeric-equal\" expression (ge operator)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L196> ;
+  mf:action [ qt:query <fn-month-from-date-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-MonthFromDateFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-MonthFromDateFunc-5" ;
+  rdfs:comment "A test whose essence is: `month-from-date(xs:date(\"2000-02-03\")) eq 2`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-date.xml#L241> ;
+  mf:action [ qt:query <K-MonthFromDateFunc-5.rq> ] ;
+  mf:result <../true.srj> .

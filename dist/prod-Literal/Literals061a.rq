@@ -1,0 +1,7 @@
+# QT3 test case Literals061a of test set prod-Literal, which tests the XPath expression
+#   "&#8364;"
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L618
+ASK {
+  BIND("&#8364;" AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "&#8364;" ))
+}

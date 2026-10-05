@@ -1,0 +1,26 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set xs-double" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#xs-double-001>
+    <#xs-double-002>
+  ) .
+
+<#xs-double-001> a mf:QueryEvaluationTest ;
+  mf:name "xs-double-001" ;
+  rdfs:comment "Test -0 in xs:double" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/xs/double.xml#L7> ;
+  mf:action [ qt:query <xs-double-001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#xs-double-002> a mf:QueryEvaluationTest ;
+  mf:name "xs-double-002" ;
+  rdfs:comment "Distinguish positive from negative zero" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/xs/double.xml#L17> ;
+  mf:action [ qt:query <xs-double-002.rq> ] ;
+  mf:result <../true.srj> .

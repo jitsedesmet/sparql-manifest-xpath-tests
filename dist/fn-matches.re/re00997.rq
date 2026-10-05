@@ -1,0 +1,7 @@
+# QT3 test case re00997 of test set fn-matches.re, which tests the XPath expression
+#   matches('$$9', '((((((((((.))))))))))(\11)9')
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L8223
+ASK {
+  BIND(REGEX( "$$9" , "((((((((((.))))))))))(\\11)9" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

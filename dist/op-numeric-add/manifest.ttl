@@ -1,0 +1,602 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-numeric-add" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-numeric-addint2args-1>
+    <#op-numeric-addint2args-2>
+    <#op-numeric-addint2args-3>
+    <#op-numeric-addint2args-4>
+    <#op-numeric-addintg2args-1>
+    <#op-numeric-addintg2args-2>
+    <#op-numeric-addintg2args-3>
+    <#op-numeric-addintg2args-4>
+    <#op-numeric-adddec2args-1>
+    <#op-numeric-adddec2args-2>
+    <#op-numeric-adddec2args-3>
+    <#op-numeric-adddec2args-4>
+    <#op-numeric-adddbl2args-1>
+    <#op-numeric-adddbl2args-2>
+    <#op-numeric-adddbl2args-3>
+    <#op-numeric-adddbl2args-4>
+    <#op-numeric-addflt2args-1>
+    <#op-numeric-addflt2args-2>
+    <#op-numeric-addflt2args-3>
+    <#op-numeric-addflt2args-4>
+    <#op-numeric-addlng2args-1>
+    <#op-numeric-addlng2args-2>
+    <#op-numeric-addlng2args-3>
+    <#op-numeric-addlng2args-4>
+    <#op-numeric-addusht2args-1>
+    <#op-numeric-addusht2args-2>
+    <#op-numeric-addusht2args-3>
+    <#op-numeric-addusht2args-4>
+    <#op-numeric-addusht2args-5>
+    <#op-numeric-addnint2args-1>
+    <#op-numeric-addnint2args-2>
+    <#op-numeric-addnint2args-3>
+    <#op-numeric-addnint2args-4>
+    <#op-numeric-addpint2args-1>
+    <#op-numeric-addpint2args-2>
+    <#op-numeric-addpint2args-3>
+    <#op-numeric-addpint2args-4>
+    <#op-numeric-addpint2args-5>
+    <#op-numeric-addulng2args-1>
+    <#op-numeric-addulng2args-2>
+    <#op-numeric-addulng2args-3>
+    <#op-numeric-addulng2args-4>
+    <#op-numeric-addulng2args-5>
+    <#op-numeric-addnpi2args-1>
+    <#op-numeric-addnpi2args-2>
+    <#op-numeric-addnpi2args-3>
+    <#op-numeric-addnpi2args-4>
+    <#op-numeric-addnni2args-1>
+    <#op-numeric-addnni2args-2>
+    <#op-numeric-addnni2args-3>
+    <#op-numeric-addnni2args-4>
+    <#op-numeric-addnni2args-5>
+    <#op-numeric-addsht2args-1>
+    <#op-numeric-addsht2args-2>
+    <#op-numeric-addsht2args-3>
+    <#op-numeric-addsht2args-4>
+    <#op-numeric-addmix2args-3>
+    <#K-NumericAdd-1>
+    <#K-NumericAdd-2>
+    <#K-NumericAdd-3>
+    <#K-NumericAdd-4>
+    <#K-NumericAdd-5>
+    <#K-NumericAdd-6>
+    <#K-NumericAdd-7>
+    <#K-NumericAdd-8>
+    <#K-NumericAdd-9>
+    <#K-NumericAdd-10>
+    <#K-NumericAdd-11>
+    <#K-NumericAdd-12>
+    <#K-NumericAdd-29>
+    <#K-NumericAdd-30>
+    <#K-NumericAdd-47>
+    <#K-NumericAdd-48>
+    <#K-NumericAdd-49>
+  ) .
+
+<#op-numeric-addint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:int(mid range) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L14> ;
+  mf:action [ qt:query <op-numeric-addint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addint2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:int(upper bound) $arg2 = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L23> ;
+  mf:action [ qt:query <op-numeric-addint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addint2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L32> ;
+  mf:action [ qt:query <op-numeric-addint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addint2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:int(lower bound) $arg2 = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L41> ;
+  mf:action [ qt:query <op-numeric-addint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addintg2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addintg2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:integer(mid range) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L50> ;
+  mf:action [ qt:query <op-numeric-addintg2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addintg2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addintg2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:integer(upper bound) $arg2 = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L59> ;
+  mf:action [ qt:query <op-numeric-addintg2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addintg2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addintg2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L68> ;
+  mf:action [ qt:query <op-numeric-addintg2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addintg2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addintg2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:integer(lower bound) $arg2 = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L77> ;
+  mf:action [ qt:query <op-numeric-addintg2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddec2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddec2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:decimal(mid range) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L86> ;
+  mf:action [ qt:query <op-numeric-adddec2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddec2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddec2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:decimal(upper bound) $arg2 = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L95> ;
+  mf:action [ qt:query <op-numeric-adddec2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddec2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddec2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L104> ;
+  mf:action [ qt:query <op-numeric-adddec2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddec2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddec2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:decimal(lower bound) $arg2 = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L113> ;
+  mf:action [ qt:query <op-numeric-adddec2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddbl2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddbl2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:double(mid range) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L122> ;
+  mf:action [ qt:query <op-numeric-adddbl2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddbl2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddbl2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:double(upper bound) $arg2 = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L131> ;
+  mf:action [ qt:query <op-numeric-adddbl2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddbl2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddbl2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L140> ;
+  mf:action [ qt:query <op-numeric-adddbl2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-adddbl2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-adddbl2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:double(lower bound) $arg2 = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L149> ;
+  mf:action [ qt:query <op-numeric-adddbl2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addflt2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addflt2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:float(mid range) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L158> ;
+  mf:action [ qt:query <op-numeric-addflt2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addflt2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addflt2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:float(upper bound) $arg2 = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L167> ;
+  mf:action [ qt:query <op-numeric-addflt2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addflt2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addflt2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L176> ;
+  mf:action [ qt:query <op-numeric-addflt2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addflt2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addflt2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:float(lower bound) $arg2 = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L185> ;
+  mf:action [ qt:query <op-numeric-addflt2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addlng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addlng2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:long(mid range) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L194> ;
+  mf:action [ qt:query <op-numeric-addlng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addlng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addlng2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:long(upper bound) $arg2 = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L203> ;
+  mf:action [ qt:query <op-numeric-addlng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addlng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addlng2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L212> ;
+  mf:action [ qt:query <op-numeric-addlng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addlng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addlng2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:long(lower bound) $arg2 = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L221> ;
+  mf:action [ qt:query <op-numeric-addlng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addusht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addusht2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L230> ;
+  mf:action [ qt:query <op-numeric-addusht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addusht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addusht2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(mid range) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L239> ;
+  mf:action [ qt:query <op-numeric-addusht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addusht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addusht2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(upper bound) $arg2 = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L248> ;
+  mf:action [ qt:query <op-numeric-addusht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addusht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addusht2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L257> ;
+  mf:action [ qt:query <op-numeric-addusht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addusht2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addusht2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedShort(lower bound) $arg2 = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L266> ;
+  mf:action [ qt:query <op-numeric-addusht2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(mid range) $arg2 = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L275> ;
+  mf:action [ qt:query <op-numeric-addnint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnint2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(upper bound) $arg2 = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L284> ;
+  mf:action [ qt:query <op-numeric-addnint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnint2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L293> ;
+  mf:action [ qt:query <op-numeric-addnint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnint2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:negativeInteger(lower bound) $arg2 = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L302> ;
+  mf:action [ qt:query <op-numeric-addnint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addpint2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addpint2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L311> ;
+  mf:action [ qt:query <op-numeric-addpint2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addpint2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addpint2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(mid range) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L320> ;
+  mf:action [ qt:query <op-numeric-addpint2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addpint2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addpint2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(upper bound) $arg2 = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L329> ;
+  mf:action [ qt:query <op-numeric-addpint2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addpint2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addpint2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L338> ;
+  mf:action [ qt:query <op-numeric-addpint2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addpint2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addpint2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:positiveInteger(lower bound) $arg2 = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L347> ;
+  mf:action [ qt:query <op-numeric-addpint2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addulng2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addulng2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L356> ;
+  mf:action [ qt:query <op-numeric-addulng2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addulng2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addulng2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(mid range) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L365> ;
+  mf:action [ qt:query <op-numeric-addulng2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addulng2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addulng2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(upper bound) $arg2 = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L374> ;
+  mf:action [ qt:query <op-numeric-addulng2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addulng2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addulng2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L383> ;
+  mf:action [ qt:query <op-numeric-addulng2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addulng2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addulng2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:unsignedLong(lower bound) $arg2 = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L392> ;
+  mf:action [ qt:query <op-numeric-addulng2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnpi2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnpi2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(mid range) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L401> ;
+  mf:action [ qt:query <op-numeric-addnpi2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnpi2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnpi2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(upper bound) $arg2 = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L410> ;
+  mf:action [ qt:query <op-numeric-addnpi2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnpi2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnpi2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L419> ;
+  mf:action [ qt:query <op-numeric-addnpi2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnpi2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnpi2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonPositiveInteger(lower bound) $arg2 = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L428> ;
+  mf:action [ qt:query <op-numeric-addnpi2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnni2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnni2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L437> ;
+  mf:action [ qt:query <op-numeric-addnni2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnni2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnni2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(mid range) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L446> ;
+  mf:action [ qt:query <op-numeric-addnni2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnni2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnni2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(upper bound) $arg2 = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L455> ;
+  mf:action [ qt:query <op-numeric-addnni2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnni2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnni2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L464> ;
+  mf:action [ qt:query <op-numeric-addnni2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addnni2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addnni2args-5" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:nonNegativeInteger(lower bound) $arg2 = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L473> ;
+  mf:action [ qt:query <op-numeric-addnni2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addsht2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addsht2args-1" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:short(mid range) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L482> ;
+  mf:action [ qt:query <op-numeric-addsht2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addsht2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addsht2args-2" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:short(upper bound) $arg2 = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L491> ;
+  mf:action [ qt:query <op-numeric-addsht2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addsht2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addsht2args-3" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L500> ;
+  mf:action [ qt:query <op-numeric-addsht2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addsht2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addsht2args-4" ;
+  rdfs:comment "Evaluates The \"op:numeric-add\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L509> ;
+  mf:action [ qt:query <op-numeric-addsht2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-addmix2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-addmix2args-3" ;
+  rdfs:comment "Simple addition test, second operator cast string to integer" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L539> ;
+  mf:action [ qt:query <op-numeric-addmix2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-1> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-1" ;
+  rdfs:comment "A test whose essence is: `xs:double(6) + xs:double(2) eq 8`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L653> ;
+  mf:action [ qt:query <K-NumericAdd-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-2> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-2" ;
+  rdfs:comment "A test whose essence is: `xs:decimal(6) + xs:decimal(2) eq 8`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L662> ;
+  mf:action [ qt:query <K-NumericAdd-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-3> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-3" ;
+  rdfs:comment "A test whose essence is: `xs:decimal(6.1) + xs:decimal(2.1) eq 8.2`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L671> ;
+  mf:action [ qt:query <K-NumericAdd-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-4> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-4" ;
+  rdfs:comment "A test whose essence is: `1.1 + 2.2 eq 3.3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L680> ;
+  mf:action [ qt:query <K-NumericAdd-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-5> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-5" ;
+  rdfs:comment "A test whose essence is: `xs:double(1.1) + xs:double(2.2) ne 3.3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L689> ;
+  mf:action [ qt:query <K-NumericAdd-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-6> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-6" ;
+  rdfs:comment "A test whose essence is: `xs:float(1.1) + xs:float(2.2) ne 3.3`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L698> ;
+  mf:action [ qt:query <K-NumericAdd-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-7> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-7" ;
+  rdfs:comment "A test whose essence is: `xs:integer(6) + xs:integer(2) eq 8`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L707> ;
+  mf:action [ qt:query <K-NumericAdd-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-8> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-8" ;
+  rdfs:comment "A test whose essence is: `xs:float(6) + xs:float(2) eq 8`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L716> ;
+  mf:action [ qt:query <K-NumericAdd-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-9> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-9" ;
+  rdfs:comment "A test whose essence is: `string(xs:float(\"NaN\") + 3) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L725> ;
+  mf:action [ qt:query <K-NumericAdd-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-10> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-10" ;
+  rdfs:comment "A test whose essence is: `string(xs:double(\"NaN\") + 3) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L734> ;
+  mf:action [ qt:query <K-NumericAdd-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-11> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-11" ;
+  rdfs:comment "A test whose essence is: `string(3 + xs:float(\"NaN\")) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L743> ;
+  mf:action [ qt:query <K-NumericAdd-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-12> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-12" ;
+  rdfs:comment "A test whose essence is: `string(3 + xs:double(\"NaN\")) eq \"NaN\"`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L752> ;
+  mf:action [ qt:query <K-NumericAdd-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-29> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-29" ;
+  rdfs:comment "Test parser handles '+' operator with critical whitespace." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L905> ;
+  mf:action [ qt:query <K-NumericAdd-29.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-30> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-30" ;
+  rdfs:comment "Test parser handles '+' operator with critical whitespace(#2)." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L914> ;
+  mf:action [ qt:query <K-NumericAdd-30.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-47> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-47" ;
+  rdfs:comment "Complex combination of numeric arithmetics in order to stress operator precedence." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L1088> ;
+  mf:action [ qt:query <K-NumericAdd-47.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-48> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-48" ;
+  rdfs:comment "Complex combination of numeric arithmetics in order to stress operator precedence." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L1097> ;
+  mf:action [ qt:query <K-NumericAdd-48.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericAdd-49> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericAdd-49" ;
+  rdfs:comment "Complex combination of numeric arithmetics in order to stress operator precedence." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L1106> ;
+  mf:action [ qt:query <K-NumericAdd-49.rq> ] ;
+  mf:result <../true.srj> .

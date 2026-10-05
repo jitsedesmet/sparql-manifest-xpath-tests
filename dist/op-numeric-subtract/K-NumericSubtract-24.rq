@@ -1,0 +1,7 @@
+# QT3 test case K-NumericSubtract-24 of test set op-numeric-subtract, which tests the XPath expression
+#   string(3 - xs:double("NaN")) eq "NaN"
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L844
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( "3"^^<http://www.w3.org/2001/XMLSchema#integer> - <http://www.w3.org/2001/XMLSchema#double> ( "NaN" ) ) ) = "NaN" ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

@@ -1,0 +1,7 @@
+# QT3 test case re00531 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('10000101,10000201', ',') satisfies matches($s, '^(?:\p{Nd}+)$')) and (every $s in tokenize('', ',') satisfies not(matches($s, '^(?:\p{Nd}+)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4428
+ASK {
+  BIND(( ( REGEX( "10000101" , "^(?:\\p{Nd}+)$" ) && REGEX( "10000201" , "^(?:\\p{Nd}+)$" ) ) && "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

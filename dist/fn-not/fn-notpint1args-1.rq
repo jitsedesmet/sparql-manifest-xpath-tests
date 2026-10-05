@@ -1,0 +1,7 @@
+# QT3 test case fn-notpint1args-1 of test set fn-not, which tests the XPath expression
+#   fn:not(xs:positiveInteger("1"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L223
+ASK {
+  BIND(! "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

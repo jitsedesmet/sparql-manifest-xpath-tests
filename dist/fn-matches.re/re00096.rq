@@ -1,0 +1,7 @@
+# QT3 test case re00096 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('𐀀', ',') satisfies matches($s, '^(?:[𐀀])$')) and (every $s in tokenize('𐀁', ',') satisfies not(matches($s, '^(?:[𐀀])$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L802
+ASK {
+  BIND(( REGEX( "𐀀" , "^(?:[𐀀])$" ) && ! REGEX( "𐀁" , "^(?:[𐀀])$" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

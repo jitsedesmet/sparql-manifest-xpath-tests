@@ -1,0 +1,8 @@
+# QT3 test case op-time-greater-than2args-1 of test set op-time-greater-than, which tests the XPath expression
+#   xs:time("00:00:00Z") gt xs:time("00:00:00Z")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/time-greater-than.xml#L6
+# The test needs the constructor function xsd:time, > on xsd:time, which SPARQL does not define
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "00:00:00Z" ) > <http://www.w3.org/2001/XMLSchema#time> ( "00:00:00Z" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ! ?result ))
+}

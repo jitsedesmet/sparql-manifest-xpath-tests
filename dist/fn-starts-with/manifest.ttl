@@ -1,0 +1,178 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-starts-with" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-starts-with2args-1>
+    <#fn-starts-with2args-2>
+    <#fn-starts-with2args-3>
+    <#fn-starts-with2args-4>
+    <#fn-starts-with2args-5>
+    <#fn-starts-with-1>
+    <#fn-starts-with-2>
+    <#fn-starts-with-3>
+    <#fn-starts-with-8>
+    <#fn-starts-with-9>
+    <#fn-starts-with-10>
+    <#fn-starts-with-11>
+    <#fn-starts-with-12>
+    <#fn-starts-with-13>
+    <#fn-starts-with-14>
+    <#fn-starts-with-15>
+    <#fn-starts-with-16>
+    <#K-StartsWithFunc-6>
+    <#K-StartsWithFunc-7>
+    <#K-StartsWithFunc-8>
+    <#K-StartsWithFunc-11>
+  ) .
+
+<#fn-starts-with2args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with2args-1" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L7> ;
+  mf:action [ qt:query <fn-starts-with2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with2args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with2args-2" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = xs:string(mid range) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L16> ;
+  mf:action [ qt:query <fn-starts-with2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with2args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with2args-3" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = xs:string(upper bound) $arg2 = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L25> ;
+  mf:action [ qt:query <fn-starts-with2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with2args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with2args-4" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L34> ;
+  mf:action [ qt:query <fn-starts-with2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with2args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with2args-5" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = xs:string(lower bound) $arg2 = xs:string(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L43> ;
+  mf:action [ qt:query <fn-starts-with2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-1" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L52> ;
+  mf:action [ qt:query <fn-starts-with-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-2" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"A Character String\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L61> ;
+  mf:action [ qt:query <fn-starts-with-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-3" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"\" $arg2 = \"A Character String\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L70> ;
+  mf:action [ qt:query <fn-starts-with-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-8" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"AAAAABBBBBCCCCC\" $arg2 = \"BBBBB\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L115> ;
+  mf:action [ qt:query <fn-starts-with-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-9" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"AAAAABBBBB\" $arg2 = \" \"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L124> ;
+  mf:action [ qt:query <fn-starts-with-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-10" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \" \" $arg2 = \" AAAAABBBBB\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L133> ;
+  mf:action [ qt:query <fn-starts-with-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-11> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-11" ;
+  rdfs:comment "Evaluates The \"starts-with\" function using it as a argument of a fn:not - returns false" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L142> ;
+  mf:action [ qt:query <fn-starts-with-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-12" ;
+  rdfs:comment "Evaluates The \"starts-with\" function using it as a argument of a fn:not - returns true" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L151> ;
+  mf:action [ qt:query <fn-starts-with-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-13" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = xs:string(\"A\") $arg2 = \"A\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L160> ;
+  mf:action [ qt:query <fn-starts-with-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-14" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"A\" $arg2 = xs:string(\"A\")" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L169> ;
+  mf:action [ qt:query <fn-starts-with-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-15" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"A\" $arg2 = \"a\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L178> ;
+  mf:action [ qt:query <fn-starts-with-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-starts-with-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-starts-with-16" ;
+  rdfs:comment "Evaluates The \"starts-with\" function with the arguments set as follows: $arg1 = \"a\" $arg2 = \"A\"" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L187> ;
+  mf:action [ qt:query <fn-starts-with-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StartsWithFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-StartsWithFunc-6" ;
+  rdfs:comment "A test whose essence is: `starts-with(\"foo\", \"foo\")`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L507> ;
+  mf:action [ qt:query <K-StartsWithFunc-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StartsWithFunc-7> a mf:QueryEvaluationTest ;
+  mf:name "K-StartsWithFunc-7" ;
+  rdfs:comment "A test whose essence is: `starts-with(\"tattoo\", \"tat\")`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L516> ;
+  mf:action [ qt:query <K-StartsWithFunc-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StartsWithFunc-8> a mf:QueryEvaluationTest ;
+  mf:name "K-StartsWithFunc-8" ;
+  rdfs:comment "A test whose essence is: `not(starts-with(\"tattoo\", \"att\"))`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L525> ;
+  mf:action [ qt:query <K-StartsWithFunc-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-StartsWithFunc-11> a mf:QueryEvaluationTest ;
+  mf:name "K-StartsWithFunc-11" ;
+  rdfs:comment "A test whose essence is: `not(starts-with(\"\", \"a string\"))`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L552> ;
+  mf:action [ qt:query <K-StartsWithFunc-11.rq> ] ;
+  mf:result <../true.srj> .

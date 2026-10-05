@@ -1,0 +1,58 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-subtract-dateTimes" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#K-dateTimesSubtract-2>
+    <#K-dateTimesSubtract-3>
+    <#K-dateTimesSubtract-4>
+    <#K-dateTimesSubtract-6>
+    <#cbcl-subtract-dateTimes-001>
+    <#cbcl-subtract-dateTimes-002>
+  ) .
+
+<#K-dateTimesSubtract-2> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-2" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-2                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '+' operator is not available between xs:dateTime and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L337> ;
+  mf:action [ qt:query <K-dateTimesSubtract-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-3> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-3" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-3                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The 'div' operator is not available between xs:dateTime and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L352> ;
+  mf:action [ qt:query <K-dateTimesSubtract-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-4> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-4" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-4                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '*' operator is not available between xs:dateTime and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L367> ;
+  mf:action [ qt:query <K-dateTimesSubtract-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-dateTimesSubtract-6> a mf:QueryEvaluationTest ;
+  mf:name "K-dateTimesSubtract-6" ;
+  rdfs:comment "*******************************************************\n Test: K-dateTimesSubtract-6                           \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: The '-' operator is not available between xs:dayTimeDuration and xs:dateTime. \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L397> ;
+  mf:action [ qt:query <K-dateTimesSubtract-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-subtract-dateTimes-001> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-subtract-dateTimes-001" ;
+  rdfs:comment "test subtraction of large to dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L414> ;
+  mf:action [ qt:query <cbcl-subtract-dateTimes-001.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-subtract-dateTimes-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-subtract-dateTimes-002" ;
+  rdfs:comment "test subtraction of large dateTimes" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dateTimes.xml#L425> ;
+  mf:action [ qt:query <cbcl-subtract-dateTimes-002.rq> ] ;
+  mf:result <../true.srj> .

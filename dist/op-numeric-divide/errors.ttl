@@ -1,0 +1,82 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-numeric-divide" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-numeric-dividemix2args-2>
+    <#K-NumericDivide-32>
+    <#K-NumericDivide-33>
+    <#K2-NumericDivide-1>
+    <#K2-NumericDivide-2>
+    <#K2-NumericDivide-3>
+    <#K2-NumericDivide-4>
+    <#cbcl-numeric-divide-015>
+    <#op-numeric-divide-big-01>
+  ) .
+
+<#op-numeric-dividemix2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-dividemix2args-2" ;
+  rdfs:comment "Simple division test pass string for second operator" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L555> ;
+  mf:action [ qt:query <op-numeric-dividemix2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-32> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-32" ;
+  rdfs:comment "Invoke the 'div operator with invalid operands." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L912> ;
+  mf:action [ qt:query <K-NumericDivide-32.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-NumericDivide-33> a mf:QueryEvaluationTest ;
+  mf:name "K-NumericDivide-33" ;
+  rdfs:comment "Invoke the 'div' operator with invalid operands." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L921> ;
+  mf:action [ qt:query <K-NumericDivide-33.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-1> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-1" ;
+  rdfs:comment "Divide by 0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1035> ;
+  mf:action [ qt:query <K2-NumericDivide-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-2> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-2" ;
+  rdfs:comment "Divide by 0.0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1044> ;
+  mf:action [ qt:query <K2-NumericDivide-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-3> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-3" ;
+  rdfs:comment "Divide by +0.0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1053> ;
+  mf:action [ qt:query <K2-NumericDivide-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-NumericDivide-4> a mf:QueryEvaluationTest ;
+  mf:name "K2-NumericDivide-4" ;
+  rdfs:comment "Divide by -0.0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1062> ;
+  mf:action [ qt:query <K2-NumericDivide-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-numeric-divide-015> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-numeric-divide-015" ;
+  rdfs:comment "check that overflow occurs correctly when adding values of type xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1403> ;
+  mf:action [ qt:query <cbcl-numeric-divide-015.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-numeric-divide-big-01> a mf:QueryEvaluationTest ;
+  mf:name "op-numeric-divide-big-01" ;
+  rdfs:comment "check that overflow occurs correctly when dividing values of type xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L1415> ;
+  mf:action [ qt:query <op-numeric-divide-big-01.rq> ] ;
+  mf:result <../true.srj> .

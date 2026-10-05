@@ -1,0 +1,7 @@
+# QT3 test case cbcl-fn-replace-002 of test set fn-replace, which tests the XPath expression
+#   replace("a","","b")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L824
+ASK {
+  BIND(REPLACE( "a" , "" , "b" ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

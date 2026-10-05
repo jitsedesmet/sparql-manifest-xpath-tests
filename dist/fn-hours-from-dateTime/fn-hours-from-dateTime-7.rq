@@ -1,0 +1,7 @@
+# QT3 test case fn-hours-from-dateTime-7 of test set fn-hours-from-dateTime, which tests the XPath expression
+#   fn:hours-from-dateTime(xs:dateTime("1999-05-31T23:20:00-05:00"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/hours-from-dateTime.xml#L88
+ASK {
+  BIND(HOURS( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-05-31T23:20:00-05:00" ) ) AS ?result)
+  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "23" ))
+}

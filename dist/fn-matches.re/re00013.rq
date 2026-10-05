@@ -1,0 +1,7 @@
+# QT3 test case re00013 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('abc,ab,abccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', ',') satisfies matches($s, '^(?:abc*)$')) and (every $s in tokenize('a,abcd,abbc,', ',') satisfies not(matches($s, '^(?:abc*)$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L112
+ASK {
+  BIND(( ( ( REGEX( "abc" , "^(?:abc*)$" ) && REGEX( "ab" , "^(?:abc*)$" ) ) && REGEX( "abccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" , "^(?:abc*)$" ) ) && ( ( ( ! REGEX( "a" , "^(?:abc*)$" ) && ! REGEX( "abcd" , "^(?:abc*)$" ) ) && ! REGEX( "abbc" , "^(?:abc*)$" ) ) && ! REGEX( "" , "^(?:abc*)$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

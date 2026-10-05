@@ -1,0 +1,7 @@
+# QT3 test case op-numeric-multiplynni2args-4 of test set op-numeric-multiply, which tests the XPath expression
+#   xs:nonNegativeInteger("0") * xs:nonNegativeInteger("303884545991464527")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L322
+ASK {
+  BIND(( "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> * "303884545991464527"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) AS ?result)
+  FILTER(( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+}

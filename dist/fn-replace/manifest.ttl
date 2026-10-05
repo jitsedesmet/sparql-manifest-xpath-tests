@@ -1,0 +1,498 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-replace" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-replace3args-1>
+    <#fn-replace3args-2>
+    <#fn-replace3args-3>
+    <#fn-replace3args-4>
+    <#fn-replace3args-5>
+    <#fn-replace3args-6>
+    <#fn-replace3args-7>
+    <#fn-replace-1>
+    <#fn-replace-2>
+    <#fn-replace-3>
+    <#fn-replace-4>
+    <#fn-replace-5>
+    <#fn-replace-7>
+    <#fn-replace-8>
+    <#fn-replace-9>
+    <#fn-replace-10>
+    <#fn-replace-12>
+    <#fn-replace-13>
+    <#fn-replace-14>
+    <#fn-replace-15>
+    <#fn-replace-16>
+    <#fn-replace-17>
+    <#fn-replace-18>
+    <#fn-replace-19>
+    <#fn-replace-20>
+    <#fn-replace-21>
+    <#fn-replace-22>
+    <#fn-replace-23>
+    <#fn-replace-24>
+    <#fn-replace-25>
+    <#fn-replace-26>
+    <#fn-replace-27>
+    <#fn-replace-28>
+    <#fn-replace-29>
+    <#fn-replace-30>
+    <#fn-replace-31>
+    <#fn-replace-32>
+    <#fn-replace-33>
+    <#fn-replace-34>
+    <#fn-replace-35>
+    <#fn-replace-36>
+    <#fn-replace-37>
+    <#fn-replace-38>
+    <#fn-replace-39>
+    <#fn-replace-40>
+    <#fn-replace-41>
+    <#fn-replace-42>
+    <#fn-replace-45>
+    <#fn-replace-46>
+    <#fn-replace-47>
+    <#fn-replace-48>
+    <#fn-replace-49>
+    <#fn-replace-50>
+    <#fn-replace-51>
+    <#fn-replace-52>
+    <#fn-replace-53>
+    <#fn-replace-54>
+    <#fn-replace-55>
+    <#fn-replace-56>
+    <#fn-replace-57>
+    <#fn-replace-59>
+  ) .
+
+<#fn-replace3args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace3args-1" ;
+  rdfs:comment "Evaluates The \"replace\" function with the arguments set as follows: $input = xs:string(lower bound) $pattern = xs:string(lower bound) $replacement = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L7> ;
+  mf:action [ qt:query <fn-replace3args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace3args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace3args-2" ;
+  rdfs:comment "Evaluates The \"replace\" function with the arguments set as follows: $input = xs:string(mid range) $pattern = xs:string(lower bound) $replacement = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L16> ;
+  mf:action [ qt:query <fn-replace3args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace3args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace3args-3" ;
+  rdfs:comment "Evaluates The \"replace\" function with the arguments set as follows: $input = xs:string(upper bound) $pattern = xs:string(lower bound) $replacement = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L25> ;
+  mf:action [ qt:query <fn-replace3args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace3args-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace3args-4" ;
+  rdfs:comment "Evaluates The \"replace\" function with the arguments set as follows: $input = xs:string(lower bound) $pattern = xs:string(mid range) $replacement = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L34> ;
+  mf:action [ qt:query <fn-replace3args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace3args-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace3args-5" ;
+  rdfs:comment "Evaluates The \"replace\" function with the arguments set as follows: $input = xs:string(lower bound) $pattern = xs:string(upper bound) $replacement = xs:string(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L43> ;
+  mf:action [ qt:query <fn-replace3args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace3args-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace3args-6" ;
+  rdfs:comment "Evaluates The \"replace\" function with the arguments set as follows: $input = xs:string(lower bound) $pattern = xs:string(lower bound) $replacement = xs:string(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L52> ;
+  mf:action [ qt:query <fn-replace3args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace3args-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace3args-7" ;
+  rdfs:comment "Evaluates The \"replace\" function with the arguments set as follows: $input = xs:string(lower bound) $pattern = xs:string(lower bound) $replacement = xs:string(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L61> ;
+  mf:action [ qt:query <fn-replace3args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-1" ;
+  rdfs:comment "Evaluation of replace function with replacement = \"*\" as an example 1 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L97> ;
+  mf:action [ qt:query <fn-replace-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-2" ;
+  rdfs:comment "Evaluation of replace function with pattern = \"a.*a\" and replacement = \"*\" as an example 2 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L106> ;
+  mf:action [ qt:query <fn-replace-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-3" ;
+  rdfs:comment "Evaluation of replace function with pattern = \"a.*?a\" and replacement = \"*\" as an example 3 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L115> ;
+  mf:action [ qt:query <fn-replace-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-4" ;
+  rdfs:comment "Evaluation of replace function with pattern = \"a\" and replacement = \"\" as an example 4 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L124> ;
+  mf:action [ qt:query <fn-replace-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-5" ;
+  rdfs:comment "Evaluation of replace function with pattern = \"a(.)\" and replacement = \"a$1$1\" as an example 5 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L133> ;
+  mf:action [ qt:query <fn-replace-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-7" ;
+  rdfs:comment "Evaluation of replace function with pattern = \"A+\" and replacement = \"b\" as an example 7 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L151> ;
+  mf:action [ qt:query <fn-replace-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-8> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-8" ;
+  rdfs:comment "Evaluation of replace function with pattern = \"A+?\" and replacement = \"b\" as an example 8 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L160> ;
+  mf:action [ qt:query <fn-replace-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-9> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-9" ;
+  rdfs:comment "Evaluation of replace function with pattern = \"^(.*?)d(.*)\" and replacement = \"$1c$2\" as an example 9 for this function." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L169> ;
+  mf:action [ qt:query <fn-replace-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-10> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-10" ;
+  rdfs:comment "Two alternatives within the pattern both match at the same position in the $input. The first one is chosen." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L178> ;
+  mf:action [ qt:query <fn-replace-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-12> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-12" ;
+  rdfs:comment "Evaluate that calling function with flags omitted is same as flags being the zero length string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L196> ;
+  mf:action [ qt:query <fn-replace-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-13> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-13" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\?\" for an input string that contains \"?\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L205> ;
+  mf:action [ qt:query <fn-replace-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-14> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-14" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\*\" for an input string that contains \"*\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L214> ;
+  mf:action [ qt:query <fn-replace-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-15> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-15" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\+\" for an input string that contains \"+\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L223> ;
+  mf:action [ qt:query <fn-replace-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-16> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-16" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\{\" for an input string that contains \"}\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L232> ;
+  mf:action [ qt:query <fn-replace-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-17> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-17" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\}\" for an input string that contains \"}\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L241> ;
+  mf:action [ qt:query <fn-replace-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-18> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-18" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\(\" for an input string that contains \"(\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L250> ;
+  mf:action [ qt:query <fn-replace-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-19> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-19" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\)\" for an input string that contains \")\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L259> ;
+  mf:action [ qt:query <fn-replace-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-20> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-20" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\[\" for an input string that contains \"[\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L268> ;
+  mf:action [ qt:query <fn-replace-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-21> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-21" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\]\" for an input string that contains \"]\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L277> ;
+  mf:action [ qt:query <fn-replace-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-22> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-22" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\-\" for an input string that contains \"-\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L286> ;
+  mf:action [ qt:query <fn-replace-22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-23> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-23" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\.\" for an input string that contains \".\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L295> ;
+  mf:action [ qt:query <fn-replace-23.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-24> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-24" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\|\" for an input string that contains \"|\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L304> ;
+  mf:action [ qt:query <fn-replace-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-25> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-25" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\\\\" for an input string that contains \"\\\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L313> ;
+  mf:action [ qt:query <fn-replace-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-26> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-26" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\t\" for an input string that contains the tab character." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L322> ;
+  mf:action [ qt:query <fn-replace-26.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-27> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-27" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\n\" for an input string that contains the newline character." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L331> ;
+  mf:action [ qt:query <fn-replace-27.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-28> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-28" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"aa{1}\" (exact quantity) for an input string that contains the \"aa\" string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L341> ;
+  mf:action [ qt:query <fn-replace-28.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-29> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-29" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"aa{1,}\" (min quantity) for an input string that contains the \"aa\" string twice." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L350> ;
+  mf:action [ qt:query <fn-replace-29.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-30> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-30" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"aa{1,2}\" (range quantity) for an input string that contains the \"aa\" string twice." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L359> ;
+  mf:action [ qt:query <fn-replace-30.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-31> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-31" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"\\^\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L368> ;
+  mf:action [ qt:query <fn-replace-31.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-32> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-32" ;
+  rdfs:comment "Evaluation of replace function with pattern set to \"^a\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L377> ;
+  mf:action [ qt:query <fn-replace-32.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-33> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-33" ;
+  rdfs:comment "Evaluation of replace function with pattern that does not match the input string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L386> ;
+  mf:action [ qt:query <fn-replace-33.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-34> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-34" ;
+  rdfs:comment "Evaluation of replace function with q flag." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L395> ;
+  mf:action [ qt:query <fn-replace-34.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-35> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-35" ;
+  rdfs:comment "Evaluation of replace function with q flag." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L405> ;
+  mf:action [ qt:query <fn-replace-35.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-36> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-36" ;
+  rdfs:comment "Evaluation of replace function with non-capturing groups." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L415> ;
+  mf:action [ qt:query <fn-replace-36.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-37> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-37" ;
+  rdfs:comment "Evaluation of replace function with escaped $ sign in replacement string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L425> ;
+  mf:action [ qt:query <fn-replace-37.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-38> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-38" ;
+  rdfs:comment "Evaluation of replace function with escaped $ sign in replacement string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L434> ;
+  mf:action [ qt:query <fn-replace-38.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-39> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-39" ;
+  rdfs:comment "Evaluation of replace function with escaped \\ sign in replacement string." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L443> ;
+  mf:action [ qt:query <fn-replace-39.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-40> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-40" ;
+  rdfs:comment "Evaluation of replace with double-digit capture" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L452> ;
+  mf:action [ qt:query <fn-replace-40.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-41> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-41" ;
+  rdfs:comment "Evaluation of replace with double-digit capture" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L461> ;
+  mf:action [ qt:query <fn-replace-41.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-42> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-42" ;
+  rdfs:comment "Evaluation of replace with double-digit capture beyond max capture value" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L470> ;
+  mf:action [ qt:query <fn-replace-42.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-45> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-45" ;
+  rdfs:comment "fn:replace, using $0" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L497> ;
+  mf:action [ qt:query <fn-replace-45.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-46> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-46" ;
+  rdfs:comment "fn:replace, Saxon bug 2166" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L506> ;
+  mf:action [ qt:query <fn-replace-46.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-47> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-47" ;
+  rdfs:comment "fn:replace, Saxon bug 2390 (reluctant quantifiers, backtracking, and captured groups)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L515> ;
+  mf:action [ qt:query <fn-replace-47.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-48> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-48" ;
+  rdfs:comment "fn:replace, Saxon bug 2390 (choice, backtracking, and captured groups)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L524> ;
+  mf:action [ qt:query <fn-replace-48.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-49> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-49" ;
+  rdfs:comment "Evaluation of replace function with q flag, with pattern set to \"\\\"." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L533> ;
+  mf:action [ qt:query <fn-replace-49.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-50> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-50" ;
+  rdfs:comment "Evaluation of replace function with q flag, with pattern set to \"\\\\\", example\n         from spec. (See bug #29522)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L543> ;
+  mf:action [ qt:query <fn-replace-50.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-51> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-51" ;
+  rdfs:comment "Evaluation of replace function with q flag, with pattern set to \"$\", example from\n         spec. (See bug #29522)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L554> ;
+  mf:action [ qt:query <fn-replace-51.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-52> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-52" ;
+  rdfs:comment "Evaluation of replace function with q flag, with pattern set to \"$'\". (See bug #29522)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L565> ;
+  mf:action [ qt:query <fn-replace-52.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-53> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-53" ;
+  rdfs:comment "Evaluation of replace function with q flag, with pattern set to \"$`\". (See bug #29522)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L575> ;
+  mf:action [ qt:query <fn-replace-53.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-54> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-54" ;
+  rdfs:comment "Evaluation of replace with single-digit capture at end of replacement string. Saxon bug 2735." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L585> ;
+  mf:action [ qt:query <fn-replace-54.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-55> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-55" ;
+  rdfs:comment "Test case with undefined captures. Saxon bug 2865." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L594> ;
+  mf:action [ qt:query <fn-replace-55.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-56> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-56" ;
+  rdfs:comment "Test case based on Saxon bug 3429." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L605> ;
+  mf:action [ qt:query <fn-replace-56.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-57> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-57" ;
+  rdfs:comment "Evaluation of replace with unmatched double-digit capturing group. Saxon bug 4076." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L614> ;
+  mf:action [ qt:query <fn-replace-57.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-replace-59> a mf:QueryEvaluationTest ;
+  mf:name "fn-replace-59" ;
+  rdfs:comment "Evaluation of replace with curly braces. SaxonJS bug 6318." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L637> ;
+  mf:action [ qt:query <fn-replace-59.rq> ] ;
+  mf:result <../true.srj> .

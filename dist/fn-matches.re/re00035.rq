@@ -1,0 +1,7 @@
+# QT3 test case re00035 of test set fn-matches.re, which tests the XPath expression
+#   (every $s in tokenize('abcc,abccc,abbcc,abbccc,bbcc,bbccc', ',') satisfies matches($s, '^(?:a{0,1}b{1,2}c{2,3})$')) and (every $s in tokenize('aabcc,bbbcc,acc,aabcc,abbc,abbcccc', ',') satisfies not(matches($s, '^(?:a{0,1}b{1,2}c{2,3})$')))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L288
+ASK {
+  BIND(( ( ( ( ( ( REGEX( "abcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) && REGEX( "abccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "abbcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "abbccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "bbcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "bbccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ( ( ( ( ( ! REGEX( "aabcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) && ! REGEX( "bbbcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "acc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "aabcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "abbc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "abbcccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}

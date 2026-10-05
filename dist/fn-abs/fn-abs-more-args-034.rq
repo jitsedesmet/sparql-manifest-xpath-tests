@@ -1,0 +1,7 @@
+# QT3 test case fn-abs-more-args-034 of test set fn-abs, which tests the XPath expression
+#   fn:abs(xs:integer("INF"))
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L1025
+ASK {
+  BIND(ABS( <http://www.w3.org/2001/XMLSchema#integer> ( "INF" ) ) AS ?result)
+  FILTER(! BOUND( ?result ))
+}

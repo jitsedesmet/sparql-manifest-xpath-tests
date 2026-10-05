@@ -1,0 +1,1842 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set fn-round" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#fn-roundint1args-1>
+    <#fn-roundint1args-2>
+    <#fn-roundint1args-3>
+    <#fn-roundintg1args-1>
+    <#fn-roundintg1args-2>
+    <#fn-roundintg1args-3>
+    <#fn-rounddec1args-1>
+    <#fn-rounddec1args-2>
+    <#fn-rounddec1args-3>
+    <#fn-rounddbl1args-1>
+    <#fn-rounddbl1args-2>
+    <#fn-rounddbl1args-3>
+    <#fn-roundflt1args-1>
+    <#fn-roundflt1args-2>
+    <#fn-roundflt1args-3>
+    <#fn-roundlng1args-1>
+    <#fn-roundlng1args-2>
+    <#fn-roundlng1args-3>
+    <#fn-roundusht1args-1>
+    <#fn-roundusht1args-2>
+    <#fn-roundusht1args-3>
+    <#fn-roundnint1args-1>
+    <#fn-roundnint1args-2>
+    <#fn-roundnint1args-3>
+    <#fn-roundpint1args-1>
+    <#fn-roundpint1args-2>
+    <#fn-roundpint1args-3>
+    <#fn-roundulng1args-1>
+    <#fn-roundulng1args-2>
+    <#fn-roundulng1args-3>
+    <#fn-roundnpi1args-1>
+    <#fn-roundnpi1args-2>
+    <#fn-roundnpi1args-3>
+    <#fn-roundnni1args-1>
+    <#fn-roundnni1args-2>
+    <#fn-roundnni1args-3>
+    <#fn-roundsht1args-1>
+    <#fn-roundsht1args-2>
+    <#fn-roundsht1args-3>
+    <#K-RoundFunc-4>
+    <#K-RoundFunc-5>
+    <#K-RoundFunc-6>
+    <#K-RoundFunc-7>
+    <#K-RoundFunc-8>
+    <#K-RoundFunc-9>
+    <#K2-RoundFunc-13>
+    <#K2-RoundFunc-14>
+    <#K2-RoundFunc-15>
+    <#K2-RoundFunc-16>
+    <#K2-RoundFunc-17>
+    <#K2-RoundFunc-18>
+    <#K2-RoundFunc-19>
+    <#K2-RoundFunc-20>
+    <#K2-RoundFunc-21>
+    <#K2-RoundFunc-22>
+    <#K2-RoundFunc-23>
+    <#K2-RoundFunc-24>
+    <#K2-RoundFunc-25>
+    <#K2-RoundFunc-26>
+    <#K2-RoundFunc-27>
+    <#K2-RoundFunc-28>
+    <#K2-RoundFunc-29>
+    <#K2-RoundFunc-30>
+    <#K2-RoundFunc-31>
+    <#K2-RoundFunc-32>
+    <#K2-RoundFunc-33>
+    <#K2-RoundFunc-34>
+    <#K2-RoundFunc-35>
+    <#K2-RoundFunc-36>
+    <#K2-RoundFunc-37>
+    <#K2-RoundFunc-38>
+    <#K2-RoundFunc-39>
+    <#K2-RoundFunc-40>
+    <#K2-RoundFunc-41>
+    <#K2-RoundFunc-42>
+    <#K2-RoundFunc-43>
+    <#K2-RoundFunc-44>
+    <#K2-RoundFunc-45>
+    <#K2-RoundFunc-46>
+    <#K2-RoundFunc-47>
+    <#K2-RoundFunc-48>
+    <#K2-RoundFunc-49>
+    <#K2-RoundFunc-50>
+    <#K2-RoundFunc-51>
+    <#K2-RoundFunc-52>
+    <#K2-RoundFunc-53>
+    <#K2-RoundFunc-54>
+    <#K2-RoundFunc-55>
+    <#K2-RoundFunc-56>
+    <#K2-RoundFunc-57>
+    <#K2-RoundFunc-58>
+    <#K2-RoundFunc-59>
+    <#K2-RoundFunc-60>
+    <#K2-RoundFunc-61>
+    <#K2-RoundFunc-62>
+    <#K2-RoundFunc-63>
+    <#K2-RoundFunc-64>
+    <#K2-RoundFunc-65>
+    <#K2-RoundFunc-66>
+    <#K2-RoundFunc-67>
+    <#K2-RoundFunc-68>
+    <#K2-RoundFunc-69>
+    <#K2-RoundFunc-70>
+    <#K2-RoundFunc-71>
+    <#K2-RoundFunc-72>
+    <#K2-RoundFunc-73>
+    <#K2-RoundFunc-74>
+    <#K2-RoundFunc-75>
+    <#K2-RoundFunc-76>
+    <#K2-RoundFunc-77>
+    <#K2-RoundFunc-78>
+    <#K2-RoundFunc-79>
+    <#K2-RoundFunc-80>
+    <#K2-RoundFunc-81>
+    <#K2-RoundFunc-82>
+    <#K2-RoundFunc-83>
+    <#K2-RoundFunc-84>
+    <#K2-RoundFunc-85>
+    <#K2-RoundFunc-86>
+    <#K2-RoundFunc-87>
+    <#K2-RoundFunc-88>
+    <#K2-RoundFunc-89>
+    <#K2-RoundFunc-90>
+    <#K2-RoundFunc-91>
+    <#K2-RoundFunc-92>
+    <#K2-RoundFunc-93>
+    <#K2-RoundFunc-94>
+    <#K2-RoundFunc-95>
+    <#K2-RoundFunc-96>
+    <#K2-RoundFunc-97>
+    <#K2-RoundFunc-98>
+    <#K2-RoundFunc-99>
+    <#K2-RoundFunc-100>
+    <#K2-RoundFunc-101>
+    <#K2-RoundFunc-102>
+    <#K2-RoundFunc-103>
+    <#K2-RoundFunc-104>
+    <#K2-RoundFunc-105>
+    <#K2-RoundFunc-106>
+    <#K2-RoundFunc-107>
+    <#K2-RoundFunc-108>
+    <#K2-RoundFunc-109>
+    <#K2-RoundFunc-110>
+    <#K2-RoundFunc-111>
+    <#K2-RoundFunc-112>
+    <#K2-RoundFunc-113>
+    <#K2-RoundFunc-114>
+    <#K2-RoundFunc-115>
+    <#K2-RoundFunc-116>
+    <#K2-RoundFunc-117>
+    <#K2-RoundFunc-118>
+    <#K2-RoundFunc-119>
+    <#K2-RoundFunc-120>
+    <#K2-RoundFunc-121>
+    <#K2-RoundFunc-122>
+    <#K2-RoundFunc-123>
+    <#K2-RoundFunc-124>
+    <#K2-RoundFunc-125>
+    <#K2-RoundFunc-126>
+    <#K2-RoundFunc-127>
+    <#K2-RoundFunc-128>
+    <#K2-RoundFunc-129>
+    <#K2-RoundFunc-130>
+    <#K2-RoundFunc-131>
+    <#K2-RoundFunc-132>
+    <#K2-RoundFunc-133>
+    <#K2-RoundFunc-134>
+    <#K2-RoundFunc-135>
+    <#K2-RoundFunc-136>
+    <#K2-RoundFunc-137>
+    <#K2-RoundFunc-138>
+    <#K2-RoundFunc-139>
+    <#K2-RoundFunc-140>
+    <#K2-RoundFunc-141>
+    <#K2-RoundFunc-142>
+    <#K2-RoundFunc-143>
+    <#K2-RoundFunc-144>
+    <#K2-RoundFunc-145>
+    <#K2-RoundFunc-146>
+    <#K2-RoundFunc-147>
+    <#K2-RoundFunc-148>
+    <#K2-RoundFunc-149>
+    <#K2-RoundFunc-150>
+    <#K2-RoundFunc-151>
+    <#K2-RoundFunc-152>
+    <#K2-RoundFunc-153>
+    <#K2-RoundFunc-154>
+    <#K2-RoundFunc-155>
+    <#K2-RoundFunc-156>
+    <#K2-RoundFunc-157>
+    <#K2-RoundFunc-158>
+    <#K2-RoundFunc-159>
+    <#K2-RoundFunc-160>
+    <#K2-RoundFunc-161>
+    <#K2-RoundFunc-162>
+    <#K2-RoundFunc-163>
+    <#K2-RoundFunc-164>
+    <#K2-RoundFunc-165>
+    <#K2-RoundFunc-166>
+    <#K2-RoundFunc-167>
+    <#K2-RoundFunc-168>
+    <#K2-RoundFunc-169>
+    <#K2-RoundFunc-170>
+    <#K2-RoundFunc-171>
+    <#K2-RoundFunc-172>
+    <#K2-RoundFunc-173>
+    <#K2-RoundFunc-174>
+    <#K2-RoundFunc-175>
+    <#K2-RoundFunc-176>
+    <#K2-RoundFunc-177>
+    <#K2-RoundFunc-178>
+    <#K2-RoundFunc-179>
+    <#K2-RoundFunc-180>
+    <#K2-RoundFunc-181>
+    <#K2-RoundFunc-182>
+    <#K2-RoundFunc-183>
+    <#K2-RoundFunc-184>
+    <#K2-RoundFunc-185>
+    <#K2-RoundFunc-186>
+    <#K2-RoundFunc-187>
+    <#K2-RoundFunc-188>
+    <#K2-RoundFunc-189>
+    <#K2-RoundFunc-190>
+    <#fn-round-decimal-2>
+    <#fn-round-decimal-3>
+    <#fn-round-decimal-4>
+    <#fn-round-decimal-5>
+    <#fn-round-decimal-6>
+    <#fn-round-decimal-7>
+  ) .
+
+<#fn-roundint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundint1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:int(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L25> ;
+  mf:action [ qt:query <fn-roundint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundint1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:int(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L37> ;
+  mf:action [ qt:query <fn-roundint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundint1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:int(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L46> ;
+  mf:action [ qt:query <fn-roundint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundintg1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundintg1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:integer(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L55> ;
+  mf:action [ qt:query <fn-roundintg1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundintg1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundintg1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:integer(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L64> ;
+  mf:action [ qt:query <fn-roundintg1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundintg1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundintg1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:integer(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L73> ;
+  mf:action [ qt:query <fn-roundintg1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-rounddec1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-rounddec1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:decimal(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L82> ;
+  mf:action [ qt:query <fn-rounddec1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-rounddec1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-rounddec1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:decimal(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L91> ;
+  mf:action [ qt:query <fn-rounddec1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-rounddec1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-rounddec1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:decimal(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L103> ;
+  mf:action [ qt:query <fn-rounddec1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-rounddbl1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-rounddbl1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:double(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L112> ;
+  mf:action [ qt:query <fn-rounddbl1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-rounddbl1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-rounddbl1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:double(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L121> ;
+  mf:action [ qt:query <fn-rounddbl1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-rounddbl1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-rounddbl1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:double(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L133> ;
+  mf:action [ qt:query <fn-rounddbl1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundflt1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundflt1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:float(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L142> ;
+  mf:action [ qt:query <fn-roundflt1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundflt1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundflt1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:float(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L151> ;
+  mf:action [ qt:query <fn-roundflt1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundflt1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundflt1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:float(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L163> ;
+  mf:action [ qt:query <fn-roundflt1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundlng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundlng1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:long(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L172> ;
+  mf:action [ qt:query <fn-roundlng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundlng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundlng1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:long(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L181> ;
+  mf:action [ qt:query <fn-roundlng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundlng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundlng1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:long(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L190> ;
+  mf:action [ qt:query <fn-roundlng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundusht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundusht1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:unsignedShort(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L199> ;
+  mf:action [ qt:query <fn-roundusht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundusht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundusht1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:unsignedShort(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L208> ;
+  mf:action [ qt:query <fn-roundusht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundusht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundusht1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:unsignedShort(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L217> ;
+  mf:action [ qt:query <fn-roundusht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnint1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:negativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L226> ;
+  mf:action [ qt:query <fn-roundnint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnint1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:negativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L235> ;
+  mf:action [ qt:query <fn-roundnint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnint1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:negativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L244> ;
+  mf:action [ qt:query <fn-roundnint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundpint1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundpint1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:positiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L253> ;
+  mf:action [ qt:query <fn-roundpint1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundpint1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundpint1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:positiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L262> ;
+  mf:action [ qt:query <fn-roundpint1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundpint1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundpint1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:positiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L271> ;
+  mf:action [ qt:query <fn-roundpint1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundulng1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundulng1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:unsignedLong(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L280> ;
+  mf:action [ qt:query <fn-roundulng1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundulng1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundulng1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:unsignedLong(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L289> ;
+  mf:action [ qt:query <fn-roundulng1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundulng1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundulng1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:unsignedLong(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L298> ;
+  mf:action [ qt:query <fn-roundulng1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnpi1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnpi1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L307> ;
+  mf:action [ qt:query <fn-roundnpi1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnpi1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnpi1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L316> ;
+  mf:action [ qt:query <fn-roundnpi1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnpi1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnpi1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:nonPositiveInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L325> ;
+  mf:action [ qt:query <fn-roundnpi1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnni1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnni1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L334> ;
+  mf:action [ qt:query <fn-roundnni1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnni1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnni1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L343> ;
+  mf:action [ qt:query <fn-roundnni1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundnni1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundnni1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:nonNegativeInteger(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L352> ;
+  mf:action [ qt:query <fn-roundnni1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundsht1args-1> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundsht1args-1" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:short(lower bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L361> ;
+  mf:action [ qt:query <fn-roundsht1args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundsht1args-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundsht1args-2" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:short(mid range)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L370> ;
+  mf:action [ qt:query <fn-roundsht1args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-roundsht1args-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-roundsht1args-3" ;
+  rdfs:comment "Evaluates The \"round\" function with the arguments set as follows: $arg = xs:short(upper bound)" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L379> ;
+  mf:action [ qt:query <fn-roundsht1args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-RoundFunc-4> a mf:QueryEvaluationTest ;
+  mf:name "K-RoundFunc-4" ;
+  rdfs:comment "A test whose essence is: `round(1) eq 1`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L427> ;
+  mf:action [ qt:query <K-RoundFunc-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-RoundFunc-5> a mf:QueryEvaluationTest ;
+  mf:name "K-RoundFunc-5" ;
+  rdfs:comment "A test whose essence is: `round(1.1) eq 1`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L436> ;
+  mf:action [ qt:query <K-RoundFunc-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-RoundFunc-6> a mf:QueryEvaluationTest ;
+  mf:name "K-RoundFunc-6" ;
+  rdfs:comment "A test whose essence is: `round(xs:double(1)) eq 1`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L445> ;
+  mf:action [ qt:query <K-RoundFunc-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-RoundFunc-7> a mf:QueryEvaluationTest ;
+  mf:name "K-RoundFunc-7" ;
+  rdfs:comment "A test whose essence is: `round(xs:float(1)) eq 1`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L454> ;
+  mf:action [ qt:query <K-RoundFunc-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-RoundFunc-8> a mf:QueryEvaluationTest ;
+  mf:name "K-RoundFunc-8" ;
+  rdfs:comment "A test whose essence is: `round(2.4999) eq 2`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L463> ;
+  mf:action [ qt:query <K-RoundFunc-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-RoundFunc-9> a mf:QueryEvaluationTest ;
+  mf:name "K-RoundFunc-9" ;
+  rdfs:comment "A test whose essence is: `round(-2.5) eq -2`." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L472> ;
+  mf:action [ qt:query <K-RoundFunc-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-13> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-13" ;
+  rdfs:comment "Invoke on xs:double INF." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L640> ;
+  mf:action [ qt:query <K2-RoundFunc-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-14> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-14" ;
+  rdfs:comment "Invoke on xs:double -INF." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L649> ;
+  mf:action [ qt:query <K2-RoundFunc-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-15> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-15" ;
+  rdfs:comment "Invoke on xs:double 0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L658> ;
+  mf:action [ qt:query <K2-RoundFunc-15.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-16> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-16" ;
+  rdfs:comment "Invoke on xs:double -0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L667> ;
+  mf:action [ qt:query <K2-RoundFunc-16.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-17> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-17" ;
+  rdfs:comment "Invoke on xs:float INF." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L676> ;
+  mf:action [ qt:query <K2-RoundFunc-17.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-18> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-18" ;
+  rdfs:comment "Invoke on xs:float -INF." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L685> ;
+  mf:action [ qt:query <K2-RoundFunc-18.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-19> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-19" ;
+  rdfs:comment "Invoke on xs:float 0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L694> ;
+  mf:action [ qt:query <K2-RoundFunc-19.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-20> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-20" ;
+  rdfs:comment "Invoke on xs:float -0." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L703> ;
+  mf:action [ qt:query <K2-RoundFunc-20.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-21> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-21" ;
+  rdfs:comment "Invoke on xs:float NaN." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L712> ;
+  mf:action [ qt:query <K2-RoundFunc-21.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-22> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-22" ;
+  rdfs:comment "Invoke on xs:double NaN." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L721> ;
+  mf:action [ qt:query <K2-RoundFunc-22.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-23> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-23" ;
+  rdfs:comment "Invoke on 0.01, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L730> ;
+  mf:action [ qt:query <K2-RoundFunc-23.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-24> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-24" ;
+  rdfs:comment "Invoke on 0.01, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L739> ;
+  mf:action [ qt:query <K2-RoundFunc-24.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-25> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-25" ;
+  rdfs:comment "Invoke on -0.01, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L748> ;
+  mf:action [ qt:query <K2-RoundFunc-25.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-26> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-26" ;
+  rdfs:comment "Invoke on -0.01, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L757> ;
+  mf:action [ qt:query <K2-RoundFunc-26.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-27> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-27" ;
+  rdfs:comment "Invoke on 0.04, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L766> ;
+  mf:action [ qt:query <K2-RoundFunc-27.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-28> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-28" ;
+  rdfs:comment "Invoke on 0.04, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L775> ;
+  mf:action [ qt:query <K2-RoundFunc-28.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-29> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-29" ;
+  rdfs:comment "Invoke on -0.04, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L784> ;
+  mf:action [ qt:query <K2-RoundFunc-29.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-30> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-30" ;
+  rdfs:comment "Invoke on -0.04, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L793> ;
+  mf:action [ qt:query <K2-RoundFunc-30.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-31> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-31" ;
+  rdfs:comment "Invoke on 0.05, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L802> ;
+  mf:action [ qt:query <K2-RoundFunc-31.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-32> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-32" ;
+  rdfs:comment "Invoke on 0.05, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L811> ;
+  mf:action [ qt:query <K2-RoundFunc-32.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-33> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-33" ;
+  rdfs:comment "Invoke on -0.05, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L820> ;
+  mf:action [ qt:query <K2-RoundFunc-33.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-34> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-34" ;
+  rdfs:comment "Invoke on -0.05, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L829> ;
+  mf:action [ qt:query <K2-RoundFunc-34.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-35> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-35" ;
+  rdfs:comment "Invoke on 0.06, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L838> ;
+  mf:action [ qt:query <K2-RoundFunc-35.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-36> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-36" ;
+  rdfs:comment "Invoke on 0.06, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L847> ;
+  mf:action [ qt:query <K2-RoundFunc-36.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-37> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-37" ;
+  rdfs:comment "Invoke on -0.06, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L856> ;
+  mf:action [ qt:query <K2-RoundFunc-37.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-38> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-38" ;
+  rdfs:comment "Invoke on -0.06, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L865> ;
+  mf:action [ qt:query <K2-RoundFunc-38.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-39> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-39" ;
+  rdfs:comment "Invoke on 0.09, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L874> ;
+  mf:action [ qt:query <K2-RoundFunc-39.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-40> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-40" ;
+  rdfs:comment "Invoke on 0.09, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L883> ;
+  mf:action [ qt:query <K2-RoundFunc-40.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-41> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-41" ;
+  rdfs:comment "Invoke on -0.09, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L892> ;
+  mf:action [ qt:query <K2-RoundFunc-41.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-42> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-42" ;
+  rdfs:comment "Invoke on -0.09, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L901> ;
+  mf:action [ qt:query <K2-RoundFunc-42.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-43> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-43" ;
+  rdfs:comment "Invoke on 0.00, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L910> ;
+  mf:action [ qt:query <K2-RoundFunc-43.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-44> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-44" ;
+  rdfs:comment "Invoke on 0.00, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L919> ;
+  mf:action [ qt:query <K2-RoundFunc-44.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-45> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-45" ;
+  rdfs:comment "Invoke on -0.00, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L928> ;
+  mf:action [ qt:query <K2-RoundFunc-45.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-46> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-46" ;
+  rdfs:comment "Invoke on -0.00, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L937> ;
+  mf:action [ qt:query <K2-RoundFunc-46.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-47> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-47" ;
+  rdfs:comment "Invoke on 0.11, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L946> ;
+  mf:action [ qt:query <K2-RoundFunc-47.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-48> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-48" ;
+  rdfs:comment "Invoke on 0.11, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L955> ;
+  mf:action [ qt:query <K2-RoundFunc-48.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-49> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-49" ;
+  rdfs:comment "Invoke on -0.11, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L964> ;
+  mf:action [ qt:query <K2-RoundFunc-49.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-50> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-50" ;
+  rdfs:comment "Invoke on -0.11, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L973> ;
+  mf:action [ qt:query <K2-RoundFunc-50.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-51> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-51" ;
+  rdfs:comment "Invoke on 0.14, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L982> ;
+  mf:action [ qt:query <K2-RoundFunc-51.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-52> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-52" ;
+  rdfs:comment "Invoke on 0.14, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L991> ;
+  mf:action [ qt:query <K2-RoundFunc-52.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-53> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-53" ;
+  rdfs:comment "Invoke on -0.14, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1000> ;
+  mf:action [ qt:query <K2-RoundFunc-53.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-54> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-54" ;
+  rdfs:comment "Invoke on -0.14, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1009> ;
+  mf:action [ qt:query <K2-RoundFunc-54.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-55> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-55" ;
+  rdfs:comment "Invoke on 0.15, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1021> ;
+  mf:action [ qt:query <K2-RoundFunc-55.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-56> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-56" ;
+  rdfs:comment "Invoke on 0.15, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1030> ;
+  mf:action [ qt:query <K2-RoundFunc-56.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-57> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-57" ;
+  rdfs:comment "Invoke on -0.15, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1039> ;
+  mf:action [ qt:query <K2-RoundFunc-57.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-58> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-58" ;
+  rdfs:comment "Invoke on -0.15, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1048> ;
+  mf:action [ qt:query <K2-RoundFunc-58.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-59> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-59" ;
+  rdfs:comment "Invoke on 0.16, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1057> ;
+  mf:action [ qt:query <K2-RoundFunc-59.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-60> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-60" ;
+  rdfs:comment "Invoke on 0.16, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1066> ;
+  mf:action [ qt:query <K2-RoundFunc-60.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-61> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-61" ;
+  rdfs:comment "Invoke on -0.16, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1075> ;
+  mf:action [ qt:query <K2-RoundFunc-61.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-62> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-62" ;
+  rdfs:comment "Invoke on -0.16, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1084> ;
+  mf:action [ qt:query <K2-RoundFunc-62.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-63> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-63" ;
+  rdfs:comment "Invoke on 0.19, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1093> ;
+  mf:action [ qt:query <K2-RoundFunc-63.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-64> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-64" ;
+  rdfs:comment "Invoke on 0.19, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1102> ;
+  mf:action [ qt:query <K2-RoundFunc-64.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-65> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-65" ;
+  rdfs:comment "Invoke on -0.19, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1111> ;
+  mf:action [ qt:query <K2-RoundFunc-65.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-66> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-66" ;
+  rdfs:comment "Invoke on -0.19, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1120> ;
+  mf:action [ qt:query <K2-RoundFunc-66.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-67> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-67" ;
+  rdfs:comment "Invoke on 0.10, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1129> ;
+  mf:action [ qt:query <K2-RoundFunc-67.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-68> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-68" ;
+  rdfs:comment "Invoke on 0.10, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1138> ;
+  mf:action [ qt:query <K2-RoundFunc-68.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-69> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-69" ;
+  rdfs:comment "Invoke on -0.10, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1147> ;
+  mf:action [ qt:query <K2-RoundFunc-69.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-70> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-70" ;
+  rdfs:comment "Invoke on -0.10, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1156> ;
+  mf:action [ qt:query <K2-RoundFunc-70.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-71> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-71" ;
+  rdfs:comment "Invoke on 0.41, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1165> ;
+  mf:action [ qt:query <K2-RoundFunc-71.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-72> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-72" ;
+  rdfs:comment "Invoke on 0.41, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1174> ;
+  mf:action [ qt:query <K2-RoundFunc-72.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-73> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-73" ;
+  rdfs:comment "Invoke on -0.41, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1183> ;
+  mf:action [ qt:query <K2-RoundFunc-73.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-74> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-74" ;
+  rdfs:comment "Invoke on -0.41, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1192> ;
+  mf:action [ qt:query <K2-RoundFunc-74.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-75> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-75" ;
+  rdfs:comment "Invoke on 0.44, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1201> ;
+  mf:action [ qt:query <K2-RoundFunc-75.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-76> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-76" ;
+  rdfs:comment "Invoke on 0.44, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1210> ;
+  mf:action [ qt:query <K2-RoundFunc-76.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-77> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-77" ;
+  rdfs:comment "Invoke on -0.44, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1219> ;
+  mf:action [ qt:query <K2-RoundFunc-77.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-78> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-78" ;
+  rdfs:comment "Invoke on -0.44, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1228> ;
+  mf:action [ qt:query <K2-RoundFunc-78.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-79> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-79" ;
+  rdfs:comment "Invoke on 0.45, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1237> ;
+  mf:action [ qt:query <K2-RoundFunc-79.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-80> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-80" ;
+  rdfs:comment "Invoke on 0.45, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1246> ;
+  mf:action [ qt:query <K2-RoundFunc-80.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-81> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-81" ;
+  rdfs:comment "Invoke on -0.45, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1255> ;
+  mf:action [ qt:query <K2-RoundFunc-81.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-82> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-82" ;
+  rdfs:comment "Invoke on -0.45, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1264> ;
+  mf:action [ qt:query <K2-RoundFunc-82.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-83> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-83" ;
+  rdfs:comment "Invoke on 0.46, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1273> ;
+  mf:action [ qt:query <K2-RoundFunc-83.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-84> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-84" ;
+  rdfs:comment "Invoke on 0.46, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1282> ;
+  mf:action [ qt:query <K2-RoundFunc-84.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-85> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-85" ;
+  rdfs:comment "Invoke on -0.46, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1291> ;
+  mf:action [ qt:query <K2-RoundFunc-85.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-86> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-86" ;
+  rdfs:comment "Invoke on -0.46, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1300> ;
+  mf:action [ qt:query <K2-RoundFunc-86.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-87> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-87" ;
+  rdfs:comment "Invoke on 0.49, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1309> ;
+  mf:action [ qt:query <K2-RoundFunc-87.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-88> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-88" ;
+  rdfs:comment "Invoke on 0.49, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1318> ;
+  mf:action [ qt:query <K2-RoundFunc-88.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-89> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-89" ;
+  rdfs:comment "Invoke on -0.49, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1327> ;
+  mf:action [ qt:query <K2-RoundFunc-89.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-90> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-90" ;
+  rdfs:comment "Invoke on -0.49, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1336> ;
+  mf:action [ qt:query <K2-RoundFunc-90.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-91> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-91" ;
+  rdfs:comment "Invoke on 0.40, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1345> ;
+  mf:action [ qt:query <K2-RoundFunc-91.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-92> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-92" ;
+  rdfs:comment "Invoke on 0.40, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1354> ;
+  mf:action [ qt:query <K2-RoundFunc-92.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-93> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-93" ;
+  rdfs:comment "Invoke on -0.40, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1363> ;
+  mf:action [ qt:query <K2-RoundFunc-93.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-94> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-94" ;
+  rdfs:comment "Invoke on -0.40, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1372> ;
+  mf:action [ qt:query <K2-RoundFunc-94.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-95> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-95" ;
+  rdfs:comment "Invoke on 0.51, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1381> ;
+  mf:action [ qt:query <K2-RoundFunc-95.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-96> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-96" ;
+  rdfs:comment "Invoke on 0.51, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1390> ;
+  mf:action [ qt:query <K2-RoundFunc-96.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-97> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-97" ;
+  rdfs:comment "Invoke on -0.51, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1399> ;
+  mf:action [ qt:query <K2-RoundFunc-97.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-98> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-98" ;
+  rdfs:comment "Invoke on -0.51, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1408> ;
+  mf:action [ qt:query <K2-RoundFunc-98.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-99> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-99" ;
+  rdfs:comment "Invoke on 0.54, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1417> ;
+  mf:action [ qt:query <K2-RoundFunc-99.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-100> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-100" ;
+  rdfs:comment "Invoke on 0.54, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1426> ;
+  mf:action [ qt:query <K2-RoundFunc-100.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-101> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-101" ;
+  rdfs:comment "Invoke on -0.54, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1435> ;
+  mf:action [ qt:query <K2-RoundFunc-101.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-102> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-102" ;
+  rdfs:comment "Invoke on -0.54, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1444> ;
+  mf:action [ qt:query <K2-RoundFunc-102.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-103> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-103" ;
+  rdfs:comment "Invoke on 0.55, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1453> ;
+  mf:action [ qt:query <K2-RoundFunc-103.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-104> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-104" ;
+  rdfs:comment "Invoke on 0.55, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1462> ;
+  mf:action [ qt:query <K2-RoundFunc-104.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-105> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-105" ;
+  rdfs:comment "Invoke on -0.55, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1471> ;
+  mf:action [ qt:query <K2-RoundFunc-105.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-106> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-106" ;
+  rdfs:comment "Invoke on -0.55, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1480> ;
+  mf:action [ qt:query <K2-RoundFunc-106.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-107> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-107" ;
+  rdfs:comment "Invoke on 0.56, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1489> ;
+  mf:action [ qt:query <K2-RoundFunc-107.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-108> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-108" ;
+  rdfs:comment "Invoke on 0.56, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1498> ;
+  mf:action [ qt:query <K2-RoundFunc-108.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-109> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-109" ;
+  rdfs:comment "Invoke on -0.56, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1507> ;
+  mf:action [ qt:query <K2-RoundFunc-109.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-110> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-110" ;
+  rdfs:comment "Invoke on -0.56, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1516> ;
+  mf:action [ qt:query <K2-RoundFunc-110.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-111> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-111" ;
+  rdfs:comment "Invoke on 0.59, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1525> ;
+  mf:action [ qt:query <K2-RoundFunc-111.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-112> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-112" ;
+  rdfs:comment "Invoke on 0.59, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1534> ;
+  mf:action [ qt:query <K2-RoundFunc-112.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-113> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-113" ;
+  rdfs:comment "Invoke on -0.59, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1543> ;
+  mf:action [ qt:query <K2-RoundFunc-113.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-114> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-114" ;
+  rdfs:comment "Invoke on -0.59, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1552> ;
+  mf:action [ qt:query <K2-RoundFunc-114.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-115> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-115" ;
+  rdfs:comment "Invoke on 0.50, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1561> ;
+  mf:action [ qt:query <K2-RoundFunc-115.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-116> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-116" ;
+  rdfs:comment "Invoke on 0.50, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1570> ;
+  mf:action [ qt:query <K2-RoundFunc-116.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-117> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-117" ;
+  rdfs:comment "Invoke on -0.50, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1579> ;
+  mf:action [ qt:query <K2-RoundFunc-117.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-118> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-118" ;
+  rdfs:comment "Invoke on -0.50, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1588> ;
+  mf:action [ qt:query <K2-RoundFunc-118.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-119> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-119" ;
+  rdfs:comment "Invoke on 0.61, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1597> ;
+  mf:action [ qt:query <K2-RoundFunc-119.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-120> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-120" ;
+  rdfs:comment "Invoke on 0.61, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1606> ;
+  mf:action [ qt:query <K2-RoundFunc-120.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-121> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-121" ;
+  rdfs:comment "Invoke on -0.61, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1615> ;
+  mf:action [ qt:query <K2-RoundFunc-121.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-122> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-122" ;
+  rdfs:comment "Invoke on -0.61, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1624> ;
+  mf:action [ qt:query <K2-RoundFunc-122.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-123> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-123" ;
+  rdfs:comment "Invoke on 0.64, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1633> ;
+  mf:action [ qt:query <K2-RoundFunc-123.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-124> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-124" ;
+  rdfs:comment "Invoke on 0.64, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1642> ;
+  mf:action [ qt:query <K2-RoundFunc-124.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-125> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-125" ;
+  rdfs:comment "Invoke on -0.64, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1651> ;
+  mf:action [ qt:query <K2-RoundFunc-125.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-126> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-126" ;
+  rdfs:comment "Invoke on -0.64, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1660> ;
+  mf:action [ qt:query <K2-RoundFunc-126.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-127> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-127" ;
+  rdfs:comment "Invoke on 0.65, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1669> ;
+  mf:action [ qt:query <K2-RoundFunc-127.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-128> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-128" ;
+  rdfs:comment "Invoke on 0.65, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1678> ;
+  mf:action [ qt:query <K2-RoundFunc-128.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-129> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-129" ;
+  rdfs:comment "Invoke on -0.65, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1687> ;
+  mf:action [ qt:query <K2-RoundFunc-129.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-130> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-130" ;
+  rdfs:comment "Invoke on -0.65, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1696> ;
+  mf:action [ qt:query <K2-RoundFunc-130.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-131> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-131" ;
+  rdfs:comment "Invoke on 0.66, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1705> ;
+  mf:action [ qt:query <K2-RoundFunc-131.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-132> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-132" ;
+  rdfs:comment "Invoke on 0.66, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1714> ;
+  mf:action [ qt:query <K2-RoundFunc-132.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-133> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-133" ;
+  rdfs:comment "Invoke on -0.66, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1723> ;
+  mf:action [ qt:query <K2-RoundFunc-133.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-134> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-134" ;
+  rdfs:comment "Invoke on -0.66, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1732> ;
+  mf:action [ qt:query <K2-RoundFunc-134.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-135> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-135" ;
+  rdfs:comment "Invoke on 0.69, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1741> ;
+  mf:action [ qt:query <K2-RoundFunc-135.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-136> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-136" ;
+  rdfs:comment "Invoke on 0.69, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1750> ;
+  mf:action [ qt:query <K2-RoundFunc-136.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-137> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-137" ;
+  rdfs:comment "Invoke on -0.69, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1759> ;
+  mf:action [ qt:query <K2-RoundFunc-137.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-138> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-138" ;
+  rdfs:comment "Invoke on -0.69, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1768> ;
+  mf:action [ qt:query <K2-RoundFunc-138.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-139> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-139" ;
+  rdfs:comment "Invoke on 0.60, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1777> ;
+  mf:action [ qt:query <K2-RoundFunc-139.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-140> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-140" ;
+  rdfs:comment "Invoke on 0.60, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1786> ;
+  mf:action [ qt:query <K2-RoundFunc-140.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-141> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-141" ;
+  rdfs:comment "Invoke on -0.60, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1795> ;
+  mf:action [ qt:query <K2-RoundFunc-141.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-142> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-142" ;
+  rdfs:comment "Invoke on -0.60, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1804> ;
+  mf:action [ qt:query <K2-RoundFunc-142.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-143> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-143" ;
+  rdfs:comment "Invoke on 0.91, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1813> ;
+  mf:action [ qt:query <K2-RoundFunc-143.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-144> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-144" ;
+  rdfs:comment "Invoke on 0.91, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1822> ;
+  mf:action [ qt:query <K2-RoundFunc-144.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-145> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-145" ;
+  rdfs:comment "Invoke on -0.91, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1831> ;
+  mf:action [ qt:query <K2-RoundFunc-145.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-146> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-146" ;
+  rdfs:comment "Invoke on -0.91, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1840> ;
+  mf:action [ qt:query <K2-RoundFunc-146.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-147> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-147" ;
+  rdfs:comment "Invoke on 0.94, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1849> ;
+  mf:action [ qt:query <K2-RoundFunc-147.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-148> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-148" ;
+  rdfs:comment "Invoke on 0.94, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1858> ;
+  mf:action [ qt:query <K2-RoundFunc-148.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-149> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-149" ;
+  rdfs:comment "Invoke on -0.94, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1867> ;
+  mf:action [ qt:query <K2-RoundFunc-149.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-150> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-150" ;
+  rdfs:comment "Invoke on -0.94, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1876> ;
+  mf:action [ qt:query <K2-RoundFunc-150.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-151> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-151" ;
+  rdfs:comment "Invoke on 0.95, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1885> ;
+  mf:action [ qt:query <K2-RoundFunc-151.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-152> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-152" ;
+  rdfs:comment "Invoke on 0.95, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1894> ;
+  mf:action [ qt:query <K2-RoundFunc-152.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-153> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-153" ;
+  rdfs:comment "Invoke on -0.95, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1903> ;
+  mf:action [ qt:query <K2-RoundFunc-153.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-154> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-154" ;
+  rdfs:comment "Invoke on -0.95, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1912> ;
+  mf:action [ qt:query <K2-RoundFunc-154.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-155> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-155" ;
+  rdfs:comment "Invoke on 0.96, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1921> ;
+  mf:action [ qt:query <K2-RoundFunc-155.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-156> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-156" ;
+  rdfs:comment "Invoke on 0.96, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1930> ;
+  mf:action [ qt:query <K2-RoundFunc-156.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-157> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-157" ;
+  rdfs:comment "Invoke on -0.96, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1939> ;
+  mf:action [ qt:query <K2-RoundFunc-157.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-158> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-158" ;
+  rdfs:comment "Invoke on -0.96, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1948> ;
+  mf:action [ qt:query <K2-RoundFunc-158.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-159> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-159" ;
+  rdfs:comment "Invoke on 0.99, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1957> ;
+  mf:action [ qt:query <K2-RoundFunc-159.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-160> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-160" ;
+  rdfs:comment "Invoke on 0.99, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1966> ;
+  mf:action [ qt:query <K2-RoundFunc-160.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-161> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-161" ;
+  rdfs:comment "Invoke on -0.99, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1975> ;
+  mf:action [ qt:query <K2-RoundFunc-161.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-162> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-162" ;
+  rdfs:comment "Invoke on -0.99, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1984> ;
+  mf:action [ qt:query <K2-RoundFunc-162.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-163> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-163" ;
+  rdfs:comment "Invoke on 0.90, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1993> ;
+  mf:action [ qt:query <K2-RoundFunc-163.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-164> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-164" ;
+  rdfs:comment "Invoke on 0.90, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2002> ;
+  mf:action [ qt:query <K2-RoundFunc-164.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-165> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-165" ;
+  rdfs:comment "Invoke on -0.90, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2011> ;
+  mf:action [ qt:query <K2-RoundFunc-165.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-166> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-166" ;
+  rdfs:comment "Invoke on -0.90, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2020> ;
+  mf:action [ qt:query <K2-RoundFunc-166.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-167> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-167" ;
+  rdfs:comment "Invoke on 0.101, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2029> ;
+  mf:action [ qt:query <K2-RoundFunc-167.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-168> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-168" ;
+  rdfs:comment "Invoke on 0.101, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2038> ;
+  mf:action [ qt:query <K2-RoundFunc-168.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-169> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-169" ;
+  rdfs:comment "Invoke on -0.101, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2047> ;
+  mf:action [ qt:query <K2-RoundFunc-169.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-170> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-170" ;
+  rdfs:comment "Invoke on -0.101, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2056> ;
+  mf:action [ qt:query <K2-RoundFunc-170.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-171> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-171" ;
+  rdfs:comment "Invoke on 0.104, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2065> ;
+  mf:action [ qt:query <K2-RoundFunc-171.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-172> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-172" ;
+  rdfs:comment "Invoke on 0.104, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2074> ;
+  mf:action [ qt:query <K2-RoundFunc-172.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-173> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-173" ;
+  rdfs:comment "Invoke on -0.104, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2083> ;
+  mf:action [ qt:query <K2-RoundFunc-173.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-174> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-174" ;
+  rdfs:comment "Invoke on -0.104, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2092> ;
+  mf:action [ qt:query <K2-RoundFunc-174.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-175> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-175" ;
+  rdfs:comment "Invoke on 0.105, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2101> ;
+  mf:action [ qt:query <K2-RoundFunc-175.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-176> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-176" ;
+  rdfs:comment "Invoke on 0.105, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2110> ;
+  mf:action [ qt:query <K2-RoundFunc-176.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-177> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-177" ;
+  rdfs:comment "Invoke on -0.105, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2119> ;
+  mf:action [ qt:query <K2-RoundFunc-177.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-178> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-178" ;
+  rdfs:comment "Invoke on -0.105, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2128> ;
+  mf:action [ qt:query <K2-RoundFunc-178.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-179> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-179" ;
+  rdfs:comment "Invoke on 0.106, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2137> ;
+  mf:action [ qt:query <K2-RoundFunc-179.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-180> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-180" ;
+  rdfs:comment "Invoke on 0.106, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2146> ;
+  mf:action [ qt:query <K2-RoundFunc-180.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-181> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-181" ;
+  rdfs:comment "Invoke on -0.106, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2155> ;
+  mf:action [ qt:query <K2-RoundFunc-181.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-182> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-182" ;
+  rdfs:comment "Invoke on -0.106, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2164> ;
+  mf:action [ qt:query <K2-RoundFunc-182.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-183> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-183" ;
+  rdfs:comment "Invoke on 0.109, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2173> ;
+  mf:action [ qt:query <K2-RoundFunc-183.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-184> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-184" ;
+  rdfs:comment "Invoke on 0.109, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2182> ;
+  mf:action [ qt:query <K2-RoundFunc-184.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-185> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-185" ;
+  rdfs:comment "Invoke on -0.109, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2191> ;
+  mf:action [ qt:query <K2-RoundFunc-185.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-186> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-186" ;
+  rdfs:comment "Invoke on -0.109, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2200> ;
+  mf:action [ qt:query <K2-RoundFunc-186.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-187> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-187" ;
+  rdfs:comment "Invoke on 0.100, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2209> ;
+  mf:action [ qt:query <K2-RoundFunc-187.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-188> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-188" ;
+  rdfs:comment "Invoke on 0.100, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2218> ;
+  mf:action [ qt:query <K2-RoundFunc-188.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-189> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-189" ;
+  rdfs:comment "Invoke on -0.100, type xs:float." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2227> ;
+  mf:action [ qt:query <K2-RoundFunc-189.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K2-RoundFunc-190> a mf:QueryEvaluationTest ;
+  mf:name "K2-RoundFunc-190" ;
+  rdfs:comment "Invoke on -0.100, type xs:double." ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2236> ;
+  mf:action [ qt:query <K2-RoundFunc-190.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-round-decimal-2> a mf:QueryEvaluationTest ;
+  mf:name "fn-round-decimal-2" ;
+  rdfs:comment "round() applied to xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2259> ;
+  mf:action [ qt:query <fn-round-decimal-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-round-decimal-3> a mf:QueryEvaluationTest ;
+  mf:name "fn-round-decimal-3" ;
+  rdfs:comment "round() applied to xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2271> ;
+  mf:action [ qt:query <fn-round-decimal-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-round-decimal-4> a mf:QueryEvaluationTest ;
+  mf:name "fn-round-decimal-4" ;
+  rdfs:comment "round() applied to xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2283> ;
+  mf:action [ qt:query <fn-round-decimal-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-round-decimal-5> a mf:QueryEvaluationTest ;
+  mf:name "fn-round-decimal-5" ;
+  rdfs:comment "round() applied to xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2295> ;
+  mf:action [ qt:query <fn-round-decimal-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-round-decimal-6> a mf:QueryEvaluationTest ;
+  mf:name "fn-round-decimal-6" ;
+  rdfs:comment "round() applied to xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2307> ;
+  mf:action [ qt:query <fn-round-decimal-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#fn-round-decimal-7> a mf:QueryEvaluationTest ;
+  mf:name "fn-round-decimal-7" ;
+  rdfs:comment "round() applied to xs:decimal" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L2319> ;
+  mf:action [ qt:query <fn-round-decimal-7.rq> ] ;
+  mf:result <../true.srj> .

@@ -1,0 +1,298 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> a mf:Manifest ;
+  rdfs:label "QT3 test set op-dateTime-greater-than" ;
+  dct:license <../LICENSE.txt> ;
+  mf:entries (
+    <#op-dateTime-greater-than2args-1>
+    <#op-dateTime-greater-than2args-2>
+    <#op-dateTime-greater-than2args-3>
+    <#op-dateTime-greater-than2args-4>
+    <#op-dateTime-greater-than2args-5>
+    <#op-dateTime-greater-than2args-6>
+    <#op-dateTime-greater-than2args-7>
+    <#op-dateTime-greater-than2args-8>
+    <#op-dateTime-greater-than2args-9>
+    <#op-dateTime-greater-than2args-10>
+    <#op-dateTime-greater-than-3>
+    <#op-dateTime-greater-than-4>
+    <#op-dateTime-greater-than-5>
+    <#op-dateTime-greater-than-6>
+    <#op-dateTime-greater-than-7>
+    <#op-dateTime-greater-than-8>
+    <#op-dateTime-greater-than-9>
+    <#op-dateTime-greater-than-10>
+    <#op-dateTime-greater-than-11>
+    <#op-dateTime-greater-than-12>
+    <#op-dateTime-greater-than-13>
+    <#op-dateTime-greater-than-14>
+    <#K-DateTimeGT-1>
+    <#K-DateTimeGT-2>
+    <#K-DateTimeGT-3>
+    <#K-DateTimeGT-4>
+    <#K-DateTimeGT-5>
+    <#K-DateTimeGT-6>
+    <#cbcl-dateTime-greater-than-002>
+    <#cbcl-dateTime-greater-than-003>
+    <#cbcl-dateTime-greater-than-004>
+    <#cbcl-dateTime-greater-than-005>
+    <#cbcl-dateTime-greater-than-007>
+    <#cbcl-dateTime-greater-than-008>
+    <#cbcl-dateTime-greater-than-009>
+    <#cbcl-dateTime-greater-than-010>
+  ) .
+
+<#op-dateTime-greater-than2args-1> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-1" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-1                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L7> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-2> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-2" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-2                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(mid range)                         \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L25> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-3> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-3" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-3                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(upper bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L43> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-4> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-4" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-4                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(mid range)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L61> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-5> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-5" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-5                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(upper bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L79> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-6> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-6" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-6                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L97> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-7> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-7" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-7                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(mid range)                         \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L115> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-8> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-8" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-8                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(upper bound)                       \n$arg2 = xs:dateTime(lower bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L133> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-9> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-9" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-9                   \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(mid range)                         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L151> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than2args-10> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than2args-10" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than2args-10                  \nWritten By: Carmelo Montanez                            \nDate: Tue Apr 12 16:29:06 GMT-05:00 2005                \nPurpose: Evaluates The \"op:dateTime-greater-than\" operator\n with the arguments set as follows:                    \n$arg1 = xs:dateTime(lower bound)                       \n$arg2 = xs:dateTime(upper bound)                       \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L169> ;
+  mf:action [ qt:query <op-dateTime-greater-than2args-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-3> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-3" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-3                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function that \nreturn true and used together with fn:not (gt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L187> ;
+  mf:action [ qt:query <op-dateTime-greater-than-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-4> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-4" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-4                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function that  \nreturn true and used together with fn:not (ge operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L203> ;
+  mf:action [ qt:query <op-dateTime-greater-than-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-5> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-5" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-5                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function that  \nreturn false and used together with fn:not (gt operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L219> ;
+  mf:action [ qt:query <op-dateTime-greater-than-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-6> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-6" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-6                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function that  \nreturn false and used together with fn:not(ge operator)\n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L235> ;
+  mf:action [ qt:query <op-dateTime-greater-than-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-7> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-7" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-7                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used  \ntogether with \"and\" expression (gt operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L251> ;
+  mf:action [ qt:query <op-dateTime-greater-than-7.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-8> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-8" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-8                        \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used  \ntogether with \"and\" expression (ge operator).          \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L267> ;
+  mf:action [ qt:query <op-dateTime-greater-than-8.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-9> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-9" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-9                       \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used\ntogether with \"or\" expression (gt operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L283> ;
+  mf:action [ qt:query <op-dateTime-greater-than-9.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-10> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-10" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-10                      \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used  \ntogether with \"or\" expression (ge operator).           \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L299> ;
+  mf:action [ qt:query <op-dateTime-greater-than-10.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-11> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-11" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-11                      \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used  \ntogether with \"fn:true\"/or expression (gt operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L315> ;
+  mf:action [ qt:query <op-dateTime-greater-than-11.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-12> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-12" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-12                      \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used  \ntogether with \"fn:true\"/or expression (ge operator).   \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L331> ;
+  mf:action [ qt:query <op-dateTime-greater-than-12.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-13> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-13" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-13                      \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used  \ntogether with \"fn:false\"/or expression (gt operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L347> ;
+  mf:action [ qt:query <op-dateTime-greater-than-13.rq> ] ;
+  mf:result <../true.srj> .
+
+<#op-dateTime-greater-than-14> a mf:QueryEvaluationTest ;
+  mf:name "op-dateTime-greater-than-14" ;
+  rdfs:comment "*******************************************************\nTest: op-dateTime-greater-than-14                      \nWritten By: Carmelo Montanez                           \nDate: June 15, 2005                                    \nPurpose: Evaluates The \"dateTime-greater-than\" function used  \ntogether with \"fn:false\"/or expression (ge operator).  \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L363> ;
+  mf:action [ qt:query <op-dateTime-greater-than-14.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeGT-1> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeGT-1" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeGT-1                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'gt' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L379> ;
+  mf:action [ qt:query <K-DateTimeGT-1.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeGT-2> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeGT-2" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeGT-2                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'gt' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L394> ;
+  mf:action [ qt:query <K-DateTimeGT-2.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeGT-3> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeGT-3" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeGT-3                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'gt' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L409> ;
+  mf:action [ qt:query <K-DateTimeGT-3.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeGT-4> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeGT-4" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeGT-4                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ge' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L424> ;
+  mf:action [ qt:query <K-DateTimeGT-4.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeGT-5> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeGT-5" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeGT-5                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ge' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L439> ;
+  mf:action [ qt:query <K-DateTimeGT-5.rq> ] ;
+  mf:result <../true.srj> .
+
+<#K-DateTimeGT-6> a mf:QueryEvaluationTest ;
+  mf:name "K-DateTimeGT-6" ;
+  rdfs:comment "*******************************************************\n Test: K-DateTimeGT-6                                  \n Written by: Frans Englich                             \n Date: 2007-11-22T11:31:21+01:00                       \n Purpose: Simple test of 'ge' for xs:dateTime.         \n*******************************************************" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L454> ;
+  mf:action [ qt:query <K-DateTimeGT-6.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-002> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-002" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L483> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-002.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-003> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-003" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L494> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-003.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-004> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-004" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L505> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-004.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-005> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-005" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L516> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-005.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-007> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-007" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L539> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-007.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-008> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-008" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L550> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-008.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-009> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-009" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L561> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-009.rq> ] ;
+  mf:result <../true.srj> .
+
+<#cbcl-dateTime-greater-than-010> a mf:QueryEvaluationTest ;
+  mf:name "cbcl-dateTime-greater-than-010" ;
+  rdfs:comment "test comparison of dateTime" ;
+  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L572> ;
+  mf:action [ qt:query <cbcl-dateTime-greater-than-010.rq> ] ;
+  mf:result <../true.srj> .

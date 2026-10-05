@@ -1,0 +1,7 @@
+# QT3 test case op-boolean-greater-than-more-args-005 of test set op-boolean-greater-than, which tests the XPath expression
+#   xs:boolean("true") gt xs:boolean("0")
+# The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/boolean-greater-than.xml#L450
+ASK {
+  BIND(( <http://www.w3.org/2001/XMLSchema#boolean> ( "true" ) > <http://www.w3.org/2001/XMLSchema#boolean> ( "0" ) ) AS ?result)
+  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+}
