@@ -1,6 +1,6 @@
 import type { SubTyped } from '@traqula/core';
 import { TransformerSubTyped } from '@traqula/core';
-import type { Expression, TermVariable } from '@traqula/rules-sparql-1-1';
+import type { Expression } from '@traqula/rules-sparql-1-2';
 import { AstFactory } from '@traqula/rules-sparql-1-2';
 import fontoxpath from 'fontoxpath';
 import * as slimdom from 'slimdom';
@@ -11,6 +11,23 @@ const { evaluateXPath, evaluateXPathToStrings, parseScript } = fontoxpath;
 export const F = new AstFactory();
 
 export const XSD = 'http://www.w3.org/2001/XMLSchema#';
+
+/**
+ * Create a SPARQL operation. The AstFactory of SPARQL 1.2 inherits its expression constructors from the one of
+ * SPARQL 1.1, whose types only accept SPARQL 1.1 expressions as arguments, while a SPARQL 1.2 expression is the same
+ * syntax tree, extended with triple terms.
+ */
+export function operation(operator: string, ...args: Expression[]): Expression {
+  return F.expressionOperation(operator, args as Parameters<typeof F.expressionOperation>[1], F.gen());
+}
+
+/**
+ * Create a SPARQL call of the constructor function of the XSD datatype with the given local name.
+ */
+export function xsdFunctionCall(localName: string, arg: Expression): Expression {
+  return F.expressionFunctionCall(F.termNamed(F.gen(), `${XSD}${localName}`),
+    [ arg ] as Parameters<typeof F.expressionFunctionCall>[1], false, F.gen());
+}
 
 /**
  * The namespaces of the XPath functions and of the XSD types, mapped onto their prefixes.
@@ -298,7 +315,7 @@ function cast(typeName: string, expression: Expression): Expression {
     throw new UnsupportedError(`Unsupported cast type ${typeName}`);
   }
   if (CAST_TYPES.has(localName)) {
-    return F.expressionFunctionCall(F.termNamed(F.gen(), `${XSD}${localName}`), [ expression ], false, F.gen());
+    return xsdFunctionCall(localName, expression);
   }
   // Integer types have no cast function, but a string literal with a valid value can become a typed literal.
   // An invalid value would be an error in XPath, but an ill-typed literal in SPARQL, so it has no SPARQL equivalent.
@@ -331,7 +348,7 @@ function functionCall(name: string, args: Expression[]): Expression {
   }
   if (localName === 'boolean' && args.length === 1) {
     // The effective boolean value, as negating twice
-    return F.expressionOperation('!', [ F.expressionOperation('!', args, F.gen()) ], F.gen());
+    return operation('!', operation('!', ...args));
   }
   if (localName === 'string' && args.length === 1) {
     // The string value of an atomic value is its cast to xs:string
@@ -339,13 +356,13 @@ function functionCall(name: string, args: Expression[]): Expression {
   }
   if (localName === 'concat' && args.length >= 2) {
     // XPath converts the arguments to strings, while SPARQL only accepts strings
-    return F.expressionOperation('concat', args.map(arg => cast('xs:string', arg)), F.gen());
+    return operation('concat', ...args.map(arg => cast('xs:string', arg)));
   }
   const definition = FUNCTIONS[localName];
   if (!definition?.arities.includes(args.length)) {
     throw new UnsupportedError(`Unsupported function ${name}#${args.length}`);
   }
-  return F.expressionOperation(definition.operator, args, F.gen());
+  return operation(definition.operator, ...args);
 }
 
 /**
@@ -360,13 +377,9 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
     xqueryx: {
       transform(node) {
         if (OPERATORS[node.subType]) {
-          return F.expressionOperation(
-            OPERATORS[node.subType],
-            node.subType.startsWith('unary') ?
-                [ part(node, 'operand') ] :
-                [ part(node, 'firstOperand'), part(node, 'secondOperand') ],
-            F.gen(),
-          );
+          return node.subType.startsWith('unary') ?
+            operation(OPERATORS[node.subType], part(node, 'operand')) :
+            operation(OPERATORS[node.subType], part(node, 'firstOperand'), part(node, 'secondOperand'));
         }
         if (!GROUPING_ELEMENTS.has(node.subType)) {
           throw new UnsupportedError(`Unsupported ${node.subType}`);
@@ -389,11 +402,12 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
         },
       },
       ifThenElseExpr: {
-        transform: node => F.expressionOperation('if', [
+        transform: node => operation(
+          'if',
           part(node, 'ifClause'),
           part(node, 'thenClause'),
           part(node, 'elseClause'),
-        ], F.gen()),
+        ),
       },
       castExpr: {
         transform(node) {

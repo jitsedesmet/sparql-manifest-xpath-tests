@@ -17,7 +17,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import type { Expression } from '@traqula/rules-sparql-1-1';
+import type { Expression } from '@traqula/rules-sparql-1-2';
 import { sparql12GeneratorBuilder } from '@traqula/generator-sparql-1-2';
 import { completeGeneratorContext } from '@traqula/rules-sparql-1-2';
 import fontoxpath from 'fontoxpath';
