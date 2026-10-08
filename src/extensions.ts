@@ -1,4 +1,4 @@
-import type { Expression } from '@traqula/rules-sparql-1-1';
+import type { Expression } from '@traqula/rules-sparql-1-2';
 import { F, INTEGER_TYPES, XSD } from './xpathToSparql.ts';
 
 /**

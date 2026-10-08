@@ -1,6 +1,6 @@
-import type { Expression } from '@traqula/rules-sparql-1-1';
+import type { Expression } from '@traqula/rules-sparql-1-2';
 import type { Element } from 'slimdom';
-import { F, UnsupportedError, XSD, xpathToSparql } from './xpathToSparql.ts';
+import { F, UnsupportedError, XSD, operation, xpathToSparql, xsdFunctionCall } from './xpathToSparql.ts';
 
 /**
  * The XSD datatypes, mapped onto the datatype that they are derived from.
@@ -76,10 +76,6 @@ function subTypes(type: string): string[] {
     throw new UnsupportedError(`Unsupported type xs:${type}`);
   }
   return [ type, ...Object.keys(PARENT_TYPES).filter(child => PARENT_TYPES[child] === type).flatMap(subTypes) ];
-}
-
-function operation(operator: string, ...args: Expression[]): Expression {
-  return F.expressionOperation(operator, args, F.gen());
 }
 
 function string(value: string): Expression {
@@ -164,7 +160,7 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
         operation('!=', expected, expected)));
     }
     case 'assert-string-value': {
-      const actual = F.expressionFunctionCall(F.termNamed(F.gen(), `${XSD}string`), [ result ], false, F.gen());
+      const actual = xsdFunctionCall('string', result);
       return assertion.getAttribute('normalize-space') === 'true' ?
         operation('=', normalizeSpace(actual), string(assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ')
           .replace(/^ | $/gu, ''))) :
