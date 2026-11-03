@@ -17,7 +17,7 @@ const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs'
  * that an operator produces rather than a literal or constructor function.
  * @example
  *   In fn-timezone-from-dateTimealt-1, `BIND(TIMEZONE(...) AS ?result) FILTER(xsd:string(?result) = "-PT5H")`
- *   needs xsd:string on xsd:dayTimeDuration, which is only known from the result type of TIMEZONE.
+ *   needs xsd:string on xsd:dayTimeDuration, which the spec does not require, and thus this is an extension.
  */
 const RESULT_TYPES: Record<string, string> = {
   ...Object.fromEntries([
