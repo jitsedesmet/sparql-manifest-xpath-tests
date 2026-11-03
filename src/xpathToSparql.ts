@@ -34,7 +34,9 @@ const transformer = new TransformerSubTyped<IXQueryXNode>();
  * The SPARQL equivalent of an XPath function, for the numbers of arguments that it accepts.
  */
 interface FunctionTranslation {
+  /** Whether a given number of args is accepted in SPARQL */
   accepts: (argumentCount: number) => boolean;
+  /** The actual translation */
   translate: (args: Expression[]) => Expression;
 }
 
@@ -202,7 +204,10 @@ function qualifiedName(node: IXQueryXNode, defaultPrefix = ''): QualifiedName {
   if (uri !== undefined && !Object.hasOwn(NAMESPACES, uri)) {
     throw new UnsupportedError('Unsupported namespace', uri);
   }
-  return { prefix: uri === undefined ? prefix || defaultPrefix : NAMESPACES[uri], localName: node.text };
+  return {
+    prefix: uri === undefined ? prefix || defaultPrefix : NAMESPACES[uri],
+    localName: node.text,
+  };
 }
 
 /**
@@ -215,12 +220,14 @@ function staticStrings(source: IXQueryXNode): string[] | undefined {
   if (source.subType !== 'functionCallExpr') {
     return undefined;
   }
+
   const [ functionName, args ] = source.children;
   const { prefix, localName } = qualifiedName(functionName, 'fn');
   if (prefix !== 'fn' || localName !== 'tokenize' || args.children.length < 2 ||
     !args.children.every(arg => arg.subType === 'stringConstantExpr')) {
     return undefined;
   }
+
   const [ input, pattern, flags ] = args.children.map(arg => arg.text);
   try {
     return evaluateXPathToStrings(
@@ -259,20 +266,24 @@ function expandQuantifiers(node: IXQueryXNode): IXQueryXNode {
   if (expanded.subType !== 'quantifiedExpr') {
     return expanded;
   }
+
   const [ quantifier, ...parts ] = expanded.children;
   const clauses = parts.filter(part => part.subType === 'quantifiedExprInClause');
   if (clauses.length !== 1) {
     return expanded;
   }
+
   const [ binding, source ] = clauses[0].children;
   const [ varName, ...typeDeclaration ] = binding.children;
   if (typeDeclaration.length > 0 || varName.attributes.prefix) {
     return expanded;
   }
+
   const strings = staticStrings(source.children[0]);
   if (!strings) {
     return expanded;
   }
+
   const every = quantifier.text === 'every';
   const predicate = child(expanded, 'predicateExpr')!.children[0];
   const operands = strings.map(value =>
@@ -358,11 +369,13 @@ function functionCall({ prefix, localName }: QualifiedName, args: Expression[]):
   if (prefix === 'xs' && args.length === 1) {
     return cast(localName, args[0]);
   }
-  const translation = prefix === 'fn' && Object.hasOwn(FUNCTIONS, localName) ? FUNCTIONS[localName] : undefined;
-  if (!translation?.accepts(args.length)) {
-    throw new UnsupportedError('Unsupported function', `${prefix}:${localName}#${args.length}`);
+  const translation = prefix === 'fn' && Object.hasOwn(FUNCTIONS, localName) ?
+    FUNCTIONS[localName] :
+    undefined;
+  if (translation?.accepts(args.length)) {
+    return translation.translate(args);
   }
-  return translation.translate(args);
+  throw new UnsupportedError('Unsupported function', `${prefix}:${localName}#${args.length}`);
 }
 
 /**
@@ -377,14 +390,15 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
     xqueryx: {
       transform(node) {
         if (OPERATORS[node.subType]) {
-          return node.subType.startsWith('unary') ?
-            operation(OPERATORS[node.subType], part(node, 'operand')) :
-            operation(OPERATORS[node.subType], part(node, 'firstOperand'), part(node, 'secondOperand'));
+          if (node.subType.startsWith('unary')) {
+            return operation(OPERATORS[node.subType], part(node, 'operand'));
+          }
+          return operation(OPERATORS[node.subType], part(node, 'firstOperand'), part(node, 'secondOperand'));
         }
-        if (!GROUPING_ELEMENTS.has(node.subType)) {
-          throw new UnsupportedError(`Unsupported ${node.subType}`);
+        if (GROUPING_ELEMENTS.has(node.subType)) {
+          return node;
         }
-        return node;
+        throw new UnsupportedError(`Unsupported ${node.subType}`);
       },
     },
   }, {
@@ -395,10 +409,10 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
       stringConstantExpr: { transform: ({ text }) => literal(text, 'string') },
       varRef: {
         transform({ text }) {
-          if (!Object.hasOwn(variables, text)) {
-            throw new UnsupportedError('Unknown variable', `$${text}`);
+          if (Object.hasOwn(variables, text)) {
+            return variables[text];
           }
-          return variables[text];
+          throw new UnsupportedError('Unknown variable', `$${text}`);
         },
       },
       ifThenElseExpr: {
@@ -416,10 +430,10 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
             throw new UnsupportedError('Unsupported cast', 'to an optional type');
           }
           const typeName = qualifiedName(atomicType);
-          if (typeName.prefix !== 'xs') {
-            throw new UnsupportedError('Unsupported cast', `type ${typeName.prefix}:${typeName.localName}`);
+          if (typeName.prefix === 'xs') {
+            return cast(typeName.localName, part(node, 'argExpr'));
           }
-          return cast(typeName.localName, part(node, 'argExpr'));
+          throw new UnsupportedError('Unsupported cast', `type ${typeName.prefix}:${typeName.localName}`);
         },
       },
       functionCallExpr: {
