@@ -19,7 +19,6 @@ export const RESULT_VARIABLE = 'result';
 export function operation(operator: string, ...args: Expression[]): Expression {
   return astFactory.expressionOperation(
     operator,
-    // The SPARQL 1.2 factory inherits this method from SPARQL 1.1, whose types only accept SPARQL 1.1 expressions
     args as T11.Expression[],
     astFactory.gen(),
   );
