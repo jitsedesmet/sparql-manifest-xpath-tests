@@ -140,6 +140,11 @@ function turtleString(value: string): string {
   return JSON.stringify(value);
 }
 
+/**
+ * Serialize a SPARQL expression.
+ * @param expression The SPARQL expression.
+ * @returns The SPARQL string of the expression.
+ */
 function sparql(expression: Expression): string {
   return generator.expression(expression, generatorContext).trim();
 }
@@ -380,6 +385,10 @@ function manifestEntry({ name, description, url }: GeneratedTest): string {
   mf:result <../true.srj> .`;
 }
 
+/**
+ * Generate the tests, manifests, license, and list of left-out test cases in dist/, and print a summary.
+ * @returns A promise that resolves when the tests are generated.
+ */
 async function main(): Promise<void> {
   rmSync(DIST_DIR, { recursive: true, force: true });
   mkdirSync(DIST_DIR, { recursive: true });

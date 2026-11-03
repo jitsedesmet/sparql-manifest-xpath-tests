@@ -16,6 +16,7 @@ export default config([
       'jsdoc/check-param-names': [ 'error', { checkDestructured: false }],
       'jsdoc/require-param': [ 'error', { checkDestructured: false }],
       'jsdoc/require-returns': 'error',
+      'jsdoc/require-jsdoc': 'error',
     },
   },
   {

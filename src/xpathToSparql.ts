@@ -141,6 +141,14 @@ const GROUPING_ELEMENTS = new Set([
   'name',
 ]);
 
+/**
+ * Create an XQueryX element.
+ * @param subType The name of the element.
+ * @param children The child elements.
+ * @param text The text content.
+ * @param attributes The attributes, by name.
+ * @returns The XQueryX element.
+ */
 function xqueryxNode(
   subType: string,
   children: IXQueryXNode[] = [],
@@ -150,6 +158,11 @@ function xqueryxNode(
   return { type: 'xqueryx', subType, attributes, text, children };
 }
 
+/**
+ * Convert a slimdom element of an XQueryX document into an XQueryX element.
+ * @param element The slimdom element.
+ * @returns The XQueryX element.
+ */
 function toNode(element: slimdom.Element): IXQueryXNode {
   return xqueryxNode(
     element.localName,
