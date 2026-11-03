@@ -110,6 +110,7 @@ async function fetchQt3(path: string): Promise<string> {
   if (existsSync(file)) {
     return readFileSync(file, 'utf8');
   }
+  // TODO: would we even know if a fetch fails?
   const response = await fetch(`${QT3_BASE}${path}`);
   if (!response.ok) {
     throw new Error(`Could not fetch ${path}: ${response.status}`);
@@ -133,8 +134,6 @@ function write(path: string, contents: string): void {
 
 /**
  * Serialize a string as a Turtle string literal, of which the escapes are the same as the ones of JSON.
- * @param value The string.
- * @returns The Turtle string literal.
  */
 function turtleString(value: string): string {
   return JSON.stringify(value);
@@ -142,8 +141,6 @@ function turtleString(value: string): string {
 
 /**
  * Serialize a SPARQL expression.
- * @param expression The SPARQL expression.
- * @returns The SPARQL string of the expression.
  */
 function sparql(expression: Expression): string {
   return generator.expression(expression, generatorContext).trim();
@@ -173,12 +170,12 @@ function environmentsByName(element: Element): Map<string, Element> {
  * Determine the SPARQL expressions of the variables of the environment of a test case.
  * @param testCase The test-case element.
  * @param environments The environment definitions that the test case can refer to, by name.
- * @returns The SPARQL expressions of the variables, by name.
  * @throws {UnsupportedError} If the environment is not supported.
+ * @example TODO? if it would help
  */
 function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
   const variables: Record<string, Expression> = {};
-  // An environment either refers to a definition by name or is the definition itself
+  // TODO: it's not clear what this is doing
   for (const environment of childElements(testCase, 'environment')) {
     const ref = environment.getAttribute('ref');
     const definition = ref ? environments.get(ref) : environment;
@@ -197,9 +194,7 @@ function environmentVariables(testCase: Element, environments: Map<string, Eleme
 }
 
 /**
- * Determine the line of each test case in a test set, for the `#L` anchors of the links to it on GitHub.
- * @param testSetText The XML text of the test set.
- * @returns The 1-based lines, by test case name.
+ * For the GitHub Files, gets the Line anchor to encode the `#L{num}`.
  */
 function testCaseLines(testSetText: string): Map<string, number> {
   const lines = new Map<string, number>();
@@ -217,8 +212,6 @@ function testCaseLines(testSetText: string): Map<string, number> {
 
 /**
  * Serialize a value as a field of a TSV file, escaping the characters that would end the field or the line.
- * @param value The value of the field.
- * @returns The escaped field.
  */
 function tsvField(value: string): string {
   return value.replaceAll(/[\\\t\n\r]/gu, character =>
@@ -228,23 +221,27 @@ function tsvField(value: string): string {
 /**
  * Determine whether an XPath 3.1 and XSD 1.1 implementation without optional features satisfies a dependency.
  * @param dependency The dependency element.
- * @returns Whether the dependency is satisfied.
+ * @example TODO?
+ *   <dependency type="spec" value="XP30+ XQ30+"/>
+ *   // Becomes
+ *
  */
 function satisfiesDependency(dependency: Element): boolean {
   const value = dependency.getAttribute('value') ?? '';
-  const type = dependency.getAttribute('type');
+  const type = dependency.getAttribute('type') ?? '';
+  // A dependency with satisfied="false" requires the implementation to not have it
+  const satisfied = dependency.getAttribute('satisfied') ?? '';
 
   let supported = false;
   if (type === 'spec') {
-    // Either exactly XP31, or a minimum version up to XP31
+    // TODO: I think the first case is captured by the other too? So we can drop? (speed is not of the essence)
     supported = value.trim().split(/\s+/u).some(spec =>
       spec === 'XP31' || (/^XP\d\d\+$/u.test(spec) && Number(spec.slice(2, 4)) <= 31));
   } else if (type === 'xsd-version') {
     supported = value === '1.1';
   }
 
-  // A dependency with satisfied="false" requires the implementation to not have it
-  return supported !== (dependency.getAttribute('satisfied') === 'false');
+  return supported !== (satisfied === 'false');
 }
 
 /**
@@ -253,6 +250,8 @@ function satisfiesDependency(dependency: Element): boolean {
  * @param testCase The test-case element.
  * @param unsatisfiedTestSetDependencies The unsatisfied dependencies of the test set.
  * @throws {UnsupportedError} If the test case is not supported.
+ * @example TODO?
+ *   <test>let $t := true#0 return 3[$t()]</test>
  */
 function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Element[]): void {
   // Like <test file="Literal/K2-Literals-28.xq"/>

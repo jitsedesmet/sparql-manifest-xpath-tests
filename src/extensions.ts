@@ -13,8 +13,8 @@ const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype' 
 const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs', 'ceil', 'floor', 'round' ]);
 
 /**
- * The datatypes of the results of the other SPARQL operators, by operator,
- * which tell whether the operator that encloses them gets operands that SPARQL does not define it for.
+ * The datatypes of the results of the other SPARQL operators, by operator.
+ * TODO: why is this relevant for a test builder like this repo?
  */
 const RESULT_TYPES: Record<string, string> = {
   ...Object.fromEntries([
@@ -55,8 +55,11 @@ function numericType(operator: string, types: (string | undefined)[]): string {
 }
 
 /**
+ * TODO: I feel like this is used to create
+ *  'prettier test strings pruning result type checks when they are known statically',
+ *  but that's really something that should NOT happen in this repo!
  * Determine the XSD datatype of a SPARQL expression, as far as it is known statically,
- * and collect the reasons why it needs more than SPARQL defines, which decide the manifest of the test.
+ * and collect the reasons why it needs more than SPARQL defines.
  * @param expression The SPARQL expression.
  * @param resultType The XSD datatype of ?result, if known.
  * @param reasons The reasons, to which the reasons of this expression are added.
