@@ -32,6 +32,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn run typecheck
       - run: yarn run lint
+      - run: yarn run depcheck
       - run: yarn run generate
       - name: Check that the tracked tests in dist/ are up to date
         run: |

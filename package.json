@@ -13,7 +13,8 @@
     "generate": "node src/generate.ts",
     "typecheck": "tsc",
     "lint": "eslint .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "depcheck": "depcheck"
   },
   "dependencies": {
     "@traqula/core": "^1.3.0",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@rubensworks/eslint-config": "^3.1.0",
     "@types/node": "^24.19.0",
+    "depcheck": "^1.4.7",
     "eslint": "^8.57.0",
     "husky": "^9.1.7",
     "typescript": "~6.0.2"
