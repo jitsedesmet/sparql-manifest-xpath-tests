@@ -15,7 +15,7 @@
  *
  * Usage: yarn run generate
  */
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import type { Expression } from '@traqula/rules-sparql-1-2';
 import { sparql12GeneratorBuilder } from '@traqula/generator-sparql-1-2';
@@ -115,7 +115,9 @@ async function fetchQt3(path: string): Promise<string> {
   }
   const contents = await response.text();
   mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, contents);
+  // Write atomically, so an interrupted run does not leave a truncated file in the cache
+  writeFileSync(`${file}.tmp`, contents);
+  renameSync(`${file}.tmp`, file);
   return contents;
 }
 

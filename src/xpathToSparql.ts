@@ -176,7 +176,7 @@ interface QualifiedName {
  */
 function qualifiedName(node: IXQueryXNode, defaultPrefix = ''): QualifiedName {
   const { prefix, URI: uri } = node.attributes;
-  if (uri !== undefined && !NAMESPACES[uri]) {
+  if (uri !== undefined && !Object.hasOwn(NAMESPACES, uri)) {
     throw new UnsupportedError('Unsupported namespace', uri);
   }
   return { prefix: uri === undefined ? prefix || defaultPrefix : NAMESPACES[uri], localName: node.text };
@@ -304,8 +304,9 @@ function cast(localName: string, expression: Expression): Expression {
   // Integer types have no cast function, but a string literal with a valid value can become a typed literal.
   // An invalid value would be an error in XPath, but an ill-typed literal in SPARQL, so it has no SPARQL equivalent.
   // Other types, such as xs:untypedAtomic and xs:anyURI, are not SPARQL operand types.
-  if (localName in INTEGER_RANGES && astFactory.isTermLiteralStr(expression)) {
-    const value = expression.value.trim();
+  if (Object.hasOwn(INTEGER_RANGES, localName) && astFactory.isTermLiteralStr(expression)) {
+    // XSD only collapses spaces, tabs and line breaks, unlike String.prototype.trim
+    const value = expression.value.replaceAll(/^[ \t\n\r]+|[ \t\n\r]+$/gu, '');
     const [ min, max ] = INTEGER_RANGES[localName];
     if (!/^[+-]?\d+$/u.test(value) || (min !== undefined && BigInt(value) < min) ||
       (max !== undefined && BigInt(value) > max)) {
@@ -326,7 +327,7 @@ function functionCall({ prefix, localName }: QualifiedName, args: Expression[]):
   if (prefix === 'xs' && args.length === 1) {
     return cast(localName, args[0]);
   }
-  const translation = prefix === 'fn' ? FUNCTIONS[localName] : undefined;
+  const translation = prefix === 'fn' && Object.hasOwn(FUNCTIONS, localName) ? FUNCTIONS[localName] : undefined;
   if (!translation?.accepts(args.length)) {
     throw new UnsupportedError('Unsupported function', `${prefix}:${localName}#${args.length}`);
   }
@@ -363,7 +364,7 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
       stringConstantExpr: { transform: ({ text }) => literal(text, 'string') },
       varRef: {
         transform({ text }) {
-          if (!variables[text]) {
+          if (!Object.hasOwn(variables, text)) {
             throw new UnsupportedError('Unknown variable', `$${text}`);
           }
           return variables[text];
