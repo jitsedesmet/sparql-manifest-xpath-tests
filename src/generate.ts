@@ -64,7 +64,7 @@ const KINDS = {
   },
   errors: {
     file: 'errors.ttl',
-    label: 'The tests of QT3 that accept an error, which also pass on engines that fail for another reason',
+    label: 'The tests of QT3 that accept an error. NOTE: engines that fail for another reason will also PASS',
   },
 };
 type Kind = keyof typeof KINDS;
@@ -109,6 +109,7 @@ async function fetchQt3(path: string): Promise<string> {
   if (existsSync(file)) {
     return readFileSync(file, 'utf8');
   }
+  // TODO: would we even know if a fetch fails?
   const response = await fetch(`${QT3_BASE}${path}`);
   if (!response.ok) {
     throw new Error(`Could not fetch ${path}: ${response.status}`);
@@ -163,9 +164,11 @@ function environmentsByName(element: Element): Map<string, Element> {
  * @param testCase The test-case element.
  * @param environments The environment definitions that the test case can refer to, by name.
  * @throws {UnsupportedError} If the environment is not supported.
+ * @example TODO? if it would help
  */
 function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
   const variables: Record<string, Expression> = {};
+  // TODO: it's not clear what this is doing
   for (const environment of childElements(testCase, 'environment')) {
     const ref = environment.getAttribute('ref');
     const definition = ref ? environments.get(ref) : environment;
@@ -184,9 +187,7 @@ function environmentVariables(testCase: Element, environments: Map<string, Eleme
 }
 
 /**
- * Determine the line of the test-case element of each test case in the text of a test set, in one pass.
- * @param testSetText The XML text of the test set.
- * @returns The 1-based lines, by test case name.
+ * For the GitHub Files, gets the Line anchor to encode the `#L{num}`.
  */
 function testCaseLines(testSetText: string): Map<string, number> {
   const lines = new Map<string, number>();
@@ -213,18 +214,27 @@ function tsvField(value: string): string {
 /**
  * Determine whether an XPath 3.1 and XSD 1.1 implementation without optional features satisfies a dependency.
  * @param dependency The dependency element.
+ * @example TODO?
+ *   <dependency type="spec" value="XP30+ XQ30+"/>
+ *   // Becomes
+ *
  */
 function satisfiesDependency(dependency: Element): boolean {
   const value = dependency.getAttribute('value') ?? '';
+  const type = dependency.getAttribute('type') ?? '';
+  // A dependency with satisfied="false" requires the implementation to not have it
+  const satisfied = dependency.getAttribute('satisfied') ?? '';
+
   let supported = false;
-  if (dependency.getAttribute('type') === 'spec') {
+  if (type === 'spec') {
+    // TODO: I think the first case is captured by the other too? So we can drop? (speed is not of the essence)
     supported = value.trim().split(/\s+/u).some(spec =>
       spec === 'XP31' || (/^XP\d\d\+$/u.test(spec) && Number(spec.slice(2, 4)) <= 31));
-  } else if (dependency.getAttribute('type') === 'xsd-version') {
+  } else if (type === 'xsd-version') {
     supported = value === '1.1';
   }
-  // A dependency with satisfied="false" requires the implementation to not have it
-  return supported !== (dependency.getAttribute('satisfied') === 'false');
+
+  return supported !== (satisfied === 'false');
 }
 
 /**
@@ -233,8 +243,11 @@ function satisfiesDependency(dependency: Element): boolean {
  * @param testCase The test-case element.
  * @param unsatisfiedTestSetDependencies The unsatisfied dependencies of the test set.
  * @throws {UnsupportedError} If the test case is not supported.
+ * @example TODO?
+ *   <test>let $t := true#0 return 3[$t()]</test>
  */
 function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Element[]): void {
+  // like <test file="Literal/K2-Literals-28.xq"/>
   const file = childElements(testCase, 'test')[0]?.getAttribute('file');
   if (file) {
     throw new UnsupportedError('Unsupported test', `in the separate file ${file}`);
@@ -258,14 +271,23 @@ function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Eleme
  * @param url The URL of the definition of the test case.
  * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
  */
-function testCaseQuery(testSetName: string, testCase: Element, environments: Map<string, Element>, url: string):
-{ query: string; kind: Kind } {
+function testCaseQuery(
+  testSetName: string,
+  testCase: Element,
+  environments: Map<string, Element>,
+  url: string
+): { query: string; kind: Kind } {
+  // TODO: project wide: let's add a linter just like in https://github.com/comunica/traqula
   const variables = environmentVariables(testCase, environments);
   const test = childElements(testCase, 'test')[0].textContent!;
   const expression = xpathToSparql(test, variables);
+
+  // <result> <assert-string-value>2030</assert-string-value> </result>
+  // NOTE: only one root assertion, otherwise wrapped in `any-of` or `all-of`
   const assertion = assertionToSparql(childElements(testCase, 'result')[0].children[0], variables);
   const reasons = extensionReasons(expression, assertion);
   const kind: Kind = acceptsError(assertion) ? 'errors' : (reasons.length > 0 ? 'extensions' : 'sparql');
+
   // A SPARQL comment ends at a carriage return as well as at a line feed
   const comment = test.trim().split(/\r\n?|\n/u).map(line => `#   ${line.trim()}`).join('\n');
   const query = `# QT3 test case ${testCase.getAttribute('name')} of test set ${testSetName}, which tests the XPath expression
@@ -287,8 +309,12 @@ ASK {
  * @param catalogEnvironments The environment definitions of the catalog, by name.
  * @returns The generated tests and the left-out test cases.
  */
-function translateTestSet(testSetName: string, testSetFile: string, testSetText: string,
-  catalogEnvironments: Map<string, Element>): { tests: GeneratedTest[]; leftOut: LeftOutTest[] } {
+function translateTestSet(
+  testSetName: string,
+  testSetFile: string,
+  testSetText: string,
+  catalogEnvironments: Map<string, Element>
+): { tests: GeneratedTest[]; leftOut: LeftOutTest[] } {
   const testSet = parseXmlDocument(testSetText).documentElement!;
   const environments = new Map([ ...catalogEnvironments, ...environmentsByName(testSet) ]);
   const unsatisfiedTestSetDependencies = childElements(testSet, 'dependency')
@@ -352,17 +378,29 @@ function manifestEntry({ name, description, url }: GeneratedTest): string {
 async function main(): Promise<void> {
   rmSync(DIST_DIR, { recursive: true, force: true });
   mkdirSync(DIST_DIR, { recursive: true });
+  const licenceAsString = readFileSync(join(ROOT, 'LICENSE-W3C.txt'), 'utf8');
+
   const catalog = parseXmlDocument(await fetchQt3('catalog.xml')).documentElement!;
   const catalogEnvironments = environmentsByName(catalog);
+
   const testSets = childElements(catalog, 'test-set')
-    .map(testSet => ({ name: testSet.getAttribute('name')!, file: testSet.getAttribute('file')! }))
+    .map(testSet => ({
+      name: testSet.getAttribute('name')!,
+      file: testSet.getAttribute('file')!
+    }))
     .filter(({ name }) => TEST_SETS.test(name));
-  const testSetTexts = await Promise.all(testSets.map(({ file }) => fetchQt3(file)));
-  const results = testSets.map(({ name, file }, index) =>
-    ({ name, ...translateTestSet(name, file, testSetTexts[index], catalogEnvironments) }));
+
+  const testSetTexts = await Promise.all(
+    testSets.map(({ file }) => fetchQt3(file))
+  );
+  const results = testSets
+    .map(({ name, file }, index) => ({
+      name, ...translateTestSet(name, file, testSetTexts[index], catalogEnvironments)
+    }));
 
   const includes: Record<Kind, string[]> = { sparql: [], extensions: [], errors: [] };
-  for (const { name: testSetName, tests } of results.filter(({ tests }) => tests.length > 0)) {
+  const nonEmptySuites = results.filter(({ tests }) => tests.length > 0)
+  for (const { name: testSetName, tests } of nonEmptySuites) {
     mkdirSync(join(DIST_DIR, testSetName));
     for (const { name, query } of tests) {
       write(`${testSetName}/${name}.rq`, query);
@@ -398,19 +436,27 @@ This software or document includes material copied from or derived from
 the W3C XQuery and XPath Test Suite (QT3), https://github.com/w3c/qt3tests.
 Copyright © W3C® (MIT, ERCIM, Keio, Beihang).
 
-${readFileSync(join(ROOT, 'LICENSE-W3C.txt'), 'utf8')}`);
+${licenceAsString}`);
+
   const leftOut = results.flatMap(result => result.leftOut);
-  write('left-out.tsv', `test-set\ttest-case\turl\treason\n${leftOut.map(({ testSetName, name, url, error }) =>
-    `${[ testSetName, name, url, error.message ].map(tsvField).join('\t')}\n`).join('')}`);
+  const rows = leftOut.map(({ testSetName, name, url, error }) =>
+    `${[ testSetName, name, url, error.message ].map(tsvField).join('\t')}\n`).join('')
+  write(
+    'left-out.tsv',
+    `test-set\ttest-case\turl\treason\n${rows}`
+  );
 
   const tests = results.flatMap(result => result.tests);
-  process.stdout.write(`Generated ${results.filter(result => result.tests.length > 0).length} test sets with\n`);
+  const suitesCount = results.filter(result => result.tests.length > 0).length;
+  process.stdout.write(`Generated ${suitesCount} test sets with\n`);
   for (const kind of KIND_NAMES) {
-    process.stdout.write(`  ${tests.filter(test => test.kind === kind).length} tests in ${KINDS[kind].file}\n`);
+    const testsCount = tests.filter(test => test.kind === kind).length;
+    process.stdout.write(`  ${testsCount} tests in ${KINDS[kind].file}\n`);
   }
   process.stdout.write(`Left out ${leftOut.length} tests, which left-out.tsv lists\n`);
   const categoryCounts = Map.groupBy(leftOut, ({ error }) => error.category);
-  for (const [ category, categoryTests ] of [ ...categoryCounts ].sort(([ , a ], [ , b ]) => b.length - a.length)) {
+  const sortedCategories = [ ...categoryCounts ].sort(([ , a ], [ , b ]) => b.length - a.length)
+  for (const [ category, categoryTests ] of sortedCategories) {
     process.stdout.write(`  ${categoryTests.length}: ${category}\n`);
   }
 }

@@ -5,6 +5,7 @@ export const XSD = 'http://www.w3.org/2001/XMLSchema#';
 type Range = [ bigint | undefined, bigint | undefined ];
 
 /**
+ * TODO: why does this repo care about the range?
  * The XSD datatypes that are derived from another one, mapped onto that datatype and, for integer types, their range.
  */
 const DERIVED_TYPES: Record<string, { parent: string; range?: Range }> = {

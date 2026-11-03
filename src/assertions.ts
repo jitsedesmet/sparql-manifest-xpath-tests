@@ -5,13 +5,26 @@ import { UnsupportedError } from './UnsupportedError.ts';
 import { xpathToSparql } from './xpathToSparql.ts';
 import { subTypes } from './xsd.ts';
 
+export enum ASSERTION {
+  ERROR = 'error'
+}
+
 /**
  * Normalize the whitespace of a SPARQL string, as XPath's fn:normalize-space.
  * @param expression The SPARQL expression of the string.
  */
 function normalizeSpace(expression: Expression): Expression {
-  return operation('replace', operation('replace', expression, literal(String.raw`^\s+|\s+$`, 'string'),
-    literal('', 'string')), literal(String.raw`\s+`, 'string'), literal(' ', 'string'));
+  return operation(
+      'replace',
+    operation(
+      'replace',
+        expression,
+      literal(String.raw`^\s+|\s+$`, 'string'),
+      literal('', 'string')
+    ),
+    literal(String.raw`\s+`, 'string'),
+    literal(' ', 'string')
+  );
 }
 
 /**
@@ -58,13 +71,16 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
   const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
   const isBoolean = operation('=', operation('datatype', result), xsdIri('boolean'));
   const text = assertion.textContent!.trim();
+  // TODO migrate to the ASSERTION enum instead.
   switch (assertion.localName) {
     case 'error':
       return operation('!', operation('bound', result));
     case 'all-of':
     case 'any-of':
-      return assertion.children.map(child => assertionToSparql(child, variables))
-        .reduce((left, right) => operation(assertion.localName === 'all-of' ? '&&' : '||', left, right));
+      return assertion.children
+        .map(child => assertionToSparql(child, variables))
+        .reduce((left, right) =>
+          operation(assertion.localName === 'all-of' ? '&&' : '||', left, right));
     case 'not':
       return operation('!', assertionToSparql(assertion.children[0], variables));
     case 'assert-true':
@@ -82,10 +98,15 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
     }
     case 'assert-string-value': {
       const actual = xsdFunctionCall('string', result);
-      return assertion.getAttribute('normalize-space') === 'true' ?
-        operation('=', normalizeSpace(actual), literal(assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ')
-          .replace(/^ | $/gu, ''), 'string')) :
-        operation('=', actual, literal(assertion.textContent!, 'string'));
+      if (assertion.getAttribute('normalize-space') === 'true') {
+        return operation(
+          '=',
+          normalizeSpace(actual),
+          literal(assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ')
+            .replace(/^ | $/gu, ''), 'string')
+        )
+      }
+      return operation('=', actual, literal(assertion.textContent!, 'string'))
     }
     case 'assert-type': {
       const match = /^xs:(\w+)$/u.exec(text);

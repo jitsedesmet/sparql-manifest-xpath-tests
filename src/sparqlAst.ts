@@ -1,4 +1,5 @@
 import type { Expression } from '@traqula/rules-sparql-1-2';
+import type * as T11 from '@traqula/rules-sparql-1-1';
 import { AstFactory } from '@traqula/rules-sparql-1-2';
 import { XSD } from './xsd.ts';
 
@@ -10,12 +11,14 @@ export const astFactory = new AstFactory();
 export const RESULT_VARIABLE = 'result';
 
 /**
- * Create a SPARQL operation. The AstFactory of SPARQL 1.2 inherits its expression constructors from the one of
- * SPARQL 1.1, whose types only accept SPARQL 1.1 expressions, while a SPARQL 1.2 expression extends the same tree.
+ * Create a SPARQL operation.
  */
 export function operation(operator: string, ...args: Expression[]): Expression {
-  return astFactory.expressionOperation(operator, args as Parameters<typeof astFactory.expressionOperation>[1],
-    astFactory.gen());
+  return astFactory.expressionOperation(
+    operator,
+    args as T11.Expression[],
+    astFactory.gen()
+  );
 }
 
 /**
@@ -52,6 +55,10 @@ export function literal(value: string, datatype: string): Expression {
  * @param arg The argument of the call.
  */
 export function xsdFunctionCall(localName: string, arg: Expression): Expression {
-  return astFactory.expressionFunctionCall(xsdIri(localName),
-    [ arg ] as Parameters<typeof astFactory.expressionFunctionCall>[1], false, astFactory.gen());
+  return astFactory.expressionFunctionCall(
+    xsdIri(localName),
+    [ arg ] as T11.Expression[],
+    false,
+    astFactory.gen()
+  );
 }

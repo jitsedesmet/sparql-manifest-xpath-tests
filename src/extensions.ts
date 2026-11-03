@@ -14,6 +14,7 @@ const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs'
 
 /**
  * The datatypes of the results of the other SPARQL operators, by operator.
+ * TODO: why is this relevant for a test builder like this repo?
  */
 const RESULT_TYPES: Record<string, string> = {
   ...Object.fromEntries([
@@ -47,11 +48,18 @@ const RESULT_TYPES: Record<string, string> = {
  * @param types The local names of the XSD datatypes of the operands.
  */
 function numericType(operator: string, types: string[]): string {
-  return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
-    (operator === '/' ? 'decimal' : 'integer');
+  const isCastOperation = [ 'double', 'float', 'decimal' ].find(type => types.includes(type))
+  if (isCastOperation !== undefined) {
+    return isCastOperation;
+  }
+  // Everything becomes integer unless it is result of division.
+  return operator === '/' ? 'decimal' : 'integer';
 }
 
 /**
+ * TODO: I feel like this is used to create
+ *  'prettier test strings pruning result type checks when they are known statically',
+ *  but that's really something that should NOT happen in this repo!
  * Determine the XSD datatype of a SPARQL expression, as far as it is known statically,
  * and collect the reasons why it needs more than SPARQL defines.
  * @param expression The SPARQL expression.
@@ -69,11 +77,13 @@ function datatype(expression: Expression, resultType: string | undefined, reason
   if (astFactory.isTermVariable(expression)) {
     return expression.value === RESULT_VARIABLE ? resultType : undefined;
   }
+
   const isFunctionCall = astFactory.isExpressionFunctionCall(expression);
   if (!isFunctionCall && !astFactory.isExpressionOperator(expression)) {
     return undefined;
   }
-  const types = (expression.args as Expression[]).map(arg => datatype(arg, resultType, reasons));
+
+  const types = expression.args.map(arg => datatype(arg, resultType, reasons));
   if (isFunctionCall) {
     const constructorType = xsdLocalName(expression.function as { value: string })!;
     addOperandReasons(`xsd:${constructorType}`, types, reasons);
@@ -82,19 +92,22 @@ function datatype(expression: Expression, resultType: string | undefined, reason
     }
     return constructorType;
   }
+
   const { operator } = expression;
   if (ANY_TERM_OPERATORS.has(operator)) {
     return operator === 'if' && types[1] === types[2] ? types[1] : RESULT_TYPES[operator];
   }
   const name = operator.toUpperCase();
   addOperandReasons(name, types, reasons);
+
   if (NUMERIC_OPERATORS.has(operator)) {
     if (types.includes('dateTime')) {
       reasons.add(`${name} on xsd:dateTime`);
     }
-    return types.every(type => type !== undefined && NUMERIC_TYPES.has(type)) ?
-      numericType(operator, types as string[]) :
-      undefined;
+    if (types.every((type: string | undefined): type is string => type !== undefined && NUMERIC_TYPES.has(type))) {
+      return numericType(operator, types)
+    }
+    return undefined;
   }
   if (operator === 'substr' && types.slice(1).some(type => type !== undefined && !INTEGRAL_TYPES.has(type))) {
     reasons.add('SUBSTR with a position or length that is not an xsd:integer');
