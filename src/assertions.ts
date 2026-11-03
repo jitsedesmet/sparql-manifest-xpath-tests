@@ -8,6 +8,7 @@ import { subTypes } from './xsd.ts';
 /**
  * Normalize the whitespace of a SPARQL string, as XPath's fn:normalize-space.
  * @param expression The SPARQL expression of the string.
+ * @returns The SPARQL expression of the normalized string.
  */
 function normalizeSpace(expression: Expression): Expression {
   return operation(
@@ -51,6 +52,7 @@ function valueWhenUnbound(expression: Expression): boolean | undefined {
 /**
  * Determine whether an assertion is satisfied when the test errors, so it also passes on engines failing otherwise.
  * @param assertion The SPARQL expression of the assertion.
+ * @returns Whether the assertion accepts an error.
  */
 export function acceptsError(assertion: Expression): boolean {
   return valueWhenUnbound(assertion) === true;
@@ -61,6 +63,7 @@ export function acceptsError(assertion: Expression): boolean {
  * where an error of the test leaves ?result unbound.
  * @param assertion The assertion element.
  * @param variables SPARQL expressions to substitute the variable references of the environment with.
+ * @returns The SPARQL expression of the assertion over ?result.
  * @throws {UnsupportedError} If the assertion has no SPARQL equivalent.
  */
 export function assertionToSparql(assertion: Element, variables: Record<string, Expression>): Expression {

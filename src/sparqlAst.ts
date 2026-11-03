@@ -19,6 +19,7 @@ type FactoryArguments = Parameters<typeof astFactory.expressionOperation>[1];
  * Create a SPARQL operation.
  * @param operator The operator.
  * @param args The arguments of the operation.
+ * @returns The SPARQL operation.
  */
 export function operation(operator: string, ...args: Expression[]): Expression {
   return astFactory.expressionOperation(operator, args as FactoryArguments, astFactory.gen());
@@ -27,6 +28,7 @@ export function operation(operator: string, ...args: Expression[]): Expression {
 /**
  * Create the IRI of an XSD datatype.
  * @param localName The local name of the datatype.
+ * @returns The IRI term.
  */
 export function xsdIri(localName: string): TermIriFull {
   return astFactory.termNamed(astFactory.gen(), `${XSD}${localName}`);
@@ -45,6 +47,7 @@ export function xsdLocalName(iri: { value: string }): string | undefined {
  * Create a SPARQL literal.
  * @param value The lexical form.
  * @param datatype The local name of the XSD datatype, where `string` creates a simple literal.
+ * @returns The SPARQL literal.
  */
 export function literal(value: string, datatype: string): Expression {
   return datatype === 'string' ?
@@ -56,6 +59,7 @@ export function literal(value: string, datatype: string): Expression {
  * Create a SPARQL call of the constructor function of an XSD datatype.
  * @param localName The local name of the datatype.
  * @param arg The argument of the call.
+ * @returns The SPARQL function call.
  */
 export function xsdFunctionCall(localName: string, arg: Expression): Expression {
   return astFactory.expressionFunctionCall(xsdIri(localName), [ arg ] as FactoryArguments, false, astFactory.gen());

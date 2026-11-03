@@ -103,6 +103,7 @@ const generatorContext = completeGeneratorContext({});
 /**
  * Fetch the contents of a file of the test suite, from the cache if it was fetched before.
  * @param path The path of the file in the test suite.
+ * @returns The contents of the file.
  */
 async function fetchQt3(path: string): Promise<string> {
   const file = join(CACHE_DIR, path);
@@ -132,6 +133,8 @@ function write(path: string, contents: string): void {
 
 /**
  * Serialize a string as a Turtle string literal, of which the escapes are the same as the ones of JSON.
+ * @param value The string.
+ * @returns The Turtle string literal.
  */
 function turtleString(value: string): string {
   return JSON.stringify(value);
@@ -145,6 +148,7 @@ function sparql(expression: Expression): string {
  * Find the child elements with the given local name.
  * @param element The parent element.
  * @param localName The local name of the children.
+ * @returns The matching child elements.
  */
 function childElements(element: Element, localName: string): Element[] {
   return element.children.filter(child => child.localName === localName);
@@ -153,6 +157,7 @@ function childElements(element: Element, localName: string): Element[] {
 /**
  * Index the environment definitions that are children of an element by name.
  * @param element The test-set or catalog element.
+ * @returns The environment elements, by name.
  */
 function environmentsByName(element: Element): Map<string, Element> {
   return new Map(childElements(element, 'environment')
@@ -163,8 +168,8 @@ function environmentsByName(element: Element): Map<string, Element> {
  * Determine the SPARQL expressions of the variables of the environment of a test case.
  * @param testCase The test-case element.
  * @param environments The environment definitions that the test case can refer to, by name.
+ * @returns The SPARQL expressions of the variables, by name.
  * @throws {UnsupportedError} If the environment is not supported.
- * @example `<environment><param name="x" select="1"/></environment>` binds `x` to the SPARQL literal `1`.
  */
 function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
   const variables: Record<string, Expression> = {};
@@ -207,6 +212,8 @@ function testCaseLines(testSetText: string): Map<string, number> {
 
 /**
  * Serialize a value as a field of a TSV file, escaping the characters that would end the field or the line.
+ * @param value The value of the field.
+ * @returns The escaped field.
  */
 function tsvField(value: string): string {
   return value.replaceAll(/[\\\t\n\r]/gu, character =>
@@ -216,13 +223,11 @@ function tsvField(value: string): string {
 /**
  * Determine whether an XPath 3.1 and XSD 1.1 implementation without optional features satisfies a dependency.
  * @param dependency The dependency element.
- * @example `<dependency type="spec" value="XP30+ XQ30+"/>` is satisfied, while `value="XP30"` is not.
+ * @returns Whether the dependency is satisfied.
  */
 function satisfiesDependency(dependency: Element): boolean {
   const value = dependency.getAttribute('value') ?? '';
-  const type = dependency.getAttribute('type') ?? '';
-  // A dependency with satisfied="false" requires the implementation to not have it
-  const satisfied = dependency.getAttribute('satisfied') ?? '';
+  const type = dependency.getAttribute('type');
 
   let supported = false;
   if (type === 'spec') {
@@ -233,7 +238,8 @@ function satisfiesDependency(dependency: Element): boolean {
     supported = value === '1.1';
   }
 
-  return supported !== (satisfied === 'false');
+  // A dependency with satisfied="false" requires the implementation to not have it
+  return supported !== (dependency.getAttribute('satisfied') === 'false');
 }
 
 /**
@@ -266,6 +272,7 @@ function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Eleme
  * @param testCase The test-case element.
  * @param environments The environment definitions that the test case can refer to, by name.
  * @param url The URL of the definition of the test case.
+ * @returns The query and the kind of the test.
  * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
  */
 function testCaseQuery(
@@ -339,6 +346,7 @@ function translateTestSet(
 /**
  * Serialize a manifest in Turtle.
  * @param options The label, license, optional comment, list property with its items, and the entries of the manifest.
+ * @returns The manifest in Turtle.
  */
 function manifest({ label, license, comment, listProperty, items, entries = []}: {
   label: string;
@@ -361,6 +369,7 @@ ${entries.length > 0 ? `\n${entries.join('\n\n')}\n` : ''}`;
 /**
  * Serialize a generated test as an entry of a manifest in Turtle.
  * @param test The generated test.
+ * @returns The manifest entry in Turtle.
  */
 function manifestEntry({ name, description, url }: GeneratedTest): string {
   const id = encodeURIComponent(name);
@@ -374,7 +383,6 @@ function manifestEntry({ name, description, url }: GeneratedTest): string {
 async function main(): Promise<void> {
   rmSync(DIST_DIR, { recursive: true, force: true });
   mkdirSync(DIST_DIR, { recursive: true });
-  const licenceAsString = readFileSync(join(ROOT, 'LICENSE-W3C.txt'), 'utf8');
 
   const catalog = parseXmlDocument(await fetchQt3('catalog.xml')).documentElement!;
   const catalogEnvironments = environmentsByName(catalog);
@@ -396,8 +404,8 @@ async function main(): Promise<void> {
     }));
 
   const includes: Record<Kind, string[]> = { sparql: [], extensions: [], errors: []};
-  const nonEmptySuites = results.filter(({ tests }) => tests.length > 0);
-  for (const { name: testSetName, tests } of nonEmptySuites) {
+  const nonEmptyTestSets = results.filter(({ tests }) => tests.length > 0);
+  for (const { name: testSetName, tests } of nonEmptyTestSets) {
     mkdirSync(join(DIST_DIR, testSetName));
     for (const { name, query } of tests) {
       write(`${testSetName}/${name}.rq`, query);
@@ -426,6 +434,7 @@ async function main(): Promise<void> {
     }));
   }
   write('true.srj', '{ "head": {}, "boolean": true }\n');
+  const w3cLicense = readFileSync(join(ROOT, 'LICENSE-W3C.txt'), 'utf8');
   write('LICENSE.txt', `The tests in this directory are generated from the W3C XQuery and XPath Test Suite (QT3),
 https://github.com/w3c/qt3tests/tree/${QT3_COMMIT}, by translating its test cases into SPARQL.
 
@@ -433,7 +442,7 @@ This software or document includes material copied from or derived from
 the W3C XQuery and XPath Test Suite (QT3), https://github.com/w3c/qt3tests.
 Copyright © W3C® (MIT, ERCIM, Keio, Beihang).
 
-${licenceAsString}`);
+${w3cLicense}`);
 
   const leftOut = results.flatMap(result => result.leftOut);
   const rows = leftOut.map(({ testSetName, name, url, error }) =>
@@ -444,8 +453,7 @@ ${licenceAsString}`);
   );
 
   const tests = results.flatMap(result => result.tests);
-  const suitesCount = results.filter(result => result.tests.length > 0).length;
-  process.stdout.write(`Generated ${suitesCount} test sets with\n`);
+  process.stdout.write(`Generated ${nonEmptyTestSets.length} test sets with\n`);
   for (const kind of KIND_NAMES) {
     const testsCount = tests.filter(test => test.kind === kind).length;
     process.stdout.write(`  ${testsCount} tests in ${KINDS[kind].file}\n`);

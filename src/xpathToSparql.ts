@@ -7,7 +7,7 @@ import { astFactory, literal, operation, xsdFunctionCall } from './sparqlAst.ts'
 import { UnsupportedError } from './UnsupportedError.ts';
 import { CAST_TYPES, INTEGER_RANGES } from './xsd.ts';
 
-// Fontoxpath is a CommonJS module, of which Node.js cannot detect the named exports
+// The fontoxpath package is a CommonJS module, of which Node.js cannot detect the named exports
 const { evaluateXPath, evaluateXPathToStrings, parseScript } = fontoxpath;
 
 /**
@@ -42,6 +42,7 @@ interface FunctionTranslation {
  * Create the translation of an XPath function into the SPARQL operator that the SPARQL specification defines with it.
  * @param operator The SPARQL operator.
  * @param arities The numbers of arguments that the function accepts.
+ * @returns The translation of the function.
  */
 function sparqlOperator(operator: string, arities = [ 1 ]): FunctionTranslation {
   return { accepts: count => arities.includes(count), translate: args => operation(operator, ...args) };
@@ -162,6 +163,7 @@ function toNode(element: slimdom.Element): IXQueryXNode {
  * Find the child of an XQueryX element with the given name.
  * @param node The XQueryX element.
  * @param subType The name of the child.
+ * @returns The child, or undefined if there is none.
  */
 function child(node: IXQueryXNode, subType: string): IXQueryXNode | undefined {
   return node.children.find(candidate => candidate.subType === subType);
@@ -179,6 +181,7 @@ interface QualifiedName {
  * Determine the qualified name of an XQueryX element with a name, which has either a prefix or a namespace URI.
  * @param node The XQueryX element.
  * @param defaultPrefix The prefix of a name without prefix.
+ * @returns The prefix and local name.
  * @throws {UnsupportedError} If the namespace is not the one of the XPath functions or of the XSD types.
  */
 function qualifiedName(node: IXQueryXNode, defaultPrefix = ''): QualifiedName {
@@ -223,6 +226,7 @@ function staticStrings(source: IXQueryXNode): string[] | undefined {
  * @param node The XQueryX syntax tree.
  * @param name The name of the variable.
  * @param value The XQueryX element to substitute the references with.
+ * @returns The XQueryX syntax tree with the references substituted.
  */
 function substitute(node: IXQueryXNode, name: string, value: IXQueryXNode): IXQueryXNode {
   if (node.subType === 'varRef' && node.text === name) {
@@ -235,6 +239,7 @@ function substitute(node: IXQueryXNode, name: string, value: IXQueryXNode): IXQu
  * Expand the quantified expressions over a statically known sequence into a conjunction (every)
  * or disjunction (some) of their predicate per item, as SPARQL has no sequences. Others are left unsupported.
  * @param node The XQueryX syntax tree.
+ * @returns The XQueryX syntax tree with the quantified expressions expanded.
  */
 function expandQuantifiers(node: IXQueryXNode): IXQueryXNode {
   const expanded = { ...node, children: node.children.map(expandQuantifiers) };
@@ -274,6 +279,7 @@ function expandQuantifiers(node: IXQueryXNode): IXQueryXNode {
 /**
  * Parse an XPath expression into the XQueryX syntax tree of its body.
  * @param xpath The XPath expression.
+ * @returns The XQueryX syntax tree of the body of the expression.
  * @throws {UnsupportedError} If the expression is not valid XPath 3.1.
  */
 function parse(xpath: string): IXQueryXNode {
@@ -293,6 +299,9 @@ function parse(xpath: string): IXQueryXNode {
 
 /**
  * The SPARQL expression of the part of an XQueryX element with the given name, which is transformed already.
+ * @param node The XQueryX element.
+ * @param name The name of the part.
+ * @returns The SPARQL expression of the part.
  */
 function part(node: IXQueryXNode, name: string): Expression {
   return child(node, name)!.children[0] as unknown as Expression;
@@ -302,6 +311,7 @@ function part(node: IXQueryXNode, name: string): Expression {
  * Create the SPARQL equivalent of an XPath cast.
  * @param localName The local name of the XSD type to cast to.
  * @param expression The SPARQL expression to cast.
+ * @returns The SPARQL expression of the cast.
  * @throws {UnsupportedError} If the cast has no SPARQL equivalent.
  */
 function cast(localName: string, expression: Expression): Expression {
@@ -328,6 +338,7 @@ function cast(localName: string, expression: Expression): Expression {
  * Create the SPARQL equivalent of a call of an XPath function, where a call of an XSD type is a cast.
  * @param name The name of the function.
  * @param args The SPARQL expressions of the arguments.
+ * @returns The SPARQL expression of the call.
  * @throws {UnsupportedError} If the call has no SPARQL equivalent.
  */
 function functionCall({ prefix, localName }: QualifiedName, args: Expression[]): Expression {

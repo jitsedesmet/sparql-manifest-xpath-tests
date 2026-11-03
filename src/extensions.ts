@@ -46,14 +46,12 @@ const RESULT_TYPES: Record<string, string> = {
  * Determine the datatype of the result of a numeric operator, following the numeric type promotion of XPath.
  * @param operator The SPARQL operator.
  * @param types The local names of the XSD datatypes of the operands.
+ * @returns The local name of the XSD datatype of the result.
  */
-function numericType(operator: string, types: string[]): string {
-  const promotedType = [ 'double', 'float', 'decimal' ].find(type => types.includes(type));
-  if (promotedType !== undefined) {
-    return promotedType;
-  }
+function numericType(operator: string, types: (string | undefined)[]): string {
   // Integer operands give an integer, except for a division
-  return operator === '/' ? 'decimal' : 'integer';
+  return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
+    (operator === '/' ? 'decimal' : 'integer');
 }
 
 /**
@@ -82,7 +80,7 @@ function datatype(expression: Expression, resultType: string | undefined, reason
 
   const types = expression.args.map(arg => datatype(arg, resultType, reasons));
   if (isFunctionCall) {
-    const constructorType = xsdLocalName(expression.function as { value: string })!;
+    const constructorType = xsdLocalName(expression.function)!;
     addOperandReasons(`xsd:${constructorType}`, types, reasons);
     if (!CONSTRUCTOR_TYPES.has(constructorType)) {
       reasons.add(`the constructor function xsd:${constructorType}`);
@@ -101,7 +99,7 @@ function datatype(expression: Expression, resultType: string | undefined, reason
     if (types.includes('dateTime')) {
       reasons.add(`${name} on xsd:dateTime`);
     }
-    if (types.every((type: string | undefined): type is string => type !== undefined && NUMERIC_TYPES.has(type))) {
+    if (types.every(type => type !== undefined && NUMERIC_TYPES.has(type))) {
       return numericType(operator, types);
     }
     return undefined;
