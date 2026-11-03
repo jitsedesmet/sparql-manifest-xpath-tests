@@ -7,7 +7,7 @@ import { astFactory, literal, operation, xsdFunctionCall } from './sparqlAst.ts'
 import { UnsupportedError } from './UnsupportedError.ts';
 import { CAST_TYPES, INTEGER_RANGES } from './xsd.ts';
 
-// fontoxpath is a CommonJS module, of which Node.js cannot detect the named exports
+// Fontoxpath is a CommonJS module, of which Node.js cannot detect the named exports
 const { evaluateXPath, evaluateXPathToStrings, parseScript } = fontoxpath;
 
 /**
@@ -88,7 +88,10 @@ const FUNCTIONS: Record<string, FunctionTranslation> = {
   // The string value of an atomic value is its cast to xs:string
   string: { accepts: count => count === 1, translate: ([ arg ]) => cast('string', arg) },
   // XPath converts the arguments to strings, while SPARQL only accepts strings
-  concat: { accepts: count => count >= 2, translate: args => operation('concat', ...args.map(arg => cast('string', arg))) },
+  concat: {
+    accepts: count => count >= 2,
+    translate: args => operation('concat', ...args.map(arg => cast('string', arg))),
+  },
 };
 
 /**
@@ -137,8 +140,12 @@ const GROUPING_ELEMENTS = new Set([
   'name',
 ]);
 
-function xqueryxNode(subType: string, children: IXQueryXNode[] = [], text = '',
-  attributes: Record<string, string> = {}): IXQueryXNode {
+function xqueryxNode(
+  subType: string,
+  children: IXQueryXNode[] = [],
+  text = '',
+  attributes: Record<string, string> = {},
+): IXQueryXNode {
   return { type: 'xqueryx', subType, attributes, text, children };
 }
 

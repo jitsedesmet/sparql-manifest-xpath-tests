@@ -5,25 +5,21 @@ import { UnsupportedError } from './UnsupportedError.ts';
 import { xpathToSparql } from './xpathToSparql.ts';
 import { subTypes } from './xsd.ts';
 
-export enum ASSERTION {
-  ERROR = 'error'
-}
-
 /**
  * Normalize the whitespace of a SPARQL string, as XPath's fn:normalize-space.
  * @param expression The SPARQL expression of the string.
  */
 function normalizeSpace(expression: Expression): Expression {
   return operation(
-      'replace',
+    'replace',
     operation(
       'replace',
-        expression,
+      expression,
       literal(String.raw`^\s+|\s+$`, 'string'),
-      literal('', 'string')
+      literal('', 'string'),
     ),
     literal(String.raw`\s+`, 'string'),
-    literal(' ', 'string')
+    literal(' ', 'string'),
   );
 }
 
@@ -37,7 +33,7 @@ function valueWhenUnbound(expression: Expression): boolean | undefined {
   if (!astFactory.isExpressionOperator(expression)) {
     return undefined;
   }
-  const values = (expression.args as Expression[]).map(valueWhenUnbound);
+  const values = expression.args.map(valueWhenUnbound);
   switch (expression.operator) {
     case 'bound':
       return false;
@@ -71,7 +67,6 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
   const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
   const isBoolean = operation('=', operation('datatype', result), xsdIri('boolean'));
   const text = assertion.textContent!.trim();
-  // TODO migrate to the ASSERTION enum instead.
   switch (assertion.localName) {
     case 'error':
       return operation('!', operation('bound', result));
@@ -92,21 +87,16 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
     case 'assert-deep-eq': {
       // Deep equality also considers NaN equal to itself
       const expected = xpathToSparql(text, variables);
-      return operation('||', operation('=', result, expected), operation('&&',
-        operation('!=', result, result),
-        operation('!=', expected, expected)));
+      const bothNaN = operation('&&', operation('!=', result, result), operation('!=', expected, expected));
+      return operation('||', operation('=', result, expected), bothNaN);
     }
     case 'assert-string-value': {
       const actual = xsdFunctionCall('string', result);
       if (assertion.getAttribute('normalize-space') === 'true') {
-        return operation(
-          '=',
-          normalizeSpace(actual),
-          literal(assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ')
-            .replace(/^ | $/gu, ''), 'string')
-        )
+        const expected = assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ').replaceAll(/^ | $/gu, '');
+        return operation('=', normalizeSpace(actual), literal(expected, 'string'));
       }
-      return operation('=', actual, literal(assertion.textContent!, 'string'))
+      return operation('=', actual, literal(assertion.textContent!, 'string'));
     }
     case 'assert-type': {
       const match = /^xs:(\w+)$/u.exec(text);

@@ -1,5 +1,4 @@
-import type { Expression } from '@traqula/rules-sparql-1-2';
-import type * as T11 from '@traqula/rules-sparql-1-1';
+import type { Expression, TermIriFull } from '@traqula/rules-sparql-1-2';
 import { AstFactory } from '@traqula/rules-sparql-1-2';
 import { XSD } from './xsd.ts';
 
@@ -11,21 +10,25 @@ export const astFactory = new AstFactory();
 export const RESULT_VARIABLE = 'result';
 
 /**
+ * The arguments of the expression constructors of the AstFactory, which it inherits from SPARQL 1.1 with their types,
+ * while a SPARQL 1.2 expression extends the same tree.
+ */
+type FactoryArguments = Parameters<typeof astFactory.expressionOperation>[1];
+
+/**
  * Create a SPARQL operation.
+ * @param operator The operator.
+ * @param args The arguments of the operation.
  */
 export function operation(operator: string, ...args: Expression[]): Expression {
-  return astFactory.expressionOperation(
-    operator,
-    args as T11.Expression[],
-    astFactory.gen()
-  );
+  return astFactory.expressionOperation(operator, args as FactoryArguments, astFactory.gen());
 }
 
 /**
  * Create the IRI of an XSD datatype.
  * @param localName The local name of the datatype.
  */
-export function xsdIri(localName: string) {
+export function xsdIri(localName: string): TermIriFull {
   return astFactory.termNamed(astFactory.gen(), `${XSD}${localName}`);
 }
 
@@ -55,10 +58,5 @@ export function literal(value: string, datatype: string): Expression {
  * @param arg The argument of the call.
  */
 export function xsdFunctionCall(localName: string, arg: Expression): Expression {
-  return astFactory.expressionFunctionCall(
-    xsdIri(localName),
-    [ arg ] as T11.Expression[],
-    false,
-    astFactory.gen()
-  );
+  return astFactory.expressionFunctionCall(xsdIri(localName), [ arg ] as FactoryArguments, false, astFactory.gen());
 }

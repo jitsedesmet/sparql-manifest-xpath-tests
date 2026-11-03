@@ -17,8 +17,8 @@
  */
 import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import type { Expression } from '@traqula/rules-sparql-1-2';
 import { sparql12GeneratorBuilder } from '@traqula/generator-sparql-1-2';
+import type { Expression } from '@traqula/rules-sparql-1-2';
 import { completeGeneratorContext } from '@traqula/rules-sparql-1-2';
 import type { Element } from 'slimdom';
 import { parseXmlDocument } from 'slimdom';
@@ -109,7 +109,6 @@ async function fetchQt3(path: string): Promise<string> {
   if (existsSync(file)) {
     return readFileSync(file, 'utf8');
   }
-  // TODO: would we even know if a fetch fails?
   const response = await fetch(`${QT3_BASE}${path}`);
   if (!response.ok) {
     throw new Error(`Could not fetch ${path}: ${response.status}`);
@@ -156,7 +155,8 @@ function childElements(element: Element, localName: string): Element[] {
  * @param element The test-set or catalog element.
  */
 function environmentsByName(element: Element): Map<string, Element> {
-  return new Map(childElements(element, 'environment').map(environment => [ environment.getAttribute('name')!, environment ]));
+  return new Map(childElements(element, 'environment')
+    .map(environment => [ environment.getAttribute('name')!, environment ]));
 }
 
 /**
@@ -164,11 +164,11 @@ function environmentsByName(element: Element): Map<string, Element> {
  * @param testCase The test-case element.
  * @param environments The environment definitions that the test case can refer to, by name.
  * @throws {UnsupportedError} If the environment is not supported.
- * @example TODO? if it would help
+ * @example `<environment><param name="x" select="1"/></environment>` binds `x` to the SPARQL literal `1`.
  */
 function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
   const variables: Record<string, Expression> = {};
-  // TODO: it's not clear what this is doing
+  // An environment either refers to a definition by name or is the definition itself
   for (const environment of childElements(testCase, 'environment')) {
     const ref = environment.getAttribute('ref');
     const definition = ref ? environments.get(ref) : environment;
@@ -187,7 +187,9 @@ function environmentVariables(testCase: Element, environments: Map<string, Eleme
 }
 
 /**
- * For the GitHub Files, gets the Line anchor to encode the `#L{num}`.
+ * Determine the line of each test case in a test set, for the `#L` anchors of the links to it on GitHub.
+ * @param testSetText The XML text of the test set.
+ * @returns The 1-based lines, by test case name.
  */
 function testCaseLines(testSetText: string): Map<string, number> {
   const lines = new Map<string, number>();
@@ -214,10 +216,7 @@ function tsvField(value: string): string {
 /**
  * Determine whether an XPath 3.1 and XSD 1.1 implementation without optional features satisfies a dependency.
  * @param dependency The dependency element.
- * @example TODO?
- *   <dependency type="spec" value="XP30+ XQ30+"/>
- *   // Becomes
- *
+ * @example `<dependency type="spec" value="XP30+ XQ30+"/>` is satisfied, while `value="XP30"` is not.
  */
 function satisfiesDependency(dependency: Element): boolean {
   const value = dependency.getAttribute('value') ?? '';
@@ -227,7 +226,7 @@ function satisfiesDependency(dependency: Element): boolean {
 
   let supported = false;
   if (type === 'spec') {
-    // TODO: I think the first case is captured by the other too? So we can drop? (speed is not of the essence)
+    // Either exactly XP31, or a minimum version up to XP31
     supported = value.trim().split(/\s+/u).some(spec =>
       spec === 'XP31' || (/^XP\d\d\+$/u.test(spec) && Number(spec.slice(2, 4)) <= 31));
   } else if (type === 'xsd-version') {
@@ -243,11 +242,9 @@ function satisfiesDependency(dependency: Element): boolean {
  * @param testCase The test-case element.
  * @param unsatisfiedTestSetDependencies The unsatisfied dependencies of the test set.
  * @throws {UnsupportedError} If the test case is not supported.
- * @example TODO?
- *   <test>let $t := true#0 return 3[$t()]</test>
  */
 function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Element[]): void {
-  // like <test file="Literal/K2-Literals-28.xq"/>
+  // Like <test file="Literal/K2-Literals-28.xq"/>
   const file = childElements(testCase, 'test')[0]?.getAttribute('file');
   if (file) {
     throw new UnsupportedError('Unsupported test', `in the separate file ${file}`);
@@ -275,9 +272,8 @@ function testCaseQuery(
   testSetName: string,
   testCase: Element,
   environments: Map<string, Element>,
-  url: string
+  url: string,
 ): { query: string; kind: Kind } {
-  // TODO: project wide: let's add a linter just like in https://github.com/comunica/traqula
   const variables = environmentVariables(testCase, environments);
   const test = childElements(testCase, 'test')[0].textContent!;
   const expression = xpathToSparql(test, variables);
@@ -313,7 +309,7 @@ function translateTestSet(
   testSetName: string,
   testSetFile: string,
   testSetText: string,
-  catalogEnvironments: Map<string, Element>
+  catalogEnvironments: Map<string, Element>,
 ): { tests: GeneratedTest[]; leftOut: LeftOutTest[] } {
   const testSet = parseXmlDocument(testSetText).documentElement!;
   const environments = new Map([ ...catalogEnvironments, ...environmentsByName(testSet) ]);
@@ -386,20 +382,21 @@ async function main(): Promise<void> {
   const testSets = childElements(catalog, 'test-set')
     .map(testSet => ({
       name: testSet.getAttribute('name')!,
-      file: testSet.getAttribute('file')!
+      file: testSet.getAttribute('file')!,
     }))
     .filter(({ name }) => TEST_SETS.test(name));
 
   const testSetTexts = await Promise.all(
-    testSets.map(({ file }) => fetchQt3(file))
+    testSets.map(({ file }) => fetchQt3(file)),
   );
   const results = testSets
     .map(({ name, file }, index) => ({
-      name, ...translateTestSet(name, file, testSetTexts[index], catalogEnvironments)
+      name,
+      ...translateTestSet(name, file, testSetTexts[index], catalogEnvironments),
     }));
 
-  const includes: Record<Kind, string[]> = { sparql: [], extensions: [], errors: [] };
-  const nonEmptySuites = results.filter(({ tests }) => tests.length > 0)
+  const includes: Record<Kind, string[]> = { sparql: [], extensions: [], errors: []};
+  const nonEmptySuites = results.filter(({ tests }) => tests.length > 0);
   for (const { name: testSetName, tests } of nonEmptySuites) {
     mkdirSync(join(DIST_DIR, testSetName));
     for (const { name, query } of tests) {
@@ -440,10 +437,10 @@ ${licenceAsString}`);
 
   const leftOut = results.flatMap(result => result.leftOut);
   const rows = leftOut.map(({ testSetName, name, url, error }) =>
-    `${[ testSetName, name, url, error.message ].map(tsvField).join('\t')}\n`).join('')
+    `${[ testSetName, name, url, error.message ].map(tsvField).join('\t')}\n`).join('');
   write(
     'left-out.tsv',
-    `test-set\ttest-case\turl\treason\n${rows}`
+    `test-set\ttest-case\turl\treason\n${rows}`,
   );
 
   const tests = results.flatMap(result => result.tests);
@@ -455,7 +452,7 @@ ${licenceAsString}`);
   }
   process.stdout.write(`Left out ${leftOut.length} tests, which left-out.tsv lists\n`);
   const categoryCounts = Map.groupBy(leftOut, ({ error }) => error.category);
-  const sortedCategories = [ ...categoryCounts ].sort(([ , a ], [ , b ]) => b.length - a.length)
+  const sortedCategories = [ ...categoryCounts ].sort(([ , a ], [ , b ]) => b.length - a.length);
   for (const [ category, categoryTests ] of sortedCategories) {
     process.stdout.write(`  ${categoryTests.length}: ${category}\n`);
   }

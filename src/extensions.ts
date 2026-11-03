@@ -13,8 +13,8 @@ const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype' 
 const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs', 'ceil', 'floor', 'round' ]);
 
 /**
- * The datatypes of the results of the other SPARQL operators, by operator.
- * TODO: why is this relevant for a test builder like this repo?
+ * The datatypes of the results of the other SPARQL operators, by operator,
+ * which tell whether the operator that encloses them gets operands that SPARQL does not define it for.
  */
 const RESULT_TYPES: Record<string, string> = {
   ...Object.fromEntries([
@@ -48,20 +48,17 @@ const RESULT_TYPES: Record<string, string> = {
  * @param types The local names of the XSD datatypes of the operands.
  */
 function numericType(operator: string, types: string[]): string {
-  const isCastOperation = [ 'double', 'float', 'decimal' ].find(type => types.includes(type))
-  if (isCastOperation !== undefined) {
-    return isCastOperation;
+  const promotedType = [ 'double', 'float', 'decimal' ].find(type => types.includes(type));
+  if (promotedType !== undefined) {
+    return promotedType;
   }
-  // Everything becomes integer unless it is result of division.
+  // Integer operands give an integer, except for a division
   return operator === '/' ? 'decimal' : 'integer';
 }
 
 /**
- * TODO: I feel like this is used to create
- *  'prettier test strings pruning result type checks when they are known statically',
- *  but that's really something that should NOT happen in this repo!
  * Determine the XSD datatype of a SPARQL expression, as far as it is known statically,
- * and collect the reasons why it needs more than SPARQL defines.
+ * and collect the reasons why it needs more than SPARQL defines, which decide the manifest of the test.
  * @param expression The SPARQL expression.
  * @param resultType The XSD datatype of ?result, if known.
  * @param reasons The reasons, to which the reasons of this expression are added.
@@ -105,7 +102,7 @@ function datatype(expression: Expression, resultType: string | undefined, reason
       reasons.add(`${name} on xsd:dateTime`);
     }
     if (types.every((type: string | undefined): type is string => type !== undefined && NUMERIC_TYPES.has(type))) {
-      return numericType(operator, types)
+      return numericType(operator, types);
     }
     return undefined;
   }

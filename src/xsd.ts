@@ -5,7 +5,6 @@ export const XSD = 'http://www.w3.org/2001/XMLSchema#';
 type Range = [ bigint | undefined, bigint | undefined ];
 
 /**
- * TODO: why does this repo care about the range?
  * The XSD datatypes that are derived from another one, mapped onto that datatype and, for integer types, their range.
  */
 const DERIVED_TYPES: Record<string, { parent: string; range?: Range }> = {
@@ -79,10 +78,8 @@ export function subTypes(type: string): string[] {
   if (!ALL_TYPES.includes(type)) {
     throw new UnsupportedError('Unsupported type', `xs:${type}`);
   }
-  return [
-    type,
-    ...Object.entries(DERIVED_TYPES).filter(([ , { parent }]) => parent === type).flatMap(([ child ]) => subTypes(child)),
-  ];
+  const children = Object.entries(DERIVED_TYPES).filter(([ , { parent }]) => parent === type);
+  return [ type, ...children.flatMap(([ child ]) => subTypes(child)) ];
 }
 
 /**
