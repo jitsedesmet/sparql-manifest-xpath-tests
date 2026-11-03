@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <> a mf:Manifest ;
-  rdfs:label "The tests of QT3 that accept an error, which also pass on engines that fail for another reason" ;
+  rdfs:label "The tests of QT3 that accept an error. NOTE: engines that fail for another reason will also PASS" ;
   dct:license <LICENSE.txt> ;
   rdfs:comment "Generated from https://raw.githubusercontent.com/w3c/qt3tests/201a6e466940cdfc727f4babfedcde5332b9f578/catalog.xml" ;
   mf:include (

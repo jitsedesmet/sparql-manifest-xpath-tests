@@ -13,7 +13,11 @@ const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype' 
 const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs', 'ceil', 'floor', 'round' ]);
 
 /**
- * The datatypes of the results of the other SPARQL operators, by operator.
+ * The datatypes of the results of the other SPARQL operators, by operator, to find the datatypes beyond SPARQL
+ * that an operator produces rather than a literal or constructor function.
+ * @example
+ *   In fn-timezone-from-dateTimealt-1, `BIND(TIMEZONE(...) AS ?result) FILTER(xsd:string(?result) = "-PT5H")`
+ *   needs xsd:string on xsd:dayTimeDuration, which the spec does not require, and thus this is an extension.
  */
 const RESULT_TYPES: Record<string, string> = {
   ...Object.fromEntries([
@@ -45,8 +49,10 @@ const RESULT_TYPES: Record<string, string> = {
  * Determine the datatype of the result of a numeric operator, following the numeric type promotion of XPath.
  * @param operator The SPARQL operator.
  * @param types The local names of the XSD datatypes of the operands.
+ * @returns The local name of the XSD datatype of the result.
  */
 function numericType(operator: string, types: string[]): string {
+  // Integer operands give an integer, except for a division
   return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
     (operator === '/' ? 'decimal' : 'integer');
 }
@@ -54,6 +60,7 @@ function numericType(operator: string, types: string[]): string {
 /**
  * Determine the XSD datatype of a SPARQL expression, as far as it is known statically,
  * and collect the reasons why it needs more than SPARQL defines.
+ * This only decides the manifest of a test and its comment, and never changes the query itself.
  * @param expression The SPARQL expression.
  * @param resultType The XSD datatype of ?result, if known.
  * @param reasons The reasons, to which the reasons of this expression are added.
@@ -69,32 +76,37 @@ function datatype(expression: Expression, resultType: string | undefined, reason
   if (astFactory.isTermVariable(expression)) {
     return expression.value === RESULT_VARIABLE ? resultType : undefined;
   }
+
   const isFunctionCall = astFactory.isExpressionFunctionCall(expression);
   if (!isFunctionCall && !astFactory.isExpressionOperator(expression)) {
     return undefined;
   }
-  const types = (expression.args as Expression[]).map(arg => datatype(arg, resultType, reasons));
+
+  const types = expression.args.map(arg => datatype(arg, resultType, reasons));
   if (isFunctionCall) {
-    const constructorType = xsdLocalName(expression.function as { value: string })!;
+    const constructorType = xsdLocalName(expression.function)!;
     addOperandReasons(`xsd:${constructorType}`, types, reasons);
     if (!CONSTRUCTOR_TYPES.has(constructorType)) {
       reasons.add(`the constructor function xsd:${constructorType}`);
     }
     return constructorType;
   }
+
   const { operator } = expression;
   if (ANY_TERM_OPERATORS.has(operator)) {
     return operator === 'if' && types[1] === types[2] ? types[1] : RESULT_TYPES[operator];
   }
   const name = operator.toUpperCase();
   addOperandReasons(name, types, reasons);
+
   if (NUMERIC_OPERATORS.has(operator)) {
     if (types.includes('dateTime')) {
       reasons.add(`${name} on xsd:dateTime`);
     }
-    return types.every(type => type !== undefined && NUMERIC_TYPES.has(type)) ?
-      numericType(operator, types as string[]) :
-      undefined;
+    if (types.every((type): type is string => type !== undefined && NUMERIC_TYPES.has(type))) {
+      return numericType(operator, types);
+    }
+    return undefined;
   }
   if (operator === 'substr' && types.slice(1).some(type => type !== undefined && !INTEGRAL_TYPES.has(type))) {
     reasons.add('SUBSTR with a position or length that is not an xsd:integer');

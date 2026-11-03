@@ -2,7 +2,7 @@ name: Check and publish the manifest
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -31,6 +31,8 @@ jobs:
           key: qt3-${{ steps.qt3.outputs.commit }}
       - run: yarn install --frozen-lockfile
       - run: yarn run typecheck
+      - run: yarn run lint
+      - run: yarn run depcheck
       - run: yarn run generate
       - name: Check that the tracked tests in dist/ are up to date
         run: |

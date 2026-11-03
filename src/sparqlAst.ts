@@ -1,4 +1,5 @@
-import type { Expression } from '@traqula/rules-sparql-1-2';
+import type * as T11 from '@traqula/rules-sparql-1-1';
+import type { Expression, TermIri } from '@traqula/rules-sparql-1-2';
 import { AstFactory } from '@traqula/rules-sparql-1-2';
 import { XSD } from './xsd.ts';
 
@@ -10,19 +11,25 @@ export const astFactory = new AstFactory();
 export const RESULT_VARIABLE = 'result';
 
 /**
- * Create a SPARQL operation. The AstFactory of SPARQL 1.2 inherits its expression constructors from the one of
- * SPARQL 1.1, whose types only accept SPARQL 1.1 expressions, while a SPARQL 1.2 expression extends the same tree.
+ * Create a SPARQL operation.
+ * @param operator The SPARQL operator.
+ * @param args The arguments.
+ * @returns The SPARQL operation.
  */
 export function operation(operator: string, ...args: Expression[]): Expression {
-  return astFactory.expressionOperation(operator, args as Parameters<typeof astFactory.expressionOperation>[1],
-    astFactory.gen());
+  return astFactory.expressionOperation(
+    operator,
+    args as T11.Expression[],
+    astFactory.gen(),
+  );
 }
 
 /**
  * Create the IRI of an XSD datatype.
  * @param localName The local name of the datatype.
+ * @returns The IRI term.
  */
-export function xsdIri(localName: string) {
+export function xsdIri(localName: string): TermIri {
   return astFactory.termNamed(astFactory.gen(), `${XSD}${localName}`);
 }
 
@@ -39,6 +46,7 @@ export function xsdLocalName(iri: { value: string }): string | undefined {
  * Create a SPARQL literal.
  * @param value The lexical form.
  * @param datatype The local name of the XSD datatype, where `string` creates a simple literal.
+ * @returns The SPARQL literal.
  */
 export function literal(value: string, datatype: string): Expression {
   return datatype === 'string' ?
@@ -50,8 +58,13 @@ export function literal(value: string, datatype: string): Expression {
  * Create a SPARQL call of the constructor function of an XSD datatype.
  * @param localName The local name of the datatype.
  * @param arg The argument of the call.
+ * @returns The SPARQL function call.
  */
 export function xsdFunctionCall(localName: string, arg: Expression): Expression {
-  return astFactory.expressionFunctionCall(xsdIri(localName),
-    [ arg ] as Parameters<typeof astFactory.expressionFunctionCall>[1], false, astFactory.gen());
+  return astFactory.expressionFunctionCall(
+    xsdIri(localName),
+    [ arg ] as T11.Expression[],
+    false,
+    astFactory.gen(),
+  );
 }
