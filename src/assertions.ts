@@ -70,7 +70,6 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
   const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
   const isBoolean = operation('=', operation('datatype', result), xsdIri('boolean'));
   const text = assertion.textContent!.trim();
-  // TODO could we migarte to en enum instead?
   switch (assertion.localName) {
     case 'error':
       return operation('!', operation('bound', result));

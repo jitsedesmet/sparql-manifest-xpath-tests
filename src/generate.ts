@@ -70,6 +70,9 @@ const KINDS = {
 type Kind = keyof typeof KINDS;
 const KIND_NAMES = Object.keys(KINDS) as Kind[];
 
+// The values of spec dependencies that XPath 3.1 satisfies, where a `+` means that version or a later one.
+const XPATH_31_SPECS = new Set([ 'XP20+', 'XP30+', 'XP31', 'XP31+' ]);
+
 const PREFIXES = `@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
 @prefix qt: <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
@@ -110,7 +113,6 @@ async function fetchQt3(path: string): Promise<string> {
   if (existsSync(file)) {
     return readFileSync(file, 'utf8');
   }
-  // TODO: would we even know if a fetch fails?
   const response = await fetch(`${QT3_BASE}${path}`);
   if (!response.ok) {
     throw new Error(`Could not fetch ${path}: ${response.status}`);
@@ -134,6 +136,8 @@ function write(path: string, contents: string): void {
 
 /**
  * Serialize a string as a Turtle string literal, of which the escapes are the same as the ones of JSON.
+ * @param value The string.
+ * @returns The Turtle string literal.
  */
 function turtleString(value: string): string {
   return JSON.stringify(value);
@@ -141,6 +145,8 @@ function turtleString(value: string): string {
 
 /**
  * Serialize a SPARQL expression.
+ * @param expression The SPARQL expression.
+ * @returns The SPARQL text.
  */
 function sparql(expression: Expression): string {
   return generator.expression(expression, generatorContext).trim();
@@ -167,21 +173,24 @@ function environmentsByName(element: Element): Map<string, Element> {
 }
 
 /**
- * Determine the SPARQL expressions of the variables of the environment of a test case.
+ * Translate the parameters of the environment of a test case into SPARQL expressions, to substitute their references.
+ * An environment is defined inline, or referenced by name, and only parameters with a value are supported.
  * @param testCase The test-case element.
  * @param environments The environment definitions that the test case can refer to, by name.
+ * @returns The SPARQL expressions of the parameters, by name.
  * @throws {UnsupportedError} If the environment is not supported.
- * @example TODO? if it would help
+ * @example
+ *   <environment><param name="a" select="'abc'"/></environment> gives { a: "abc" }
  */
 function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
   const variables: Record<string, Expression> = {};
-  // TODO: it's not clear what this is doing
   for (const environment of childElements(testCase, 'environment')) {
     const ref = environment.getAttribute('ref');
     const definition = ref ? environments.get(ref) : environment;
     if (!definition) {
       throw new UnsupportedError('Unsupported environment', ref!);
     }
+    // A parameter can refer to the ones before it
     for (const param of definition.children) {
       const select = param.getAttribute('select');
       if (param.localName !== 'param' || !select) {
@@ -194,7 +203,9 @@ function environmentVariables(testCase: Element, environments: Map<string, Eleme
 }
 
 /**
- * For the GitHub Files, gets the Line anchor to encode the `#L{num}`.
+ * Find the line of each test case in the XML text of a test set, for the `#L` anchors of the GitHub URLs.
+ * @param testSetText The XML text of the test set.
+ * @returns The line numbers, by test case name.
  */
 function testCaseLines(testSetText: string): Map<string, number> {
   const lines = new Map<string, number>();
@@ -212,6 +223,8 @@ function testCaseLines(testSetText: string): Map<string, number> {
 
 /**
  * Serialize a value as a field of a TSV file, escaping the characters that would end the field or the line.
+ * @param value The value.
+ * @returns The TSV field.
  */
 function tsvField(value: string): string {
   return value.replaceAll(/[\\\t\n\r]/gu, character =>
@@ -221,27 +234,21 @@ function tsvField(value: string): string {
 /**
  * Determine whether an XPath 3.1 and XSD 1.1 implementation without optional features satisfies a dependency.
  * @param dependency The dependency element.
- * @example TODO?
- *   <dependency type="spec" value="XP30+ XQ30+"/>
- *   // Becomes
- *
+ * @returns Whether the dependency is satisfied.
+ * @example
+ *   <dependency type="spec" value="XP30+ XQ30+"/> is satisfied, <dependency type="spec" value="XP40+"/> is not.
  */
 function satisfiesDependency(dependency: Element): boolean {
   const value = dependency.getAttribute('value') ?? '';
-  const type = dependency.getAttribute('type') ?? '';
-  // A dependency with satisfied="false" requires the implementation to not have it
-  const satisfied = dependency.getAttribute('satisfied') ?? '';
-
+  const type = dependency.getAttribute('type');
   let supported = false;
   if (type === 'spec') {
-    // TODO: I think the first case is captured by the other too? So we can drop? (speed is not of the essence)
-    supported = value.trim().split(/\s+/u).some(spec =>
-      spec === 'XP31' || (/^XP\d\d\+$/u.test(spec) && Number(spec.slice(2, 4)) <= 31));
+    supported = value.trim().split(/\s+/u).some(spec => XPATH_31_SPECS.has(spec));
   } else if (type === 'xsd-version') {
     supported = value === '1.1';
   }
-
-  return supported !== (satisfied === 'false');
+  // A dependency with satisfied="false" requires the implementation to not have it
+  return supported !== (dependency.getAttribute('satisfied') === 'false');
 }
 
 /**
@@ -250,8 +257,8 @@ function satisfiesDependency(dependency: Element): boolean {
  * @param testCase The test-case element.
  * @param unsatisfiedTestSetDependencies The unsatisfied dependencies of the test set.
  * @throws {UnsupportedError} If the test case is not supported.
- * @example TODO?
- *   <test>let $t := true#0 return 3[$t()]</test>
+ * @example
+ *   <test file="Literal/K2-Literals-28.xq"/> and <dependency type="spec" value="XQ10+"/> are not supported.
  */
 function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Element[]): void {
   // Like <test file="Literal/K2-Literals-28.xq"/>

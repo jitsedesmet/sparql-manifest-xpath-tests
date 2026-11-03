@@ -5,8 +5,8 @@ export const XSD = 'http://www.w3.org/2001/XMLSchema#';
 type Range = [ bigint | undefined, bigint | undefined ];
 
 /**
- * TODO: why does this repo care about the range?
  * The XSD datatypes that are derived from another one, mapped onto that datatype and, for integer types, their range.
+ * The ranges tell which casts to an integer type can become a typed literal, see INTEGER_RANGES.
  */
 const DERIVED_TYPES: Record<string, { parent: string; range?: Range }> = {
   integer: { parent: 'decimal' },
@@ -85,6 +85,8 @@ export function subTypes(type: string): string[] {
 
 /**
  * The value ranges of the XSD datatypes derived from xsd:integer, which SPARQL has no constructor function for.
+ * A cast of an out-of-range value is an error in XPath, but would be an ill-typed literal in SPARQL,
+ * so such a test is left out. Fontoxpath cannot check this, as it loses precision beyond 2^53.
  */
 export const INTEGER_RANGES: Record<string, Range> = Object.fromEntries(Object.entries(DERIVED_TYPES)
   .flatMap(([ type, { range }]) => range ? [[ type, range ]] : []));
