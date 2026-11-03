@@ -1,4 +1,5 @@
 import type { Expression } from '@traqula/rules-sparql-1-2';
+import fontoxpath from 'fontoxpath';
 import type { Element } from 'slimdom';
 import { RESULT_VARIABLE, astFactory, literal, operation, xsdFunctionCall, xsdIri } from './sparqlAst.ts';
 import { UnsupportedError } from './UnsupportedError.ts';
@@ -96,7 +97,9 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
     case 'assert-string-value': {
       const actual = xsdFunctionCall('string', result);
       if (assertion.getAttribute('normalize-space') === 'true') {
-        const expected = assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ').replaceAll(/^ | $/gu, '');
+        const expected = fontoxpath.evaluateXPathToString('normalize-space($text)', null, null, {
+          text: assertion.textContent!,
+        });
         return operation('=', normalizeSpace(actual), literal(expected, 'string'));
       }
       return operation('=', actual, literal(assertion.textContent!, 'string'));

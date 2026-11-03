@@ -17,10 +17,6 @@ export default config([
       'jsdoc/require-param': [ 'error', { checkDestructured: false }],
       'jsdoc/require-returns': 'error',
       'jsdoc/require-jsdoc': 'error',
-    },
-  },
-  {
-    rules: {
       // This project is a Node.js script
       'import/no-nodejs-modules': 'off',
       'ts/naming-convention': 'off',

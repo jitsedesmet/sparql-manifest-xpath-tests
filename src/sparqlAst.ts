@@ -3,6 +3,8 @@ import type { Expression, TermIri } from '@traqula/rules-sparql-1-2';
 import { AstFactory } from '@traqula/rules-sparql-1-2';
 import { XSD } from './xsd.ts';
 
+// The SPARQL 1.2 factory inherits its expression methods from SPARQL 1.1, whose types only accept
+// SPARQL 1.1 expressions, so the SPARQL 1.2 arguments are cast to them.
 export const astFactory = new AstFactory();
 
 /**

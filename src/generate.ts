@@ -180,7 +180,7 @@ function environmentsByName(element: Element): Map<string, Element> {
  * @returns The SPARQL expressions of the parameters, by name.
  * @throws {UnsupportedError} If the environment is not supported.
  * @example
- *   <environment><param name="a" select="'abc'"/></environment> gives { a: "abc" }
+ *   <environment><param name="a" select="'abc'"/></environment> gives { a: <the SPARQL literal "abc"> }
  */
 function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
   const variables: Record<string, Expression> = {};
@@ -261,7 +261,6 @@ function satisfiesDependency(dependency: Element): boolean {
  *   <test file="Literal/K2-Literals-28.xq"/> and <dependency type="spec" value="XQ10+"/> are not supported.
  */
 function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Element[]): void {
-  // Like <test file="Literal/K2-Literals-28.xq"/>
   const file = childElements(testCase, 'test')[0]?.getAttribute('file');
   if (file) {
     throw new UnsupportedError('Unsupported test', `in the separate file ${file}`);

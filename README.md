@@ -92,7 +92,7 @@ every week and on every push and pull request.
 
 The generated tests in `dist/` are tracked, so that every change to the published tests shows up in the git diff.
 After changing the generator, run `yarn run generate` and commit the changes in `dist/`,
-and check the code with `yarn run lint`, `yarn run typecheck` and `yarn run depcheck`, of which a pre-commit hook runs the typecheck.
+and check the code with `yarn run lint`, `yarn run typecheck` and `yarn run depcheck`; the pre-commit hook runs the typecheck.
 A GitHub Actions workflow checks on every push and pull request that `dist/` is up to date with the generator,
 and publishes `dist/` on GitHub Pages on every push to `main`.
 
