@@ -48,7 +48,7 @@ const RESULT_TYPES: Record<string, string> = {
  * @param types The local names of the XSD datatypes of the operands.
  * @returns The local name of the XSD datatype of the result.
  */
-function numericType(operator: string, types: (string | undefined)[]): string {
+function numericType(operator: string, types: string[]): string {
   // Integer operands give an integer, except for a division
   return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
     (operator === '/' ? 'decimal' : 'integer');
@@ -100,7 +100,7 @@ function datatype(expression: Expression, resultType: string | undefined, reason
     if (types.includes('dateTime')) {
       reasons.add(`${name} on xsd:dateTime`);
     }
-    if (types.every(type => type !== undefined && NUMERIC_TYPES.has(type))) {
+    if (types.every((type): type is string => type !== undefined && NUMERIC_TYPES.has(type))) {
       return numericType(operator, types);
     }
     return undefined;
