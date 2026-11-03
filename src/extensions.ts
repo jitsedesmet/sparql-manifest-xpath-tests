@@ -1,18 +1,6 @@
 import type { Expression } from '@traqula/rules-sparql-1-2';
-import { F, INTEGER_TYPES, XSD } from './xpathToSparql.ts';
-
-/**
- * The XSD datatypes that SPARQL defines its operators and functions for
- * (https://www.w3.org/TR/sparql12-query/#operandDataTypes), by local name.
- */
-const INTEGRAL_TYPES = new Set([ 'integer', ...Object.keys(INTEGER_TYPES) ]);
-const NUMERIC_TYPES = new Set([ ...INTEGRAL_TYPES, 'decimal', 'float', 'double' ]);
-const OPERAND_TYPES = new Set([ ...NUMERIC_TYPES, 'string', 'boolean', 'dateTime' ]);
-
-/**
- * The XSD datatypes that SPARQL has a constructor function for (https://www.w3.org/TR/sparql12-query/#FunctionMapping).
- */
-const CONSTRUCTOR_TYPES = new Set([ 'string', 'float', 'double', 'decimal', 'integer', 'dateTime', 'boolean' ]);
+import { RESULT_VARIABLE, astFactory, xsdLocalName } from './sparqlAst.ts';
+import { CONSTRUCTOR_TYPES, INTEGRAL_TYPES, NUMERIC_TYPES, OPERAND_TYPES } from './xsd.ts';
 
 /**
  * The SPARQL operators that accept any RDF term, as they only use its effective boolean value, or not its value at all.
@@ -20,53 +8,47 @@ const CONSTRUCTOR_TYPES = new Set([ 'string', 'float', 'double', 'decimal', 'int
 const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype' ]);
 
 /**
- * The datatypes of the results of SPARQL operators, by operator.
+ * The SPARQL operators on numbers, of which the result datatype follows the numeric type promotion of XPath.
+ */
+const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs', 'ceil', 'floor', 'round' ]);
+
+/**
+ * The datatypes of the results of the other SPARQL operators, by operator.
  */
 const RESULT_TYPES: Record<string, string> = {
-  '!': 'boolean',
-  '&&': 'boolean',
-  '||': 'boolean',
-  '=': 'boolean',
-  '!=': 'boolean',
-  '<': 'boolean',
-  '<=': 'boolean',
-  '>': 'boolean',
-  '>=': 'boolean',
-  in: 'boolean',
-  bound: 'boolean',
-  strstarts: 'boolean',
-  strends: 'boolean',
-  contains: 'boolean',
-  regex: 'boolean',
-  strlen: 'integer',
-  year: 'integer',
-  month: 'integer',
-  day: 'integer',
-  hours: 'integer',
-  minutes: 'integer',
+  ...Object.fromEntries([
+    '!',
+    '&&',
+    '||',
+    '=',
+    '!=',
+    '<',
+    '<=',
+    '>',
+    '>=',
+    'in',
+    'bound',
+    'strstarts',
+    'strends',
+    'contains',
+    'regex',
+  ].map(operator => [ operator, 'boolean' ])),
+  ...Object.fromEntries([ 'strlen', 'year', 'month', 'day', 'hours', 'minutes' ]
+    .map(operator => [ operator, 'integer' ])),
+  ...Object.fromEntries([ 'substr', 'ucase', 'lcase', 'strbefore', 'strafter', 'encode_for_uri', 'concat', 'replace' ]
+    .map(operator => [ operator, 'string' ])),
   seconds: 'decimal',
   timezone: 'dayTimeDuration',
-  substr: 'string',
-  ucase: 'string',
-  lcase: 'string',
-  strbefore: 'string',
-  strafter: 'string',
-  encode_for_uri: 'string',
-  concat: 'string',
-  replace: 'string',
 };
 
 /**
- * The datatype of the result of a numeric operator, given the datatypes of its numeric operands,
- * following the numeric type promotion of XPath.
+ * Determine the datatype of the result of a numeric operator, following the numeric type promotion of XPath.
+ * @param operator The SPARQL operator.
+ * @param types The local names of the XSD datatypes of the operands.
  */
 function numericType(operator: string, types: string[]): string {
-  for (const type of [ 'double', 'float', 'decimal' ]) {
-    if (types.includes(type)) {
-      return type;
-    }
-  }
-  return operator === '/' ? 'decimal' : 'integer';
+  return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
+    (operator === '/' ? 'decimal' : 'integer');
 }
 
 /**
@@ -78,43 +60,35 @@ function numericType(operator: string, types: string[]): string {
  * @returns The local name of the XSD datatype, or undefined if it is not known.
  */
 function datatype(expression: Expression, resultType: string | undefined, reasons: Set<string>): string | undefined {
-  if (F.isTermLiteral(expression)) {
-    if (expression.langOrIri === undefined) {
-      return 'string';
-    }
-    return typeof expression.langOrIri !== 'string' && expression.langOrIri.value.startsWith(XSD) ?
-      expression.langOrIri.value.slice(XSD.length) :
-      undefined;
+  if (astFactory.isTermLiteralStr(expression)) {
+    return 'string';
   }
-  if (F.isTermVariable(expression)) {
-    return expression.value === 'result' ? resultType : undefined;
+  if (astFactory.isTermLiteralTyped(expression)) {
+    return xsdLocalName(expression.langOrIri);
   }
-  if (!F.isExpressionFunctionCall(expression) && !F.isExpressionOperator(expression)) {
+  if (astFactory.isTermVariable(expression)) {
+    return expression.value === RESULT_VARIABLE ? resultType : undefined;
+  }
+  const isFunctionCall = astFactory.isExpressionFunctionCall(expression);
+  if (!isFunctionCall && !astFactory.isExpressionOperator(expression)) {
     return undefined;
   }
-  const args = expression.args as Expression[];
-  const types = args.map(arg => datatype(arg, resultType, reasons));
-  const name = F.isExpressionFunctionCall(expression) ?
-    `xsd:${(expression.function as { value: string }).value.slice(XSD.length)}` :
-    expression.operator.toUpperCase();
-  if (!F.isExpressionFunctionCall(expression) && ANY_TERM_OPERATORS.has(expression.operator)) {
-    return expression.operator === 'if' && types[1] === types[2] ? types[1] : RESULT_TYPES[expression.operator];
-  }
-  for (const type of types) {
-    if (type !== undefined && !OPERAND_TYPES.has(type)) {
-      reasons.add(`${name} on xsd:${type}`);
+  const types = (expression.args as Expression[]).map(arg => datatype(arg, resultType, reasons));
+  if (isFunctionCall) {
+    const constructorType = xsdLocalName(expression.function as { value: string })!;
+    addOperandReasons(`xsd:${constructorType}`, types, reasons);
+    if (!CONSTRUCTOR_TYPES.has(constructorType)) {
+      reasons.add(`the constructor function xsd:${constructorType}`);
     }
-  }
-
-  if (F.isExpressionFunctionCall(expression)) {
-    const type = (expression.function as { value: string }).value.slice(XSD.length);
-    if (!CONSTRUCTOR_TYPES.has(type)) {
-      reasons.add(`the constructor function xsd:${type}`);
-    }
-    return type;
+    return constructorType;
   }
   const { operator } = expression;
-  if ([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs', 'ceil', 'floor', 'round' ].includes(operator)) {
+  if (ANY_TERM_OPERATORS.has(operator)) {
+    return operator === 'if' && types[1] === types[2] ? types[1] : RESULT_TYPES[operator];
+  }
+  const name = operator.toUpperCase();
+  addOperandReasons(name, types, reasons);
+  if (NUMERIC_OPERATORS.has(operator)) {
     if (types.includes('dateTime')) {
       reasons.add(`${name} on xsd:dateTime`);
     }
@@ -129,9 +103,22 @@ function datatype(expression: Expression, resultType: string | undefined, reason
 }
 
 /**
- * Determine why the query of a test needs more than SPARQL defines,
- * which is the case if it uses a datatype that is not a SPARQL operand datatype, such as xsd:date or xsd:duration,
- * or a function or operator with arguments of a datatype that SPARQL does not define it for.
+ * Collect a reason for each operand of a function or operator with a datatype that SPARQL does not define.
+ * @param name The name of the function or operator, as in the reason.
+ * @param types The local names of the XSD datatypes of the operands, if known.
+ * @param reasons The reasons, to which the reasons of the operands are added.
+ */
+function addOperandReasons(name: string, types: (string | undefined)[], reasons: Set<string>): void {
+  for (const type of types) {
+    if (type !== undefined && !OPERAND_TYPES.has(type)) {
+      reasons.add(`${name} on xsd:${type}`);
+    }
+  }
+}
+
+/**
+ * Determine why the query of a test needs more than SPARQL defines, as it uses a datatype that is not a SPARQL
+ * operand datatype, such as xsd:date, or a function or operator on arguments that SPARQL does not define it for.
  * @param expression The SPARQL expression that is bound to ?result.
  * @param assertion The SPARQL expression of the assertion over ?result.
  * @returns The reasons, which are empty if the query only needs what SPARQL defines.

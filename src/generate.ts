@@ -20,15 +20,13 @@ import { dirname, join } from 'node:path';
 import type { Expression } from '@traqula/rules-sparql-1-2';
 import { sparql12GeneratorBuilder } from '@traqula/generator-sparql-1-2';
 import { completeGeneratorContext } from '@traqula/rules-sparql-1-2';
-import fontoxpath from 'fontoxpath';
-import type { Document, Element } from 'slimdom';
+import type { Element } from 'slimdom';
 import { parseXmlDocument } from 'slimdom';
 import { acceptsError, assertionToSparql } from './assertions.ts';
 import { extensionReasons } from './extensions.ts';
-import { UnsupportedError, xpathToSparql } from './xpathToSparql.ts';
-
-// fontoxpath is a CommonJS module, of which Node.js cannot detect the named exports
-const { evaluateXPathToFirstNode, evaluateXPathToNodes, evaluateXPathToString } = fontoxpath;
+import { RESULT_VARIABLE } from './sparqlAst.ts';
+import { UnsupportedError } from './UnsupportedError.ts';
+import { xpathToSparql } from './xpathToSparql.ts';
 
 // A fixed commit of the test suite, so that the generated tests are reproducible.
 const QT3_COMMIT = '201a6e466940cdfc727f4babfedcde5332b9f578';
@@ -53,18 +51,6 @@ const TEST_SETS = new RegExp(`^(${[
 ].join('|')})$`, 'u');
 
 /**
- * The dependencies of a test case, on the test set and on the test case itself,
- * that an XPath 3.1 and XSD 1.1 implementation without optional features does not satisfy.
- */
-const UNSATISFIED_DEPENDENCIES_QUERY = `
-(../dependency, dependency)[
-  (if (@type = 'spec') then
-    (some $spec in tokenize(@value) satisfies
-      ($spec = 'XP31' or (matches($spec, '^XP\\d\\d\\+$') and xs:integer(substring($spec, 3, 2)) le 31)))
-  else if (@type = 'xsd-version') then @value = '1.1'
-  else false()) = (@satisfied = 'false')]`;
-
-/**
  * The manifests that the tests are divided over, by kind of test.
  */
 const KINDS = {
@@ -82,6 +68,7 @@ const KINDS = {
   },
 };
 type Kind = keyof typeof KINDS;
+const KIND_NAMES = Object.keys(KINDS) as Kind[];
 
 const PREFIXES = `@prefix dct: <http://purl.org/dc/terms/> .
 @prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
@@ -89,29 +76,56 @@ const PREFIXES = `@prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 `;
 
+/**
+ * A test case of a test set, translated into a SPARQL query evaluation test.
+ */
+interface GeneratedTest {
+  name: string;
+  kind: Kind;
+  query: string;
+  description: string;
+  url: string;
+}
+
+/**
+ * A test case of a test set that is left out, with the reason.
+ */
+interface LeftOutTest {
+  testSetName: string;
+  name: string;
+  url: string;
+  error: UnsupportedError;
+}
+
 const generator = sparql12GeneratorBuilder.build();
 const generatorContext = completeGeneratorContext({});
 
 /**
  * Fetch the contents of a file of the test suite, from the cache if it was fetched before.
+ * @param path The path of the file in the test suite.
  */
 async function fetchQt3(path: string): Promise<string> {
   const file = join(CACHE_DIR, path);
-  if (!existsSync(file)) {
-    const response = await fetch(`${QT3_BASE}${path}`);
-    if (!response.ok) {
-      throw new Error(`Could not fetch ${path}: ${response.status}`);
-    }
-    mkdirSync(dirname(file), { recursive: true });
-    writeFileSync(file, await response.text());
+  if (existsSync(file)) {
+    return readFileSync(file, 'utf8');
   }
-  return readFileSync(file, 'utf8');
-}
-
-function write(path: string, contents: string): void {
-  const file = join(DIST_DIR, path);
+  const response = await fetch(`${QT3_BASE}${path}`);
+  if (!response.ok) {
+    throw new Error(`Could not fetch ${path}: ${response.status}`);
+  }
+  const contents = await response.text();
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, contents);
+  return contents;
+}
+
+/**
+ * Write a file into dist/, of which the directory must exist.
+ * @param path The path of the file in dist/.
+ * @param contents The contents of the file.
+ */
+function write(path: string, contents: string): void {
+  writeFileSync(join(DIST_DIR, path), contents);
 }
 
 /**
@@ -126,24 +140,40 @@ function sparql(expression: Expression): string {
 }
 
 /**
+ * Find the child elements with the given local name.
+ * @param element The parent element.
+ * @param localName The local name of the children.
+ */
+function childElements(element: Element, localName: string): Element[] {
+  return element.children.filter(child => child.localName === localName);
+}
+
+/**
+ * Index the environment definitions that are children of an element by name.
+ * @param element The test-set or catalog element.
+ */
+function environmentsByName(element: Element): Map<string, Element> {
+  return new Map(childElements(element, 'environment').map(environment => [ environment.getAttribute('name')!, environment ]));
+}
+
+/**
  * Determine the SPARQL expressions of the variables of the environment of a test case.
+ * @param testCase The test-case element.
+ * @param environments The environment definitions that the test case can refer to, by name.
  * @throws {UnsupportedError} If the environment is not supported.
  */
-function environmentVariables(testCase: Element, catalog: Document): Record<string, Expression> {
+function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
   const variables: Record<string, Expression> = {};
-  for (const environment of evaluateXPathToNodes<Element>('environment', testCase)) {
+  for (const environment of childElements(testCase, 'environment')) {
     const ref = environment.getAttribute('ref');
-    const definition = ref ?
-      evaluateXPathToFirstNode<Element>('/test-set/environment[@name = $ref]', testCase, null, { ref }) ??
-      evaluateXPathToFirstNode<Element>('/catalog/environment[@name = $ref]', catalog, null, { ref }) :
-      environment;
+    const definition = ref ? environments.get(ref) : environment;
     if (!definition) {
-      throw new UnsupportedError(`Unsupported environment ${ref}`);
+      throw new UnsupportedError('Unsupported environment', ref!);
     }
     for (const param of definition.children) {
       const select = param.getAttribute('select');
       if (param.localName !== 'param' || !select) {
-        throw new UnsupportedError(`Unsupported environment with ${param.localName}`);
+        throw new UnsupportedError('Unsupported environment', `with ${param.localName}`);
       }
       variables[param.getAttribute('name')!] = xpathToSparql(select, variables);
     }
@@ -152,12 +182,22 @@ function environmentVariables(testCase: Element, catalog: Document): Record<stri
 }
 
 /**
- * Determine the URL of the definition of a test case on GitHub, at the line of its test-case element.
+ * Determine the line of the test-case element of each test case in the text of a test set, in one pass.
+ * @param testSetText The XML text of the test set.
+ * @returns The 1-based lines, by test case name.
  */
-function testCaseUrl(testSetFile: string, testSetText: string, name: string): string {
-  const escapedName = name.replaceAll(/[$()*+.?[\\\]^{|}]/gu, '\\$&');
-  const match = new RegExp(`<test-case\\b[^>]*\\bname="${escapedName}"`, 'u').exec(testSetText);
-  return `${QT3_VIEW_BASE}${testSetFile}${match ? `#L${testSetText.slice(0, match.index).split('\n').length}` : ''}`;
+function testCaseLines(testSetText: string): Map<string, number> {
+  const lines = new Map<string, number>();
+  let line = 1;
+  let index = 0;
+  for (const match of testSetText.matchAll(/<test-case\b[^>]*?\bname="([^"]*)"/gu)) {
+    line += testSetText.slice(index, match.index).split('\n').length - 1;
+    index = match.index;
+    if (!lines.has(match[1])) {
+      lines.set(match[1], line);
+    }
+  }
+  return lines;
 }
 
 /**
@@ -169,34 +209,59 @@ function tsvField(value: string): string {
 }
 
 /**
- * Determine why a test case is left out before translating it, as it needs what SPARQL engines cannot be expected to
- * support, or as its test is in a separate file.
- * @returns The reason, or undefined if the test case is not left out for that.
+ * Determine whether an XPath 3.1 and XSD 1.1 implementation without optional features satisfies a dependency.
+ * @param dependency The dependency element.
  */
-function unsupportedTestCaseReason(testCase: Element): string | undefined {
-  const file = evaluateXPathToString('test/@file', testCase);
-  if (file) {
-    return `Unsupported test in the separate file ${file}`;
+function satisfiesDependency(dependency: Element): boolean {
+  const value = dependency.getAttribute('value') ?? '';
+  let supported = false;
+  if (dependency.getAttribute('type') === 'spec') {
+    supported = value.trim().split(/\s+/u).some(spec =>
+      spec === 'XP31' || (/^XP\d\d\+$/u.test(spec) && Number(spec.slice(2, 4)) <= 31));
+  } else if (dependency.getAttribute('type') === 'xsd-version') {
+    supported = value === '1.1';
   }
-  const dependencies = evaluateXPathToNodes<Element>(UNSATISFIED_DEPENDENCIES_QUERY, testCase);
+  // A dependency with satisfied="false" requires the implementation to not have it
+  return supported !== (dependency.getAttribute('satisfied') === 'false');
+}
+
+/**
+ * Check that a test case does not need what SPARQL engines cannot be expected to support,
+ * and that its test is not in a separate file.
+ * @param testCase The test-case element.
+ * @param unsatisfiedTestSetDependencies The unsatisfied dependencies of the test set.
+ * @throws {UnsupportedError} If the test case is not supported.
+ */
+function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Element[]): void {
+  const file = childElements(testCase, 'test')[0]?.getAttribute('file');
+  if (file) {
+    throw new UnsupportedError('Unsupported test', `in the separate file ${file}`);
+  }
+  const dependencies = [
+    ...unsatisfiedTestSetDependencies,
+    ...childElements(testCase, 'dependency').filter(dependency => !satisfiesDependency(dependency)),
+  ];
   if (dependencies.length > 0) {
-    // A dependency that is not satisfied="false" requires the processor to have it, otherwise to not have it
-    return `Unsupported dependencies ${dependencies.map(dependency => `${
+    throw new UnsupportedError('Unsupported dependencies', dependencies.map(dependency => `${
       dependency.getAttribute('satisfied') === 'false' ? 'not ' : ''}${dependency.getAttribute('type')} ${
-      dependency.getAttribute('value')}`).join(', ')}`;
+      dependency.getAttribute('value')}`).join(', '));
   }
 }
 
 /**
  * Generate the ASK query of a test case, and determine the kind of the test.
+ * @param testSetName The name of the test set.
+ * @param testCase The test-case element.
+ * @param environments The environment definitions that the test case can refer to, by name.
+ * @param url The URL of the definition of the test case.
  * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
  */
-function testCaseQuery(testSetName: string, testCase: Element, catalog: Document, url: string):
+function testCaseQuery(testSetName: string, testCase: Element, environments: Map<string, Element>, url: string):
 { query: string; kind: Kind } {
-  const variables = environmentVariables(testCase, catalog);
-  const test = evaluateXPathToString('test', testCase);
+  const variables = environmentVariables(testCase, environments);
+  const test = childElements(testCase, 'test')[0].textContent!;
   const expression = xpathToSparql(test, variables);
-  const assertion = assertionToSparql(evaluateXPathToFirstNode<Element>('result/*', testCase)!, variables);
+  const assertion = assertionToSparql(childElements(testCase, 'result')[0].children[0], variables);
   const reasons = extensionReasons(expression, assertion);
   const kind: Kind = acceptsError(assertion) ? 'errors' : (reasons.length > 0 ? 'extensions' : 'sparql');
   // A SPARQL comment ends at a carriage return as well as at a line feed
@@ -205,90 +270,123 @@ function testCaseQuery(testSetName: string, testCase: Element, catalog: Document
 ${comment}
 # The test case is defined at ${url}${kind === 'extensions' ? `\n# The test needs ${reasons.join(', ')}, which SPARQL does not define` : ''}
 ASK {
-  BIND(${sparql(expression)} AS ?result)
+  BIND(${sparql(expression)} AS ?${RESULT_VARIABLE})
   FILTER(${sparql(assertion)})
 }
 `;
   return { query, kind };
 }
 
-async function main(): Promise<void> {
-  rmSync(DIST_DIR, { recursive: true, force: true });
-  const catalog = parseXmlDocument(await fetchQt3('catalog.xml'));
-  const includes: Record<Kind, string[]> = { sparql: [], extensions: [], errors: [] };
-  const counts: Record<Kind, number> = { sparql: 0, extensions: 0, errors: 0 };
-  let testSetCount = 0;
-  const skipReasons: Record<string, number> = {};
-  const leftOut: string[] = [];
-
-  for (const testSet of evaluateXPathToNodes<Element>('/catalog/test-set', catalog)) {
-    const testSetName = testSet.getAttribute('name')!;
-    if (!TEST_SETS.test(testSetName)) {
-      continue;
-    }
-    const testSetFile = testSet.getAttribute('file')!;
-    const testSetText = await fetchQt3(testSetFile);
-    const testSetXml = parseXmlDocument(testSetText);
-    const entries: Record<Kind, { name: string; entry: string }[]> = { sparql: [], extensions: [], errors: [] };
-    for (const testCase of evaluateXPathToNodes<Element>('/test-set/test-case', testSetXml)) {
-      const name = testCase.getAttribute('name')!;
-      const url = testCaseUrl(testSetFile, testSetText, name);
-      let query: string;
-      let kind: Kind;
-      try {
-        const reason = unsupportedTestCaseReason(testCase);
-        if (reason) {
-          throw new UnsupportedError(reason);
-        }
-        ({ query, kind } = testCaseQuery(testSetName, testCase, catalog, url));
-      } catch (error: unknown) {
-        if (!(error instanceof UnsupportedError)) {
-          throw error;
-        }
-        leftOut.push([ testSetName, name, url, error.message ].map(tsvField).join('\t'));
-        const reason = error.message.replace(/^(Unsupported \w+|Invalid XPath|Unknown variable|Invalid value).*/su, '$1');
-        skipReasons[reason] = (skipReasons[reason] ?? 0) + 1;
-        continue;
+/**
+ * Translate the test cases of a test set.
+ * @param testSetName The name of the test set.
+ * @param testSetFile The path of the test set in the test suite.
+ * @param testSetText The XML text of the test set.
+ * @param catalogEnvironments The environment definitions of the catalog, by name.
+ * @returns The generated tests and the left-out test cases.
+ */
+function translateTestSet(testSetName: string, testSetFile: string, testSetText: string,
+  catalogEnvironments: Map<string, Element>): { tests: GeneratedTest[]; leftOut: LeftOutTest[] } {
+  const testSet = parseXmlDocument(testSetText).documentElement!;
+  const environments = new Map([ ...catalogEnvironments, ...environmentsByName(testSet) ]);
+  const unsatisfiedTestSetDependencies = childElements(testSet, 'dependency')
+    .filter(dependency => !satisfiesDependency(dependency));
+  const lines = testCaseLines(testSetText);
+  const tests: GeneratedTest[] = [];
+  const leftOut: LeftOutTest[] = [];
+  for (const testCase of childElements(testSet, 'test-case')) {
+    const name = testCase.getAttribute('name')!;
+    const line = lines.get(name);
+    const url = `${QT3_VIEW_BASE}${testSetFile}${line ? `#L${line}` : ''}`;
+    try {
+      checkSupported(testCase, unsatisfiedTestSetDependencies);
+      const description = childElements(testCase, 'description')[0]?.textContent?.trim() ?? '';
+      tests.push({ name, url, description, ...testCaseQuery(testSetName, testCase, environments, url) });
+    } catch (error: unknown) {
+      if (!(error instanceof UnsupportedError)) {
+        throw error;
       }
-      write(`${testSetName}/${name}.rq`, query);
-      const description = evaluateXPathToString('description', testCase).trim();
-      entries[kind].push({ name: encodeURIComponent(name), entry: `<#${encodeURIComponent(name)}> a mf:QueryEvaluationTest ;
+      leftOut.push({ testSetName, name, url, error });
+    }
+  }
+  return { tests, leftOut };
+}
+
+/**
+ * Serialize a manifest in Turtle.
+ * @param options The label, license, optional comment, list property with its items, and the entries of the manifest.
+ */
+function manifest({ label, license, comment, listProperty, items, entries = []}: {
+  label: string;
+  license: string;
+  comment?: string;
+  listProperty: 'mf:entries' | 'mf:include';
+  items: string[];
+  entries?: string[];
+}): string {
+  return `${PREFIXES}
+<> a mf:Manifest ;
+  rdfs:label ${turtleString(label)} ;
+  dct:license <${license}> ;
+${comment ? `  rdfs:comment ${turtleString(comment)} ;\n` : ''}  ${listProperty} (
+${items.map(item => `    <${item}>`).join('\n')}
+  ) .
+${entries.length > 0 ? `\n${entries.join('\n\n')}\n` : ''}`;
+}
+
+/**
+ * Serialize a generated test as an entry of a manifest in Turtle.
+ * @param test The generated test.
+ */
+function manifestEntry({ name, description, url }: GeneratedTest): string {
+  const id = encodeURIComponent(name);
+  return `<#${id}> a mf:QueryEvaluationTest ;
   mf:name ${turtleString(name)} ;${description ? `\n  rdfs:comment ${turtleString(description)} ;` : ''}
   rdfs:seeAlso <${url}> ;
-  mf:action [ qt:query <${encodeURIComponent(name)}.rq> ] ;
-  mf:result <../true.srj> .` });
-    }
-    if (Object.values(entries).some(kindEntries => kindEntries.length > 0)) {
-      testSetCount++;
-    }
-    for (const [ kind, { file } ] of Object.entries(KINDS) as [ Kind, typeof KINDS[Kind] ][]) {
-      counts[kind] += entries[kind].length;
-      if (entries[kind].length > 0) {
-        write(`${testSetName}/${file}`, `${PREFIXES}
-<> a mf:Manifest ;
-  rdfs:label ${turtleString(`QT3 test set ${testSetName}`)} ;
-  dct:license <../LICENSE.txt> ;
-  mf:entries (
-${entries[kind].map(({ name }) => `    <#${name}>`).join('\n')}
-  ) .
+  mf:action [ qt:query <${id}.rq> ] ;
+  mf:result <../true.srj> .`;
+}
 
-${entries[kind].map(({ entry }) => entry).join('\n\n')}
-`);
-        includes[kind].push(`${testSetName}/${file}`);
+async function main(): Promise<void> {
+  rmSync(DIST_DIR, { recursive: true, force: true });
+  mkdirSync(DIST_DIR, { recursive: true });
+  const catalog = parseXmlDocument(await fetchQt3('catalog.xml')).documentElement!;
+  const catalogEnvironments = environmentsByName(catalog);
+  const testSets = childElements(catalog, 'test-set')
+    .map(testSet => ({ name: testSet.getAttribute('name')!, file: testSet.getAttribute('file')! }))
+    .filter(({ name }) => TEST_SETS.test(name));
+  const testSetTexts = await Promise.all(testSets.map(({ file }) => fetchQt3(file)));
+  const results = testSets.map(({ name, file }, index) =>
+    ({ name, ...translateTestSet(name, file, testSetTexts[index], catalogEnvironments) }));
+
+  const includes: Record<Kind, string[]> = { sparql: [], extensions: [], errors: [] };
+  for (const { name: testSetName, tests } of results.filter(({ tests }) => tests.length > 0)) {
+    mkdirSync(join(DIST_DIR, testSetName));
+    for (const { name, query } of tests) {
+      write(`${testSetName}/${name}.rq`, query);
+    }
+    for (const kind of KIND_NAMES) {
+      const kindTests = tests.filter(test => test.kind === kind);
+      if (kindTests.length > 0) {
+        write(`${testSetName}/${KINDS[kind].file}`, manifest({
+          label: `QT3 test set ${testSetName}`,
+          license: '../LICENSE.txt',
+          listProperty: 'mf:entries',
+          items: kindTests.map(({ name }) => `#${encodeURIComponent(name)}`),
+          entries: kindTests.map(manifestEntry),
+        }));
+        includes[kind].push(`${testSetName}/${KINDS[kind].file}`);
       }
     }
   }
-
-  for (const [ kind, { file, label } ] of Object.entries(KINDS) as [ Kind, typeof KINDS[Kind] ][]) {
-    write(file, `${PREFIXES}
-<> a mf:Manifest ;
-  rdfs:label ${turtleString(label)} ;
-  dct:license <LICENSE.txt> ;
-  rdfs:comment ${turtleString(`Generated from ${QT3_BASE}catalog.xml`)} ;
-  mf:include (
-${includes[kind].map(include => `    <${include}>`).join('\n')}
-  ) .
-`);
+  for (const kind of KIND_NAMES) {
+    write(KINDS[kind].file, manifest({
+      label: KINDS[kind].label,
+      license: 'LICENSE.txt',
+      comment: `Generated from ${QT3_BASE}catalog.xml`,
+      listProperty: 'mf:include',
+      items: includes[kind],
+    }));
   }
   write('true.srj', '{ "head": {}, "boolean": true }\n');
   write('LICENSE.txt', `The tests in this directory are generated from the W3C XQuery and XPath Test Suite (QT3),
@@ -299,15 +397,19 @@ the W3C XQuery and XPath Test Suite (QT3), https://github.com/w3c/qt3tests.
 Copyright © W3C® (MIT, ERCIM, Keio, Beihang).
 
 ${readFileSync(join(ROOT, 'LICENSE-W3C.txt'), 'utf8')}`);
-  write('left-out.tsv', `test-set\ttest-case\turl\treason\n${leftOut.map(row => `${row}\n`).join('')}`);
+  const leftOut = results.flatMap(result => result.leftOut);
+  write('left-out.tsv', `test-set\ttest-case\turl\treason\n${leftOut.map(({ testSetName, name, url, error }) =>
+    `${[ testSetName, name, url, error.message ].map(tsvField).join('\t')}\n`).join('')}`);
 
-  process.stdout.write(`Generated ${testSetCount} test sets with\n`);
-  for (const [ kind, { file } ] of Object.entries(KINDS) as [ Kind, typeof KINDS[Kind] ][]) {
-    process.stdout.write(`  ${counts[kind]} tests in ${file}\n`);
+  const tests = results.flatMap(result => result.tests);
+  process.stdout.write(`Generated ${results.filter(result => result.tests.length > 0).length} test sets with\n`);
+  for (const kind of KIND_NAMES) {
+    process.stdout.write(`  ${tests.filter(test => test.kind === kind).length} tests in ${KINDS[kind].file}\n`);
   }
   process.stdout.write(`Left out ${leftOut.length} tests, which left-out.tsv lists\n`);
-  for (const [ reason, count ] of Object.entries(skipReasons).sort(([ , a ], [ , b ]) => b - a)) {
-    process.stdout.write(`  ${count}: ${reason}\n`);
+  const categoryCounts = Map.groupBy(leftOut, ({ error }) => error.category);
+  for (const [ category, categoryTests ] of [ ...categoryCounts ].sort(([ , a ], [ , b ]) => b.length - a.length)) {
+    process.stdout.write(`  ${categoryTests.length}: ${category}\n`);
   }
 }
 

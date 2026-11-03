@@ -1,107 +1,27 @@
 import type { Expression } from '@traqula/rules-sparql-1-2';
 import type { Element } from 'slimdom';
-import { F, UnsupportedError, XSD, operation, xpathToSparql, xsdFunctionCall } from './xpathToSparql.ts';
-
-/**
- * The XSD datatypes, mapped onto the datatype that they are derived from.
- */
-const PARENT_TYPES: Record<string, string> = {
-  integer: 'decimal',
-  nonPositiveInteger: 'integer',
-  negativeInteger: 'nonPositiveInteger',
-  long: 'integer',
-  int: 'long',
-  short: 'int',
-  byte: 'short',
-  nonNegativeInteger: 'integer',
-  unsignedLong: 'nonNegativeInteger',
-  unsignedInt: 'unsignedLong',
-  unsignedShort: 'unsignedInt',
-  unsignedByte: 'unsignedShort',
-  positiveInteger: 'nonNegativeInteger',
-  normalizedString: 'string',
-  token: 'normalizedString',
-  language: 'token',
-  NMTOKEN: 'token',
-  Name: 'token',
-  NCName: 'Name',
-  ID: 'NCName',
-  IDREF: 'NCName',
-  ENTITY: 'NCName',
-  dayTimeDuration: 'duration',
-  yearMonthDuration: 'duration',
-  dateTimeStamp: 'dateTime',
-};
-
-/**
- * The primitive XSD datatypes, which are not derived from another one.
- */
-const PRIMITIVE_TYPES = [
-  'string',
-  'boolean',
-  'decimal',
-  'float',
-  'double',
-  'duration',
-  'dateTime',
-  'time',
-  'date',
-  'gYearMonth',
-  'gYear',
-  'gMonthDay',
-  'gDay',
-  'gMonth',
-  'hexBinary',
-  'base64Binary',
-  'anyURI',
-  'QName',
-  'NOTATION',
-  'untypedAtomic',
-];
-
-const ALL_TYPES = [ ...PRIMITIVE_TYPES, ...Object.keys(PARENT_TYPES) ];
-
-/**
- * Determine the XSD datatypes that are the given datatype or derived from it,
- * where xs:numeric and xs:anyAtomicType are the unions of their member types.
- */
-function subTypes(type: string): string[] {
-  if (type === 'anyAtomicType') {
-    return ALL_TYPES;
-  }
-  if (type === 'numeric') {
-    return [ 'double', 'float', ...subTypes('decimal') ];
-  }
-  if (!ALL_TYPES.includes(type)) {
-    throw new UnsupportedError(`Unsupported type xs:${type}`);
-  }
-  return [ type, ...Object.keys(PARENT_TYPES).filter(child => PARENT_TYPES[child] === type).flatMap(subTypes) ];
-}
-
-function string(value: string): Expression {
-  return F.termLiteral(F.gen(), value);
-}
-
-function iri(value: string): Expression {
-  return F.termNamed(F.gen(), value);
-}
+import { RESULT_VARIABLE, astFactory, literal, operation, xsdFunctionCall, xsdIri } from './sparqlAst.ts';
+import { UnsupportedError } from './UnsupportedError.ts';
+import { xpathToSparql } from './xpathToSparql.ts';
+import { subTypes } from './xsd.ts';
 
 /**
  * Normalize the whitespace of a SPARQL string, as XPath's fn:normalize-space.
+ * @param expression The SPARQL expression of the string.
  */
 function normalizeSpace(expression: Expression): Expression {
-  return operation('replace', operation('replace', expression, string(String.raw`^\s+|\s+$`), string('')),
-    string(String.raw`\s+`), string(' '));
+  return operation('replace', operation('replace', expression, literal(String.raw`^\s+|\s+$`, 'string'),
+    literal('', 'string')), literal(String.raw`\s+`, 'string'), literal(' ', 'string'));
 }
 
 /**
  * Evaluate the SPARQL expression of an assertion for an unbound ?result, as when the test errors,
- * following the treatment of errors by the logical operators of SPARQL.
- * Any other expression over ?result is an error then.
+ * following the error treatment of the logical operators of SPARQL, where any other expression is an error.
+ * @param expression The SPARQL expression of the assertion.
  * @returns The value, or undefined for an error.
  */
 function valueWhenUnbound(expression: Expression): boolean | undefined {
-  if (!F.isExpressionOperator(expression)) {
+  if (!astFactory.isExpressionOperator(expression)) {
     return undefined;
   }
   const values = (expression.args as Expression[]).map(valueWhenUnbound);
@@ -120,22 +40,23 @@ function valueWhenUnbound(expression: Expression): boolean | undefined {
 }
 
 /**
- * Determine whether the SPARQL expression of an assertion is satisfied when the test errors,
- * so that the test also passes on an engine that fails for another reason.
+ * Determine whether an assertion is satisfied when the test errors, so it also passes on engines failing otherwise.
+ * @param assertion The SPARQL expression of the assertion.
  */
 export function acceptsError(assertion: Expression): boolean {
   return valueWhenUnbound(assertion) === true;
 }
 
 /**
- * Translate an assertion of the test suite into a SPARQL expression over ?result, the result of the test,
- * which is true if the result satisfies the assertion. An error of the test leaves ?result unbound.
+ * Translate an assertion of the test suite into a SPARQL expression that is true if ?result satisfies it,
+ * where an error of the test leaves ?result unbound.
  * @param assertion The assertion element.
  * @param variables SPARQL expressions to substitute the variable references of the environment with.
  * @throws {UnsupportedError} If the assertion has no SPARQL equivalent.
  */
 export function assertionToSparql(assertion: Element, variables: Record<string, Expression>): Expression {
-  const result = F.termVariable('result', F.gen());
+  const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
+  const isBoolean = operation('=', operation('datatype', result), xsdIri('boolean'));
   const text = assertion.textContent!.trim();
   switch (assertion.localName) {
     case 'error':
@@ -147,9 +68,9 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
     case 'not':
       return operation('!', assertionToSparql(assertion.children[0], variables));
     case 'assert-true':
-      return operation('&&', operation('=', operation('datatype', result), iri(`${XSD}boolean`)), result);
+      return operation('&&', isBoolean, result);
     case 'assert-false':
-      return operation('&&', operation('=', operation('datatype', result), iri(`${XSD}boolean`)), operation('!', result));
+      return operation('&&', isBoolean, operation('!', result));
     case 'assert-eq':
       return operation('=', result, xpathToSparql(text, variables));
     case 'assert-deep-eq': {
@@ -162,20 +83,20 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
     case 'assert-string-value': {
       const actual = xsdFunctionCall('string', result);
       return assertion.getAttribute('normalize-space') === 'true' ?
-        operation('=', normalizeSpace(actual), string(assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ')
-          .replace(/^ | $/gu, ''))) :
-        operation('=', actual, string(assertion.textContent!));
+        operation('=', normalizeSpace(actual), literal(assertion.textContent!.replaceAll(/[ \t\n\r]+/gu, ' ')
+          .replace(/^ | $/gu, ''), 'string')) :
+        operation('=', actual, literal(assertion.textContent!, 'string'));
     }
     case 'assert-type': {
       const match = /^xs:(\w+)$/u.exec(text);
       if (!match) {
-        throw new UnsupportedError(`Unsupported type ${text}`);
+        throw new UnsupportedError('Unsupported type', text);
       }
-      return operation('in', operation('datatype', result), ...subTypes(match[1]).map(type => iri(`${XSD}${type}`)));
+      return operation('in', operation('datatype', result), ...subTypes(match[1]).map(xsdIri));
     }
     case 'assert':
       return xpathToSparql(text, { ...variables, result });
     default:
-      throw new UnsupportedError(`Unsupported assertion ${assertion.localName}`);
+      throw new UnsupportedError('Unsupported assertion', assertion.localName);
   }
 }
