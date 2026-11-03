@@ -13,8 +13,11 @@ const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype' 
 const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs', 'ceil', 'floor', 'round' ]);
 
 /**
- * The datatypes of the results of the other SPARQL operators, by operator,
- * so that a datatype beyond SPARQL is also found when an operator produces it, as TIMEZONE does xsd:dayTimeDuration.
+ * The datatypes of the results of the other SPARQL operators, by operator, to find the datatypes beyond SPARQL
+ * that an operator produces rather than a literal or constructor function.
+ * @example
+ *   In fn-timezone-from-dateTimealt-1, `BIND(TIMEZONE(...) AS ?result) FILTER(xsd:string(?result) = "-PT5H")`
+ *   needs xsd:string on xsd:dayTimeDuration, which is only known from the result type of TIMEZONE.
  */
 const RESULT_TYPES: Record<string, string> = {
   ...Object.fromEntries([

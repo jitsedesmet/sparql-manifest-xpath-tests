@@ -173,33 +173,26 @@ function environmentsByName(element: Element): Map<string, Element> {
 }
 
 /**
- * Translate the parameters of the environment of a test case into SPARQL expressions, to substitute their references.
- * An environment is defined inline, or referenced by name, and only parameters with a value are supported.
+ * Check that the environment of a test case is empty, as a query has no context item, sources or parameters.
+ * Parameters only occur in XQuery tests, which are left out by their dependencies.
  * @param testCase The test-case element.
  * @param environments The environment definitions that the test case can refer to, by name.
- * @returns The SPARQL expressions of the parameters, by name.
- * @throws {UnsupportedError} If the environment is not supported.
+ * @throws {UnsupportedError} If the environment is not empty.
  * @example
- *   <environment><param name="a" select="'abc'"/></environment> gives { a: <the SPARQL literal "abc"> }
+ *   The `<environment ref="emptydoc"/>` of fn-floornni1args-3 is supported,
+ *   but the `<environment ref="e0"/>` with a `<source>` of K2-ABSFunc-35 is not.
  */
-function environmentVariables(testCase: Element, environments: Map<string, Element>): Record<string, Expression> {
-  const variables: Record<string, Expression> = {};
+function checkEnvironment(testCase: Element, environments: Map<string, Element>): void {
   for (const environment of childElements(testCase, 'environment')) {
     const ref = environment.getAttribute('ref');
     const definition = ref ? environments.get(ref) : environment;
     if (!definition) {
       throw new UnsupportedError('Unsupported environment', ref!);
     }
-    // A parameter can refer to the ones before it
-    for (const param of definition.children) {
-      const select = param.getAttribute('select');
-      if (param.localName !== 'param' || !select) {
-        throw new UnsupportedError('Unsupported environment', `with ${param.localName}`);
-      }
-      variables[param.getAttribute('name')!] = xpathToSparql(select, variables);
+    if (definition.children.length > 0) {
+      throw new UnsupportedError('Unsupported environment', `with ${definition.children[0].localName}`);
     }
   }
-  return variables;
 }
 
 /**
@@ -256,11 +249,16 @@ function satisfiesDependency(dependency: Element): boolean {
  * and that its test is not in a separate file.
  * @param testCase The test-case element.
  * @param unsatisfiedTestSetDependencies The unsatisfied dependencies of the test set.
+ * @param environments The environment definitions that the test case can refer to, by name.
  * @throws {UnsupportedError} If the test case is not supported.
  * @example
  *   <test file="Literal/K2-Literals-28.xq"/> and <dependency type="spec" value="XQ10+"/> are not supported.
  */
-function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Element[]): void {
+function checkSupported(
+  testCase: Element,
+  unsatisfiedTestSetDependencies: Element[],
+  environments: Map<string, Element>,
+): void {
   const file = childElements(testCase, 'test')[0]?.getAttribute('file');
   if (file) {
     throw new UnsupportedError('Unsupported test', `in the separate file ${file}`);
@@ -274,13 +272,13 @@ function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Eleme
       dependency.getAttribute('satisfied') === 'false' ? 'not ' : ''}${dependency.getAttribute('type')} ${
       dependency.getAttribute('value')}`).join(', '));
   }
+  checkEnvironment(testCase, environments);
 }
 
 /**
  * Generate the ASK query of a test case, and determine the kind of the test.
  * @param testSetName The name of the test set.
  * @param testCase The test-case element.
- * @param environments The environment definitions that the test case can refer to, by name.
  * @param url The URL of the definition of the test case.
  * @returns The query and the kind of the test.
  * @throws {UnsupportedError} If the test case cannot be expressed in SPARQL.
@@ -288,16 +286,14 @@ function checkSupported(testCase: Element, unsatisfiedTestSetDependencies: Eleme
 function testCaseQuery(
   testSetName: string,
   testCase: Element,
-  environments: Map<string, Element>,
   url: string,
 ): { query: string; kind: Kind } {
-  const variables = environmentVariables(testCase, environments);
   const test = childElements(testCase, 'test')[0].textContent!;
-  const expression = xpathToSparql(test, variables);
+  const expression = xpathToSparql(test);
 
   // <result> <assert-string-value>2030</assert-string-value> </result>
   // NOTE: only one root assertion, otherwise wrapped in `any-of` or `all-of`
-  const assertion = assertionToSparql(childElements(testCase, 'result')[0].children[0], variables);
+  const assertion = assertionToSparql(childElements(testCase, 'result')[0].children[0]);
   const reasons = extensionReasons(expression, assertion);
   const kind: Kind = acceptsError(assertion) ? 'errors' : (reasons.length > 0 ? 'extensions' : 'sparql');
 
@@ -340,9 +336,9 @@ function translateTestSet(
     const line = lines.get(name);
     const url = `${QT3_VIEW_BASE}${testSetFile}${line ? `#L${line}` : ''}`;
     try {
-      checkSupported(testCase, unsatisfiedTestSetDependencies);
+      checkSupported(testCase, unsatisfiedTestSetDependencies, environments);
       const description = childElements(testCase, 'description')[0]?.textContent?.trim() ?? '';
-      tests.push({ name, url, description, ...testCaseQuery(testSetName, testCase, environments, url) });
+      tests.push({ name, url, description, ...testCaseQuery(testSetName, testCase, url) });
     } catch (error: unknown) {
       if (!(error instanceof UnsupportedError)) {
         throw error;

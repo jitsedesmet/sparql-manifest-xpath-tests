@@ -63,11 +63,10 @@ export function acceptsError(assertion: Expression): boolean {
  * Translate an assertion of the test suite into a SPARQL expression that is true if ?result satisfies it,
  * where an error of the test leaves ?result unbound.
  * @param assertion The assertion element.
- * @param variables SPARQL expressions to substitute the variable references of the environment with.
  * @returns The SPARQL expression of the assertion over ?result.
  * @throws {UnsupportedError} If the assertion has no SPARQL equivalent.
  */
-export function assertionToSparql(assertion: Element, variables: Record<string, Expression>): Expression {
+export function assertionToSparql(assertion: Element): Expression {
   const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
   const isBoolean = operation('=', operation('datatype', result), xsdIri('boolean'));
   const text = assertion.textContent!.trim();
@@ -77,20 +76,20 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
     case 'all-of':
     case 'any-of':
       return assertion.children
-        .map(child => assertionToSparql(child, variables))
+        .map(child => assertionToSparql(child))
         .reduce((left, right) =>
           operation(assertion.localName === 'all-of' ? '&&' : '||', left, right));
     case 'not':
-      return operation('!', assertionToSparql(assertion.children[0], variables));
+      return operation('!', assertionToSparql(assertion.children[0]));
     case 'assert-true':
       return operation('&&', isBoolean, result);
     case 'assert-false':
       return operation('&&', isBoolean, operation('!', result));
     case 'assert-eq':
-      return operation('=', result, xpathToSparql(text, variables));
+      return operation('=', result, xpathToSparql(text));
     case 'assert-deep-eq': {
       // Deep equality also considers NaN equal to itself
-      const expected = xpathToSparql(text, variables);
+      const expected = xpathToSparql(text);
       const bothNaN = operation('&&', operation('!=', result, result), operation('!=', expected, expected));
       return operation('||', operation('=', result, expected), bothNaN);
     }
@@ -112,7 +111,7 @@ export function assertionToSparql(assertion: Element, variables: Record<string, 
       return operation('in', operation('datatype', result), ...subTypes(match[1]).map(xsdIri));
     }
     case 'assert':
-      return xpathToSparql(text, { ...variables, result });
+      return xpathToSparql(text, { result });
     default:
       throw new UnsupportedError('Unsupported assertion', assertion.localName);
   }
