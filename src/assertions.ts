@@ -1,9 +1,9 @@
-import type { Expression } from '@traqula/rules-sparql-1-2';
+import type { Expression, TermLiteral } from '@traqula/rules-sparql-1-2';
 import type { Element } from 'slimdom';
 import { RESULT_VARIABLE, astFactory, literal, operation, xsdFunctionCall, xsdIri, xsdLocalName } from './sparqlAst.ts';
 import { UnsupportedError } from './UnsupportedError.ts';
-import { castLiteral, xpathToSparql } from './xpathToSparql.ts';
-import { INTEGRAL_TYPES, NUMERIC_TYPES, subTypes } from './xsd.ts';
+import { foldStringLiteralCast, xpathToSparql } from './xpathToSparql.ts';
+import { NUMERIC_TYPES, numericResultType, subTypes } from './xsd.ts';
 
 /**
  * Evaluate the SPARQL expression of an assertion for an unbound ?result, as when the test errors,
@@ -57,16 +57,12 @@ function negate(value: string): string {
  * @returns The literal, or undefined if the expression is not such a constant.
  * @example `- "0"^^xsd:integer` becomes `"-0"^^xsd:integer`, and `xsd:float("1e0")` becomes `"1e0"^^xsd:float`.
  */
-function foldLiteral(expression: Expression): Expression | undefined {
+function foldLiteral(expression: Expression): TermLiteral | undefined {
   if (astFactory.isTermLiteral(expression)) {
     return expression;
   }
   if (astFactory.isExpressionFunctionCall(expression)) {
-    const type = xsdLocalName(expression.function)!;
-    const [ arg ] = expression.args;
-    return astFactory.isTermLiteralStr(arg) && (type === 'string' || NUMERIC_TYPES.has(type)) ?
-      castLiteral(arg.value, type) :
-      undefined;
+    return foldStringLiteralCast(xsdLocalName(expression.function)!, expression.args[0]);
   }
   if (!astFactory.isExpressionOperator(expression) || ![ 'uminus', 'uplus' ].includes(expression.operator)) {
     return undefined;
@@ -79,9 +75,10 @@ function foldLiteral(expression: Expression): Expression | undefined {
   if (type === undefined || !NUMERIC_TYPES.has(type)) {
     return undefined;
   }
-  const { value } = operand;
-  // The sign operators return the types derived from xsd:integer as xsd:integer
-  return literal(expression.operator === 'uminus' ? negate(value) : value, INTEGRAL_TYPES.has(type) ? 'integer' : type);
+  return literal(
+    expression.operator === 'uminus' ? negate(operand.value) : operand.value,
+    numericResultType(expression.operator, [ type ]),
+  );
 }
 
 /**
@@ -134,9 +131,10 @@ export function assertionToSparql(assertion: Element): Expression {
       }
       return operation('sameterm', xsdFunctionCall('string', result), literal(text, 'string'));
     case 'assert-type': {
-      const match = /^xs:(\w+)$/u.exec(text.trim());
+      const typeName = text.trim();
+      const match = /^xs:(\w+)$/u.exec(typeName);
       if (!match) {
-        throw new UnsupportedError('Unsupported type', text.trim());
+        throw new UnsupportedError('Unsupported type', typeName);
       }
       return hasType(result, match[1]);
     }

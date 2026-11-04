@@ -1,5 +1,5 @@
 import type * as T11 from '@traqula/rules-sparql-1-1';
-import type { Expression, TermIri } from '@traqula/rules-sparql-1-2';
+import type { Expression, TermIri, TermLiteral } from '@traqula/rules-sparql-1-2';
 import { AstFactory } from '@traqula/rules-sparql-1-2';
 import { XSD } from './xsd.ts';
 
@@ -48,7 +48,7 @@ export function xsdLocalName(iri: { value: string }): string | undefined {
  * @param datatype The local name of the XSD datatype, where `string` creates a simple literal.
  * @returns The SPARQL literal.
  */
-export function literal(value: string, datatype: string): Expression {
+export function literal(value: string, datatype: string): TermLiteral {
   return datatype === 'string' ?
     astFactory.termLiteral(astFactory.gen(), value) :
     astFactory.termLiteral(astFactory.gen(), value, xsdIri(datatype));

@@ -83,13 +83,6 @@ export function subTypes(type: string): string[] {
   return [ type, ...children.flatMap(([ child ]) => subTypes(child)) ];
 }
 
-/**
- * The value ranges of the XSD datatypes derived from xsd:integer.
- * Fontoxpath cannot check these, as it loses precision beyond 2^53.
- */
-const INTEGER_RANGES: Record<string, Range> = Object.fromEntries(Object.entries(DERIVED_TYPES)
-  .flatMap(([ type, { range }]) => range ? [[ type, range ]] : []));
-
 export const INTEGRAL_TYPES = new Set(subTypes('integer'));
 export const NUMERIC_TYPES = new Set(subTypes('numeric'));
 
@@ -97,7 +90,7 @@ const DECIMAL_PATTERN = String.raw`[+-]?(\d+(\.\d*)?|\.\d+)`;
 const FLOATING_POINT_PATTERN = new RegExp(String.raw`^(${DECIMAL_PATTERN}([Ee][+-]?\d+)?|[+-]?INF|NaN)$`, 'u');
 
 /**
- * The lexical spaces of the primitive numeric XSD datatypes.
+ * The lexical spaces of the numeric XSD datatypes, where the types derived from xsd:integer share the one of integer.
  */
 const LEXICAL_SPACES: Record<string, RegExp> = {
   integer: /^[+-]?\d+$/u,
@@ -108,18 +101,28 @@ const LEXICAL_SPACES: Record<string, RegExp> = {
 
 /**
  * Determine whether a lexical form is a valid value of a numeric XSD datatype, within the range of an integer type.
+ * Fontoxpath cannot check this, as it loses precision beyond 2^53.
  * @param value The lexical form.
  * @param type The local name of the numeric datatype.
  * @returns Whether the lexical form is valid.
  */
 export function isValidNumber(value: string, type: string): boolean {
-  if (!INTEGRAL_TYPES.has(type)) {
-    return LEXICAL_SPACES[type].test(value);
-  }
-  const [ min, max ] = INTEGER_RANGES[type] ?? [];
-  return LEXICAL_SPACES.integer.test(value) &&
+  const [ min, max ] = DERIVED_TYPES[type]?.range ?? [];
+  return LEXICAL_SPACES[INTEGRAL_TYPES.has(type) ? 'integer' : type].test(value) &&
     (min === undefined || BigInt(value) >= min) &&
     (max === undefined || BigInt(value) <= max);
+}
+
+/**
+ * Determine the datatype of the result of a numeric operator, following the numeric type promotion of XPath.
+ * @param operator The SPARQL operator.
+ * @param types The local names of the XSD datatypes of the operands.
+ * @returns The local name of the XSD datatype of the result.
+ */
+export function numericResultType(operator: string, types: string[]): string {
+  // Integer operands give an integer, except for a division
+  return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
+    (operator === '/' ? 'decimal' : 'integer');
 }
 
 /**

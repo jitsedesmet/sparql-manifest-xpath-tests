@@ -1,11 +1,11 @@
 import type { SubTyped } from '@traqula/core';
 import { TransformerSubTyped } from '@traqula/core';
-import type { Expression } from '@traqula/rules-sparql-1-2';
+import type { Expression, TermLiteral } from '@traqula/rules-sparql-1-2';
 import fontoxpath from 'fontoxpath';
 import * as slimdom from 'slimdom';
 import { astFactory, literal, operation, xsdFunctionCall } from './sparqlAst.ts';
 import { UnsupportedError } from './UnsupportedError.ts';
-import { CAST_TYPES, INTEGRAL_TYPES, isValidNumber } from './xsd.ts';
+import { CAST_TYPES, NUMERIC_TYPES, isValidNumber } from './xsd.ts';
 
 // The fontoxpath package is a CommonJS module, of which Node.js cannot detect the named exports
 const { evaluateXPath, evaluateXPathToStrings, parseScript } = fontoxpath;
@@ -342,27 +342,32 @@ function cast(localName: string, expression: Expression): Expression {
   if (CAST_TYPES.has(localName)) {
     return xsdFunctionCall(localName, expression);
   }
-  // Integer types have no cast function, but a string literal can become a typed literal.
+  // The types derived from xsd:integer have no cast function, but a cast of a string literal can be folded.
   // Other types, such as xs:untypedAtomic and xs:anyURI, are not SPARQL operand types.
-  if (INTEGRAL_TYPES.has(localName) && astFactory.isTermLiteralStr(expression)) {
-    return castLiteral(expression.value, localName);
+  const folded = foldStringLiteralCast(localName, expression);
+  if (folded) {
+    return folded;
   }
   throw new UnsupportedError('Unsupported cast', `type xs:${localName}`);
 }
 
 /**
- * Create the literal that XPath casts a string to, as it casts a string by its lexical form.
- * @param value The string.
- * @param localName The local name of the XSD datatype, which is `string` or numeric.
- * @returns The SPARQL literal.
+ * Fold a cast of a string literal to a string or number into the literal it gives, as XPath casts a string by its
+ * lexical form.
+ * @param localName The local name of the XSD datatype to cast to.
+ * @param expression The SPARQL expression to cast.
+ * @returns The literal, or undefined if the expression is not a string literal or the datatype not a string or number.
  * @throws {UnsupportedError} If the string is not a valid number, which is an error in XPath but ill-typed in SPARQL.
  */
-export function castLiteral(value: string, localName: string): Expression {
+export function foldStringLiteralCast(localName: string, expression: Expression): TermLiteral | undefined {
+  if (!astFactory.isTermLiteralStr(expression) || (localName !== 'string' && !NUMERIC_TYPES.has(localName))) {
+    return undefined;
+  }
   if (localName === 'string') {
-    return literal(value, 'string');
+    return expression;
   }
   // XSD only collapses spaces, tabs and line breaks, unlike String.prototype.trim
-  const trimmed = value.replaceAll(/^[ \t\n\r]+|[ \t\n\r]+$/gu, '');
+  const trimmed = expression.value.replaceAll(/^[ \t\n\r]+|[ \t\n\r]+$/gu, '');
   if (!isValidNumber(trimmed, localName)) {
     throw new UnsupportedError('Invalid value', `${trimmed} for xs:${localName}`);
   }
