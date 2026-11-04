@@ -76,7 +76,8 @@ where SPARQL extensions cannot change its result, unlike on other types, where `
 
 Test cases that cannot be expressed in SPARQL are left out, such as XPath expressions without SPARQL equivalent,
 assertions that need more than the above, such as `assert` with an arbitrary XPath expression,
-and invalid values of the types derived from `xsd:integer`, which are an error in XPath but an ill-typed literal in SPARQL.
+and casts of a string literal that are folded into a literal, but of which the string is not a valid number,
+such as `xs:byte("300")`, which are an error in XPath but an ill-typed literal in SPARQL.
 [`left-out.tsv`](https://sparql-manifest-xpath-tests.jitsedesmet.be/left-out.tsv) lists every left-out test case with the reason,
 including the ones that depend on more than XPath 3.1 and XSD 1.1 without optional features.
 The XPath expressions are parsed with [fontoxpath](https://github.com/FontoXML/fontoxpath),

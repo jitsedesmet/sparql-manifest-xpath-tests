@@ -140,7 +140,6 @@ const GROUPING_ELEMENTS = new Set([
   'atomicType',
   'optional',
   'value',
-  'name',
 ]);
 
 /**
@@ -360,11 +359,14 @@ function cast(localName: string, expression: Expression): Expression {
  * @throws {UnsupportedError} If the string is not a valid number, which is an error in XPath but ill-typed in SPARQL.
  */
 export function foldStringLiteralCast(localName: string, expression: Expression): TermLiteral | undefined {
-  if (!astFactory.isTermLiteralStr(expression) || (localName !== 'string' && !NUMERIC_TYPES.has(localName))) {
+  if (!astFactory.isTermLiteralStr(expression)) {
     return undefined;
   }
   if (localName === 'string') {
     return expression;
+  }
+  if (!NUMERIC_TYPES.has(localName)) {
+    return undefined;
   }
   // XSD only collapses spaces, tabs and line breaks, unlike String.prototype.trim
   const trimmed = expression.value.replaceAll(/^[ \t\n\r]+|[ \t\n\r]+$/gu, '');

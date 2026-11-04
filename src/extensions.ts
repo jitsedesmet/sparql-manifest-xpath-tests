@@ -1,5 +1,5 @@
 import type { Expression } from '@traqula/rules-sparql-1-2';
-import { RESULT_VARIABLE, astFactory, xsdLocalName } from './sparqlAst.ts';
+import { RESULT_VARIABLE, astFactory, literalType, xsdLocalName } from './sparqlAst.ts';
 import { CONSTRUCTOR_TYPES, INTEGRAL_TYPES, NUMERIC_TYPES, OPERAND_TYPES, numericResultType } from './xsd.ts';
 
 /**
@@ -55,11 +55,8 @@ const RESULT_TYPES: Record<string, string> = {
  * @returns The local name of the XSD datatype, or undefined if it is not known.
  */
 function datatype(expression: Expression, resultType: string | undefined, reasons: Set<string>): string | undefined {
-  if (astFactory.isTermLiteralStr(expression)) {
-    return 'string';
-  }
-  if (astFactory.isTermLiteralTyped(expression)) {
-    return xsdLocalName(expression.langOrIri);
+  if (astFactory.isTermLiteral(expression)) {
+    return literalType(expression);
   }
   if (astFactory.isTermVariable(expression)) {
     return expression.value === RESULT_VARIABLE ? resultType : undefined;

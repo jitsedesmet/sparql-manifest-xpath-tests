@@ -46,7 +46,19 @@ export function xsdIri(localName: string): TermIri {
  * @returns The local name, or undefined if the IRI is not an XSD prefixed name.
  */
 export function xsdLocalName(iri: TermIri): string | undefined {
-  return 'prefix' in iri && iri.prefix === XSD_PREFIX ? iri.value : undefined;
+  return astFactory.isTermNamedPrefixed(iri) && iri.prefix === XSD_PREFIX ? iri.value : undefined;
+}
+
+/**
+ * Determine the XSD datatype of a literal, as the inverse of `literal`.
+ * @param term The literal.
+ * @returns The local name of the datatype, `string` for a simple literal, or undefined for a language-tagged string.
+ */
+export function literalType(term: TermLiteral): string | undefined {
+  if (astFactory.isTermLiteralTyped(term)) {
+    return xsdLocalName(term.langOrIri);
+  }
+  return astFactory.isTermLiteralStr(term) ? 'string' : undefined;
 }
 
 /**

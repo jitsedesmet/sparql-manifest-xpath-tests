@@ -1,6 +1,15 @@
 import type { Expression, TermLiteral } from '@traqula/rules-sparql-1-2';
 import type { Element } from 'slimdom';
-import { RESULT_VARIABLE, astFactory, literal, operation, xsdFunctionCall, xsdIri, xsdLocalName } from './sparqlAst.ts';
+import {
+  RESULT_VARIABLE,
+  astFactory,
+  literal,
+  literalType,
+  operation,
+  xsdFunctionCall,
+  xsdIri,
+  xsdLocalName,
+} from './sparqlAst.ts';
 import { UnsupportedError } from './UnsupportedError.ts';
 import { foldStringLiteralCast, xpathToSparql } from './xpathToSparql.ts';
 import { NUMERIC_TYPES, isSubType, numericResultType, subTypes } from './xsd.ts';
@@ -40,6 +49,33 @@ export function acceptsError(assertion: Expression): boolean {
 }
 
 /**
+ * The SPARQL operators that the assertions use, which the README lists, as the tests rely on them being correct.
+ */
+const ASSERTION_OPERATORS = new Set([ '!', '&&', '||', 'bound', 'datatype', 'sameterm', '=' ]);
+
+/**
+ * Check that an assertion only uses the operations that the README lists, where = compares with a number.
+ * @param expression The SPARQL expression of the assertion.
+ * @throws {Error} If the assertion uses another operation, which is a bug of the generator.
+ */
+function checkOperations(expression: Expression): void {
+  if (!astFactory.isExpressionFunctionCall(expression) && !astFactory.isExpressionOperator(expression)) {
+    return;
+  }
+  const name = astFactory.isExpressionFunctionCall(expression) ?
+    `xsd:${xsdLocalName(expression.function)}` :
+    expression.operator;
+  const isListed = name === 'xsd:string' || (ASSERTION_OPERATORS.has(name) && (name !== '=' ||
+    expression.args.some(arg => astFactory.isTermLiteral(arg) && NUMERIC_TYPES.has(literalType(arg) ?? ''))));
+  if (!isListed) {
+    throw new Error(`An assertion uses ${name}, which the README does not list`);
+  }
+  for (const arg of expression.args) {
+    checkOperations(arg);
+  }
+}
+
+/**
  * Negate the lexical form of a number.
  * @param value The lexical form.
  * @returns The lexical form of the negated number.
@@ -68,11 +104,8 @@ function foldLiteral(expression: Expression): TermLiteral | undefined {
     return undefined;
   }
   const operand = foldLiteral(expression.args[0]);
-  if (!operand || !astFactory.isTermLiteralTyped(operand)) {
-    return undefined;
-  }
-  const type = xsdLocalName(operand.langOrIri);
-  if (type === undefined || !NUMERIC_TYPES.has(type)) {
+  const type = operand && literalType(operand);
+  if (!operand || type === undefined || !NUMERIC_TYPES.has(type)) {
     return undefined;
   }
   return literal(
@@ -114,15 +147,15 @@ function hasStringValue(term: Expression, value: string): Expression {
 }
 
 /**
- * Create the SPARQL expression that a term equals a literal, as XPath's eq, where the type check makes the conjunction
- * false whatever = gives on other types, and a string or boolean is compared by its type and canonical string value.
+ * Create the SPARQL expression that a term equals a literal, as XPath's eq: a number by value, and a string or boolean
+ * by its canonical string value, both followed by a type check.
  * @param term The SPARQL expression of the term.
  * @param expected The literal, which is a number, string or boolean.
  * @param checkedType The datatype that a conjoined assertion already checks the term for, if any.
  * @returns The SPARQL expression of the comparison.
  */
 function equals(term: Expression, expected: TermLiteral, checkedType?: string): Expression {
-  const type = astFactory.isTermLiteralTyped(expected) ? xsdLocalName(expected.langOrIri)! : 'string';
+  const type = literalType(expected)!;
   const isNumber = NUMERIC_TYPES.has(type);
   // Numbers compare by value, e.g. 1 = 1.0e0
   const comparison = isNumber ? operation('=', term, expected) : hasStringValue(term, expected.value);
@@ -153,11 +186,23 @@ function assertedType(assertion: Element): string {
  * where an error of the test leaves ?result unbound.
  * Only the operations that the README lists are used, so a failing test points at the tested expression.
  * @param assertion The assertion element.
+ * @returns The SPARQL expression of the assertion over ?result.
+ * @throws {UnsupportedError} If the assertion needs other operations.
+ */
+export function assertionToSparql(assertion: Element): Expression {
+  const expression = translateAssertion(assertion);
+  checkOperations(expression);
+  return expression;
+}
+
+/**
+ * Translate an assertion, or one nested in another, as assertionToSparql.
+ * @param assertion The assertion element.
  * @param checkedType The datatype that an assert-type in an enclosing all-of checks ?result for, if any.
  * @returns The SPARQL expression of the assertion over ?result.
  * @throws {UnsupportedError} If the assertion needs other operations.
  */
-export function assertionToSparql(assertion: Element, checkedType?: string): Expression {
+function translateAssertion(assertion: Element, checkedType?: string): Expression {
   const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
   const text = assertion.textContent!;
   switch (assertion.localName) {
@@ -166,12 +211,12 @@ export function assertionToSparql(assertion: Element, checkedType?: string): Exp
     case 'all-of': {
       const typeAssertion = assertion.children.find(child => child.localName === 'assert-type');
       const childCheckedType = typeAssertion ? assertedType(typeAssertion) : checkedType;
-      return combine('&&', assertion.children.map(child => assertionToSparql(child, childCheckedType)));
+      return combine('&&', assertion.children.map(child => translateAssertion(child, childCheckedType)));
     }
     case 'any-of':
-      return combine('||', assertion.children.map(child => assertionToSparql(child, checkedType)));
+      return combine('||', assertion.children.map(child => translateAssertion(child, checkedType)));
     case 'not':
-      return operation('!', assertionToSparql(assertion.children[0], checkedType));
+      return operation('!', translateAssertion(assertion.children[0], checkedType));
     case 'assert-true':
     case 'assert-false': {
       const expected = literal(assertion.localName === 'assert-true' ? 'true' : 'false', 'boolean');
