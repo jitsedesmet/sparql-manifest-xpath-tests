@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:time, the constructor function xsd:dayTimeDuration, - on xsd:time, - on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "08:20:00-05:00" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P23DT10H10M" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "22:10:00-05:00" ))
+  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "22:10:00-05:00" ))
 }

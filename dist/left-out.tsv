@@ -2,7 +2,9 @@ test-set	test-case	url	reason
 fn-abs	fn-absint1args-1-dyn	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L59	Unsupported dependencies spec XQ10+
 fn-abs	fn-absdec1args-1-dyn	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L164	Unsupported dependencies spec XQ10+
 fn-abs	fn-absdbl1args-1-dyn	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L204	Unsupported dependencies spec XQ10+
+fn-abs	fn-absflt1args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L244	Unsupported expected value xs:float(3.4028235E38)
 fn-abs	fn-absflt1args-1-dyn	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L257	Unsupported dependencies spec XQ10+
+fn-abs	fn-absflt1args-3	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L284	Unsupported expected value xs:float(3.4028235E38)
 fn-abs	fn-abs-more-args-004-dyn	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L661	Unsupported dependencies spec XQ10+
 fn-abs	fn-abs-more-args-029	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L975	Invalid value -INF for xs:int
 fn-abs	fn-abs-more-args-030	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L985	Invalid value INF for xs:int
@@ -924,6 +926,8 @@ op-duration-equal	cbcl-duration-equal-005	https://github.com/w3c/qt3tests/blob/2
 op-duration-equal	cbcl-duration-equal-006	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1442	Unsupported dependencies spec XQ10+
 op-duration-equal	cbcl-yearMonthDuration-equal-001	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1453	Unsupported dependencies spec XQ10+
 op-duration-equal	cbcl-yearMonthDuration-equal-002	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/duration-equal.xml#L1465	Unsupported dependencies spec XQ10+
+op-numeric-add	op-numeric-addflt2args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L158	Unsupported expected value xs:float(-3.4028235E38)
+op-numeric-add	op-numeric-addflt2args-3	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L176	Unsupported expected value xs:float(-3.4028235E38)
 op-numeric-add	op-numeric-addmix2args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L518	Unsupported sequenceExpr
 op-numeric-add	op-numeric-addmix2args-4	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L548	Unsupported dependencies spec XQ10+
 op-numeric-add	op-numeric-addmix2args-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-add.xml#L558	Unsupported dependencies spec XQ10+
@@ -1051,6 +1055,7 @@ op-numeric-divide	op-numeric-dividenpi2args-2	https://github.com/w3c/qt3tests/bl
 op-numeric-divide	op-numeric-dividenpi2args-4	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L463	Unsupported function fn:round-half-to-even#2
 op-numeric-divide	op-numeric-dividesht2args-2	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L502	Unsupported function fn:round-half-to-even#2
 op-numeric-divide	op-numeric-dividesht2args-4	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L523	Unsupported function fn:round-half-to-even#2
+op-numeric-divide	op-numeric-dividesht2args-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L532	Unsupported assertion assert
 op-numeric-divide	op-numeric-dividemix2args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L543	Unsupported sequenceExpr
 op-numeric-divide	op-numeric-dividemix2args-4	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L573	Unsupported dependencies spec XQ10+
 op-numeric-divide	op-numeric-dividemix2args-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L583	Unsupported dependencies spec XQ10+
@@ -1160,6 +1165,9 @@ op-numeric-less-than	cbcl-numeric-less-than-026	https://github.com/w3c/qt3tests/
 op-numeric-less-than	cbcl-numeric-less-than-027	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml#L3020	Unsupported dependencies spec XQ10+
 op-numeric-less-than	cbcl-numeric-less-than-028	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml#L3032	Unsupported dependencies spec XQ10+
 op-numeric-less-than	cbcl-numeric-less-than-029	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-less-than.xml#L3044	Unsupported dependencies spec XQ10+
+op-numeric-multiply	op-numeric-multiplyflt2args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L97	Unsupported expected value xs:float(3.4028235E38)
+op-numeric-multiply	op-numeric-multiplyflt2args-3	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L115	Unsupported expected value xs:float(-3.4028235E38)
+op-numeric-multiply	op-numeric-multiplyflt2args-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L133	Unsupported expected value xs:float(-3.4028235E38)
 op-numeric-multiply	op-numeric-multiplymix2args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L340	Unsupported sequenceExpr
 op-numeric-multiply	op-numeric-multiplymix2args-4	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L370	Unsupported dependencies spec XQ10+
 op-numeric-multiply	op-numeric-multiplymix2args-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L380	Unsupported dependencies spec XQ10+
@@ -1220,6 +1228,10 @@ op-numeric-multiply	cbcl-numeric-multiply-024	https://github.com/w3c/qt3tests/bl
 op-numeric-multiply	cbcl-numeric-multiply-025	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L1116	Unsupported dependencies spec XQ10+
 op-numeric-multiply	cbcl-numeric-multiply-026	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L1132	Unsupported dependencies spec XQ10+
 op-numeric-multiply	cbcl-numeric-multiply-027	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-multiply.xml#L1148	Unsupported dependencies spec XQ10+
+op-numeric-subtract	op-numeric-subtractflt2args-2	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L196	Unsupported expected value xs:float(3.4028235E38)
+op-numeric-subtract	op-numeric-subtractflt2args-3	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L205	Unsupported expected value xs:float(3.4028235E38)
+op-numeric-subtract	op-numeric-subtractflt2args-4	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L214	Unsupported expected value xs:float(-3.4028235E38)
+op-numeric-subtract	op-numeric-subtractflt2args-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L223	Unsupported expected value xs:float(-3.4028235E38)
 op-numeric-subtract	op-numeric-subtractmix2args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L547	Unsupported sequenceExpr
 op-numeric-subtract	op-numeric-subtractmix2args-4	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L577	Unsupported dependencies spec XQ10+
 op-numeric-subtract	op-numeric-subtractmix2args-5	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L587	Unsupported dependencies spec XQ10+
@@ -1263,6 +1275,8 @@ op-numeric-subtract	cbcl-numeric-subtract-005	https://github.com/w3c/qt3tests/bl
 op-numeric-subtract	cbcl-numeric-subtract-006	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1127	Unsupported dependencies spec XQ10+
 op-numeric-subtract	cbcl-numeric-subtract-007	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1140	Unsupported dependencies spec XQ10+
 op-numeric-subtract	cbcl-numeric-subtract-008	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1153	Unsupported dependencies spec XQ10+
+op-numeric-unary-minus	op-numeric-unary-minusflt1args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L115	Unsupported expected value xs:float(3.4028235E38)
+op-numeric-unary-minus	op-numeric-unary-minusflt1args-3	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L133	Unsupported expected value xs:float(-3.4028235E38)
 op-numeric-unary-minus	K-NumericUnaryMinus-14	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L475	Unsupported sequenceExpr
 op-numeric-unary-minus	K-NumericUnaryMinus-15	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L484	Unsupported sequenceExpr
 op-numeric-unary-minus	K2-NumericUnaryMinus-8	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L557	Unsupported dependencies spec XQ10+
@@ -1270,6 +1284,8 @@ op-numeric-unary-minus	K2-NumericUnaryMinus-9	https://github.com/w3c/qt3tests/bl
 op-numeric-unary-minus	K2-NumericUnaryMinus-10	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L576	Unsupported dependencies spec XQ10+
 op-numeric-unary-minus	op-numeric-unary-minus-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L586	Unsupported dependencies spec XQ10+
 op-numeric-unary-minus	cbcl-numeric-unary-minus-001	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L607	Unsupported dependencies spec XQ10+
+op-numeric-unary-plus	op-numeric-unary-plusflt1args-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L115	Unsupported expected value xs:float(-3.4028235E38)
+op-numeric-unary-plus	op-numeric-unary-plusflt1args-3	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L133	Unsupported expected value xs:float(3.4028235E38)
 op-numeric-unary-plus	K2-NumericUnaryPlus-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L466	Unsupported dependencies spec XQ10+
 op-numeric-unary-plus	K2-NumericUnaryPlus-2	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L476	Unsupported sequenceExpr
 op-numeric-unary-plus	op-numeric-unary-plus-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L485	Unsupported dependencies spec XQ10+
@@ -1852,6 +1868,7 @@ prod-CastExpr	CastAs674	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727
 prod-CastExpr	CastAs674a	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6575	Unsupported dependencies spec XQ30+
 prod-CastExpr	CastAs675	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6593	Unsupported dependencies spec XQ10
 prod-CastExpr	CastAs675a	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6612	Unsupported dependencies spec XQ30+
+prod-CastExpr	CastAs676	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6631	Unsupported assertion assert
 prod-CastExpr	CastAs677	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6645	Unsupported sequenceExpr
 prod-CastExpr	CastAs678	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6654	Unsupported sequenceExpr
 prod-CastExpr	CastAs682	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6690	Unsupported cast type xs:gYear
@@ -1871,6 +1888,8 @@ prod-CastExpr	CastAsNamespaceSensitiveType-9	https://github.com/w3c/qt3tests/blo
 prod-CastExpr	CastAsNamespaceSensitiveType-10	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6990	Unsupported dependencies spec XQ30+, feature schemaImport
 prod-CastExpr	CastAsNamespaceSensitiveType-11	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7013	Unsupported dependencies spec XQ30+, feature schemaImport
 prod-CastExpr	CastAsNamespaceSensitiveType-12	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7032	Unsupported dependencies spec XQ30+, feature schemaImport
+prod-CastExpr	CastFOCA0001-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7051	Unsupported assertion assert
+prod-CastExpr	CastFOCA0003-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7065	Unsupported assertion assert
 prod-CastExpr	K-SeqExprCast-1	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7079	Invalid XPath expression: 1: 'string' cast as xs:string*\n                              ^\n\nError: XPST0003: Failed to parse script. Expected -,+,validate,(#,.,[0-9]+,",',$,(,Q,[A-Z_a-z\\xC0-\\xD6\\xD8-\\xF6\\xF8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD],[\\uD800-\\uDB7F],<,<!--,<?,document,element,attribute,namespace,text,comment,processing-instruction,function,map,[,array,``[,?,parent::,ancestor::,preceding-sibling::,preceding::,ancestor-or-self::,..,child::,descendant::,attribute::,self::,descendant-or-self::,following-sibling::,following::,document-node(,schema-element,schema-attribute(,processing-instruction(,processing-instruction(),comment(),text(),namespace-node(),node(),*:,*,/,//\n  at <>:1:28 - 1:29
 prod-CastExpr	K-SeqExprCast-2	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7088	Invalid XPath expression: 1: 'string' cast as xs:string+\n                              ^\n\nError: XPST0003: Failed to parse script. Expected -,+,validate,(#,.,[0-9]+,",',$,(,Q,[A-Z_a-z\\xC0-\\xD6\\xD8-\\xF6\\xF8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD],[\\uD800-\\uDB7F],<,<!--,<?,document,element,attribute,namespace,text,comment,processing-instruction,function,map,[,array,``[,?,parent::,ancestor::,preceding-sibling::,preceding::,ancestor-or-self::,..,child::,descendant::,attribute::,self::,descendant-or-self::,following-sibling::,following::,document-node(,schema-element,schema-attribute(,processing-instruction(,processing-instruction(),comment(),text(),namespace-node(),node(),*:,*,/,//\n  at <>:1:28 - 1:29
 prod-CastExpr	K-SeqExprCast-3	https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7097	Unsupported dependencies spec XQ10

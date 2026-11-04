@@ -3,5 +3,5 @@
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/year-from-dateTime.xml#L7
 ASK {
   BIND(YEAR( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1970-01-01T00:00:00Z" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1970" ))
+  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "1970" ))
 }

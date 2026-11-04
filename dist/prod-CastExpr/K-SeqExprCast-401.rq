@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:date, xsd:string on xsd:date, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#date> ( "1999-12-01-00:00" ) ) = "1999-12-01Z" ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ?result ))
 }

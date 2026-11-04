@@ -4,5 +4,5 @@
 # The test needs - on xsd:dateTime, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#dateTime> ( "0001-01-01T01:01:01Z" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "2005-07-06T12:12:12Z" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "-P732132DT11H11M11S" ))
+  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "-P732132DT11H11M11S" ))
 }

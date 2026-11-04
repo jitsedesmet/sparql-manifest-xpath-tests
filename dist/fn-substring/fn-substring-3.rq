@@ -4,5 +4,5 @@
 # The test needs SUBSTR with a position or length that is not an xsd:integer, which SPARQL does not define
 ASK {
   BIND(SUBSTR( "12345" , "1.5"^^<http://www.w3.org/2001/XMLSchema#decimal> , "2.6"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "234" ))
+  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "234" ))
 }

@@ -19,9 +19,7 @@
     <#fn-absdbl1args-1>
     <#fn-absdbl1args-2>
     <#fn-absdbl1args-3>
-    <#fn-absflt1args-1>
     <#fn-absflt1args-2>
-    <#fn-absflt1args-3>
     <#fn-abslng1args-1>
     <#fn-abslng1args-2>
     <#fn-abslng1args-3>
@@ -163,25 +161,11 @@
   mf:action [ qt:query <fn-absdbl1args-3.rq> ] ;
   mf:result <../true.srj> .
 
-<#fn-absflt1args-1> a mf:QueryEvaluationTest ;
-  mf:name "fn-absflt1args-1" ;
-  rdfs:comment "Test: absflt1args-1 The \"abs\" function with the arguments set as follows: $arg = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L244> ;
-  mf:action [ qt:query <fn-absflt1args-1.rq> ] ;
-  mf:result <../true.srj> .
-
 <#fn-absflt1args-2> a mf:QueryEvaluationTest ;
   mf:name "fn-absflt1args-2" ;
   rdfs:comment "Test: absflt1args-2 The \"abs\" function with the arguments set as follows: $arg = xs:float(mid range)" ;
   rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L271> ;
   mf:action [ qt:query <fn-absflt1args-2.rq> ] ;
-  mf:result <../true.srj> .
-
-<#fn-absflt1args-3> a mf:QueryEvaluationTest ;
-  mf:name "fn-absflt1args-3" ;
-  rdfs:comment "Test: absflt1args-3 The \"abs\" function with the arguments set as follows: $arg = xs:float(upper bound)" ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L284> ;
-  mf:action [ qt:query <fn-absflt1args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#fn-abslng1args-1> a mf:QueryEvaluationTest ;

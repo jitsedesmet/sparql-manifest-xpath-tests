@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:date, the constructor function xsd:dayTimeDuration, + on xsd:date, + on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#date> ( "1993-12-09Z" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P03DT01H04M" ) ) ) && <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#date> ( "1993-12-09Z" ) + <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P01DT01H03M" ) ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ?result ))
 }

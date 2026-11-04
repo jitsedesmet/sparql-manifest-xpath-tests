@@ -4,5 +4,5 @@
 # The test needs xsd:string on xsd:dayTimeDuration, which SPARQL does not define
 ASK {
   BIND(TIMEZONE( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-05-31T00:20:00+00:00" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "PT0S" ))
+  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "PT0S" ))
 }

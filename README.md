@@ -53,10 +53,24 @@ ASK {
 ```
 
 so the expected result of every test is `true`.
-An expected error becomes `!BOUND(?result)`, as an error in `BIND` leaves the variable unbound,
-and `all-of`, `any-of` and `not` become `&&`, `||` and `!`.
+The assertions become:
+
+| QT3 assertion | SPARQL |
+| --- | --- |
+| `error` | `!BOUND(?result)`, as an error in `BIND` leaves the variable unbound |
+| `assert-eq` | `?result = <literal>`, as QT3 compares by value, so `1` equals `1.0e0` |
+| `assert-string-value` | `sameTerm(xsd:string(?result), "…")` |
+| `assert-type` | `DATATYPE(?result) IN (…)`, with the datatypes derived from the type |
+| `assert-true`, `assert-false` | `DATATYPE(?result) IN (xsd:boolean) && ?result`, respectively `!?result` |
+| `all-of`, `any-of`, `not` | `&&`, `\|\|`, `!` |
+
+The expected value of `assert-eq` is folded into a literal, so `-0` becomes `"-0"^^xsd:integer` rather than a unary minus.
+The tests therefore only rely on the following to check the result,
+so a failing test points at the tested expression:
+`!`, `&&`, `||`, `BOUND`, `DATATYPE`, `IN`, `sameTerm`, `xsd:string`, `=`, and the effective boolean value of an `xsd:boolean`.
 
 Test cases that cannot be expressed in SPARQL are left out, such as XPath expressions without SPARQL equivalent,
+assertions that need more than the above, such as `assert` with an arbitrary XPath expression,
 and invalid values of the types derived from `xsd:integer`, which are an error in XPath but an ill-typed literal in SPARQL.
 [`left-out.tsv`](https://sparql-manifest-xpath-tests.jitsedesmet.be/left-out.tsv) lists every left-out test case with the reason,
 including the ones that depend on more than XPath 3.1 and XSD 1.1 without optional features.

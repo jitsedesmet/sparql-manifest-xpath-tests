@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:time, - on xsd:time, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "17:00:00-06:00" ) - <http://www.w3.org/2001/XMLSchema#time> ( "08:00:00+09:00" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "P1D" ))
+  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "P1D" ))
 }

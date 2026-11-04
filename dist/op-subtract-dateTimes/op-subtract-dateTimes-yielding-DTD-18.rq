@@ -4,5 +4,5 @@
 # The test needs - on xsd:dateTime, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-10-23T03:02:01Z" ) - <http://www.w3.org/2001/XMLSchema#dateTime> ( "1998-09-09T04:04:05Z" ) ) ) || "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ?result ))
 }

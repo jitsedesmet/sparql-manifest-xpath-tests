@@ -5,5 +5,5 @@
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4091
 ASK {
   BIND(( ( ( REGEX( "_" , "^(?:\\i)$" ) && REGEX( ":" , "^(?:\\i)$" ) ) && REGEX( "a" , "^(?:\\i)$" ) ) && ( ( ( ! REGEX( " " , "^(?:\\i)$" ) && ! REGEX( "\n" , "^(?:\\i)$" ) ) && ! REGEX( "\n" , "^(?:\\i)$" ) ) && ! REGEX( "\t" , "^(?:\\i)$" ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ?result ))
 }

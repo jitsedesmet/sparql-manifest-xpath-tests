@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:date, xsd:string on xsd:date, which SPARQL does not define
 ASK {
   BIND(<http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#date> ( "1999-05-31" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "1999-05-31" ))
+  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "1999-05-31" ))
 }

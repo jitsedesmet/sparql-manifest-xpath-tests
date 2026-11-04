@@ -1,29 +1,9 @@
 import type { Expression } from '@traqula/rules-sparql-1-2';
-import fontoxpath from 'fontoxpath';
 import type { Element } from 'slimdom';
-import { RESULT_VARIABLE, astFactory, literal, operation, xsdFunctionCall, xsdIri } from './sparqlAst.ts';
+import { RESULT_VARIABLE, astFactory, literal, operation, xsdFunctionCall, xsdIri, xsdLocalName } from './sparqlAst.ts';
 import { UnsupportedError } from './UnsupportedError.ts';
-import { xpathToSparql } from './xpathToSparql.ts';
-import { subTypes } from './xsd.ts';
-
-/**
- * Normalize the whitespace of a SPARQL string, as XPath's fn:normalize-space.
- * @param expression The SPARQL expression of the string.
- * @returns The SPARQL expression of the normalized string.
- */
-function normalizeSpace(expression: Expression): Expression {
-  return operation(
-    'replace',
-    operation(
-      'replace',
-      expression,
-      literal(String.raw`^\s+|\s+$`, 'string'),
-      literal('', 'string'),
-    ),
-    literal(String.raw`\s+`, 'string'),
-    literal(' ', 'string'),
-  );
-}
+import { castLiteral, xpathToSparql } from './xpathToSparql.ts';
+import { INTEGRAL_TYPES, NUMERIC_TYPES, subTypes } from './xsd.ts';
 
 /**
  * Evaluate the SPARQL expression of an assertion for an unbound ?result, as when the test errors,
@@ -60,16 +40,71 @@ export function acceptsError(assertion: Expression): boolean {
 }
 
 /**
+ * Negate the lexical form of a number.
+ * @param value The lexical form.
+ * @returns The lexical form of the negated number.
+ */
+function negate(value: string): string {
+  if (value === 'NaN') {
+    return value;
+  }
+  return value.startsWith('-') ? value.slice(1) : `-${value.replace(/^\+/u, '')}`;
+}
+
+/**
+ * Fold a constant SPARQL expression into a literal, so an assertion does not depend on the operators that build it.
+ * @param expression A literal, a signed numeric literal, or a cast of a string literal to a string or number.
+ * @returns The literal, or undefined if the expression is not such a constant.
+ * @example `- "0"^^xsd:integer` becomes `"-0"^^xsd:integer`, and `xsd:float("1e0")` becomes `"1e0"^^xsd:float`.
+ */
+function foldLiteral(expression: Expression): Expression | undefined {
+  if (astFactory.isTermLiteral(expression)) {
+    return expression;
+  }
+  if (astFactory.isExpressionFunctionCall(expression)) {
+    const type = xsdLocalName(expression.function)!;
+    const [ arg ] = expression.args;
+    return astFactory.isTermLiteralStr(arg) && (type === 'string' || NUMERIC_TYPES.has(type)) ?
+      castLiteral(arg.value, type) :
+      undefined;
+  }
+  if (!astFactory.isExpressionOperator(expression) || ![ 'uminus', 'uplus' ].includes(expression.operator)) {
+    return undefined;
+  }
+  const operand = foldLiteral(expression.args[0]);
+  if (!operand || !astFactory.isTermLiteralTyped(operand)) {
+    return undefined;
+  }
+  const type = xsdLocalName(operand.langOrIri);
+  if (type === undefined || !NUMERIC_TYPES.has(type)) {
+    return undefined;
+  }
+  const { value } = operand;
+  // The sign operators return the types derived from xsd:integer as xsd:integer
+  return literal(expression.operator === 'uminus' ? negate(value) : value, INTEGRAL_TYPES.has(type) ? 'integer' : type);
+}
+
+/**
+ * Create the SPARQL expression that a term has an XSD datatype, or one derived from it.
+ * @param term The SPARQL expression of the term.
+ * @param type The local name of the datatype.
+ * @returns The SPARQL expression of the type check.
+ */
+function hasType(term: Expression, type: string): Expression {
+  return operation('in', operation('datatype', term), ...subTypes(type).map(xsdIri));
+}
+
+/**
  * Translate an assertion of the test suite into a SPARQL expression that is true if ?result satisfies it,
  * where an error of the test leaves ?result unbound.
+ * Only the operations that the README lists are used, so a failing test points at the tested expression.
  * @param assertion The assertion element.
  * @returns The SPARQL expression of the assertion over ?result.
- * @throws {UnsupportedError} If the assertion has no SPARQL equivalent.
+ * @throws {UnsupportedError} If the assertion needs other operations.
  */
 export function assertionToSparql(assertion: Element): Expression {
   const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
-  const isBoolean = operation('=', operation('datatype', result), xsdIri('boolean'));
-  const text = assertion.textContent!.trim();
+  const text = assertion.textContent!;
   switch (assertion.localName) {
     case 'error':
       return operation('!', operation('bound', result));
@@ -82,36 +117,29 @@ export function assertionToSparql(assertion: Element): Expression {
     case 'not':
       return operation('!', assertionToSparql(assertion.children[0]));
     case 'assert-true':
-      return operation('&&', isBoolean, result);
+      return operation('&&', hasType(result, 'boolean'), result);
     case 'assert-false':
-      return operation('&&', isBoolean, operation('!', result));
-    case 'assert-eq':
-      return operation('=', result, xpathToSparql(text));
-    case 'assert-deep-eq': {
-      // Deep equality also considers NaN equal to itself
-      const expected = xpathToSparql(text);
-      const bothNaN = operation('&&', operation('!=', result, result), operation('!=', expected, expected));
-      return operation('||', operation('=', result, expected), bothNaN);
+      return operation('&&', hasType(result, 'boolean'), operation('!', result));
+    case 'assert-eq': {
+      // QT3 compares by value, as XPath's eq, which is = rather than sameTerm, e.g. 1 = 1.0e0
+      const expected = foldLiteral(xpathToSparql(text));
+      if (!expected) {
+        throw new UnsupportedError('Unsupported expected value', text.trim());
+      }
+      return operation('=', result, expected);
     }
-    case 'assert-string-value': {
-      const actual = xsdFunctionCall('string', result);
+    case 'assert-string-value':
       if (assertion.getAttribute('normalize-space') === 'true') {
-        const expected = fontoxpath.evaluateXPathToString('normalize-space($text)', null, null, {
-          text: assertion.textContent!,
-        });
-        return operation('=', normalizeSpace(actual), literal(expected, 'string'));
+        throw new UnsupportedError('Unsupported assertion', 'assert-string-value with normalize-space');
       }
-      return operation('=', actual, literal(assertion.textContent!, 'string'));
-    }
+      return operation('sameterm', xsdFunctionCall('string', result), literal(text, 'string'));
     case 'assert-type': {
-      const match = /^xs:(\w+)$/u.exec(text);
+      const match = /^xs:(\w+)$/u.exec(text.trim());
       if (!match) {
-        throw new UnsupportedError('Unsupported type', text);
+        throw new UnsupportedError('Unsupported type', text.trim());
       }
-      return operation('in', operation('datatype', result), ...subTypes(match[1]).map(xsdIri));
+      return hasType(result, match[1]);
     }
-    case 'assert':
-      return xpathToSparql(text, { result });
     default:
       throw new UnsupportedError('Unsupported assertion', assertion.localName);
   }

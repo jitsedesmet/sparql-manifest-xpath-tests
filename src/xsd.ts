@@ -6,7 +6,7 @@ type Range = [ bigint | undefined, bigint | undefined ];
 
 /**
  * The XSD datatypes that are derived from another one, mapped onto that datatype and, for integer types, their range.
- * The ranges tell which casts to an integer type can become a typed literal, see INTEGER_RANGES.
+ * The ranges tell which values of an integer type are valid, see isValidNumber.
  */
 const DERIVED_TYPES: Record<string, { parent: string; range?: Range }> = {
   integer: { parent: 'decimal' },
@@ -84,15 +84,43 @@ export function subTypes(type: string): string[] {
 }
 
 /**
- * The value ranges of the XSD datatypes derived from xsd:integer, which SPARQL has no constructor function for.
- * A cast of an out-of-range value is an error in XPath, but would be an ill-typed literal in SPARQL,
- * so such a test is left out. Fontoxpath cannot check this, as it loses precision beyond 2^53.
+ * The value ranges of the XSD datatypes derived from xsd:integer.
+ * Fontoxpath cannot check these, as it loses precision beyond 2^53.
  */
-export const INTEGER_RANGES: Record<string, Range> = Object.fromEntries(Object.entries(DERIVED_TYPES)
+const INTEGER_RANGES: Record<string, Range> = Object.fromEntries(Object.entries(DERIVED_TYPES)
   .flatMap(([ type, { range }]) => range ? [[ type, range ]] : []));
 
 export const INTEGRAL_TYPES = new Set(subTypes('integer'));
 export const NUMERIC_TYPES = new Set(subTypes('numeric'));
+
+const DECIMAL_PATTERN = String.raw`[+-]?(\d+(\.\d*)?|\.\d+)`;
+const FLOATING_POINT_PATTERN = new RegExp(String.raw`^(${DECIMAL_PATTERN}([Ee][+-]?\d+)?|[+-]?INF|NaN)$`, 'u');
+
+/**
+ * The lexical spaces of the primitive numeric XSD datatypes.
+ */
+const LEXICAL_SPACES: Record<string, RegExp> = {
+  integer: /^[+-]?\d+$/u,
+  decimal: new RegExp(`^${DECIMAL_PATTERN}$`, 'u'),
+  float: FLOATING_POINT_PATTERN,
+  double: FLOATING_POINT_PATTERN,
+};
+
+/**
+ * Determine whether a lexical form is a valid value of a numeric XSD datatype, within the range of an integer type.
+ * @param value The lexical form.
+ * @param type The local name of the numeric datatype.
+ * @returns Whether the lexical form is valid.
+ */
+export function isValidNumber(value: string, type: string): boolean {
+  if (!INTEGRAL_TYPES.has(type)) {
+    return LEXICAL_SPACES[type].test(value);
+  }
+  const [ min, max ] = INTEGER_RANGES[type] ?? [];
+  return LEXICAL_SPACES.integer.test(value) &&
+    (min === undefined || BigInt(value) >= min) &&
+    (max === undefined || BigInt(value) <= max);
+}
 
 /**
  * The XSD datatypes that SPARQL defines its operators and functions for
