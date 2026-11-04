@@ -5,7 +5,7 @@ import { CONSTRUCTOR_TYPES, INTEGRAL_TYPES, NUMERIC_TYPES, OPERAND_TYPES, numeri
 /**
  * The SPARQL operators that accept any RDF term, as they only use its effective boolean value, or not its value at all.
  */
-const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype', 'sameterm', 'isnumeric' ]);
+const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype', 'sameterm' ]);
 
 /**
  * The SPARQL operators on numbers, of which the result datatype follows the numeric type promotion of XPath.
@@ -32,7 +32,6 @@ const RESULT_TYPES: Record<string, string> = {
     '>=',
     'bound',
     'sameterm',
-    'isnumeric',
     'strstarts',
     'strends',
     'contains',

@@ -94,13 +94,13 @@ function hasType(term: Expression, type: string): Expression {
 }
 
 /**
- * Combine SPARQL expressions with a binary logical operator, as Traqula only generates two operands per operator.
+ * Combine SPARQL expressions with a logical operator, where a single expression stays as it is.
  * @param operator The SPARQL operator, `&&` or `||`.
  * @param operands The SPARQL expressions, at least one.
  * @returns The SPARQL expression of the combination.
  */
 function combine(operator: '&&' | '||', operands: Expression[]): Expression {
-  return operands.reduce((left, right) => operation(operator, left, right));
+  return operands.length === 1 ? operands[0] : operation(operator, ...operands);
 }
 
 /**
@@ -114,7 +114,7 @@ function hasStringValue(term: Expression, value: string): Expression {
 }
 
 /**
- * Create the SPARQL expression that a term equals a literal, as XPath's eq, where isNumeric first ensures that
+ * Create the SPARQL expression that a term equals a literal, as XPath's eq, where the type check first ensures that
  * = only compares two numbers, and a string or boolean is compared by its type and canonical string value.
  * @param term The SPARQL expression of the term.
  * @param expected The literal, which is a number, string or boolean.
@@ -124,7 +124,7 @@ function equals(term: Expression, expected: TermLiteral): Expression {
   const type = astFactory.isTermLiteralTyped(expected) ? xsdLocalName(expected.langOrIri)! : 'string';
   if (NUMERIC_TYPES.has(type)) {
     // Numbers compare by value, e.g. 1 = 1.0e0
-    return operation('&&', operation('isnumeric', term), operation('=', term, expected));
+    return operation('&&', hasType(term, 'numeric'), operation('=', term, expected));
   }
   return operation('&&', hasType(term, type), hasStringValue(term, expected.value));
 }
