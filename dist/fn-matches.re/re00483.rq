@@ -8,7 +8,8 @@
 #   
 #   ,aa a', ',') satisfies matches($s, '^(?:\s*\c\s?\c\s+\c\s*)$')) and (every $s in tokenize(' a  a a,aaa, a aa ', ',') satisfies not(matches($s, '^(?:\s*\c\s?\c\s+\c\s*)$')))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4029
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( REGEX( "  \t\n\na c\n\t\n a \n\n\t   \n" , "^(?:\\s*\\c\\s?\\c\\s+\\c\\s*)$" ) && REGEX( "aa a" , "^(?:\\s*\\c\\s?\\c\\s+\\c\\s*)$" ) ) && ( ( ! REGEX( " a  a a" , "^(?:\\s*\\c\\s?\\c\\s+\\c\\s*)$" ) && ! REGEX( "aaa" , "^(?:\\s*\\c\\s?\\c\\s+\\c\\s*)$" ) ) && ! REGEX( " a aa " , "^(?:\\s*\\c\\s?\\c\\s+\\c\\s*)$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
 }

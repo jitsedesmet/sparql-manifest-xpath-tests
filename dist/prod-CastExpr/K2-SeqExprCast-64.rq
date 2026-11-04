@@ -1,7 +1,8 @@
 # QT3 test case K2-SeqExprCast-64 of test set prod-CastExpr, which tests the XPath expression
 #   xs:nonNegativeInteger("-0")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L21279
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND("-0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> AS ?result)
-  FILTER(( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#double> ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#float> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#decimal> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#integer> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#negativeInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#long> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#int> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#short> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#byte> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedLong> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedInt> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedShort> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedByte> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#positiveInteger> ) ) && ( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ))
+  BIND("-0"^^xsd:nonNegativeInteger AS ?result)
+  FILTER(( ISNUMERIC( ?result ) && ( ?result = "0"^^xsd:integer ) ))
 }

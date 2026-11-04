@@ -1,7 +1,8 @@
 # QT3 test case fn-notnpi1args-2 of test set fn-not, which tests the XPath expression
 #   fn:not(xs:nonPositiveInteger("-475688437271870490"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/not.xml#L286
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(! "-475688437271870490"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "false" ) ))
+  BIND(! "-475688437271870490"^^xsd:nonPositiveInteger AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "false" ) ))
 }

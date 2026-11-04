@@ -60,7 +60,7 @@ The assertions become:
 | `error` | `!BOUND(?result)`, as an error in `BIND` leaves the variable unbound |
 | `assert-string-value` | `sameTerm(xsd:string(?result), "…")` |
 | `assert-type` | `sameTerm(DATATYPE(?result), <type>) \|\| …`, over the type and the ones derived from it |
-| `assert-eq` of a number | the `assert-type` of `xs:numeric` `&& ?result = <number>`, as QT3 compares by value, so `1` equals `1.0e0` |
+| `assert-eq` of a number | `isNumeric(?result) && ?result = <number>`, as QT3 compares by value, so `1` equals `1.0e0` |
 | `assert-eq` of a string or boolean | the `assert-type` of its type `&& sameTerm(xsd:string(?result), "…")` |
 | `assert-true`, `assert-false` | `assert-eq` of `true`, respectively `false` |
 | `all-of`, `any-of`, `not` | `&&`, `\|\|`, `!` |
@@ -68,7 +68,7 @@ The assertions become:
 The expected value of `assert-eq` is folded into a literal, so `-0` becomes `"-0"^^xsd:integer` rather than a unary minus.
 The tests therefore only rely on the following to check the result,
 so a failing test points at the tested expression:
-`!`, `&&`, `||`, `BOUND`, `DATATYPE`, `sameTerm`, `xsd:string`, and `=` on two numbers,
+`!`, `&&`, `||`, `BOUND`, `DATATYPE`, `sameTerm`, `xsd:string`, `isNumeric`, and `=` on two numbers,
 where SPARQL extensions cannot change its result, unlike on other types, where `=` can be an error.
 
 Test cases that cannot be expressed in SPARQL are left out, such as XPath expressions without SPARQL equivalent,

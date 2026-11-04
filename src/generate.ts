@@ -24,7 +24,7 @@ import type { Element } from 'slimdom';
 import { parseXmlDocument } from 'slimdom';
 import { acceptsError, assertionToSparql } from './assertions.ts';
 import { extensionReasons } from './extensions.ts';
-import { RESULT_VARIABLE } from './sparqlAst.ts';
+import { RESULT_VARIABLE, XSD_PREFIX_DECLARATION } from './sparqlAst.ts';
 import { UnsupportedError } from './UnsupportedError.ts';
 import { xpathToSparql } from './xpathToSparql.ts';
 
@@ -302,6 +302,7 @@ function testCaseQuery(
   const query = `# QT3 test case ${testCase.getAttribute('name')} of test set ${testSetName}, which tests the XPath expression
 ${comment}
 # The test case is defined at ${url}${kind === 'extensions' ? `\n# The test needs ${reasons.join(', ')}, which SPARQL does not define` : ''}
+${XSD_PREFIX_DECLARATION}
 ASK {
   BIND(${sparql(expression)} AS ?${RESULT_VARIABLE})
   FILTER(${sparql(assertion)})

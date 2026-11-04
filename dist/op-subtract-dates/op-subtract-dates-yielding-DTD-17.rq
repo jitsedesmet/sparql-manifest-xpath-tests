@@ -2,7 +2,8 @@
 #   fn:string(xs:date("2000-12-12Z") - xs:date("2000-11-11Z")) and fn:false()
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dates.xml#L261
 # The test needs the constructor function xsd:date, - on xsd:date, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#date> ( "2000-12-12Z" ) - <http://www.w3.org/2001/XMLSchema#date> ( "2000-11-11Z" ) ) ) && "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "false" ) ))
+  BIND(( xsd:string ( ( xsd:date ( "2000-12-12Z" ) - xsd:date ( "2000-11-11Z" ) ) ) && "false"^^xsd:boolean ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "false" ) ))
 }

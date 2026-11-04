@@ -2,7 +2,8 @@
 #   fn:seconds-from-time(xs:time("08:03:35Z"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/seconds-from-time.xml#L16
 # The test needs the constructor function xsd:time, SECONDS on xsd:time, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(SECONDS( <http://www.w3.org/2001/XMLSchema#time> ( "08:03:35Z" ) ) AS ?result)
-  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "35" ))
+  BIND(SECONDS( xsd:time ( "08:03:35Z" ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "35" ))
 }

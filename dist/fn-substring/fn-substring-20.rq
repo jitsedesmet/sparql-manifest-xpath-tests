@@ -2,7 +2,8 @@
 #   fn:substring("ABCD",xs:double(1))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L187
 # The test needs SUBSTR with a position or length that is not an xsd:integer, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(SUBSTR( "ABCD" , <http://www.w3.org/2001/XMLSchema#double> ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) ) AS ?result)
-  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "ABCD" ))
+  BIND(SUBSTR( "ABCD" , xsd:double ( "1"^^xsd:integer ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "ABCD" ))
 }

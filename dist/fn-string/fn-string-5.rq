@@ -2,7 +2,8 @@
 #   string(xs:time("24:00:00"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml#L399
 # The test needs the constructor function xsd:time, xsd:string on xsd:time, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(<http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#time> ( "24:00:00" ) ) AS ?result)
-  FILTER(( ( ( ( ( ( ( ( ( ( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#string> ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#normalizedString> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#token> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#language> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#NMTOKEN> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#Name> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#NCName> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#ID> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#IDREF> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#ENTITY> ) ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "00:00:00" ) ))
+  BIND(xsd:string ( xsd:time ( "24:00:00" ) ) AS ?result)
+  FILTER(( ( ( ( ( ( ( ( ( ( SAMETERM( DATATYPE( ?result ) , xsd:string ) || SAMETERM( DATATYPE( ?result ) , xsd:normalizedString ) ) || SAMETERM( DATATYPE( ?result ) , xsd:token ) ) || SAMETERM( DATATYPE( ?result ) , xsd:language ) ) || SAMETERM( DATATYPE( ?result ) , xsd:NMTOKEN ) ) || SAMETERM( DATATYPE( ?result ) , xsd:Name ) ) || SAMETERM( DATATYPE( ?result ) , xsd:NCName ) ) || SAMETERM( DATATYPE( ?result ) , xsd:ID ) ) || SAMETERM( DATATYPE( ?result ) , xsd:IDREF ) ) || SAMETERM( DATATYPE( ?result ) , xsd:ENTITY ) ) && SAMETERM( xsd:string ( ?result ) , "00:00:00" ) ))
 }

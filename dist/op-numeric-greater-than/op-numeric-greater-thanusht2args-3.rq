@@ -1,7 +1,8 @@
 # QT3 test case op-numeric-greater-thanusht2args-3 of test set op-numeric-greater-than, which tests the XPath expression
 #   xs:unsignedShort("65535") gt xs:unsignedShort("0")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-greater-than.xml#L582
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( "65535"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> > "0"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  BIND(( "65535"^^xsd:unsignedShort > "0"^^xsd:unsignedShort ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
 }

@@ -1,7 +1,8 @@
 # QT3 test case fn-floordbl1args-3 of test set fn-floor, which tests the XPath expression
 #   fn:floor(xs:double("1.7976931348623157E308"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/floor.xml#L136
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(FLOOR( <http://www.w3.org/2001/XMLSchema#double> ( "1.7976931348623157E308" ) ) AS ?result)
-  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "1.7976931348623157E308" ))
+  BIND(FLOOR( xsd:double ( "1.7976931348623157E308" ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "1.7976931348623157E308" ))
 }

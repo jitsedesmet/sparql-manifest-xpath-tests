@@ -1,7 +1,8 @@
 # QT3 test case K2-NumericGT-3 of test set op-numeric-greater-than, which tests the XPath expression
 #   xs:double("3") gt xs:double("NaN")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-greater-than.xml#L1552
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( <http://www.w3.org/2001/XMLSchema#double> ( "3" ) > <http://www.w3.org/2001/XMLSchema#double> ( "NaN" ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "false" ) ))
+  BIND(( xsd:double ( "3" ) > xsd:double ( "NaN" ) ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "false" ) ))
 }

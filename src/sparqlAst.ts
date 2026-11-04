@@ -24,22 +24,29 @@ export function operation(operator: string, ...args: Expression[]): Expression {
   );
 }
 
+const XSD_PREFIX = 'xsd';
+
 /**
- * Create the IRI of an XSD datatype.
+ * The declaration of the prefix of the XSD IRIs, which every query needs.
+ */
+export const XSD_PREFIX_DECLARATION = `PREFIX ${XSD_PREFIX}: <${XSD}>`;
+
+/**
+ * Create the IRI of an XSD datatype, as a prefixed name.
  * @param localName The local name of the datatype.
  * @returns The IRI term.
  */
 export function xsdIri(localName: string): TermIri {
-  return astFactory.termNamed(astFactory.gen(), `${XSD}${localName}`);
+  return astFactory.termNamed(astFactory.gen(), localName, XSD_PREFIX);
 }
 
 /**
  * Determine the local name of an XSD IRI.
  * @param iri The IRI term.
- * @returns The local name, or undefined if the IRI is not in the XSD namespace.
+ * @returns The local name, or undefined if the IRI is not an XSD prefixed name.
  */
-export function xsdLocalName(iri: { value: string }): string | undefined {
-  return iri.value.startsWith(XSD) ? iri.value.slice(XSD.length) : undefined;
+export function xsdLocalName(iri: TermIri): string | undefined {
+  return 'prefix' in iri && iri.prefix === XSD_PREFIX ? iri.value : undefined;
 }
 
 /**

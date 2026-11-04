@@ -2,7 +2,8 @@
 #   (xs:time("01:01:01") - xs:dayTimeDuration("-P11DT02H02M"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L208
 # The test needs the constructor function xsd:time, the constructor function xsd:dayTimeDuration, - on xsd:time, - on xsd:dayTimeDuration, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( <http://www.w3.org/2001/XMLSchema#time> ( "01:01:01" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "-P11DT02H02M" ) ) AS ?result)
-  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "03:03:01" ))
+  BIND(( xsd:time ( "01:01:01" ) - xsd:dayTimeDuration ( "-P11DT02H02M" ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "03:03:01" ))
 }

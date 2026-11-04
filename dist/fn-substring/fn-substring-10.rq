@@ -2,7 +2,8 @@
 #   fn:substring("12345", -42, 1 div 0E0)
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L97
 # The test needs SUBSTR with a position or length that is not an xsd:integer, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(SUBSTR( "12345" , - "42"^^<http://www.w3.org/2001/XMLSchema#integer> , ( "1"^^<http://www.w3.org/2001/XMLSchema#integer> / "0E0"^^<http://www.w3.org/2001/XMLSchema#double> ) ) AS ?result)
-  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "12345" ))
+  BIND(SUBSTR( "12345" , - "42"^^xsd:integer , ( "1"^^xsd:integer / "0E0"^^xsd:double ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "12345" ))
 }

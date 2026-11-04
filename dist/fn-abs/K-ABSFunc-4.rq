@@ -1,7 +1,8 @@
 # QT3 test case K-ABSFunc-4 of test set fn-abs, which tests the XPath expression
 #   abs(10.5) eq 10.5
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L1585
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( ABS( "10.5"^^<http://www.w3.org/2001/XMLSchema#decimal> ) = "10.5"^^<http://www.w3.org/2001/XMLSchema#decimal> ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  BIND(( ABS( "10.5"^^xsd:decimal ) = "10.5"^^xsd:decimal ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
 }

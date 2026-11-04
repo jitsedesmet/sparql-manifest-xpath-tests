@@ -1,7 +1,8 @@
 # QT3 test case fn-starts-with-13 of test set fn-starts-with, which tests the XPath expression
 #   fn:starts-with(xs:string("A"),"A")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/starts-with.xml#L160
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(STRSTARTS( <http://www.w3.org/2001/XMLSchema#string> ( "A" ) , "A" ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  BIND(STRSTARTS( xsd:string ( "A" ) , "A" ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
 }

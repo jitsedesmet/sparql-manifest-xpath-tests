@@ -2,7 +2,8 @@
 #   fn:string((xs:dayTimeDuration("P01DT02H01M") - xs:dayTimeDuration("P02DT09H02M"))) and fn:string((xs:dayTimeDuration("P02DT03H03M") - xs:dayTimeDuration("P04DT04H04M")))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDurations.xml#L225
 # The test needs the constructor function xsd:dayTimeDuration, - on xsd:dayTimeDuration, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P01DT02H01M" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P02DT09H02M" ) ) ) && <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P02DT03H03M" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P04DT04H04M" ) ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  BIND(( xsd:string ( ( xsd:dayTimeDuration ( "P01DT02H01M" ) - xsd:dayTimeDuration ( "P02DT09H02M" ) ) ) && xsd:string ( ( xsd:dayTimeDuration ( "P02DT03H03M" ) - xsd:dayTimeDuration ( "P04DT04H04M" ) ) ) ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
 }

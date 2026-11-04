@@ -1,7 +1,8 @@
 # QT3 test case op-numeric-unary-plusdbl1args-1 of test set op-numeric-unary-plus, which tests the XPath expression
 #   +(xs:double("-1.7976931348623157E308"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-plus.xml#L88
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(+ <http://www.w3.org/2001/XMLSchema#double> ( "-1.7976931348623157E308" ) AS ?result)
-  FILTER(( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#double> ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#float> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#decimal> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#integer> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#negativeInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#long> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#int> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#short> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#byte> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedLong> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedInt> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedShort> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedByte> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#positiveInteger> ) ) && ( ?result = "-1.7976931348623157E308"^^<http://www.w3.org/2001/XMLSchema#double> ) ))
+  BIND(+ xsd:double ( "-1.7976931348623157E308" ) AS ?result)
+  FILTER(( ISNUMERIC( ?result ) && ( ?result = "-1.7976931348623157E308"^^xsd:double ) ))
 }

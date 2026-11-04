@@ -2,7 +2,8 @@
 #   fn:year-from-date(xs:date("2030-12-31Z"))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/year-from-date.xml#L25
 # The test needs the constructor function xsd:date, YEAR on xsd:date, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(YEAR( <http://www.w3.org/2001/XMLSchema#date> ( "2030-12-31Z" ) ) AS ?result)
-  FILTER(SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "2030" ))
+  BIND(YEAR( xsd:date ( "2030-12-31Z" ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "2030" ))
 }

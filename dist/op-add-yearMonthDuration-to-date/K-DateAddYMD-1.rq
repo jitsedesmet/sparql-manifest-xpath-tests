@@ -2,7 +2,8 @@
 #   xs:date("1999-08-12") + xs:yearMonthDuration("P3Y7M") eq xs:date("2003-03-12")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-date.xml#L339
 # The test needs the constructor function xsd:date, the constructor function xsd:yearMonthDuration, + on xsd:date, + on xsd:yearMonthDuration, = on xsd:date, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( ( <http://www.w3.org/2001/XMLSchema#date> ( "1999-08-12" ) + <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P3Y7M" ) ) = <http://www.w3.org/2001/XMLSchema#date> ( "2003-03-12" ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  BIND(( ( xsd:date ( "1999-08-12" ) + xsd:yearMonthDuration ( "P3Y7M" ) ) = xsd:date ( "2003-03-12" ) ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
 }

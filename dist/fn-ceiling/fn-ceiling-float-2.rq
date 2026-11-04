@@ -1,7 +1,8 @@
 # QT3 test case fn-ceiling-float-2 of test set fn-ceiling, which tests the XPath expression
 #   ceiling(xs:float(12.9e0))
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml#L931
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(CEIL( <http://www.w3.org/2001/XMLSchema#float> ( "12.9e0"^^<http://www.w3.org/2001/XMLSchema#double> ) ) AS ?result)
-  FILTER(( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#double> ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#float> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#decimal> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#integer> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#negativeInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#long> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#int> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#short> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#byte> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedLong> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedInt> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedShort> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#unsignedByte> ) ) || SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#positiveInteger> ) ) && ( ?result = "13.0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) ) && SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#float> ) ))
+  BIND(CEIL( xsd:float ( "12.9e0"^^xsd:double ) ) AS ?result)
+  FILTER(( ( ISNUMERIC( ?result ) && ( ?result = "13.0e0"^^xsd:double ) ) && SAMETERM( DATATYPE( ?result ) , xsd:float ) ))
 }

@@ -1,7 +1,8 @@
 # QT3 test case op-numeric-equalpint2args-10 of test set op-numeric-equal, which tests the XPath expression
 #   xs:positiveInteger("1") ne xs:positiveInteger("999999999999999999")
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-equal.xml#L808
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> != "999999999999999999"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  BIND(( "1"^^xsd:positiveInteger != "999999999999999999"^^xsd:positiveInteger ) AS ?result)
+  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
 }
