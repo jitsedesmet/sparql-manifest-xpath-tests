@@ -7,5 +7,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( xsd:string ( ( xsd:dateTime ( "1985-07-05T07:07:07Z" ) - xsd:dateTime ( "1984-07-05T08:08:08Z" ) ) ) || xsd:string ( ( xsd:dateTime ( "1985-07-05T09:09:09Z" ) - xsd:dateTime ( "1984-07-05T10:10:10Z" ) ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

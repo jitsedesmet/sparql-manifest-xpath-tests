@@ -6,5 +6,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( "-47175562203048468"^^xsd:long < "-92233720368547758"^^xsd:long ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "false" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "false" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

@@ -6,5 +6,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( ( ( ( ( REGEX( "abcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) && REGEX( "abccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "abbcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "abbccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "bbcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && REGEX( "bbccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ( ( ( ( ( ! REGEX( "aabcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) && ! REGEX( "bbbcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "acc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "aabcc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "abbc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) && ! REGEX( "abbcccc" , "^(?:a{0,1}b{1,2}c{2,3})$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

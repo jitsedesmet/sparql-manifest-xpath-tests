@@ -6,5 +6,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( REGEX( "ﬀﭏ" , "^(?:\\p{IsAlphabeticPresentationForms}+)$" ) && REGEX( "ﬀﬁﬂﬃﬄﬅﬆ﬇﬈﬉﬊﬋﬌﬍﬎﬏﬐﬑﬒ﬓﬔﬕﬖﬗ﬘﬙﬚﬛﬜יִﬞײַﬠﬡﬢﬣﬤﬥﬦﬧﬨ﬩שׁשׂשּׁשּׂאַאָאּבּגּדּהּוּזּ﬷טּיּךּכּלּ﬽מּ﬿נּסּ﭂ףּפּ﭅צּקּרּשּתּוֹבֿכֿפֿﭏ" , "^(?:\\p{IsAlphabeticPresentationForms}+)$" ) ) && "true"^^xsd:boolean ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

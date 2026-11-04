@@ -60,9 +60,8 @@ The assertions become:
 | `error` | `!BOUND(?result)`, as an error in `BIND` leaves the variable unbound |
 | `assert-string-value` | `sameTerm(xsd:string(?result), "…")` |
 | `assert-type` | `sameTerm(DATATYPE(?result), <type>) \|\| …`, over the type and the ones derived from it |
-| `assert-eq` of a number | the `assert-type` of `xs:numeric` `&& ?result = <number>`, as QT3 compares by value, so `1` equals `1.0e0` |
-| `assert-eq` of a string | `sameTerm(?result, "…")`, as a string is its own canonical form |
-| `assert-eq` of a boolean | `sameTerm(DATATYPE(?result), xsd:boolean) && sameTerm(xsd:string(?result), "…")`, as `xsd:string` gives the canonical `true` or `false` |
+| `assert-eq` of a number | `?result = <number> &&` the `assert-type` of `xs:numeric`, as QT3 compares by value, so `1` equals `1.0e0` |
+| `assert-eq` of a string or boolean | `sameTerm(xsd:string(?result), "…") &&` the `assert-type` of its type, as `xsd:string` gives the canonical form |
 | `assert-true`, `assert-false` | `assert-eq` of `true`, respectively `false` |
 | `all-of`, `any-of`, `not` | `&&`, `\|\|`, `!` |
 

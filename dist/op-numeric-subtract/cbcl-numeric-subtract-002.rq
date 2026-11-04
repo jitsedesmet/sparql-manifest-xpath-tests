@@ -9,5 +9,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( - "79228162514264337593543950335"^^xsd:integer - "1"^^xsd:integer ) < "0"^^xsd:integer ) AS ?result)
-  FILTER(( ( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ) || ! BOUND( ?result ) ))
+  FILTER(( ( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ) || ! BOUND( ?result ) ))
 }

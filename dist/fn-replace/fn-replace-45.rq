@@ -6,5 +6,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(REPLACE( "Now, let's SEND OUT for QUICHE!!" , "[A-Z][A-Z]+" , "$0$0" ) AS ?result)
-  FILTER(SAMETERM( ?result , "Now, let's SENDSEND OUTOUT for QUICHEQUICHE!!" ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "Now, let's SENDSEND OUTOUT for QUICHEQUICHE!!" ) && ( SAMETERM( DATATYPE( ?result ) , xsd:string ) || SAMETERM( DATATYPE( ?result ) , xsd:normalizedString ) || SAMETERM( DATATYPE( ?result ) , xsd:token ) || SAMETERM( DATATYPE( ?result ) , xsd:language ) || SAMETERM( DATATYPE( ?result ) , xsd:NMTOKEN ) || SAMETERM( DATATYPE( ?result ) , xsd:Name ) || SAMETERM( DATATYPE( ?result ) , xsd:NCName ) || SAMETERM( DATATYPE( ?result ) , xsd:ID ) || SAMETERM( DATATYPE( ?result ) , xsd:IDREF ) || SAMETERM( DATATYPE( ?result ) , xsd:ENTITY ) ) ))
 }

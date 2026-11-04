@@ -7,5 +7,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( REGEX( "a*a**a***" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) && REGEX( "aa*a" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ( ( ( ( ! REGEX( "" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) && ! REGEX( "a12b1c1" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ! REGEX( "ab12345" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ! REGEX( "1a2a2" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) && ! REGEX( "a1b1c1a" , "^(?:\\c\\C?\\c\\C+\\c\\C*)$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

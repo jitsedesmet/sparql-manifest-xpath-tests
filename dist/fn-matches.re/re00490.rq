@@ -8,5 +8,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( ( REGEX( "_" , "^(?:\\i)$" ) && REGEX( ":" , "^(?:\\i)$" ) ) && REGEX( "a" , "^(?:\\i)$" ) ) && ( ( ( ! REGEX( " " , "^(?:\\i)$" ) && ! REGEX( "\n" , "^(?:\\i)$" ) ) && ! REGEX( "\n" , "^(?:\\i)$" ) ) && ! REGEX( "\t" , "^(?:\\i)$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

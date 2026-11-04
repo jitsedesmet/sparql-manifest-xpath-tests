@@ -6,5 +6,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( xsd:dateTime ( "1970-04-02T12:00:20Z" ) <= xsd:dateTime ( "1980-04-02T12:00:20Z" ) ) || "true"^^xsd:boolean ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

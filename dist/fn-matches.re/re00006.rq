@@ -6,5 +6,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( ( ( REGEX( "a" , "^(?:a|b|a|c|b|d|a)$" ) && REGEX( "b" , "^(?:a|b|a|c|b|d|a)$" ) ) && REGEX( "c" , "^(?:a|b|a|c|b|d|a)$" ) ) && REGEX( "d" , "^(?:a|b|a|c|b|d|a)$" ) ) && ( ( ! REGEX( "aa" , "^(?:a|b|a|c|b|d|a)$" ) && ! REGEX( "ac" , "^(?:a|b|a|c|b|d|a)$" ) ) && ! REGEX( "e" , "^(?:a|b|a|c|b|d|a)$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

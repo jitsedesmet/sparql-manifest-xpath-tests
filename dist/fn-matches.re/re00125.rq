@@ -11,5 +11,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( "true"^^xsd:boolean && ( ( ! REGEX( "\n\\\n|\t.-^?*+{}()[" , "^(?:\\n\\\\\\r\\|\\t\\.\\-\\^\\?\\*\\+\\{\\}\\(\\)\\[\\])$" ) && ! REGEX( "\\\n|\t.-^?*+{}()[]" , "^(?:\\n\\\\\\r\\|\\t\\.\\-\\^\\?\\*\\+\\{\\}\\(\\)\\[\\])$" ) ) && ! REGEX( "\n\\\n|\t-^?*+{}()[]" , "^(?:\\n\\\\\\r\\|\\t\\.\\-\\^\\?\\*\\+\\{\\}\\(\\)\\[\\])$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

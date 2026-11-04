@@ -24,5 +24,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ! REGEX( "" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) && ( ( ! REGEX( "\n\na\n\nb;\n" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) && ! REGEX( "\na\n\nb;\n\n" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) ) && ! REGEX( "\n\na\n\nb;\n\n" , "^(?:\\n\\na\\n\\nb\\n\\n)$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

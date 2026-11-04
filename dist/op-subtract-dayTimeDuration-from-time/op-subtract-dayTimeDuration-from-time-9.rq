@@ -7,5 +7,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( xsd:string ( ( xsd:time ( "10:10:10Z" ) - xsd:dayTimeDuration ( "P02DT09H02M" ) ) ) && xsd:string ( ( xsd:time ( "09:02:02Z" ) - xsd:dayTimeDuration ( "P04DT04H04M" ) ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

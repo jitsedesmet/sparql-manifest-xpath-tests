@@ -12,5 +12,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( ( ( REGEX( "\ta \n\n \n\tb" , "^(?:(\\t|\\s)a(\\r\\n|\\r|\\n|\\s)+(\\s|\\t)b(\\s|\\r\\n|\\r|\\n)*)$" ) && REGEX( " a  b" , "^(?:(\\t|\\s)a(\\r\\n|\\r|\\n|\\s)+(\\s|\\t)b(\\s|\\r\\n|\\r|\\n)*)$" ) ) && REGEX( " a  b " , "^(?:(\\t|\\s)a(\\r\\n|\\r|\\n|\\s)+(\\s|\\t)b(\\s|\\r\\n|\\r|\\n)*)$" ) ) && REGEX( "\ta \n\n \nb" , "^(?:(\\t|\\s)a(\\r\\n|\\r|\\n|\\s)+(\\s|\\t)b(\\s|\\r\\n|\\r|\\n)*)$" ) ) && ( ! REGEX( " a b" , "^(?:(\\t|\\s)a(\\r\\n|\\r|\\n|\\s)+(\\s|\\t)b(\\s|\\r\\n|\\r|\\n)*)$" ) && ! REGEX( " a b " , "^(?:(\\t|\\s)a(\\r\\n|\\r|\\n|\\s)+(\\s|\\t)b(\\s|\\r\\n|\\r|\\n)*)$" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

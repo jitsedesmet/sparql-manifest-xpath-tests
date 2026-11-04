@@ -9,5 +9,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( xsd:date ( "25252734927766555-07-28" ) >= xsd:date ( "-25252734927766555-06-07+02:00" ) ) AS ?result)
-  FILTER(( ! BOUND( ?result ) || ( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "true" ) ) ))
+  FILTER(( ! BOUND( ?result ) || ( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ) ))
 }

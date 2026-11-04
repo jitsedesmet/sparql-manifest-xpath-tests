@@ -7,5 +7,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( xsd:yearMonthDuration ( "P10Y01M" ) <= xsd:yearMonthDuration ( "P09Y06M" ) ) || ( xsd:yearMonthDuration ( "P15Y01M" ) <= xsd:yearMonthDuration ( "P02Y04M" ) ) ) AS ?result)
-  FILTER(( SAMETERM( DATATYPE( ?result ) , xsd:boolean ) && SAMETERM( xsd:string ( ?result ) , "false" ) ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "false" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }
