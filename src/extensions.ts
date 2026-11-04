@@ -30,7 +30,6 @@ const RESULT_TYPES: Record<string, string> = {
     '<=',
     '>',
     '>=',
-    'in',
     'bound',
     'sameterm',
     'strstarts',

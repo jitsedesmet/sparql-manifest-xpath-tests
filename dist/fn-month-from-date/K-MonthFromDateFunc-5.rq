@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:date, MONTH on xsd:date, which SPARQL does not define
 ASK {
   BIND(( MONTH( <http://www.w3.org/2001/XMLSchema#date> ( "2000-02-03" ) ) = "2"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
 }

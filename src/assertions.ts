@@ -88,7 +88,19 @@ function foldLiteral(expression: Expression): TermLiteral | undefined {
  * @returns The SPARQL expression of the type check.
  */
 function hasType(term: Expression, type: string): Expression {
-  return operation('in', operation('datatype', term), ...subTypes(type).map(xsdIri));
+  // A disjunction of sameTerm rather than IN, which is a disjunction of =
+  const datatype = operation('datatype', term);
+  return combine('||', subTypes(type).map(subType => operation('sameterm', datatype, xsdIri(subType))));
+}
+
+/**
+ * Combine SPARQL expressions with a binary logical operator, as Traqula only generates two operands per operator.
+ * @param operator The SPARQL operator, `&&` or `||`.
+ * @param operands The SPARQL expressions, at least one.
+ * @returns The SPARQL expression of the combination.
+ */
+function combine(operator: '&&' | '||', operands: Expression[]): Expression {
+  return operands.reduce((left, right) => operation(operator, left, right));
 }
 
 /**
@@ -133,10 +145,10 @@ export function assertionToSparql(assertion: Element): Expression {
       return operation('!', operation('bound', result));
     case 'all-of':
     case 'any-of':
-      return assertion.children
-        .map(child => assertionToSparql(child))
-        .reduce((left, right) =>
-          operation(assertion.localName === 'all-of' ? '&&' : '||', left, right));
+      return combine(
+        assertion.localName === 'all-of' ? '&&' : '||',
+        assertion.children.map(child => assertionToSparql(child)),
+      );
     case 'not':
       return operation('!', assertionToSparql(assertion.children[0]));
     case 'assert-true':

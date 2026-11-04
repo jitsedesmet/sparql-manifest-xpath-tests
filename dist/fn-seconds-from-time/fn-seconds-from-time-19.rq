@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:time, SECONDS on xsd:time, which SPARQL does not define
 ASK {
   BIND(( SECONDS( <http://www.w3.org/2001/XMLSchema#time> ( "10:03:01Z" ) ) >= SECONDS( <http://www.w3.org/2001/XMLSchema#time> ( "10:04:02Z" ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "false" ) ))
+  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "false" ) ))
 }

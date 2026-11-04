@@ -3,5 +3,5 @@
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4316
 ASK {
   BIND(( REGEX( "P1111Y12M" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) && ( ( ( ( ( ( ! REGEX( "P111Y12M" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) && ! REGEX( "P1111Y1M" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) ) && ! REGEX( "P11111Y12M" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) ) && ! REGEX( "P1111Y" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) ) && ! REGEX( "P12M" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) ) && ! REGEX( "P11111Y00M" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) ) && ! REGEX( "P11111Y13M" , "^(?:P\\p{Nd}{4}Y\\p{Nd}{2}M)$" ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
+  FILTER(( SAMETERM( DATATYPE( ?result ) , <http://www.w3.org/2001/XMLSchema#boolean> ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
 }
