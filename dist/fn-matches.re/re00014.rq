@@ -3,5 +3,5 @@
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L120
 ASK {
   BIND(( ( ( ( ( REGEX( "b" , "^(?:a?b+c*)$" ) && REGEX( "ab" , "^(?:a?b+c*)$" ) ) && REGEX( "bcccccc" , "^(?:a?b+c*)$" ) ) && REGEX( "abc" , "^(?:a?b+c*)$" ) ) && REGEX( "abbbc" , "^(?:a?b+c*)$" ) ) && ( ( ( ( ! REGEX( "aabc" , "^(?:a?b+c*)$" ) && ! REGEX( "a" , "^(?:a?b+c*)$" ) ) && ! REGEX( "c" , "^(?:a?b+c*)$" ) ) && ! REGEX( "ac" , "^(?:a?b+c*)$" ) ) && ! REGEX( "" , "^(?:a?b+c*)$" ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ?result ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ( ?result = "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ))
 }

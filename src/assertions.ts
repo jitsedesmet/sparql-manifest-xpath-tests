@@ -114,9 +114,11 @@ export function assertionToSparql(assertion: Element): Expression {
     case 'not':
       return operation('!', assertionToSparql(assertion.children[0]));
     case 'assert-true':
-      return operation('&&', hasType(result, 'boolean'), result);
-    case 'assert-false':
-      return operation('&&', hasType(result, 'boolean'), operation('!', result));
+    case 'assert-false': {
+      // = rather than the effective boolean value, which is false for an ill-typed xsd:boolean
+      const expected = literal(assertion.localName === 'assert-true' ? 'true' : 'false', 'boolean');
+      return operation('&&', hasType(result, 'boolean'), operation('=', result, expected));
+    }
     case 'assert-eq': {
       // QT3 compares by value, as XPath's eq, which is = rather than sameTerm, e.g. 1 = 1.0e0
       const expected = foldLiteral(xpathToSparql(text));

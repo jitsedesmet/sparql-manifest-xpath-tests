@@ -4,5 +4,5 @@
 # The test needs SUBSTR with a position or length that is not an xsd:integer, which SPARQL does not define
 ASK {
   BIND(( SUBSTR( "12345" , - "3.1e0"^^<http://www.w3.org/2001/XMLSchema#double> , "5.2e0"^^<http://www.w3.org/2001/XMLSchema#double> ) = "1" ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ?result ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ( ?result = "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ))
 }

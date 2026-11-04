@@ -61,13 +61,13 @@ The assertions become:
 | `assert-eq` | `?result = <literal>`, as QT3 compares by value, so `1` equals `1.0e0` |
 | `assert-string-value` | `sameTerm(xsd:string(?result), "…")` |
 | `assert-type` | `DATATYPE(?result) IN (…)`, with the datatypes derived from the type |
-| `assert-true`, `assert-false` | `DATATYPE(?result) IN (xsd:boolean) && ?result`, respectively `!?result` |
+| `assert-true`, `assert-false` | `DATATYPE(?result) IN (xsd:boolean) && ?result = true`, respectively `false` |
 | `all-of`, `any-of`, `not` | `&&`, `\|\|`, `!` |
 
 The expected value of `assert-eq` is folded into a literal, so `-0` becomes `"-0"^^xsd:integer` rather than a unary minus.
 The tests therefore only rely on the following to check the result,
 so a failing test points at the tested expression:
-`!`, `&&`, `||`, `BOUND`, `DATATYPE`, `IN`, `sameTerm`, `xsd:string`, `=`, and the effective boolean value of an `xsd:boolean`.
+`!`, `&&`, `||`, `BOUND`, `DATATYPE`, `IN`, `sameTerm`, `xsd:string` and `=`.
 
 Test cases that cannot be expressed in SPARQL are left out, such as XPath expressions without SPARQL equivalent,
 assertions that need more than the above, such as `assert` with an arbitrary XPath expression,

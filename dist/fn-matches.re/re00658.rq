@@ -3,5 +3,5 @@
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L5444
 ASK {
   BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ( ( ! REGEX( "{hello 1234567890 world}" , "^(?:(([0-9])|([a-z])|([A-Z]))*)$" ) && ! REGEX( "{HELLO 1234567890 world}" , "^(?:(([0-9])|([a-z])|([A-Z]))*)$" ) ) && ! REGEX( "{1234567890 hello  world}" , "^(?:(([0-9])|([a-z])|([A-Z]))*)$" ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ?result ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ( ?result = "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ))
 }
