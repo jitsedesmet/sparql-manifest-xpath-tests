@@ -276,7 +276,8 @@ function checkSupported(
 }
 
 /**
- * Serialize a text of the test suite as the lines of a SPARQL comment, keeping the indentation relative to the source.
+ * Serialize a text of the test suite as the lines of a SPARQL comment, without the indentation that the lines after
+ * the first all share.
  * @param text The text, of which the lines after the first are indented as in the source.
  * @returns The lines of the comment.
  */

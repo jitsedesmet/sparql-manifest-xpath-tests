@@ -49,12 +49,17 @@ export function acceptsError(assertion: Expression): boolean {
 }
 
 /**
- * The SPARQL operators that the assertions use, which the README lists, as the tests rely on them being correct.
+ * The SPARQL variable that the result of the tested XPath expression is bound to.
  */
-const ASSERTION_OPERATORS = new Set([ '!', '&&', '||', 'bound', 'datatype', 'sameterm', '=' ]);
+const RESULT = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
 
 /**
- * Check that an assertion only uses the operations that the README lists, where = compares with a number.
+ * The SPARQL operations that the assertions use, which the README lists, as the tests rely on them being correct.
+ */
+const ASSERTION_OPERATIONS = new Set([ '!', '&&', '||', 'bound', 'datatype', 'sameterm', 'xsd:string', '=' ]);
+
+/**
+ * Check that an assertion only uses the operations that the README lists, where = has a numeric literal operand.
  * @param expression The SPARQL expression of the assertion.
  * @throws {Error} If the assertion uses another operation, which is a bug of the generator.
  */
@@ -65,8 +70,8 @@ function checkOperations(expression: Expression): void {
   const name = astFactory.isExpressionFunctionCall(expression) ?
     `xsd:${xsdLocalName(expression.function)}` :
     expression.operator;
-  const isListed = name === 'xsd:string' || (ASSERTION_OPERATORS.has(name) && (name !== '=' ||
-    expression.args.some(arg => astFactory.isTermLiteral(arg) && NUMERIC_TYPES.has(literalType(arg) ?? ''))));
+  const isListed = ASSERTION_OPERATIONS.has(name) && (name !== '=' ||
+    expression.args.some(arg => astFactory.isTermLiteral(arg) && NUMERIC_TYPES.has(literalType(arg) ?? '')));
   if (!isListed) {
     throw new Error(`An assertion uses ${name}, which the README does not list`);
   }
@@ -147,23 +152,57 @@ function hasStringValue(term: Expression, value: string): Expression {
 }
 
 /**
- * Create the SPARQL expression that a term equals a literal, as XPath's eq: a number by value, and a string or boolean
- * by its canonical string value, both followed by a type check.
- * @param term The SPARQL expression of the term.
- * @param expected The literal, which is a number, string or boolean.
- * @param checkedType The datatype that a conjoined assertion already checks the term for, if any.
- * @returns The SPARQL expression of the comparison.
+ * An assertion that ?result equals a literal, as XPath's eq, split into the comparison of the value and the datatype
+ * that ?result needs for it.
  */
-function equals(term: Expression, expected: TermLiteral, checkedType?: string): Expression {
+interface Equality {
+  comparison: Expression;
+  requiredType: string;
+}
+
+/**
+ * Split an assert-eq, assert-true or assert-false into the comparison of the value and the datatype it requires,
+ * where a number compares by value and a string or boolean by its canonical string value.
+ * @param assertion The assertion element.
+ * @returns The equality, or undefined if the assertion is of another kind.
+ * @throws {UnsupportedError} If the expected value is not a constant.
+ */
+function equality(assertion: Element): Equality | undefined {
+  let expected: TermLiteral | undefined;
+  switch (assertion.localName) {
+    case 'assert-true':
+    case 'assert-false':
+      expected = literal(assertion.localName === 'assert-true' ? 'true' : 'false', 'boolean');
+      break;
+    case 'assert-eq':
+      expected = foldLiteral(xpathToSparql(assertion.textContent!));
+      if (!expected) {
+        throw new UnsupportedError('Unsupported expected value', assertion.textContent!.trim());
+      }
+      break;
+    default:
+      return undefined;
+  }
   const type = literalType(expected)!;
   const isNumber = NUMERIC_TYPES.has(type);
-  // Numbers compare by value, e.g. 1 = 1.0e0
-  const comparison = isNumber ? operation('=', term, expected) : hasStringValue(term, expected.value);
-  const requiredType = isNumber ? 'numeric' : type;
+  return {
+    // Numbers compare by value, e.g. 1 = 1.0e0
+    comparison: isNumber ? operation('=', RESULT, expected) : hasStringValue(RESULT, expected.value),
+    requiredType: isNumber ? 'numeric' : type,
+  };
+}
+
+/**
+ * Create the SPARQL expression of an equality, followed by its type check unless an enclosing assert-type implies it.
+ * @param equality The equality.
+ * @param checkedType The datatype that an assert-type in an enclosing all-of checks ?result for, if any.
+ * @returns The SPARQL expression of the equality.
+ */
+function checkedEquality({ comparison, requiredType }: Equality, checkedType?: string): Expression {
   // A conjoined type check makes the whole conjunction false for any other type, whatever the comparison gives
   return checkedType !== undefined && isSubType(checkedType, requiredType) ?
     comparison :
-    operation('&&', comparison, hasType(term, requiredType));
+    operation('&&', comparison, hasType(RESULT, requiredType));
 }
 
 /**
@@ -203,39 +242,39 @@ export function assertionToSparql(assertion: Element): Expression {
  * @throws {UnsupportedError} If the assertion needs other operations.
  */
 function translateAssertion(assertion: Element, checkedType?: string): Expression {
-  const result = astFactory.termVariable(RESULT_VARIABLE, astFactory.gen());
-  const text = assertion.textContent!;
   switch (assertion.localName) {
     case 'error':
-      return operation('!', operation('bound', result));
+      return operation('!', operation('bound', RESULT));
     case 'all-of': {
       const typeAssertion = assertion.children.find(child => child.localName === 'assert-type');
       const childCheckedType = typeAssertion ? assertedType(typeAssertion) : checkedType;
       return combine('&&', assertion.children.map(child => translateAssertion(child, childCheckedType)));
     }
-    case 'any-of':
+    case 'any-of': {
+      // Equalities that require the same datatype share one type check, as && distributes over ||
+      const equalities = assertion.children.map(equality);
+      const requiredTypes = new Set(equalities.map(childEquality => childEquality?.requiredType));
+      if (requiredTypes.size === 1 && !requiredTypes.has(undefined)) {
+        return checkedEquality({
+          comparison: combine('||', equalities.map(childEquality => childEquality!.comparison)),
+          requiredType: equalities[0]!.requiredType,
+        }, checkedType);
+      }
       return combine('||', assertion.children.map(child => translateAssertion(child, checkedType)));
+    }
     case 'not':
       return operation('!', translateAssertion(assertion.children[0], checkedType));
     case 'assert-true':
-    case 'assert-false': {
-      const expected = literal(assertion.localName === 'assert-true' ? 'true' : 'false', 'boolean');
-      return equals(result, expected, checkedType);
-    }
-    case 'assert-eq': {
-      const expected = foldLiteral(xpathToSparql(text));
-      if (!expected) {
-        throw new UnsupportedError('Unsupported expected value', text.trim());
-      }
-      return equals(result, expected, checkedType);
-    }
+    case 'assert-false':
+    case 'assert-eq':
+      return checkedEquality(equality(assertion)!, checkedType);
     case 'assert-string-value':
       if (assertion.getAttribute('normalize-space') === 'true') {
         throw new UnsupportedError('Unsupported assertion', 'assert-string-value with normalize-space');
       }
-      return hasStringValue(result, text);
+      return hasStringValue(RESULT, assertion.textContent!);
     case 'assert-type':
-      return hasType(result, assertedType(assertion));
+      return hasType(RESULT, assertedType(assertion));
     default:
       throw new UnsupportedError('Unsupported assertion', assertion.localName);
   }

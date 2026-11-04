@@ -46,6 +46,7 @@ with `-m 'https://sparql-manifest-xpath-tests.jitsedesmet.be/~path/to/dist/'`.
 Each QT3 test case becomes an `ASK` query:
 
 ```sparql
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(<the XPath expression, translated to SPARQL> AS ?result)
   FILTER(<the assertion of the test case, translated to SPARQL>)
@@ -65,8 +66,9 @@ The assertions become:
 | `assert-true`, `assert-false` | `assert-eq` of `true`, respectively `false` |
 | `all-of`, `any-of`, `not` | `&&`, `\|\|`, `!` |
 
-The type check of `assert-eq` is left out when an `assert-type` in the same `all-of` checks a type derived from it,
+The type check of `assert-eq` is left out when an `assert-type` in an enclosing `all-of` checks a type derived from it,
 as that makes the conjunction false for any other type.
+The `assert-eq`s in an `any-of` that need the same type share one type check, as `&&` distributes over `||`.
 
 The expected value of `assert-eq` is folded into a literal, so `-0` becomes `"-0"^^xsd:integer` rather than a unary minus.
 The tests therefore only rely on the following to check the result,

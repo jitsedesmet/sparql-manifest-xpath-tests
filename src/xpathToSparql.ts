@@ -140,6 +140,7 @@ const GROUPING_ELEMENTS = new Set([
   'atomicType',
   'optional',
   'value',
+  'name',
 ]);
 
 /**
