@@ -92,6 +92,32 @@ function hasType(term: Expression, type: string): Expression {
 }
 
 /**
+ * Create the SPARQL expression that the string value of a term, as XPath casting defines it, is the given string.
+ * @param term The SPARQL expression of the term.
+ * @param value The string.
+ * @returns The SPARQL expression of the comparison.
+ */
+function hasStringValue(term: Expression, value: string): Expression {
+  return operation('sameterm', xsdFunctionCall('string', term), literal(value, 'string'));
+}
+
+/**
+ * Create the SPARQL expression that a term equals a literal, as XPath's eq, where the type check first ensures that
+ * = only compares two numbers, and a string or boolean is compared by its string value, which is canonical.
+ * @param term The SPARQL expression of the term.
+ * @param expected The literal, which is a number, string or boolean.
+ * @returns The SPARQL expression of the comparison.
+ */
+function equals(term: Expression, expected: TermLiteral): Expression {
+  const type = astFactory.isTermLiteralTyped(expected) ? xsdLocalName(expected.langOrIri)! : 'string';
+  if (NUMERIC_TYPES.has(type)) {
+    // Numbers compare by value, e.g. 1 = 1.0e0
+    return operation('&&', hasType(term, 'numeric'), operation('=', term, expected));
+  }
+  return operation('&&', hasType(term, type), hasStringValue(term, expected.value));
+}
+
+/**
  * Translate an assertion of the test suite into a SPARQL expression that is true if ?result satisfies it,
  * where an error of the test leaves ?result unbound.
  * Only the operations that the README lists are used, so a failing test points at the tested expression.
@@ -114,24 +140,20 @@ export function assertionToSparql(assertion: Element): Expression {
     case 'not':
       return operation('!', assertionToSparql(assertion.children[0]));
     case 'assert-true':
-    case 'assert-false': {
-      // = rather than the effective boolean value, which is false for an ill-typed xsd:boolean
-      const expected = literal(assertion.localName === 'assert-true' ? 'true' : 'false', 'boolean');
-      return operation('&&', hasType(result, 'boolean'), operation('=', result, expected));
-    }
+    case 'assert-false':
+      return equals(result, literal(assertion.localName === 'assert-true' ? 'true' : 'false', 'boolean'));
     case 'assert-eq': {
-      // QT3 compares by value, as XPath's eq, which is = rather than sameTerm, e.g. 1 = 1.0e0
       const expected = foldLiteral(xpathToSparql(text));
       if (!expected) {
         throw new UnsupportedError('Unsupported expected value', text.trim());
       }
-      return operation('=', result, expected);
+      return equals(result, expected);
     }
     case 'assert-string-value':
       if (assertion.getAttribute('normalize-space') === 'true') {
         throw new UnsupportedError('Unsupported assertion', 'assert-string-value with normalize-space');
       }
-      return operation('sameterm', xsdFunctionCall('string', result), literal(text, 'string'));
+      return hasStringValue(result, text);
     case 'assert-type': {
       const typeName = text.trim();
       const match = /^xs:(\w+)$/u.exec(typeName);

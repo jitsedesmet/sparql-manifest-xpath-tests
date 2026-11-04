@@ -3,5 +3,5 @@
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1089
 ASK {
   BIND(REGEX( "abcdefghijkabcdefghijk" , "(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)\\1\\2\\3\\4\\5\\6\\7\\8\\9\\10\\11" ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ( ?result = "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
 }

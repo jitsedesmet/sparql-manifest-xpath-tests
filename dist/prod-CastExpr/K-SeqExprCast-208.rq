@@ -4,5 +4,5 @@
 # The test needs the constructor function xsd:duration, xsd:yearMonthDuration on xsd:duration, the constructor function xsd:yearMonthDuration, xsd:string on xsd:yearMonthDuration, which SPARQL does not define
 ASK {
   BIND(( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( <http://www.w3.org/2001/XMLSchema#duration> ( "P3Y0M31DT3H2M10.001S" ) ) ) = "P3Y" ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && ( ?result = "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) ))
+  FILTER(( ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#boolean> ) ) && SAMETERM( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) , "true" ) ))
 }
