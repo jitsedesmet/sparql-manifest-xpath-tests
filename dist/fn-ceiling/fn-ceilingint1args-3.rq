@@ -1,7 +1,10 @@
 # QT3 test case fn-ceilingint1args-3 of test set fn-ceiling, which tests the XPath expression
 #   fn:ceiling(xs:int("2147483647"))
+# Expecting:
+#   <assert-eq>2147483647</assert-eq>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml#L78
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(CEIL( "2147483647"^^<http://www.w3.org/2001/XMLSchema#int> ) AS ?result)
-  FILTER(( ?result = "2147483647"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+  BIND(CEIL( "2147483647"^^xsd:int ) AS ?result)
+  FILTER(( ( ?result = "2147483647"^^xsd:integer ) && ( SAMETERM( DATATYPE( ?result ) , xsd:double ) || SAMETERM( DATATYPE( ?result ) , xsd:float ) || SAMETERM( DATATYPE( ?result ) , xsd:decimal ) || SAMETERM( DATATYPE( ?result ) , xsd:integer ) || SAMETERM( DATATYPE( ?result ) , xsd:nonPositiveInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:negativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:long ) || SAMETERM( DATATYPE( ?result ) , xsd:int ) || SAMETERM( DATATYPE( ?result ) , xsd:short ) || SAMETERM( DATATYPE( ?result ) , xsd:byte ) || SAMETERM( DATATYPE( ?result ) , xsd:nonNegativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedLong ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedInt ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedShort ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedByte ) || SAMETERM( DATATYPE( ?result ) , xsd:positiveInteger ) ) ))
 }

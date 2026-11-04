@@ -1,5 +1,5 @@
 import type * as T11 from '@traqula/rules-sparql-1-1';
-import type { Expression, TermIri } from '@traqula/rules-sparql-1-2';
+import type { Expression, TermIri, TermLiteral } from '@traqula/rules-sparql-1-2';
 import { AstFactory } from '@traqula/rules-sparql-1-2';
 import { XSD } from './xsd.ts';
 
@@ -24,22 +24,41 @@ export function operation(operator: string, ...args: Expression[]): Expression {
   );
 }
 
+const XSD_PREFIX = 'xsd';
+
 /**
- * Create the IRI of an XSD datatype.
+ * The declaration of the prefix of the XSD IRIs, which every query needs.
+ */
+export const XSD_PREFIX_DECLARATION = `PREFIX ${XSD_PREFIX}: <${XSD}>`;
+
+/**
+ * Create the IRI of an XSD datatype, as a prefixed name.
  * @param localName The local name of the datatype.
  * @returns The IRI term.
  */
 export function xsdIri(localName: string): TermIri {
-  return astFactory.termNamed(astFactory.gen(), `${XSD}${localName}`);
+  return astFactory.termNamed(astFactory.gen(), localName, XSD_PREFIX);
 }
 
 /**
  * Determine the local name of an XSD IRI.
  * @param iri The IRI term.
- * @returns The local name, or undefined if the IRI is not in the XSD namespace.
+ * @returns The local name, or undefined if the IRI is not an XSD prefixed name.
  */
-export function xsdLocalName(iri: { value: string }): string | undefined {
-  return iri.value.startsWith(XSD) ? iri.value.slice(XSD.length) : undefined;
+export function xsdLocalName(iri: TermIri): string | undefined {
+  return astFactory.isTermNamedPrefixed(iri) && iri.prefix === XSD_PREFIX ? iri.value : undefined;
+}
+
+/**
+ * Determine the XSD datatype of a literal, as the inverse of `literal`.
+ * @param term The literal.
+ * @returns The local name of the datatype, `string` for a simple literal, or undefined for a language-tagged string.
+ */
+export function literalType(term: TermLiteral): string | undefined {
+  if (astFactory.isTermLiteralTyped(term)) {
+    return xsdLocalName(term.langOrIri);
+  }
+  return astFactory.isTermLiteralStr(term) ? 'string' : undefined;
 }
 
 /**
@@ -48,7 +67,7 @@ export function xsdLocalName(iri: { value: string }): string | undefined {
  * @param datatype The local name of the XSD datatype, where `string` creates a simple literal.
  * @returns The SPARQL literal.
  */
-export function literal(value: string, datatype: string): Expression {
+export function literal(value: string, datatype: string): TermLiteral {
   return datatype === 'string' ?
     astFactory.termLiteral(astFactory.gen(), value) :
     astFactory.termLiteral(astFactory.gen(), value, xsdIri(datatype));

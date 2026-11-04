@@ -42,7 +42,6 @@
     <#op-numeric-dividenni2args-2>
     <#op-numeric-dividesht2args-1>
     <#op-numeric-dividesht2args-3>
-    <#op-numeric-dividesht2args-5>
     <#op-numeric-dividemix2args-3>
     <#K-NumericDivide-1>
     <#K-NumericDivide-2>
@@ -316,13 +315,6 @@
   rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:short(upper bound) $arg2 = xs:short(lower bound)" ;
   rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L511> ;
   mf:action [ qt:query <op-numeric-dividesht2args-3.rq> ] ;
-  mf:result <../true.srj> .
-
-<#op-numeric-dividesht2args-5> a mf:QueryEvaluationTest ;
-  mf:name "op-numeric-dividesht2args-5" ;
-  rdfs:comment "Evaluates The \"op:numeric-divide\" operator with the arguments set as follows: $arg1 = xs:short(lower bound) $arg2 = xs:short(upper bound)" ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L532> ;
-  mf:action [ qt:query <op-numeric-dividesht2args-5.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-dividemix2args-3> a mf:QueryEvaluationTest ;

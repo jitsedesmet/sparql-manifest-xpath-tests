@@ -1,7 +1,10 @@
 # QT3 test case K2-RoundFunc-100 of test set fn-round, which tests the XPath expression
 #   fn:round(xs:double("0.54"))
+# Expecting:
+#   <assert-eq>1</assert-eq>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/round.xml#L1426
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(ROUND( <http://www.w3.org/2001/XMLSchema#double> ( "0.54" ) ) AS ?result)
-  FILTER(( ?result = "1"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+  BIND(ROUND( xsd:double ( "0.54" ) ) AS ?result)
+  FILTER(( ( ?result = "1"^^xsd:integer ) && ( SAMETERM( DATATYPE( ?result ) , xsd:double ) || SAMETERM( DATATYPE( ?result ) , xsd:float ) || SAMETERM( DATATYPE( ?result ) , xsd:decimal ) || SAMETERM( DATATYPE( ?result ) , xsd:integer ) || SAMETERM( DATATYPE( ?result ) , xsd:nonPositiveInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:negativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:long ) || SAMETERM( DATATYPE( ?result ) , xsd:int ) || SAMETERM( DATATYPE( ?result ) , xsd:short ) || SAMETERM( DATATYPE( ?result ) , xsd:byte ) || SAMETERM( DATATYPE( ?result ) , xsd:nonNegativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedLong ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedInt ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedShort ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedByte ) || SAMETERM( DATATYPE( ?result ) , xsd:positiveInteger ) ) ))
 }

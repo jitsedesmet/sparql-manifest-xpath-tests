@@ -1,7 +1,13 @@
 # QT3 test case K2-Literals-14 of test set prod-Literal, which tests the XPath expression
 #   0.0
+# Expecting:
+#   <all-of>
+#     <assert-eq>0</assert-eq>
+#     <assert-string-value>0</assert-string-value>
+#   </all-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L1349
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND("0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> AS ?result)
-  FILTER(( ( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) && ( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ) ))
+  BIND("0.0"^^xsd:decimal AS ?result)
+  FILTER(( ( ( ?result = "0"^^xsd:integer ) && ( SAMETERM( DATATYPE( ?result ) , xsd:double ) || SAMETERM( DATATYPE( ?result ) , xsd:float ) || SAMETERM( DATATYPE( ?result ) , xsd:decimal ) || SAMETERM( DATATYPE( ?result ) , xsd:integer ) || SAMETERM( DATATYPE( ?result ) , xsd:nonPositiveInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:negativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:long ) || SAMETERM( DATATYPE( ?result ) , xsd:int ) || SAMETERM( DATATYPE( ?result ) , xsd:short ) || SAMETERM( DATATYPE( ?result ) , xsd:byte ) || SAMETERM( DATATYPE( ?result ) , xsd:nonNegativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedLong ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedInt ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedShort ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedByte ) || SAMETERM( DATATYPE( ?result ) , xsd:positiveInteger ) ) ) && SAMETERM( xsd:string ( ?result ) , "0" ) ))
 }

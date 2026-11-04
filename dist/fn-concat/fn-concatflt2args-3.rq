@@ -1,7 +1,10 @@
 # QT3 test case fn-concatflt2args-3 of test set fn-concat, which tests the XPath expression
 #   fn:concat(xs:float("3.4028235E38"),xs:float("-3.4028235E38"))
+# Expecting:
+#   <assert-string-value>3.4028235E38-3.4028235E38</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L205
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#float> ( "3.4028235E38" ) ) , <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#float> ( "-3.4028235E38" ) ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "3.4028235E38-3.4028235E38" ))
+  BIND(CONCAT( xsd:string ( xsd:float ( "3.4028235E38" ) ) , xsd:string ( xsd:float ( "-3.4028235E38" ) ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "3.4028235E38-3.4028235E38" ))
 }

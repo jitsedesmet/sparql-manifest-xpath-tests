@@ -1,7 +1,10 @@
 # QT3 test case op-numeric-unary-minusdec1args-2 of test set op-numeric-unary-minus, which tests the XPath expression
 #   -(xs:decimal("617375191608514839"))
+# Expecting:
+#   <assert-eq>-617375191608514839</assert-eq>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L70
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(- <http://www.w3.org/2001/XMLSchema#decimal> ( "617375191608514839" ) AS ?result)
-  FILTER(( ?result = - "617375191608514839"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+  BIND(- xsd:decimal ( "617375191608514839" ) AS ?result)
+  FILTER(( ( ?result = "-617375191608514839"^^xsd:integer ) && ( SAMETERM( DATATYPE( ?result ) , xsd:double ) || SAMETERM( DATATYPE( ?result ) , xsd:float ) || SAMETERM( DATATYPE( ?result ) , xsd:decimal ) || SAMETERM( DATATYPE( ?result ) , xsd:integer ) || SAMETERM( DATATYPE( ?result ) , xsd:nonPositiveInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:negativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:long ) || SAMETERM( DATATYPE( ?result ) , xsd:int ) || SAMETERM( DATATYPE( ?result ) , xsd:short ) || SAMETERM( DATATYPE( ?result ) , xsd:byte ) || SAMETERM( DATATYPE( ?result ) , xsd:nonNegativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedLong ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedInt ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedShort ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedByte ) || SAMETERM( DATATYPE( ?result ) , xsd:positiveInteger ) ) ))
 }

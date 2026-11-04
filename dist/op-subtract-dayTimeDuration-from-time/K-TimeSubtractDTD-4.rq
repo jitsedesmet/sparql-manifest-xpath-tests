@@ -1,7 +1,10 @@
 # QT3 test case K-TimeSubtractDTD-4 of test set op-subtract-dayTimeDuration-from-time, which tests the XPath expression
 #   xs:yearMonthDuration("P1Y") - xs:time("08:01:23")
+# Expecting:
+#   <error code="XPTY0004"/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-time.xml#L398
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( <http://www.w3.org/2001/XMLSchema#yearMonthDuration> ( "P1Y" ) - <http://www.w3.org/2001/XMLSchema#time> ( "08:01:23" ) ) AS ?result)
+  BIND(( xsd:yearMonthDuration ( "P1Y" ) - xsd:time ( "08:01:23" ) ) AS ?result)
   FILTER(! BOUND( ?result ))
 }

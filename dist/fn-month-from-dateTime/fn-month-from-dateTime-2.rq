@@ -1,7 +1,10 @@
 # QT3 test case fn-month-from-dateTime-2 of test set fn-month-from-dateTime, which tests the XPath expression
 #   fn:month-from-dateTime(xs:dateTime("1999-12-31T19:20:00-05:00"))
+# Expecting:
+#   <assert-string-value>12</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/month-from-dateTime.xml#L43
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(MONTH( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-12-31T19:20:00-05:00" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "12" ))
+  BIND(MONTH( xsd:dateTime ( "1999-12-31T19:20:00-05:00" ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "12" ))
 }

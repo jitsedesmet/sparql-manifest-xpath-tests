@@ -2,8 +2,11 @@
 #   (every $s in tokenize('c?1 abc,?0
 #   zzz', ',') satisfies matches($s, '^(?:\c?\?\d\s\c+)$')) and (every $s in tokenize('aa?3 c,a?2
 #   ', ',') satisfies not(matches($s, '^(?:\c?\?\d\s\c+)$')))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4167
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(( ( REGEX( "c?1 abc" , "^(?:\\c?\\?\\d\\s\\c+)$" ) && REGEX( "?0\nzzz" , "^(?:\\c?\\?\\d\\s\\c+)$" ) ) && ( ! REGEX( "aa?3 c" , "^(?:\\c?\\?\\d\\s\\c+)$" ) && ! REGEX( "a?2\n" , "^(?:\\c?\\?\\d\\s\\c+)$" ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

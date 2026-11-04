@@ -1,7 +1,10 @@
 # QT3 test case K-DateTimeAddDTD-1 of test set op-add-dayTimeDuration-to-dateTime, which tests the XPath expression
 #   xs:date("1999-10-12") + xs:dateTime("1999-10-12T08:12:12")
+# Expecting:
+#   <error code="XPTY0004"/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-dayTimeDuration-to-dateTime.xml#L340
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( <http://www.w3.org/2001/XMLSchema#date> ( "1999-10-12" ) + <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-10-12T08:12:12" ) ) AS ?result)
+  BIND(( xsd:date ( "1999-10-12" ) + xsd:dateTime ( "1999-10-12T08:12:12" ) ) AS ?result)
   FILTER(! BOUND( ?result ))
 }

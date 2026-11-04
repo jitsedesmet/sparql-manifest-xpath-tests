@@ -1,7 +1,10 @@
 # QT3 test case op-numeric-subtractnpi2args-4 of test set op-numeric-subtract, which tests the XPath expression
 #   xs:nonPositiveInteger("-999999999999999999") - xs:nonPositiveInteger("-475688437271870490")
+# Expecting:
+#   <assert-eq>-524311562728129509</assert-eq>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L439
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( "-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> - "-475688437271870490"^^<http://www.w3.org/2001/XMLSchema#nonPositiveInteger> ) AS ?result)
-  FILTER(( ?result = - "524311562728129509"^^<http://www.w3.org/2001/XMLSchema#integer> ))
+  BIND(( "-999999999999999999"^^xsd:nonPositiveInteger - "-475688437271870490"^^xsd:nonPositiveInteger ) AS ?result)
+  FILTER(( ( ?result = "-524311562728129509"^^xsd:integer ) && ( SAMETERM( DATATYPE( ?result ) , xsd:double ) || SAMETERM( DATATYPE( ?result ) , xsd:float ) || SAMETERM( DATATYPE( ?result ) , xsd:decimal ) || SAMETERM( DATATYPE( ?result ) , xsd:integer ) || SAMETERM( DATATYPE( ?result ) , xsd:nonPositiveInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:negativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:long ) || SAMETERM( DATATYPE( ?result ) , xsd:int ) || SAMETERM( DATATYPE( ?result ) , xsd:short ) || SAMETERM( DATATYPE( ?result ) , xsd:byte ) || SAMETERM( DATATYPE( ?result ) , xsd:nonNegativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedLong ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedInt ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedShort ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedByte ) || SAMETERM( DATATYPE( ?result ) , xsd:positiveInteger ) ) ))
 }

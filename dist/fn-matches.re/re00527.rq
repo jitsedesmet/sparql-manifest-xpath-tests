@@ -1,7 +1,10 @@
 # QT3 test case re00527 of test set fn-matches.re, which tests the XPath expression
 #   (every $s in tokenize('a,abcdef', ',') satisfies matches($s, '^(?:\c+)$')) and (every $s in tokenize('', ',') satisfies not(matches($s, '^(?:\c+)$')))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4396
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( ( REGEX( "a" , "^(?:\\c+)$" ) && REGEX( "abcdef" , "^(?:\\c+)$" ) ) && "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  BIND(( ( REGEX( "a" , "^(?:\\c+)$" ) && REGEX( "abcdef" , "^(?:\\c+)$" ) ) && "true"^^xsd:boolean ) AS ?result)
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

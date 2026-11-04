@@ -19,9 +19,7 @@
     <#op-numeric-unary-minusdbl1args-1>
     <#op-numeric-unary-minusdbl1args-2>
     <#op-numeric-unary-minusdbl1args-3>
-    <#op-numeric-unary-minusflt1args-1>
     <#op-numeric-unary-minusflt1args-2>
-    <#op-numeric-unary-minusflt1args-3>
     <#op-numeric-unary-minuslng1args-1>
     <#op-numeric-unary-minuslng1args-2>
     <#op-numeric-unary-minuslng1args-3>
@@ -151,25 +149,11 @@
   mf:action [ qt:query <op-numeric-unary-minusdbl1args-3.rq> ] ;
   mf:result <../true.srj> .
 
-<#op-numeric-unary-minusflt1args-1> a mf:QueryEvaluationTest ;
-  mf:name "op-numeric-unary-minusflt1args-1" ;
-  rdfs:comment "Evaluates The \"op:numeric-unary-minus\" operator with the arguments set as follows: $arg = xs:float(lower bound)" ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L115> ;
-  mf:action [ qt:query <op-numeric-unary-minusflt1args-1.rq> ] ;
-  mf:result <../true.srj> .
-
 <#op-numeric-unary-minusflt1args-2> a mf:QueryEvaluationTest ;
   mf:name "op-numeric-unary-minusflt1args-2" ;
   rdfs:comment "Evaluates The \"op:numeric-unary-minus\" operator with the arguments set as follows: $arg = xs:float(mid range)" ;
   rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L124> ;
   mf:action [ qt:query <op-numeric-unary-minusflt1args-2.rq> ] ;
-  mf:result <../true.srj> .
-
-<#op-numeric-unary-minusflt1args-3> a mf:QueryEvaluationTest ;
-  mf:name "op-numeric-unary-minusflt1args-3" ;
-  rdfs:comment "Evaluates The \"op:numeric-unary-minus\" operator with the arguments set as follows: $arg = xs:float(upper bound)" ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-unary-minus.xml#L133> ;
-  mf:action [ qt:query <op-numeric-unary-minusflt1args-3.rq> ] ;
   mf:result <../true.srj> .
 
 <#op-numeric-unary-minuslng1args-1> a mf:QueryEvaluationTest ;

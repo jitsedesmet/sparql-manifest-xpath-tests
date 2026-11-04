@@ -1,6 +1,9 @@
 # QT3 test case cbcl-matches-034 of test set fn-matches, which tests the XPath expression
 #   fn:matches('foo', '\P{Sa}')
+# Expecting:
+#   <error code="FORX0002"/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1443
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(REGEX( "foo" , "\\P{Sa}" ) AS ?result)
   FILTER(! BOUND( ?result ))

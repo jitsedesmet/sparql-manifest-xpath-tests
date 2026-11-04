@@ -1,7 +1,10 @@
 # QT3 test case fn-concatdbl2args-2 of test set fn-concat, which tests the XPath expression
 #   fn:concat(xs:double("0"),xs:double("-1.7976931348623157E308"))
+# Expecting:
+#   <assert-string-value>0-1.7976931348623157E308</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L151
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#double> ( "0" ) ) , <http://www.w3.org/2001/XMLSchema#string> ( <http://www.w3.org/2001/XMLSchema#double> ( "-1.7976931348623157E308" ) ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0-1.7976931348623157E308" ))
+  BIND(CONCAT( xsd:string ( xsd:double ( "0" ) ) , xsd:string ( xsd:double ( "-1.7976931348623157E308" ) ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "0-1.7976931348623157E308" ))
 }

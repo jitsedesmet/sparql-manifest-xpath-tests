@@ -1,7 +1,10 @@
 # QT3 test case fn-upper-case-1 of test set fn-upper-case, which tests the XPath expression
 #   fn:upper-case("ABc!D")
+# Expecting:
+#   <assert-string-value>ABC!D</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/upper-case.xml#L34
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(UCASE( "ABc!D" ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "ABC!D" ))
+  FILTER(SAMETERM( xsd:string ( ?result ) , "ABC!D" ))
 }

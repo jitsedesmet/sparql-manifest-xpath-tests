@@ -1,7 +1,10 @@
 # QT3 test case Literals035 of test set prod-Literal, which tests the XPath expression
 #   +.65535032E-2
+# Expecting:
+#   <assert-string-value>0.0065535032</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L319
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(+ ".65535032E-2"^^<http://www.w3.org/2001/XMLSchema#double> AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0.0065535032" ))
+  BIND(+ ".65535032E-2"^^xsd:double AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "0.0065535032" ))
 }

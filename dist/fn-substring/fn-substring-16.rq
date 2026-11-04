@@ -1,7 +1,10 @@
 # QT3 test case fn-substring-16 of test set fn-substring, which tests the XPath expression
 #   fn:substring("substring",1)
+# Expecting:
+#   <assert-string-value>substring</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L151
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(SUBSTR( "substring" , "1"^^<http://www.w3.org/2001/XMLSchema#integer> ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "substring" ))
+  BIND(SUBSTR( "substring" , "1"^^xsd:integer ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "substring" ))
 }

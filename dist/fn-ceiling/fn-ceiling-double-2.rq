@@ -1,7 +1,13 @@
 # QT3 test case fn-ceiling-double-2 of test set fn-ceiling, which tests the XPath expression
 #   ceiling(12.9e0)
+# Expecting:
+#   <all-of>
+#      <assert-eq>13.0e0</assert-eq>
+#      <assert-type>xs:double</assert-type>
+#   </all-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml#L784
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(CEIL( "12.9e0"^^<http://www.w3.org/2001/XMLSchema#double> ) AS ?result)
-  FILTER(( ( ?result = "13.0e0"^^<http://www.w3.org/2001/XMLSchema#double> ) && ( DATATYPE( ?result ) IN ( <http://www.w3.org/2001/XMLSchema#double> ) ) ))
+  BIND(CEIL( "12.9e0"^^xsd:double ) AS ?result)
+  FILTER(( ( ?result = "13.0e0"^^xsd:double ) && SAMETERM( DATATYPE( ?result ) , xsd:double ) ))
 }

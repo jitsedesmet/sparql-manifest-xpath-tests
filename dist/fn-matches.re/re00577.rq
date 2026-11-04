@@ -1,7 +1,10 @@
 # QT3 test case re00577 of test set fn-matches.re, which tests the XPath expression
 #   (every $s in tokenize('', ',') satisfies matches($s, '^(?:foo([\s]*)bar)$')) and (every $s in tokenize('wiofoo   bar3270,wiofoo   bar3270', ',') satisfies not(matches($s, '^(?:foo([\s]*)bar)$')))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4796
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( "true"^^<http://www.w3.org/2001/XMLSchema#boolean> && ( ! REGEX( "wiofoo   bar3270" , "^(?:foo([\\s]*)bar)$" ) && ! REGEX( "wiofoo   bar3270" , "^(?:foo([\\s]*)bar)$" ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  BIND(( "true"^^xsd:boolean && ( ! REGEX( "wiofoo   bar3270" , "^(?:foo([\\s]*)bar)$" ) && ! REGEX( "wiofoo   bar3270" , "^(?:foo([\\s]*)bar)$" ) ) ) AS ?result)
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

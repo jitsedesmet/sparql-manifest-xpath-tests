@@ -1,7 +1,10 @@
 # QT3 test case CastAs391 of test set prod-CastExpr, which tests the XPath expression
 #   xs:time("13:20:00-05:00") cast as xs:dateTime
+# Expecting:
+#   <error code="XPTY0004"/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3960
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(<http://www.w3.org/2001/XMLSchema#dateTime> ( <http://www.w3.org/2001/XMLSchema#time> ( "13:20:00-05:00" ) ) AS ?result)
+  BIND(xsd:dateTime ( xsd:time ( "13:20:00-05:00" ) ) AS ?result)
   FILTER(! BOUND( ?result ))
 }

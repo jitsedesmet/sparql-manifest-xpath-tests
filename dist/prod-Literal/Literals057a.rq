@@ -1,7 +1,10 @@
 # QT3 test case Literals057a of test set prod-Literal, which tests the XPath expression
 #   "&quot;"
+# Expecting:
+#   <assert-string-value>&amp;quot;</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L538
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND("&quot;" AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "&quot;" ))
+  FILTER(SAMETERM( xsd:string ( ?result ) , "&quot;" ))
 }

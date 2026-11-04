@@ -1,7 +1,15 @@
 # QT3 test case op-numeric-dividenint2args-3 of test set op-numeric-divide, which tests the XPath expression
 #   xs:negativeInteger("-1") div xs:negativeInteger("-999999999999999999")
+# Expecting:
+#   <any-of>
+#      <assert-eq>0.000000000000000001</assert-eq>
+#      <assert-eq>0.000000000000000001000000000000000001</assert-eq>
+#      <assert-eq>0.000000000000000001000000000000000001000000000000000001</assert-eq>
+#      <assert-eq>0</assert-eq>
+#   </any-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L325
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( "-1"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> / "-999999999999999999"^^<http://www.w3.org/2001/XMLSchema#negativeInteger> ) AS ?result)
-  FILTER(( ( ( ( ?result = "0.000000000000000001"^^<http://www.w3.org/2001/XMLSchema#decimal> ) || ( ?result = "0.000000000000000001000000000000000001"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) || ( ?result = "0.000000000000000001000000000000000001000000000000000001"^^<http://www.w3.org/2001/XMLSchema#decimal> ) ) || ( ?result = "0"^^<http://www.w3.org/2001/XMLSchema#integer> ) ))
+  BIND(( "-1"^^xsd:negativeInteger / "-999999999999999999"^^xsd:negativeInteger ) AS ?result)
+  FILTER(( ( ( ?result = "0.000000000000000001"^^xsd:decimal ) || ( ?result = "0.000000000000000001000000000000000001"^^xsd:decimal ) || ( ?result = "0.000000000000000001000000000000000001000000000000000001"^^xsd:decimal ) || ( ?result = "0"^^xsd:integer ) ) && ( SAMETERM( DATATYPE( ?result ) , xsd:double ) || SAMETERM( DATATYPE( ?result ) , xsd:float ) || SAMETERM( DATATYPE( ?result ) , xsd:decimal ) || SAMETERM( DATATYPE( ?result ) , xsd:integer ) || SAMETERM( DATATYPE( ?result ) , xsd:nonPositiveInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:negativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:long ) || SAMETERM( DATATYPE( ?result ) , xsd:int ) || SAMETERM( DATATYPE( ?result ) , xsd:short ) || SAMETERM( DATATYPE( ?result ) , xsd:byte ) || SAMETERM( DATATYPE( ?result ) , xsd:nonNegativeInteger ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedLong ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedInt ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedShort ) || SAMETERM( DATATYPE( ?result ) , xsd:unsignedByte ) || SAMETERM( DATATYPE( ?result ) , xsd:positiveInteger ) ) ))
 }

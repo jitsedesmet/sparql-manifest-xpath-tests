@@ -1,7 +1,10 @@
 # QT3 test case fn-stringsht1args-3 of test set fn-string, which tests the XPath expression
 #   fn:string(xs:short("32767"))
+# Expecting:
+#   <assert-string-value>32767</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/string.xml#L349
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(<http://www.w3.org/2001/XMLSchema#string> ( "32767"^^<http://www.w3.org/2001/XMLSchema#short> ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "32767" ))
+  BIND(xsd:string ( "32767"^^xsd:short ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "32767" ))
 }

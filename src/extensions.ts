@@ -1,11 +1,11 @@
 import type { Expression } from '@traqula/rules-sparql-1-2';
-import { RESULT_VARIABLE, astFactory, xsdLocalName } from './sparqlAst.ts';
-import { CONSTRUCTOR_TYPES, INTEGRAL_TYPES, NUMERIC_TYPES, OPERAND_TYPES } from './xsd.ts';
+import { RESULT_VARIABLE, astFactory, literalType, xsdLocalName } from './sparqlAst.ts';
+import { CONSTRUCTOR_TYPES, INTEGRAL_TYPES, NUMERIC_TYPES, OPERAND_TYPES, numericResultType } from './xsd.ts';
 
 /**
  * The SPARQL operators that accept any RDF term, as they only use its effective boolean value, or not its value at all.
  */
-const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype' ]);
+const ANY_TERM_OPERATORS = new Set([ '!', '&&', '||', 'if', 'bound', 'datatype', 'sameterm' ]);
 
 /**
  * The SPARQL operators on numbers, of which the result datatype follows the numeric type promotion of XPath.
@@ -16,7 +16,7 @@ const NUMERIC_OPERATORS = new Set([ '+', '-', '*', '/', 'uplus', 'uminus', 'abs'
  * The datatypes of the results of the other SPARQL operators, by operator, to find the datatypes beyond SPARQL
  * that an operator produces rather than a literal or constructor function.
  * @example
- *   In fn-timezone-from-dateTimealt-1, `BIND(TIMEZONE(...) AS ?result) FILTER(xsd:string(?result) = "-PT5H")`
+ *   In fn-timezone-from-dateTimealt-1, `BIND(TIMEZONE(...) AS ?result) FILTER(sameTerm(xsd:string(?result), "-PT5H"))`
  *   needs xsd:string on xsd:dayTimeDuration, which the spec does not require, and thus this is an extension.
  */
 const RESULT_TYPES: Record<string, string> = {
@@ -30,8 +30,8 @@ const RESULT_TYPES: Record<string, string> = {
     '<=',
     '>',
     '>=',
-    'in',
     'bound',
+    'sameterm',
     'strstarts',
     'strends',
     'contains',
@@ -46,18 +46,6 @@ const RESULT_TYPES: Record<string, string> = {
 };
 
 /**
- * Determine the datatype of the result of a numeric operator, following the numeric type promotion of XPath.
- * @param operator The SPARQL operator.
- * @param types The local names of the XSD datatypes of the operands.
- * @returns The local name of the XSD datatype of the result.
- */
-function numericType(operator: string, types: string[]): string {
-  // Integer operands give an integer, except for a division
-  return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
-    (operator === '/' ? 'decimal' : 'integer');
-}
-
-/**
  * Determine the XSD datatype of a SPARQL expression, as far as it is known statically,
  * and collect the reasons why it needs more than SPARQL defines.
  * This only decides the manifest of a test and its comment, and never changes the query itself.
@@ -67,11 +55,8 @@ function numericType(operator: string, types: string[]): string {
  * @returns The local name of the XSD datatype, or undefined if it is not known.
  */
 function datatype(expression: Expression, resultType: string | undefined, reasons: Set<string>): string | undefined {
-  if (astFactory.isTermLiteralStr(expression)) {
-    return 'string';
-  }
-  if (astFactory.isTermLiteralTyped(expression)) {
-    return xsdLocalName(expression.langOrIri);
+  if (astFactory.isTermLiteral(expression)) {
+    return literalType(expression);
   }
   if (astFactory.isTermVariable(expression)) {
     return expression.value === RESULT_VARIABLE ? resultType : undefined;
@@ -104,7 +89,7 @@ function datatype(expression: Expression, resultType: string | undefined, reason
       reasons.add(`${name} on xsd:dateTime`);
     }
     if (types.every((type): type is string => type !== undefined && NUMERIC_TYPES.has(type))) {
-      return numericType(operator, types);
+      return numericResultType(operator, types);
     }
     return undefined;
   }

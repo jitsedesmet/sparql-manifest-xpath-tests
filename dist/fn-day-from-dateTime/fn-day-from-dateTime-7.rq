@@ -1,7 +1,10 @@
 # QT3 test case fn-day-from-dateTime-7 of test set fn-day-from-dateTime, which tests the XPath expression
 #   fn:day-from-dateTime(xs:dateTime("0001-05-31T23:20:00-05:00"))
+# Expecting:
+#   <assert-string-value>31</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/day-from-dateTime.xml#L88
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(DAY( <http://www.w3.org/2001/XMLSchema#dateTime> ( "0001-05-31T23:20:00-05:00" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "31" ))
+  BIND(DAY( xsd:dateTime ( "0001-05-31T23:20:00-05:00" ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "31" ))
 }

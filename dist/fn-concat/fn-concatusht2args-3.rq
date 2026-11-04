@@ -1,7 +1,10 @@
 # QT3 test case fn-concatusht2args-3 of test set fn-concat, which tests the XPath expression
 #   fn:concat(xs:unsignedShort("65535"),xs:unsignedShort("0"))
+# Expecting:
+#   <assert-string-value>655350</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L295
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(CONCAT( <http://www.w3.org/2001/XMLSchema#string> ( "65535"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) , <http://www.w3.org/2001/XMLSchema#string> ( "0"^^<http://www.w3.org/2001/XMLSchema#unsignedShort> ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "655350" ))
+  BIND(CONCAT( xsd:string ( "65535"^^xsd:unsignedShort ) , xsd:string ( "0"^^xsd:unsignedShort ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "655350" ))
 }

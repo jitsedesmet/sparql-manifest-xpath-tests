@@ -6,7 +6,7 @@ type Range = [ bigint | undefined, bigint | undefined ];
 
 /**
  * The XSD datatypes that are derived from another one, mapped onto that datatype and, for integer types, their range.
- * The ranges tell which casts to an integer type can become a typed literal, see INTEGER_RANGES.
+ * The ranges tell which values of an integer type are valid, see isValidNumber.
  */
 const DERIVED_TYPES: Record<string, { parent: string; range?: Range }> = {
   integer: { parent: 'decimal' },
@@ -84,15 +84,56 @@ export function subTypes(type: string): string[] {
 }
 
 /**
- * The value ranges of the XSD datatypes derived from xsd:integer, which SPARQL has no constructor function for.
- * A cast of an out-of-range value is an error in XPath, but would be an ill-typed literal in SPARQL,
- * so such a test is left out. Fontoxpath cannot check this, as it loses precision beyond 2^53.
+ * Determine whether an XSD datatype is another one or derived from it.
+ * @param type The local name of the datatype.
+ * @param superType The local name of the other datatype, where `numeric` and `anyAtomicType` are unions.
+ * @returns Whether the datatype is a subtype of the other one.
  */
-export const INTEGER_RANGES: Record<string, Range> = Object.fromEntries(Object.entries(DERIVED_TYPES)
-  .flatMap(([ type, { range }]) => range ? [[ type, range ]] : []));
+export function isSubType(type: string, superType: string): boolean {
+  return type === superType || subTypes(superType).includes(type);
+}
 
 export const INTEGRAL_TYPES = new Set(subTypes('integer'));
 export const NUMERIC_TYPES = new Set(subTypes('numeric'));
+
+const DECIMAL_PATTERN = String.raw`[+-]?(\d+(\.\d*)?|\.\d+)`;
+const FLOATING_POINT_PATTERN = new RegExp(String.raw`^(${DECIMAL_PATTERN}([Ee][+-]?\d+)?|[+-]?INF|NaN)$`, 'u');
+
+/**
+ * The lexical spaces of the numeric XSD datatypes, where the types derived from xsd:integer share the one of integer.
+ */
+const LEXICAL_SPACES: Record<string, RegExp> = {
+  integer: /^[+-]?\d+$/u,
+  decimal: new RegExp(`^${DECIMAL_PATTERN}$`, 'u'),
+  float: FLOATING_POINT_PATTERN,
+  double: FLOATING_POINT_PATTERN,
+};
+
+/**
+ * Determine whether a lexical form is a valid value of a numeric XSD datatype, within the range of an integer type.
+ * Fontoxpath cannot check this, as it loses precision beyond 2^53.
+ * @param value The lexical form.
+ * @param type The local name of the numeric datatype.
+ * @returns Whether the lexical form is valid.
+ */
+export function isValidNumber(value: string, type: string): boolean {
+  const [ min, max ] = DERIVED_TYPES[type]?.range ?? [];
+  return LEXICAL_SPACES[INTEGRAL_TYPES.has(type) ? 'integer' : type].test(value) &&
+    (min === undefined || BigInt(value) >= min) &&
+    (max === undefined || BigInt(value) <= max);
+}
+
+/**
+ * Determine the datatype of the result of a numeric operator, following the numeric type promotion of XPath.
+ * @param operator The SPARQL operator.
+ * @param types The local names of the XSD datatypes of the operands.
+ * @returns The local name of the XSD datatype of the result.
+ */
+export function numericResultType(operator: string, types: string[]): string {
+  // Integer operands give an integer, except for a division
+  return [ 'double', 'float', 'decimal' ].find(type => types.includes(type)) ??
+    (operator === '/' ? 'decimal' : 'integer');
+}
 
 /**
  * The XSD datatypes that SPARQL defines its operators and functions for

@@ -46,6 +46,7 @@ with `-m 'https://sparql-manifest-xpath-tests.jitsedesmet.be/~path/to/dist/'`.
 Each QT3 test case becomes an `ASK` query:
 
 ```sparql
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(<the XPath expression, translated to SPARQL> AS ?result)
   FILTER(<the assertion of the test case, translated to SPARQL>)
@@ -53,11 +54,32 @@ ASK {
 ```
 
 so the expected result of every test is `true`.
-An expected error becomes `!BOUND(?result)`, as an error in `BIND` leaves the variable unbound,
-and `all-of`, `any-of` and `not` become `&&`, `||` and `!`.
+The assertions become:
+
+| QT3 assertion | SPARQL |
+| --- | --- |
+| `error` | `!BOUND(?result)`, as an error in `BIND` leaves the variable unbound |
+| `assert-string-value` | `sameTerm(xsd:string(?result), "…")` |
+| `assert-type` | `sameTerm(DATATYPE(?result), <type>) \|\| …`, over the type and the ones derived from it |
+| `assert-eq` of a number | `?result = <number> &&` the `assert-type` of `xs:numeric`, as QT3 compares by value, so `1` equals `1.0e0` |
+| `assert-eq` of a string or boolean | `sameTerm(xsd:string(?result), "…") &&` the `assert-type` of its type, as `xsd:string` gives the canonical form |
+| `assert-true`, `assert-false` | `assert-eq` of `true`, respectively `false` |
+| `all-of`, `any-of`, `not` | `&&`, `\|\|`, `!` |
+
+The type check of `assert-eq` is left out when an `assert-type` in an enclosing `all-of` checks a type derived from it,
+as that makes the conjunction false for any other type.
+The `assert-eq`s in an `any-of` that need the same type share one type check, as `&&` distributes over `||`.
+
+The expected value of `assert-eq` is folded into a literal, so `-0` becomes `"-0"^^xsd:integer` rather than a unary minus.
+The tests therefore only rely on the following to check the result,
+so a failing test points at the tested expression:
+`!`, `&&`, `||`, `BOUND`, `DATATYPE`, `sameTerm`, `xsd:string`, and `=` on two numbers,
+where SPARQL extensions cannot change its result, unlike on other types, where `=` can be an error.
 
 Test cases that cannot be expressed in SPARQL are left out, such as XPath expressions without SPARQL equivalent,
-and invalid values of the types derived from `xsd:integer`, which are an error in XPath but an ill-typed literal in SPARQL.
+assertions that need more than the above, such as `assert` with an arbitrary XPath expression,
+and casts of a string literal that are folded into a literal, but of which the string is not a valid number,
+such as `xs:byte("300")`, which are an error in XPath but an ill-typed literal in SPARQL.
 [`left-out.tsv`](https://sparql-manifest-xpath-tests.jitsedesmet.be/left-out.tsv) lists every left-out test case with the reason,
 including the ones that depend on more than XPath 3.1 and XSD 1.1 without optional features.
 The XPath expressions are parsed with [fontoxpath](https://github.com/FontoXML/fontoxpath),

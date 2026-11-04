@@ -1,7 +1,10 @@
 # QT3 test case fn-minutes-from-dateTime-6 of test set fn-minutes-from-dateTime, which tests the XPath expression
 #   fn:minutes-from-dateTime(xs:dateTime("1999-05-31T20:00:00-05:00"))
+# Expecting:
+#   <assert-string-value>0</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/minutes-from-dateTime.xml#L80
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(MINUTES( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1999-05-31T20:00:00-05:00" ) ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "0" ))
+  BIND(MINUTES( xsd:dateTime ( "1999-05-31T20:00:00-05:00" ) ) AS ?result)
+  FILTER(SAMETERM( xsd:string ( ?result ) , "0" ))
 }

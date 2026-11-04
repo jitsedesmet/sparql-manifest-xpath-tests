@@ -117,15 +117,12 @@
     <#CastAs564>
     <#CastAs565>
     <#CastAs647>
-    <#CastAs676>
     <#CastAs688>
     <#CastAs689>
     <#CastAs690>
     <#CastAs691>
     <#CastAs692>
     <#CastAs693>
-    <#CastFOCA0001-1>
-    <#CastFOCA0003-1>
     <#K-SeqExprCast-36>
     <#K-SeqExprCast-147>
     <#K-SeqExprCast-148>
@@ -1174,13 +1171,6 @@
   mf:action [ qt:query <CastAs647.rq> ] ;
   mf:result <../true.srj> .
 
-<#CastAs676> a mf:QueryEvaluationTest ;
-  mf:name "CastAs676" ;
-  rdfs:comment "Boundary test for casting a dateTime as a string" ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6631> ;
-  mf:action [ qt:query <CastAs676.rq> ] ;
-  mf:result <../true.srj> .
-
 <#CastAs688> a mf:QueryEvaluationTest ;
   mf:name "CastAs688" ;
   rdfs:comment "Leading decimal point in duration values. This is contentious:\n         XSD 1.0 clearly requires a digit before and after the decimal\n         point. XSD 1.1 apparently doesn't, but this is believed to\n         be an error in the spec." ;
@@ -1221,20 +1211,6 @@
   rdfs:comment "Disallow exponential notation in duration values." ;
   rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6811> ;
   mf:action [ qt:query <CastAs693.rq> ] ;
-  mf:result <../true.srj> .
-
-<#CastFOCA0001-1> a mf:QueryEvaluationTest ;
-  mf:name "CastFOCA0001-1" ;
-  rdfs:comment "casting an xs:decimal with a value to big for that type." ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7051> ;
-  mf:action [ qt:query <CastFOCA0001-1.rq> ] ;
-  mf:result <../true.srj> .
-
-<#CastFOCA0003-1> a mf:QueryEvaluationTest ;
-  mf:name "CastFOCA0003-1" ;
-  rdfs:comment "casting an xs:integer with a value to big for that type." ;
-  rdfs:seeAlso <https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L7065> ;
-  mf:action [ qt:query <CastFOCA0003-1.rq> ] ;
   mf:result <../true.srj> .
 
 <#K-SeqExprCast-36> a mf:QueryEvaluationTest ;

@@ -1,11 +1,11 @@
 import type { SubTyped } from '@traqula/core';
 import { TransformerSubTyped } from '@traqula/core';
-import type { Expression } from '@traqula/rules-sparql-1-2';
+import type { Expression, TermLiteral } from '@traqula/rules-sparql-1-2';
 import fontoxpath from 'fontoxpath';
 import * as slimdom from 'slimdom';
 import { astFactory, literal, operation, xsdFunctionCall } from './sparqlAst.ts';
 import { UnsupportedError } from './UnsupportedError.ts';
-import { CAST_TYPES, INTEGER_RANGES } from './xsd.ts';
+import { CAST_TYPES, NUMERIC_TYPES, isValidNumber } from './xsd.ts';
 
 // The fontoxpath package is a CommonJS module, of which Node.js cannot detect the named exports
 const { evaluateXPath, evaluateXPathToStrings, parseScript } = fontoxpath;
@@ -342,20 +342,39 @@ function cast(localName: string, expression: Expression): Expression {
   if (CAST_TYPES.has(localName)) {
     return xsdFunctionCall(localName, expression);
   }
-  // Integer types have no cast function, but a string literal with a valid value can become a typed literal.
-  // An invalid value would be an error in XPath, but an ill-typed literal in SPARQL, so it has no SPARQL equivalent.
+  // The types derived from xsd:integer have no cast function, but a cast of a string literal can be folded.
   // Other types, such as xs:untypedAtomic and xs:anyURI, are not SPARQL operand types.
-  if (Object.hasOwn(INTEGER_RANGES, localName) && astFactory.isTermLiteralStr(expression)) {
-    // XSD only collapses spaces, tabs and line breaks, unlike String.prototype.trim
-    const value = expression.value.replaceAll(/^[ \t\n\r]+|[ \t\n\r]+$/gu, '');
-    const [ min, max ] = INTEGER_RANGES[localName];
-    if (!/^[+-]?\d+$/u.test(value) || (min !== undefined && BigInt(value) < min) ||
-      (max !== undefined && BigInt(value) > max)) {
-      throw new UnsupportedError('Invalid value', `${value} for xs:${localName}`);
-    }
-    return literal(value, localName);
+  const folded = foldStringLiteralCast(localName, expression);
+  if (folded) {
+    return folded;
   }
   throw new UnsupportedError('Unsupported cast', `type xs:${localName}`);
+}
+
+/**
+ * Fold a cast of a string literal to a string or number into the literal it gives, as XPath casts a string by its
+ * lexical form.
+ * @param localName The local name of the XSD datatype to cast to.
+ * @param expression The SPARQL expression to cast.
+ * @returns The literal, or undefined if the expression is not a string literal or the datatype not a string or number.
+ * @throws {UnsupportedError} If the string is not a valid number, which is an error in XPath but ill-typed in SPARQL.
+ */
+export function foldStringLiteralCast(localName: string, expression: Expression): TermLiteral | undefined {
+  if (!astFactory.isTermLiteralStr(expression)) {
+    return undefined;
+  }
+  if (localName === 'string') {
+    return expression;
+  }
+  if (!NUMERIC_TYPES.has(localName)) {
+    return undefined;
+  }
+  // XSD only collapses spaces, tabs and line breaks, unlike String.prototype.trim
+  const trimmed = expression.value.replaceAll(/^[ \t\n\r]+|[ \t\n\r]+$/gu, '');
+  if (!isValidNumber(trimmed, localName)) {
+    throw new UnsupportedError('Invalid value', `${trimmed} for xs:${localName}`);
+  }
+  return literal(trimmed, localName);
 }
 
 /**
@@ -381,11 +400,10 @@ function functionCall({ prefix, localName }: QualifiedName, args: Expression[]):
 /**
  * Translate an XPath expression into a SPARQL expression, transforming its XQueryX syntax tree bottom-up.
  * @param xpath The XPath expression.
- * @param variables SPARQL expressions to substitute variable references with.
  * @returns The SPARQL expression, as a Traqula syntax tree.
  * @throws {UnsupportedError} If the expression has no SPARQL equivalent.
  */
-export function xpathToSparql(xpath: string, variables: Record<string, Expression> = {}): Expression {
+export function xpathToSparql(xpath: string): Expression {
   return transformer.transformNodeSpecific<'unsafe', Expression>(parse(xpath), {
     xqueryx: {
       transform(node) {
@@ -407,14 +425,6 @@ export function xpathToSparql(xpath: string, variables: Record<string, Expressio
       decimalConstantExpr: { transform: ({ text }) => literal(text, 'decimal') },
       doubleConstantExpr: { transform: ({ text }) => literal(text, 'double') },
       stringConstantExpr: { transform: ({ text }) => literal(text, 'string') },
-      varRef: {
-        transform({ text }) {
-          if (Object.hasOwn(variables, text)) {
-            return variables[text];
-          }
-          throw new UnsupportedError('Unknown variable', `$${text}`);
-        },
-      },
       ifThenElseExpr: {
         transform: node => operation(
           'if',

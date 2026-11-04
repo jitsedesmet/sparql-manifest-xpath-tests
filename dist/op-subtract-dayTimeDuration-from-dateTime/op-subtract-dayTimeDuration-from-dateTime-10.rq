@@ -1,8 +1,11 @@
 # QT3 test case op-subtract-dayTimeDuration-from-dateTime-10 of test set op-subtract-dayTimeDuration-from-dateTime, which tests the XPath expression
 #   fn:string((xs:dateTime("1985-07-05T14:14:14Z") - xs:dayTimeDuration("P03DT01H04M"))) or fn:string((xs:dateTime("1985-07-05T15:15:15Z") - xs:dayTimeDuration("P01DT01H03M")))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/subtract-dayTimeDuration-from-dateTime.xml#L241
 # The test needs the constructor function xsd:dayTimeDuration, - on xsd:dayTimeDuration, - on xsd:dateTime, which SPARQL does not define
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
-  BIND(( <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1985-07-05T14:14:14Z" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P03DT01H04M" ) ) ) || <http://www.w3.org/2001/XMLSchema#string> ( ( <http://www.w3.org/2001/XMLSchema#dateTime> ( "1985-07-05T15:15:15Z" ) - <http://www.w3.org/2001/XMLSchema#dayTimeDuration> ( "P01DT01H03M" ) ) ) ) AS ?result)
-  FILTER(( ( DATATYPE( ?result ) = <http://www.w3.org/2001/XMLSchema#boolean> ) && ?result ))
+  BIND(( xsd:string ( ( xsd:dateTime ( "1985-07-05T14:14:14Z" ) - xsd:dayTimeDuration ( "P03DT01H04M" ) ) ) || xsd:string ( ( xsd:dateTime ( "1985-07-05T15:15:15Z" ) - xsd:dayTimeDuration ( "P01DT01H03M" ) ) ) ) AS ?result)
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "true" ) && SAMETERM( DATATYPE( ?result ) , xsd:boolean ) ))
 }

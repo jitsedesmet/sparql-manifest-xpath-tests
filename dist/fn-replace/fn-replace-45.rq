@@ -1,7 +1,10 @@
 # QT3 test case fn-replace-45 of test set fn-replace, which tests the XPath expression
 #   replace("Now, let's SEND OUT for QUICHE!!", "[A-Z][A-Z]+", "$0$0")
+# Expecting:
+#   <assert-eq>"Now, let's SENDSEND OUTOUT for QUICHEQUICHE!!"</assert-eq>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/replace.xml#L497
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(REPLACE( "Now, let's SEND OUT for QUICHE!!" , "[A-Z][A-Z]+" , "$0$0" ) AS ?result)
-  FILTER(( ?result = "Now, let's SENDSEND OUTOUT for QUICHEQUICHE!!" ))
+  FILTER(( SAMETERM( xsd:string ( ?result ) , "Now, let's SENDSEND OUTOUT for QUICHEQUICHE!!" ) && ( SAMETERM( DATATYPE( ?result ) , xsd:string ) || SAMETERM( DATATYPE( ?result ) , xsd:normalizedString ) || SAMETERM( DATATYPE( ?result ) , xsd:token ) || SAMETERM( DATATYPE( ?result ) , xsd:language ) || SAMETERM( DATATYPE( ?result ) , xsd:NMTOKEN ) || SAMETERM( DATATYPE( ?result ) , xsd:Name ) || SAMETERM( DATATYPE( ?result ) , xsd:NCName ) || SAMETERM( DATATYPE( ?result ) , xsd:ID ) || SAMETERM( DATATYPE( ?result ) , xsd:IDREF ) || SAMETERM( DATATYPE( ?result ) , xsd:ENTITY ) ) ))
 }

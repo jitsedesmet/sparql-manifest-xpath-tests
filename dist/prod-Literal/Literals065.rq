@@ -1,7 +1,10 @@
 # QT3 test case Literals065 of test set prod-Literal, which tests the XPath expression
 #   'He said, "I don''t like it."'
+# Expecting:
+#   <assert-string-value>He said, "I don't like it."</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L655
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND("He said, \"I don't like it.\"" AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "He said, \"I don't like it.\"" ))
+  FILTER(SAMETERM( xsd:string ( ?result ) , "He said, \"I don't like it.\"" ))
 }

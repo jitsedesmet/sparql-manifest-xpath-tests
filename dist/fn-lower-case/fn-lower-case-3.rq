@@ -1,7 +1,10 @@
 # QT3 test case fn-lower-case-3 of test set fn-lower-case, which tests the XPath expression
 #   fn:lower-case("12345")
+# Expecting:
+#   <assert-string-value>12345</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/lower-case.xml#L52
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(LCASE( "12345" ) AS ?result)
-  FILTER(( <http://www.w3.org/2001/XMLSchema#string> ( ?result ) = "12345" ))
+  FILTER(SAMETERM( xsd:string ( ?result ) , "12345" ))
 }
