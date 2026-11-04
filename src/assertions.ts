@@ -114,8 +114,8 @@ function hasStringValue(term: Expression, value: string): Expression {
 }
 
 /**
- * Create the SPARQL expression that a term equals a literal, as XPath's eq, where the type check ensures that
- * = only compares two numbers, and a string or boolean is compared by its type and canonical string value.
+ * Create the SPARQL expression that a term equals a literal, as XPath's eq: a string by sameTerm, a number by = after
+ * a type check that ensures that = only compares two numbers, and a boolean by its type and canonical string value.
  * @param term The SPARQL expression of the term.
  * @param expected The literal, which is a number, string or boolean.
  * @param checkedType The datatype that a conjoined assertion already checks the term for, if any.
@@ -123,6 +123,10 @@ function hasStringValue(term: Expression, value: string): Expression {
  */
 function equals(term: Expression, expected: TermLiteral, checkedType?: string): Expression {
   const type = astFactory.isTermLiteralTyped(expected) ? xsdLocalName(expected.langOrIri)! : 'string';
+  if (type === 'string') {
+    // A string is its own canonical form, so sameTerm compares both its datatype and value
+    return operation('sameterm', term, expected);
+  }
   const isNumber = NUMERIC_TYPES.has(type);
   // Numbers compare by value, e.g. 1 = 1.0e0
   const comparison = isNumber ? operation('=', term, expected) : hasStringValue(term, expected.value);

@@ -6,5 +6,5 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {
   BIND(SUBSTR( "abcd𐀁efgh" , "6"^^xsd:integer ) AS ?result)
-  FILTER(( ( SAMETERM( DATATYPE( ?result ) , xsd:string ) || SAMETERM( DATATYPE( ?result ) , xsd:normalizedString ) || SAMETERM( DATATYPE( ?result ) , xsd:token ) || SAMETERM( DATATYPE( ?result ) , xsd:language ) || SAMETERM( DATATYPE( ?result ) , xsd:NMTOKEN ) || SAMETERM( DATATYPE( ?result ) , xsd:Name ) || SAMETERM( DATATYPE( ?result ) , xsd:NCName ) || SAMETERM( DATATYPE( ?result ) , xsd:ID ) || SAMETERM( DATATYPE( ?result ) , xsd:IDREF ) || SAMETERM( DATATYPE( ?result ) , xsd:ENTITY ) ) && SAMETERM( xsd:string ( ?result ) , "efgh" ) ))
+  FILTER(SAMETERM( ?result , "efgh" ))
 }
