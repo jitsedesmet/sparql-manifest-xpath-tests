@@ -1,5 +1,7 @@
 # QT3 test case fn-concatulng2args-2 of test set fn-concat, which tests the XPath expression
 #   fn:concat(xs:unsignedLong("130747108607674654"),xs:unsignedLong("0"))
+# Expecting:
+#   <assert-string-value>1307471086076746540</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/concat.xml#L421
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

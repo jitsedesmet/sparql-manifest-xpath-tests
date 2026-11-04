@@ -1,5 +1,10 @@
 # QT3 test case op-numeric-subtract-big-01 of test set op-numeric-subtract, which tests the XPath expression
 #   (-79228162514264337593543950335.0 - 1.0) cast as xs:string
+# Expecting:
+#   <any-of>
+#     <assert-string-value>-79228162514264337593543950336</assert-string-value>
+#     <error code="FOAR0002"/>
+#   </any-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L1165
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

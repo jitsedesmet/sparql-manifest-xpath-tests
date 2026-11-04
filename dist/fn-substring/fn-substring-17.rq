@@ -1,5 +1,7 @@
 # QT3 test case fn-substring-17 of test set fn-substring, which tests the XPath expression
 #   fn:concat(fn:substring("ABC",1),"DEF")
+# Expecting:
+#   <assert-string-value>ABCDEF</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L160
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

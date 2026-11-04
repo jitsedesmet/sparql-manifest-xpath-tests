@@ -1,5 +1,7 @@
 # QT3 test case K-SubstringFunc-8 of test set fn-substring, which tests the XPath expression
 #   substring("12345", 0, 3) eq "12"
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/substring.xml#L359
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

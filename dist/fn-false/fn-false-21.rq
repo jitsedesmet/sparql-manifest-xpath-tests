@@ -1,5 +1,7 @@
 # QT3 test case fn-false-21 of test set fn-false, which tests the XPath expression
 #   fn:string-length(xs:string(fn:false()))
+# Expecting:
+#   <assert-string-value>5</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/false.xml#L190
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

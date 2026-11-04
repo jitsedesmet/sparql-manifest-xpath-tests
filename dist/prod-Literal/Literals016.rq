@@ -1,5 +1,7 @@
 # QT3 test case Literals016 of test set prod-Literal, which tests the XPath expression
 #   65535032e2
+# Expecting:
+#   <assert-string-value>6.5535032E9</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/Literal.xml#L148
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

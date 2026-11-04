@@ -1,5 +1,7 @@
 # QT3 test case re00028 of test set fn-matches.re, which tests the XPath expression
 #   (every $s in tokenize('aaabbb,bb,bbb,bbbb', ',') satisfies matches($s, '^(?:a*b{2,4}c{0})$')) and (every $s in tokenize('ab,abbc,bbc,abbbbb,', ',') satisfies not(matches($s, '^(?:a*b{2,4}c{0})$')))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L232
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

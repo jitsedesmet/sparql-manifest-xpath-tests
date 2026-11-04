@@ -1,5 +1,7 @@
 # QT3 test case fn-day-from-dateTimeNew-10 of test set fn-day-from-dateTime, which tests the XPath expression
 #   fn:day-from-dateTime(xs:dateTime("1970-01-02T02:00:00Z")) * fn:day-from-dateTime(xs:dateTime("0002-01-04T10:00:00Z"))
+# Expecting:
+#   <assert-string-value>8</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/day-from-dateTime.xml#L115
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

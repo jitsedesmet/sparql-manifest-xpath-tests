@@ -1,5 +1,10 @@
 # QT3 test case fn-absnint1args-2 of test set fn-abs, which tests the XPath expression
 #   fn:abs(xs:negativeInteger("-297014075999096793"))
+# Expecting:
+#   <all-of>
+#      <assert-eq>297014075999096793</assert-eq>
+#      <assert-type>xs:integer</assert-type>
+#   </all-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/abs.xml#L388
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

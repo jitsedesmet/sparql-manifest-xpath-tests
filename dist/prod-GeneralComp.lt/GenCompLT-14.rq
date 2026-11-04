@@ -1,5 +1,7 @@
 # QT3 test case GenCompLT-14 of test set prod-GeneralComp.lt, which tests the XPath expression
 #   (true() < true()) < true()
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/GeneralComp.lt.xml#L1323
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

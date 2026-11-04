@@ -1,5 +1,7 @@
 # QT3 test case op-dateTime-greater-than-11 of test set op-dateTime-greater-than, which tests the XPath expression
 #   (xs:dateTime("1990-04-02T12:00:10Z") gt xs:dateTime("2006-06-02T12:10:00Z")) or (fn:true())
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-greater-than.xml#L315
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

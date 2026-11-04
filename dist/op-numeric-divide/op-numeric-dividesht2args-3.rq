@@ -1,5 +1,10 @@
 # QT3 test case op-numeric-dividesht2args-3 of test set op-numeric-divide, which tests the XPath expression
 #   xs:short("32767") div xs:short("-32768")
+# Expecting:
+#   <any-of>
+#      <assert-eq>-0.999969482421875</assert-eq>
+#      <assert-eq>-0.999969482421</assert-eq>
+#   </any-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-divide.xml#L511
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

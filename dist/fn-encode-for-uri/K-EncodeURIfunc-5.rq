@@ -1,5 +1,7 @@
 # QT3 test case K-EncodeURIfunc-5 of test set fn-encode-for-uri, which tests the XPath expression
 #   concat("http://www.example.com/", encode-for-uri("100% organic")) eq "http://www.example.com/100%25%20organic"
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/encode-for-uri.xml#L250
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

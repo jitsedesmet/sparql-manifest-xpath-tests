@@ -1,5 +1,10 @@
 # QT3 test case CastAs169 of test set prod-CastExpr, which tests the XPath expression
 #   xs:float("5.4321E-100") cast as xs:float
+# Expecting:
+#   <any-of>
+#      <assert-eq>0</assert-eq>
+#      <error code="FOAR0002"/>
+#   </any-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L1914
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

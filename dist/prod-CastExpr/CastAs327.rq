@@ -1,5 +1,7 @@
 # QT3 test case CastAs327 of test set prod-CastExpr, which tests the XPath expression
 #   xs:dayTimeDuration("P3DT10H30M") cast as xs:string
+# Expecting:
+#   <assert-string-value>P3DT10H30M</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L3384
 # The test needs the constructor function xsd:dayTimeDuration, xsd:string on xsd:dayTimeDuration, which SPARQL does not define
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

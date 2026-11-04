@@ -1,5 +1,7 @@
 # QT3 test case cbcl-matches-044 of test set fn-matches, which tests the XPath expression
 #   fn:matches('1.0', '\I+')
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1560
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

@@ -1,6 +1,8 @@
 # QT3 test case re00503 of test set fn-matches.re, which tests the XPath expression
 #   (every $s in tokenize('0,۰,০,੦,૦,୦,௧,౦,೦,൦,๐,໐,༠,၀,០,᠐,０,𝟎,9,٩,۹,९,৯,੯,૯,୯,௯,౯,೯,൯,๙,໙,༩,၉,៩,᠙,９,𝟿', ',') satisfies matches($s, '^(?:\d)$'))
 #   and (every $s in tokenize('),ٙ,ۮ,॥,৥,੥,૥,୥,౥,೥,൥,้,໏,༙,္,፨,៟,᠉,）,𝟍,:,٪,ۺ,॰,ৰ,੹,૰,୰,௰,౰,೰,൰,๚,໚,༪,၊,፲,៪,᠚,：,𝠀', ',') satisfies not(matches($s, '^(?:\d)$')))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4202
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

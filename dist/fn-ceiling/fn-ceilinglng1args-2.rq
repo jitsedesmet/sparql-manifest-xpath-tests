@@ -1,5 +1,7 @@
 # QT3 test case fn-ceilinglng1args-2 of test set fn-ceiling, which tests the XPath expression
 #   fn:ceiling(xs:long("-47175562203048468"))
+# Expecting:
+#   <assert-eq>-47175562203048468</assert-eq>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/ceiling.xml#L251
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

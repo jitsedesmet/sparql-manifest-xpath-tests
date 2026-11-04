@@ -1,5 +1,7 @@
 # QT3 test case op-add-yearMonthDuration-to-dateTime-3 of test set op-add-yearMonthDuration-to-dateTime, which tests the XPath expression
 #   fn:string((xs:dateTime("1999-10-23T13:45:45Z") + xs:yearMonthDuration("P19Y12M"))) or fn:false()
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-dateTime.xml#L73
 # The test needs the constructor function xsd:yearMonthDuration, + on xsd:yearMonthDuration, + on xsd:dateTime, which SPARQL does not define
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

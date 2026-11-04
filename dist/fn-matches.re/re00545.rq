@@ -1,5 +1,7 @@
 # QT3 test case re00545 of test set fn-matches.re, which tests the XPath expression
 #   (every $s in tokenize('112233123,abcaabbccabc', ',') satisfies matches($s, '^(?:[123]+|[abc]+)$')) and (every $s in tokenize('1a,a1', ',') satisfies not(matches($s, '^(?:[123]+|[abc]+)$')))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L4540
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

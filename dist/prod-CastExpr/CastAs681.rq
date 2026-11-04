@@ -1,5 +1,7 @@
 # QT3 test case CastAs681 of test set prod-CastExpr, which tests the XPath expression
 #   xs:date('2017-07-19-00:30')
+# Expecting:
+#   <assert-string-value>2017-07-19-00:30</assert-string-value>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/prod/CastExpr.xml#L6681
 # The test needs the constructor function xsd:date, xsd:string on xsd:date, which SPARQL does not define
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

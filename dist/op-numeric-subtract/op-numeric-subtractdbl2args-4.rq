@@ -1,5 +1,7 @@
 # QT3 test case op-numeric-subtractdbl2args-4 of test set op-numeric-subtract, which tests the XPath expression
 #   xs:double("-1.7976931348623157E308") - xs:double("0")
+# Expecting:
+#   <assert-eq>-1.7976931348623157E308</assert-eq>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-subtract.xml#L169
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

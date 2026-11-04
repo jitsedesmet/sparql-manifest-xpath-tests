@@ -1,5 +1,7 @@
 # QT3 test case K-NumericGT-17 of test set op-numeric-greater-than, which tests the XPath expression
 #   not(1 gt xs:double("NaN"))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/numeric-greater-than.xml#L1416
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

@@ -1,5 +1,10 @@
 # QT3 test case fn-year-from-date-7 of test set fn-year-from-date, which tests the XPath expression
 #   fn:year-from-date(xs:date("-1999-05-31Z"))
+# Expecting:
+#   <any-of>
+#      <assert-string-value>-1999</assert-string-value>
+#      <error code="FODT0001"/>
+#   </any-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/year-from-date.xml#L88
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

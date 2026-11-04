@@ -4,6 +4,8 @@
 #   b
 #   c
 #   ', ',') satisfies matches($s, '^(?:\na\nb\nc\n)$')) and (every $s in tokenize('', ',') satisfies not(matches($s, '^(?:\na\nb\nc\n)$')))
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.re.xml#L1178
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

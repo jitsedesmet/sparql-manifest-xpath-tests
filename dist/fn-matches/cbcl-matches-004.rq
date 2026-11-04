@@ -1,5 +1,10 @@
 # QT3 test case cbcl-matches-004 of test set fn-matches, which tests the XPath expression
 #   fn:matches('aaa', 'a{99999999999999999999999999}')
+# Expecting:
+#   <any-of>
+#      <assert-false/>
+#      <error code="FORX0002"/>
+#   </any-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/fn/matches.xml#L1100
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

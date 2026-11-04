@@ -1,5 +1,7 @@
 # QT3 test case cbcl-dateTime-equal-018 of test set op-dateTime-equal, which tests the XPath expression
 #   xs:dateTime("1972-12-15T00:00:00+12:00") ne xs:dateTime("1972-12-15T00:00:01")
+# Expecting:
+#   <assert-true/>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/dateTime-equal.xml#L1079
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ASK {

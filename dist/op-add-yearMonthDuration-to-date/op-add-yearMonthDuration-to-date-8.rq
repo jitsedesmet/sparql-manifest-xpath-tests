@@ -1,5 +1,10 @@
 # QT3 test case op-add-yearMonthDuration-to-date-8 of test set op-add-yearMonthDuration-to-date, which tests the XPath expression
 #   (xs:date("0001-01-01Z") + xs:yearMonthDuration("-P20Y07M"))
+# Expecting:
+#   <any-of>
+#      <assert-string-value>-0021-06-01Z</assert-string-value>
+#      <assert-string-value>-0020-06-01Z</assert-string-value>
+#   </any-of>
 # The test case is defined at https://github.com/w3c/qt3tests/blob/201a6e466940cdfc727f4babfedcde5332b9f578/op/add-yearMonthDuration-to-date.xml#L208
 # The test needs the constructor function xsd:date, the constructor function xsd:yearMonthDuration, + on xsd:date, + on xsd:yearMonthDuration, which SPARQL does not define
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

@@ -21,7 +21,7 @@ import { sparql12GeneratorBuilder } from '@traqula/generator-sparql-1-2';
 import type { Expression } from '@traqula/rules-sparql-1-2';
 import { completeGeneratorContext } from '@traqula/rules-sparql-1-2';
 import type { Element } from 'slimdom';
-import { parseXmlDocument } from 'slimdom';
+import { parseXmlDocument, serializeToWellFormedString } from 'slimdom';
 import { acceptsError, assertionToSparql } from './assertions.ts';
 import { extensionReasons } from './extensions.ts';
 import { RESULT_VARIABLE, XSD_PREFIX_DECLARATION } from './sparqlAst.ts';
@@ -276,6 +276,22 @@ function checkSupported(
 }
 
 /**
+ * Serialize a text of the test suite as the lines of a SPARQL comment, keeping the indentation relative to the source.
+ * @param text The text, of which the lines after the first are indented as in the source.
+ * @returns The lines of the comment.
+ */
+function commentLines(text: string): string {
+  // A SPARQL comment ends at a carriage return as well as at a line feed
+  const [ firstLine, ...otherLines ] = text.trim().split(/\r\n?|\n/u);
+  const indentation = Math.min(...otherLines
+    .filter(line => line.trim() !== '')
+    .map(line => line.length - line.trimStart().length));
+  return [ firstLine, ...otherLines.map(line => line.slice(indentation)) ]
+    .map(line => `#   ${line}`.trimEnd())
+    .join('\n');
+}
+
+/**
  * Generate the ASK query of a test case, and determine the kind of the test.
  * @param testSetName The name of the test set.
  * @param testCase The test-case element.
@@ -293,14 +309,18 @@ function testCaseQuery(
 
   // <result> <assert-string-value>2030</assert-string-value> </result>
   // NOTE: only one root assertion, otherwise wrapped in `any-of` or `all-of`
-  const assertion = assertionToSparql(childElements(testCase, 'result')[0].children[0]);
+  const assertionElement = childElements(testCase, 'result')[0].children[0];
+  const assertion = assertionToSparql(assertionElement);
   const reasons = extensionReasons(expression, assertion);
   const kind: Kind = acceptsError(assertion) ? 'errors' : (reasons.length > 0 ? 'extensions' : 'sparql');
 
-  // A SPARQL comment ends at a carriage return as well as at a line feed
-  const comment = test.trim().split(/\r\n?|\n/u).map(line => `#   ${line.trim()}`).join('\n');
+  // The serializer declares the namespace of the test set on the element, which the test set declares on its root
+  const expected = serializeToWellFormedString(assertionElement)
+    .replace(` xmlns="${assertionElement.namespaceURI}"`, '');
   const query = `# QT3 test case ${testCase.getAttribute('name')} of test set ${testSetName}, which tests the XPath expression
-${comment}
+${commentLines(test)}
+# Expecting:
+${commentLines(expected)}
 # The test case is defined at ${url}${kind === 'extensions' ? `\n# The test needs ${reasons.join(', ')}, which SPARQL does not define` : ''}
 ${XSD_PREFIX_DECLARATION}
 ASK {
