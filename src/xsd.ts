@@ -83,6 +83,16 @@ export function subTypes(type: string): string[] {
   return [ type, ...children.flatMap(([ child ]) => subTypes(child)) ];
 }
 
+/**
+ * Determine whether an XSD datatype is another one or derived from it.
+ * @param type The local name of the datatype.
+ * @param superType The local name of the other datatype, where `numeric` and `anyAtomicType` are unions.
+ * @returns Whether the datatype is a subtype of the other one.
+ */
+export function isSubType(type: string, superType: string): boolean {
+  return type === superType || subTypes(superType).includes(type);
+}
+
 export const INTEGRAL_TYPES = new Set(subTypes('integer'));
 export const NUMERIC_TYPES = new Set(subTypes('numeric'));
 

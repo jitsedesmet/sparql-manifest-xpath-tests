@@ -63,6 +63,9 @@ The assertions become:
 | `assert-eq` of a number | the `assert-type` of `xs:numeric` `&& ?result = <number>`, as QT3 compares by value, so `1` equals `1.0e0` |
 | `assert-eq` of a string or boolean | the `assert-type` of its type `&& sameTerm(xsd:string(?result), "…")` |
 | `assert-true`, `assert-false` | `assert-eq` of `true`, respectively `false` |
+
+The type check of `assert-eq` is left out when an `assert-type` in the same `all-of` checks a type derived from it,
+as that makes the conjunction false for any other type.
 | `all-of`, `any-of`, `not` | `&&`, `\|\|`, `!` |
 
 The expected value of `assert-eq` is folded into a literal, so `-0` becomes `"-0"^^xsd:integer` rather than a unary minus.
